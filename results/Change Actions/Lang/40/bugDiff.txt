@@ -1,0 +1,20 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_40/src/java/org/apache/commons/lang/StringUtils.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_40/src/java/org/apache/commons/lang/StringUtils.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_40/src/java/org/apache/commons/lang/StringUtils.java	2020-01-05 05:29:13.001481216 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_40/src/java/org/apache/commons/lang/StringUtils.java	2020-01-05 05:29:16.425452618 -0800
+@@ -1045,7 +1045,14 @@
+         if (str == null || searchStr == null) {
+             return false;
+         }
+-        return contains(str.toUpperCase(), searchStr.toUpperCase());
++        int len = searchStr.length();
++        int max = str.length() - len;
++        for (int i = 0; i <= max; i++) {
++            if (str.regionMatches(true, i, searchStr, 0, len)) {
++                return true;
++            }
++        }
++        return false;
+     }
+ 
+     // IndexOfAny chars

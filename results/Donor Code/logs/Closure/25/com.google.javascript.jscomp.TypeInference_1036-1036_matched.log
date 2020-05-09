@@ -1,0 +1,126 @@
+---patch code ori--- com.google.javascript.jscomp.TypeInference <1036, 1036>
+scope = traverseChildren(n, scope);
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.TypeInference <333, 333>
+scope = traverseChildren(n, scope);
+
+---patch code 0--- com.google.javascript.jscomp.TypeInference <1036, 1036>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.TypeInference <333, 333>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---patch code 1--- com.google.javascript.jscomp.TypeInference <1036, 1036>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.TypeInference <333, 333>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.TypeInference <343, 343>
+scope = traverseChildren(n, scope);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.TypeInference <343, 343>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.TypeInference <343, 343>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.TypeInference <348, 348>
+scope = traverseChildren(n, scope);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.TypeInference <348, 348>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.TypeInference <348, 348>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.TypeInference <364, 364>
+scope = traverseChildren(n, scope);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.TypeInference <364, 364>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.TypeInference <364, 364>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.TypeInference <373, 373>
+scope = traverseChildren(n, scope);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.TypeInference <373, 373>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.TypeInference <373, 373>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.TypeInference <389, 389>
+scope = traverseChildren(n, scope);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.TypeInference <389, 389>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.TypeInference <389, 389>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.TypeInference <420, 420>
+scope = traverseChildren(n, scope);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.TypeInference <420, 420>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.TypeInference <420, 420>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.TypeInference <451, 451>
+scope = traverseChildren(n, scope);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.TypeInference <451, 451>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.TypeInference <451, 451>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.TypeInference <643, 643>
+scope = traverseChildren(n, scope);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.TypeInference <643, 643>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.TypeInference <643, 643>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.TypeInference <712, 712>
+scope = traverseChildren(n, scope);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.TypeInference <712, 712>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.TypeInference <712, 712>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.TypeInference <783, 783>
+scope = traverseChildren(n, scope);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.TypeInference <783, 783>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.TypeInference <783, 783>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.TypeInference <1077, 1077>
+scope = traverseChildren(n, scope);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.TypeInference <1077, 1077>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.TypeInference <1077, 1077>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.TypeInference <1092, 1092>
+scope = traverseChildren(n, scope);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.TypeInference <1092, 1092>
+FlowScope = traverseChildren(Node, FlowScope);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.TypeInference <1092, 1092>
+FlowScope = traverseChildren(Node, FlowScope);
+

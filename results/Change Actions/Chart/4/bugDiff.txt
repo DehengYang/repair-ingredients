@@ -1,0 +1,20 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_4/source/org/jfree/chart/plot/XYPlot.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_4/source/org/jfree/chart/plot/XYPlot.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_4/source/org/jfree/chart/plot/XYPlot.java	2020-01-04 01:53:21.812460070 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_4/source/org/jfree/chart/plot/XYPlot.java	2020-01-04 01:53:23.516410405 -0800
+@@ -4490,6 +4490,7 @@
+                     }
+                 }
+                 
++                if (r != null) {
+                     Collection c = r.getAnnotations();
+                     Iterator i = c.iterator();
+                     while (i.hasNext()) {
+@@ -4498,6 +4499,7 @@
+                             includedAnnotations.add(a);
+                         }
+                     }
++                }
+             }
+         }
+ 

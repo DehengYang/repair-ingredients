@@ -1,0 +1,12 @@
+chunk1 : org.apache.commons.math3.distribution.HypergeometricDistribution:268-268
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (2)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (2)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (2)
+fix ingredient  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient  <1-fine-grained>  varMapType:1 : (2)
+
+

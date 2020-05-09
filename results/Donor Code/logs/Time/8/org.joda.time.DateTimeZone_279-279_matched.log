@@ -1,0 +1,60 @@
+---patch code ori--- org.joda.time.DateTimeZone <279, 281>
+if (minutesOffset < -59 || minutesOffset > 59) {
+            throw new IllegalArgumentException("Minutes out of range: " + minutesOffset);
+        }
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateTimeZone <279, 281>
+if (minutesOffset < 0 || minutesOffset > 59) {
+            throw new IllegalArgumentException("Minutes out of range: " + minutesOffset);
+        }
+
+---patch code 0--- org.joda.time.DateTimeZone <279, 281>
+if (intVar < -59 || intVar > 59) {
+            throw new IllegalArgumentException("Minutes out of range: " + intVar);
+        }
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.joda.time.DateTimeZone <279, 281>
+if (intVar < 0 || intVar > 59) {
+            throw new IllegalArgumentException("Minutes out of range: " + intVar);
+        }
+
+---patch code 1--- org.joda.time.DateTimeZone <279, 281>
+if (minutesOffset < -59 || minutesOffset > 59) {
+            throw new IllegalArgumentException("Minutes out of range: " + minutesOffset);
+        }
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.joda.time.DateTimeZone <279, 281>
+if (minutesOffset < 0 || minutesOffset > 59) {
+            throw new IllegalArgumentException("Minutes out of range: " + minutesOffset);
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.format.DateTimeFormatterBuilder <2376, 2378>
+if (minutes > 59) {
+                    return ~position;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <2376, 2378>
+if (intVar > 59) {
+                    return ~intVar;
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.format.DateTimeFormatterBuilder <2376, 2378>
+if (minutes > 59) {
+                    return ~position;
+                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.format.DateTimeFormatterBuilder <2406, 2408>
+if (seconds > 59) {
+                    return ~position;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <2406, 2408>
+if (intVar > 59) {
+                    return ~intVar;
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.format.DateTimeFormatterBuilder <2406, 2408>
+if (seconds > 59) {
+                    return ~position;
+                }
+

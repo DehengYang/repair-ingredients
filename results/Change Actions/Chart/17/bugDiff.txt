@@ -1,0 +1,14 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_17/source/org/jfree/data/time/TimeSeries.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_17/source/org/jfree/data/time/TimeSeries.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_17/source/org/jfree/data/time/TimeSeries.java	2020-01-04 01:53:53.531535556 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_17/source/org/jfree/data/time/TimeSeries.java	2020-01-04 01:53:55.079490438 -0800
+@@ -854,7 +854,8 @@
+      *         subclasses may differ.
+      */
+     public Object clone() throws CloneNotSupportedException {
+-        Object clone = createCopy(0, getItemCount() - 1);
++        TimeSeries clone = (TimeSeries) super.clone();
++        clone.data = (List) ObjectUtilities.deepClone(this.data);
+         return clone;
+     }
+ 

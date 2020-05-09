@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_51/src/com/google/javascript/jscomp/CodeConsumer.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_51/src/com/google/javascript/jscomp/CodeConsumer.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_51/src/com/google/javascript/jscomp/CodeConsumer.java	2020-01-05 05:17:46.223217258 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_51/src/com/google/javascript/jscomp/CodeConsumer.java	2020-01-05 05:17:48.203200721 -0800
+@@ -238,7 +238,7 @@
+       add(" ");
+     }
+ 
+-    if ((long) x == x) {
++    if ((long) x == x && !isNegativeZero(x)) {
+       long value = (long) x;
+       long mantissa = value;
+       int exp = 0;

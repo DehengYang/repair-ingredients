@@ -1,0 +1,1278 @@
+---patch code ori--- org.apache.commons.lang3.text.translate.LookupTranslator <77, 77>
+final CharSequence result = lookupMap.get(subSeq.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <4684, 4684>
+final String result = buf.toString();
+
+---patch code 0--- org.apache.commons.lang3.text.translate.LookupTranslator <77, 77>
+final CharSequence CharSequence = HashMap.get(CharSequence.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4684, 4684>
+final String StringVar = StringBuilder.toString();
+
+---patch code 1--- org.apache.commons.lang3.text.translate.LookupTranslator <77, 77>
+final CharSequence CharSequence = HashMap.get(CharSequence.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4684, 4684>
+final String result = StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.ExtendedMessageFormat <347, 347>
+return Integer.parseInt(result.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <347, 347>
+return Integer.parseInt(StringBuilder.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.ExtendedMessageFormat <347, 347>
+return Integer.parseInt(StringBuilder.toString());
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.translate.LookupTranslator <79, 79>
+out.write(result.toString());
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.LookupTranslator <79, 79>
+Writer.write(CharSequence.toString());
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.LookupTranslator <79, 79>
+Writer.write(CharSequence.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.DurationFormatUtils <453, 455>
+final String str = padWithZeros
+                                ? StringUtils.leftPad(Integer.toString(milliseconds), count, '0')
+                                : Integer.toString(milliseconds);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <453, 455>
+final String StringVar = booleanVar
+                                ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0')
+                                : Integer.toString(intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.DurationFormatUtils <453, 455>
+final String str = padWithZeros
+                                ? StringUtils.leftPad(Integer.toString(milliseconds), count, '0')
+                                : Integer.toString(milliseconds);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.DurationFormatUtils <631, 631>
+return this.value.toString().equals(tok2.value.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <631, 631>
+return DurationFormatUtils.Object.toString().equals(Token.Object.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.DurationFormatUtils <631, 631>
+return DurationFormatUtils.Object.toString().equals(Token.Object.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.CharSequenceUtils <95, 95>
+return cs.toString().indexOf(searchChar.toString(), start);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharSequenceUtils <95, 95>
+return CharSequence.toString().indexOf(CharSequence.toString(), intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharSequenceUtils <95, 95>
+return CharSequence.toString().indexOf(CharSequence.toString(), start);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.CharSequenceUtils <145, 145>
+return cs.toString().lastIndexOf(searchChar.toString(), start);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharSequenceUtils <145, 145>
+return CharSequence.toString().lastIndexOf(CharSequence.toString(), intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharSequenceUtils <145, 145>
+return CharSequence.toString().lastIndexOf(CharSequence.toString(), start);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.DurationFormatUtils <427, 428>
+buffer.append(padWithZeros ? StringUtils.leftPad(Integer.toString(years), count, '0') : Integer
+                            .toString(years));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <427, 428>
+StringBuilder.append(booleanVar ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0') : Integer
+                            .toString(intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.DurationFormatUtils <427, 428>
+StringBuilder.append(padWithZeros ? StringUtils.leftPad(Integer.toString(years), count, '0') : Integer
+                            .toString(years));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.DurationFormatUtils <431, 432>
+buffer.append(padWithZeros ? StringUtils.leftPad(Integer.toString(months), count, '0') : Integer
+                            .toString(months));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <431, 432>
+StringBuilder.append(booleanVar ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0') : Integer
+                            .toString(intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.DurationFormatUtils <431, 432>
+StringBuilder.append(padWithZeros ? StringUtils.leftPad(Integer.toString(months), count, '0') : Integer
+                            .toString(months));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.DurationFormatUtils <435, 436>
+buffer.append(padWithZeros ? StringUtils.leftPad(Integer.toString(days), count, '0') : Integer
+                            .toString(days));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <435, 436>
+StringBuilder.append(booleanVar ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0') : Integer
+                            .toString(intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.DurationFormatUtils <435, 436>
+StringBuilder.append(padWithZeros ? StringUtils.leftPad(Integer.toString(days), count, '0') : Integer
+                            .toString(days));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.DurationFormatUtils <439, 440>
+buffer.append(padWithZeros ? StringUtils.leftPad(Integer.toString(hours), count, '0') : Integer
+                            .toString(hours));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <439, 440>
+StringBuilder.append(booleanVar ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0') : Integer
+                            .toString(intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.DurationFormatUtils <439, 440>
+StringBuilder.append(padWithZeros ? StringUtils.leftPad(Integer.toString(hours), count, '0') : Integer
+                            .toString(hours));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.DurationFormatUtils <443, 444>
+buffer.append(padWithZeros ? StringUtils.leftPad(Integer.toString(minutes), count, '0') : Integer
+                            .toString(minutes));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <443, 444>
+StringBuilder.append(booleanVar ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0') : Integer
+                            .toString(intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.DurationFormatUtils <443, 444>
+StringBuilder.append(padWithZeros ? StringUtils.leftPad(Integer.toString(minutes), count, '0') : Integer
+                            .toString(minutes));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.DurationFormatUtils <447, 448>
+buffer.append(padWithZeros ? StringUtils.leftPad(Integer.toString(seconds), count, '0') : Integer
+                            .toString(seconds));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <447, 448>
+StringBuilder.append(booleanVar ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0') : Integer
+                            .toString(intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.DurationFormatUtils <447, 448>
+StringBuilder.append(padWithZeros ? StringUtils.leftPad(Integer.toString(seconds), count, '0') : Integer
+                            .toString(seconds));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.DurationFormatUtils <458, 460>
+buffer.append(padWithZeros
+                                ? StringUtils.leftPad(Integer.toString(milliseconds), count, '0')
+                                : Integer.toString(milliseconds));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <458, 460>
+StringBuilder.append(booleanVar
+                                ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0')
+                                : Integer.toString(intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.DurationFormatUtils <458, 460>
+StringBuilder.append(padWithZeros
+                                ? StringUtils.leftPad(Integer.toString(milliseconds), count, '0')
+                                : Integer.toString(milliseconds));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrBuilder <1133, 1133>
+separator = ObjectUtils.toString(separator);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1133, 1133>
+StringVar = ObjectUtils.toString(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1133, 1133>
+separator = ObjectUtils.toString(separator);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrBuilder <1155, 1155>
+separator = ObjectUtils.toString(separator);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1155, 1155>
+StringVar = ObjectUtils.toString(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1155, 1155>
+separator = ObjectUtils.toString(separator);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrBuilder <1179, 1179>
+separator = ObjectUtils.toString(separator);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1179, 1179>
+StringVar = ObjectUtils.toString(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1179, 1179>
+separator = ObjectUtils.toString(separator);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.builder.ToStringBuilder <165, 165>
+return ReflectionToStringBuilder.toString(object, style);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ToStringBuilder <165, 165>
+return ReflectionToStringBuilder.toString(Object, ToStringStyle);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ToStringBuilder <165, 165>
+return ReflectionToStringBuilder.toString(Object, ToStringStyle);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.CharRange <246, 246>
+iToString = buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharRange <246, 246>
+StringVar = StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharRange <246, 246>
+iToString = StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrSubstitutor <632, 632>
+varName = bufName.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <632, 632>
+StringVar = StrBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <632, 632>
+varName = StrBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.ClassUtils <966, 966>
+className = classNameBuffer.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ClassUtils <966, 966>
+StringVar = StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ClassUtils <966, 966>
+className = StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <3927, 3927>
+return ObjectUtils.toString(first);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3927, 3927>
+return ObjectUtils.toString(Object);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3927, 3927>
+return ObjectUtils.toString(Object);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <3971, 3971>
+return ObjectUtils.toString(first);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3971, 3971>
+return ObjectUtils.toString(Object);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3971, 3971>
+return ObjectUtils.toString(Object);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.builder.ToStringBuilder <152, 152>
+return ReflectionToStringBuilder.toString(object);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ToStringBuilder <152, 152>
+return ReflectionToStringBuilder.toString(Object);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ToStringBuilder <152, 152>
+return ReflectionToStringBuilder.toString(Object);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.exception.DefaultExceptionContext <152, 152>
+valueStr = value.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.exception.DefaultExceptionContext <152, 152>
+StringVar = Object.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.exception.DefaultExceptionContext <152, 152>
+valueStr = Object.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateParser <699, 699>
+validTimeZoneChars= sb.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.FastDateParser <699, 699>
+StringVar= StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDateParser <699, 699>
+validTimeZoneChars= StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.builder.ToStringBuilder <200, 200>
+return ReflectionToStringBuilder.toString(object, style, outputTransients, false, reflectUpToClass);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ToStringBuilder <200, 200>
+return ReflectionToStringBuilder.toString(TVar, ToStringStyle, booleanVar, false, Class);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ToStringBuilder <200, 200>
+return ReflectionToStringBuilder.toString(object, ToStringStyle, outputTransients, false, Class);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <229, 229>
+return toString(object, style, outputTransients, outputStatics, null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <229, 229>
+return toString(Object, ToStringStyle, booleanVar, booleanVar, null);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <229, 229>
+return toString(Object, ToStringStyle, outputTransients, outputStatics, null);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringEscapeUtils <181, 187>
+if (StringUtils.containsNone(input.toString(), CSV_SEARCH_CHARS)) {
+                out.write(input.toString());
+            } else {
+                out.write(CSV_QUOTE);
+                out.write(StringUtils.replace(input.toString(), CSV_QUOTE_STR, CSV_QUOTE_STR + CSV_QUOTE_STR));
+                out.write(CSV_QUOTE);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringEscapeUtils <181, 187>
+if (StringUtils.containsNone(CharSequence.toString(), char[]Var)) {
+                Writer.write(CharSequence.toString());
+            } else {
+                Writer.write(charVar);
+                Writer.write(StringUtils.replace(CharSequence.toString(), StringVar, StringVar + StringVar));
+                Writer.write(charVar);
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringEscapeUtils <181, 187>
+if (StringUtils.containsNone(CharSequence.toString(), CSV_SEARCH_CHARS)) {
+                Writer.write(CharSequence.toString());
+            } else {
+                Writer.write(CSV_QUOTE);
+                Writer.write(StringUtils.replace(CharSequence.toString(), CSV_QUOTE_STR, CSV_QUOTE_STR + CSV_QUOTE_STR));
+                Writer.write(CSV_QUOTE);
+            }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <7133, 7133>
+return str + suffix.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <7133, 7133>
+return StringVar + CharSequence.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <7133, 7133>
+return str + CharSequence.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <7232, 7232>
+return prefix.toString() + str;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <7232, 7232>
+return CharSequence.toString() + StringVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <7232, 7232>
+return CharSequence.toString() + str;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDatePrinter <749, 749>
+buffer.append(Integer.toString(value));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.FastDatePrinter <749, 749>
+StringBuffer.append(Integer.toString(intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDatePrinter <749, 749>
+StringBuffer.append(Integer.toString(value));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDatePrinter <858, 858>
+buffer.append(Integer.toString(value));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.FastDatePrinter <858, 858>
+StringBuffer.append(Integer.toString(intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDatePrinter <858, 858>
+StringBuffer.append(Integer.toString(value));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDatePrinter <903, 903>
+buffer.append(Integer.toString(value));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.FastDatePrinter <903, 903>
+StringBuffer.append(Integer.toString(intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDatePrinter <903, 903>
+StringBuffer.append(Integer.toString(value));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.builder.ToStringBuilder <179, 179>
+return ReflectionToStringBuilder.toString(object, style, outputTransients, false, null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ToStringBuilder <179, 179>
+return ReflectionToStringBuilder.toString(Object, ToStringStyle, booleanVar, false, null);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ToStringBuilder <179, 179>
+return ReflectionToStringBuilder.toString(Object, ToStringStyle, outputTransients, false, null);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.ObjectUtils <326, 326>
+return obj == null ? nullStr : obj.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ObjectUtils <326, 326>
+return Object == null ? StringVar : Object.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ObjectUtils <326, 326>
+return Object == null ? nullStr : Object.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.FormattableUtils <147, 147>
+formatter.format(buf.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.FormattableUtils <147, 147>
+Formatter.format(StringBuilder.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.FormattableUtils <147, 147>
+Formatter.format(StringBuilder.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringEscapeUtils <316, 316>
+out.write(input.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringEscapeUtils <316, 316>
+Writer.write(CharSequence.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringEscapeUtils <316, 316>
+Writer.write(CharSequence.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringEscapeUtils <327, 327>
+out.write(input.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringEscapeUtils <327, 327>
+Writer.write(CharSequence.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringEscapeUtils <327, 327>
+Writer.write(CharSequence.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <328, 328>
+list.add(e.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <328, 328>
+ListVar.add(Object.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <328, 328>
+list.add(Object.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.DurationFormatUtils <424, 424>
+buffer.append(value.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <424, 424>
+StringBuilder.append(Object.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.DurationFormatUtils <424, 424>
+StringBuilder.append(Object.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrSubstitutor <180, 180>
+return source.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <180, 180>
+return Object.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <180, 180>
+return Object.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrSubstitutor <308, 308>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <308, 308>
+return StrBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <308, 308>
+return StrBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrSubstitutor <331, 331>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <331, 331>
+return StrBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <331, 331>
+return StrBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrSubstitutor <349, 349>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <349, 349>
+return StrBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <349, 349>
+return StrBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrSubstitutor <371, 371>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <371, 371>
+return StrBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <371, 371>
+return StrBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrSubstitutor <389, 389>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <389, 389>
+return StrBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <389, 389>
+return StrBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrSubstitutor <411, 411>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <411, 411>
+return StrBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <411, 411>
+return StrBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrSubstitutor <429, 429>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <429, 429>
+return StrBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <429, 429>
+return StrBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrSubstitutor <451, 451>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <451, 451>
+return StrBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <451, 451>
+return StrBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrSubstitutor <469, 469>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <469, 469>
+return StrBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <469, 469>
+return StrBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.WordUtils <140, 140>
+return wrappedLine.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.WordUtils <140, 140>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.WordUtils <140, 140>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.ExtendedMessageFormat <438, 438>
+return sb.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <438, 438>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.ExtendedMessageFormat <438, 438>
+return StringBuilder.toString();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <60, 60>
+return writer.toString();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <60, 60>
+return StringWriter.toString();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <60, 60>
+return StringWriter.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrLookup <169, 169>
+return obj.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrLookup <169, 169>
+return Object.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrLookup <169, 169>
+return Object.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.ClassUtils <1127, 1127>
+return canonicalClassNameBuffer.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ClassUtils <1127, 1127>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ClassUtils <1127, 1127>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.Conversion <1408, 1408>
+return sb.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.Conversion <1408, 1408>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.Conversion <1408, 1408>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.Conversion <1448, 1448>
+return sb.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.Conversion <1448, 1448>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.Conversion <1448, 1448>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.Conversion <1488, 1488>
+return sb.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.Conversion <1488, 1488>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.Conversion <1488, 1488>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.Conversion <1528, 1528>
+return sb.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.Conversion <1528, 1528>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.Conversion <1528, 1528>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <3462, 3462>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3462, 3462>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3462, 3462>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <3511, 3511>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3511, 3511>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3511, 3511>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <3560, 3560>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3560, 3560>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3560, 3560>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <3609, 3609>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3609, 3609>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3609, 3609>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <3658, 3658>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3658, 3658>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3658, 3658>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <3707, 3707>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3707, 3707>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3707, 3707>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <3756, 3756>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3756, 3756>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3756, 3756>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <3805, 3805>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3805, 3805>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3805, 3805>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <3899, 3899>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3899, 3899>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3899, 3899>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <3944, 3944>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3944, 3944>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3944, 3944>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <3989, 3989>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3989, 3989>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3989, 3989>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <4419, 4419>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4419, 4419>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4419, 4419>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <4781, 4781>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4781, 4781>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4781, 4781>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <5034, 5034>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <5034, 5034>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5034, 5034>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <6336, 6336>
+return builder.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <6336, 6336>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <6336, 6336>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.CharSetUtils <83, 83>
+return buffer.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharSetUtils <83, 83>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharSetUtils <83, 83>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.CharSetUtils <230, 230>
+return buffer.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharSetUtils <230, 230>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharSetUtils <230, 230>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.exception.DefaultExceptionContext <162, 162>
+return buffer.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.exception.DefaultExceptionContext <162, 162>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.exception.DefaultExceptionContext <162, 162>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDatePrinter <346, 346>
+return buf.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.FastDatePrinter <346, 346>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDatePrinter <346, 346>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.DurationFormatUtils <466, 466>
+return buffer.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <466, 466>
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.DurationFormatUtils <466, 466>
+return StringBuilder.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.ObjectUtils <256, 256>
+return buffer.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ObjectUtils <256, 256>
+return StringBuffer.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ObjectUtils <256, 256>
+return StringBuffer.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.CharSet <275, 275>
+return set.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharSet <275, 275>
+return Set.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharSet <275, 275>
+return Set.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrBuilder <499, 499>
+return append(seq.toString(), startIndex, length);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <499, 499>
+return append(CharSequence.toString(), intVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <499, 499>
+return append(CharSequence.toString(), startIndex, length);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.translate.UnicodeUnescaper <53, 53>
+final int value = Integer.parseInt(unicode.toString(), 16);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.UnicodeUnescaper <53, 53>
+final int intVar = Integer.parseInt(CharSequence.toString(), 16);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.UnicodeUnescaper <53, 53>
+final int value = Integer.parseInt(CharSequence.toString(), 16);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.translate.NumericEntityEscaper <115, 115>
+out.write(Integer.toString(codepoint, 10));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.NumericEntityEscaper <115, 115>
+Writer.write(Integer.toString(intVar, 10));
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.NumericEntityEscaper <115, 115>
+Writer.write(Integer.toString(codepoint, 10));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.exception.ExceptionUtils <531, 531>
+frames.add(throwables[i].toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.exception.ExceptionUtils <531, 531>
+ListVar.add(Throwable[intVar].toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.exception.ExceptionUtils <531, 531>
+frames.add(Throwable[i].toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateParser <145, 145>
+parsePattern= Pattern.compile(regex.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.FastDateParser <145, 145>
+Pattern= Pattern.compile(StringBuilder.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDateParser <145, 145>
+Pattern= Pattern.compile(StringBuilder.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDatePrinter <853, 853>
+digits = Integer.toString(value).length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.FastDatePrinter <853, 853>
+intVar = Integer.toString(intVar).length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDatePrinter <853, 853>
+digits = Integer.toString(value).length();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.DurationFormatUtils <660, 660>
+return StringUtils.repeat(this.value.toString(), this.count);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <660, 660>
+return StringUtils.repeat(DurationFormatUtils.Object.toString(), DurationFormatUtils.intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.DurationFormatUtils <660, 660>
+return StringUtils.repeat(DurationFormatUtils.Object.toString(), DurationFormatUtils.count);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrSubstitutor <509, 509>
+source.replace(offset, offset + length, buf.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <509, 509>
+StringBuffer.replace(intVar, intVar + intVar, StrBuilder.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <509, 509>
+StringBuffer.replace(offset, offset + length, StrBuilder.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <183, 183>
+return toString(object, style, outputTransients, false, null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <183, 183>
+return toString(Object, ToStringStyle, booleanVar, false, null);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <183, 183>
+return toString(Object, ToStringStyle, outputTransients, false, null);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <282, 283>
+return new ReflectionToStringBuilder(object, style, null, reflectUpToClass, outputTransients, outputStatics)
+                .toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <282, 283>
+return new ReflectionToStringBuilder(TVar, ToStringStyle, null, Class, booleanVar, booleanVar)
+                .toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <282, 283>
+return new ReflectionToStringBuilder(object, ToStringStyle, null, Class, outputTransients, outputStatics)
+                .toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.exception.ExceptionUtils <533, 533>
+frames.add(WRAPPED_MARKER + throwables[i].toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.exception.ExceptionUtils <533, 533>
+ListVar.add(StringVar + Throwable[intVar].toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.exception.ExceptionUtils <533, 533>
+frames.add(WRAPPED_MARKER + Throwable[i].toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrBuilder <1477, 1477>
+return insert(index, obj.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1477, 1477>
+return insert(intVar, Object.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1477, 1477>
+return insert(index, Object.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.math.Fraction <945, 945>
+toProperString = Integer.toString(getProperWhole());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.Fraction <945, 945>
+StringVar = Integer.toString(getProperWhole());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.Fraction <945, 945>
+toProperString = Integer.toString(getProperWhole());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrBuilder <1383, 1383>
+String str = (obj == null ? getNullText() : obj.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1383, 1383>
+String StringVar = (Object == null ? getNullText() : Object.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1383, 1383>
+String str = (Object == null ? getNullText() : Object.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrBuilder <1430, 1430>
+String str = (obj == null ? getNullText() : obj.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1430, 1430>
+String StringVar = (Object == null ? getNullText() : Object.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1430, 1430>
+String str = (Object == null ? getNullText() : Object.toString());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <119, 119>
+entityValue = Integer.parseInt(input.subSequence(start, end).toString(), 16);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <119, 119>
+intVar = Integer.parseInt(CharSequence.subSequence(intVar, intVar).toString(), 16);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <119, 119>
+entityValue = Integer.parseInt(CharSequence.subSequence(start, end).toString(), 16);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <121, 121>
+entityValue = Integer.parseInt(input.subSequence(start, end).toString(), 10);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <121, 121>
+intVar = Integer.parseInt(CharSequence.subSequence(intVar, intVar).toString(), 10);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <121, 121>
+entityValue = Integer.parseInt(CharSequence.subSequence(start, end).toString(), 10);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.ExtendedMessageFormat <194, 194>
+super.applyPattern(stripCustom.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <194, 194>
+super.applyPattern(StringBuilder.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.ExtendedMessageFormat <194, 194>
+super.applyPattern(StringBuilder.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.ArrayUtils <159, 159>
+return toString(array, "{}");
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ArrayUtils <159, 159>
+return toString(Object, "{}");
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ArrayUtils <159, 159>
+return toString(Object, "{}");
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.translate.OctalUnescaper <49, 52>
+if ( Integer.parseInt(input.subSequence(start, end).toString(), 10) > OCTAL_MAX) {
+                    end--; // rollback
+                    break;
+                }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.OctalUnescaper <49, 52>
+if ( Integer.parseInt(CharSequence.subSequence(intVar, intVar).toString(), 10) > intVar) {
+                    intVar--; // rollback
+                    break;
+                }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.OctalUnescaper <49, 52>
+if ( Integer.parseInt(CharSequence.subSequence(start, end).toString(), 10) > OCTAL_MAX) {
+                    end--; // rollback
+                    break;
+                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.FormattableUtils <141, 141>
+buf.replace(precision - _ellipsis.length(), seq.length(), _ellipsis.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.FormattableUtils <141, 141>
+StringBuilder.replace(intVar - CharSequence.length(), CharSequence.length(), CharSequence.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.FormattableUtils <141, 141>
+StringBuilder.replace(precision - CharSequence.length(), CharSequence.length(), CharSequence.toString());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.translate.OctalUnescaper <55, 55>
+out.write( Integer.parseInt(input.subSequence(start, end).toString(), 8) );
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.OctalUnescaper <55, 55>
+Writer.write( Integer.parseInt(CharSequence.subSequence(intVar, intVar).toString(), 8) );
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.OctalUnescaper <55, 55>
+Writer.write( Integer.parseInt(CharSequence.subSequence(start, end).toString(), 8) );
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrBuilder <465, 465>
+return append(obj.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <465, 465>
+return append(Object.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <465, 465>
+return append(Object.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrBuilder <481, 481>
+return append(seq.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <481, 481>
+return append(CharSequence.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <481, 481>
+return append(CharSequence.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.CharUtils <335, 335>
+return toString(ch.charValue());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharUtils <335, 335>
+return toString(Character.charValue());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharUtils <335, 335>
+return toString(Character.charValue());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.exception.ExceptionUtils <586, 586>
+return sw.getBuffer().toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.exception.ExceptionUtils <586, 586>
+return StringWriter.getBuffer().toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.exception.ExceptionUtils <586, 586>
+return StringWriter.getBuffer().toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <345, 345>
+return new ReflectionToStringBuilder(object).setExcludeFieldNames(excludeFieldNames).toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <345, 345>
+return new ReflectionToStringBuilder(Object).setExcludeFieldNames(StringVar).toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <345, 345>
+return new ReflectionToStringBuilder(Object).setExcludeFieldNames(excludeFieldNames).toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDatePrinter <403, 403>
+return applyRules(c, new StringBuffer(mMaxLengthEstimate)).toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.FastDatePrinter <403, 403>
+return applyRules(Calendar, new StringBuffer(intVar)).toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDatePrinter <403, 403>
+return applyRules(Calendar, new StringBuffer(mMaxLengthEstimate)).toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDatePrinter <426, 426>
+return format(calendar, new StringBuffer(mMaxLengthEstimate)).toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.FastDatePrinter <426, 426>
+return format(Calendar, new StringBuffer(intVar)).toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDatePrinter <426, 426>
+return format(Calendar, new StringBuffer(mMaxLengthEstimate)).toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.Range <449, 458>
+if (result == null) {
+            final StringBuilder buf = new StringBuilder(32);
+            buf.append('[');
+            buf.append(minimum);
+            buf.append("..");
+            buf.append(maximum);
+            buf.append(']');
+            result = buf.toString();
+            toString = result;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.Range <449, 458>
+if (StringVar == null) {
+            final StringBuilder buf = new StringBuilder(32);
+            buf.append('[');
+            buf.append(TVar);
+            buf.append("..");
+            buf.append(TVar);
+            buf.append(']');
+            StringVar = buf.toString();
+            StringVar = StringVar;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.Range <449, 458>
+if (result == null) {
+            final StringBuilder buf = new StringBuilder(32);
+            buf.append('[');
+            buf.append(minimum);
+            buf.append("..");
+            buf.append(maximum);
+            buf.append(']');
+            result = buf.toString();
+            toString = result;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringEscapeUtils <321, 321>
+final String quoteless = input.subSequence(1, input.length() - 1).toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringEscapeUtils <321, 321>
+final String StringVar = CharSequence.subSequence(1, CharSequence.length() - 1).toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringEscapeUtils <321, 321>
+final String quoteless = CharSequence.subSequence(1, CharSequence.length() - 1).toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.ArrayUtils <178, 178>
+return new ToStringBuilder(array, ToStringStyle.SIMPLE_STYLE).append(array).toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ArrayUtils <178, 178>
+return new ToStringBuilder(Object, ToStringStyle.SIMPLE_STYLE).append(Object).toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ArrayUtils <178, 178>
+return new ToStringBuilder(Object, ToStringStyle.SIMPLE_STYLE).append(Object).toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.Range <448, 448>
+String result = toString;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.Range <448, 448>
+String result = toString;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <6154, 6154>
+return new StringBuilder(str).reverse().toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <6154, 6154>
+return new StringBuilder(StringVar).reverse().toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <6154, 6154>
+return new StringBuilder(str).reverse().toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <4842, 4846>
+return new StringBuilder(len + start - end + overlay.length() + 1)
+            .append(str.substring(0, start))
+            .append(overlay)
+            .append(str.substring(end))
+            .toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4842, 4846>
+return new StringBuilder(intVar + intVar - intVar + StringVar.length() + 1)
+            .append(StringVar.substring(0, intVar))
+            .append(StringVar)
+            .append(StringVar.substring(intVar))
+            .toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4842, 4846>
+return new StringBuilder(len + start - end + overlay.length() + 1)
+            .append(str.substring(0, start))
+            .append(overlay)
+            .append(str.substring(end))
+            .toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <5572, 5575>
+return new StringBuilder(strLen)
+            .append(Character.toTitleCase(str.charAt(0)))
+            .append(str.substring(1))
+            .toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <5572, 5575>
+return new StringBuilder(intVar)
+            .append(Character.toTitleCase(StringVar.charAt(0)))
+            .append(StringVar.substring(1))
+            .toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5572, 5575>
+return new StringBuilder(strLen)
+            .append(Character.toTitleCase(str.charAt(0)))
+            .append(str.substring(1))
+            .toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <5603, 5606>
+return new StringBuilder(strLen)
+            .append(Character.toLowerCase(str.charAt(0)))
+            .append(str.substring(1))
+            .toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <5603, 5606>
+return new StringBuilder(intVar)
+            .append(Character.toLowerCase(StringVar.charAt(0)))
+            .append(StringVar.substring(1))
+            .toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5603, 5606>
+return new StringBuilder(strLen)
+            .append(Character.toLowerCase(str.charAt(0)))
+            .append(str.substring(1))
+            .toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.builder.ToStringStyle <357, 357>
+final int pos1 = toString.indexOf(contentStart) + contentStart.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ToStringStyle <357, 357>
+final int pos1 = toString.indexOf(contentStart) + contentStart.length();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.builder.ToStringBuilder <1010, 1010>
+style.appendToString(buffer, toString);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ToStringBuilder <1010, 1010>
+ToStringStyle.appendToString(StringBuffer, toString);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.builder.ToStringStyle <358, 358>
+final int pos2 = toString.lastIndexOf(contentEnd);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ToStringStyle <358, 358>
+final int pos2 = toString.lastIndexOf(contentEnd);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.builder.ToStringStyle <360, 360>
+final String data = toString.substring(pos1, pos2);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ToStringStyle <360, 360>
+final String data = toString.substring(pos1, pos2);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.math.Fraction <912, 917>
+if (toString == null) {
+            toString = new StringBuilder(32)
+                .append(getNumerator())
+                .append('/')
+                .append(getDenominator()).toString();
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.Fraction <912, 917>
+if (StringVar == null) {
+            StringVar = new StringBuilder(32)
+                .append(getNumerator())
+                .append('/')
+                .append(getDenominator()).toString();
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.Fraction <912, 917>
+if (toString == null) {
+            toString = new StringBuilder(32)
+                .append(getNumerator())
+                .append('/')
+                .append(getDenominator()).toString();
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.math.Fraction <947, 950>
+toProperString = new StringBuilder(32)
+                        .append(getProperWhole()).append(' ')
+                        .append(properNumerator).append('/')
+                        .append(getDenominator()).toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.Fraction <947, 950>
+StringVar = new StringBuilder(32)
+                        .append(getProperWhole()).append(' ')
+                        .append(intVar).append('/')
+                        .append(getDenominator()).toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.Fraction <947, 950>
+toProperString = new StringBuilder(32)
+                        .append(getProperWhole()).append(' ')
+                        .append(properNumerator).append('/')
+                        .append(getDenominator()).toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.StrSubstitutor <701, 701>
+throw new IllegalStateException(buf.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <701, 701>
+throw new IllegalStateException(StrBuilder.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <701, 701>
+throw new IllegalStateException(StrBuilder.toString());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateParser <593, 593>
+throw new IllegalArgumentException(sb.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.FastDateParser <593, 593>
+throw new IllegalArgumentException(StringBuilder.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDateParser <593, 593>
+throw new IllegalArgumentException(StringBuilder.toString());
+

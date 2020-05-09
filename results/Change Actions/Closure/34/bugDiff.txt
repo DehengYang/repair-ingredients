@@ -1,0 +1,36 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_34/src/com/google/javascript/jscomp/CodeGenerator.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_34/src/com/google/javascript/jscomp/CodeGenerator.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_34/src/com/google/javascript/jscomp/CodeGenerator.java	2020-01-05 05:16:38.263784862 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_34/src/com/google/javascript/jscomp/CodeGenerator.java	2020-01-05 05:16:40.219768526 -0800
+@@ -119,9 +119,7 @@
+         cc.addOp(opstr, true);
+         addExpr(last, p, rhsContext);
+       } else {
+-        addExpr(first, p, context);
+-        cc.addOp(opstr, true);
+-        addExpr(last, p + 1, rhsContext);
++        unrollBinaryOperator(n, type, opstr, context, rhsContext, p, p + 1);
+       }
+       return;
+     }
+@@ -751,7 +749,7 @@
+     Node current = firstNonOperator;
+     do {
+       current = current.getParent();
+-      cc.listSeparator();
++      cc.addOp(opStr, true);
+       addExpr(current.getFirstChild().getNext(), rightPrecedence, rhsContext);
+     } while (current != n);
+   }
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_34/src/com/google/javascript/jscomp/CodePrinter.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_34/src/com/google/javascript/jscomp/CodePrinter.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_34/src/com/google/javascript/jscomp/CodePrinter.java	2020-01-05 05:16:38.263784862 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_34/src/com/google/javascript/jscomp/CodePrinter.java	2020-01-05 05:16:40.219768526 -0800
+@@ -331,7 +331,7 @@
+     @Override
+     void appendOp(String op, boolean binOp) {
+       if (binOp) {
+-        if (getLastChar() != ' ') {
++        if (getLastChar() != ' ' && op.charAt(0) != ',') {
+           append(" ");
+         }
+         append(op);

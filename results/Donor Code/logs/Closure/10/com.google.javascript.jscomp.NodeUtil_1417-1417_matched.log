@@ -1,0 +1,18 @@
+---patch code ori--- com.google.javascript.jscomp.NodeUtil <1417, 1417>
+return anyResultsMatch(n, MAY_BE_STRING_PREDICATE);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.NodeUtil <1286, 1286>
+return anyResultsMatch(n.getLastChild(), p);
+
+---patch code 0--- com.google.javascript.jscomp.NodeUtil <1417, 1417>
+return anyResultsMatch(Node, MayBeStringResultPredicate);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NodeUtil <1286, 1286>
+return anyResultsMatch(Node.getLastChild(), Predicate);
+
+---patch code 1--- com.google.javascript.jscomp.NodeUtil <1417, 1417>
+return anyResultsMatch(Node, MayBeStringResultPredicate);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.NodeUtil <1286, 1286>
+return anyResultsMatch(Node.getLastChild(), Predicate);
+

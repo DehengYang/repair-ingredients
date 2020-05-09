@@ -1,0 +1,13 @@
+chunk1 : org.jfree.chart.renderer.GrayPaintScale:126-126
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (3)
+fix ingredient(SameMethod)  varMapType:0 : (1)
+fix ingredient  <0-fine-grained>  varMapType:0 : (86)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (4)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (6)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (83)
+fix ingredient  <1-fine-grained>  varMapType:1 : (39)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (2)
+
+

@@ -1,0 +1,6 @@
+chunk1 : org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNulls:56-56
+fix ingredient  <0-fine-grained>  varMapType:0 : (4)
+fix ingredient  <1-fine-grained>  varMapType:1 : (4)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (3)
+
+

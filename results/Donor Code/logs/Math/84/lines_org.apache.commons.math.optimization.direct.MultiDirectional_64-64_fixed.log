@@ -1,0 +1,10 @@
+fixed code:/home/apr/CodeSearchAndMatch2/Defects4J/fixed_bugs_dir/Math/Math_84/src/main/java/org/apache/commons/math/optimization/direct/MultiDirectional.java-64-64
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_84/src/main/java/org/apache/commons/math/optimization/MultiStartDifferentiableMultivariateRealOptimizer.java-168-168
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_84/src/main/java/org/apache/commons/math/optimization/MultiStartDifferentiableMultivariateVectorialOptimizer.java-172-172
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_84/src/main/java/org/apache/commons/math/optimization/MultiStartMultivariateRealOptimizer.java-158-158
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_84/src/main/java/org/apache/commons/math/optimization/MultiStartDifferentiableMultivariateRealOptimizer.java-163-163
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_84/src/main/java/org/apache/commons/math/optimization/MultiStartDifferentiableMultivariateVectorialOptimizer.java-167-167
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_84/src/main/java/org/apache/commons/math/optimization/MultiStartMultivariateRealOptimizer.java-153-153
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_84/src/main/java/org/apache/commons/math/optimization/general/GaussNewtonOptimizer.java-124-124
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_84/src/main/java/org/apache/commons/math/optimization/general/NonLinearConjugateGradientOptimizer.java-149-152
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_84/src/main/java/org/apache/commons/math/optimization/direct/DirectSearchOptimizer.java-297-297

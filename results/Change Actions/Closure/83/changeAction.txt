@@ -1,0 +1,17 @@
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (INS, NullLiteral, OP2, null)
+
+
+OP1:(INS, TryStatement, null, OP2 OP7)
+OP2:   (INS, ExpressionStatement, OP1, OP3)
+OP3:      (INS, Assignment, OP2, OP4 OP5 OP6)
+OP4:         (MOV, MethodInvocation, OP3, null)
+OP5:         (INS, SimpleName, OP3, null)
+OP6:         (INS, Operator, OP3, null)
+OP7:   (INS, CatchClause, OP1, OP8)
+OP8:      (INS, SingleVariableDeclaration, OP7, OP9 OP10)
+OP9:         (INS, SimpleType, OP8, null)
+OP10:         (INS, SimpleName, OP8, null)
+
+

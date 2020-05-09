@@ -1,0 +1,65 @@
+chunk1 : org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:258-259
+fix ingredient  <parseContainCheck>  <parseContainCheck>  varMapType:0 : (1)
+fix ingredient(SamePackage)  <parseContainCheck>  <parseContainCheck>  varMapType:0 : (1)
+
+
+chunk2 : org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:430-430
+fix ingredient(SamePackage)  varMapType:ori : (1)
+fix ingredient(SamePackage)  varMapType:0 : (1)
+fix ingredient(SamePackage)  varMapType:1 : (1)
+fix ingredient(SameMethod)  varMapType:ori : (1)
+fix ingredient(SameMethod)  varMapType:0 : (1)
+fix ingredient(SameMethod)  varMapType:1 : (1)
+fix ingredient(SameMethod)  <parseContainCheck>  varMapType:ori : (1)
+fix ingredient(SameMethod)  <parseContainCheck>  varMapType:0 : (1)
+fix ingredient(SameMethod)  <parseContainCheck>  varMapType:1 : (1)
+
+
+chunk3 : org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:356-356
+fix ingredient  <0-fine-grained>  varMapType:0 : (42)
+fix ingredient(SameMethod)  varMapType:0 : (1)
+fix ingredient  varMapType:0 : (1)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (17)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (11)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (4)
+fix ingredient  <1-fine-grained>  varMapType:1 : (4)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (2)
+
+
+chunk4 : org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:321-321
+fix ingredient  <0-fine-grained>  varMapType:0 : (466)
+fix ingredient(SameMethod)  varMapType:0 : (1)
+fix ingredient(SameFile)  varMapType:0 : (3)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (23)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (9)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (24)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (3)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0 : (1)
+fix ingredient  <1-fine-grained>  varMapType:1 : (55)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (2)
+fix ingredient(SameFile)  <parseContainCheck>  varMapType:0 : (1)
+
+
+chunk5 : org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:449-451
+fix ingredient(SameMethod)  <parseContainCheck2>  <parseContainCheck2>  <parseContainCheck2>  varMapType:0 : (1)
+fix ingredient  <parseContainCheck>  varMapType:0 : (1)
+fix ingredient(SamePackage)  <parseContainCheck>  <parseContainCheck>  <parseContainCheck>  varMapType:0 : (1)
+
+
+chunk6 : org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:283-283
+fix ingredient(SameMethod)  varMapType:0 : (1)
+fix ingredient  varMapType:0 : (1)
+
+
+chunk7 : org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:435-438
+fix ingredient(SameMethod)  varMapType:ori : (1)
+fix ingredient(SameMethod)  varMapType:0 : (1)
+fix ingredient(SameMethod)  varMapType:1 : (1)
+
+
+chunk8 : org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:351-353
+fix ingredient(SameMethod)  <parseContainCheck2>  <parseContainCheck2>  <parseContainCheck2>  varMapType:0 : (1)
+fix ingredient  <parseContainCheck>  varMapType:0 : (1)
+fix ingredient(SamePackage)  <parseContainCheck>  <parseContainCheck>  <parseContainCheck>  varMapType:0 : (1)
+
+

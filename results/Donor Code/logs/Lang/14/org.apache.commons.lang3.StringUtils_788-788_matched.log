@@ -1,0 +1,26 @@
+---patch code 0--- org.apache.commons.lang3.StringUtils <788, 790>
+if (CharSequence instanceof String && CharSequence instanceof String) {
+            return CharSequence.equals(CharSequence);
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.lang3.CharSequenceUtils <189, 194>
+if (CharSequence instanceof String && CharSequence instanceof String) {
+            return ((String) CharSequence).regionMatches(booleanVar, intVar, (String) CharSequence, intVar, intVar);
+        } else {
+            // TODO: Implement rather than convert to String
+            return CharSequence.toString().regionMatches(booleanVar, intVar, CharSequence.toString(), intVar, intVar);
+        }
+
+---patch code 1--- org.apache.commons.lang3.StringUtils <788, 790>
+if (CharSequence instanceof String && CharSequence instanceof String) {
+            return CharSequence.equals(CharSequence);
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.apache.commons.lang3.CharSequenceUtils <189, 194>
+if (CharSequence instanceof String && CharSequence instanceof String) {
+            return ((String) CharSequence).regionMatches(ignoreCase, thisStart, (String) CharSequence, start, length);
+        } else {
+            // TODO: Implement rather than convert to String
+            return CharSequence.toString().regionMatches(ignoreCase, thisStart, CharSequence.toString(), start, length);
+        }
+

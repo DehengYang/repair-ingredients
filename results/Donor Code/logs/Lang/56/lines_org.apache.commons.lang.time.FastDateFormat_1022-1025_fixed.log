@@ -1,0 +1,6 @@
+fixed code:/home/apr/CodeSearchAndMatch/Defects4J/fixed_bugs_dir/Lang/Lang_56/src/java/org/apache/commons/lang/time/FastDateFormat.java-1023-1024
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Lang/Lang_56/src/java/org/apache/commons/lang/SerializationUtils.java-159-164
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Lang/Lang_56/src/java/org/apache/commons/lang/SerializationUtils.java-170-172
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Lang/Lang_56/src/java/org/apache/commons/lang/enum/Enum.java-316-322
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Lang/Lang_56/src/java/org/apache/commons/lang/enums/Enum.java-362-368
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Lang/Lang_56/src/java/org/apache/commons/lang/time/FastDateFormat.java-215-219

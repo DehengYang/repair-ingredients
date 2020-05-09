@@ -1,0 +1,411 @@
+---patch code ori--- org.apache.commons.lang.StringEscapeUtils <127, 127>
+return escapeJavaStyleString(str, true, true);
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringEscapeUtils <127, 127>
+return escapeJavaStyleString(str, true);
+
+---patch code 0--- org.apache.commons.lang.StringEscapeUtils <127, 127>
+return escapeJavaStyleString(StringVar, true, true);
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringEscapeUtils <127, 127>
+return escapeJavaStyleString(StringVar, true);
+
+---patch code 1--- org.apache.commons.lang.StringEscapeUtils <127, 127>
+return escapeJavaStyleString(str, true, true);
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringEscapeUtils <127, 127>
+return escapeJavaStyleString(str, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringUtils <2739, 2739>
+return splitByCharacterType(str, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2739, 2739>
+return splitByCharacterType(StringVar, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <2739, 2739>
+return splitByCharacterType(str, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringUtils <2430, 2430>
+return splitWorker(str, null, -1, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2430, 2430>
+return splitWorker(StringVar, null, -1, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <2430, 2430>
+return splitWorker(str, null, -1, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringUtils <1316, 1318>
+if (str.length() == 0) {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1316, 1318>
+if (StringVar.length() == 0) {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <1316, 1318>
+if (str.length() == 0) {
+            return true;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.math.NumberUtils <555, 557>
+if (str == null) {
+            return true;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <555, 557>
+if (StringVar == null) {
+            return true;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.math.NumberUtils <555, 557>
+if (str == null) {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.BooleanUtils <656, 658>
+if (str == "true") {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.BooleanUtils <656, 658>
+if (StringVar == "true") {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.BooleanUtils <656, 658>
+if (str == "true") {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringUtils <2287, 2287>
+return splitByWholeSeparatorWorker(str, separator, -1, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2287, 2287>
+return splitByWholeSeparatorWorker(StringVar, StringVar, -1, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <2287, 2287>
+return splitByWholeSeparatorWorker(str, separator, -1, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringUtils <2549, 2549>
+return splitWorker(str, separatorChars, -1, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2549, 2549>
+return splitWorker(StringVar, StringVar, -1, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <2549, 2549>
+return splitWorker(str, separatorChars, -1, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringUtils <2466, 2466>
+return splitWorker(str, separatorChar, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2466, 2466>
+return splitWorker(StringVar, charVar, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <2466, 2466>
+return splitWorker(str, separatorChar, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringUtils <5865, 5865>
+return startsWith(str, prefix, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <5865, 5865>
+return startsWith(StringVar, StringVar, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <5865, 5865>
+return startsWith(str, prefix, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringUtils <5940, 5940>
+return endsWith(str, suffix, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <5940, 5940>
+return endsWith(StringVar, StringVar, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <5940, 5940>
+return endsWith(str, suffix, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.CharSetUtils <257, 257>
+return modify(str, set, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.CharSetUtils <257, 257>
+return modify(StringVar, String[]Var, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.CharSetUtils <257, 257>
+return modify(str, set, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringUtils <1379, 1381>
+if (str == null || invalidChars == null) {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1379, 1381>
+if (StringVar == null || char[]Var == null) {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <1379, 1381>
+if (str == null || invalidChars == null) {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringUtils <1418, 1420>
+if (str == null || invalidChars == null) {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1418, 1420>
+if (StringVar == null || StringVar == null) {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <1418, 1420>
+if (str == null || invalidChars == null) {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringUtils <228, 230>
+if (str == null || (strLen = str.length()) == 0) {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <228, 230>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <228, 230>
+if (str == null || (strLen = str.length()) == 0) {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringUtils <2320, 2320>
+return splitByWholeSeparatorWorker(str, separator, max, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2320, 2320>
+return splitByWholeSeparatorWorker(StringVar, StringVar, intVar, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <2320, 2320>
+return splitByWholeSeparatorWorker(str, separator, max, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringUtils <2589, 2589>
+return splitWorker(str, separatorChars, max, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2589, 2589>
+return splitWorker(StringVar, StringVar, intVar, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <2589, 2589>
+return splitWorker(str, separatorChars, max, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.BooleanUtils <611, 617>
+if (str.equals(trueString)) {
+            return Boolean.TRUE;
+        } else if (str.equals(falseString)) {
+            return Boolean.FALSE;
+        } else if (str.equals(nullString)) {
+            return null;
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.BooleanUtils <611, 617>
+if (str.equals(trueString)) {
+            return Boolean.TRUE;
+        } else if (str.equals(falseString)) {
+            return Boolean.FALSE;
+        } else if (str.equals(nullString)) {
+            return null;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.BooleanUtils <733, 743>
+if (str == null) {
+            if (trueString == null) {
+                return true;
+            } else if (falseString == null) {
+                return false;
+            }
+        } else if (str.equals(trueString)) {
+            return true;
+        } else if (str.equals(falseString)) {
+            return false;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.BooleanUtils <733, 743>
+if (StringVar == null) {
+            if (StringVar == null) {
+                return true;
+            } else if (StringVar == null) {
+                return false;
+            }
+        } else if (StringVar.equals(StringVar)) {
+            return true;
+        } else if (StringVar.equals(StringVar)) {
+            return false;
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.BooleanUtils <733, 743>
+if (str == null) {
+            if (trueString == null) {
+                return true;
+            } else if (falseString == null) {
+                return false;
+            }
+        } else if (str.equals(trueString)) {
+            return true;
+        } else if (str.equals(falseString)) {
+            return false;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.RandomStringUtils <99, 99>
+return random(count, true, false);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <99, 99>
+return random(intVar, true, false);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.RandomStringUtils <99, 99>
+return random(count, true, false);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.RandomStringUtils <113, 113>
+return random(count, true, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <113, 113>
+return random(intVar, true, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.RandomStringUtils <113, 113>
+return random(count, true, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.RandomStringUtils <127, 127>
+return random(count, false, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <127, 127>
+return random(intVar, false, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.RandomStringUtils <127, 127>
+return random(count, false, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.BooleanUtils <845, 845>
+return toString(bool, "true", "false");
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.BooleanUtils <845, 845>
+return toString(booleanVar, "true", "false");
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.BooleanUtils <845, 845>
+return toString(bool, "true", "false");
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.BooleanUtils <765, 765>
+return toString(bool, "true", "false", null);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.BooleanUtils <765, 765>
+return toString(Boolean, "true", "false", null);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.BooleanUtils <765, 765>
+return toString(Boolean, "true", "false", null);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.exception.ExceptionUtils <632, 632>
+return indexOf(throwable, type, 0, true);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.exception.ExceptionUtils <632, 632>
+return indexOf(Throwable, Class, 0, true);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.exception.ExceptionUtils <632, 632>
+return indexOf(Throwable, Class, 0, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.ClassUtils <665, 665>
+return getClass(className, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.ClassUtils <665, 665>
+return getClass(StringVar, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.ClassUtils <665, 665>
+return getClass(className, true);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.math.Fraction <702, 702>
+return addSub(fraction, true /* add */);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.Fraction <702, 702>
+return addSub(Number, true /* add */);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.math.Fraction <702, 702>
+return addSub(null, true /* add */);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.CharSet <214, 222>
+if (remainder >= 2 && str.charAt(pos) == '^') {
+                // negated char
+                set.add(new CharRange(str.charAt(pos + 1), true));
+                pos += 2;
+            } else {
+                // char
+                set.add(new CharRange(str.charAt(pos)));
+                pos += 1;
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.CharSet <214, 222>
+if (intVar >= 2 && StringVar.charAt(intVar) == '^') {
+                // negated char
+                Set.add(new CharRange(StringVar.charAt(intVar + 1), true));
+                intVar += 2;
+            } else {
+                // char
+                Set.add(new CharRange(StringVar.charAt(intVar)));
+                intVar += 1;
+            }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.CharSet <214, 222>
+if (remainder >= 2 && str.charAt(pos) == '^') {
+                // negated char
+                Set.add(new CharRange(str.charAt(pos + 1), true));
+                pos += 2;
+            } else {
+                // char
+                Set.add(new CharRange(str.charAt(pos)));
+                pos += 1;
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.ClassUtils <651, 651>
+return getClass(classLoader, className, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.ClassUtils <651, 651>
+return getClass(ClassLoader, StringVar, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.ClassUtils <651, 651>
+return getClass(ClassLoader, className, true);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.time.DurationFormatUtils <111, 111>
+return formatDuration(durationMillis, format, true);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <111, 111>
+return formatDuration(longVar, StringVar, true);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.time.DurationFormatUtils <111, 111>
+return formatDuration(durationMillis, format, true);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.exception.ExceptionUtils <656, 656>
+return indexOf(throwable, type, fromIndex, true);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.exception.ExceptionUtils <656, 656>
+return indexOf(Throwable, Class, intVar, true);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.exception.ExceptionUtils <656, 656>
+return indexOf(Throwable, Class, fromIndex, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.BooleanUtils <940, 940>
+return trueCount == 1;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.BooleanUtils <940, 940>
+return trueCount == 1;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.time.DurationFormatUtils <248, 248>
+return formatPeriod(startMillis, endMillis, format, true, TimeZone.getDefault());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <248, 248>
+return formatPeriod(longVar, longVar, StringVar, true, TimeZone.getDefault());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.time.DurationFormatUtils <248, 248>
+return formatPeriod(startMillis, endMillis, format, true, TimeZone.getDefault());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.StringUtils <3607, 3607>
+return replaceEach(text, searchList, replacementList, true, timeToLive);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3607, 3607>
+return replaceEach(StringVar, String[]Var, String[]Var, true, intVar);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3607, 3607>
+return replaceEach(text, searchList, replacementList, true, timeToLive);
+

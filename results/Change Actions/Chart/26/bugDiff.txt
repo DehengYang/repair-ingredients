@@ -1,0 +1,18 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_26/source/org/jfree/chart/axis/Axis.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_26/source/org/jfree/chart/axis/Axis.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_26/source/org/jfree/chart/axis/Axis.java	2020-01-03 05:11:29.853742050 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_26/source/org/jfree/chart/axis/Axis.java	2020-01-03 05:11:33.049669868 -0800
+@@ -1189,11 +1189,13 @@
+         }
+         if (plotState != null && hotspot != null) {
+             ChartRenderingInfo owner = plotState.getOwner();
++            if (owner != null) {
+                 EntityCollection entities = owner.getEntityCollection();
+                 if (entities != null) {
+                     entities.add(new AxisLabelEntity(this, hotspot, 
+                             this.labelToolTip, this.labelURL));
+                 }
++            }
+         }
+         return state;
+ 

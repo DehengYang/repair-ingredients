@@ -1,0 +1,66 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_26/src/main/java/org/joda/time/chrono/ZonedChronology.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_26/src/main/java/org/joda/time/chrono/ZonedChronology.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_26/src/main/java/org/joda/time/chrono/ZonedChronology.java	2020-01-05 22:48:18.396547101 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_26/src/main/java/org/joda/time/chrono/ZonedChronology.java	2020-01-05 22:48:20.248547094 -0800
+@@ -433,7 +433,7 @@
+             } else {
+                long localInstant = iZone.convertUTCToLocal(instant);
+                localInstant = iField.add(localInstant, value);
+-               return iZone.convertLocalToUTC(localInstant, false);
++               return iZone.convertLocalToUTC(localInstant, false, instant);
+             }
+         }
+ 
+@@ -445,7 +445,7 @@
+             } else {
+                long localInstant = iZone.convertUTCToLocal(instant);
+                localInstant = iField.add(localInstant, value);
+-               return iZone.convertLocalToUTC(localInstant, false);
++               return iZone.convertLocalToUTC(localInstant, false, instant);
+             }
+         }
+ 
+@@ -457,14 +457,14 @@
+             } else {
+                 long localInstant = iZone.convertUTCToLocal(instant);
+                 localInstant = iField.addWrapField(localInstant, value);
+-                return iZone.convertLocalToUTC(localInstant, false);
++                return iZone.convertLocalToUTC(localInstant, false, instant);
+             }
+         }
+ 
+         public long set(long instant, int value) {
+             long localInstant = iZone.convertUTCToLocal(instant);
+             localInstant = iField.set(localInstant, value);
+-            long result = iZone.convertLocalToUTC(localInstant, false);
++            long result = iZone.convertLocalToUTC(localInstant, false, instant);
+             if (get(result) != value) {
+                 throw new IllegalFieldValueException(iField.getType(), new Integer(value),
+                     "Illegal instant due to time zone offset transition: " +
+@@ -478,7 +478,7 @@
+             // cannot verify that new value stuck because set may be lenient
+             long localInstant = iZone.convertUTCToLocal(instant);
+             localInstant = iField.set(localInstant, text, locale);
+-            return iZone.convertLocalToUTC(localInstant, false);
++            return iZone.convertLocalToUTC(localInstant, false, instant);
+         }
+ 
+         public int getDifference(long minuendInstant, long subtrahendInstant) {
+@@ -525,7 +525,7 @@
+             } else {
+                 long localInstant = iZone.convertUTCToLocal(instant);
+                 localInstant = iField.roundFloor(localInstant);
+-                return iZone.convertLocalToUTC(localInstant, false);
++                return iZone.convertLocalToUTC(localInstant, false, instant);
+             }
+         }
+ 
+@@ -537,7 +537,7 @@
+             } else {
+                 long localInstant = iZone.convertUTCToLocal(instant);
+                 localInstant = iField.roundCeiling(localInstant);
+-                return iZone.convertLocalToUTC(localInstant, false);
++                return iZone.convertLocalToUTC(localInstant, false, instant);
+             }
+         }
+ 

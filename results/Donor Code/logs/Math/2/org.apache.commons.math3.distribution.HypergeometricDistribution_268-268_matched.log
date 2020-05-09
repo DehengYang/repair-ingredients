@@ -1,0 +1,57 @@
+---patch code ori--- org.apache.commons.math3.distribution.HypergeometricDistribution <268, 268>
+return getSampleSize() * (getNumberOfSuccesses() / (double) getPopulationSize());
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.distribution.HypergeometricDistribution <268, 268>
+return (double) (getSampleSize() * getNumberOfSuccesses()) / (double) getPopulationSize();
+
+---patch code 0--- org.apache.commons.math3.distribution.HypergeometricDistribution <268, 268>
+return getSampleSize() * (getNumberOfSuccesses() / (double) getPopulationSize());
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.distribution.HypergeometricDistribution <268, 268>
+return (double) (getSampleSize() * getNumberOfSuccesses()) / (double) getPopulationSize();
+
+---patch code 1--- org.apache.commons.math3.distribution.HypergeometricDistribution <268, 268>
+return getSampleSize() * (getNumberOfSuccesses() / (double) getPopulationSize());
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.distribution.HypergeometricDistribution <268, 268>
+return (double) (getSampleSize() * getNumberOfSuccesses()) / (double) getPopulationSize();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.distribution.HypergeometricDistribution <308, 309>
+return FastMath.max(0,
+                            getSampleSize() + getNumberOfSuccesses() - getPopulationSize());
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.distribution.HypergeometricDistribution <308, 309>
+return FastMath.max(0,
+                            getSampleSize() + getNumberOfSuccesses() - getPopulationSize());
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.distribution.HypergeometricDistribution <308, 309>
+return FastMath.max(0,
+                            getSampleSize() + getNumberOfSuccesses() - getPopulationSize());
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.distribution.HypergeometricDistribution <321, 321>
+return FastMath.min(getNumberOfSuccesses(), getSampleSize());
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.distribution.HypergeometricDistribution <321, 321>
+return FastMath.min(getNumberOfSuccesses(), getSampleSize());
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.distribution.HypergeometricDistribution <321, 321>
+return FastMath.min(getNumberOfSuccesses(), getSampleSize());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.stat.regression.GLSMultipleLinearRegression <132, 132>
+return t / (getX().getRowDimension() - getX().getColumnDimension());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.GLSMultipleLinearRegression <132, 132>
+return doubleVar / (getX().getRowDimension() - getX().getColumnDimension());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.stat.regression.GLSMultipleLinearRegression <132, 132>
+return t / (getX().getRowDimension() - getX().getColumnDimension());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.stat.regression.OLSMultipleLinearRegression <175, 175>
+return 1 - calculateResidualSumOfSquares() / calculateTotalSumOfSquares();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.OLSMultipleLinearRegression <175, 175>
+return 1 - calculateResidualSumOfSquares() / calculateTotalSumOfSquares();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.stat.regression.OLSMultipleLinearRegression <175, 175>
+return 1 - calculateResidualSumOfSquares() / calculateTotalSumOfSquares();
+

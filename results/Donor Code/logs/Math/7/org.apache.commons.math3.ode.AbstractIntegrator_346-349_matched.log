@@ -1,0 +1,12 @@
+---patch code 0--- org.apache.commons.math3.ode.AbstractIntegrator <346, 349>
+for (final EventState state : Collection) {
+                    EventState.stepAccepted(doubleVar, double[]Var);
+                    booleanVar = booleanVar || EventState.stop();
+                }
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.math3.ode.AbstractIntegrator <392, 395>
+for (final EventState state : Collection) {
+                EventState.stepAccepted(doubleVar, double[]Var);
+                booleanVar = booleanVar || EventState.stop();
+            }
+

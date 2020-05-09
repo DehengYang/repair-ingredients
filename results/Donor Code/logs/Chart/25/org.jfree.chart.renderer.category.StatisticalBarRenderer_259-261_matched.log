@@ -1,0 +1,230 @@
+---patch code 0--- org.jfree.chart.renderer.category.StatisticalBarRenderer <259, 261>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.LayeredBarRenderer <233, 235>
+if (Number == null) {
+            return;
+        }
+
+---patch code 1--- org.jfree.chart.renderer.category.StatisticalBarRenderer <259, 261>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.LayeredBarRenderer <233, 235>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.LayeredBarRenderer <361, 363>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.LayeredBarRenderer <361, 363>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.StatisticalLineAndShapeRenderer <168, 170>
+if (Number == null) {
+          return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.StatisticalLineAndShapeRenderer <168, 170>
+if (Number == null) {
+          return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.LevelRenderer <291, 293>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.LevelRenderer <291, 293>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.IntervalBarRenderer <180, 182>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.IntervalBarRenderer <180, 182>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.IntervalBarRenderer <189, 191>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.IntervalBarRenderer <189, 191>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.BarRenderer <729, 731>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.BarRenderer <729, 731>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.LineRenderer3D <519, 521>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.LineRenderer3D <519, 521>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.GroupedStackedBarRenderer <258, 260>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.GroupedStackedBarRenderer <258, 260>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.CategoryStepRenderer <280, 282>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.CategoryStepRenderer <280, 282>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.BarRenderer3D <612, 614>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.BarRenderer3D <612, 614>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.LineAndShapeRenderer <597, 599>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.LineAndShapeRenderer <597, 599>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.GanttRenderer <296, 298>
+if (Number == null) {
+                return;
+            }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.GanttRenderer <296, 298>
+if (Number == null) {
+                return;
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.GanttRenderer <304, 306>
+if (Number == null) {
+                return;
+            }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.GanttRenderer <304, 306>
+if (Number == null) {
+                return;
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.GanttRenderer <418, 420>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.GanttRenderer <418, 420>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.GanttRenderer <426, 428>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.GanttRenderer <426, 428>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.renderer.category.StackedBarRenderer <293, 295>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.renderer.category.StackedBarRenderer <293, 295>
+if (Number == null) {
+            return;
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.chart.plot.RingPlot <347, 349>
+if (Number == null) {
+            return;   
+        }
+
+---fix ingredient  varMapType:1--- org.jfree.chart.plot.RingPlot <347, 349>
+if (Number == null) {
+            return;   
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.chart.plot.PiePlot <2205, 2207>
+if (Number == null) {
+            return;   
+        }
+
+---fix ingredient  varMapType:1--- org.jfree.chart.plot.PiePlot <2205, 2207>
+if (Number == null) {
+            return;   
+        }
+
+---fix ingredient  <parseContainCheck2>  <parseContainCheck>  varMapType:0--- org.jfree.data.category.DefaultIntervalCategoryDataset <758, 760>
+if (Number[][]Var == null) {
+            return (Number[][]Var == null);
+        }
+
+---fix ingredient  <parseContainCheck2>  <parseContainCheck>  varMapType:0--- org.jfree.data.category.DefaultIntervalCategoryDataset <761, 763>
+if (Number[][]Var == null) {
+            return false;
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.jfree.data.KeyedValueComparator <138, 140>
+if (Number == null) {
+                return 1;
+            }
+
+---fix ingredient  <parseContainCheck>  varMapType:1--- org.jfree.data.KeyedValueComparator <138, 140>
+if (Number == null) {
+                return 1;
+            }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.jfree.data.KeyedValueComparator <135, 137>
+if (Number == null) {
+                return -1;
+            }
+
+---fix ingredient  <parseContainCheck>  varMapType:1--- org.jfree.data.KeyedValueComparator <135, 137>
+if (Number == null) {
+                return -1;
+            }
+

@@ -1,0 +1,18 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_17/src/com/google/javascript/jscomp/TypedScopeCreator.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_17/src/com/google/javascript/jscomp/TypedScopeCreator.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_17/src/com/google/javascript/jscomp/TypedScopeCreator.java	2020-01-05 05:15:50.948180047 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_17/src/com/google/javascript/jscomp/TypedScopeCreator.java	2020-01-05 05:15:51.652174167 -0800
+@@ -1288,8 +1288,12 @@
+           if (info.isConstant()) {
+             JSType knownType = null;
+             if (rValue != null) {
+-              if (rValue.getJSType() != null && !rValue.getJSType().isUnknownType()) {
++              JSDocInfo rValueInfo = rValue.getJSDocInfo();
++              if (rValueInfo != null && rValueInfo.hasType()) {
+                 // If rValue has a type-cast, we use the type in the type-cast.
++                return rValueInfo.getType().evaluate(scope, typeRegistry);
++              } else if (rValue.getJSType() != null
++                  && !rValue.getJSType().isUnknownType()) {
+                 // If rValue's type was already computed during scope creation,
+                 // then we can safely use that.
+                 return rValue.getJSType();

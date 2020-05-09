@@ -1,0 +1,45 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_13/src/main/java/org/apache/commons/lang3/SerializationUtils.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_13/src/main/java/org/apache/commons/lang3/SerializationUtils.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_13/src/main/java/org/apache/commons/lang3/SerializationUtils.java	2020-01-05 05:26:06.863035863 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_13/src/main/java/org/apache/commons/lang3/SerializationUtils.java	2020-01-05 05:26:10.303007132 -0800
+@@ -236,6 +236,8 @@
+      * class here is a workaround, see the JIRA issue LANG-626. </p>
+      */
+      static class ClassLoaderAwareObjectInputStream extends ObjectInputStream {
++        private static final Map<String, Class<?>> primitiveTypes = 
++                new HashMap<String, Class<?>>();
+         private ClassLoader classLoader;
+         
+         /**
+@@ -249,6 +251,15 @@
+             super(in);
+             this.classLoader = classLoader;
+ 
++            primitiveTypes.put("byte", byte.class);
++            primitiveTypes.put("short", short.class);
++            primitiveTypes.put("int", int.class);
++            primitiveTypes.put("long", long.class);
++            primitiveTypes.put("float", float.class);
++            primitiveTypes.put("double", double.class);
++            primitiveTypes.put("boolean", boolean.class);
++            primitiveTypes.put("char", char.class);
++            primitiveTypes.put("void", void.class);
+         }
+ 
+         /**
+@@ -265,7 +276,15 @@
+             try {
+                 return Class.forName(name, false, classLoader);
+             } catch (ClassNotFoundException ex) {
++                try {
+                     return Class.forName(name, false, Thread.currentThread().getContextClassLoader());
++                } catch (ClassNotFoundException cnfe) {
++                    Class<?> cls = primitiveTypes.get(name);
++                    if (cls != null)
++                        return cls;
++                    else
++                        throw cnfe;
++                }
+             }
+         }
+ 

@@ -1,0 +1,14 @@
+---patch code 0--- org.joda.time.tz.DefaultNameProvider <88, 92>
+if (String[]Var[2].equals(String[]Var[4])) {
+                  Map.put(String[]Var[4] + "-Summer", new String[] {String[]Var[4], String[]Var[3]});
+              } else {
+                  Map.put(String[]Var[4], new String[] {String[]Var[4], String[]Var[3]});
+              }
+
+---fix ingredient(SameMethod)  varMapType:0--- org.joda.time.tz.DefaultNameProvider <76, 80>
+if (String[]Var[2].equals(String[]Var[4])) {
+                  Map.put(String[]Var[4] + "-Summer", new String[] {String[]Var[4], String[]Var[3]});
+              } else {
+                  Map.put(String[]Var[4], new String[] {String[]Var[4], String[]Var[3]});
+              }
+

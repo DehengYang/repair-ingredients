@@ -1,0 +1,20 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_11/src/main/java/org/joda/time/tz/ZoneInfoCompiler.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_11/src/main/java/org/joda/time/tz/ZoneInfoCompiler.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_11/src/main/java/org/joda/time/tz/ZoneInfoCompiler.java	2020-01-05 22:47:33.488547272 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_11/src/main/java/org/joda/time/tz/ZoneInfoCompiler.java	2020-01-05 22:47:34.972547267 -0800
+@@ -65,10 +65,11 @@
+ 
+     static Chronology cLenientISO;
+ 
+-    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>();
+-    static {
+-        cVerbose.set(Boolean.FALSE);
+-    }
++    static ThreadLocal<Boolean> cVerbose = new ThreadLocal<Boolean>() {
++        protected Boolean initialValue() {
++            return Boolean.FALSE;
++        }
++    };
+ 
+     /**
+      * Gets a flag indicating that verbose logging is required.

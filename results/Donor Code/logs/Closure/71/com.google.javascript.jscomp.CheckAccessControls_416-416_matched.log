@@ -1,0 +1,9 @@
+---patch code 0--- com.google.javascript.jscomp.CheckAccessControls <416, 418>
+boolean booleanVar = Node.getJSDocInfo() != null &&
+          Node.getType() == Token.ASSIGN &&
+          Node.getFirstChild() == Node;
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.TypeInference <699, 700>
+boolean booleanVar = Node.getJSDocInfo() != null &&
+        Node.getJSDocInfo().getLendsName() != null;
+

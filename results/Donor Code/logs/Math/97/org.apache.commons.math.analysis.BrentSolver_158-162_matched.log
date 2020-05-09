@@ -1,0 +1,30 @@
+---patch code 0--- org.apache.commons.math.analysis.BrentSolver <158, 162>
+if (doubleVar == 0.0) {
+                doubleVar = doubleVar;
+            } else {
+                doubleVar = doubleVar;
+            }
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  <parseContainCheck>  <parseContainCheck>  varMapType:0--- org.apache.commons.math.analysis.RiddersSolver <139, 144>
+if (MathUtils.sign(doubleVar) + MathUtils.sign(doubleVar) == 0.0) {
+                    doubleVar = doubleVar; doubleVar = doubleVar;
+                } else {
+                    doubleVar = doubleVar; doubleVar = doubleVar;
+                    doubleVar = doubleVar; doubleVar = doubleVar;
+                }
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  <parseContainCheck>  <parseContainCheck>  varMapType:0--- org.apache.commons.math.analysis.RiddersSolver <146, 151>
+if (MathUtils.sign(doubleVar) + MathUtils.sign(doubleVar) == 0.0) {
+                    doubleVar = doubleVar; doubleVar = doubleVar;
+                } else {
+                    doubleVar = doubleVar; doubleVar = doubleVar;
+                    doubleVar = doubleVar; doubleVar = doubleVar;
+                }
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  <parseContainCheck>  <parseContainCheck>  varMapType:0--- org.apache.commons.math.analysis.MullerSolver <173, 177>
+if (MathUtils.sign(doubleVar) + MathUtils.sign(doubleVar) == 0.0) {
+                    doubleVar = doubleVar; doubleVar = doubleVar;
+                } else {
+                    doubleVar = doubleVar; doubleVar = doubleVar;
+                }
+

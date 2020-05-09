@@ -1,0 +1,3 @@
+fixed code:/home/apr/CodeSearchAndMatch2/Defects4J/fixed_bugs_dir/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-46-47
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-45-47
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/analysis/integration/UnivariateRealIntegratorImpl.java-91-100

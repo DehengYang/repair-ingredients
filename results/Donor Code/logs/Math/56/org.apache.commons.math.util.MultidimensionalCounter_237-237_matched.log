@@ -1,0 +1,6 @@
+---patch code 0--- org.apache.commons.math.util.MultidimensionalCounter <237, 237>
+int[]Var[intVar] = intVar - intVar;
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.random.RandomDataImpl <850, 850>
+int[]Var[intVar] = int[]Var[intVar - intVar - 1];
+

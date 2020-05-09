@@ -1,0 +1,9 @@
+---patch code 0--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <86, 86>
+return 2 + (intVar - intVar) + (booleanVar ? 1 : 0) + (booleanVar ? 1 : 0);
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <80, 80>
+return 2 + (intVar - intVar) + (booleanVar ? 1 : 0) + 1;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharRange <226, 226>
+return 83 + charVar + 7 * charVar + (booleanVar ? 1 : 0);
+

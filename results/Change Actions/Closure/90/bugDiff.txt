@@ -1,0 +1,26 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_90/src/com/google/javascript/jscomp/FunctionTypeBuilder.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_90/src/com/google/javascript/jscomp/FunctionTypeBuilder.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_90/src/com/google/javascript/jscomp/FunctionTypeBuilder.java	2020-01-05 05:20:21.933916747 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_90/src/com/google/javascript/jscomp/FunctionTypeBuilder.java	2020-01-05 05:20:23.953899875 -0800
+@@ -181,7 +181,7 @@
+       // create interfaces JSType, ObjectType, FunctionType etc and have
+       // separate implementation instead of the class hierarchy, so that
+       // union types can also be object types, etc.
+-      if (!type.isSubtype(
++      if (!type.restrictByNotNullOrUndefined().isSubtype(
+               typeRegistry.getNativeType(OBJECT_TYPE))) {
+         reportWarning(THIS_TYPE_NON_OBJECT, type.toString());
+         return false;
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_90/src/com/google/javascript/rhino/jstype/FunctionType.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_90/src/com/google/javascript/rhino/jstype/FunctionType.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_90/src/com/google/javascript/rhino/jstype/FunctionType.java	2020-01-05 05:20:21.937916713 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_90/src/com/google/javascript/rhino/jstype/FunctionType.java	2020-01-05 05:20:23.957899842 -0800
+@@ -877,6 +877,9 @@
+     // mean "nullable Foo". For certain tags (like @extends) we de-nullify
+     // the name for them.
+     JSType maybeTypeOfThis = safeResolve(typeOfThis, t, scope);
++    if (maybeTypeOfThis != null) {
++      maybeTypeOfThis = maybeTypeOfThis.restrictByNotNullOrUndefined();
++    }
+     if (maybeTypeOfThis instanceof ObjectType) {
+       typeOfThis = (ObjectType) maybeTypeOfThis;
+     }

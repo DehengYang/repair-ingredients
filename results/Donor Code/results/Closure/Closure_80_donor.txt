@@ -1,0 +1,24 @@
+chunk1 : com.google.javascript.jscomp.NodeUtil:1262-1262
+fix ingredient  varMapType:ori : (2)
+fix ingredient  varMapType:0 : (2)
+fix ingredient  varMapType:1 : (2)
+fix ingredient(SamePackage)  varMapType:ori : (1)
+fix ingredient(SamePackage)  varMapType:0 : (1)
+fix ingredient(SamePackage)  varMapType:1 : (1)
+fix ingredient(SameFile)  varMapType:ori : (2)
+fix ingredient(SameFile)  varMapType:0 : (2)
+fix ingredient(SameFile)  varMapType:1 : (2)
+
+
+chunk2 : com.google.javascript.jscomp.NodeUtil:2911-2911
+fix ingredient  varMapType:ori : (2)
+fix ingredient  varMapType:0 : (2)
+fix ingredient  varMapType:1 : (2)
+fix ingredient(SamePackage)  varMapType:ori : (1)
+fix ingredient(SamePackage)  varMapType:0 : (1)
+fix ingredient(SamePackage)  varMapType:1 : (1)
+fix ingredient(SameFile)  varMapType:ori : (2)
+fix ingredient(SameFile)  varMapType:0 : (2)
+fix ingredient(SameFile)  varMapType:1 : (2)
+
+

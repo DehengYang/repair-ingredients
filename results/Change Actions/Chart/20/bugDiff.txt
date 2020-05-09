@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_20/source/org/jfree/chart/plot/ValueMarker.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_20/source/org/jfree/chart/plot/ValueMarker.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_20/source/org/jfree/chart/plot/ValueMarker.java	2020-01-02 20:13:53.616758700 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_20/source/org/jfree/chart/plot/ValueMarker.java	2020-01-02 20:16:12.228636300 -0800
+@@ -92,7 +92,7 @@
+      */
+     public ValueMarker(double value, Paint paint, Stroke stroke, 
+                        Paint outlinePaint, Stroke outlineStroke, float alpha) {
+-        super(paint, stroke, paint, stroke, alpha);
++        super(paint, stroke, outlinePaint, outlineStroke, alpha);
+         this.value = value;
+     }
+     

@@ -1,0 +1,45 @@
+---patch code ori--- org.jfree.chart.imagemap.StandardToolTipTagFragmentGenerator <65, 66>
+return " title=\"" + ImageMapUtilities.htmlEscape(toolTipText) 
+            + "\" alt=\"\"";
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.imagemap.OverLIBToolTipTagFragmentGenerator <66, 68>
+return " onMouseOver=\"return overlib('" 
+                + ImageMapUtilities.htmlEscape(toolTipText) 
+                + "');\" onMouseOut=\"return nd();\"";
+
+---patch code 0--- org.jfree.chart.imagemap.StandardToolTipTagFragmentGenerator <65, 66>
+return " title=\"" + ImageMapUtilities.htmlEscape(StringVar) 
+            + "\" alt=\"\"";
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.imagemap.OverLIBToolTipTagFragmentGenerator <66, 68>
+return " onMouseOver=\"return overlib('" 
+                + ImageMapUtilities.htmlEscape(StringVar) 
+                + "');\" onMouseOut=\"return nd();\"";
+
+---patch code 1--- org.jfree.chart.imagemap.StandardToolTipTagFragmentGenerator <65, 66>
+return " title=\"" + ImageMapUtilities.htmlEscape(toolTipText) 
+            + "\" alt=\"\"";
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.imagemap.OverLIBToolTipTagFragmentGenerator <66, 68>
+return " onMouseOver=\"return overlib('" 
+                + ImageMapUtilities.htmlEscape(toolTipText) 
+                + "');\" onMouseOut=\"return nd();\"";
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.imagemap.DynamicDriveToolTipTagFragmentGenerator <85, 88>
+return " onMouseOver=\"return stm(['"
+            + ImageMapUtilities.htmlEscape(this.title) + "','"
+            + ImageMapUtilities.htmlEscape(toolTipText) + "'],Style["
+            + this.style + "]);\"" + " onMouseOut=\"return htm();\"";
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.imagemap.DynamicDriveToolTipTagFragmentGenerator <85, 88>
+return " onMouseOver=\"return stm(['"
+            + ImageMapUtilities.htmlEscape(DynamicDriveToolTipTagFragmentGenerator.StringVar) + "','"
+            + ImageMapUtilities.htmlEscape(StringVar) + "'],Style["
+            + DynamicDriveToolTipTagFragmentGenerator.intVar + "]);\"" + " onMouseOut=\"return htm();\"";
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.imagemap.DynamicDriveToolTipTagFragmentGenerator <85, 88>
+return " onMouseOver=\"return stm(['"
+            + ImageMapUtilities.htmlEscape(DynamicDriveToolTipTagFragmentGenerator.title) + "','"
+            + ImageMapUtilities.htmlEscape(toolTipText) + "'],Style["
+            + DynamicDriveToolTipTagFragmentGenerator.style + "]);\"" + " onMouseOut=\"return htm();\"";
+

@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_8/source/org/jfree/data/time/Week.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_8/source/org/jfree/data/time/Week.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_8/source/org/jfree/data/time/Week.java	2020-01-04 01:53:32.088160564 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_8/source/org/jfree/data/time/Week.java	2020-01-04 01:53:33.416121859 -0800
+@@ -172,7 +172,7 @@
+      */
+     public Week(Date time, TimeZone zone) {
+         // defer argument checking...
+-        this(time, RegularTimePeriod.DEFAULT_TIME_ZONE, Locale.getDefault());
++        this(time, zone, Locale.getDefault());
+     }
+ 
+     /**

@@ -1,0 +1,15 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_52/src/java/org/apache/commons/lang/StringEscapeUtils.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_52/src/java/org/apache/commons/lang/StringEscapeUtils.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_52/src/java/org/apache/commons/lang/StringEscapeUtils.java	2020-01-05 05:30:35.880789000 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_52/src/java/org/apache/commons/lang/StringEscapeUtils.java	2020-01-05 05:30:39.428759367 -0800
+@@ -233,6 +233,10 @@
+                         out.write('\\');
+                         out.write('\\');
+                         break;
++                    case '/':
++                        out.write('\\');
++                        out.write('/');
++                        break;
+                     default :
+                         out.write(ch);
+                         break;

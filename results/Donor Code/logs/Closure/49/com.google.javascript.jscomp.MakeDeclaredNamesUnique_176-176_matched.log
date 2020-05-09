@@ -1,0 +1,102 @@
+---patch code ori--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <176, 176>
+nameStack.pop();
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <109, 109>
+nameStack.pop();
+
+---patch code 0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <176, 176>
+Deque.pop();
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <109, 109>
+Deque.pop();
+
+---patch code 1--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <176, 176>
+Deque.pop();
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <109, 109>
+Deque.pop();
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <174, 174>
+nameStack.pop();
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <174, 174>
+Deque.pop();
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <174, 174>
+Deque.pop();
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <183, 183>
+nameStack.pop();
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <183, 183>
+Deque.pop();
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <183, 183>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.OperaCompoundAssignFix <67, 67>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.OperaCompoundAssignFix <67, 67>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.NodeTraversal <581, 581>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.NodeTraversal <581, 581>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.NodeTraversal <583, 583>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.NodeTraversal <583, 583>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.NodeTraversal <585, 585>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.NodeTraversal <585, 585>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.NodeTraversal <610, 610>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.NodeTraversal <610, 610>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RenameLabels <127, 127>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RenameLabels <127, 127>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ControlFlowAnalysis <287, 287>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ControlFlowAnalysis <287, 287>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ControlFlowAnalysis <529, 529>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ControlFlowAnalysis <529, 529>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CoalesceVariableNames <145, 145>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CoalesceVariableNames <145, 145>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ReferenceCollectingCallback <162, 162>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ReferenceCollectingCallback <162, 162>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ReferenceCollectingCallback <181, 181>
+Deque.pop();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ReferenceCollectingCallback <181, 181>
+Deque.pop();
+

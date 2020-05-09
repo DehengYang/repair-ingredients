@@ -1,0 +1,14 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_48/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_48/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_48/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java	2020-01-05 06:36:00.708008440 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_48/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java	2020-01-05 06:36:04.191979342 -0800
+@@ -186,6 +186,9 @@
+                 case REGULA_FALSI:
+                     // Detect early that algorithm is stuck, instead of waiting
+                     // for the maximum number of iterations to be exceeded.
++                    if (x == x1) {
++                        throw new ConvergenceException();
++                    }
+                     break;
+                 default:
+                     // Should never happen.

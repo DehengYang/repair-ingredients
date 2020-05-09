@@ -1,0 +1,19 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_87/src/java/org/apache/commons/math/optimization/linear/SimplexTableau.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_87/src/java/org/apache/commons/math/optimization/linear/SimplexTableau.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_87/src/java/org/apache/commons/math/optimization/linear/SimplexTableau.java	2020-01-05 06:39:50.950085434 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_87/src/java/org/apache/commons/math/optimization/linear/SimplexTableau.java	2020-01-05 06:39:54.466056069 -0800
+@@ -272,12 +272,10 @@
+     private Integer getBasicRow(final int col) {
+         Integer row = null;
+         for (int i = getNumObjectiveFunctions(); i < getHeight(); i++) {
+-            if (!MathUtils.equals(getEntry(i, col), 0.0, epsilon)) {
+-                if (row == null) {
++            if (MathUtils.equals(getEntry(i, col), 1.0, epsilon) && (row == null)) {
+                 row = i;
+-                } else {
++            } else if (!MathUtils.equals(getEntry(i, col), 0.0, epsilon)) {
+                 return null;
+-                }
+             }
+         }
+         return row;

@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_16/src/main/java/org/apache/commons/lang3/math/NumberUtils.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_16/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_16/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2020-01-05 05:26:27.426864112 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_16/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2020-01-05 05:26:30.866835381 -0800
+@@ -455,7 +455,7 @@
+             // a wrong value.
+             return null;
+         }
+-        if (str.startsWith("0x") || str.startsWith("-0x")) {
++        if (str.startsWith("0x") || str.startsWith("-0x") || str.startsWith("0X") || str.startsWith("-0X")) {
+             return createInteger(str);
+         }   
+         char lastChar = str.charAt(str.length() - 1);

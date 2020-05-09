@@ -1,0 +1,20 @@
+---patch code 0--- org.jfree.data.time.TimePeriodValues <302, 303>
+long longVar = getDataItem(Series.intVar).getPeriod().getEnd()
+                .getTime();
+
+---fix ingredient(SameMethod)  varMapType:0--- org.jfree.data.time.TimePeriodValues <288, 289>
+long longVar = getDataItem(Series.intVar).getPeriod().getEnd()
+                .getTime();
+
+---fix ingredient(SameMethod)  varMapType:0--- org.jfree.data.time.TimePeriodValues <302, 303>
+long longVar = getDataItem(Series.intVar).getPeriod().getEnd()
+                .getTime();
+
+---fix ingredient(SameMethod)  varMapType:0--- org.jfree.data.time.TimePeriodValues <314, 315>
+long longVar = getDataItem(Series.intVar).getPeriod().getEnd()
+                .getTime();
+
+---fix ingredient(SameMethod)  varMapType:0--- org.jfree.data.time.TimePeriodValues <325, 326>
+long longVar = getDataItem(Series.intVar).getPeriod().getEnd()
+                .getTime();
+

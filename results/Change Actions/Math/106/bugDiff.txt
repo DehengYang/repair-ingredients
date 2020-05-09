@@ -1,0 +1,28 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_106/src/java/org/apache/commons/math/fraction/ProperFractionFormat.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_106/src/java/org/apache/commons/math/fraction/ProperFractionFormat.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_106/src/java/org/apache/commons/math/fraction/ProperFractionFormat.java	2020-01-05 06:41:45.453129093 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_106/src/java/org/apache/commons/math/fraction/ProperFractionFormat.java	2020-01-05 06:41:47.845109115 -0800
+@@ -162,7 +162,11 @@
+             return null;
+         }
+         
++        if (num.intValue() < 0) {
+             // minus signs should be leading, invalid expression
++            pos.setIndex(initialIndex);
++            return null;
++        }
+ 
+         // parse '/'
+         int startIndex = pos.getIndex();
+@@ -197,7 +201,11 @@
+             return null;
+         }
+         
++        if (den.intValue() < 0) {
+             // minus signs must be leading, invalid
++            pos.setIndex(initialIndex);
++            return null;
++        }
+ 
+         int w = whole.intValue();
+         int n = num.intValue();

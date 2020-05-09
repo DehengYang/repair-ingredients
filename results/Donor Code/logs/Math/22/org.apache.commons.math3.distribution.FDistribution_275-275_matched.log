@@ -1,0 +1,405 @@
+---patch code ori--- org.apache.commons.math3.distribution.FDistribution <275, 275>
+return false;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.util.FastMath <2398, 2398>
+return atan(x, 0.0, false);
+
+---patch code 0--- org.apache.commons.math3.distribution.FDistribution <275, 275>
+return false;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.FastMath <2398, 2398>
+return atan(doubleVar, 0.0, false);
+
+---patch code 1--- org.apache.commons.math3.distribution.FDistribution <275, 275>
+return false;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.util.FastMath <2398, 2398>
+return atan(x, 0.0, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.ode.nonstiff.AdamsNordsieckTransformer <238, 238>
+return new Array2DRowFieldMatrix<BigFraction>(pData, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.ode.nonstiff.AdamsNordsieckTransformer <238, 238>
+return new Array2DRowFieldMatrix<BigFraction>(BigFraction[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.ode.nonstiff.AdamsNordsieckTransformer <238, 238>
+return new Array2DRowFieldMatrix<BigFraction>(pData, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSet <125, 125>
+return boundary.getTree(false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSet <125, 125>
+return Region.getTree(false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.euclidean.threed.PolyhedronsSet <125, 125>
+return Region.getTree(false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1020, 1020>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1020, 1020>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1020, 1020>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1035, 1035>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1035, 1035>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1035, 1035>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1050, 1050>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1050, 1050>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1050, 1050>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1065, 1065>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1065, 1065>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1065, 1065>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1080, 1080>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1080, 1080>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1080, 1080>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1095, 1095>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1095, 1095>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1095, 1095>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1110, 1110>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1110, 1110>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1110, 1110>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1126, 1126>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1126, 1126>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1126, 1126>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1140, 1140>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1140, 1140>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1140, 1140>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1146, 1146>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1146, 1146>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1146, 1146>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1174, 1174>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1174, 1174>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1174, 1174>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1189, 1189>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1189, 1189>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1189, 1189>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1216, 1216>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1216, 1216>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1216, 1216>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1233, 1233>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1233, 1233>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1233, 1233>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1346, 1346>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1346, 1346>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1346, 1346>
+return new Array2DRowRealMatrix(d, false);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.distribution.KolmogorovSmirnovDistribution <109, 109>
+return this.cdf(d, false);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.distribution.KolmogorovSmirnovDistribution <109, 109>
+return KolmogorovSmirnovDistribution.cdf(doubleVar, false);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.distribution.KolmogorovSmirnovDistribution <109, 109>
+return KolmogorovSmirnovDistribution.cdf(d, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.fraction.Fraction <454, 454>
+return addSub(fraction, false /* subtract */);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.fraction.Fraction <454, 454>
+return addSub(Number, false /* subtract */);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.fraction.Fraction <454, 454>
+return addSub(null, false /* subtract */);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.JacobiPreconditioner <79, 79>
+return new JacobiPreconditioner(diag, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.JacobiPreconditioner <79, 79>
+return new JacobiPreconditioner(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.JacobiPreconditioner <79, 79>
+return new JacobiPreconditioner(diag, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.FieldLUDecomposition <384, 384>
+return new ArrayFieldVector<T>(bp, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.FieldLUDecomposition <384, 384>
+return new ArrayFieldVector<T>(T[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.FieldLUDecomposition <384, 384>
+return new ArrayFieldVector<T>(bp, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.RealVectorFormat <287, 287>
+return new ArrayRealVector(data, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RealVectorFormat <287, 287>
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.RealVectorFormat <287, 287>
+return new ArrayRealVector(data, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.EigenDecomposition <463, 463>
+return new ArrayRealVector(bp, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <463, 463>
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.EigenDecomposition <463, 463>
+return new ArrayRealVector(bp, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.EigenDecomposition <500, 500>
+return new Array2DRowRealMatrix(bp, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <500, 500>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.EigenDecomposition <500, 500>
+return new Array2DRowRealMatrix(bp, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.MatrixUtils <586, 586>
+return new Array2DRowRealMatrix(data, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.MatrixUtils <586, 586>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.MatrixUtils <586, 586>
+return new Array2DRowRealMatrix(data, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.MatrixUtils <631, 631>
+return new Array2DRowRealMatrix(data, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.MatrixUtils <631, 631>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.MatrixUtils <631, 631>
+return new Array2DRowRealMatrix(data, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.BlockRealMatrix <999, 999>
+return new ArrayRealVector(outData, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BlockRealMatrix <999, 999>
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.BlockRealMatrix <999, 999>
+return new ArrayRealVector(outData, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.BlockRealMatrix <1031, 1031>
+return new ArrayRealVector(outData, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BlockRealMatrix <1031, 1031>
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.BlockRealMatrix <1031, 1031>
+return new ArrayRealVector(outData, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.LUDecomposition <324, 324>
+return new ArrayRealVector(bp, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.LUDecomposition <324, 324>
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.LUDecomposition <324, 324>
+return new ArrayRealVector(bp, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.LUDecomposition <378, 378>
+return new Array2DRowRealMatrix(bp, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.LUDecomposition <378, 378>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.LUDecomposition <378, 378>
+return new Array2DRowRealMatrix(bp, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.Array2DRowRealMatrix <171, 171>
+return new Array2DRowRealMatrix(outData, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.Array2DRowRealMatrix <171, 171>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.Array2DRowRealMatrix <171, 171>
+return new Array2DRowRealMatrix(outData, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.Array2DRowRealMatrix <198, 198>
+return new Array2DRowRealMatrix(outData, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.Array2DRowRealMatrix <198, 198>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.Array2DRowRealMatrix <198, 198>
+return new Array2DRowRealMatrix(outData, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.Array2DRowRealMatrix <240, 240>
+return new Array2DRowRealMatrix(outData, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.Array2DRowRealMatrix <240, 240>
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.Array2DRowRealMatrix <240, 240>
+return new Array2DRowRealMatrix(outData, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.ArrayRealVector <315, 315>
+return new ArrayRealVector(out, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <315, 315>
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.ArrayRealVector <315, 315>
+return new ArrayRealVector(out, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.ArrayRealVector <341, 341>
+return new ArrayRealVector(out, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <341, 341>
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.ArrayRealVector <341, 341>
+return new ArrayRealVector(out, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.ArrayRealVector <416, 416>
+return new ArrayRealVector(out, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <416, 416>
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.ArrayRealVector <416, 416>
+return new ArrayRealVector(out, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.ArrayRealVector <440, 440>
+return new ArrayRealVector(out, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <440, 440>
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.ArrayRealVector <440, 440>
+return new ArrayRealVector(out, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.ArrayRealVector <640, 640>
+return new ArrayRealVector(out, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <640, 640>
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.ArrayRealVector <640, 640>
+return new ArrayRealVector(out, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.CholeskyDecomposition <253, 253>
+return new ArrayRealVector(x, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.CholeskyDecomposition <253, 253>
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.CholeskyDecomposition <253, 253>
+return new ArrayRealVector(x, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.AbstractRealMatrix <683, 683>
+return new ArrayRealVector(out, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.AbstractRealMatrix <683, 683>
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.AbstractRealMatrix <683, 683>
+return new ArrayRealVector(out, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.AbstractRealMatrix <729, 729>
+return new ArrayRealVector(out, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.AbstractRealMatrix <729, 729>
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.AbstractRealMatrix <729, 729>
+return new ArrayRealVector(out, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.QRDecomposition <365, 365>
+return new ArrayRealVector(x, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.QRDecomposition <365, 365>
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.QRDecomposition <365, 365>
+return new ArrayRealVector(x, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.geometry.partitioning.BSPTree <365, 365>
+return merge(tree, leafMerger, null, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.partitioning.BSPTree <365, 365>
+return merge(BSPTree, LeafMerger, null, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.partitioning.BSPTree <365, 365>
+return merge(BSPTree, LeafMerger, null, false);
+

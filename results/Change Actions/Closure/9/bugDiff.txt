@@ -1,0 +1,21 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_9/src/com/google/javascript/jscomp/ProcessCommonJSModules.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_9/src/com/google/javascript/jscomp/ProcessCommonJSModules.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_9/src/com/google/javascript/jscomp/ProcessCommonJSModules.java	2020-01-05 05:15:35.876305929 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_9/src/com/google/javascript/jscomp/ProcessCommonJSModules.java	2020-01-05 05:15:37.028296307 -0800
+@@ -116,6 +116,7 @@
+   private String normalizeSourceName(String filename) {
+     // The DOS command shell will normalize "/" to "\", so we have to
+     // wrestle it back.
++    filename = filename.replace("\\", "/");
+ 
+     if (filename.indexOf(filenamePrefix) == 0) {
+       filename = filename.substring(filenamePrefix.length());
+@@ -180,7 +181,7 @@
+       Preconditions.checkArgument(scriptNodeCount == 1,
+           "ProcessCommonJSModules supports only one invocation per " +
+           "CompilerInput / script node");
+-      String moduleName = guessCJSModuleName(normalizeSourceName(script.getSourceFileName()));
++      String moduleName = guessCJSModuleName(script.getSourceFileName());
+       script.addChildToFront(IR.var(IR.name(moduleName), IR.objectlit())
+           .copyInformationFromForTree(script));
+       if (reportDependencies) {

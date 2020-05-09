@@ -1,0 +1,7 @@
+chunk1 : com.google.javascript.rhino.jstype.UnionType:291-291
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (4)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (4)
+fix ingredient  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient  <1-fine-grained>  varMapType:1 : (2)
+
+

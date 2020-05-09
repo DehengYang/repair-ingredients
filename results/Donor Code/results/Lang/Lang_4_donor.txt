@@ -1,0 +1,24 @@
+chunk1 : org.apache.commons.lang3.text.translate.LookupTranslator:77-77
+fix ingredient  <ori-fine-grained>  varMapType:ori : (119)
+fix ingredient  <0-fine-grained>  varMapType:0 : (114)
+fix ingredient  <1-fine-grained>  varMapType:1 : (119)
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (7)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (7)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (7)
+
+
+chunk2 : org.apache.commons.lang3.text.translate.LookupTranslator:51-51
+fix ingredient  <ori-fine-grained>  varMapType:ori : (79)
+fix ingredient  <0-fine-grained>  varMapType:0 : (77)
+fix ingredient  <1-fine-grained>  varMapType:1 : (79)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (6)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (6)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (6)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (1)
+
+

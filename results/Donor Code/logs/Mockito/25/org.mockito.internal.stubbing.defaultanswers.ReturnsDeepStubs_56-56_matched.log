@@ -1,0 +1,24 @@
+---patch code 0--- org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs <56, 56>
+return getMock(InvocationOnMock, GenericMetadataSupport);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs <96, 96>
+return GenericMetadataSupport.inferFrom(CreationSettings.getTypeToMock());
+
+---patch code 1--- org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs <56, 56>
+return getMock(InvocationOnMock, GenericMetadataSupport);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs <96, 96>
+return GenericMetadataSupport.inferFrom(CreationSettings.getTypeToMock());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.mockito.internal.util.reflection.GenericMetadataSupport <226, 226>
+return new FromClassGenericMetadataSupport((Class<?>) Type);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.mockito.internal.util.reflection.GenericMetadataSupport <226, 226>
+return new FromClassGenericMetadataSupport((Class<?>) Type);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.mockito.internal.util.reflection.GenericMetadataSupport <229, 229>
+return new FromParameterizedTypeGenericMetadataSupport((ParameterizedType) Type);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.mockito.internal.util.reflection.GenericMetadataSupport <229, 229>
+return new FromParameterizedTypeGenericMetadataSupport((ParameterizedType) Type);
+

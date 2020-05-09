@@ -1,0 +1,6 @@
+chunk1 : org.apache.commons.lang3.math.NumberUtils:723-724
+fix ingredient(SameFile)  varMapType:ori : (4)
+fix ingredient(SameFile)  varMapType:0 : (4)
+fix ingredient(SameFile)  varMapType:1 : (4)
+
+

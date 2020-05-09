@@ -1,0 +1,63 @@
+---patch code 1--- com.google.javascript.jscomp.CodePrinter <334, 336>
+if (getLastChar() != ' ' && op.charAt(0) != ',') {
+          append(" ");
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.regex.RegExpTree <1843, 1853>
+if (ch >= 0x100) {
+            StringBuilder.append("\\u");
+            StringBuilder.append("0123456789abcdef".charAt((ch >> 12) & 0xf));
+            StringBuilder.append("0123456789abcdef".charAt((ch >> 8) & 0xf));
+            StringBuilder.append("0123456789abcdef".charAt((ch >> 4) & 0xf));
+            StringBuilder.append("0123456789abcdef".charAt((ch) & 0xf));
+          } else {
+            StringBuilder.append("\\x");
+            StringBuilder.append("0123456789abcdef".charAt((ch >> 4) & 0xf));
+            StringBuilder.append("0123456789abcdef".charAt((ch) & 0xf));
+          }
+
+---patch code 0--- com.google.javascript.jscomp.CodePrinter <334, 336>
+if (getLastChar() != ' ' && StringVar.charAt(0) != ',') {
+          append(" ");
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NodeUtil <354, 360>
+if (StringVar.length() > 3
+        && (StringVar.charAt(0) == '-' || StringVar.charAt(0) == '+')
+        && StringVar.charAt(1) == '0'
+        && (StringVar.charAt(2) == 'x' || StringVar.charAt(2) == 'X')) {
+      // hex numbers with explicit signs vary between browsers.
+      return null;
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NodeUtil <343, 352>
+if (StringVar.length() > 2
+        && StringVar.charAt(0) == '0'
+        && (StringVar.charAt(1) == 'x' || StringVar.charAt(1) == 'X')) {
+      // Attempt to convert hex numbers.
+      try {
+        return Double.valueOf(Integer.parseInt(StringVar.substring(2), 16));
+      } catch (NumberFormatException e) {
+        return Double.NaN;
+      }
+    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.TokenStream <66, 66>
+if (StringVar.charAt(0)=='i') {booleanVar=true; break complete;}
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.TokenStream <68, 68>
+if (StringVar.charAt(0)=='i') {booleanVar=true; break complete;}
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.TokenStream <70, 70>
+if (StringVar.charAt(0)=='d') {booleanVar=true; break complete;}
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.WhitelistWarningsGuard <124, 126>
+if (StringVar.isEmpty() || StringVar.charAt(0) == '#') {
+          continue;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.StripCode <566, 568>
+if ((StringVar.length() == 0) || Character.isUpperCase(StringVar.charAt(0))) {
+        return false;
+      }
+

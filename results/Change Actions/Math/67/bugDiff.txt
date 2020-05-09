@@ -1,0 +1,19 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_67/src/main/java/org/apache/commons/math/optimization/MultiStartUnivariateRealOptimizer.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_67/src/main/java/org/apache/commons/math/optimization/MultiStartUnivariateRealOptimizer.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_67/src/main/java/org/apache/commons/math/optimization/MultiStartUnivariateRealOptimizer.java	2020-01-05 06:37:43.703148214 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_67/src/main/java/org/apache/commons/math/optimization/MultiStartUnivariateRealOptimizer.java	2020-01-05 06:37:46.203127334 -0800
+@@ -89,12 +89,12 @@
+ 
+     /** {@inheritDoc} */
+     public double getFunctionValue() {
+-        return optimizer.getFunctionValue();
++        return optimaValues[0];
+     }
+ 
+     /** {@inheritDoc} */
+     public double getResult() {
+-        return optimizer.getResult();
++        return optima[0];
+     }
+ 
+     /** {@inheritDoc} */

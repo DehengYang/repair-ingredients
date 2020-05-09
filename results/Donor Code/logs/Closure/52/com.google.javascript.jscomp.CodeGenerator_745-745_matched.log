@@ -1,0 +1,76 @@
+---patch code ori--- com.google.javascript.jscomp.CodeGenerator <745, 745>
+return len > 0 && s.charAt(0) != '0';
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.NodeUtil <350, 356>
+if (s.length() > 3
+        && (s.charAt(0) == '-' || s.charAt(0) == '+')
+        && s.charAt(1) == '0'
+        && (s.charAt(2) == 'x' || s.charAt(2) == 'X')) {
+      // hex numbers with explicit signs vary between browsers.
+      return null;
+    }
+
+---patch code 0--- com.google.javascript.jscomp.CodeGenerator <745, 745>
+return intVar > 0 && StringVar.charAt(0) != '0';
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NodeUtil <350, 356>
+if (StringVar.length() > 3
+        && (StringVar.charAt(0) == '-' || StringVar.charAt(0) == '+')
+        && StringVar.charAt(1) == '0'
+        && (StringVar.charAt(2) == 'x' || StringVar.charAt(2) == 'X')) {
+      // hex numbers with explicit signs vary between browsers.
+      return null;
+    }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.TokenStream <191, 191>
+if (c=='f') { if (s.charAt(0)=='i') {id=Id_if; break L0;} }
+                else if (c=='n') { if (s.charAt(0)=='i') {id=Id_in; break L0;} }
+                else if (c=='o') { if (s.charAt(0)=='d') {id=Id_do; break L0;} }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.TokenStream <191, 191>
+if (intVar=='f') { if (StringVar.charAt(0)=='i') {intVar=intVar; break L0;} }
+                else if (intVar=='n') { if (StringVar.charAt(0)=='i') {intVar=intVar; break L0;} }
+                else if (intVar=='o') { if (StringVar.charAt(0)=='d') {intVar=intVar; break L0;} }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.TokenStream <192, 192>
+if (c=='n') { if (s.charAt(0)=='i') {id=Id_in; break L0;} }
+                else if (c=='o') { if (s.charAt(0)=='d') {id=Id_do; break L0;} }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.TokenStream <192, 192>
+if (intVar=='n') { if (StringVar.charAt(0)=='i') {intVar=intVar; break L0;} }
+                else if (intVar=='o') { if (StringVar.charAt(0)=='d') {intVar=intVar; break L0;} }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.TokenStream <193, 193>
+if (c=='f') { if (s.charAt(0)=='i') {id=Id_if; break L0;} }
+                else if (c=='n') { if (s.charAt(0)=='i') {id=Id_in; break L0;} }
+                else if (c=='o') { if (s.charAt(0)=='d') {id=Id_do; break L0;} }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.TokenStream <193, 193>
+if (intVar=='f') { if (StringVar.charAt(0)=='i') {intVar=intVar; break L0;} }
+                else if (intVar=='n') { if (StringVar.charAt(0)=='i') {intVar=intVar; break L0;} }
+                else if (intVar=='o') { if (StringVar.charAt(0)=='d') {intVar=intVar; break L0;} }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.NodeUtil <339, 348>
+if (s.length() > 2
+        && s.charAt(0) == '0'
+        && (s.charAt(1) == 'x' || s.charAt(1) == 'X')) {
+      // Attempt to convert hex numbers.
+      try {
+        return Double.valueOf(Integer.parseInt(s.substring(2), 16));
+      } catch (NumberFormatException e) {
+        return Double.NaN;
+      }
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NodeUtil <339, 348>
+if (StringVar.length() > 2
+        && StringVar.charAt(0) == '0'
+        && (StringVar.charAt(1) == 'x' || StringVar.charAt(1) == 'X')) {
+      // Attempt to convert hex numbers.
+      try {
+        return Double.valueOf(Integer.parseInt(StringVar.substring(2), 16));
+      } catch (NumberFormatException e) {
+        return Double.NaN;
+      }
+    }
+

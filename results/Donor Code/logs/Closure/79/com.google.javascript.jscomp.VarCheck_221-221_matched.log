@@ -1,0 +1,957 @@
+---patch code ori--- com.google.javascript.jscomp.VarCheck <221, 221>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.CrossModuleMethodMotion <178, 178>
+compiler.reportCodeChange();
+
+---patch code 0--- com.google.javascript.jscomp.VarCheck <221, 221>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CrossModuleMethodMotion <178, 178>
+AbstractCompiler.reportCodeChange();
+
+---patch code 1--- com.google.javascript.jscomp.VarCheck <221, 221>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CrossModuleMethodMotion <178, 178>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.CollapseVariableDeclarations <109, 109>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CollapseVariableDeclarations <109, 109>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CollapseVariableDeclarations <109, 109>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RemoveUnusedVars <366, 366>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <366, 366>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedVars <366, 366>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RemoveUnusedVars <449, 449>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <449, 449>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedVars <449, 449>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RemoveUnusedVars <509, 509>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <509, 509>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedVars <509, 509>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RemoveUnusedVars <516, 516>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <516, 516>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedVars <516, 516>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RemoveUnusedVars <540, 540>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <540, 540>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedVars <540, 540>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RemoveUnusedVars <725, 725>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <725, 725>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedVars <725, 725>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RemoveUnusedVars <758, 758>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <758, 758>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedVars <758, 758>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RemoveUnusedVars <785, 785>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <785, 785>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedVars <785, 785>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RemoveUnusedVars <801, 801>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <801, 801>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedVars <801, 801>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RemoveUnusedVars <808, 808>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <808, 808>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedVars <808, 808>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RemoveUnusedVars <811, 811>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <811, 811>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedVars <811, 811>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RenamePrototypes <259, 259>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RenamePrototypes <259, 259>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RenamePrototypes <259, 259>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <327, 327>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <327, 327>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <327, 327>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.UnreachableCodeElimination <224, 224>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.UnreachableCodeElimination <224, 224>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.UnreachableCodeElimination <224, 224>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.DevirtualizePrototypeMethods <303, 303>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.DevirtualizePrototypeMethods <303, 303>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.DevirtualizePrototypeMethods <303, 303>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.DevirtualizePrototypeMethods <351, 351>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.DevirtualizePrototypeMethods <351, 351>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.DevirtualizePrototypeMethods <351, 351>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.CollapseAnonymousFunctions <93, 93>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.FunctionRewriter <100, 100>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.FunctionRewriter <100, 100>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.FunctionRewriter <100, 100>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.FunctionRewriter <135, 135>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ReplaceIdGenerators <101, 101>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.MinimizeExitPoints <118, 118>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.MinimizeExitPoints <118, 118>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.MinimizeExitPoints <118, 118>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.MinimizeExitPoints <269, 269>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.MinimizeExitPoints <269, 269>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.MinimizeExitPoints <269, 269>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RenameLabels <179, 179>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RenameLabels <201, 201>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RenameLabels <211, 211>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.Normalize <115, 115>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.Normalize <115, 115>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.Normalize <115, 115>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.Normalize <307, 307>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.Normalize <307, 307>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.Normalize <307, 307>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.InlineFunctions <801, 801>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.InlineFunctions <801, 801>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.InlineFunctions <801, 801>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ProcessTweaks <215, 215>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ProcessTweaks <215, 215>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ProcessTweaks <215, 215>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RenameProperties <216, 216>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RenameProperties <216, 216>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RenameProperties <216, 216>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RenameProperties <379, 379>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RenameProperties <389, 389>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.IgnoreCajaProperties <127, 127>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ExportTestFunctions <111, 111>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ExportTestFunctions <111, 111>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ExportTestFunctions <111, 111>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ExpressionDecomposer <100, 100>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ExpressionDecomposer <100, 100>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ExpressionDecomposer <100, 100>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ExpressionDecomposer <127, 127>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ExpressionDecomposer <127, 127>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ExpressionDecomposer <127, 127>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ClosureCodeRemoval <133, 133>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ClosureCodeRemoval <228, 228>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ClosureCodeRemoval <228, 228>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ClosureCodeRemoval <228, 228>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.DisambiguateProperties <491, 491>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.DisambiguateProperties <491, 491>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.DisambiguateProperties <491, 491>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.GroupVariableDeclarations <179, 179>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.GroupVariableDeclarations <179, 179>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.GroupVariableDeclarations <179, 179>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.AliasExternals <294, 294>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.AliasExternals <294, 294>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.AliasExternals <294, 294>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.AliasExternals <340, 340>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.AliasExternals <340, 340>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.AliasExternals <340, 340>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.AliasExternals <384, 384>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.AliasExternals <384, 384>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.AliasExternals <384, 384>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.AliasExternals <434, 434>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.AliasExternals <434, 434>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.AliasExternals <434, 434>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.AliasExternals <699, 699>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.AliasExternals <699, 699>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.AliasExternals <699, 699>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.AliasExternals <730, 730>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.AliasExternals <730, 730>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.AliasExternals <730, 730>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ObjectPropertyStringPostprocess <89, 89>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.DeadAssignmentsElimination <210, 210>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.DeadAssignmentsElimination <210, 210>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.DeadAssignmentsElimination <210, 210>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.DeadAssignmentsElimination <260, 260>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.DeadAssignmentsElimination <260, 260>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.DeadAssignmentsElimination <260, 260>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.FlowSensitiveInlineVariables <381, 381>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ReplaceStrings <317, 317>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ReplaceStrings <317, 317>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ReplaceStrings <317, 317>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ConvertToDottedProperties <60, 60>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ConvertToDottedProperties <60, 60>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ConvertToDottedProperties <60, 60>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.CoalesceVariableNames <157, 157>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CoalesceVariableNames <157, 157>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CoalesceVariableNames <157, 157>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.CoalesceVariableNames <191, 191>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CoalesceVariableNames <191, 191>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CoalesceVariableNames <191, 191>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RenameVars <378, 378>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RenameVars <378, 378>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RenameVars <378, 378>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.AliasStrings <283, 283>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.AliasStrings <283, 283>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.AliasStrings <283, 283>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.AliasStrings <331, 331>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.AliasStrings <331, 331>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.AliasStrings <331, 331>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.OptimizeParameters <318, 318>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.OptimizeParameters <318, 318>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.OptimizeParameters <318, 318>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.OptimizeParameters <344, 344>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.OptimizeParameters <344, 344>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.OptimizeParameters <344, 344>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.OptimizeParameters <384, 384>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.OptimizeParameters <384, 384>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.OptimizeParameters <384, 384>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.NameAnonymousFunctionsMapped <72, 72>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.NameAnonymousFunctionsMapped <72, 72>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.NameAnonymousFunctionsMapped <72, 72>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ReplaceCssNames <152, 152>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ReplaceCssNames <179, 179>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.StripCode <161, 161>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.StripCode <167, 167>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.StripCode <217, 217>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.StripCode <223, 223>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.StripCode <228, 228>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.StripCode <236, 236>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.StripCode <272, 272>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.StripCode <299, 299>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.StripCode <331, 331>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.StripCode <373, 373>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.CrossModuleCodeMotion <125, 125>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CrossModuleCodeMotion <125, 125>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CrossModuleCodeMotion <125, 125>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.AmbiguateProperties <239, 239>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.AmbiguateProperties <239, 239>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.AmbiguateProperties <239, 239>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.InlineVariables <344, 344>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.InlineVariables <394, 394>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.InlineVariables <414, 414>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RemoveUnusedNames <69, 69>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedNames <69, 69>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedNames <69, 69>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ProcessClosurePrimitives <206, 206>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ProcessClosurePrimitives <206, 206>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ProcessClosurePrimitives <206, 206>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ProcessClosurePrimitives <284, 284>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ProcessClosurePrimitives <284, 284>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ProcessClosurePrimitives <284, 284>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ProcessClosurePrimitives <415, 415>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ProcessClosurePrimitives <415, 415>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ProcessClosurePrimitives <415, 415>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ProcessClosurePrimitives <444, 444>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ProcessClosurePrimitives <444, 444>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ProcessClosurePrimitives <444, 444>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ProcessClosurePrimitives <494, 494>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ProcessClosurePrimitives <494, 494>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ProcessClosurePrimitives <494, 494>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ProcessClosurePrimitives <507, 507>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ProcessClosurePrimitives <507, 507>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ProcessClosurePrimitives <507, 507>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ProcessClosurePrimitives <605, 605>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ProcessClosurePrimitives <605, 605>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ProcessClosurePrimitives <605, 605>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ProcessClosurePrimitives <634, 634>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ProcessClosurePrimitives <634, 634>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ProcessClosurePrimitives <634, 634>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ProcessClosurePrimitives <853, 853>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ProcessClosurePrimitives <872, 872>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ProcessClosurePrimitives <902, 902>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ObjectPropertyStringPreprocess <81, 81>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ObjectPropertyStringPreprocess <133, 133>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.GenerateExports <140, 140>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.GenerateExports <140, 140>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.GenerateExports <140, 140>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.AliasKeywords <131, 131>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.AliasKeywords <131, 131>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.AliasKeywords <131, 131>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.AliasKeywords <403, 403>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.AliasKeywords <403, 403>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.AliasKeywords <403, 403>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RemoveUnusedPrototypeProperties <111, 111>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedPrototypeProperties <111, 111>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedPrototypeProperties <111, 111>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.MoveFunctionDeclarations <85, 85>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.MoveFunctionDeclarations <85, 85>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.MoveFunctionDeclarations <85, 85>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.Denormalize <93, 93>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.Denormalize <93, 93>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.Denormalize <93, 93>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.Denormalize <125, 125>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.Denormalize <125, 125>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.Denormalize <125, 125>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.UnfoldCompoundAssignments <109, 109>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.UnfoldCompoundAssignments <109, 109>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.UnfoldCompoundAssignments <109, 109>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.UnfoldCompoundAssignments <165, 165>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.UnfoldCompoundAssignments <165, 165>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.UnfoldCompoundAssignments <165, 165>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.NameAnonymousFunctions <92, 92>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ExtractPrototypeMemberDeclarations <105, 105>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ExtractPrototypeMemberDeclarations <105, 105>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ExtractPrototypeMemberDeclarations <105, 105>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RemoveTryCatch <94, 94>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.CollapseProperties <232, 232>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <232, 232>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CollapseProperties <232, 232>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.CollapseProperties <440, 440>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <440, 440>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CollapseProperties <440, 440>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.CollapseProperties <552, 552>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <552, 552>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CollapseProperties <552, 552>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.CollapseProperties <640, 640>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <640, 640>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CollapseProperties <640, 640>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.CollapseProperties <704, 704>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <704, 704>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CollapseProperties <704, 704>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.CollapseProperties <791, 791>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <791, 791>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CollapseProperties <791, 791>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.CollapseProperties <848, 848>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <848, 848>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CollapseProperties <848, 848>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.NameAnalyzer <978, 978>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.InstrumentFunctions <147, 147>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.InstrumentFunctions <147, 147>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.InstrumentFunctions <147, 147>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.InstrumentFunctions <153, 153>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.InstrumentFunctions <153, 153>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.InstrumentFunctions <153, 153>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.InstrumentFunctions <232, 232>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.InstrumentFunctions <253, 253>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.InstrumentFunctions <304, 304>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.InstrumentFunctions <335, 335>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RuntimeTypeCheck <170, 170>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RuntimeTypeCheck <170, 170>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RuntimeTypeCheck <170, 170>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RuntimeTypeCheck <271, 271>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RuntimeTypeCheck <294, 294>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.RuntimeTypeCheck <374, 374>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RuntimeTypeCheck <374, 374>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RuntimeTypeCheck <374, 374>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ProcessDefines <141, 141>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ProcessDefines <141, 141>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ProcessDefines <141, 141>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ProcessDefines <335, 335>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ProcessDefines <335, 335>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ProcessDefines <335, 335>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ScopedAliases <121, 121>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ScopedAliases <121, 121>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ScopedAliases <121, 121>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ChainCalls <60, 60>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ChainCalls <60, 60>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ChainCalls <60, 60>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.InlineSimpleMethods <233, 233>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.InlineSimpleMethods <233, 233>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.InlineSimpleMethods <233, 233>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.InlineSimpleMethods <245, 245>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.InlineSimpleMethods <245, 245>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.InlineSimpleMethods <245, 245>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.InlineSimpleMethods <260, 260>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.InlineSimpleMethods <260, 260>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.InlineSimpleMethods <260, 260>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.CreateSyntheticBlocks <130, 130>
+compiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CreateSyntheticBlocks <130, 130>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CreateSyntheticBlocks <130, 130>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ParallelCompilerPass <101, 101>
+AbstractCompiler.reportCodeChange();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ParallelCompilerPass <101, 101>
+AbstractCompiler.reportCodeChange();
+

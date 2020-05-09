@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_52/src/com/google/javascript/jscomp/CodeGenerator.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_52/src/com/google/javascript/jscomp/CodeGenerator.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_52/src/com/google/javascript/jscomp/CodeGenerator.java	2020-01-05 05:17:50.271183449 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_52/src/com/google/javascript/jscomp/CodeGenerator.java	2020-01-05 05:17:52.219167180 -0800
+@@ -742,7 +742,7 @@
+         return false;
+       }
+     }
+-    return len > 0;
++    return len > 0 && s.charAt(0) != '0';
+   }
+ 
+   static double getSimpleNumber(String s) {

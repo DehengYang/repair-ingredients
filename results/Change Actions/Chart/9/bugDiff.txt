@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_9/source/org/jfree/data/time/TimeSeries.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_9/source/org/jfree/data/time/TimeSeries.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_9/source/org/jfree/data/time/TimeSeries.java	2020-01-04 01:53:34.168099941 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_9/source/org/jfree/data/time/TimeSeries.java	2020-01-04 01:53:35.632057271 -0800
+@@ -941,7 +941,7 @@
+             endIndex = -(endIndex + 1); // this is first item AFTER end period
+             endIndex = endIndex - 1;    // so this is last item BEFORE end
+         }
+-        if (endIndex < 0) {
++        if ((endIndex < 0)  || (endIndex < startIndex)) {
+             emptyRange = true;
+         }
+         if (emptyRange) {

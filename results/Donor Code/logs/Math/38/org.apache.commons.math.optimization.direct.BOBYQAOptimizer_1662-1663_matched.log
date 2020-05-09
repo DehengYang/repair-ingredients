@@ -1,0 +1,16 @@
+---patch code 0--- org.apache.commons.math.optimization.direct.BOBYQAOptimizer <1662, 1663>
+final int intVar = intVar - 1;
+final int intVar = intVar - 1;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.direct.BOBYQAOptimizer <1743, 1753>
+} else {
+Array2DRowRealMatrixVar.setEntry(0, intVar, doubleVar);
+Array2DRowRealMatrixVar.setEntry(intVar, intVar, doubleVar);
+Array2DRowRealMatrixVar.setEntry(intVar, intVar, -doubleVar);
+Array2DRowRealMatrixVar.setEntry(intVar, intVar, -doubleVar);
+empty line
+final int intVar = intVar * (intVar - 1) / 2 + intVar - 1;
+final double doubleVar = Array2DRowRealMatrixVar.getEntry(intVar, intVar - 1) * Array2DRowRealMatrixVar.getEntry(intVar, intVar - 1);
+RealVector.setEntry(intVar, (doubleVar - RealVector.getEntry(intVar) - RealVector.getEntry(intVar) + doubleVar) / doubleVar);
+throw new PathIsExploredException();
+

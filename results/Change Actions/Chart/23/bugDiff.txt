@@ -1,0 +1,30 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_23/source/org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_23/source/org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_23/source/org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java	2020-01-03 05:11:10.498179546 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_23/source/org/jfree/chart/renderer/category/MinMaxCategoryRenderer.java	2020-01-03 05:11:13.658108081 -0800
+@@ -432,6 +432,25 @@
+      *
+      * @since 1.0.7
+      */
++    public boolean equals(Object obj) {
++        if (obj == this) {
++            return true;
++        }
++        if (!(obj instanceof MinMaxCategoryRenderer)) {
++            return false;
++        }
++        MinMaxCategoryRenderer that = (MinMaxCategoryRenderer) obj;
++        if (this.plotLines != that.plotLines) {
++            return false;
++        }
++        if (!PaintUtilities.equal(this.groupPaint, that.groupPaint)) {
++            return false;
++        }
++        if (!this.groupStroke.equals(that.groupStroke)) {
++            return false;
++        }
++        return super.equals(obj);
++    }
+ 
+     /**
+      * Returns an icon.

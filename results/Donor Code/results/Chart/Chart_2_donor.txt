@@ -1,0 +1,64 @@
+chunk1 : org.jfree.data.general.DatasetUtilities:1249-1249
+fix ingredient  varMapType:0 : (2)
+fix ingredient  varMapType:1 : (1)
+
+
+chunk2 : org.jfree.data.general.DatasetUtilities:758-761
+fix ingredient(SameFile)  varMapType:ori : (1)
+fix ingredient(SameFile)  varMapType:0 : (6)
+fix ingredient(SameFile)  varMapType:1 : (1)
+fix ingredient(SameMethod)  varMapType:0 : (1)
+fix ingredient(SameFile)  <parseContainCheck>  varMapType:0 : (1)
+fix ingredient(SameFile)  <parseContainCheck>  <parseContainCheck>  varMapType:0 : (1)
+
+
+chunk3 : org.jfree.data.general.DatasetUtilities:1261-1261
+fix ingredient(SameFile)  varMapType:0 : (18)
+fix ingredient(SameMethod)  varMapType:0 : (3)
+fix ingredient  varMapType:0 : (16)
+fix ingredient(SameFile)  <parseContainCheck>  varMapType:0 : (1)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (8)
+fix ingredient  <parseContainCheck>  varMapType:0 : (27)
+
+
+chunk4 : org.jfree.data.general.DatasetUtilities:755-755
+fix ingredient(SameFile)  varMapType:0 : (1)
+fix ingredient  varMapType:0 : (4)
+
+
+chunk5 : org.jfree.data.general.DatasetUtilities:1252-1255
+fix ingredient(SameMethod)  varMapType:ori : (1)
+fix ingredient(SameMethod)  varMapType:0 : (1)
+fix ingredient(SameMethod)  varMapType:1 : (1)
+fix ingredient(SameFile)  varMapType:0 : (6)
+fix ingredient(SameFile)  <parseContainCheck>  varMapType:0 : (1)
+fix ingredient(SameFile)  <parseContainCheck>  <parseContainCheck>  varMapType:0 : (1)
+
+
+chunk6 : org.jfree.data.general.DatasetUtilities:1258-1258
+fix ingredient(SameFile)  varMapType:0 : (18)
+fix ingredient(SameMethod)  varMapType:0 : (3)
+fix ingredient  varMapType:0 : (17)
+fix ingredient(SameFile)  <parseContainCheck>  varMapType:0 : (1)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (10)
+fix ingredient  <parseContainCheck>  varMapType:0 : (7)
+
+
+chunk7 : org.jfree.data.general.DatasetUtilities:767-767
+fix ingredient(SameMethod)  varMapType:0 : (2)
+fix ingredient(SameFile)  varMapType:0 : (19)
+fix ingredient  varMapType:0 : (16)
+fix ingredient(SameFile)  <parseContainCheck>  varMapType:0 : (1)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (8)
+fix ingredient  <parseContainCheck>  varMapType:0 : (27)
+
+
+chunk8 : org.jfree.data.general.DatasetUtilities:764-764
+fix ingredient(SameMethod)  varMapType:0 : (2)
+fix ingredient(SameFile)  varMapType:0 : (19)
+fix ingredient  varMapType:0 : (17)
+fix ingredient(SameFile)  <parseContainCheck>  varMapType:0 : (1)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (10)
+fix ingredient  <parseContainCheck>  varMapType:0 : (7)
+
+

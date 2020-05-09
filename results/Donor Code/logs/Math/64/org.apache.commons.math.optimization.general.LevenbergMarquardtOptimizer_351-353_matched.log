@@ -1,0 +1,31 @@
+---patch code 0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <351, 353>
+double[]Var    = double[]Var;
+double[]Var = double[]Var;
+double[]Var    = double[]Var;
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  <parseContainCheck2>  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <427, 433>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                        int pj = int[]Var[intVar];
+                        double[]Var[pj] = double[]Var[pj];
+                    }
+double[]Var    = double[]Var;
+double[]Var = double[]Var;
+double[]Var    = double[]Var;
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <433, 439>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            int pj = int[]Var[intVar];
+            EstimatedParameter[]Var[pj].setEstimate(double[]Var[pj]);
+          }
+double[]Var    = double[]Var;
+double[]Var = double[]Var;
+double[]Var    = double[]Var;
+
+---fix ingredient(SamePackage)  <parseContainCheck>  <parseContainCheck>  <parseContainCheck>  varMapType:0--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <84, 89>
+final double[] double[]Var   = double[][]Var[intVar];
+final double doubleVar   = double[]Var[intVar];
+final double doubleVar = double[]Var[intVar] - double[]Var[intVar];
+empty line
+// compute the normal equation
+final double doubleVar = doubleVar * doubleVar;
+

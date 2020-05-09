@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_94/src/java/org/apache/commons/math/util/MathUtils.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_94/src/java/org/apache/commons/math/util/MathUtils.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_94/src/java/org/apache/commons/math/util/MathUtils.java	2020-01-05 06:40:40.053675317 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_94/src/java/org/apache/commons/math/util/MathUtils.java	2020-01-05 06:40:43.509646452 -0800
+@@ -409,7 +409,7 @@
+      * @since 1.1
+      */
+     public static int gcd(int u, int v) {
+-        if (u * v == 0) {
++        if ((u == 0) || (v == 0)) {
+             return (Math.abs(u) + Math.abs(v));
+         }
+         // keep u and v negative, as negative integers range down to

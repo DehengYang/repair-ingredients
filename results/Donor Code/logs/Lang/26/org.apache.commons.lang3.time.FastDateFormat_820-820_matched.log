@@ -1,0 +1,67 @@
+---patch code ori--- org.apache.commons.lang3.time.FastDateFormat <820, 820>
+Calendar c = new GregorianCalendar(mTimeZone, mLocale);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateFormat <670, 670>
+rule = new TimeZoneNameRule(mTimeZone, mTimeZoneForced, mLocale, TimeZone.LONG);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateFormat <672, 672>
+rule = new TimeZoneNameRule(mTimeZone, mTimeZoneForced, mLocale, TimeZone.SHORT);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateFormat <1686, 1689>
+return
+                    mTimeZone.equals(other.mTimeZone) &&
+                    mStyle == other.mStyle &&
+                    mLocale.equals(other.mLocale);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateFormat <578, 578>
+DateFormatSymbols symbols = new DateFormatSymbols(mLocale);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateFormat <1007, 1007>
+total += mLocale.hashCode();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateFormat <1580, 1580>
+buffer.append(getTimeZoneDisplay(timeZone, true, mStyle, mLocale));
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateFormat <1582, 1582>
+buffer.append(getTimeZoneDisplay(timeZone, false, mStyle, mLocale));
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateFormat <551, 551>
+mLocale = locale;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateFormat <1542, 1542>
+mLocale = locale;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateFormat <1665, 1665>
+mLocale = locale;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateFormat <954, 954>
+return mLocale;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateFormat <984, 992>
+if (
+            (mPattern == other.mPattern || mPattern.equals(other.mPattern)) &&
+            (mTimeZone == other.mTimeZone || mTimeZone.equals(other.mTimeZone)) &&
+            (mLocale == other.mLocale || mLocale.equals(other.mLocale)) &&
+            (mTimeZoneForced == other.mTimeZoneForced) &&
+            (mLocaleForced == other.mLocaleForced)
+            ) {
+            return true;
+        }
+
+---patch code 1--- org.apache.commons.lang3.time.FastDateFormat <820, 820>
+Calendar Calendar = new GregorianCalendar(TimeZone, Locale);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDateFormat <984, 992>
+if (
+            (mPattern == Format.mPattern || mPattern.equals(Format.mPattern)) &&
+            (TimeZone == Format.TimeZone || TimeZone.equals(Format.TimeZone)) &&
+            (Locale == Format.Locale || Locale.equals(Format.Locale)) &&
+            (mTimeZoneForced == Format.mTimeZoneForced) &&
+            (mLocaleForced == Format.mLocaleForced)
+            ) {
+            return true;
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.time.FastDateFormat <1673, 1673>
+return mStyle * 31 + mLocale.hashCode();
+

@@ -1,0 +1,12 @@
+chunk1 : com.google.javascript.jscomp.RemoveUnusedVars:379-381
+fix ingredient(SameFile)  <parseContainCheck>  <parseContainCheck>  varMapType:ori : (1)
+fix ingredient(SameFile)  <parseContainCheck>  <parseContainCheck>  varMapType:0 : (1)
+fix ingredient(SameFile)  <parseContainCheck>  <parseContainCheck>  varMapType:1 : (1)
+fix ingredient(SamePackage)  varMapType:0 : (8)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0 : (5)
+fix ingredient(SamePackage)  <parseContainCheck>  <parseContainCheck>  varMapType:0 : (3)
+fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0 : (1)
+fix ingredient  <parseContainCheck>  varMapType:0 : (2)
+fix ingredient  <parseContainCheck2>  <parseContainCheck>  varMapType:0 : (1)
+
+

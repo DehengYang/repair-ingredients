@@ -1,0 +1,37 @@
+---patch code 0--- org.joda.time.MutableDateTime <731, 733>
+if (intVar != 0) {
+            setMillis(getChronology().weeks().add(getMillis(), intVar));
+        }
+
+---fix ingredient  varMapType:0--- org.joda.time.base.BaseSingleFieldPeriod <217, 219>
+if (intVar != 0) {
+            throw new IndexOutOfBoundsException(String.valueOf(intVar));
+        }
+
+---fix ingredient  varMapType:0--- org.joda.time.base.BaseSingleFieldPeriod <233, 235>
+if (intVar != 0) {
+            throw new IndexOutOfBoundsException(String.valueOf(intVar));
+        }
+
+---fix ingredient  varMapType:0--- org.joda.time.base.BasePeriod <392, 395>
+if (intVar != 0) {
+                throw new IllegalArgumentException(
+                    "Period does not support field '" + DurationFieldType.getName() + "'");
+            }
+
+---fix ingredient  varMapType:0--- org.joda.time.base.BasePeriod <581, 589>
+if (intVar != 0) {
+                int index = indexOf(DurationFieldType);
+                if (index == -1) {
+                    throw new IllegalArgumentException(
+                        "Period does not support field '" + DurationFieldType.getName() + "'");
+                } else {
+                    int[]Var[index] = FieldUtils.safeAdd(getValue(index), intVar);
+                }
+            }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.joda.time.format.PeriodFormatterBuilder <1469, 1471>
+if (ReadablePeriod.getValue(intVar) != 0) {
+                    return false;
+                }
+

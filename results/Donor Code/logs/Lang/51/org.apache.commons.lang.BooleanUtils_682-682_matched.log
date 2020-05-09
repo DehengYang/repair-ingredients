@@ -1,0 +1,171 @@
+---patch code ori--- org.apache.commons.lang.BooleanUtils <682, 682>
+return false;
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.BooleanUtils <764, 764>
+return toString(bool, "true", "false", null);
+
+---patch code 0--- org.apache.commons.lang.BooleanUtils <682, 682>
+return false;
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.BooleanUtils <764, 764>
+return toString(Boolean, "true", "false", null);
+
+---patch code 1--- org.apache.commons.lang.BooleanUtils <682, 682>
+return false;
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.BooleanUtils <764, 764>
+return toString(Boolean, "true", "false", null);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.RandomStringUtils <85, 85>
+return random(count, 32, 127, false, false);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <85, 85>
+return random(intVar, 32, 127, false, false);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.RandomStringUtils <85, 85>
+return random(count, 32, 127, false, false);
+
+---fix ingredient  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.builder.ReflectionToStringBuilder <121, 121>
+return toString(object, null, false, false, null);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.builder.ReflectionToStringBuilder <121, 121>
+return toString(Object, null, false, false, null);
+
+---fix ingredient  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.builder.ReflectionToStringBuilder <121, 121>
+return toString(Object, null, false, false, null);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.RandomStringUtils <71, 71>
+return random(count, false, false);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <71, 71>
+return random(intVar, false, false);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.RandomStringUtils <71, 71>
+return random(count, false, false);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.RandomStringUtils <99, 99>
+return random(count, true, false);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <99, 99>
+return random(intVar, true, false);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.RandomStringUtils <99, 99>
+return random(count, true, false);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.RandomStringUtils <127, 127>
+return random(count, false, true);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <127, 127>
+return random(intVar, false, true);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.RandomStringUtils <127, 127>
+return random(count, false, true);
+
+---fix ingredient  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.builder.HashCodeBuilder <387, 387>
+return reflectionHashCode(17, 37, object, false, null, null);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.builder.HashCodeBuilder <387, 387>
+return reflectionHashCode(17, 37, Object, false, null, null);
+
+---fix ingredient  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.builder.HashCodeBuilder <387, 387>
+return reflectionHashCode(17, 37, Object, false, null, null);
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.BooleanUtils <844, 844>
+return toString(bool, "true", "false");
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.BooleanUtils <844, 844>
+return toString(booleanVar, "true", "false");
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.BooleanUtils <844, 844>
+return toString(bool, "true", "false");
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.RandomStringUtils <301, 301>
+return random(count, 0, 0, false, false, null, RANDOM);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <301, 301>
+return random(intVar, 0, 0, false, false, null, Random);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.RandomStringUtils <301, 301>
+return random(count, 0, 0, false, false, null, Random);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.RandomStringUtils <320, 320>
+return random(count, 0, 0, false, false, null, RANDOM);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <320, 320>
+return random(intVar, 0, 0, false, false, null, Random);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.RandomStringUtils <320, 320>
+return random(count, 0, 0, false, false, null, Random);
+
+---fix ingredient  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.builder.HashCodeBuilder <497, 497>
+return reflectionHashCode(17, 37, object, false, null, excludeFields);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.builder.HashCodeBuilder <497, 497>
+return reflectionHashCode(17, 37, Object, false, null, String[]Var);
+
+---fix ingredient  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.builder.HashCodeBuilder <497, 497>
+return reflectionHashCode(17, 37, Object, false, null, excludeFields);
+
+---fix ingredient  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.builder.ReflectionToStringBuilder <153, 153>
+return toString(object, style, false, false, null);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.builder.ReflectionToStringBuilder <153, 153>
+return toString(Object, ToStringStyle, false, false, null);
+
+---fix ingredient  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.builder.ReflectionToStringBuilder <153, 153>
+return toString(Object, ToStringStyle, false, false, null);
+
+---fix ingredient  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.builder.EqualsBuilder <125, 125>
+return reflectionEquals(lhs, rhs, false, null, null);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.builder.EqualsBuilder <125, 125>
+return reflectionEquals(Object, Object, false, null, null);
+
+---fix ingredient  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.builder.EqualsBuilder <125, 125>
+return reflectionEquals(Object, Object, false, null, null);
+
+---fix ingredient  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.builder.CompareToBuilder <142, 142>
+return reflectionCompare(lhs, rhs, false, null, null);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.builder.CompareToBuilder <142, 142>
+return reflectionCompare(Object, Object, false, null, null);
+
+---fix ingredient  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.builder.CompareToBuilder <142, 142>
+return reflectionCompare(Object, Object, false, null, null);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.StringEscapeUtils <81, 81>
+return escapeJavaStyleString(str, false);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.StringEscapeUtils <81, 81>
+return escapeJavaStyleString(StringVar, false);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.StringEscapeUtils <81, 81>
+return escapeJavaStyleString(str, false);
+
+---fix ingredient  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.math.Fraction <710, 710>
+return addSub(fraction, false /* subtract */);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.math.Fraction <710, 710>
+return addSub(Number, false /* subtract */);
+
+---fix ingredient  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.math.Fraction <710, 710>
+return addSub(null, false /* subtract */);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.WordUtils <142, 142>
+return wrap(str, wrapLength, null, false);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.WordUtils <142, 142>
+return wrap(StringVar, intVar, null, false);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.WordUtils <142, 142>
+return wrap(str, wrapLength, null, false);
+
+---fix ingredient  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.exception.ExceptionUtils <575, 575>
+return indexOf(throwable, clazz, 0, false);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.exception.ExceptionUtils <575, 575>
+return indexOf(Throwable, Class, 0, false);
+
+---fix ingredient  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.exception.ExceptionUtils <575, 575>
+return indexOf(Throwable, Class, 0, false);
+

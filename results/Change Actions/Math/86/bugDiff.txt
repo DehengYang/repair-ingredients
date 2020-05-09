@@ -1,0 +1,24 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_86/src/java/org/apache/commons/math/linear/CholeskyDecompositionImpl.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_86/src/java/org/apache/commons/math/linear/CholeskyDecompositionImpl.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_86/src/java/org/apache/commons/math/linear/CholeskyDecompositionImpl.java	2020-01-05 06:39:43.970143733 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_86/src/java/org/apache/commons/math/linear/CholeskyDecompositionImpl.java	2020-01-05 06:39:47.466114534 -0800
+@@ -111,9 +111,6 @@
+ 
+             final double[] lI = lTData[i];
+ 
+-            if (lTData[i][i] < absolutePositivityThreshold) {
+-                throw new NotPositiveDefiniteMatrixException();
+-            }
+             // check off-diagonal elements (and reset them to 0)
+             for (int j = i + 1; j < order; ++j) {
+                 final double[] lJ = lTData[j];
+@@ -134,6 +131,9 @@
+             final double[] ltI = lTData[i];
+ 
+             // check diagonal element
++            if (ltI[i] < absolutePositivityThreshold) {
++                throw new NotPositiveDefiniteMatrixException();
++            }
+ 
+             ltI[i] = Math.sqrt(ltI[i]);
+             final double inverse = 1.0 / ltI[i];

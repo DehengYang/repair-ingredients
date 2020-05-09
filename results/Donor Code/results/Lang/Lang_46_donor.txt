@@ -1,0 +1,69 @@
+chunk1 : org.apache.commons.lang.StringEscapeUtils:160-160
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (3)
+
+
+chunk2 : org.apache.commons.lang.StringEscapeUtils:86-86
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (52)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (51)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (52)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (23)
+fix ingredient  <0-fine-grained>  varMapType:0 : (23)
+fix ingredient  <1-fine-grained>  varMapType:1 : (23)
+
+
+chunk3 : org.apache.commons.lang.StringEscapeUtils:245-245
+fix ingredient(SameFile)  varMapType:0 : (2)
+fix ingredient  varMapType:0 : (24)
+fix ingredient  <parseContainCheck>  varMapType:0 : (8)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0 : (15)
+fix ingredient(SamePackage)  varMapType:0 : (4)
+fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0 : (1)
+
+
+chunk4 : org.apache.commons.lang.StringEscapeUtils:102-102
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (46)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (45)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (46)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (9)
+fix ingredient  <0-fine-grained>  varMapType:0 : (9)
+fix ingredient  <1-fine-grained>  varMapType:1 : (9)
+
+
+chunk5 : org.apache.commons.lang.StringEscapeUtils:127-127
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (27)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (25)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (27)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (6)
+fix ingredient  <0-fine-grained>  varMapType:0 : (6)
+fix ingredient  <1-fine-grained>  varMapType:1 : (6)
+
+
+chunk6 : org.apache.commons.lang.StringEscapeUtils:143-143
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (24)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (23)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (24)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient  <1-fine-grained>  varMapType:1 : (1)
+
+

@@ -1,0 +1,4 @@
+chunk1 : org.apache.commons.math.optimization.direct.BOBYQAOptimizer:1662-1663
+fix ingredient(SameMethod)  <0-fine-grained>  <0-fine-grained>  varMapType:0 : (1)
+
+

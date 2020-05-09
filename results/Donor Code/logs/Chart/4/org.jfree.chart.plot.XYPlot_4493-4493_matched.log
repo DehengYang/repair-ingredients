@@ -1,0 +1,217 @@
+---patch code ori--- org.jfree.chart.plot.XYPlot <4493, 4502>
+if (r != null) {
+                    Collection c = r.getAnnotations();
+                    Iterator i = c.iterator();
+                    while (i.hasNext()) {
+                        XYAnnotation a = (XYAnnotation) i.next();
+                        if (a instanceof XYAnnotationBoundsInfo) {
+                            includedAnnotations.add(a);
+                        }
+                    }
+                }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.CategoryPlot <4245, 4251>
+while (iterator.hasNext()) {
+            CategoryDataset d = (CategoryDataset) iterator.next();
+            CategoryItemRenderer r = getRendererForDataset(d);
+            if (r != null) {
+                result = Range.combine(result, r.findRangeBounds(d));
+            }
+        }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.CategoryPlot <3606, 3611>
+if (r != null) {
+                    CategoryAxis domainAxis = getDomainAxisForDataset(i);
+                    ValueAxis rangeAxis = getRangeAxisForDataset(i);
+                    r.drawAnnotations(g2, dataArea, domainAxis, rangeAxis,
+                            Layer.BACKGROUND, state);
+                }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.CategoryPlot <3622, 3627>
+if (r != null) {
+                    CategoryAxis domainAxis = getDomainAxisForDataset(i);
+                    ValueAxis rangeAxis = getRangeAxisForDataset(i);
+                    r.drawAnnotations(g2, dataArea, domainAxis, rangeAxis,
+                            Layer.FOREGROUND, state);
+                }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.CategoryPlot <3636, 3641>
+if (r != null) {
+                    CategoryAxis domainAxis = getDomainAxisForDataset(i);
+                    ValueAxis rangeAxis = getRangeAxisForDataset(i);
+                    r.drawAnnotations(g2, dataArea, domainAxis, rangeAxis,
+                            Layer.BACKGROUND, state);
+                }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.CategoryPlot <3652, 3657>
+if (r != null) {
+                    CategoryAxis domainAxis = getDomainAxisForDataset(i);
+                    ValueAxis rangeAxis = getRangeAxisForDataset(i);
+                    r.drawAnnotations(g2, dataArea, domainAxis, rangeAxis,
+                            Layer.FOREGROUND, state);
+                }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.jfree.chart.plot.XYPlot <3279, 3284>
+if (r != null) {
+                    ValueAxis domainAxis = getDomainAxisForDataset(i);
+                    ValueAxis rangeAxis = getRangeAxisForDataset(i);
+                    r.drawAnnotations(g2, dataArea, domainAxis, rangeAxis,
+                            Layer.BACKGROUND, info);
+                }
+
+---patch code 0--- org.jfree.chart.plot.XYPlot <4493, 4502>
+if (XYItemRenderer != null) {
+                    Collection c = XYItemRenderer.getAnnotations();
+                    Iterator i = c.iterator();
+                    while (i.hasNext()) {
+                        XYAnnotation a = (XYAnnotation) i.next();
+                        if (a instanceof XYAnnotationBoundsInfo) {
+                            ListVar.add(a);
+                        }
+                    }
+                }
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.chart.plot.XYPlot <3279, 3284>
+if (XYItemRenderer != null) {
+                    ValueAxis domainAxis = getDomainAxisForDataset(intVar);
+                    ValueAxis rangeAxis = getRangeAxisForDataset(intVar);
+                    XYItemRenderer.drawAnnotations(Graphics2DVar, Rectangle2DVar, domainAxis, rangeAxis,
+                            Layer.BACKGROUND, PlotRenderingInfo);
+                }
+
+---patch code 1--- org.jfree.chart.plot.XYPlot <4493, 4502>
+if (XYItemRenderer != null) {
+                    Collection c = XYItemRenderer.getAnnotations();
+                    Iterator i = c.iterator();
+                    while (i.hasNext()) {
+                        XYAnnotation a = (XYAnnotation) i.next();
+                        if (a instanceof XYAnnotationBoundsInfo) {
+                            includedAnnotations.add(a);
+                        }
+                    }
+                }
+
+---fix ingredient(SameFile)  varMapType:1--- org.jfree.chart.plot.XYPlot <3279, 3284>
+if (XYItemRenderer != null) {
+                    ValueAxis domainAxis = getDomainAxisForDataset(i);
+                    ValueAxis rangeAxis = getRangeAxisForDataset(i);
+                    XYItemRenderer.drawAnnotations(g2, dataArea, domainAxis, rangeAxis,
+                            Layer.BACKGROUND, PlotRenderingInfo);
+                }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.jfree.chart.plot.XYPlot <3296, 3301>
+if (r != null) {
+                    ValueAxis domainAxis = getDomainAxisForDataset(i);
+                    ValueAxis rangeAxis = getRangeAxisForDataset(i);
+                    r.drawAnnotations(g2, dataArea, domainAxis, rangeAxis,
+                            Layer.FOREGROUND, info);
+                }
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.chart.plot.XYPlot <3296, 3301>
+if (XYItemRenderer != null) {
+                    ValueAxis domainAxis = getDomainAxisForDataset(intVar);
+                    ValueAxis rangeAxis = getRangeAxisForDataset(intVar);
+                    XYItemRenderer.drawAnnotations(Graphics2DVar, Rectangle2DVar, domainAxis, rangeAxis,
+                            Layer.FOREGROUND, PlotRenderingInfo);
+                }
+
+---fix ingredient(SameFile)  varMapType:1--- org.jfree.chart.plot.XYPlot <3296, 3301>
+if (XYItemRenderer != null) {
+                    ValueAxis domainAxis = getDomainAxisForDataset(i);
+                    ValueAxis rangeAxis = getRangeAxisForDataset(i);
+                    XYItemRenderer.drawAnnotations(g2, dataArea, domainAxis, rangeAxis,
+                            Layer.FOREGROUND, PlotRenderingInfo);
+                }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.jfree.chart.plot.XYPlot <3309, 3320>
+for (int i = rendererCount - 1; i >= 0; i--) {
+                XYItemRenderer r = getRenderer(i);
+                if (i >= getDatasetCount()) { // we need the dataset to make
+                    continue;                 // a link to the axes
+                }
+                if (r != null) {
+                    ValueAxis domainAxis = getDomainAxisForDataset(i);
+                    ValueAxis rangeAxis = getRangeAxisForDataset(i);
+                    r.drawAnnotations(g2, dataArea, domainAxis, rangeAxis,
+                            Layer.BACKGROUND, info);
+                }
+            }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.jfree.chart.plot.XYPlot <3328, 3339>
+for (int i = rendererCount - 1; i >= 0; i--) {
+                XYItemRenderer r = getRenderer(i);
+                if (i >= getDatasetCount()) { // we need the dataset to make
+                    continue;                 // a link to the axes
+                }
+                if (r != null) {
+                    ValueAxis domainAxis = getDomainAxisForDataset(i);
+                    ValueAxis rangeAxis = getRangeAxisForDataset(i);
+                    r.drawAnnotations(g2, dataArea, domainAxis, rangeAxis,
+                            Layer.FOREGROUND, info);
+                }
+            }
+
+---fix ingredient  varMapType:ori--- org.jfree.data.xy.IntervalXYDelegate <330, 335>
+double result = Double.NaN;
+Range r = getDomainBounds(includeInterval);
+if (r != null) {
+            result = r.getLowerBound();
+        }
+return result;
+
+---fix ingredient  varMapType:ori--- org.jfree.data.xy.IntervalXYDelegate <347, 352>
+double result = Double.NaN;
+Range r = getDomainBounds(includeInterval);
+if (r != null) {
+            result = r.getUpperBound();
+        }
+return result;
+
+---fix ingredient  varMapType:ori--- org.jfree.data.time.TimeSeriesCollection <602, 607>
+double result = Double.NaN;
+Range r = getDomainBounds(includeInterval);
+if (r != null) {
+            result = r.getLowerBound();
+        }
+return result;
+
+---fix ingredient  varMapType:ori--- org.jfree.data.time.TimeSeriesCollection <619, 624>
+double result = Double.NaN;
+Range r = getDomainBounds(includeInterval);
+if (r != null) {
+            result = r.getUpperBound();
+        }
+return result;
+
+---fix ingredient  varMapType:ori--- org.jfree.data.time.TimePeriodValuesCollection <344, 349>
+double result = Double.NaN;
+Range r = getDomainBounds(includeInterval);
+if (r != null) {
+            result = r.getLowerBound();
+        }
+return result;
+
+---fix ingredient  varMapType:ori--- org.jfree.data.time.TimePeriodValuesCollection <361, 366>
+double result = Double.NaN;
+Range r = getDomainBounds(includeInterval);
+if (r != null) {
+            result = r.getUpperBound();
+        }
+return result;
+
+---fix ingredient  varMapType:ori--- org.jfree.data.time.TimeTableXYDataset <501, 506>
+double result = Double.NaN;
+Range r = getDomainBounds(includeInterval);
+if (r != null) {
+            result = r.getLowerBound();
+        }
+return result;
+
+---fix ingredient  varMapType:ori--- org.jfree.data.time.TimeTableXYDataset <518, 523>
+double result = Double.NaN;
+Range r = getDomainBounds(includeInterval);
+if (r != null) {
+            result = r.getUpperBound();
+        }
+return result;
+

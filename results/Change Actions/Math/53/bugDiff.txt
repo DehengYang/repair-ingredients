@@ -1,0 +1,14 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_53/src/main/java/org/apache/commons/math/complex/Complex.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_53/src/main/java/org/apache/commons/math/complex/Complex.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_53/src/main/java/org/apache/commons/math/complex/Complex.java	2020-01-05 06:36:33.035738436 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_53/src/main/java/org/apache/commons/math/complex/Complex.java	2020-01-05 06:36:35.543717489 -0800
+@@ -150,6 +150,9 @@
+     public Complex add(Complex rhs)
+         throws NullArgumentException {
+         MathUtils.checkNotNull(rhs);
++        if (isNaN || rhs.isNaN) {
++            return NaN;
++        }
+         return createComplex(real + rhs.getReal(),
+             imaginary + rhs.getImaginary());
+     }

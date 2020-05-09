@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_4/src/main/java/org/joda/time/Partial.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_4/src/main/java/org/joda/time/Partial.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_4/src/main/java/org/joda/time/Partial.java	2020-01-05 22:47:13.316547349 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_4/src/main/java/org/joda/time/Partial.java	2020-01-05 22:47:14.680547344 -0800
+@@ -461,7 +461,7 @@
+             System.arraycopy(iValues, i, newValues, i + 1, newValues.length - i - 1);
+             // use public constructor to ensure full validation
+             // this isn't overly efficient, but is safe
+-            Partial newPartial = new Partial(iChronology, newTypes, newValues);
++            Partial newPartial = new Partial(newTypes, newValues, iChronology);
+             iChronology.validate(newPartial, newValues);
+             return newPartial;
+         }

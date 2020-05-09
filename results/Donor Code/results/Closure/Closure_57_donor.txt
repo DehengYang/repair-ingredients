@@ -1,0 +1,5 @@
+chunk1 : com.google.javascript.jscomp.ClosureCodingConvention:197-197
+fix ingredient(SamePackage)  varMapType:0 : (2)
+fix ingredient(SamePackage)  varMapType:1 : (2)
+
+

@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_27/src/main/java/org/apache/commons/math3/fraction/Fraction.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_27/src/main/java/org/apache/commons/math3/fraction/Fraction.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_27/src/main/java/org/apache/commons/math3/fraction/Fraction.java	2020-01-05 06:33:31.997250488 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_27/src/main/java/org/apache/commons/math3/fraction/Fraction.java	2020-01-05 06:33:35.497221256 -0800
+@@ -594,7 +594,7 @@
+      * @return the fraction percentage as a <tt>double</tt>.
+      */
+     public double percentageValue() {
+-        return multiply(100).doubleValue();
++        return 100 * doubleValue();
+     }
+ 
+     /**

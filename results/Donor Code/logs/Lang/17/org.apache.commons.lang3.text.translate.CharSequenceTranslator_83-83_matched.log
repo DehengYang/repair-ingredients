@@ -1,0 +1,117 @@
+---patch code 0--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <83, 83>
+int intVar = CharSequence.length();
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <79, 79>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <1431, 1431>
+int intVar = CharSequence.length();
+
+---patch code 1--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <83, 83>
+int len = CharSequence.length();
+
+---fix ingredient  varMapType:1--- org.apache.commons.lang3.StringUtils <1431, 1431>
+int len = CharSequence.length();
+
+---patch code ori--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <83, 83>
+int len = input.length();
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <83, 83>
+int len = Character.codePointCount(input, 0, input.length());
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <83, 83>
+int intVar = Character.codePointCount(CharSequence, 0, CharSequence.length());
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <83, 83>
+int len = Character.codePointCount(CharSequence, 0, CharSequence.length());
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.StringUtils <1432, 1432>
+int intVar = CharSequence.length() - intVar;
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.StringUtils <6478, 6478>
+int intVar = CharSequence.length() - CharSequence.length();
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.StringUtils <1081, 1081>
+int intVar = (CharSequence.length() - CharSequence.length()) + 1;
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <1454, 1454>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <1492, 1492>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <1574, 1574>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <1665, 1665>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <1715, 1715>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <1830, 1830>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <5177, 5177>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <5212, 5212>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <5247, 5247>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <5282, 5282>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <5321, 5321>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <5357, 5357>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <5394, 5394>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <5427, 5427>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <5459, 5459>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <5491, 5491>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <6079, 6079>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <6080, 6080>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <6218, 6218>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.StringUtils <6219, 6219>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.CharSequenceUtils <73, 73>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.CharSequenceUtils <120, 120>
+int intVar = CharSequence.length();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.CharSequenceUtils <167, 167>
+int intVar = CharSequence.length();
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang3.StringUtils <998, 998>
+int intVar = booleanVar ? CharSequence.length() : intVar;
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.StringUtils <1919, 1919>
+int intVar = CharSequence.length;
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.StringUtils <1973, 1973>
+int intVar = CharSequence.length;
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.StringUtils <5914, 5914>
+int intVar = CharSequence.length;
+

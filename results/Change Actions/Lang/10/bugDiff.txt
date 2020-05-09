@@ -1,0 +1,22 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_10/src/main/java/org/apache/commons/lang3/time/FastDateParser.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_10/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_10/src/main/java/org/apache/commons/lang3/time/FastDateParser.java	2020-01-05 05:25:46.335207314 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_10/src/main/java/org/apache/commons/lang3/time/FastDateParser.java	2020-01-05 05:25:49.719179051 -0800
+@@ -301,17 +301,8 @@
+      * @return The <code>StringBuilder</code>
+      */
+     private static StringBuilder escapeRegex(StringBuilder regex, String value, boolean unquote) {
+-        boolean wasWhite= false;
+         for(int i= 0; i<value.length(); ++i) {
+             char c= value.charAt(i);
+-            if(Character.isWhitespace(c)) {
+-                if(!wasWhite) {
+-                    wasWhite= true;
+-                    regex.append("\\s*+");
+-                }
+-                continue;
+-            }
+-            wasWhite= false;
+             switch(c) {
+             case '\'':
+                 if(unquote) {

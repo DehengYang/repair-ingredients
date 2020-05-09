@@ -1,0 +1,26 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_11/src/org/mockito/internal/creation/DelegatingMethod.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_11/src/org/mockito/internal/creation/DelegatingMethod.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_11/src/org/mockito/internal/creation/DelegatingMethod.java	2020-01-05 22:32:55.168550623 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_11/src/org/mockito/internal/creation/DelegatingMethod.java	2020-01-05 22:32:58.992550608 -0800
+@@ -52,11 +52,19 @@
+      */
+     @Override
+     public boolean equals(Object o) {
++        if (this == o) {
++            return true;
++        }
++        if (o instanceof DelegatingMethod) {
++            DelegatingMethod that = (DelegatingMethod) o;
++            return method.equals(that.method);
++        } else {
+             return method.equals(o);
++        }
+     }
+ 
+     @Override
+     public int hashCode() {
+-        return 1;
++        return method.hashCode();
+     }
+ }
+\ No newline at end of file

@@ -1,0 +1,17 @@
+OP1:(INS, IfStatement, null, OP2 OP12)
+OP2:   (INS, InfixExpression, OP1, OP3 OP7 OP8)
+OP3:      (INS, InfixExpression, OP2, OP4 OP5 OP6)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, Operator, OP3, null)
+OP6:         (INS, CharacterLiteral, OP3, null)
+OP7:      (INS, Operator, OP2, null)
+OP8:      (INS, InfixExpression, OP2, OP9 OP10 OP11)
+OP9:         (INS, MethodInvocation, OP8, null)
+OP10:         (INS, Operator, OP8, null)
+OP11:         (INS, CharacterLiteral, OP8, null)
+OP12:   (INS, ExpressionStatement, OP1, OP13)
+OP13:      (INS, MethodInvocation, OP12, OP14)
+OP14:         (INS, SimpleName, OP13, OP15)
+OP15:            (INS, StringLiteral, OP14, null)
+
+

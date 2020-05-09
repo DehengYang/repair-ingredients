@@ -1,0 +1,46 @@
+---patch code 0--- com.google.javascript.jscomp.parsing.IRFactory <667, 673>
+if (!Node.isBlock()) {
+        // When in ideMode Rhino tries to parse some constructs the compiler
+        // doesn't support, repair it here. see Rhino's
+        // Parser#parseFunctionBodyExpr.
+        Preconditions.checkState(config.isIdeMode);
+        Node = IR.block();
+      }
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.parsing.IRFactory <212, 223>
+if (!Node.isBlock()) {
+      if (Node.isEmpty()) {
+        Node.setType(Token.BLOCK);
+        Node.setWasEmptyNode(true);
+      } else {
+        Node newBlock = newNode(Token.BLOCK, Node);
+        newBlock.setLineno(Node.getLineno());
+        newBlock.setCharno(Node.getCharno());
+        maybeSetLengthFrom(newBlock, AstNode);
+        Node = newBlock;
+      }
+    }
+
+---patch code 1--- com.google.javascript.jscomp.parsing.IRFactory <667, 673>
+if (!Node.isBlock()) {
+        // When in ideMode Rhino tries to parse some constructs the compiler
+        // doesn't support, repair it here. see Rhino's
+        // Parser#parseFunctionBodyExpr.
+        Preconditions.checkState(config.isIdeMode);
+        Node = IR.block();
+      }
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.parsing.IRFactory <212, 223>
+if (!Node.isBlock()) {
+      if (Node.isEmpty()) {
+        Node.setType(Token.BLOCK);
+        Node.setWasEmptyNode(true);
+      } else {
+        Node newBlock = newNode(Token.BLOCK, Node);
+        newBlock.setLineno(Node.getLineno());
+        newBlock.setCharno(Node.getCharno());
+        maybeSetLengthFrom(newBlock, AstNode);
+        Node = newBlock;
+      }
+    }
+

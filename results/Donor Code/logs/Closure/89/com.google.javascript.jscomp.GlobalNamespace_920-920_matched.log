@@ -1,0 +1,41 @@
+---patch code ori--- com.google.javascript.jscomp.GlobalNamespace <920, 922>
+if (aliasingGets > 0) {
+        return false;
+      }
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:ori--- com.google.javascript.jscomp.GlobalNamespace <920, 922>
+if (type != Type.FUNCTION && aliasingGets > 0) {
+        return false;
+      }
+
+---patch code 0--- com.google.javascript.jscomp.GlobalNamespace <920, 922>
+if (intVar > 0) {
+        return false;
+      }
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:0--- com.google.javascript.jscomp.GlobalNamespace <920, 922>
+if (Type != Type.FUNCTION && intVar > 0) {
+        return false;
+      }
+
+---patch code 1--- com.google.javascript.jscomp.GlobalNamespace <920, 922>
+if (aliasingGets > 0) {
+        return false;
+      }
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:1--- com.google.javascript.jscomp.GlobalNamespace <920, 922>
+if (Type != Type.FUNCTION && aliasingGets > 0) {
+        return false;
+      }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.FunctionInjector <756, 764>
+if (intVar == 0) {
+      // Special case single reference function that are being block inlined:
+      // If the cost of the inline is greater than the function definition size,
+      // don't inline.
+      if (intVar > 0 && intVar > 0) {
+        return false;
+      }
+      return true;
+    }
+

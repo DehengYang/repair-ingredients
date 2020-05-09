@@ -1,0 +1,16 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_56/src/com/google/javascript/jscomp/SourceFile.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_56/src/com/google/javascript/jscomp/SourceFile.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_56/src/com/google/javascript/jscomp/SourceFile.java	2020-01-05 05:18:06.467048179 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_56/src/com/google/javascript/jscomp/SourceFile.java	2020-01-05 05:18:08.375032244 -0800
+@@ -239,7 +239,11 @@
+       // If next new line cannot be found, there are two cases
+       // 1. pos already reaches the end of file, then null should be returned
+       // 2. otherwise, return the contents between pos and the end of file.
++      if (pos >= js.length()) {
+         return null;
++      } else {
++        return js.substring(pos, js.length());
++      }
+     } else {
+       return js.substring(pos, js.indexOf('\n', pos));
+     }

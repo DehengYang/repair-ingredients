@@ -1,0 +1,178 @@
+---patch code 0--- com.google.javascript.jscomp.CheckSideEffects <113, 130>
+if (!booleanVar &&
+        (booleanVar || !NodeUtil.mayHaveSideEffects(Node, NodeTraversal.getCompiler()))) {
+      String msg = "This code lacks side-effects. Is there a bug?";
+      if (Node.isString()) {
+        msg = "Is there a missing '+' on the previous line?";
+      } else if (booleanVar) {
+        msg = "The result of the '" + Token.name(Node.getType()).toLowerCase() +
+            "' operator is not being used.";
+      }
+
+      NodeTraversal.getCompiler().report(
+          NodeTraversal.makeError(Node, null, DiagnosticType, msg));
+      // TODO(johnlenz): determine if it is necessary to
+      // try to protect side-effect free statements as well.
+      if (!NodeUtil.isStatement(Node)) {
+        ListVar.add(Node);
+      }
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.StrictModeCheck <180, 202>
+for (Node Node = Node.getFirstChild();
+         Node != null;
+         Node = Node.getNext()) {
+      if (!booleanVar && Node.getString().endsWith("__")) {
+        NodeTraversal.report(Node, DiagnosticType);
+      }
+      if (!Node.isSetterDef()) {
+        // normal property and getter cases
+        if (Set.contains(Node.getString())) {
+          NodeTraversal.report(Node, DiagnosticType);
+        } else {
+          Set.add(Node.getString());
+        }
+      }
+      if (!Node.isGetterDef()) {
+        // normal property and setter cases
+        if (Set.contains(Node.getString())) {
+          NodeTraversal.report(Node, DiagnosticType);
+        } else {
+          Set.add(Node.getString());
+        }
+      }
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.ExpandJqueryAliases <557, 565>
+if (booleanVar || Node.isName() && !isShadowed(Node.getString(), NodeTraversal.getScope())) {
+        String nodeValue = booleanVar ? null : Node.getString();
+        if (!booleanVar && StringVar != null && nodeValue.equals(StringVar)) {
+          ListVar.add(Node);
+        } else if (booleanVar || (StringVar != null &&
+            nodeValue.equals(StringVar))) {
+          ListVar.add(Node);
+        }
+      }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.RenameVars <213, 237>
+if (!Node.isName()) {
+        return;
+      }
+empty line
+String StringVar = Node.getString();
+empty line
+// Ignore anonymous functions
+if (StringVar.length() == 0) {
+        return;
+      }
+empty line
+// Is this local or Global?
+// Bleeding functions should be treated as part of their outer
+// scope, because IE has bugs in how it handles bleeding
+// functions.
+Scope.Var Var = NodeTraversal.getScope().getVar(StringVar);
+boolean booleanVar = (Var != null) && Var.isLocal() &&
+          (!Var.scope.getParent().isGlobal() ||
+           !Var.isBleedingFunction());
+empty line
+// Are we renaming global variables?
+if (!booleanVar && localRenamingOnly) {
+        reservedNames.add(StringVar);
+        return;
+      }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.RenameVars <213, 237>
+if (!Node.isName()) {
+        return;
+      }
+empty line
+String StringVar = Node.getString();
+empty line
+// Ignore anonymous functions
+if (StringVar.length() == 0) {
+        return;
+      }
+empty line
+// Is this local or Global?
+// Bleeding functions should be treated as part of their outer
+// scope, because IE has bugs in how it handles bleeding
+// functions.
+Scope.Var Var = NodeTraversal.getScope().getVar(StringVar);
+boolean booleanVar = (Var != null) && Var.isLocal() &&
+          (!Var.scope.getParent().isGlobal() ||
+           !Var.isBleedingFunction());
+empty line
+// Are we renaming global variables?
+if (!booleanVar && localRenamingOnly) {
+        reservedNames.add(StringVar);
+        return;
+      }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.VarCheck <180, 202>
+if (!booleanVar &&
+        JSModule != JSModule && JSModule != null && JSModule != null) {
+      if (JSModuleGraph.dependsOn(JSModule, JSModule)) {
+        // The module dependency was properly declared.
+      } else {
+        if (Scope.isGlobal()) {
+          if (JSModuleGraph.dependsOn(JSModule, JSModule)) {
+            // The variable reference violates a declared module dependency.
+            NodeTraversal.report(Node, DiagnosticType,
+                     JSModule.getName(), JSModule.getName(), StringVar);
+          } else {
+            // The variable reference is between two modules that have no
+            // dependency relationship. This should probably be considered an
+            // error, but just issue a warning for now.
+            NodeTraversal.report(Node, DiagnosticType,
+                     JSModule.getName(), JSModule.getName(), StringVar);
+          }
+        } else {
+          NodeTraversal.report(Node, DiagnosticType,
+                   JSModule.getName(), JSModule.getName(), StringVar);
+        }
+      }
+    }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.NameAnalyzer <1387, 1400>
+if (!booleanVar &&
+            Node.isGetProp() &&
+            Node.isAssign() &&
+            "prototype".equals(Node.getLastChild().getString())) {
+          if (createNameInformation(NodeTraversal, Node.getFirstChild(), Node) != null) {
+            StringVar = Node.getString() + StringVar;
+            StringVar = StringVar.substring(0, StringVar.length() - intVar);
+            NameInformation nameInfo = new NameInformation();
+            nameInfo.StringVar = StringVar;
+            return nameInfo;
+          } else {
+            return null;
+          }
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.PeepholeRemoveDeadCode <678, 681>
+if (!booleanVar && Node == null) {
+        Node = IR.block().srcref(Node);
+        Node.addChildToBack(Node);
+      }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.MarkNoSideEffectCalls <121, 123>
+if (!booleanVar && hasNoSideEffectsAnnotation(Node)) {
+        NodeTraversal.report(Node, INVALID_NO_SIDE_EFFECT_ANNOTATION);
+      }
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- com.google.javascript.jscomp.VariableReferenceCheck <154, 167>
+if (booleanVar && !booleanVar && booleanVar) {
+          // Only allow an unhoisted named function to be used within the
+          // block it is declared.
+          for (BasicBlock declaredBlock : blocksWithDeclarations) {
+            if (!declaredBlock.provablyExecutesBefore(BasicBlock)) {
+              String filename = NodeUtil.getSourceName(Reference.getNode());
+              compiler.report(
+                  JSError.make(filename,
+                      Reference.getNode(),
+                      AMBIGUOUS_FUNCTION_DECL, Var.name));
+              break;
+            }
+          }
+        }
+

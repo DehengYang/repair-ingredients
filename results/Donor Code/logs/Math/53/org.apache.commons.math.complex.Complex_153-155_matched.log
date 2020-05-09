@@ -1,0 +1,60 @@
+---patch code ori--- org.apache.commons.math.complex.Complex <153, 155>
+if (isNaN || rhs.isNaN) {
+            return NaN;
+        }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.complex.Complex <216, 218>
+if (isNaN || rhs.isNaN) {
+            return NaN;
+        }
+
+---patch code 0--- org.apache.commons.math.complex.Complex <153, 155>
+if (booleanVar || Complex.booleanVar) {
+            return Complex;
+        }
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.complex.Complex <216, 218>
+if (booleanVar || Complex.booleanVar) {
+            return Complex;
+        }
+
+---patch code 1--- org.apache.commons.math.complex.Complex <153, 155>
+if (isNaN || Complex.isNaN) {
+            return Complex;
+        }
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.complex.Complex <216, 218>
+if (isNaN || Complex.isNaN) {
+            return Complex;
+        }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.complex.Complex <365, 367>
+if (isNaN || rhs.isNaN) {
+            return NaN;
+        }
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.complex.Complex <365, 367>
+if (booleanVar || Complex.booleanVar) {
+            return Complex;
+        }
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.complex.Complex <365, 367>
+if (isNaN || Complex.isNaN) {
+            return Complex;
+        }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.complex.Complex <452, 454>
+if (isNaN || rhs.isNaN) {
+            return NaN;
+        }
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.complex.Complex <452, 454>
+if (booleanVar || Complex.booleanVar) {
+            return Complex;
+        }
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.complex.Complex <452, 454>
+if (isNaN || Complex.isNaN) {
+            return Complex;
+        }
+

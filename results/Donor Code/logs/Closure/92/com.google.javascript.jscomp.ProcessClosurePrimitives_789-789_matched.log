@@ -1,0 +1,159 @@
+---patch code ori--- com.google.javascript.jscomp.ProcessClosurePrimitives <789, 789>
+int indexOfDot = namespace.lastIndexOf('.');
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.NameReferenceGraph <198, 198>
+int lastDot = qName.lastIndexOf('.');
+
+---patch code 0--- com.google.javascript.jscomp.ProcessClosurePrimitives <789, 789>
+int intVar = StringVar.lastIndexOf('.');
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.NameReferenceGraph <198, 198>
+int intVar = StringVar.lastIndexOf('.');
+
+---patch code 1--- com.google.javascript.jscomp.ProcessClosurePrimitives <789, 789>
+int indexOfDot = namespace.lastIndexOf('.');
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.NameReferenceGraph <198, 198>
+int lastDot = qName.lastIndexOf('.');
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.NameReferenceGraph <270, 270>
+int lastIndexOfDot = qName.lastIndexOf('.');
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.NameReferenceGraph <270, 270>
+int intVar = StringVar.lastIndexOf('.');
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.NameReferenceGraph <270, 270>
+int lastIndexOfDot = qName.lastIndexOf('.');
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.GoogleCodingConvention <68, 68>
+int pos = name.lastIndexOf('$');
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.GoogleCodingConvention <68, 68>
+int intVar = StringVar.lastIndexOf('$');
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.GoogleCodingConvention <68, 68>
+int pos = name.lastIndexOf('$');
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.NodeUtil <1917, 1917>
+int prototypeIdx = qNameStr.lastIndexOf(".prototype.");
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NodeUtil <1917, 1917>
+int intVar = StringVar.lastIndexOf(".prototype.");
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.NodeUtil <1917, 1917>
+int prototypeIdx = qNameStr.lastIndexOf(".prototype.");
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.deps.JsFileLineParser <232, 232>
+int indexEnd = input.lastIndexOf(']');
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.deps.JsFileLineParser <232, 232>
+int intVar = StringVar.lastIndexOf(']');
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.deps.JsFileLineParser <232, 232>
+int indexEnd = input.lastIndexOf(']');
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.GlobalNamespace <729, 729>
+int i = name.lastIndexOf('.');
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.GlobalNamespace <729, 729>
+int intVar = StringVar.lastIndexOf('.');
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.GlobalNamespace <729, 729>
+int i = name.lastIndexOf('.');
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.ClosureCodingConvention <124, 124>
+int dollarIndex = name.lastIndexOf('$');
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ClosureCodingConvention <124, 124>
+int intVar = StringVar.lastIndexOf('$');
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ClosureCodingConvention <124, 124>
+int dollarIndex = name.lastIndexOf('$');
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.parsing.IRFactory <262, 262>
+int lineIndex = sourceString.lastIndexOf('\n', position);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.parsing.IRFactory <262, 262>
+int intVar = StringVar.lastIndexOf('\n', intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.parsing.IRFactory <262, 262>
+int lineIndex = sourceString.lastIndexOf('\n', position);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.VariableMap <155, 155>
+int pos = line.lastIndexOf(SEPARATOR);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.VariableMap <155, 155>
+int intVar = StringVar.lastIndexOf(charVar);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.VariableMap <155, 155>
+int pos = line.lastIndexOf(SEPARATOR);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.Tracer <394, 394>
+return extraTracingStatistics.lastIndexOf(tracingStatistic);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.Tracer <394, 394>
+return ListVar.lastIndexOf(TracingStatistic);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.Tracer <394, 394>
+return extraTracingStatistics.lastIndexOf(TracingStatistic);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <263, 263>
+return name.lastIndexOf(ContextualRenamer.UNIQUE_ID_SEPARATOR);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <263, 263>
+return StringVar.lastIndexOf(ContextualRenamer.UNIQUE_ID_SEPARATOR);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <263, 263>
+return name.lastIndexOf(ContextualRenamer.UNIQUE_ID_SEPARATOR);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.NameAnalyzer <1208, 1208>
+String parentName = curName.substring(0, curName.lastIndexOf('.'));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NameAnalyzer <1208, 1208>
+String StringVar = StringVar.substring(0, StringVar.lastIndexOf('.'));
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.NameAnalyzer <1208, 1208>
+String parentName = curName.substring(0, curName.lastIndexOf('.'));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <519, 520>
+name = name.substring(
+              0, name.lastIndexOf(ContextualRenamer.UNIQUE_ID_SEPARATOR));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <519, 520>
+StringVar = StringVar.substring(
+              0, StringVar.lastIndexOf(ContextualRenamer.UNIQUE_ID_SEPARATOR));
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <519, 520>
+name = name.substring(
+              0, name.lastIndexOf(ContextualRenamer.UNIQUE_ID_SEPARATOR));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.NameAnalyzer <672, 672>
+parentName = parentName.substring(0, parentName.lastIndexOf('.'));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NameAnalyzer <672, 672>
+StringVar = StringVar.substring(0, StringVar.lastIndexOf('.'));
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.NameAnalyzer <672, 672>
+parentName = parentName.substring(0, parentName.lastIndexOf('.'));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.jstype.JSTypeRegistry <566, 566>
+name = name.substring(0, name.lastIndexOf('.'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.JSTypeRegistry <566, 566>
+StringVar = StringVar.substring(0, StringVar.lastIndexOf('.'));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.rhino.jstype.JSTypeRegistry <566, 566>
+name = name.substring(0, name.lastIndexOf('.'));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.PeepholeFoldConstants <1031, 1032>
+int indexVal = isIndexOf ? lstring.indexOf(searchValue, fromIndex)
+                             : lstring.lastIndexOf(searchValue, fromIndex);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeFoldConstants <1031, 1032>
+int intVar = booleanVar ? StringVar.indexOf(StringVar, intVar)
+                             : StringVar.lastIndexOf(StringVar, intVar);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.PeepholeFoldConstants <1031, 1032>
+int indexVal = isIndexOf ? lstring.indexOf(searchValue, fromIndex)
+                             : lstring.lastIndexOf(searchValue, fromIndex);
+

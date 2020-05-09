@@ -1,0 +1,9 @@
+---patch code 0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <283, 283>
+qTy(double[]Var);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <278, 278>
+qTy(double[]Var);
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <283, 283>
+qTy(double[]Var);
+

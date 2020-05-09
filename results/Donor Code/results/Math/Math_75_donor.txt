@@ -1,0 +1,6 @@
+chunk1 : org.apache.commons.math.stat.Frequency:303-303
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (3)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (3)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (3)
+
+

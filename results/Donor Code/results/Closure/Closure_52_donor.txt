@@ -1,0 +1,7 @@
+chunk1 : com.google.javascript.jscomp.CodeGenerator:745-745
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (2)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (3)
+fix ingredient  <0-fine-grained>  varMapType:0 : (3)
+
+

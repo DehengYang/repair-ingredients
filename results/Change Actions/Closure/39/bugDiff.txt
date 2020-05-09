@@ -1,0 +1,26 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_39/src/com/google/javascript/rhino/jstype/PrototypeObjectType.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_39/src/com/google/javascript/rhino/jstype/PrototypeObjectType.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_39/src/com/google/javascript/rhino/jstype/PrototypeObjectType.java	2020-01-05 05:16:58.311617422 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_39/src/com/google/javascript/rhino/jstype/PrototypeObjectType.java	2020-01-05 05:17:00.211601553 -0800
+@@ -377,10 +377,10 @@
+ 
+         sb.append(property);
+         sb.append(": ");
+-        sb.append(getPropertyType(property).toString());
++        sb.append(getPropertyType(property).toStringHelper(forAnnotations));
+ 
+         ++i;
+-        if (i == MAX_PRETTY_PRINTED_PROPERTIES) {
++        if (!forAnnotations && i == MAX_PRETTY_PRINTED_PROPERTIES) {
+           sb.append(", ...");
+           break;
+         }
+@@ -391,7 +391,7 @@
+       prettyPrint = true;
+       return sb.toString();
+     } else {
+-      return "{...}";
++      return forAnnotations ? "?" : "{...}";
+     }
+   }
+ 

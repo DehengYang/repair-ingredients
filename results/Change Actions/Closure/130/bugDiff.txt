@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_130/src/com/google/javascript/jscomp/CollapseProperties.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_130/src/com/google/javascript/jscomp/CollapseProperties.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_130/src/com/google/javascript/jscomp/CollapseProperties.java	2020-01-05 05:24:03.144069177 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_130/src/com/google/javascript/jscomp/CollapseProperties.java	2020-01-05 05:24:06.136044187 -0800
+@@ -169,7 +169,7 @@
+         continue;
+       }
+ 
+-      if (name.globalSets == 1 && name.localSets == 0 &&
++      if (!name.inExterns && name.globalSets == 1 && name.localSets == 0 &&
+           name.aliasingGets > 0) {
+         // {@code name} meets condition (b). Find all of its local aliases
+         // and try to inline them.

@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_19/src/main/java/org/joda/time/DateTimeZone.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_19/src/main/java/org/joda/time/DateTimeZone.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_19/src/main/java/org/joda/time/DateTimeZone.java	2020-01-05 22:47:55.344547189 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_19/src/main/java/org/joda/time/DateTimeZone.java	2020-01-05 22:47:56.644547184 -0800
+@@ -897,7 +897,7 @@
+                     return offsetLocal;
+                 }
+             }
+-        } else if (offsetLocal > 0) {
++        } else if (offsetLocal >= 0) {
+             long prev = previousTransition(instantAdjusted);
+             if (prev < instantAdjusted) {
+                 int offsetPrev = getOffset(prev);

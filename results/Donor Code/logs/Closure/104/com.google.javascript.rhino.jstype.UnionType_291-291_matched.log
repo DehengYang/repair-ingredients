@@ -1,0 +1,108 @@
+---patch code 0--- com.google.javascript.rhino.jstype.UnionType <291, 297>
+if (!JSType.isNoType()) {
+      return JSType;
+    } else if (JSType.isObject() && JSType.isObject()) {
+      return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+    } else {
+      return getNativeType(JSTypeNative.NO_TYPE);
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.NoObjectType <231, 235>
+if (JSType.isSubtype(this, JSType)) {
+      return true;
+    } else {
+      return JSType.isObject() && !JSType.isNoType();
+    }
+
+---patch code 1--- com.google.javascript.rhino.jstype.UnionType <291, 297>
+if (!JSType.isNoType()) {
+      return JSType;
+    } else if (JSType.isObject() && JSType.isObject()) {
+      return getNativeType(JSTypeNative.NO_OBJECT_TYPE);
+    } else {
+      return getNativeType(JSTypeNative.NO_TYPE);
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.rhino.jstype.NoObjectType <231, 235>
+if (JSType.isSubtype(this, JSType)) {
+      return true;
+    } else {
+      return JSType.isObject() && !JSType.isNoType();
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.JSType <480, 482>
+if (JSType.isAllType() || JSType.isNoType() || JSType.isUnknownType()) {
+      return UNKNOWN;
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.rhino.jstype.JSType <480, 482>
+if (JSType.isAllType() || JSType.isNoType() || JSType.isUnknownType()) {
+      return UNKNOWN;
+    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.LinkedFlowScope <323, 325>
+if (JSType.isNoType() || JSType.isNoType()) {
+      return false;
+    }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.LinkedFlowScope <323, 325>
+if (JSType.isNoType() || JSType.isNoType()) {
+      return false;
+    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.LinkedFlowScope <314, 328>
+if (booleanVar && booleanVar) {
+      return false;
+    } else if (booleanVar ^ booleanVar) {
+      return true;
+    }
+empty line
+// Both slots must be non-null.
+JSType JSType = StaticSlot.getType();
+JSType JSType = StaticSlot.getType();
+if (JSType.isNoType() || JSType.isNoType()) {
+      return false;
+    }
+empty line
+// Both types must be non-null.
+return JSType.differsFrom(JSType);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.LinkedFlowScope <314, 328>
+if (aIsNull && bIsNull) {
+      return false;
+    } else if (aIsNull ^ bIsNull) {
+      return true;
+    }
+empty line
+// Both slots must be non-null.
+JSType JSType = StaticSlot.getType();
+JSType JSType = StaticSlot.getType();
+if (JSType.isNoType() || JSType.isNoType()) {
+      return false;
+    }
+empty line
+// Both types must be non-null.
+return JSType.differsFrom(JSType);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.UnionTypeBuilder <88, 90>
+if (JSType.isNoType()) {
+      return this;
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.rhino.jstype.UnionTypeBuilder <88, 90>
+if (JSType.isNoType()) {
+      return this;
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.NamedType <239, 242>
+if (JSType == null || JSType.isAllType() || JSType.isNoType()) {
+      handleUnresolvedType(ErrorReporter);
+      return;
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.rhino.jstype.NamedType <239, 242>
+if (JSType == null || JSType.isAllType() || JSType.isNoType()) {
+      handleUnresolvedType(ErrorReporter);
+      return;
+    }
+

@@ -1,0 +1,19 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_22/src/main/java/org/joda/time/base/BasePeriod.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_22/src/main/java/org/joda/time/base/BasePeriod.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_22/src/main/java/org/joda/time/base/BasePeriod.java	2020-01-05 22:48:03.928547156 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_22/src/main/java/org/joda/time/base/BasePeriod.java	2020-01-05 22:48:05.664547150 -0800
+@@ -219,8 +219,13 @@
+      * @param duration  the duration, in milliseconds
+      */
+     protected BasePeriod(long duration) {
+-        this(duration, null, null);
++        super();
+         // bug [3264409]
++        iType = PeriodType.time();
++        int[] values = ISOChronology.getInstanceUTC().get(this, duration);
++        iType = PeriodType.standard();
++        iValues = new int[8];
++        System.arraycopy(values, 0, iValues, 4, 4);
+     }
+ 
+     /**

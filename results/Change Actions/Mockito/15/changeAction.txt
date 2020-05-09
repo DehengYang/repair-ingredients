@@ -1,0 +1,17 @@
+OP1:(UPD, ReturnStatement, null, null)
+
+
+OP1:(INS, IfStatement, null, OP2 OP3)
+OP2:   (MOV, ExpressionStatement, OP1, null)
+OP3:   (INS, PrefixExpression, OP1, OP4 OP5)
+OP4:      (INS, Operator, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, OP6 OP11)
+OP6:         (INS, ClassInstanceCreation, OP5, OP7 OP8 OP9 OP10)
+OP7:            (INS, New, OP6, null)
+OP8:            (INS, SimpleType, OP6, null)
+OP9:            (INS, SimpleName, OP6, null)
+OP10:            (INS, SimpleName, OP6, null)
+OP11:         (INS, SimpleName, OP5, OP12)
+OP12:            (INS, SimpleName, OP11, null)
+
+

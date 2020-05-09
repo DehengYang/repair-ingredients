@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_123/src/com/google/javascript/jscomp/CodeGenerator.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_123/src/com/google/javascript/jscomp/CodeGenerator.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_123/src/com/google/javascript/jscomp/CodeGenerator.java	2020-01-05 05:23:21.096420363 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_123/src/com/google/javascript/jscomp/CodeGenerator.java	2020-01-05 05:23:24.112395174 -0800
+@@ -282,7 +282,7 @@
+       case Token.HOOK: {
+         Preconditions.checkState(childCount == 3);
+         int p = NodeUtil.precedence(type);
+-        Context rhsContext = Context.OTHER;
++        Context rhsContext = getContextForNoInOperator(context);
+         addExpr(first, p + 1, context);
+         cc.addOp("?", true);
+         addExpr(first.getNext(), 1, rhsContext);

@@ -1,0 +1,18 @@
+---patch code ori--- org.joda.time.DateTimeZone <577, 577>
+map.put("IET", "America/Indiana/Indianapolis");
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateTimeZone <572, 572>
+map.put("IET", "America/Indianapolis");
+
+---patch code 0--- org.joda.time.DateTimeZone <577, 577>
+Map.put("IET", "America/Indiana/Indianapolis");
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.joda.time.DateTimeZone <572, 572>
+Map.put("IET", "America/Indianapolis");
+
+---patch code 1--- org.joda.time.DateTimeZone <577, 577>
+Map.put("IET", "America/Indiana/Indianapolis");
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.joda.time.DateTimeZone <572, 572>
+Map.put("IET", "America/Indianapolis");
+

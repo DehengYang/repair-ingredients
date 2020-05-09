@@ -1,0 +1,10 @@
+chunk1 : org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator:300-303
+fix ingredient(SamePackage)  varMapType:ori : (2)
+fix ingredient(SamePackage)  varMapType:0 : (2)
+
+
+chunk2 : org.apache.commons.math.ode.nonstiff.RungeKuttaIntegrator:180-182
+fix ingredient(SamePackage)  varMapType:ori : (2)
+fix ingredient(SamePackage)  varMapType:0 : (2)
+
+

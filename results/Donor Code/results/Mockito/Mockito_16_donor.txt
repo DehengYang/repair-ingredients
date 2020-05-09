@@ -1,0 +1,12 @@
+chunk1 : org.mockito.Mockito:827-827
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (1)
+
+
+chunk2 : org.mockito.internal.MockitoCore:34-34
+fix ingredient  varMapType:0 : (2)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (1)
+fix ingredient  <parseContainCheck>  varMapType:0 : (1)
+
+

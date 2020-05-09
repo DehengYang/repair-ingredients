@@ -1,0 +1,83 @@
+chunk1 : org.joda.time.chrono.ZonedChronology:448-448
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (25)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (145)
+fix ingredient  <0-fine-grained>  varMapType:0 : (222)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (12)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (111)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (137)
+fix ingredient  <1-fine-grained>  varMapType:1 : (4)
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (1)
+
+
+chunk2 : org.joda.time.chrono.ZonedChronology:436-436
+fix ingredient  <ori-fine-grained>  varMapType:ori : (146)
+fix ingredient  <0-fine-grained>  varMapType:0 : (223)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (25)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (12)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (111)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (137)
+fix ingredient  <1-fine-grained>  varMapType:1 : (4)
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (1)
+
+
+chunk3 : org.joda.time.chrono.ZonedChronology:467-467
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (5)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (2)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (74)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (538)
+fix ingredient  <0-fine-grained>  varMapType:0 : (438)
+fix ingredient  <1-fine-grained>  varMapType:1 : (70)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (55)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (20)
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (2)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (279)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (303)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (29)
+
+
+chunk4 : org.joda.time.chrono.ZonedChronology:460-460
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (26)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (145)
+fix ingredient  <0-fine-grained>  varMapType:0 : (222)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (13)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (111)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (137)
+fix ingredient  <1-fine-grained>  varMapType:1 : (4)
+
+
+chunk5 : org.joda.time.chrono.ZonedChronology:528-528
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (26)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (145)
+fix ingredient  <0-fine-grained>  varMapType:0 : (222)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (13)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (111)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (137)
+fix ingredient  <1-fine-grained>  varMapType:1 : (4)
+
+
+chunk6 : org.joda.time.chrono.ZonedChronology:481-481
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (26)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (145)
+fix ingredient  <0-fine-grained>  varMapType:0 : (222)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (13)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (111)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (137)
+fix ingredient  <1-fine-grained>  varMapType:1 : (4)
+
+
+chunk7 : org.joda.time.chrono.ZonedChronology:540-540
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (26)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (145)
+fix ingredient  <0-fine-grained>  varMapType:0 : (222)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (13)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (111)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (137)
+fix ingredient  <1-fine-grained>  varMapType:1 : (4)
+
+

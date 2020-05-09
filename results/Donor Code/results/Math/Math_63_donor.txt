@@ -1,0 +1,7 @@
+chunk1 : org.apache.commons.math.util.MathUtils:417-417
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (2)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient(SameFile)  <parseContainCheck>  varMapType:1 : (1)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:1 : (1)
+
+

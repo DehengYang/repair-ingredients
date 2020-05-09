@@ -1,0 +1,30 @@
+---patch code ori--- com.google.javascript.jscomp.parsing.JsDocInfoParser <2401, 2401>
+unreadToken = NO_UNREAD_TOKEN;
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.parsing.JsDocInfoParser <2379, 2379>
+unreadToken = NO_UNREAD_TOKEN;
+
+---patch code 0--- com.google.javascript.jscomp.parsing.JsDocInfoParser <2401, 2401>
+null = null;
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.parsing.JsDocInfoParser <2379, 2379>
+null = null;
+
+---patch code 1--- com.google.javascript.jscomp.parsing.JsDocInfoParser <2401, 2401>
+null = null;
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.parsing.JsDocInfoParser <2379, 2379>
+null = null;
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.parsing.JsDocInfoParser <2341, 2341>
+null = null;
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.parsing.JsDocInfoParser <2341, 2341>
+null = null;
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.parsing.JsDocInfoParser <2378, 2378>
+JsDocToken null = null;
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.parsing.JsDocInfoParser <2378, 2378>
+JsDocToken null = null;
+

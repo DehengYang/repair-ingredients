@@ -1,0 +1,36 @@
+---patch code ori--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <430, 430>
+current = new VectorialPointValuePair(point, objective);
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <77, 77>
+current = new VectorialPointValuePair(point, objective);
+
+---patch code 0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <430, 430>
+VectorialPointValuePair = new VectorialPointValuePair(double[]Var, double[]Var);
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <77, 77>
+VectorialPointValuePair = new VectorialPointValuePair(double[]Var, double[]Var);
+
+---patch code 1--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <430, 430>
+VectorialPointValuePair = new VectorialPointValuePair(point, objective);
+
+---fix ingredient(SamePackage)  varMapType:1--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <77, 77>
+VectorialPointValuePair = new VectorialPointValuePair(point, objective);
+
+---fix ingredient(SameMethod)  varMapType:ori--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <365, 365>
+current = new VectorialPointValuePair(point, objective);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <365, 365>
+VectorialPointValuePair = new VectorialPointValuePair(double[]Var, double[]Var);
+
+---fix ingredient(SameMethod)  varMapType:1--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <365, 365>
+VectorialPointValuePair = new VectorialPointValuePair(point, objective);
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:ori--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <268, 268>
+VectorialPointValuePair current = new VectorialPointValuePair(point, objective);
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <268, 268>
+VectorialPointValuePair VectorialPointValuePair = new VectorialPointValuePair(double[]Var, double[]Var);
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:1--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <268, 268>
+VectorialPointValuePair VectorialPointValuePair = new VectorialPointValuePair(point, objective);
+

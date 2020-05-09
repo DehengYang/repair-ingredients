@@ -1,0 +1,12 @@
+---patch code 0--- com.google.javascript.jscomp.TypeInference <1055, 1055>
+backwardsInferenceFromCallSite(Node, PrototypeObjectType);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.TypeInference <791, 791>
+backwardsInferenceFromCallSite(Node, PrototypeObjectType);
+
+---patch code 1--- com.google.javascript.jscomp.TypeInference <1055, 1055>
+backwardsInferenceFromCallSite(Node, null);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.TypeInference <791, 791>
+backwardsInferenceFromCallSite(Node, null);
+

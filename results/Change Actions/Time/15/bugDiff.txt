@@ -1,0 +1,14 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_15/src/main/java/org/joda/time/field/FieldUtils.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_15/src/main/java/org/joda/time/field/FieldUtils.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_15/src/main/java/org/joda/time/field/FieldUtils.java	2020-01-05 22:47:44.700547230 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_15/src/main/java/org/joda/time/field/FieldUtils.java	2020-01-05 22:47:45.980547225 -0800
+@@ -135,6 +135,9 @@
+     public static long safeMultiply(long val1, int val2) {
+         switch (val2) {
+             case -1:
++                if (val1 == Long.MIN_VALUE) {
++                    throw new ArithmeticException("Multiplication overflows a long: " + val1 + " * " + val2);
++                }
+                 return -val1;
+             case 0:
+                 return 0L;

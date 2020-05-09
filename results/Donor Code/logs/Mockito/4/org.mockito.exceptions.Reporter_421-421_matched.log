@@ -1,0 +1,54 @@
+---patch code ori--- org.mockito.exceptions.Reporter <421, 427>
+throw new NoInteractionsWanted(join(
+                "No interactions wanted here:",
+                new LocationImpl(),
+                "But found this interaction on mock '" + safelyGetMockName(undesired.getMock()) + "':",
+                undesired.getLocation(),
+                scenario
+        ));
+
+---fix ingredient(SameMethod)  varMapType:ori--- org.mockito.exceptions.Reporter <421, 427>
+throw new NoInteractionsWanted(join(
+                "No interactions wanted here:",
+                new LocationImpl(),
+                "But found this interaction on mock '" + undesired.getMock() + "':",
+                undesired.getLocation(),
+                scenario
+        ));
+
+---patch code 0--- org.mockito.exceptions.Reporter <421, 427>
+throw new NoInteractionsWanted(join(
+                "No interactions wanted here:",
+                new LocationImpl(),
+                "But found this interaction on mock '" + safelyGetMockName(Invocation.getMock()) + "':",
+                Invocation.getLocation(),
+                StringVar
+        ));
+
+---fix ingredient(SameMethod)  varMapType:0--- org.mockito.exceptions.Reporter <421, 427>
+throw new NoInteractionsWanted(join(
+                "No interactions wanted here:",
+                new LocationImpl(),
+                "But found this interaction on mock '" + Invocation.getMock() + "':",
+                Invocation.getLocation(),
+                StringVar
+        ));
+
+---patch code 1--- org.mockito.exceptions.Reporter <421, 427>
+throw new NoInteractionsWanted(join(
+                "No interactions wanted here:",
+                new LocationImpl(),
+                "But found this interaction on mock '" + safelyGetMockName(Invocation.getMock()) + "':",
+                Invocation.getLocation(),
+                scenario
+        ));
+
+---fix ingredient(SameMethod)  varMapType:1--- org.mockito.exceptions.Reporter <421, 427>
+throw new NoInteractionsWanted(join(
+                "No interactions wanted here:",
+                new LocationImpl(),
+                "But found this interaction on mock '" + Invocation.getMock() + "':",
+                Invocation.getLocation(),
+                scenario
+        ));
+

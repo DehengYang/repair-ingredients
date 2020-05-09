@@ -1,0 +1,11 @@
+chunk1 : com.google.javascript.jscomp.TypeInference:1055-1055
+fix ingredient(SameFile)  varMapType:0 : (1)
+fix ingredient(SameFile)  varMapType:1 : (1)
+
+
+chunk2 : com.google.javascript.jscomp.TypeInference:1036-1036
+fix ingredient(SameFile)  varMapType:ori : (13)
+fix ingredient(SameFile)  varMapType:0 : (13)
+fix ingredient(SameFile)  varMapType:1 : (13)
+
+

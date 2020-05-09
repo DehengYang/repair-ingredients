@@ -1,0 +1,10 @@
+chunk1 : org.apache.commons.lang3.StringUtils:3383-3383
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+
+
+chunk2 : org.apache.commons.lang3.StringUtils:3298-3298
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (1)
+
+

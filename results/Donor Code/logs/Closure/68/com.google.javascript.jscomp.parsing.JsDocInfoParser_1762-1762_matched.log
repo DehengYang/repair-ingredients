@@ -1,0 +1,18 @@
+---patch code ori--- com.google.javascript.jscomp.parsing.JsDocInfoParser <1762, 1762>
+restoreLookAhead(token);
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.parsing.JsDocInfoParser <1658, 1658>
+restoreLookAhead(token);
+
+---patch code 0--- com.google.javascript.jscomp.parsing.JsDocInfoParser <1762, 1762>
+restoreLookAhead(null);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.parsing.JsDocInfoParser <1658, 1658>
+restoreLookAhead(null);
+
+---patch code 1--- com.google.javascript.jscomp.parsing.JsDocInfoParser <1762, 1762>
+restoreLookAhead(null);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.parsing.JsDocInfoParser <1658, 1658>
+restoreLookAhead(null);
+

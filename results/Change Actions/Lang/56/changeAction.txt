@@ -1,0 +1,23 @@
+OP1:(UPD, FieldDeclaration, null, OP2)
+OP2:   (INS, Modifier, OP1, null)
+
+
+OP1:(UPD, FieldDeclaration, null, OP2)
+OP2:   (INS, Modifier, OP1, null)
+
+
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP8 OP12)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, PrimitiveType, OP1, null)
+OP4:   (INS, SimpleName, OP1, null)
+OP5:   (INS, SingleVariableDeclaration, OP1, OP6 OP7)
+OP6:      (INS, SimpleType, OP5, null)
+OP7:      (INS, SimpleName, OP5, null)
+OP8:   (INS, ExpressionStatement, OP1, OP9)
+OP9:      (INS, MethodInvocation, OP8, OP10 OP11)
+OP10:         (INS, SimpleName, OP9, null)
+OP11:         (INS, SimpleName, OP9, null)
+OP12:   (INS, ExpressionStatement, OP1, OP13)
+OP13:      (INS, MethodInvocation, OP12, null)
+
+

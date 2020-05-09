@@ -1,0 +1,18 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_18/src/main/java/org/apache/commons/lang3/time/FastDateFormat.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_18/src/main/java/org/apache/commons/lang3/time/FastDateFormat.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_18/src/main/java/org/apache/commons/lang3/time/FastDateFormat.java	2020-01-05 05:26:41.274748453 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_18/src/main/java/org/apache/commons/lang3/time/FastDateFormat.java	2020-01-05 05:26:44.670720089 -0800
+@@ -492,10 +492,10 @@
+                 rule = new TextField(Calendar.ERA, ERAs);
+                 break;
+             case 'y': // year (number)
+-                if (tokenLen >= 4) {
+-                    rule = selectNumberRule(Calendar.YEAR, tokenLen);
+-                } else {
++                if (tokenLen == 2) {
+                     rule = TwoDigitYearField.INSTANCE;
++                } else {
++                    rule = selectNumberRule(Calendar.YEAR, tokenLen < 4 ? 4 : tokenLen);
+                 }
+                 break;
+             case 'M': // month in year (text and number)

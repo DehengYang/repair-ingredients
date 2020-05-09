@@ -1,0 +1,11 @@
+fixed code:/home/apr/CodeSearchAndMatch/Defects4J/fixed_bugs_dir/Closure/Closure_101/src/com/google/javascript/jscomp/CommandLineRunner.java-434-434
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_101/src/com/google/javascript/jscomp/CommandLineRunner.java-433-435
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_101/src/com/google/javascript/jscomp/CompilationLevel.java-94-94
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_101/src/com/google/javascript/jscomp/CompilationLevel.java-126-126
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_101/src/com/google/javascript/jscomp/CompilerOptions.java-657-657
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_101/src/com/google/javascript/jscomp/DefaultPassConfig.java-196-198
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_101/src/com/google/javascript/jscomp/DefaultPassConfig.java-1780-1782
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_101/src/com/google/javascript/jscomp/DefaultPassConfig.java-321-323
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_101/src/com/google/javascript/jscomp/DefaultPassConfig.java-1784-1787
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_101/src/com/google/javascript/jscomp/DefaultPassConfig.java-188-190
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_101/src/com/google/javascript/jscomp/DefaultPassConfig.java-192-194

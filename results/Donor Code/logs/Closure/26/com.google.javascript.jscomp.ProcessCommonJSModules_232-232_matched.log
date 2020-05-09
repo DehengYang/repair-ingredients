@@ -1,0 +1,93 @@
+---patch code 0--- com.google.javascript.jscomp.ProcessCommonJSModules <232, 232>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RenamePrototypes <283, 283>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <348, 348>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <401, 401>
+Set.add(StringVar);
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.jsonml.Reader <1079, 1079>
+Set.add(StringVar);
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.parsing.IRFactory <478, 478>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.JsMessage <354, 354>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.JsMessageVisitor <513, 513>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.JsMessageVisitor <650, 650>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RenameProperties <295, 295>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.ExpressionDecomposer <597, 597>
+ExpressionDecomposer.Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.FunctionArgumentInjector <311, 311>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.FunctionArgumentInjector <422, 422>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CheckRequiresForConstructors <170, 170>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RenameVars <432, 432>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RenameVars <475, 475>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.WhitelistWarningsGuard <128, 128>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.InlineObjectLiterals <185, 185>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.FunctionTypeBuilder <884, 884>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.FunctionTypeBuilder <897, 897>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CompilerInput <189, 189>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CompilerInput <194, 194>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.MethodCompilerPass <108, 108>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.NameAnalyzer <149, 149>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.NameAnalyzer <150, 150>
+Set.add(StringVar);
+
+---fix ingredient  varMapType:0--- com.google.javascript.rhino.jstype.JSTypeRegistry <597, 597>
+Set.add(StringVar);
+
+---fix ingredient  varMapType:0--- com.google.javascript.rhino.jstype.JSTypeRegistry <844, 844>
+Set.add(StringVar);
+
+---fix ingredient  varMapType:0--- com.google.javascript.rhino.jstype.JSTypeRegistry <1414, 1414>
+Set.add(StringVar);
+
+---fix ingredient  varMapType:0--- com.google.javascript.rhino.jstype.EnumType <116, 116>
+Set.add(StringVar);
+
+---fix ingredient  varMapType:0--- com.google.javascript.rhino.jstype.PrototypeObjectType <194, 194>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- com.google.javascript.jscomp.JSModuleGraph <325, 325>
+Set.add(SortedDependencies.getInputProviding(StringVar));
+

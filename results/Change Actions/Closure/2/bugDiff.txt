@@ -1,0 +1,18 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_2/src/com/google/javascript/jscomp/TypeCheck.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_2/src/com/google/javascript/jscomp/TypeCheck.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_2/src/com/google/javascript/jscomp/TypeCheck.java	2020-01-05 05:15:21.572425396 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_2/src/com/google/javascript/jscomp/TypeCheck.java	2020-01-05 05:15:23.700407623 -0800
+@@ -1569,9 +1569,13 @@
+       ObjectType interfaceType) {
+     ObjectType implicitProto = interfaceType.getImplicitPrototype();
+     Set<String> currentPropertyNames;
++    if (implicitProto == null) {
+       // This can be the case if interfaceType is proxy to a non-existent
+       // object (which is a bad type annotation, but shouldn't crash).
++      currentPropertyNames = ImmutableSet.of();
++    } else {
+       currentPropertyNames = implicitProto.getOwnPropertyNames();
++    }
+     for (String name : currentPropertyNames) {
+       ObjectType oType = properties.get(name);
+       if (oType != null) {

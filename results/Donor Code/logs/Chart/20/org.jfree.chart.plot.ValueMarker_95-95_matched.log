@@ -1,0 +1,307 @@
+---patch code ori--- org.jfree.chart.plot.ValueMarker <95, 95>
+super(paint, stroke, outlinePaint, outlineStroke, alpha);
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.CategoryMarker <109, 109>
+super(paint, stroke, outlinePaint, outlineStroke, alpha);
+
+---patch code 0--- org.jfree.chart.plot.ValueMarker <95, 95>
+super(Paint, Stroke, Paint, Stroke, floatVar);
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.plot.CategoryMarker <109, 109>
+super(Paint, Stroke, Paint, Stroke, floatVar);
+
+---patch code 1--- org.jfree.chart.plot.ValueMarker <95, 95>
+super(Paint, Stroke, Paint, Stroke, alpha);
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.plot.CategoryMarker <109, 109>
+super(Paint, Stroke, Paint, Stroke, alpha);
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.IntervalMarker <105, 105>
+super(paint, stroke, outlinePaint, outlineStroke, alpha);
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.plot.IntervalMarker <105, 105>
+super(Paint, Stroke, Paint, Stroke, floatVar);
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.plot.IntervalMarker <105, 105>
+super(Paint, Stroke, Paint, Stroke, alpha);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.jfree.chart.plot.ValueMarker <95, 95>
+super(Paint, Stroke, Paint, Stroke, floatVar);
+
+---fix ingredient(SameMethod)  varMapType:1--- org.jfree.chart.plot.ValueMarker <95, 95>
+super(Paint, Stroke, Paint, Stroke, alpha);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.WaferMapRenderer <311, 312>
+LegendItemCollection.add(new LegendItem(StringVar, StringVar, null, 
+                            null, Shape, Paint, Stroke, Paint));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.WaferMapRenderer <311, 312>
+LegendItemCollection.add(new LegendItem(label, description, null, 
+                            null, Shape, Paint, Stroke, Paint));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.WaferMapRenderer <335, 337>
+LegendItemCollection.add(new LegendItem(StringVar, StringVar, 
+                                null, null, Shape, Paint, Stroke, 
+                                Paint));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.WaferMapRenderer <335, 337>
+LegendItemCollection.add(new LegendItem(label, description, 
+                                null, null, Shape, Paint, Stroke, 
+                                Paint));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.SpiderWebPlot <1103, 1104>
+LegendItem LegendItem = new LegendItem(StringVar, StringVar, 
+                        null, null, Shape, Paint, Stroke, Paint);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.SpiderWebPlot <1103, 1104>
+LegendItem LegendItem = new LegendItem(label, description, 
+                        null, null, Shape, Paint, Stroke, Paint);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.DefaultPolarItemRenderer <299, 300>
+LegendItem = new LegendItem(StringVar, StringVar, null, null, 
+                        Shape, Paint, Stroke, Paint);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.DefaultPolarItemRenderer <299, 300>
+LegendItem = new LegendItem(label, description, null, null, 
+                        Shape, Paint, Stroke, Paint);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.PiePlot3D <474, 475>
+drawSide(g2, pieArea, segment, front, back, paint, 
+                        outlinePaint, outlineStroke, false, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PiePlot3D <474, 475>
+drawSide(Graphics2DVar, Rectangle2DVar, Arc2DVar, Area, Area, Paint, 
+                        Paint, Stroke, false, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.PiePlot3D <474, 475>
+drawSide(g2, pieArea, segment, Area, Area, Paint, 
+                        Paint, Stroke, false, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.PiePlot3D <490, 491>
+drawSide(g2, pieArea, segment, front, back, paint, 
+                        outlinePaint, outlineStroke, true, false);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PiePlot3D <490, 491>
+drawSide(Graphics2DVar, Rectangle2DVar, Arc2DVar, Area, Area, Paint, 
+                        Paint, Stroke, true, false);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.PiePlot3D <490, 491>
+drawSide(g2, pieArea, segment, Area, Area, Paint, 
+                        Paint, Stroke, true, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.AreaRenderer <184, 185>
+LegendItem LegendItem = new LegendItem(StringVar, StringVar, StringVar, 
+                StringVar, Shape, Paint, Stroke, Paint);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.AreaRenderer <184, 185>
+LegendItem LegendItem = new LegendItem(label, description, toolTipText, 
+                urlText, Shape, Paint, Stroke, Paint);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.BoxAndWhiskerRenderer <256, 257>
+LegendItem LegendItem = new LegendItem(StringVar, StringVar, StringVar, 
+                StringVar, Shape, Paint, Stroke, Paint);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.BoxAndWhiskerRenderer <256, 257>
+LegendItem LegendItem = new LegendItem(label, description, toolTipText, 
+                urlText, Shape, Paint, Stroke, Paint);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <1273, 1274>
+LegendItem LegendItem = new LegendItem(StringVar, StringVar, StringVar,
+                StringVar, Shape, Paint, Stroke, Paint);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <1273, 1274>
+LegendItem LegendItem = new LegendItem(label, description, toolTipText,
+                urlText, Shape, Paint, Stroke, Paint);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYBubbleRenderer <312, 313>
+LegendItem = new LegendItem(StringVar, StringVar, StringVar, 
+                        StringVar, Shape, Paint, Stroke, Paint);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYBubbleRenderer <312, 313>
+LegendItem = new LegendItem(label, description, toolTipText, 
+                        urlText, Shape, Paint, Stroke, Paint);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYBarRenderer <519, 520>
+LegendItem = new LegendItem(StringVar, StringVar, StringVar, 
+                            StringVar, Shape, Paint, Stroke, Paint);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYBarRenderer <519, 520>
+LegendItem = new LegendItem(label, description, toolTipText, 
+                            urlText, Shape, Paint, Stroke, Paint);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <889, 890>
+LegendItem = new LegendItem(StringVar, StringVar, StringVar,
+                        StringVar, Shape, Paint, Stroke, Paint);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <889, 890>
+LegendItem = new LegendItem(label, description, toolTipText,
+                        urlText, Shape, Paint, Stroke, Paint);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ValueMarker <80, 80>
+this(doubleVar, Paint, Stroke, Paint, Stroke, 1.0f);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.ValueMarker <80, 80>
+this(value, Paint, Stroke, Paint, Stroke, 1.0f);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.CategoryMarker <93, 93>
+this(Comparable, Paint, Stroke, Paint, Stroke, 1.0f);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.CategoryMarker <93, 93>
+this(Comparable, Paint, Stroke, Paint, Stroke, 1.0f);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.PiePlot <2599, 2603>
+LegendItem item = new LegendItem(label, description, 
+                            toolTipText, urlText, true, shape, true, paint, 
+                            true, outlinePaint, outlineStroke, 
+                            false,          // line not visible
+                            new Line2D.Float(), new BasicStroke(), Color.black);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PiePlot <2599, 2603>
+LegendItem LegendItem = new LegendItem(StringVar, StringVar, 
+                            StringVar, StringVar, true, Shape, true, Paint, 
+                            true, Paint, Stroke, 
+                            false,          // line not visible
+                            new Line2D.Float(), new BasicStroke(), Color.black);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.PiePlot <2599, 2603>
+LegendItem LegendItem = new LegendItem(label, description, 
+                            toolTipText, urlText, true, Shape, true, Paint, 
+                            true, Paint, Stroke, 
+                            false,          // line not visible
+                            new Line2D.Float(), new BasicStroke(), Color.black);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.BarRenderer <688, 691>
+LegendItem result = new LegendItem(label, description, toolTipText, 
+                urlText, true, shape, true, paint, isDrawBarOutline(), 
+                outlinePaint, outlineStroke, false, new Line2D.Float(), 
+                new BasicStroke(1.0f), Color.black);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.BarRenderer <688, 691>
+LegendItem LegendItem = new LegendItem(StringVar, StringVar, StringVar, 
+                StringVar, true, Shape, true, Paint, isDrawBarOutline(), 
+                Paint, Stroke, false, new Line2D.Float(), 
+                new BasicStroke(1.0f), Color.black);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.BarRenderer <688, 691>
+LegendItem LegendItem = new LegendItem(label, description, toolTipText, 
+                urlText, true, Shape, true, Paint, isDrawBarOutline(), 
+                Paint, Stroke, false, new Line2D.Float(), 
+                new BasicStroke(1.0f), Color.black);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.LegendItem <229, 234>
+this(label, description, toolTipText, urlText,
+                /* shape visible = */ true, shape, 
+                /* shape filled = */ true, fillPaint, 
+                /* shape outlined = */ true, outlinePaint, outlineStroke,
+                /* line visible */ false, UNUSED_SHAPE, UNUSED_STROKE,
+                Color.black);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.LegendItem <229, 234>
+this(StringVar, StringVar, StringVar, StringVar,
+                /* shape visible = */ true, Shape, 
+                /* shape filled = */ true, Paint, 
+                /* shape outlined = */ true, Paint, Stroke,
+                /* line visible */ false, Shape, Stroke,
+                Color.black);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.LegendItem <229, 234>
+this(label, description, toolTipText, urlText,
+                /* shape visible = */ true, Shape, 
+                /* shape filled = */ true, Paint, 
+                /* shape outlined = */ true, Paint, Stroke,
+                /* line visible */ false, Shape, Stroke,
+                Color.black);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.LegendItem <374, 379>
+this(label, description, toolTipText, urlText,
+                /* shape visible = */ true, shape,
+                /* shape filled = */ true, fillPaint,
+                /* shape outlined = */ true, outlinePaint, outlineStroke,
+                /* line visible = */ false, UNUSED_SHAPE, UNUSED_STROKE,
+                Color.black);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.LegendItem <374, 379>
+this(AttributedString, StringVar, StringVar, StringVar,
+                /* shape visible = */ true, Shape,
+                /* shape filled = */ true, Paint,
+                /* shape outlined = */ true, Paint, Stroke,
+                /* line visible = */ false, Shape, Stroke,
+                Color.black);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.LegendItem <374, 379>
+this(AttributedString, description, toolTipText, urlText,
+                /* shape visible = */ true, Shape,
+                /* shape filled = */ true, Paint,
+                /* shape outlined = */ true, Paint, Stroke,
+                /* line visible = */ false, Shape, Stroke,
+                Color.black);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.MeterPlot <985, 991>
+if (Paint != null && Stroke != null) {
+            Arc2D.Double arc = new Arc2D.Double(doubleVar, doubleVar, doubleVar, doubleVar, doubleVar, 
+                    doubleVar, Arc2D.OPEN);
+            Graphics2DVar.setPaint(Paint); 
+            Graphics2DVar.setStroke(Stroke);
+            Graphics2DVar.draw(arc);
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.MeterPlot <985, 991>
+if (Paint != null && Stroke != null) {
+            Arc2D.Double arc = new Arc2D.Double(x, y, w, h, startAngle, 
+                    extent, Arc2D.OPEN);
+            g2.setPaint(Paint); 
+            g2.setStroke(Stroke);
+            g2.draw(arc);
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.LineAndShapeRenderer <669, 673>
+LegendItem result = new LegendItem(label, description, toolTipText, 
+                    urlText, shapeVisible, shape, getItemShapeFilled(series, 0),
+                    fillPaint, shapeOutlineVisible, outlinePaint, outlineStroke,
+                    lineVisible, new Line2D.Double(-7.0, 0.0, 7.0, 0.0),
+                    getItemStroke(series, 0), getItemPaint(series, 0));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.LineAndShapeRenderer <669, 673>
+LegendItem LegendItem = new LegendItem(StringVar, StringVar, StringVar, 
+                    StringVar, booleanVar, Shape, getItemShapeFilled(intVar, 0),
+                    Paint, booleanVar, Paint, Stroke,
+                    booleanVar, new Line2D.Double(-7.0, 0.0, 7.0, 0.0),
+                    getItemStroke(intVar, 0), getItemPaint(intVar, 0));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.LineAndShapeRenderer <669, 673>
+LegendItem LegendItem = new LegendItem(label, description, toolTipText, 
+                    urlText, shapeVisible, Shape, getItemShapeFilled(series, 0),
+                    Paint, shapeOutlineVisible, Paint, Stroke,
+                    lineVisible, new Line2D.Double(-7.0, 0.0, 7.0, 0.0),
+                    getItemStroke(series, 0), getItemPaint(series, 0));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.StandardXYItemRenderer <600, 603>
+LegendItem = new LegendItem(StringVar, StringVar, StringVar, 
+                        StringVar, AbstractXYItemRenderer.booleanVar, Shape, booleanVar,
+                        Paint, !booleanVar, Paint, Stroke, 
+                        AbstractXYItemRenderer.booleanVar, AbstractXYItemRenderer.Shape, Stroke, Paint);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.StandardXYItemRenderer <600, 603>
+LegendItem = new LegendItem(label, description, toolTipText, 
+                        urlText, AbstractXYItemRenderer.baseShapesVisible, Shape, shapeFilled,
+                        Paint, !shapeFilled, Paint, Stroke, 
+                        AbstractXYItemRenderer.plotLines, AbstractXYItemRenderer.Shape, Stroke, Paint);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.MultiplePiePlot <532, 534>
+LegendItem LegendItem = new LegendItem(StringVar, StringVar, 
+                            null, null, Plot.Shape, 
+                            Paint, Plot.Stroke, Paint);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.MultiplePiePlot <532, 534>
+LegendItem LegendItem = new LegendItem(label, description, 
+                            null, null, Plot.Shape, 
+                            Paint, Plot.Stroke, Paint);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.Marker <155, 156>
+this(Paint, new BasicStroke(0.5f), Color.gray, new BasicStroke(0.5f), 
+                0.80f);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.Marker <155, 156>
+this(Paint, new BasicStroke(0.5f), Color.gray, new BasicStroke(0.5f), 
+                0.80f);
+

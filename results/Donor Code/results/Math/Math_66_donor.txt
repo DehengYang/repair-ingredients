@@ -1,0 +1,12 @@
+chunk1 : org.apache.commons.math.optimization.univariate.BrentOptimizer:231-231
+fix ingredient  varMapType:ori : (7)
+fix ingredient  varMapType:0 : (7)
+fix ingredient  varMapType:1 : (7)
+
+
+chunk2 : org.apache.commons.math.optimization.univariate.BrentOptimizer:117-117
+fix ingredient  varMapType:ori : (2)
+fix ingredient  varMapType:0 : (2)
+fix ingredient  varMapType:1 : (2)
+
+

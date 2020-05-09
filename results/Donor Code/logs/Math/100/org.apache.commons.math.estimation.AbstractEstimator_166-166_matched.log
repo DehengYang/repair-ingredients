@@ -1,0 +1,18 @@
+---patch code ori--- org.apache.commons.math.estimation.AbstractEstimator <166, 166>
+final int cols = problem.getUnboundParameters().length;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.estimation.AbstractEstimator <231, 231>
+parameters   = problem.getUnboundParameters();
+
+---patch code 0--- org.apache.commons.math.estimation.AbstractEstimator <166, 166>
+final int intVar = EstimationProblem.getUnboundParameters().length;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.AbstractEstimator <231, 231>
+EstimatedParameter[]Var   = EstimationProblem.getUnboundParameters();
+
+---patch code 1--- org.apache.commons.math.estimation.AbstractEstimator <166, 166>
+final int cols = EstimationProblem.getUnboundParameters().length;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.estimation.AbstractEstimator <231, 231>
+parameters   = EstimationProblem.getUnboundParameters();
+

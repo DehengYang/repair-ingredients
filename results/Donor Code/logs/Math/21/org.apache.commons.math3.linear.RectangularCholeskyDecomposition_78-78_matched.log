@@ -1,0 +1,494 @@
+---patch code 0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <78, 78>
+int intVar = intVar;
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math3.linear.BlockRealMatrix <490, 490>
+int intVar = intVar;
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math3.linear.BlockFieldMatrix <513, 513>
+int intVar = intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1925, 1925>
+final int intVar = intVar * intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.DfpDec <260, 260>
+intVar = intVar / intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1240, 1240>
+intVar = intVar / intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1345, 1345>
+intVar = intVar / intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1459, 1459>
+intVar = intVar / intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1554, 1554>
+intVar = intVar / intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1638, 1638>
+intVar = intVar / intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1768, 1768>
+intVar = intVar / intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1776, 1776>
+intVar = intVar / intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.distribution.PascalDistribution <113, 113>
+intVar = intVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <143, 143>
+intVar = intVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <75, 75>
+int intVar = 0;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <635, 635>
+int intVar = 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1917, 1917>
+final int intVar = intVar / intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1926, 1926>
+final int intVar = intVar / intVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <91, 91>
+int intVar = int[]Var[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <97, 97>
+int intVar = int[]Var[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <144, 144>
+RealMatrix = MatrixUtils.createRealMatrix(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.DfpDec <261, 261>
+int[]Var[intVar] = intVar % intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.AbstractWell <101, 101>
+BitsStreamGenerator.int[]Var      = new int[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.AbstractWell <106, 106>
+int[]Var = new int[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.AbstractWell <107, 107>
+int[]Var = new int[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.AbstractWell <108, 108>
+int[]Var   = new int[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.AbstractWell <109, 109>
+int[]Var   = new int[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.AbstractWell <110, 110>
+int[]Var   = new int[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <79, 79>
+int[]Var[intVar] = intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.correlation.PearsonsCorrelation <142, 142>
+double doubleVar = RealMatrix.getEntry(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.correlation.PearsonsCorrelation <172, 172>
+double doubleVar = RealMatrix.getEntry(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1046, 1046>
+double doubleVar = RealMatrix.getEntry(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1244, 1244>
+double doubleVar = RealMatrix.getEntry(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1261, 1261>
+double doubleVar = RealMatrix.getEntry(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.DfpDec <259, 259>
+final int intVar = int[]Var[intVar] + intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1239, 1239>
+final int intVar = int[]Var[intVar] + intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1458, 1458>
+final int intVar = int[]Var[intVar] + intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1122, 1122>
+doubleVar += RealMatrix.getEntry(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.transform.FastFourierTransformer <344, 344>
+double doubleVar = double[]Var[intVar + intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.transform.FastFourierTransformer <345, 345>
+double doubleVar = double[]Var[intVar + intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.transform.FastFourierTransformer <346, 346>
+double doubleVar = double[]Var[intVar + intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.transform.FastFourierTransformer <347, 347>
+double doubleVar = double[]Var[intVar + intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1916, 1916>
+final int intVar = intVar*intVar + Dfp.int[]Var[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <138, 138>
+booleanVar = ++intVar < intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1346, 1346>
+Dfp.int[]Var[intVar] = intVar - intVar * intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1639, 1639>
+Dfp.int[]Var[intVar] = intVar - intVar * intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DSCompiler <768, 768>
+double[]Var[intVar + intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DSCompiler <1709, 1709>
+double[]Var[intVar + intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1344, 1344>
+final int intVar = Dfp.int[]Var[intVar]+Dfp.int[]Var[intVar]+intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1241, 1241>
+int[]Var[intVar] = intVar - intVar * intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1460, 1460>
+int[]Var[intVar] = intVar - intVar * intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1769, 1769>
+intVar[intVar] = intVar - intVar * intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1777, 1777>
+intVar[intVar] = intVar - intVar * intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.clustering.KMeansPlusPlusClusterer <314, 317>
+if (doubleVar >= doubleVar) {
+                        intVar = intVar;
+                        break;
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <771, 771>
+double[]Var[intVar] = doubleVar - doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1767, 1767>
+final int intVar = (intVar * intVar) + intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1551, 1551>
+int intVar = int[]Var[intVar] * Dfp.int[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <347, 347>
+doubleVar += Math.abs(double[]Var[intVar]) * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <436, 436>
+double[]Var[intVar] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <740, 740>
+double[]Var[intVar] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1918, 1918>
+intVar = intVar - intVar * intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1927, 1927>
+intVar = intVar - intVar * intVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <93, 93>
+int[]Var[int[]Var[intVar]] = intVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <122, 122>
+double[][]Var[intVar][intVar] = doubleVar;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BlockRealMatrix <492, 492>
+doubleVar += double[]Var[intVar] * RealMatrix.getEntry(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1637, 1637>
+final int intVar = int[]Var[intVar] * intVar + intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1032, 1032>
+double[][]Var[intVar][intVar] = Math.sqrt(RealMatrix.getEntry(intVar, intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizer <156, 156>
+double[]Var[intVar] = -double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizer <202, 202>
+double[]Var[intVar] = -double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <564, 564>
+double[]Var[intVar] = doubleVar - double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <632, 632>
+doubleVar += double[]Var[intVar] * double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <659, 659>
+doubleVar += double[]Var[intVar] * double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1552, 1552>
+intVar = intVar + int[]Var[intVar+intVar] + intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizer <166, 166>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizer <211, 211>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1047, 1047>
+double[][]Var[intVar][intVar] = doubleVar * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.AbstractWell <114, 114>
+int[]Var[intVar]   = (intVar + intVar)    % intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.AbstractWell <115, 115>
+int[]Var[intVar]   = (intVar + intVar)    % intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.AbstractWell <116, 116>
+int[]Var[intVar]   = (intVar + intVar)    % intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1171, 1173>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            Arrays.fill(double[][]Var[intVar], 1.0);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <783, 783>
+double[]Var[intVar] = double[]Var[intVar - 1];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1555, 1555>
+int[]Var[intVar+intVar] = intVar - intVar * intVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <100, 102>
+if (intVar == 0) {
+                    throw new NonPositiveDefiniteMatrixException(double[][]Var[intVar][intVar], intVar, doubleVar);
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <560, 560>
+doubleVar += -double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <815, 815>
+double[][]Var[intVar][intVar] = -doubleVar / doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizer <219, 221>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+                    doubleVar += double[]Var[intVar] * double[]Var[intVar];
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <263, 263>
+double[]Var[intVar] = smartAdd(doubleVar, -doubleVar * double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <875, 875>
+doubleVar = smartAdd(doubleVar, -double[]Var[intVar] * double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.dfp.Dfp <1775, 1775>
+final int intVar = ((intVar-1) - intVar[intVar]) + intVar[intVar] + intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <770, 770>
+double[]Var[intVar] = doubleVar * double[]Var[intVar] + doubleVar * doubleVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <92, 92>
+int[]Var[intVar] = int[]Var[int[]Var[intVar]];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <421, 423>
+if (Math.abs(double[]Var[intVar]) * double[]Var[intVar] < doubleVar) {
+                    double[]Var[intVar] = 0.0;
+                }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BlockFieldMatrix <515, 515>
+TVar = TVar.add(T[]Var[intVar].multiply(FieldMatrix.getEntry(intVar, intVar)));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1062, 1062>
+double[][]Var[intVar][intVar] = RealMatrix.getEntry(intVar, intVar) * RealMatrix.getEntry(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1077, 1077>
+double[][]Var[intVar][intVar] = RealMatrix.getEntry(intVar, intVar) / RealMatrix.getEntry(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1107, 1107>
+double[][]Var[intVar][intVar] = intVar <= intVar - intVar ? RealMatrix.getEntry(intVar, intVar) : 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.AbstractWell <100, 100>
+final int intVar = (intVar + intVar - 1) / intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1276, 1280>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+            if (doubleVar < double[]Var[intVar]) {
+                doubleVar = double[]Var[intVar];
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1290, 1294>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+            if (doubleVar > double[]Var[intVar]) {
+                doubleVar = double[]Var[intVar];
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <656, 656>
+double[]Var[intVar + intVar] += double[]Var[intVar] * double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <664, 664>
+double[]Var[intVar + intVar] += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <146, 148>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                RealMatrix.setEntry(int[]Var[intVar], intVar, double[][]Var[intVar][intVar]);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1229, 1232>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[][]Var[intVar][0] = doubleVar;
+            doubleVar += doubleVar;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.AbstractFieldMatrix <482, 486>
+for (int intVar = 1; intVar < intVar; ++intVar) {
+            if (subMatrix[r].length != intVar) {
+                throw new DimensionMismatchException(intVar, subMatrix[r].length);
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.Array2DRowFieldMatrix <163, 167>
+for (int intVar = 1; intVar < intVar; intVar++) {
+                if (d[r].length != intVar) {
+                    throw new DimensionMismatchException(intVar, d[r].length);
+                }
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.Array2DRowRealMatrix <110, 114>
+for (int intVar = 1; intVar < intVar; intVar++) {
+                if (d[r].length != intVar) {
+                    throw new DimensionMismatchException(d[r].length, intVar);
+                }
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.AbstractRealMatrix <413, 417>
+for (int intVar = 1; intVar < intVar; ++intVar) {
+            if (subMatrix[r].length != intVar) {
+                throw new DimensionMismatchException(intVar, subMatrix[r].length);
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1184, 1188>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            if (intVar < intVar) {
+                double[][]Var[intVar][intVar] = 1;
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SchurTransformer <393, 393>
+doubleVar = doubleVar + doubleVar * doubleVar[intVar + 2][intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <817, 817>
+double[][]Var[intVar][intVar] = -doubleVar / (Precision.doubleVar * doubleVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1341, 1345>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            for (int c = 0; c < intVar; c++) {
+                double[][]Var[intVar][c] = RandomGenerator.nextGaussian();
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <265, 265>
+double[]Var[intVar] = smartAdd(doubleVar * double[]Var[intVar], (doubleVar * doubleVar) * doubleVar) / doubleVar;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <806, 806>
+doubleVar = doubleVar + double[][]Var[intVar][intVar] * double[][]Var[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1090, 1094>
+for (int intVar = 0; intVar < RealMatrix.getRowDimension(); intVar++) {
+            for (int c = 0; c < int[]Var.length; c++) {
+                double[][]Var[intVar][c] = RealMatrix.getEntry(intVar, int[]Var[c]);
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <387, 387>
+double[]Var[intVar] = smartAdd(double[]Var[intVar], -double[]Var[intVar] * double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.correlation.PearsonsCorrelation <143, 143>
+double[][]Var[intVar][intVar] = FastMath.sqrt((1 - doubleVar * doubleVar) /(intVar - 2));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.integration.RombergIntegrator <128, 128>
+doubleVar[intVar] = doubleVar + (doubleVar - doubleVar[intVar - 1]) / doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1015, 1019>
+for (int intVar = 0; intVar < RealMatrix.getRowDimension(); intVar++) {
+            for (int c = 0; c < RealMatrix.getColumnDimension(); c++) {
+                double[][]Var[intVar][c] = Math.log(RealMatrix.getEntry(intVar, c));
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1211, 1215>
+for (int intVar = 0; intVar < intVar * intVar; intVar++) {
+            for (int c = 0; c < intVar * intVar; c++) {
+                double[][]Var[intVar][c] = RealMatrix.getEntry(intVar % intVar, c % intVar);
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SchurTransformer <361, 361>
+doubleVar = booleanVar ? doubleVar[intVar + 2][intVar - 1] : 0.0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.transform.FastFourierTransformer <350, 350>
+double[]Var[intVar + intVar] = doubleVar + doubleVar * doubleVar - doubleVar * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.transform.FastFourierTransformer <351, 351>
+double[]Var[intVar + intVar] = doubleVar + doubleVar * doubleVar + doubleVar * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.transform.FastFourierTransformer <353, 353>
+double[]Var[intVar + intVar] = doubleVar - (doubleVar * doubleVar - doubleVar * doubleVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.transform.FastFourierTransformer <354, 354>
+double[]Var[intVar + intVar] = doubleVar - (doubleVar * doubleVar + doubleVar * doubleVar);
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <80, 86>
+for (int intVar = intVar + 1; intVar < intVar; ++intVar) {
+                int ii  = int[]Var[intVar];
+                int isi = int[]Var[int[]Var[intVar]];
+                if (double[][]Var[ii][ii] > double[][]Var[isi][isi]) {
+                    int[]Var[intVar] = intVar;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.RandomDataGenerator <203, 203>
+double doubleVar = doubleVar * intVar + (1.0 - doubleVar) * intVar + doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.RandomDataGenerator <292, 292>
+final double doubleVar = doubleVar * intVar + (1.0 - doubleVar) * intVar + doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.distribution.UniformIntegerDistribution <160, 160>
+final double doubleVar = doubleVar * intVar + (1 - doubleVar) * intVar + doubleVar;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <828, 828>
+double[][]Var[intVar + 1][intVar] = (-doubleVar - doubleVar * doubleVar) / doubleVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <105, 111>
+for (int intVar = intVar; intVar < intVar; ++intVar) {
+                    if (double[][]Var[int[]Var[intVar]][int[]Var[intVar]] < -doubleVar) {
+                        // there is at least one sufficiently negative diagonal element,
+                        // the symmetric positive semidefinite matrix is wrong
+                        throw new NonPositiveDefiniteMatrixException(double[][]Var[int[]Var[intVar]][int[]Var[intVar]], intVar, doubleVar);
+                    }
+                }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SchurTransformer <405, 405>
+doubleVar[intVar][intVar + 2] = doubleVar[intVar][intVar + 2] - doubleVar * doubleVar;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SchurTransformer <417, 417>
+doubleVar[intVar][intVar + 2] = doubleVar[intVar][intVar + 2] - doubleVar * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DSCompiler <764, 766>
+doubleVar += int[][]Var[intVar][0] *
+                     double[]Var[intVar + int[][]Var[intVar][1]] *
+                     double[]Var[intVar + int[][]Var[intVar][2]];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <903, 904>
+final Complex Complex        = cdiv(-doubleVar - doubleVar * double[][]Var[intVar][intVar - 1],
+                                                               -doubleVar - doubleVar * double[][]Var[intVar][intVar], doubleVar, doubleVar);
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RectangularCholeskyDecomposition <124, 135>
+for (int intVar = intVar + 1; intVar < intVar; ++intVar) {
+                    final int ii = int[]Var[intVar];
+                    final double e = doubleVar * double[][]Var[ii][intVar];
+                    double[][]Var[intVar][intVar] = e;
+                    double[][]Var[ii][ii] -= e * e;
+                    for (int j = intVar + 1; j < intVar; ++j) {
+                        final int ij = int[]Var[j];
+                        final double f = double[][]Var[ii][ij] - e * double[][]Var[j][intVar];
+                        double[][]Var[ii][ij] = f;
+                        double[][]Var[ij][ii] = f;
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <624, 624>
+intVar = double[]Var.length - (intVar - intVar) * (intVar - intVar + 1) / 2;
+

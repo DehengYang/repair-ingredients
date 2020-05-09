@@ -1,0 +1,18 @@
+---patch code ori--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <254, 254>
+VectorialPointValuePair previous = current;
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <73, 73>
+VectorialPointValuePair previous = current;
+
+---patch code 0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <254, 254>
+VectorialPointValuePair VectorialPointValuePair = VectorialPointValuePair;
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <73, 73>
+VectorialPointValuePair VectorialPointValuePair = VectorialPointValuePair;
+
+---patch code 1--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <254, 254>
+VectorialPointValuePair VectorialPointValuePair = VectorialPointValuePair;
+
+---fix ingredient(SamePackage)  varMapType:1--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <73, 73>
+VectorialPointValuePair VectorialPointValuePair = VectorialPointValuePair;
+

@@ -1,0 +1,2087 @@
+---patch code ori--- com.google.javascript.jscomp.FlowSensitiveInlineVariables <155, 168>
+if (c.canInline(t.getScope())) {
+        c.inlineVariable();
+
+        // If definition c has dependencies, then inlining it may have
+        // introduced new dependencies for our other inlining candidates.
+        //
+        // MustBeReachingVariableDef uses this dependency graph in its
+        // analysis, so some of these candidates may no longer be valid.
+        // We keep track of when the variable dependency graph changed
+        // so that we can back off appropriately.
+        if (!c.defMetadata.depends.isEmpty()) {
+          inlinedNewDependencies.add(t.getScope().getVar(c.varName));
+        }
+      }
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.FlowSensitiveInlineVariables <155, 168>
+if (c.canInline()) {
+        c.inlineVariable();
+
+        // If definition c has dependencies, then inlining it may have
+        // introduced new dependencies for our other inlining candidates.
+        //
+        // MustBeReachingVariableDef uses this dependency graph in its
+        // analysis, so some of these candidates may no longer be valid.
+        // We keep track of when the variable dependency graph changed
+        // so that we can back off appropriately.
+        if (!c.defMetadata.depends.isEmpty()) {
+          inlinedNewDependencies.add(t.getScope().getVar(c.varName));
+        }
+      }
+
+---patch code 0--- com.google.javascript.jscomp.FlowSensitiveInlineVariables <155, 168>
+if (Candidate.canInline(NodeTraversal.getScope())) {
+        Candidate.inlineVariable();
+
+        // If definition c has dependencies, then inlining it may have
+        // introduced new dependencies for our other inlining candidates.
+        //
+        // MustBeReachingVariableDef uses this dependency graph in its
+        // analysis, so some of these candidates may no longer be valid.
+        // We keep track of when the variable dependency graph changed
+        // so that we can back off appropriately.
+        if (!Candidate.defMetadata.depends.isEmpty()) {
+          Set.add(NodeTraversal.getScope().getVar(Candidate.varName));
+        }
+      }
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FlowSensitiveInlineVariables <155, 168>
+if (Candidate.canInline()) {
+        Candidate.inlineVariable();
+
+        // If definition c has dependencies, then inlining it may have
+        // introduced new dependencies for our other inlining candidates.
+        //
+        // MustBeReachingVariableDef uses this dependency graph in its
+        // analysis, so some of these candidates may no longer be valid.
+        // We keep track of when the variable dependency graph changed
+        // so that we can back off appropriately.
+        if (!Candidate.defMetadata.depends.isEmpty()) {
+          Set.add(NodeTraversal.getScope().getVar(Candidate.varName));
+        }
+      }
+
+---patch code 1--- com.google.javascript.jscomp.FlowSensitiveInlineVariables <155, 168>
+if (Candidate.canInline(NodeTraversal.getScope())) {
+        Candidate.inlineVariable();
+
+        // If definition c has dependencies, then inlining it may have
+        // introduced new dependencies for our other inlining candidates.
+        //
+        // MustBeReachingVariableDef uses this dependency graph in its
+        // analysis, so some of these candidates may no longer be valid.
+        // We keep track of when the variable dependency graph changed
+        // so that we can back off appropriately.
+        if (!Candidate.defMetadata.depends.isEmpty()) {
+          Set.add(NodeTraversal.getScope().getVar(Candidate.varName));
+        }
+      }
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.FlowSensitiveInlineVariables <155, 168>
+if (Candidate.canInline()) {
+        Candidate.inlineVariable();
+
+        // If definition c has dependencies, then inlining it may have
+        // introduced new dependencies for our other inlining candidates.
+        //
+        // MustBeReachingVariableDef uses this dependency graph in its
+        // analysis, so some of these candidates may no longer be valid.
+        // We keep track of when the variable dependency graph changed
+        // so that we can back off appropriately.
+        if (!Candidate.defMetadata.depends.isEmpty()) {
+          Set.add(NodeTraversal.getScope().getVar(Candidate.varName));
+        }
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.ShadowVariables <155, 160>
+if (var.getScope() != t.getScope()) {
+        for (Scope s = t.getScope();
+            s != var.getScope() && s.isLocal(); s = s.getParent()) {
+          scopeUpRefMap.put(s.getRootNode(), var.name);
+        }
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ShadowVariables <155, 160>
+if (Var.getScope() != NodeTraversal.getScope()) {
+        for (Scope s = NodeTraversal.getScope();
+            s != Var.getScope() && s.isLocal(); s = s.getParent()) {
+          scopeUpRefMap.put(s.getRootNode(), Var.name);
+        }
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ShadowVariables <155, 160>
+if (Var.getScope() != NodeTraversal.getScope()) {
+        for (Scope s = NodeTraversal.getScope();
+            s != Var.getScope() && s.isLocal(); s = s.getParent()) {
+          scopeUpRefMap.put(s.getRootNode(), Var.name);
+        }
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.ShadowVariables <162, 164>
+if (var.getScope() == t.getScope()) {
+        scopeUpRefMap.put(t.getScopeRoot(), var.name);
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ShadowVariables <162, 164>
+if (Var.getScope() == NodeTraversal.getScope()) {
+        scopeUpRefMap.put(NodeTraversal.getScopeRoot(), Var.name);
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ShadowVariables <162, 164>
+if (Var.getScope() == NodeTraversal.getScope()) {
+        scopeUpRefMap.put(NodeTraversal.getScopeRoot(), Var.name);
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.TypeCheck <970, 989>
+if (lvalue.isQualifiedName()) {
+      // variable with inferred type case
+      JSType rvalueType = getJSType(assign.getLastChild());
+      Var var = t.getScope().getVar(lvalue.getQualifiedName());
+      if (var != null) {
+        if (var.isTypeInferred()) {
+          return;
+        }
+
+        if (NodeUtil.getRootOfQualifiedName(lvalue).isThis() &&
+            t.getScope() != var.getScope()) {
+          // Don't look at "this.foo" variables from other scopes.
+          return;
+        }
+
+        if (var.getType() != null) {
+          leftType = var.getType();
+        }
+      }
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypeCheck <970, 989>
+if (Node.isQualifiedName()) {
+      // variable with inferred type case
+      JSType rvalueType = getJSType(Node.getLastChild());
+      Var var = NodeTraversal.getScope().getVar(Node.getQualifiedName());
+      if (var != null) {
+        if (var.isTypeInferred()) {
+          return;
+        }
+
+        if (NodeUtil.getRootOfQualifiedName(Node).isThis() &&
+            NodeTraversal.getScope() != var.getScope()) {
+          // Don't look at "TypeCheck.foo" variables from other scopes.
+          return;
+        }
+
+        if (var.getType() != null) {
+          JSType = var.getType();
+        }
+      }
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.TypeCheck <970, 989>
+if (Node.isQualifiedName()) {
+      // variable with inferred type case
+      JSType rvalueType = getJSType(Node.getLastChild());
+      Var var = NodeTraversal.getScope().getVar(Node.getQualifiedName());
+      if (var != null) {
+        if (var.isTypeInferred()) {
+          return;
+        }
+
+        if (NodeUtil.getRootOfQualifiedName(Node).isThis() &&
+            NodeTraversal.getScope() != var.getScope()) {
+          // Don't look at "TypeCheck.foo" variables from other scopes.
+          return;
+        }
+
+        if (var.getType() != null) {
+          JSType = var.getType();
+        }
+      }
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.RenameVars <199, 203>
+if (current.isBleedingFunction()) {
+          localBleedingFunctions.add(current);
+          localBleedingFunctionsPerScope.put(
+              t.getScope().getParent(), current);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RenameVars <199, 203>
+if (Var.isBleedingFunction()) {
+          localBleedingFunctions.add(Var);
+          localBleedingFunctionsPerScope.put(
+              NodeTraversal.getScope().getParent(), Var);
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.RenameVars <199, 203>
+if (Var.isBleedingFunction()) {
+          localBleedingFunctions.add(Var);
+          localBleedingFunctionsPerScope.put(
+              NodeTraversal.getScope().getParent(), Var);
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.JsMessageVisitor <316, 321>
+if (msgNode.isName()) {
+      Var var = t.getScope().getVar(msgName);
+      if (var != null) {
+        unnamedMessages.put(var, message);
+      }
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.JsMessageVisitor <316, 321>
+if (Node.isName()) {
+      Var var = NodeTraversal.getScope().getVar(StringVar);
+      if (var != null) {
+        Map.put(var, JsMessage);
+      }
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.JsMessageVisitor <316, 321>
+if (Node.isName()) {
+      Var var = NodeTraversal.getScope().getVar(msgName);
+      if (var != null) {
+        Map.put(var, JsMessage);
+      }
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.VarCheck <243, 250>
+if (n == parent.getFirstChild()) {
+              Scope scope = t.getScope();
+              Scope.Var var = scope.getVar(n.getString());
+              if (var == null) {
+                t.report(n, UNDEFINED_EXTERN_VAR_ERROR, n.getString());
+                varsToDeclareInExterns.add(n.getString());
+              }
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.VarCheck <243, 250>
+if (Node == Node.getFirstChild()) {
+              Scope scope = NodeTraversal.getScope();
+              Scope.Var var = scope.getVar(Node.getString());
+              if (var == null) {
+                NodeTraversal.report(Node, UNDEFINED_EXTERN_VAR_ERROR, Node.getString());
+                varsToDeclareInExterns.add(Node.getString());
+              }
+            }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.VarCheck <243, 250>
+if (Node == Node.getFirstChild()) {
+              Scope scope = NodeTraversal.getScope();
+              Scope.Var var = scope.getVar(Node.getString());
+              if (var == null) {
+                NodeTraversal.report(Node, UNDEFINED_EXTERN_VAR_ERROR, Node.getString());
+                varsToDeclareInExterns.add(Node.getString());
+              }
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.ConstCheck <64, 74>
+if (parent != null &&
+            parent.isVar() &&
+            n.hasChildren()) {
+          String name = n.getString();
+          Scope.Var var = t.getScope().getVar(name);
+          if (isConstant(var)) {
+            if (initializedConstants.contains(var)) {
+              reportError(t, n, name);
+            } else {
+              initializedConstants.add(var);
+            }
+          }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ConstCheck <64, 74>
+if (Node != null &&
+            Node.isVar() &&
+            Node.hasChildren()) {
+          String name = Node.getString();
+          Scope.Var var = NodeTraversal.getScope().getVar(name);
+          if (isConstant(var)) {
+            if (Set.contains(var)) {
+              reportError(NodeTraversal, Node, name);
+            } else {
+              Set.add(var);
+            }
+          }
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ConstCheck <64, 74>
+if (Node != null &&
+            Node.isVar() &&
+            Node.hasChildren()) {
+          String name = Node.getString();
+          Scope.Var var = NodeTraversal.getScope().getVar(name);
+          if (isConstant(var)) {
+            if (Set.contains(var)) {
+              reportError(NodeTraversal, Node, name);
+            } else {
+              Set.add(var);
+            }
+          }
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.StripCode <156, 163>
+if (isStripName(name) ||
+            isCallWhoseReturnValueShouldBeStripped(nameNode.getFirstChild())) {
+          // Remove the NAME.
+          Scope scope = t.getScope();
+          varsToRemove.add(scope.getVar(name));
+          n.removeChild(nameNode);
+          compiler.reportCodeChange();
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.StripCode <156, 163>
+if (isStripName(StringVar) ||
+            isCallWhoseReturnValueShouldBeStripped(Node.getFirstChild())) {
+          // Remove the NAME.
+          Scope scope = NodeTraversal.getScope();
+          varsToRemove.add(scope.getVar(StringVar));
+          Node.removeChild(Node);
+          compiler.reportCodeChange();
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.StripCode <156, 163>
+if (isStripName(name) ||
+            isCallWhoseReturnValueShouldBeStripped(Node.getFirstChild())) {
+          // Remove the NAME.
+          Scope scope = NodeTraversal.getScope();
+          varsToRemove.add(scope.getVar(name));
+          Node.removeChild(Node);
+          compiler.reportCodeChange();
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.VarCheck <137, 147>
+if ((parent.isVar() ||
+         NodeUtil.isFunctionDeclaration(parent)) &&
+        varsToDeclareInExterns.contains(varName)) {
+      createSynthesizedExternVar(varName);
+
+      n.addSuppression("duplicate");
+    }
+empty line
+// Check that the var has been declared.
+Scope scope = t.getScope();
+Scope.Var var = scope.getVar(varName);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.VarCheck <137, 147>
+if ((Node.isVar() ||
+         NodeUtil.isFunctionDeclaration(Node)) &&
+        Set.contains(StringVar)) {
+      createSynthesizedExternVar(StringVar);
+
+      Node.addSuppression("duplicate");
+    }
+empty line
+// Check that the var has been declared.
+Scope Scope = NodeTraversal.getScope();
+Scope.Var Var = Scope.getVar(StringVar);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.VarCheck <137, 147>
+if ((Node.isVar() ||
+         NodeUtil.isFunctionDeclaration(Node)) &&
+        Set.contains(varName)) {
+      createSynthesizedExternVar(varName);
+
+      Node.addSuppression("duplicate");
+    }
+empty line
+// Check that the var has been declared.
+Scope Scope = NodeTraversal.getScope();
+Scope.Var Var = Scope.getVar(varName);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.ReferenceCollectingCallback <171, 173>
+Node n = t.getScope().getRootNode();
+BasicBlock parent = blockStack.isEmpty() ? null : blockStack.peek();
+blockStack.push(new BasicBlock(parent, n));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ReferenceCollectingCallback <171, 173>
+Node Node = NodeTraversal.getScope().getRootNode();
+BasicBlock BasicBlock = Deque.isEmpty() ? null : Deque.peek();
+Deque.push(new BasicBlock(BasicBlock, Node));
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ReferenceCollectingCallback <171, 173>
+Node Node = NodeTraversal.getScope().getRootNode();
+BasicBlock BasicBlock = Deque.isEmpty() ? null : Deque.peek();
+Deque.push(new BasicBlock(BasicBlock, Node));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.ConstCheck <90, 100>
+if (lhs.isName()) {
+          String name = lhs.getString();
+          Scope.Var var = t.getScope().getVar(name);
+          if (isConstant(var)) {
+            if (initializedConstants.contains(var)) {
+              reportError(t, n, name);
+            } else {
+              initializedConstants.add(var);
+            }
+          }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ConstCheck <90, 100>
+if (Node.isName()) {
+          String name = Node.getString();
+          Scope.Var var = NodeTraversal.getScope().getVar(name);
+          if (isConstant(var)) {
+            if (Set.contains(var)) {
+              reportError(NodeTraversal, Node, name);
+            } else {
+              Set.add(var);
+            }
+          }
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ConstCheck <90, 100>
+if (Node.isName()) {
+          String name = Node.getString();
+          Scope.Var var = NodeTraversal.getScope().getVar(name);
+          if (isConstant(var)) {
+            if (Set.contains(var)) {
+              reportError(NodeTraversal, Node, name);
+            } else {
+              Set.add(var);
+            }
+          }
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.ReferenceCollectingCallback <149, 159>
+if (n.isName()) {
+      Var v;
+      if (n.getString().equals("arguments")) {
+        v = t.getScope().getArgumentsVar();
+      } else {
+        v = t.getScope().getVar(n.getString());
+      }
+      if (v != null && varFilter.apply(v)) {
+        addReference(t, v, new Reference(n, t, blockStack.peek()));
+      }
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ReferenceCollectingCallback <149, 159>
+if (Node.isName()) {
+      Var v;
+      if (Node.getString().equals("arguments")) {
+        v = NodeTraversal.getScope().getArgumentsVar();
+      } else {
+        v = NodeTraversal.getScope().getVar(Node.getString());
+      }
+      if (v != null && Predicate.apply(v)) {
+        addReference(NodeTraversal, v, new Reference(Node, NodeTraversal, Deque.peek()));
+      }
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ReferenceCollectingCallback <149, 159>
+if (Node.isName()) {
+      Var v;
+      if (Node.getString().equals("arguments")) {
+        v = NodeTraversal.getScope().getArgumentsVar();
+      } else {
+        v = NodeTraversal.getScope().getVar(Node.getString());
+      }
+      if (v != null && Predicate.apply(v)) {
+        addReference(NodeTraversal, v, new Reference(Node, NodeTraversal, Deque.peek()));
+      }
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.AliasExternals <648, 657>
+String name = n.getString();
+Scope.Var var = t.getScope().getVar(name);
+empty line
+// It's ok for var to be null since it won't be in any scope if it's
+// an extern
+if (var != null && var.isLocal()) {
+          return;
+        }
+empty line
+Symbol global = globals.get(name);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.AliasExternals <648, 657>
+String StringVar = Node.getString();
+Scope.Var Var = NodeTraversal.getScope().getVar(StringVar);
+empty line
+// It's ok for var to be null since it won't be in any scope if it's
+// an extern
+if (Var != null && Var.isLocal()) {
+          return;
+        }
+empty line
+Symbol Symbol = globals.get(StringVar);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.AliasExternals <648, 657>
+String name = Node.getString();
+Scope.Var Var = NodeTraversal.getScope().getVar(name);
+empty line
+// It's ok for var to be null since it won't be in any scope if it's
+// an extern
+if (Var != null && Var.isLocal()) {
+          return;
+        }
+empty line
+Symbol Symbol = globals.get(name);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.StrictModeCheck <168, 173>
+if (n.getFirstChild().isName()) {
+      Var v = t.getScope().getVar(n.getFirstChild().getString());
+      if (v != null) {
+        t.report(n, DELETE_VARIABLE);
+      }
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.StrictModeCheck <168, 173>
+if (Node.getFirstChild().isName()) {
+      Var v = NodeTraversal.getScope().getVar(Node.getFirstChild().getString());
+      if (v != null) {
+        NodeTraversal.report(Node, DiagnosticType);
+      }
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.StrictModeCheck <168, 173>
+if (Node.getFirstChild().isName()) {
+      Var v = NodeTraversal.getScope().getVar(Node.getFirstChild().getString());
+      if (v != null) {
+        NodeTraversal.report(Node, DiagnosticType);
+      }
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.ConstCheck <107, 113>
+if (lhs.isName()) {
+          String name = lhs.getString();
+          Scope.Var var = t.getScope().getVar(name);
+          if (isConstant(var)) {
+            reportError(t, n, name);
+          }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ConstCheck <107, 113>
+if (Node.isName()) {
+          String name = Node.getString();
+          Scope.Var var = NodeTraversal.getScope().getVar(name);
+          if (isConstant(var)) {
+            reportError(NodeTraversal, Node, name);
+          }
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ConstCheck <107, 113>
+if (Node.isName()) {
+          String name = Node.getString();
+          Scope.Var var = NodeTraversal.getScope().getVar(name);
+          if (isConstant(var)) {
+            reportError(NodeTraversal, Node, name);
+          }
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.TypedScopeCreator <2062, 2074>
+if (n.isGetProp() && n.isUnscopedQualifiedName() &&
+          NodeUtil.isLValue(n)) {
+        String name = NodeUtil.getRootOfQualifiedName(n).getString();
+        Scope scope = t.getScope();
+        Var var = scope.getVar(name);
+        if (var != null) {
+          Scope ownerScope = var.getScope();
+          if (scope != ownerScope && ownerScope.isLocal()) {
+            data.get(ownerScope.getRootNode())
+                .recordEscapedQualifiedName(n.getQualifiedName());
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypedScopeCreator <2062, 2074>
+if (Node.isGetProp() && Node.isUnscopedQualifiedName() &&
+          NodeUtil.isLValue(Node)) {
+        String StringVar = NodeUtil.getRootOfQualifiedName(Node).getString();
+        Scope Scope = NodeTraversal.getScope();
+        Var Var = Scope.getVar(StringVar);
+        if (Var != null) {
+          Scope ownerScope = Var.getScope();
+          if (Scope != ownerScope && ownerScope.isLocal()) {
+            Map.get(ownerScope.getRootNode())
+                .recordEscapedQualifiedName(Node.getQualifiedName());
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.TypedScopeCreator <2062, 2074>
+if (Node.isGetProp() && Node.isUnscopedQualifiedName() &&
+          NodeUtil.isLValue(Node)) {
+        String name = NodeUtil.getRootOfQualifiedName(Node).getString();
+        Scope Scope = NodeTraversal.getScope();
+        Var Var = Scope.getVar(name);
+        if (Var != null) {
+          Scope ownerScope = Var.getScope();
+          if (Scope != ownerScope && ownerScope.isLocal()) {
+            Map.get(ownerScope.getRootNode())
+                .recordEscapedQualifiedName(Node.getQualifiedName());
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.AliasExternals <612, 619>
+if (aliasable) {
+          String name = dest.getString();
+          Scope.Var var = t.getScope().getVar(name);
+
+          if (var != null && !var.isLocal()) {
+            globals.put(name, newSymbolForGlobalVar(dest));
+          }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.AliasExternals <612, 619>
+if (booleanVar) {
+          String name = Node.getString();
+          Scope.Var var = NodeTraversal.getScope().getVar(name);
+
+          if (var != null && !var.isLocal()) {
+            globals.put(name, newSymbolForGlobalVar(Node));
+          }
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.AliasExternals <612, 619>
+if (aliasable) {
+          String name = Node.getString();
+          Scope.Var var = NodeTraversal.getScope().getVar(name);
+
+          if (var != null && !var.isLocal()) {
+            globals.put(name, newSymbolForGlobalVar(Node));
+          }
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.CheckRequiresForConstructors <187, 211>
+private void visitNewNode(NodeTraversal t, Node n) {
+      Node qNameNode = n.getFirstChild();
+
+      // If the ctor is something other than a qualified name, ignore it.
+      if (!qNameNode.isQualifiedName()) {
+        return;
+      }
+
+      // Grab the root ctor namespace.
+      Node nameNode = qNameNode;
+      for (; nameNode.hasChildren(); nameNode = nameNode.getFirstChild()) {}
+
+      // We only consider programmer-defined constructors that are
+      // global variables, or are defined on global variables.
+      if (!nameNode.isName()) {
+        return;
+      }
+
+      String name = nameNode.getString();
+      Scope.Var var = t.getScope().getVar(name);
+      if (var == null || var.isLocal() || var.isExtern()) {
+        return;
+      }
+      newNodes.add(n);
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CheckRequiresForConstructors <187, 211>
+private void visitNewNode(NodeTraversal t, Node n) {
+      Node qNameNode = Node.getFirstChild();
+
+      // If the ctor is something other than a qualified name, ignore it.
+      if (!qNameNode.isQualifiedName()) {
+        return;
+      }
+
+      // Grab the root ctor namespace.
+      Node nameNode = qNameNode;
+      for (; nameNode.hasChildren(); nameNode = nameNode.getFirstChild()) {}
+
+      // We only consider programmer-defined constructors that are
+      // global variables, or are defined on global variables.
+      if (!nameNode.isName()) {
+        return;
+      }
+
+      String name = nameNode.getString();
+      Scope.Var var = NodeTraversal.getScope().getVar(name);
+      if (var == null || var.isLocal() || var.isExtern()) {
+        return;
+      }
+      ListVar.add(Node);
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.CheckRequiresForConstructors <187, 211>
+private void visitNewNode(NodeTraversal t, Node n) {
+      Node qNameNode = Node.getFirstChild();
+
+      // If the ctor is something other than a qualified name, ignore it.
+      if (!qNameNode.isQualifiedName()) {
+        return;
+      }
+
+      // Grab the root ctor namespace.
+      Node nameNode = qNameNode;
+      for (; nameNode.hasChildren(); nameNode = nameNode.getFirstChild()) {}
+
+      // We only consider programmer-defined constructors that are
+      // global variables, or are defined on global variables.
+      if (!nameNode.isName()) {
+        return;
+      }
+
+      String name = nameNode.getString();
+      Scope.Var var = NodeTraversal.getScope().getVar(name);
+      if (var == null || var.isLocal() || var.isExtern()) {
+        return;
+      }
+      newNodes.add(Node);
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.CheckRequiresForConstructors <187, 211>
+private void visitNewNode(NodeTraversal t, Node n) {
+      Node qNameNode = n.getFirstChild();
+
+      // If the ctor is something other than a qualified name, ignore it.
+      if (!qNameNode.isQualifiedName()) {
+        return;
+      }
+
+      // Grab the root ctor namespace.
+      Node nameNode = qNameNode;
+      for (; nameNode.hasChildren(); nameNode = nameNode.getFirstChild()) {}
+
+      // We only consider programmer-defined constructors that are
+      // global variables, or are defined on global variables.
+      if (!nameNode.isName()) {
+        return;
+      }
+
+      String name = nameNode.getString();
+      Scope.Var var = t.getScope().getVar(name);
+      if (var == null || var.isLocal() || var.isExtern()) {
+        return;
+      }
+      newNodes.add(n);
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CheckRequiresForConstructors <187, 211>
+private void visitNewNode(NodeTraversal t, Node n) {
+      Node qNameNode = Node.getFirstChild();
+
+      // If the ctor is something other than a qualified name, ignore it.
+      if (!qNameNode.isQualifiedName()) {
+        return;
+      }
+
+      // Grab the root ctor namespace.
+      Node nameNode = qNameNode;
+      for (; nameNode.hasChildren(); nameNode = nameNode.getFirstChild()) {}
+
+      // We only consider programmer-defined constructors that are
+      // global variables, or are defined on global variables.
+      if (!nameNode.isName()) {
+        return;
+      }
+
+      String name = nameNode.getString();
+      Scope.Var var = NodeTraversal.getScope().getVar(name);
+      if (var == null || var.isLocal() || var.isExtern()) {
+        return;
+      }
+      ListVar.add(Node);
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.CheckRequiresForConstructors <187, 211>
+private void visitNewNode(NodeTraversal t, Node n) {
+      Node qNameNode = Node.getFirstChild();
+
+      // If the ctor is something other than a qualified name, ignore it.
+      if (!qNameNode.isQualifiedName()) {
+        return;
+      }
+
+      // Grab the root ctor namespace.
+      Node nameNode = qNameNode;
+      for (; nameNode.hasChildren(); nameNode = nameNode.getFirstChild()) {}
+
+      // We only consider programmer-defined constructors that are
+      // global variables, or are defined on global variables.
+      if (!nameNode.isName()) {
+        return;
+      }
+
+      String name = nameNode.getString();
+      Scope.Var var = NodeTraversal.getScope().getVar(name);
+      if (var == null || var.isLocal() || var.isExtern()) {
+        return;
+      }
+      newNodes.add(Node);
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.CoalesceVariableNames <181, 190>
+for (Iterator<Var> i = t.getScope().getVars(); i.hasNext();) {
+        Var iVar = i.next();
+
+        // Look for all the variables that can be merged (in the graph by now)
+        // and it is merged with the current coalescedVar.
+        if (colorings.peek().getGraph().getNode(iVar) != null &&
+            coalescedVar.equals(colorings.peek().getPartitionSuperNode(iVar))) {
+          allMergedNames.add(iVar.name);
+        }
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CoalesceVariableNames <181, 190>
+for (Iterator<Var> Iterator = NodeTraversal.getScope().getVars(); Iterator.hasNext();) {
+        Var iVar = Iterator.next();
+
+        // Look for all the variables that can be merged (in the graph by now)
+        // and it is merged with the current coalescedVar.
+        if (Deque.peek().getGraph().getNode(iVar) != null &&
+            Var.equals(Deque.peek().getPartitionSuperNode(iVar))) {
+          Set.add(iVar.name);
+        }
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.CoalesceVariableNames <181, 190>
+for (Iterator<Var> Iterator = NodeTraversal.getScope().getVars(); Iterator.hasNext();) {
+        Var iVar = Iterator.next();
+
+        // Look for all the variables that can be merged (in the graph by now)
+        // and it is merged with the current coalescedVar.
+        if (Deque.peek().getGraph().getNode(iVar) != null &&
+            Var.equals(Deque.peek().getPartitionSuperNode(iVar))) {
+          Set.add(iVar.name);
+        }
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.TypedScopeCreator <1265, 1270>
+if (root.isName()) {
+        Var var = scope.getVar(root.getString());
+        if (var != null) {
+          return var.getScope();
+        }
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.NameReferenceGraphConstruction <187, 193>
+if (isPrototypeNameReference(n)) {
+            recordPrototypePropUse(t, n, parent);
+          } else if (isStaticNameReference(n, t.getScope())) {
+            recordStaticNameUse(t, n, parent);
+          } else {
+            recordUnknownUse(t, n, parent);
+          }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NameReferenceGraphConstruction <187, 193>
+if (isPrototypeNameReference(Node)) {
+            recordPrototypePropUse(NodeTraversal, Node, Node);
+          } else if (isStaticNameReference(Node, NodeTraversal.getScope())) {
+            recordStaticNameUse(NodeTraversal, Node, Node);
+          } else {
+            recordUnknownUse(NodeTraversal, Node, Node);
+          }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.NameReferenceGraphConstruction <187, 193>
+if (isPrototypeNameReference(Node)) {
+            recordPrototypePropUse(NodeTraversal, Node, Node);
+          } else if (isStaticNameReference(Node, NodeTraversal.getScope())) {
+            recordStaticNameUse(NodeTraversal, Node, Node);
+          } else {
+            recordUnknownUse(NodeTraversal, Node, Node);
+          }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.StrictModeCheck <132, 149>
+/** Checks that the given name is used legally. */
+  private void checkNameUse(NodeTraversal t, Node n) {
+    Var v = t.getScope().getVar(n.getString());
+    if (v == null) {
+      // In particular, this prevents creating a global variable by assigning
+      // to it without a declaration.
+      if (!noVarCheck) {
+        t.report(n, UNKNOWN_VARIABLE, n.getString());
+      }
+    }
+
+    if (!noCajaChecks) {
+      if ("eval".equals(n.getString())) {
+        t.report(n, EVAL_USE);
+      } else if (n.getString().endsWith("__")) {
+        t.report(n, ILLEGAL_NAME);
+      }
+    }
+  }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.StrictModeCheck <132, 149>
+/** Checks that the given name is used legally. */
+  private void checkNameUse(NodeTraversal t, Node n) {
+    Var v = NodeTraversal.getScope().getVar(Node.getString());
+    if (v == null) {
+      // In particular, this prevents creating a global variable by assigning
+      // to it without a declaration.
+      if (!booleanVar) {
+        NodeTraversal.report(Node, DiagnosticType, Node.getString());
+      }
+    }
+
+    if (!booleanVar) {
+      if ("eval".equals(Node.getString())) {
+        NodeTraversal.report(Node, DiagnosticType);
+      } else if (Node.getString().endsWith("__")) {
+        NodeTraversal.report(Node, DiagnosticType);
+      }
+    }
+  }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.StrictModeCheck <132, 149>
+/** Checks that the given name is used legally. */
+  private void checkNameUse(NodeTraversal t, Node n) {
+    Var v = NodeTraversal.getScope().getVar(Node.getString());
+    if (v == null) {
+      // In particular, this prevents creating a global variable by assigning
+      // to it without a declaration.
+      if (!noVarCheck) {
+        NodeTraversal.report(Node, DiagnosticType, Node.getString());
+      }
+    }
+
+    if (!noCajaChecks) {
+      if ("eval".equals(Node.getString())) {
+        NodeTraversal.report(Node, DiagnosticType);
+      } else if (Node.getString().endsWith("__")) {
+        NodeTraversal.report(Node, DiagnosticType);
+      }
+    }
+  }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.ReferenceCollectingCallback <182, 188>
+if (t.getScope().isGlobal()) {
+      // Update global scope reference lists when we are done with it.
+      compiler.updateGlobalVarReferences(referenceMap, t.getScopeRoot());
+      behavior.afterExitScope(t, compiler.getGlobalVarReferences());
+    } else {
+      behavior.afterExitScope(t, new ReferenceMapWrapper(referenceMap));
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ReferenceCollectingCallback <182, 188>
+if (NodeTraversal.getScope().isGlobal()) {
+      // Update global scope reference lists when we are done with it.
+      AbstractCompiler.updateGlobalVarReferences(Map, NodeTraversal.getScopeRoot());
+      Behavior.afterExitScope(NodeTraversal, AbstractCompiler.getGlobalVarReferences());
+    } else {
+      Behavior.afterExitScope(NodeTraversal, new ReferenceMapWrapper(Map));
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ReferenceCollectingCallback <182, 188>
+if (NodeTraversal.getScope().isGlobal()) {
+      // Update global scope reference lists when we are done with it.
+      AbstractCompiler.updateGlobalVarReferences(Map, NodeTraversal.getScopeRoot());
+      Behavior.afterExitScope(NodeTraversal, AbstractCompiler.getGlobalVarReferences());
+    } else {
+      Behavior.afterExitScope(NodeTraversal, new ReferenceMapWrapper(Map));
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.CoalesceVariableNames <199, 208>
+while (t.getScope().isDeclared(pseudoName, true)) {
+        pseudoName += "$";
+      }
+empty line
+n.setString(pseudoName);
+compiler.reportCodeChange();
+empty line
+if (!vNode.getValue().equals(coalescedVar) && parent.isVar()) {
+        removeVarDeclaration(n);
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CoalesceVariableNames <199, 208>
+while (NodeTraversal.getScope().isDeclared(StringVar, true)) {
+        StringVar += "$";
+      }
+empty line
+Node.setString(StringVar);
+AbstractCompiler.reportCodeChange();
+empty line
+if (!GraphNode.getValue().equals(Var) && Node.isVar()) {
+        removeVarDeclaration(Node);
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.CoalesceVariableNames <199, 208>
+while (NodeTraversal.getScope().isDeclared(pseudoName, true)) {
+        pseudoName += "$";
+      }
+empty line
+Node.setString(pseudoName);
+AbstractCompiler.reportCodeChange();
+empty line
+if (!GraphNode.getValue().equals(Var) && Node.isVar()) {
+        removeVarDeclaration(Node);
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.PureFunctionIdentifier <445, 449>
+if (value != null && !NodeUtil.evaluatesToLocalValue(value)) {
+                Scope scope = traversal.getScope();
+                Var var = scope.getVar(node.getString());
+                sideEffectInfo.blacklistLocal(var);
+              }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PureFunctionIdentifier <445, 449>
+if (Node != null && !NodeUtil.evaluatesToLocalValue(Node)) {
+                Scope scope = NodeTraversal.getScope();
+                Var var = scope.getVar(Node.getString());
+                FunctionInformation.blacklistLocal(var);
+              }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.PureFunctionIdentifier <445, 449>
+if (Node != null && !NodeUtil.evaluatesToLocalValue(Node)) {
+                Scope scope = NodeTraversal.getScope();
+                Var var = scope.getVar(Node.getString());
+                FunctionInformation.blacklistLocal(var);
+              }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.PureFunctionIdentifier <489, 509>
+for (Iterator<Var> i = t.getScope().getVars(); i.hasNext();) {
+        Var v = i.next();
+        boolean localVar = false;
+        // Parameters and catch values come can from other scopes.
+        if (v.getParentNode().isVar()) {
+          // TODO(johnlenz): create a useful parameter list
+          sideEffectInfo.knownLocals.add(v.getName());
+          localVar = true;
+        }
+
+        // Take care of locals that might have been tainted.
+        if (!localVar || sideEffectInfo.blacklisted.contains(v)) {
+          if (sideEffectInfo.taintedLocals.contains(v)) {
+            // If the function has global side-effects
+            // don't bother with the local side-effects.
+            sideEffectInfo.setTaintsUnknown();
+            sideEffectInfo.resetLocalVars();
+            break;
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PureFunctionIdentifier <489, 509>
+for (Iterator<Var> Iterator = NodeTraversal.getScope().getVars(); Iterator.hasNext();) {
+        Var v = Iterator.next();
+        boolean localVar = false;
+        // Parameters and catch values come can from other scopes.
+        if (v.getParentNode().isVar()) {
+          // TODO(johnlenz): create a useful parameter list
+          FunctionInformation.knownLocals.add(v.getName());
+          localVar = true;
+        }
+
+        // Take care of locals that might have been tainted.
+        if (!localVar || FunctionInformation.blacklisted.contains(v)) {
+          if (FunctionInformation.taintedLocals.contains(v)) {
+            // If the function has global side-effects
+            // don't bother with the local side-effects.
+            FunctionInformation.setTaintsUnknown();
+            FunctionInformation.resetLocalVars();
+            break;
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.PureFunctionIdentifier <489, 509>
+for (Iterator<Var> Iterator = NodeTraversal.getScope().getVars(); Iterator.hasNext();) {
+        Var v = Iterator.next();
+        boolean localVar = false;
+        // Parameters and catch values come can from other scopes.
+        if (v.getParentNode().isVar()) {
+          // TODO(johnlenz): create a useful parameter list
+          FunctionInformation.knownLocals.add(v.getName());
+          localVar = true;
+        }
+
+        // Take care of locals that might have been tainted.
+        if (!localVar || FunctionInformation.blacklisted.contains(v)) {
+          if (FunctionInformation.taintedLocals.contains(v)) {
+            // If the function has global side-effects
+            // don't bother with the local side-effects.
+            FunctionInformation.setTaintsUnknown();
+            FunctionInformation.resetLocalVars();
+            break;
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.TypeCheck <1894, 1903>
+if (!valueType.isEnumType()) {
+      return;
+    }
+empty line
+EnumType valueEnumType = valueType.toMaybeEnumType();
+JSType valueEnumPrimitiveType =
+        valueEnumType.getElementsType().getPrimitiveType();
+validator.expectCanAssignTo(t, value, valueEnumPrimitiveType,
+        declInfo.getEnumParameterType().evaluate(t.getScope(), typeRegistry),
+        "incompatible enum element types");
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypeCheck <1894, 1903>
+if (!JSType.isEnumType()) {
+      return;
+    }
+empty line
+EnumType PrototypeObjectType = JSType.toMaybeEnumType();
+JSType JSType =
+        PrototypeObjectType.getElementsType().getPrimitiveType();
+TypeValidator.expectCanAssignTo(NodeTraversal, Node, JSType,
+        JSDocInfo.getEnumParameterType().evaluate(NodeTraversal.getScope(), JSTypeRegistry),
+        "incompatible enum element types");
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.TypeCheck <1894, 1903>
+if (!JSType.isEnumType()) {
+      return;
+    }
+empty line
+EnumType null = JSType.toMaybeEnumType();
+JSType JSType =
+        null.getElementsType().getPrimitiveType();
+TypeValidator.expectCanAssignTo(NodeTraversal, Node, JSType,
+        JSDocInfo.getEnumParameterType().evaluate(NodeTraversal.getScope(), JSTypeRegistry),
+        "incompatible enum element types");
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.ProcessCommonJSModules <269, 284>
+if (n.isName()) {
+        String name = n.getString();
+        if (suffix.equals(name)) {
+          return;
+        }
+        if (EXPORTS.equals(name)) {
+          n.setString(suffix);
+          n.putProp(Node.ORIGINALNAME_PROP, EXPORTS);
+        } else {
+          Scope.Var var = t.getScope().getVar(name);
+          if (var != null && var.isGlobal()) {
+            n.setString(name + "$$" + suffix);
+            n.putProp(Node.ORIGINALNAME_PROP, name);
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ProcessCommonJSModules <269, 284>
+if (Node.isName()) {
+        String name = Node.getString();
+        if (StringVar.equals(name)) {
+          return;
+        }
+        if (EXPORTS.equals(name)) {
+          Node.setString(StringVar);
+          Node.putProp(Node.ORIGINALNAME_PROP, StringVar);
+        } else {
+          Scope.Var var = NodeTraversal.getScope().getVar(name);
+          if (var != null && var.isGlobal()) {
+            Node.setString(name + "$$" + StringVar);
+            Node.putProp(Node.ORIGINALNAME_PROP, name);
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ProcessCommonJSModules <269, 284>
+if (Node.isName()) {
+        String name = Node.getString();
+        if (suffix.equals(name)) {
+          return;
+        }
+        if (EXPORTS.equals(name)) {
+          Node.setString(suffix);
+          Node.putProp(Node.ORIGINALNAME_PROP, EXPORTS);
+        } else {
+          Scope.Var var = NodeTraversal.getScope().getVar(name);
+          if (var != null && var.isGlobal()) {
+            Node.setString(name + "$$" + suffix);
+            Node.putProp(Node.ORIGINALNAME_PROP, name);
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.InlineObjectLiterals <85, 106>
+for (Iterator<Var> it = t.getScope().getVars(); it.hasNext();) {
+        Var v = it.next();
+
+        if (isVarInlineForbidden(v)) {
+          continue;
+        }
+
+        ReferenceCollection referenceInfo = referenceMap.getReferences(v);
+
+        if (isInlinableObject(referenceInfo.references)) {
+          // Blacklist the object itself, as well as any other values
+          // that it refers to, since they will have been moved around.
+          staleVars.add(v);
+
+          Reference declaration = referenceInfo.references.get(0);
+          Reference init = referenceInfo.getInitializingReference();
+
+          // Split up the object into individual variables if the object
+          // is never referenced directly in full.
+          splitObject(v, declaration, init, referenceInfo);
+        }
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.InlineObjectLiterals <85, 106>
+for (Iterator<Var> Iterator = NodeTraversal.getScope().getVars(); Iterator.hasNext();) {
+        Var v = Iterator.next();
+
+        if (isVarInlineForbidden(v)) {
+          continue;
+        }
+
+        ReferenceCollection referenceInfo = ReferenceMap.getReferences(v);
+
+        if (isInlinableObject(referenceInfo.references)) {
+          // Blacklist the object itself, as well as any other values
+          // that it refers to, since they will have been moved around.
+          Set.add(v);
+
+          Reference declaration = referenceInfo.references.get(0);
+          Reference init = referenceInfo.getInitializingReference();
+
+          // Split up the object into individual variables if the object
+          // is never referenced directly in full.
+          splitObject(v, declaration, init, referenceInfo);
+        }
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.InlineObjectLiterals <85, 106>
+for (Iterator<Var> Iterator = NodeTraversal.getScope().getVars(); Iterator.hasNext();) {
+        Var v = Iterator.next();
+
+        if (isVarInlineForbidden(v)) {
+          continue;
+        }
+
+        ReferenceCollection referenceInfo = ReferenceMap.getReferences(v);
+
+        if (isInlinableObject(referenceInfo.references)) {
+          // Blacklist the object itself, as well as any other values
+          // that it refers to, since they will have been moved around.
+          Set.add(v);
+
+          Reference declaration = referenceInfo.references.get(0);
+          Reference init = referenceInfo.getInitializingReference();
+
+          // Split up the object into individual variables if the object
+          // is never referenced directly in full.
+          splitObject(v, declaration, init, referenceInfo);
+        }
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.RescopeGlobalSymbols <286, 299>
+@Override
+    public void visit(NodeTraversal t, Node n, Node parent) {
+      if (!n.isName()) {
+        return;
+      }
+      String name = n.getString();
+      Scope.Var var = t.getScope().getVar(name);
+      if (name.length() > 0 && (var == null || var.isExtern()) &&
+          !globalSymbolNamespace.equals(name) &&
+          !SPECIAL_EXTERNS.contains(name)) {
+        parent.replaceChild(n, IR.getprop(IR.name(WINDOW), IR.string(name))
+            .srcrefTree(n));
+        compiler.reportCodeChange();
+      }
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RescopeGlobalSymbols <286, 299>
+@Override
+    public void visit(NodeTraversal t, Node n, Node parent) {
+      if (!Node.isName()) {
+        return;
+      }
+      String name = Node.getString();
+      Scope.Var var = NodeTraversal.getScope().getVar(name);
+      if (name.length() > 0 && (var == null || var.isExtern()) &&
+          !globalSymbolNamespace.equals(name) &&
+          !SPECIAL_EXTERNS.contains(name)) {
+        Node.replaceChild(Node, IR.getprop(IR.name(WINDOW), IR.string(name))
+            .srcrefTree(Node));
+        compiler.reportCodeChange();
+      }
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.RescopeGlobalSymbols <286, 299>
+@Override
+    public void visit(NodeTraversal t, Node n, Node parent) {
+      if (!Node.isName()) {
+        return;
+      }
+      String name = Node.getString();
+      Scope.Var var = NodeTraversal.getScope().getVar(name);
+      if (name.length() > 0 && (var == null || var.isExtern()) &&
+          !globalSymbolNamespace.equals(name) &&
+          !SPECIAL_EXTERNS.contains(name)) {
+        Node.replaceChild(Node, IR.getprop(IR.name(WINDOW), IR.string(name))
+            .srcrefTree(Node));
+        compiler.reportCodeChange();
+      }
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.TypedScopeCreator <1890, 1897>
+for (Multiset.Entry<String> entry :
+                 contents.getAssignedNameCounts().entrySet()) {
+          Var v = scope.getVar(entry.getElement());
+          Preconditions.checkState(v.getScope() == scope);
+          if (entry.getCount() == 1) {
+            v.markAssignedExactlyOnce();
+          }
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.DisambiguateProperties <407, 424>
+if (n.isGetProp()) {
+        String field = n.getLastChild().getString();
+        T type = typeSystem.getType(getScope(), n.getFirstChild(), field);
+        Property prop = getProperty(field);
+        if (typeSystem.isInvalidatingType(type)) {
+          prop.invalidate();
+        } else {
+          prop.addTypeToSkip(type);
+
+          // If this is a prototype property, then we want to skip assignments
+          // to the instance type as well.  These assignments are not usually
+          // seen in the extern code itself, so we must handle them here.
+          if ((type = typeSystem.getInstanceFromPrototype(type)) != null) {
+            prop.getTypes().add(type);
+            prop.typesToSkip.add(type);
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.TypeCheck <1004, 1015>
+if (lvalue.isGetProp()) {
+      Node obj = lvalue.getFirstChild();
+      Node prop = lvalue.getLastChild();
+      JSType objType = getJSType(obj);
+      String pname = prop.getString();
+      if (objType.isStruct() && !objType.hasProperty(pname)) {
+        if (!(obj.isThis() &&
+              getJSType(t.getScope().getRootNode()).isConstructor())) {
+          report(t, prop, ILLEGAL_PROPERTY_CREATION);
+        }
+      }
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypeCheck <1004, 1015>
+if (Node.isGetProp()) {
+      Node obj = Node.getFirstChild();
+      Node prop = Node.getLastChild();
+      JSType objType = getJSType(obj);
+      String pname = prop.getString();
+      if (objType.isStruct() && !objType.hasProperty(pname)) {
+        if (!(obj.isThis() &&
+              getJSType(NodeTraversal.getScope().getRootNode()).isConstructor())) {
+          report(NodeTraversal, prop, DiagnosticType);
+        }
+      }
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.TypeCheck <1004, 1015>
+if (Node.isGetProp()) {
+      Node obj = Node.getFirstChild();
+      Node prop = Node.getLastChild();
+      JSType objType = getJSType(obj);
+      String pname = prop.getString();
+      if (objType.isStruct() && !objType.hasProperty(pname)) {
+        if (!(obj.isThis() &&
+              getJSType(NodeTraversal.getScope().getRootNode()).isConstructor())) {
+          report(NodeTraversal, prop, DiagnosticType);
+        }
+      }
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.ChainCalls <68, 82>
+@Override
+    public void enterScope(NodeTraversal t) {
+      ControlFlowGraph<Node> cfg = t.getControlFlowGraph();
+
+      for (DiGraphEdge<Node, Branch> s : cfg.getImplicitReturn().getInEdges()) {
+        Node exitNode = s.getSource().getValue();
+        if (!exitNode.isReturn() ||
+            exitNode.getFirstChild() == null ||
+            !exitNode.getFirstChild().isThis()) {
+          badFunctionNodes.add(t.getScopeRoot());
+          return;
+        }
+      }
+
+      goodFunctionNodes.add(t.getScopeRoot());
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ChainCalls <68, 82>
+@Override
+    public void enterScope(NodeTraversal t) {
+      ControlFlowGraph<Node> cfg = NodeTraversal.getControlFlowGraph();
+
+      for (DiGraphEdge<Node, Branch> s : cfg.getImplicitReturn().getInEdges()) {
+        Node exitNode = s.getSource().getValue();
+        if (!exitNode.isReturn() ||
+            exitNode.getFirstChild() == null ||
+            !exitNode.getFirstChild().isThis()) {
+          badFunctionNodes.add(NodeTraversal.getScopeRoot());
+          return;
+        }
+      }
+
+      goodFunctionNodes.add(NodeTraversal.getScopeRoot());
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ChainCalls <68, 82>
+@Override
+    public void enterScope(NodeTraversal t) {
+      ControlFlowGraph<Node> cfg = NodeTraversal.getControlFlowGraph();
+
+      for (DiGraphEdge<Node, Branch> s : cfg.getImplicitReturn().getInEdges()) {
+        Node exitNode = s.getSource().getValue();
+        if (!exitNode.isReturn() ||
+            exitNode.getFirstChild() == null ||
+            !exitNode.getFirstChild().isThis()) {
+          badFunctionNodes.add(NodeTraversal.getScopeRoot());
+          return;
+        }
+      }
+
+      goodFunctionNodes.add(NodeTraversal.getScopeRoot());
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.TypeCheck <444, 447>
+case Token.FUNCTION:
+// normal type checking
+final Scope outerScope = t.getScope();
+final String functionPrivateName = n.getFirstChild().getString();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypeCheck <444, 447>
+case Token.FUNCTION:
+// normal type checking
+final Scope Scope = NodeTraversal.getScope();
+final String StringVar = Node.getFirstChild().getString();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.TypeCheck <444, 447>
+case Token.FUNCTION:
+// normal type checking
+final Scope Scope = NodeTraversal.getScope();
+final String functionPrivateName = Node.getFirstChild().getString();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.UnreachableCodeElimination <61, 78>
+@Override
+  public void exitScope(NodeTraversal t) {
+    Scope scope = t.getScope();
+
+    // Computes the control flow graph.
+    ControlFlowAnalysis cfa = new ControlFlowAnalysis(compiler, false, false);
+    cfa.process(null, scope.getRootNode());
+    ControlFlowGraph<Node> cfg = cfa.getCfg();
+
+    new GraphReachability<Node, ControlFlowGraph.Branch>(cfg)
+        .compute(cfg.getEntry().getValue());
+
+    Node root = scope.getRootNode();
+    if (scope.isLocal()) {
+      root = root.getLastChild();
+    }
+    NodeTraversal.traverse(
+        compiler, root, new EliminationPass(cfg));
+  }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.UnreachableCodeElimination <61, 78>
+@Override
+  public void exitScope(NodeTraversal t) {
+    Scope scope = NodeTraversal.getScope();
+
+    // Computes the control flow graph.
+    ControlFlowAnalysis cfa = new ControlFlowAnalysis(AbstractCompiler, false, false);
+    cfa.process(null, scope.getRootNode());
+    ControlFlowGraph<Node> cfg = cfa.getCfg();
+
+    new GraphReachability<Node, ControlFlowGraph.Branch>(cfg)
+        .compute(cfg.getEntry().getValue());
+
+    Node root = scope.getRootNode();
+    if (scope.isLocal()) {
+      root = root.getLastChild();
+    }
+    NodeTraversal.traverse(
+        AbstractCompiler, root, new EliminationPass(cfg));
+  }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.UnreachableCodeElimination <61, 78>
+@Override
+  public void exitScope(NodeTraversal t) {
+    Scope scope = NodeTraversal.getScope();
+
+    // Computes the control flow graph.
+    ControlFlowAnalysis cfa = new ControlFlowAnalysis(AbstractCompiler, false, false);
+    cfa.process(null, scope.getRootNode());
+    ControlFlowGraph<Node> cfg = cfa.getCfg();
+
+    new GraphReachability<Node, ControlFlowGraph.Branch>(cfg)
+        .compute(cfg.getEntry().getValue());
+
+    Node root = scope.getRootNode();
+    if (scope.isLocal()) {
+      root = root.getLastChild();
+    }
+    NodeTraversal.traverse(
+        AbstractCompiler, root, new EliminationPass(cfg));
+  }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.CoalesceVariableNames <109, 137>
+@Override
+  public void enterScope(NodeTraversal t) {
+    Scope scope = t.getScope();
+    if (!shouldOptimizeScope(scope)) {
+      return;
+    }
+
+    ControlFlowGraph<Node> cfg = t.getControlFlowGraph();
+    LiveVariablesAnalysis liveness =
+        new LiveVariablesAnalysis(cfg, scope, compiler);
+    // If the function has exactly 2 params, mark them as escaped. This is
+    // a work-around for an IE bug where it throws an exception if you
+    // write to the parameters of the callback in a sort(). See:
+    // http://code.google.com/p/closure-compiler/issues/detail?id=58
+    if (scope.getRootNode().getFirstChild().getNext().getChildCount() == 2) {
+      liveness.markAllParametersEscaped();
+    }
+    liveness.analyze();
+
+    UndiGraph<Var, Void> interferenceGraph =
+        computeVariableNamesInterferenceGraph(
+            t, cfg, liveness.getEscapedLocals());
+
+    GraphColoring<Var, Void> coloring =
+        new GreedyGraphColoring<Var, Void>(interferenceGraph,
+            coloringTieBreaker);
+
+    coloring.color();
+    colorings.push(coloring);
+  }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CoalesceVariableNames <109, 137>
+@Override
+  public void enterScope(NodeTraversal t) {
+    Scope scope = NodeTraversal.getScope();
+    if (!shouldOptimizeScope(scope)) {
+      return;
+    }
+
+    ControlFlowGraph<Node> cfg = NodeTraversal.getControlFlowGraph();
+    LiveVariablesAnalysis liveness =
+        new LiveVariablesAnalysis(cfg, scope, AbstractCompiler);
+    // If the function has exactly 2 params, mark them as escaped. This is
+    // a work-around for an IE bug where it throws an exception if you
+    // write to the parameters of the callback in a sort(). See:
+    // http://code.google.com/p/closure-compiler/issues/detail?id=58
+    if (scope.getRootNode().getFirstChild().getNext().getChildCount() == 2) {
+      liveness.markAllParametersEscaped();
+    }
+    liveness.analyze();
+
+    UndiGraph<Var, Void> interferenceGraph =
+        computeVariableNamesInterferenceGraph(
+            NodeTraversal, cfg, liveness.getEscapedLocals());
+
+    GraphColoring<Var, Void> coloring =
+        new GreedyGraphColoring<Var, Void>(interferenceGraph,
+            Comparator);
+
+    coloring.color();
+    Deque.push(coloring);
+  }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.CoalesceVariableNames <109, 137>
+@Override
+  public void enterScope(NodeTraversal t) {
+    Scope scope = NodeTraversal.getScope();
+    if (!shouldOptimizeScope(scope)) {
+      return;
+    }
+
+    ControlFlowGraph<Node> cfg = NodeTraversal.getControlFlowGraph();
+    LiveVariablesAnalysis liveness =
+        new LiveVariablesAnalysis(cfg, scope, AbstractCompiler);
+    // If the function has exactly 2 params, mark them as escaped. This is
+    // a work-around for an IE bug where it throws an exception if you
+    // write to the parameters of the callback in a sort(). See:
+    // http://code.google.com/p/closure-compiler/issues/detail?id=58
+    if (scope.getRootNode().getFirstChild().getNext().getChildCount() == 2) {
+      liveness.markAllParametersEscaped();
+    }
+    liveness.analyze();
+
+    UndiGraph<Var, Void> interferenceGraph =
+        computeVariableNamesInterferenceGraph(
+            NodeTraversal, cfg, liveness.getEscapedLocals());
+
+    GraphColoring<Var, Void> coloring =
+        new GreedyGraphColoring<Var, Void>(interferenceGraph,
+            Comparator);
+
+    coloring.color();
+    Deque.push(coloring);
+  }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.CheckMissingReturn <109, 113>
+if (!test.allPathsSatisfyPredicate()) {
+      compiler.report(
+          t.makeError(t.getScopeRoot(), level,
+              MISSING_RETURN_STATEMENT, returnType.toString()));
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CheckMissingReturn <109, 113>
+if (!CheckPathsBetweenNodes.allPathsSatisfyPredicate()) {
+      AbstractCompiler.report(
+          NodeTraversal.makeError(NodeTraversal.getScopeRoot(), null,
+              DiagnosticType, JSType.toString()));
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.CheckMissingReturn <109, 113>
+if (!CheckPathsBetweenNodes.allPathsSatisfyPredicate()) {
+      AbstractCompiler.report(
+          NodeTraversal.makeError(NodeTraversal.getScopeRoot(), null,
+              DiagnosticType, JSType.toString()));
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.TypedScopeCreator <2018, 2021>
+if (!t.inGlobalScope()) {
+        Node n = t.getScopeRoot();
+        data.put(n, new AstFunctionContents(n));
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypedScopeCreator <2018, 2021>
+if (!NodeTraversal.inGlobalScope()) {
+        Node n = NodeTraversal.getScopeRoot();
+        Map.put(n, new AstFunctionContents(n));
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.TypedScopeCreator <2018, 2021>
+if (!NodeTraversal.inGlobalScope()) {
+        Node n = NodeTraversal.getScopeRoot();
+        Map.put(n, new AstFunctionContents(n));
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.SymbolTable <1521, 1531>
+if (n.getJSDocInfo() != null) {
+
+        // Find references in the JSDocInfo.
+        JSDocInfo info = n.getJSDocInfo();
+        docInfos.add(info);
+
+        for (Node typeAst : info.getTypeNodes()) {
+          SymbolScope scope = scopes.get(t.getScopeRoot());
+          visitTypeNode(scope == null ? globalScope : scope, typeAst);
+        }
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.SymbolTable <1521, 1531>
+if (Node.getJSDocInfo() != null) {
+
+        // Find references in the JSDocInfo.
+        JSDocInfo info = Node.getJSDocInfo();
+        docInfos.add(info);
+
+        for (Node typeAst : info.getTypeNodes()) {
+          SymbolScope scope = scopes.get(NodeTraversal.getScopeRoot());
+          visitTypeNode(scope == null ? globalScope : scope, typeAst);
+        }
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.SymbolTable <1521, 1531>
+if (Node.getJSDocInfo() != null) {
+
+        // Find references in the JSDocInfo.
+        JSDocInfo info = Node.getJSDocInfo();
+        docInfos.add(info);
+
+        for (Node typeAst : info.getTypeNodes()) {
+          SymbolScope scope = scopes.get(NodeTraversal.getScopeRoot());
+          visitTypeNode(scope == null ? globalScope : scope, typeAst);
+        }
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.DisambiguateProperties <382, 386>
+if (t.inGlobalScope()) {
+        scopes.push(typeSystem.getRootScope());
+      } else {
+        scopes.push(typeSystem.getFunctionScope(t.getScopeRoot()));
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.DisambiguateProperties <382, 386>
+if (NodeTraversal.inGlobalScope()) {
+        Stack.push(typeSystem.getRootScope());
+      } else {
+        Stack.push(typeSystem.getFunctionScope(NodeTraversal.getScopeRoot()));
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.DisambiguateProperties <382, 386>
+if (NodeTraversal.inGlobalScope()) {
+        Stack.push(typeSystem.getRootScope());
+      } else {
+        Stack.push(typeSystem.getFunctionScope(NodeTraversal.getScopeRoot()));
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.DisambiguateProperties <488, 508>
+while (child != null) {
+        // Maybe STRING, GET, SET
+
+        // We should never see a mix of numbers and strings.
+        String name = child.getString();
+        T type = typeSystem.getType(getScope(), n, name);
+
+        Property prop = getProperty(name);
+        if (!prop.scheduleRenaming(child,
+                                   processProperty(t, prop, type, null))) {
+          // TODO(user): It doesn't look like the user can do much in this
+          // case right now.
+          if (propertiesToErrorFor.containsKey(name)) {
+            compiler.report(JSError.make(
+                t.getSourceName(), child, propertiesToErrorFor.get(name),
+                Warnings.INVALIDATION, name,
+                (type == null ? "null" : type.toString()), n.toString(), ""));
+          }
+        }
+        child = child.getNext();
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <76, 96>
+@Override
+  public void enterScope(NodeTraversal t) {
+    Node declarationRoot = t.getScopeRoot();
+    Renamer renamer;
+    if (nameStack.isEmpty()) {
+      // If the contextual renamer is being used, the starting context can not
+      // be a function.
+      Preconditions.checkState(
+          !declarationRoot.isFunction() ||
+          !(rootRenamer instanceof ContextualRenamer));
+      Preconditions.checkState(t.inGlobalScope());
+      renamer = rootRenamer;
+    } else {
+      renamer = nameStack.peek().forChildScope();
+    }
+
+    if (!declarationRoot.isFunction()) {
+      // Add the block declarations
+      findDeclaredNames(declarationRoot, null, renamer);
+    }
+    nameStack.push(renamer);
+  }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <76, 96>
+@Override
+  public void enterScope(NodeTraversal t) {
+    Node declarationRoot = NodeTraversal.getScopeRoot();
+    Renamer renamer;
+    if (Deque.isEmpty()) {
+      // If the contextual renamer is being used, the starting context can not
+      // be a function.
+      Preconditions.checkState(
+          !declarationRoot.isFunction() ||
+          !(Renamer instanceof ContextualRenamer));
+      Preconditions.checkState(NodeTraversal.inGlobalScope());
+      renamer = Renamer;
+    } else {
+      renamer = Deque.peek().forChildScope();
+    }
+
+    if (!declarationRoot.isFunction()) {
+      // Add the block declarations
+      findDeclaredNames(declarationRoot, null, renamer);
+    }
+    Deque.push(renamer);
+  }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <76, 96>
+@Override
+  public void enterScope(NodeTraversal t) {
+    Node declarationRoot = NodeTraversal.getScopeRoot();
+    Renamer renamer;
+    if (Deque.isEmpty()) {
+      // If the contextual renamer is being used, the starting context can not
+      // be a function.
+      Preconditions.checkState(
+          !declarationRoot.isFunction() ||
+          !(Renamer instanceof ContextualRenamer));
+      Preconditions.checkState(NodeTraversal.inGlobalScope());
+      renamer = Renamer;
+    } else {
+      renamer = Deque.peek().forChildScope();
+    }
+
+    if (!declarationRoot.isFunction()) {
+      // Add the block declarations
+      findDeclaredNames(declarationRoot, null, renamer);
+    }
+    Deque.push(renamer);
+  }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.VarCheck <252, 256>
+default:
+t.report(n, NAME_REFERENCE_IN_EXTERNS_ERROR, n.getString());
+empty line
+Scope scope = t.getScope();
+Scope.Var var = scope.getVar(n.getString());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.VarCheck <252, 256>
+default:
+NodeTraversal.report(Node, NAME_REFERENCE_IN_EXTERNS_ERROR, Node.getString());
+empty line
+Scope Scope = NodeTraversal.getScope();
+Scope.Var Var = Scope.getVar(Node.getString());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.VarCheck <252, 256>
+default:
+NodeTraversal.report(Node, NAME_REFERENCE_IN_EXTERNS_ERROR, Node.getString());
+empty line
+Scope Scope = NodeTraversal.getScope();
+Scope.Var Var = Scope.getVar(Node.getString());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.FunctionInjector <631, 651>
+if (!t.inGlobalScope()) {
+      Node fnCaller = t.getScopeRoot();
+      Node fnCallerBody = fnCaller.getLastChild();
+
+      // Don't allow any new vars into a scope that contains eval or one
+      // that contains functions (excluding the function being inlined).
+      Predicate<Node> match = new Predicate<Node>(){
+        @Override
+        public boolean apply(Node n) {
+          if (n.isName()) {
+            return n.getString().equals("eval");
+          }
+          if (!assumeMinimumCapture && n.isFunction()) {
+            return n != fnNode;
+          }
+          return false;
+        }
+      };
+      forbidTemps = NodeUtil.has(fnCallerBody,
+          match, NodeUtil.MATCH_NOT_FUNCTION);
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FunctionInjector <631, 651>
+if (!NodeTraversal.inGlobalScope()) {
+      Node fnCaller = NodeTraversal.getScopeRoot();
+      Node fnCallerBody = fnCaller.getLastChild();
+
+      // Don't allow any new vars into a scope that contains eval or one
+      // that contains functions (excluding the function being inlined).
+      Predicate<Node> match = new Predicate<Node>(){
+        @Override
+        public boolean apply(Node n) {
+          if (n.isName()) {
+            return n.getString().equals("eval");
+          }
+          if (!assumeMinimumCapture && n.isFunction()) {
+            return n != fnNode;
+          }
+          return false;
+        }
+      };
+      booleanVar = NodeUtil.has(fnCallerBody,
+          match, NodeUtil.MATCH_NOT_FUNCTION);
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.FunctionInjector <631, 651>
+if (!NodeTraversal.inGlobalScope()) {
+      Node fnCaller = NodeTraversal.getScopeRoot();
+      Node fnCallerBody = fnCaller.getLastChild();
+
+      // Don't allow any new vars into a scope that contains eval or one
+      // that contains functions (excluding the function being inlined).
+      Predicate<Node> match = new Predicate<Node>(){
+        @Override
+        public boolean apply(Node n) {
+          if (n.isName()) {
+            return n.getString().equals("eval");
+          }
+          if (!assumeMinimumCapture && n.isFunction()) {
+            return n != fnNode;
+          }
+          return false;
+        }
+      };
+      forbidTemps = NodeUtil.has(fnCallerBody,
+          match, NodeUtil.MATCH_NOT_FUNCTION);
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.SymbolTable <1613, 1620>
+if (scope.isLexicalScope() || scope.isDocScope()) {
+      return scope.getScopeDepth();
+    } else {
+      Preconditions.checkState(scope.isPropertyScope());
+      Symbol sym = scope.getSymbolForScope();
+      Preconditions.checkNotNull(sym);
+      return getLexicalScopeDepth(getScope(sym)) + 1;
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.TightenTypes <664, 677>
+if (lhs.isGetProp()) {
+              ConcreteType type = inferConcreteType(getTopScope(),
+                  lhs.getFirstChild());
+              scope = (ConcreteScope) type.getScope();
+            } else {
+              scope = getTopScope();
+            }
+empty line
+if (scope == null) break;
+empty line
+ConcreteType type = inferConcreteType(getTopScope(), n);
+if (type.isNone() || type.isAll()) {
+              break;
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.ScopedAliases <358, 369>
+if (hasNamespaceShadows) {
+        MakeDeclaredNamesUnique.Renamer renamer =
+            new MakeDeclaredNamesUnique.WhitelistedRenamer(
+                new MakeDeclaredNamesUnique.ContextualRenamer(),
+                forbiddenLocals);
+        for (String s : forbiddenLocals) {
+          renamer.addDeclaredName(s);
+        }
+        MakeDeclaredNamesUnique uniquifier =
+            new MakeDeclaredNamesUnique(renamer);
+        NodeTraversal.traverse(compiler, t.getScopeRoot(), uniquifier);
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ScopedAliases <358, 369>
+if (booleanVar) {
+        MakeDeclaredNamesUnique.Renamer renamer =
+            new MakeDeclaredNamesUnique.WhitelistedRenamer(
+                new MakeDeclaredNamesUnique.ContextualRenamer(),
+                Set);
+        for (String s : Set) {
+          renamer.addDeclaredName(s);
+        }
+        MakeDeclaredNamesUnique uniquifier =
+            new MakeDeclaredNamesUnique(renamer);
+        NodeTraversal.traverse(compiler, NodeTraversal.getScopeRoot(), uniquifier);
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ScopedAliases <358, 369>
+if (hasNamespaceShadows) {
+        MakeDeclaredNamesUnique.Renamer renamer =
+            new MakeDeclaredNamesUnique.WhitelistedRenamer(
+                new MakeDeclaredNamesUnique.ContextualRenamer(),
+                Set);
+        for (String s : Set) {
+          renamer.addDeclaredName(s);
+        }
+        MakeDeclaredNamesUnique uniquifier =
+            new MakeDeclaredNamesUnique(renamer);
+        NodeTraversal.traverse(compiler, NodeTraversal.getScopeRoot(), uniquifier);
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.TightenTypes <621, 639>
+if (inExterns) {
+            ConcreteType type = inferConcreteType(getTopScope(), n);
+            // We only need to set a type if one hasn't been assigned by
+            // something else, e.g. an ASSIGN node.
+            if (type.isNone()) {
+              ConcreteScope scope =
+                  (ConcreteScope) inferConcreteType(getTopScope(),
+                      n.getFirstChild()).getScope();
+              if (scope != null) {
+                type = createType(n.getJSType());
+                if (type.isNone() || type.isAll()) {
+                  break;
+                }
+                type = createUnionWithSubTypes(type);
+                Node nameNode = n.getLastChild();
+                scope.declareSlot(nameNode.getString(), n, type);
+              }
+            }
+          }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.TightenTypes <679, 696>
+if (type.isFunction()) {
+              JSType lhsType = lhs.getJSType();
+              if (lhsType == null) {
+                break;
+              }
+              FunctionType funType =
+                  lhsType.restrictByNotNullOrUndefined().toMaybeFunctionType();
+              if (funType == null) {
+                break;
+              }
+              ConcreteType retType = createType(funType.getReturnType());
+              retType = createUnionWithSubTypes(retType);
+              ConcreteType newret = type.toFunction().getReturnSlot()
+                  .getType().unionWith(retType);
+              ((ConcreteScope) type.getScope()).declareSlot(
+                  ConcreteFunctionType.RETURN_SLOT_NAME, n, newret);
+            }
+scope.declareSlot(lhs.getLastChild().getString(), n, type);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.AnalyzePrototypeProperties <204, 226>
+if (n.isFunction()) {
+        String propName = getPrototypePropertyNameFromRValue(n);
+        if (propName != null) {
+          symbolStack.push(
+              new NameContext(
+                  getNameInfoForName(propName, PROPERTY),
+                  t.getScope()));
+        } else if (isGlobalFunctionDeclaration(t, n)) {
+          Node parent = n.getParent();
+          String name = parent.isName() ?
+              parent.getString() /* VAR */ :
+              n.getFirstChild().getString() /* named function */;
+          symbolStack.push(
+              new NameContext(getNameInfoForName(name, VAR), t.getScope()));
+        } else {
+          // NOTE(nicksantos): We use the same anonymous node for all
+          // functions that do not have reasonable names. I can't remember
+          // at the moment why we do this. I think it's because anonymous
+          // nodes can never have in-edges. They're just there as a placeholder
+          // for scope information, and do not matter in the edge propagation.
+          symbolStack.push(new NameContext(anonymousNode, t.getScope()));
+        }
+      } else {
+        Preconditions.checkState(t.inGlobalScope());
+        symbolStack.push(new NameContext(globalNode, t.getScope()));
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.AnalyzePrototypeProperties <204, 226>
+if (Node.isFunction()) {
+        String propName = getPrototypePropertyNameFromRValue(Node);
+        if (propName != null) {
+          Stack.push(
+              new NameContext(
+                  getNameInfoForName(propName, PROPERTY),
+                  NodeTraversal.getScope()));
+        } else if (isGlobalFunctionDeclaration(NodeTraversal, Node)) {
+          Node parent = Node.getParent();
+          String name = parent.isName() ?
+              parent.getString() /* VAR */ :
+              Node.getFirstChild().getString() /* named function */;
+          Stack.push(
+              new NameContext(getNameInfoForName(name, VAR), NodeTraversal.getScope()));
+        } else {
+          // NOTE(nicksantos): We use the same anonymous node for all
+          // functions that do not have reasonable names. I can't remember
+          // at the moment why we do AnalyzePrototypeProperties. I think it's because anonymous
+          // nodes can never have in-edges. They're just there as a placeholder
+          // for scope information, and do not matter in the edge propagation.
+          Stack.push(new NameContext(anonymousNode, NodeTraversal.getScope()));
+        }
+      } else {
+        Preconditions.checkState(NodeTraversal.inGlobalScope());
+        Stack.push(new NameContext(globalNode, NodeTraversal.getScope()));
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.AnalyzePrototypeProperties <204, 226>
+if (Node.isFunction()) {
+        String propName = getPrototypePropertyNameFromRValue(Node);
+        if (propName != null) {
+          Stack.push(
+              new NameContext(
+                  getNameInfoForName(propName, PROPERTY),
+                  NodeTraversal.getScope()));
+        } else if (isGlobalFunctionDeclaration(NodeTraversal, Node)) {
+          Node parent = Node.getParent();
+          String name = parent.isName() ?
+              parent.getString() /* VAR */ :
+              Node.getFirstChild().getString() /* named function */;
+          Stack.push(
+              new NameContext(getNameInfoForName(name, VAR), NodeTraversal.getScope()));
+        } else {
+          // NOTE(nicksantos): We use the same anonymous node for all
+          // functions that do not have reasonable names. I can't remember
+          // at the moment why we do AnalyzePrototypeProperties. I think it's because anonymous
+          // nodes can never have in-edges. They're just there as a placeholder
+          // for scope information, and do not matter in the edge propagation.
+          Stack.push(new NameContext(anonymousNode, NodeTraversal.getScope()));
+        }
+      } else {
+        Preconditions.checkState(NodeTraversal.inGlobalScope());
+        Stack.push(new NameContext(globalNode, NodeTraversal.getScope()));
+      }
+

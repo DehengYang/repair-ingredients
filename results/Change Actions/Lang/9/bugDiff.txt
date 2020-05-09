@@ -1,0 +1,14 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_9/src/main/java/org/apache/commons/lang3/time/FastDateParser.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_9/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_9/src/main/java/org/apache/commons/lang3/time/FastDateParser.java	2020-01-05 05:25:39.407265177 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_9/src/main/java/org/apache/commons/lang3/time/FastDateParser.java	2020-01-05 05:25:42.867236279 -0800
+@@ -141,6 +141,9 @@
+             currentFormatField= nextFormatField;
+             currentStrategy= nextStrategy;
+         }
++        if (patternMatcher.regionStart() != patternMatcher.regionEnd()) {
++            throw new IllegalArgumentException("Failed to parse \""+pattern+"\" ; gave up at index "+patternMatcher.regionStart());
++        }
+         if(currentStrategy.addRegex(this, regex)) {
+             collector.add(currentStrategy);
+         }

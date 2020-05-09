@@ -1,0 +1,62 @@
+---patch code ori--- com.google.javascript.rhino.jstype.PrototypeObjectType <380, 380>
+sb.append(getPropertyType(property).toStringHelper(forAnnotations));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.jstype.FunctionType <913, 914>
+builder.append("...[").append(
+        paramType.toStringHelper(forAnnotations)).append("]");
+
+---patch code 0--- com.google.javascript.rhino.jstype.PrototypeObjectType <380, 380>
+StringBuilder.append(getPropertyType(StringVar).toStringHelper(booleanVar));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.FunctionType <913, 914>
+StringBuilder.append("...[").append(
+        JSType.toStringHelper(booleanVar)).append("]");
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.jstype.FunctionType <925, 925>
+builder.append(paramType.toStringHelper(forAnnotations)).append("=");
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.FunctionType <925, 925>
+StringBuilder.append(JSType.toStringHelper(booleanVar)).append("=");
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.jstype.FunctionType <871, 871>
+b.append(typeOfThis.toStringHelper(forAnnotations));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.FunctionType <871, 871>
+StringBuilder.append(JSType.toStringHelper(booleanVar));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.jstype.UnionType <415, 415>
+result.append(t.toStringHelper(forAnnotations));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.UnionType <415, 415>
+StringBuilder.append(JSType.toStringHelper(booleanVar));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.jstype.FunctionType <888, 888>
+b.append(call.returnType.toStringHelper(forAnnotations));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.FunctionType <888, 888>
+StringBuilder.append(JSType.returnType.toStringHelper(booleanVar));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.jstype.FunctionType <901, 901>
+b.append(p.getJSType().toStringHelper(forAnnotations));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.FunctionType <901, 901>
+StringBuilder.append(Node.getJSType().toStringHelper(booleanVar));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.jstype.ParameterizedType <68, 68>
+String result = super.toStringHelper(forAnnotations);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.ParameterizedType <68, 68>
+String StringVar = super.toStringHelper(booleanVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.jstype.InstanceObjectType <100, 100>
+return super.toStringHelper(forAnnotations);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.InstanceObjectType <100, 100>
+return super.toStringHelper(booleanVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.jstype.ProxyObjectType <258, 258>
+return referencedType.toStringHelper(forAnnotations);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.ProxyObjectType <258, 258>
+return JSType.toStringHelper(booleanVar);
+

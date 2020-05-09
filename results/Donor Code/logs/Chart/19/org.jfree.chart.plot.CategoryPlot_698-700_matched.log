@@ -1,0 +1,110 @@
+---patch code ori--- org.jfree.chart.plot.CategoryPlot <698, 700>
+if (axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient  varMapType:ori--- org.jfree.chart.axis.AxisCollection <124, 126>
+if (axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");   
+        }
+
+---patch code 0--- org.jfree.chart.plot.CategoryPlot <698, 700>
+if (Axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.chart.axis.AxisCollection <124, 126>
+if (Axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");   
+        }
+
+---fix ingredient  varMapType:ori--- org.jfree.chart.title.PaintScaleLegend <119, 121>
+if (axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.chart.title.PaintScaleLegend <119, 121>
+if (Axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---patch code 1--- org.jfree.chart.plot.CategoryPlot <698, 700>
+if (null == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient  varMapType:1--- org.jfree.chart.title.PaintScaleLegend <119, 121>
+if (null == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient  varMapType:ori--- org.jfree.chart.title.PaintScaleLegend <180, 182>
+if (axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.chart.title.PaintScaleLegend <180, 182>
+if (Axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient  varMapType:1--- org.jfree.chart.title.PaintScaleLegend <180, 182>
+if (null == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.ThermometerPlot <473, 475>
+if (axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <473, 475>
+if (Axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.plot.ThermometerPlot <473, 475>
+if (null == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.FastScatterPlot <269, 271>
+if (axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.plot.FastScatterPlot <269, 271>
+if (Axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.plot.FastScatterPlot <269, 271>
+if (null == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.FastScatterPlot <298, 300>
+if (axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.chart.plot.FastScatterPlot <298, 300>
+if (Axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.chart.plot.FastScatterPlot <298, 300>
+if (null == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient  varMapType:ori--- org.jfree.chart.entity.AxisLabelEntity <69, 71>
+if (axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.chart.entity.AxisLabelEntity <69, 71>
+if (Axis == null) {
+            throw new IllegalArgumentException("Null 'axis' argument.");
+        }
+

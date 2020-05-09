@@ -1,0 +1,1903 @@
+---patch code ori--- org.apache.commons.math.linear.BigMatrixImpl <991, 991>
+final BigDecimal[] out = new BigDecimal[nRows];
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <991, 991>
+for (int row = 0; row < nRows; row++) {
+            final BigDecimal[] dataRow = data[row];
+            for (int col = 0; col < nCols; col++) {
+                ret = ret * 31 + (11 * (row+1) + 17 * (col+1)) * 
+                dataRow[col].hashCode();
+            }
+        }
+
+---patch code 0--- org.apache.commons.math.linear.BigMatrixImpl <991, 991>
+final BigDecimal[] BigDecimal[]Var = new BigDecimal[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <991, 991>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            final BigDecimal[] dataRow = BigDecimal[intVar];
+            for (int col = 0; col < intVar; col++) {
+                intVar = intVar * 31 + (11 * (intVar+1) + 17 * (col+1)) * 
+                dataRow[col].hashCode();
+            }
+        }
+
+---patch code 1--- org.apache.commons.math.linear.BigMatrixImpl <991, 991>
+final BigDecimal[] out = new BigDecimal[nRows];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <991, 991>
+for (int row = 0; row < nRows; row++) {
+            final BigDecimal[] dataRow = BigDecimal[row];
+            for (int col = 0; col < nCols; col++) {
+                ret = ret * 31 + (11 * (row+1) + 17 * (col+1)) * 
+                dataRow[col].hashCode();
+            }
+        }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <793, 793>
+final BigDecimal[] out = new BigDecimal[nRows];
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <793, 793>
+final BigDecimal[] BigDecimal[]Var = new BigDecimal[intVar];
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <793, 793>
+final BigDecimal[] out = new BigDecimal[nRows];
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1059, 1059>
+final BigDecimal[] out = new BigDecimal[nRows];
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1059, 1059>
+final BigDecimal[] BigDecimal[]Var = new BigDecimal[intVar];
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1059, 1059>
+final BigDecimal[] out = new BigDecimal[nRows];
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <638, 638>
+final double[] out = new double[nRows];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <638, 638>
+final double[] double[]Var = new double[intVar];
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <831, 831>
+final double[] out = new double[nRows];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <831, 831>
+final double[] double[]Var = new double[intVar];
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1392, 1392>
+final BigDecimal[][] out = new BigDecimal[nRows][this.getColumnDimension()];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1392, 1392>
+final BigDecimal[][] BigDecimal[][]Var = new BigDecimal[intVar][BigMatrixImpl.getColumnDimension()];
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1392, 1392>
+final BigDecimal[][] out = new BigDecimal[nRows][BigMatrixImpl.getColumnDimension()];
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <1143, 1143>
+final double[][] out = new double[nRows][this.getColumnDimension()];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <1143, 1143>
+final double[][] double[][]Var = new double[intVar][RealMatrixImpl.getColumnDimension()];
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <728, 728>
+final BigDecimal[][] out = new BigDecimal[nRows][1];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <728, 728>
+final BigDecimal[][] BigDecimal[][]Var = new BigDecimal[intVar][1];
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <728, 728>
+final BigDecimal[][] out = new BigDecimal[nRows][1];
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <596, 596>
+final double[][] out = new double[nRows][1];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <596, 596>
+final double[][] double[][]Var = new double[intVar][1];
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <410, 410>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <410, 410>
+final int intVar = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <410, 410>
+final int nRows = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <440, 440>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <440, 440>
+final int intVar = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <440, 440>
+final int nRows = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <489, 489>
+final int nRows = getRowDimension();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <489, 489>
+final int intVar = getRowDimension();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <489, 489>
+final int nRows = getRowDimension();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <727, 727>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <727, 727>
+final int intVar = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <727, 727>
+final int nRows = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <792, 792>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <792, 792>
+final int intVar = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <792, 792>
+final int nRows = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <873, 873>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <873, 873>
+final int intVar = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <873, 873>
+final int nRows = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <989, 989>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <989, 989>
+final int intVar = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <989, 989>
+final int nRows = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1025, 1025>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1025, 1025>
+final int intVar = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1025, 1025>
+final int nRows = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1053, 1053>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1053, 1053>
+final int intVar = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1053, 1053>
+final int nRows = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1171, 1171>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1171, 1171>
+final int intVar = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1171, 1171>
+final int nRows = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1292, 1292>
+final int nRows = getRowDimension();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1292, 1292>
+final int intVar = getRowDimension();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1292, 1292>
+final int nRows = getRowDimension();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1315, 1315>
+final int nRows = getRowDimension();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1315, 1315>
+final int intVar = getRowDimension();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1315, 1315>
+final int nRows = getRowDimension();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1391, 1391>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1391, 1391>
+final int intVar = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1391, 1391>
+final int nRows = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1461, 1461>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1461, 1461>
+final int intVar = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1461, 1461>
+final int nRows = BigMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <339, 339>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <339, 339>
+final int intVar = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <339, 339>
+final int nRows = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <369, 369>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <369, 369>
+final int intVar = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <369, 369>
+final int nRows = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <595, 595>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <595, 595>
+final int intVar = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <595, 595>
+final int nRows = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <637, 637>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <637, 637>
+final int intVar = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <637, 637>
+final int nRows = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <675, 675>
+final int nRows = getRowDimension();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <675, 675>
+final int intVar = getRowDimension();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <675, 675>
+final int nRows = getRowDimension();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <774, 774>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <774, 774>
+final int intVar = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <774, 774>
+final int nRows = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <797, 797>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <797, 797>
+final int intVar = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <797, 797>
+final int nRows = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <825, 825>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <825, 825>
+final int intVar = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <825, 825>
+final int nRows = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <924, 924>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <924, 924>
+final int intVar = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <924, 924>
+final int nRows = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <1042, 1042>
+final int nRows = getRowDimension();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <1042, 1042>
+final int intVar = getRowDimension();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <1042, 1042>
+final int nRows = getRowDimension();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <1066, 1066>
+final int nRows = getRowDimension();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <1066, 1066>
+final int intVar = getRowDimension();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <1066, 1066>
+final int nRows = getRowDimension();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <1142, 1142>
+final int nRows = this.getRowDimension();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <1142, 1142>
+final int intVar = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <1142, 1142>
+final int nRows = RealMatrixImpl.getRowDimension();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <1173, 1173>
+final int nRows = getRowDimension();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <1173, 1173>
+final int intVar = getRowDimension();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <1173, 1173>
+final int nRows = getRowDimension();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.MathException <241, 241>
+super.printStackTrace(PrintWriter);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.ode.AbstractStepInterpolator <391, 391>
+ObjectOutput.writeDouble(interpolatedTime);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.GraggBulirschStoerStepInterpolator <355, 355>
+ObjectOutput.writeInt(intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <153, 153>
+double[] rowSum = new double[nRows];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <153, 153>
+double[] double[]Var = new double[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.EmpiricalDistributionImpl <466, 466>
+double[] double[]Var = new double[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.ValueServer <134, 134>
+double[] double[]Var = new double[intVar];
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <750, 750>
+final BigDecimal[] BigDecimal[]Var = new BigDecimal[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <771, 771>
+final double[] double[]Var = new double[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <816, 816>
+final double[] double[]Var = new double[intVar];
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1030, 1030>
+final BigDecimal[] BigDecimal[]Var = new BigDecimal[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <618, 618>
+final double[] double[]Var = new double[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <802, 802>
+final double[] double[]Var = new double[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.MathException <244, 244>
+Throwable.printStackTrace(PrintWriter);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1378, 1378>
+final int[] out = new int[permutation.length];
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <1129, 1129>
+final int[] out = new int[permutation.length];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.MathException <243, 243>
+PrintWriter.print("Caused by: ");
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.MatrixUtils <229, 229>
+final double[][] data = new double[nRows][1];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <229, 229>
+final double[][] double[][]Var = new double[intVar][1];
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.MatrixUtils <247, 247>
+final BigDecimal[][] data = new BigDecimal[nRows][1];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <247, 247>
+final BigDecimal[][] BigDecimal[][]Var = new BigDecimal[intVar][1];
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.MatrixUtils <265, 265>
+final BigDecimal[][] data = new BigDecimal[nRows][1];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <265, 265>
+final BigDecimal[][] BigDecimal[][]Var = new BigDecimal[intVar][1];
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.MatrixUtils <283, 283>
+final BigDecimal[][] data = new BigDecimal[nRows][1];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <283, 283>
+final BigDecimal[][] BigDecimal[][]Var = new BigDecimal[intVar][1];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <710, 710>
+final BigDecimal[][] BigDecimal[][]Var = new BigDecimal[1][intVar];
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1179, 1179>
+permutation = new int[nRows];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1179, 1179>
+int[]Var = new int[intVar];
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1179, 1179>
+permutation = new int[nRows];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <578, 578>
+final double[][] double[][]Var = new double[1][intVar];
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <932, 932>
+permutation = new int[nRows];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <932, 932>
+int[]Var = new int[intVar];
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <932, 932>
+permutation = new int[nRows];
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <149, 149>
+int nRows = counts.length;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <149, 149>
+int intVar = long[][]Var.length;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <149, 149>
+int nRows = counts.length;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.MatrixUtils <228, 228>
+final int nRows = columnData.length;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <228, 228>
+final int intVar = double[]Var.length;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.MatrixUtils <228, 228>
+final int nRows = columnData.length;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.MatrixUtils <246, 246>
+final int nRows = columnData.length;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <246, 246>
+final int intVar = double[]Var.length;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.MatrixUtils <246, 246>
+final int nRows = columnData.length;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.MatrixUtils <264, 264>
+final int nRows = columnData.length;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <264, 264>
+final int intVar = BigDecimal[]Var.length;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.MatrixUtils <264, 264>
+final int nRows = columnData.length;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.MatrixUtils <282, 282>
+int nRows = columnData.length;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <282, 282>
+int intVar = String[]Var.length;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.MatrixUtils <282, 282>
+int nRows = columnData.length;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <145, 145>
+final int nRows = d.length;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <145, 145>
+final int intVar = BigDecimal[][]Var.length;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <145, 145>
+final int nRows = d.length;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <175, 175>
+final int nRows = d.length;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <175, 175>
+final int intVar = double[][]Var.length;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <175, 175>
+final int nRows = d.length;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <205, 205>
+final int nRows = d.length;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <205, 205>
+final int intVar = String[][]Var.length;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <205, 205>
+final int nRows = d.length;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <235, 235>
+final int nRows = v.length;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <235, 235>
+final int intVar = BigDecimal[]Var.length;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <235, 235>
+final int nRows = v.length;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <665, 665>
+final int nRows = subMatrix.length;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <665, 665>
+final int intVar = BigDecimal[][]Var.length;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <665, 665>
+final int nRows = subMatrix.length;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1420, 1420>
+final int nRows = in.length;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1420, 1420>
+final int intVar = double[][]Var.length;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1420, 1420>
+final int nRows = in.length;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1440, 1440>
+final int nRows = in.length;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1440, 1440>
+final int intVar = String[][]Var.length;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1440, 1440>
+final int nRows = in.length;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <137, 137>
+final int nRows = d.length;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <137, 137>
+final int intVar = double[][]Var.length;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <137, 137>
+final int nRows = d.length;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <164, 164>
+final int nRows = v.length;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <164, 164>
+final int intVar = double[]Var.length;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <164, 164>
+final int nRows = v.length;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <533, 533>
+final int nRows = subMatrix.length;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <533, 533>
+final int intVar = double[][]Var.length;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <533, 533>
+final int nRows = subMatrix.length;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <413, 413>
+final BigDecimal[][] outData = new BigDecimal[nRows][nCols];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <413, 413>
+final BigDecimal[][] BigDecimal[][]Var = new BigDecimal[intVar][intVar];
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <443, 443>
+final BigDecimal[][] outData = new BigDecimal[nRows][nCols];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <443, 443>
+final BigDecimal[][] BigDecimal[][]Var = new BigDecimal[intVar][intVar];
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <491, 491>
+final double d[][] = new double[nRows][nCols];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <491, 491>
+final double doubleVar[][] = new double[intVar][intVar];
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <875, 875>
+final BigDecimal[][] outData = new BigDecimal[nCols][nRows];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <875, 875>
+final BigDecimal[][] BigDecimal[][]Var = new BigDecimal[intVar][intVar];
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <342, 342>
+final double[][] outData = new double[nRows][nCols];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <342, 342>
+final double[][] double[][]Var = new double[intVar][intVar];
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <372, 372>
+final double[][] outData = new double[nRows][nCols];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <372, 372>
+final double[][] double[][]Var = new double[intVar][intVar];
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <677, 677>
+final double[][] outData = new double[nCols][nRows];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <677, 677>
+final double[][] double[][]Var = new double[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.ValueServer <136, 136>
+double[]Var[intVar] = getNext();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.PolynomialSplineFunction <205, 205>
+double doubleVar[] = new double[intVar + 1];
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <236, 236>
+data = new BigDecimal[nRows][1];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <236, 236>
+BigDecimal = new BigDecimal[intVar][1];
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <165, 165>
+data = new double[nRows][1];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <165, 165>
+doubleVar = new double[intVar][1];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.AbstractStepInterpolator <388, 388>
+ObjectOutput.writeDouble(double[]Var[intVar]);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <684, 684>
+data = new BigDecimal[nRows][nCols];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <684, 684>
+BigDecimal = new BigDecimal[intVar][intVar];
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1422, 1422>
+data = new BigDecimal[nRows][nCols];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1422, 1422>
+BigDecimal = new BigDecimal[intVar][intVar];
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1442, 1442>
+data = new BigDecimal[nRows][nCols];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1442, 1442>
+BigDecimal = new BigDecimal[intVar][intVar];
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <552, 552>
+data = new double[nRows][nCols];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <552, 552>
+doubleVar = new double[intVar][intVar];
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1026, 1028>
+if (v.length != nRows) {
+            throw new IllegalArgumentException("vector has wrong length");
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1026, 1028>
+if (BigDecimal[]Var.length != intVar) {
+            throw new IllegalArgumentException("vector has wrong length");
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1054, 1056>
+if (b.length != nRows) {
+            throw new IllegalArgumentException("constant vector has wrong length");
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1054, 1056>
+if (BigDecimal[]Var.length != intVar) {
+            throw new IllegalArgumentException("constant vector has wrong length");
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <798, 800>
+if (v.length != nRows) {
+            throw new IllegalArgumentException("vector has wrong length");
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <798, 800>
+if (double[]Var.length != intVar) {
+            throw new IllegalArgumentException("vector has wrong length");
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <826, 828>
+if (b.length != nRows) {
+            throw new IllegalArgumentException("constant vector has wrong length");
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <826, 828>
+if (double[]Var.length != intVar) {
+            throw new IllegalArgumentException("constant vector has wrong length");
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.EmpiricalDistributionImpl <467, 467>
+System.arraycopy(double[]Var, 0, double[]Var, 0, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.MathException <226, 231>
+synchronized (PrintStream) {
+            PrintWriter pw = new PrintWriter(PrintStream, false);
+            printStackTrace(pw);
+            // Flush the PrintWriter before it's GC'ed.
+            pw.flush();
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1173, 1175>
+if (nRows != nCols) {
+            throw new InvalidMatrixException("LU decomposition requires that the matrix be square.");
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1173, 1175>
+if (intVar != intVar) {
+            throw new InvalidMatrixException("LU decomposition requires that the matrix be square.");
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <926, 928>
+if (nRows != nCols) {
+            throw new InvalidMatrixException("LU decomposition requires that the matrix be square.");
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <926, 928>
+if (intVar != intVar) {
+            throw new InvalidMatrixException("LU decomposition requires that the matrix be square.");
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <751, 751>
+System.arraycopy(BigDecimal[intVar], 0, BigDecimal[]Var, 0, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <619, 619>
+System.arraycopy(doubleVar[intVar], 0, double[]Var, 0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.RungeKuttaStepInterpolator <136, 136>
+ObjectOutput.writeDouble(double[][]Var[intVar][intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.GraggBulirschStoerStepInterpolator <358, 358>
+ObjectOutput.writeDouble(double[][]Var[intVar][intVar]);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1036, 1036>
+BigDecimal[]Var[intVar] = BigDecimal;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <808, 808>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.DormandPrince853StepInterpolator <269, 269>
+ObjectOutput.writeDouble(double[][]Var[0][intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.DormandPrince853StepInterpolator <270, 270>
+ObjectOutput.writeDouble(double[][]Var[1][intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.DormandPrince853StepInterpolator <271, 271>
+ObjectOutput.writeDouble(double[][]Var[2][intVar]);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1060, 1062>
+for (int row = 0; row < nRows; row++) {
+            out[row] = solution[row][0];
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1060, 1062>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            BigDecimal[]Var[intVar] = BigDecimal[][]Var[intVar][0];
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1060, 1062>
+for (int row = 0; row < nRows; row++) {
+            out[row] = solution[row][0];
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <832, 834>
+for (int row = 0; row < nRows; row++) {
+            out[row] = solution[row][0];
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <832, 834>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[]Var[intVar] = double[][]Var[intVar][0];
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <832, 834>
+for (int row = 0; row < nRows; row++) {
+            out[row] = solution[row][0];
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <794, 796>
+for (int i = 0; i < nRows; i++) {
+            out[i] = data[i][col];
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <794, 796>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            BigDecimal[]Var[intVar] = BigDecimal[intVar][intVar];
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <794, 796>
+for (int i = 0; i < nRows; i++) {
+            out[i] = BigDecimal[i][col];
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <639, 641>
+for (int row = 0; row < nRows; row++) {
+            out[row] = data[row][col];
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <639, 641>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[]Var[intVar] = doubleVar[intVar][intVar];
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <639, 641>
+for (int row = 0; row < nRows; row++) {
+            out[row] = data[row][col];
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1294, 1296>
+if (m.getColumnDimension() != nCols || m.getRowDimension() != nRows) {
+            return false;
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1294, 1296>
+if (BigMatrix.getColumnDimension() != intVar || BigMatrix.getRowDimension() != intVar) {
+            return false;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <1044, 1046>
+if (m.getColumnDimension() != nCols || m.getRowDimension() != nRows) {
+            return false;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <1044, 1046>
+if (RealMatrix.getColumnDimension() != intVar || RealMatrix.getRowDimension() != intVar) {
+            return false;
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1394, 1396>
+for (int i = 0; i < nRows; i++) {
+            System.arraycopy(data[i], 0, out[i], 0, data[i].length);
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1394, 1396>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            System.arraycopy(BigDecimal[intVar], 0, BigDecimal[][]Var[intVar], 0, data[i].length);
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1394, 1396>
+for (int i = 0; i < nRows; i++) {
+            System.arraycopy(BigDecimal[i], 0, out[i], 0, data[i].length);
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <1145, 1147>
+for (int i = 0; i < nRows; i++) {
+            System.arraycopy(data[i], 0, out[i], 0, data[i].length);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <1145, 1147>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            System.arraycopy(doubleVar[intVar], 0, double[][]Var[intVar], 0, data[i].length);
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <1145, 1147>
+for (int i = 0; i < nRows; i++) {
+            System.arraycopy(data[i], 0, out[i], 0, data[i].length);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.PolynomialSplineFunction <206, 206>
+System.arraycopy(doubleVar, 0, doubleVar, 0, intVar + 1);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <729, 731>
+for (int row = 0; row < nRows; row++) {
+            out[row][0] = data[row][column];
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <729, 731>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            BigDecimal[][]Var[intVar][0] = BigDecimal[intVar][intVar];
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <729, 731>
+for (int row = 0; row < nRows; row++) {
+            out[row][0] = BigDecimal[row][column];
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <597, 599>
+for (int row = 0; row < nRows; row++) {
+            out[row][0] = data[row][column];
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <597, 599>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[][]Var[intVar][0] = doubleVar[intVar][intVar];
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <597, 599>
+for (int row = 0; row < nRows; row++) {
+            out[row][0] = data[row][column];
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <687, 690>
+if (((nRows + row) > this.getRowDimension()) ||
+            (nCols + column > this.getColumnDimension()))
+            throw new MatrixIndexException(
+            "invalid row or column index selection");
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <687, 690>
+if (((intVar + intVar) > BigMatrixImpl.getRowDimension()) ||
+            (intVar + intVar > BigMatrixImpl.getColumnDimension()))
+            throw new MatrixIndexException(
+            "invalid row or column index selection");
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <555, 558>
+if (((nRows + row) > this.getRowDimension()) ||
+            (nCols + column > this.getColumnDimension()))
+            throw new MatrixIndexException(
+                    "invalid row or column index selection");
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <555, 558>
+if (((intVar + intVar) > RealMatrixImpl.getRowDimension()) ||
+            (intVar + intVar > RealMatrixImpl.getColumnDimension()))
+            throw new MatrixIndexException(
+                    "invalid row or column index selection");
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <711, 711>
+System.arraycopy(BigDecimal[intVar], 0, BigDecimal[][]Var[0], 0, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <579, 579>
+System.arraycopy(doubleVar[intVar], 0, double[][]Var[0], 0, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <773, 773>
+double[]Var[intVar] = BigDecimal[intVar][intVar].doubleValue();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <818, 818>
+double[]Var[intVar] = BigDecimal[intVar][intVar].doubleValue();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1317, 1317>
+ret = ret * 31 + nRows;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1317, 1317>
+intVar = intVar * 31 + intVar;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <1068, 1068>
+ret = ret * 31 + nRows;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <1068, 1068>
+intVar = intVar * 31 + intVar;
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <992, 998>
+for (int row = 0; row < nRows; row++) {
+            BigDecimal sum = ZERO;
+            for (int i = 0; i < nCols; i++) {
+                sum = sum.add(data[row][i].multiply(v[i]));
+            }
+            out[row] = sum;
+        }
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <992, 998>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            BigDecimal sum = BigDecimal;
+            for (int i = 0; i < intVar; i++) {
+                sum = sum.add(BigDecimal[intVar][i].multiply(BigDecimal[]Var[i]));
+            }
+            BigDecimal[]Var[intVar] = sum;
+        }
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <992, 998>
+for (int row = 0; row < nRows; row++) {
+            BigDecimal sum = BigDecimal;
+            for (int i = 0; i < nCols; i++) {
+                sum = sum.add(BigDecimal[row][i].multiply(v[i]));
+            }
+            out[row] = sum;
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1180, 1182>
+for (int row = 0; row < nRows; row++) {
+            permutation[row] = row;
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1180, 1182>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            int[]Var[intVar] = intVar;
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1180, 1182>
+for (int row = 0; row < nRows; row++) {
+            permutation[row] = row;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <933, 935>
+for (int row = 0; row < nRows; row++) {
+            permutation[row] = row;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <933, 935>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            int[]Var[intVar] = intVar;
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <933, 935>
+for (int row = 0; row < nRows; row++) {
+            permutation[row] = row;
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1033, 1035>
+for (int i = 0; i < nRows; i++) {
+                sum = sum.add(data[i][col].multiply(v[i]));
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1033, 1035>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                BigDecimal = BigDecimal.add(BigDecimal[intVar][intVar].multiply(BigDecimal[]Var[intVar]));
+            }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1033, 1035>
+for (int i = 0; i < nRows; i++) {
+                BigDecimal = BigDecimal.add(BigDecimal[i][col].multiply(v[i]));
+            }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <153, 157>
+for (int r = 1; r < nRows; r++) {
+                if (d[r].length != nCols) {
+                    throw new IllegalArgumentException("All input rows must have the same length.");
+                }
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <153, 157>
+for (int intVar = 1; intVar < intVar; intVar++) {
+                if (d[r].length != intVar) {
+                    throw new IllegalArgumentException("All input rows must have the same length.");
+                }
+            }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <153, 157>
+for (int r = 1; r < nRows; r++) {
+                if (d[r].length != nCols) {
+                    throw new IllegalArgumentException("All input rows must have the same length.");
+                }
+            }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <185, 190>
+for (int row = 1; row < nRows; row++) {
+            if (d[row].length != nCols) {
+                throw new IllegalArgumentException(
+                "All input rows must have the same length.");
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <185, 190>
+for (int intVar = 1; intVar < intVar; intVar++) {
+            if (d[row].length != intVar) {
+                throw new IllegalArgumentException(
+                "All input rows must have the same length.");
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <185, 190>
+for (int row = 1; row < nRows; row++) {
+            if (d[row].length != nCols) {
+                throw new IllegalArgumentException(
+                "All input rows must have the same length.");
+            }
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <215, 220>
+for (int row = 1; row < nRows; row++) {
+            if (d[row].length != nCols) {
+                throw new IllegalArgumentException(
+                "All input rows must have the same length.");
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <215, 220>
+for (int intVar = 1; intVar < intVar; intVar++) {
+            if (d[row].length != intVar) {
+                throw new IllegalArgumentException(
+                "All input rows must have the same length.");
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <215, 220>
+for (int row = 1; row < nRows; row++) {
+            if (d[row].length != nCols) {
+                throw new IllegalArgumentException(
+                "All input rows must have the same length.");
+            }
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <675, 680>
+for (int r = 1; r < nRows; r++) {
+            if (subMatrix[r].length != nCols) {
+                throw new IllegalArgumentException(
+                "All input rows must have the same length.");
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <675, 680>
+for (int intVar = 1; intVar < intVar; intVar++) {
+            if (subMatrix[r].length != intVar) {
+                throw new IllegalArgumentException(
+                "All input rows must have the same length.");
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <675, 680>
+for (int r = 1; r < nRows; r++) {
+            if (subMatrix[r].length != nCols) {
+                throw new IllegalArgumentException(
+                "All input rows must have the same length.");
+            }
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <145, 149>
+for (int r = 1; r < nRows; r++) {
+                if (d[r].length != nCols) {
+                    throw new IllegalArgumentException("All input rows must have the same length.");
+                }
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <145, 149>
+for (int intVar = 1; intVar < intVar; intVar++) {
+                if (d[r].length != intVar) {
+                    throw new IllegalArgumentException("All input rows must have the same length.");
+                }
+            }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <145, 149>
+for (int r = 1; r < nRows; r++) {
+                if (d[r].length != nCols) {
+                    throw new IllegalArgumentException("All input rows must have the same length.");
+                }
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <543, 548>
+for (int r = 1; r < nRows; r++) {
+            if (subMatrix[r].length != nCols) {
+                throw new IllegalArgumentException(
+                "All input rows must have the same length.");
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <543, 548>
+for (int intVar = 1; intVar < intVar; intVar++) {
+            if (subMatrix[r].length != intVar) {
+                throw new IllegalArgumentException(
+                "All input rows must have the same length.");
+            }
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <543, 548>
+for (int r = 1; r < nRows; r++) {
+            if (subMatrix[r].length != nCols) {
+                throw new IllegalArgumentException(
+                "All input rows must have the same length.");
+            }
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <691, 693>
+for (int i = 0; i < nRows; i++) {
+            System.arraycopy(subMatrix[i], 0, data[row + i], column, nCols);
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <691, 693>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            System.arraycopy(BigDecimal[][]Var[intVar], 0, BigDecimal[intVar + intVar], intVar, intVar);
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <691, 693>
+for (int i = 0; i < nRows; i++) {
+            System.arraycopy(subMatrix[i], 0, BigDecimal[row + i], column, nCols);
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <559, 561>
+for (int i = 0; i < nRows; i++) {
+            System.arraycopy(subMatrix[i], 0, data[row + i], column, nCols);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <559, 561>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            System.arraycopy(double[][]Var[intVar], 0, doubleVar[intVar + intVar], intVar, intVar);
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <559, 561>
+for (int i = 0; i < nRows; i++) {
+            System.arraycopy(subMatrix[i], 0, data[row + i], column, nCols);
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.MatrixUtils <248, 250>
+for (int row = 0; row < nRows; row++) {
+            data[row][0] = new BigDecimal(columnData[row]);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <248, 250>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            BigDecimal[][]Var[intVar][0] = new BigDecimal(double[]Var[intVar]);
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.MatrixUtils <248, 250>
+for (int row = 0; row < nRows; row++) {
+            data[row][0] = new BigDecimal(columnData[row]);
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.MatrixUtils <284, 286>
+for (int row = 0; row < nRows; row++) {
+            data[row][0] = new BigDecimal(columnData[row]);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <284, 286>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            BigDecimal[][]Var[intVar][0] = new BigDecimal(String[]Var[intVar]);
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.MatrixUtils <284, 286>
+for (int row = 0; row < nRows; row++) {
+            data[row][0] = new BigDecimal(columnData[row]);
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <780, 787>
+for (int row = 0; row < nRows; row++) {
+            final double[] dataRow = data[row];
+            double sum = 0;
+            for (int i = 0; i < nCols; i++) {
+                sum += dataRow[i] * v[i];
+            }
+            out[row] = sum;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <780, 787>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            final double[] dataRow = doubleVar[intVar];
+            double sum = 0;
+            for (int i = 0; i < intVar; i++) {
+                sum += dataRow[i] * double[]Var[i];
+            }
+            double[]Var[intVar] = sum;
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <780, 787>
+for (int row = 0; row < nRows; row++) {
+            final double[] dataRow = data[row];
+            double sum = 0;
+            for (int i = 0; i < nCols; i++) {
+                sum += dataRow[i] * v[i];
+            }
+            out[row] = sum;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <993, 995>
+for (int row = col + 1; row < nRows; row++) {
+                lu[row][col] /= luDiag;
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <993, 995>
+for (int intVar = intVar + 1; intVar < intVar; intVar++) {
+                doubleVar[intVar][intVar] /= doubleVar;
+            }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <993, 995>
+for (int row = col + 1; row < nRows; row++) {
+                lu[row][col] /= luDiag;
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <1047, 1055>
+for (int row = 0; row < nRows; row++) {
+            final double[] dataRow = data[row];
+            for (int col = 0; col < nCols; col++) {
+                if (Double.doubleToLongBits(dataRow[col]) != 
+                    Double.doubleToLongBits(m.getEntry(row, col))) {
+                    return false;
+                }
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <1047, 1055>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            final double[] dataRow = doubleVar[intVar];
+            for (int col = 0; col < intVar; col++) {
+                if (Double.doubleToLongBits(dataRow[col]) != 
+                    Double.doubleToLongBits(RealMatrix.getEntry(intVar, col))) {
+                    return false;
+                }
+            }
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <1047, 1055>
+for (int row = 0; row < nRows; row++) {
+            final double[] dataRow = data[row];
+            for (int col = 0; col < nCols; col++) {
+                if (Double.doubleToLongBits(dataRow[col]) != 
+                    Double.doubleToLongBits(RealMatrix.getEntry(row, col))) {
+                    return false;
+                }
+            }
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1240, 1243>
+for (int row = col + 1; row < nRows; row++) {
+                final BigDecimal[] luRow = lu[row];
+                luRow[col] = luRow[col].divide(luDiag, scale, roundingMode);
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1240, 1243>
+for (int intVar = intVar + 1; intVar < intVar; intVar++) {
+                final BigDecimal[] luRow = BigDecimal[intVar];
+                luRow[intVar] = luRow[intVar].divide(BigDecimal, intVar, intVar);
+            }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1240, 1243>
+for (int row = col + 1; row < nRows; row++) {
+                final BigDecimal[] luRow = BigDecimal[row];
+                luRow[col] = luRow[col].divide(BigDecimal, scale, roundingMode);
+            }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1297, 1304>
+for (int row = 0; row < nRows; row++) {
+            final BigDecimal[] dataRow = data[row];
+            for (int col = 0; col < nCols; col++) {
+                if (!dataRow[col].equals(m.getEntry(row, col))) {
+                    return false;
+                }
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1297, 1304>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            final BigDecimal[] dataRow = BigDecimal[intVar];
+            for (int col = 0; col < intVar; col++) {
+                if (!dataRow[col].equals(BigMatrix.getEntry(intVar, col))) {
+                    return false;
+                }
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1297, 1304>
+for (int row = 0; row < nRows; row++) {
+            final BigDecimal[] dataRow = BigDecimal[row];
+            for (int col = 0; col < nCols; col++) {
+                if (!dataRow[col].equals(BigMatrix.getEntry(row, col))) {
+                    return false;
+                }
+            }
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <805, 807>
+for (int i = 0; i < nRows; i++) {
+                sum += data[i][col] * v[i];
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <805, 807>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                doubleVar += doubleVar[intVar][intVar] * double[]Var[intVar];
+            }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <805, 807>
+for (int i = 0; i < nRows; i++) {
+                sum += data[i][col] * v[i];
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.MatrixUtils <230, 232>
+for (int row = 0; row < nRows; row++) {
+            data[row][0] = columnData[row];
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <230, 232>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[][]Var[intVar][0] = double[]Var[intVar];
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.MatrixUtils <230, 232>
+for (int row = 0; row < nRows; row++) {
+            data[row][0] = columnData[row];
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.MatrixUtils <266, 268>
+for (int row = 0; row < nRows; row++) {
+            data[row][0] = columnData[row];
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <266, 268>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            BigDecimal[][]Var[intVar][0] = BigDecimal[]Var[intVar];
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.MatrixUtils <266, 268>
+for (int row = 0; row < nRows; row++) {
+            data[row][0] = columnData[row];
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <237, 239>
+for (int row = 0; row < nRows; row++) {
+            data[row][0] = v[row];
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <237, 239>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            BigDecimal[intVar][0] = BigDecimal[]Var[intVar];
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <237, 239>
+for (int row = 0; row < nRows; row++) {
+            BigDecimal[row][0] = v[row];
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <166, 168>
+for (int row = 0; row < nRows; row++) {
+            data[row][0] = v[row];
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <166, 168>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            doubleVar[intVar][0] = double[]Var[intVar];
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <166, 168>
+for (int row = 0; row < nRows; row++) {
+            data[row][0] = v[row];
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <492, 496>
+for (int i = 0; i < nRows; i++) {
+            for (int j = 0; j < nCols; j++) {
+                d[i][j] = data[i][j].doubleValue();
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <492, 496>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            for (int j = 0; j < intVar; j++) {
+                doubleVar[intVar][j] = BigDecimal[intVar][j].doubleValue();
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <492, 496>
+for (int i = 0; i < nRows; i++) {
+            for (int j = 0; j < nCols; j++) {
+                d[i][j] = BigDecimal[i][j].doubleValue();
+            }
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1203, 1216>
+for (int row = col; row < nRows; row++) {
+                final BigDecimal[] luRow = lu[row];
+                sum = luRow[col];
+                for (int i = 0; i < col; i++) {
+                    sum = sum.subtract(luRow[i].multiply(lu[i][col]));
+                }
+                luRow[col] = sum;
+                
+                // maintain best permutation choice
+                if (sum.abs().compareTo(largest) == 1) {
+                    largest = sum.abs();
+                    max = row;
+                }
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1203, 1216>
+for (int intVar = intVar; intVar < intVar; intVar++) {
+                final BigDecimal[] luRow = BigDecimal[intVar];
+                BigDecimal = luRow[intVar];
+                for (int i = 0; i < intVar; i++) {
+                    BigDecimal = BigDecimal.subtract(luRow[i].multiply(BigDecimal[i][intVar]));
+                }
+                luRow[intVar] = BigDecimal;
+                
+                // maintain best permutation choice
+                if (BigDecimal.abs().compareTo(BigDecimal) == 1) {
+                    BigDecimal = BigDecimal.abs();
+                    intVar = intVar;
+                }
+            }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1203, 1216>
+for (int row = col; row < nRows; row++) {
+                final BigDecimal[] luRow = BigDecimal[row];
+                BigDecimal = luRow[col];
+                for (int i = 0; i < col; i++) {
+                    BigDecimal = BigDecimal.subtract(luRow[i].multiply(BigDecimal[i][col]));
+                }
+                luRow[col] = BigDecimal;
+                
+                // maintain best permutation choice
+                if (BigDecimal.abs().compareTo(BigDecimal) == 1) {
+                    BigDecimal = BigDecimal.abs();
+                    max = row;
+                }
+            }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1423, 1429>
+for (int i = 0; i < nRows; i++) {
+            final BigDecimal[] dataI = data[i];
+            final double[] inI = in[i];
+            for (int j = 0; j < nCols; j++) {
+                dataI[j] = new BigDecimal(inI[j]);
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1423, 1429>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            final BigDecimal[] dataI = BigDecimal[intVar];
+            final double[] inI = double[][]Var[intVar];
+            for (int j = 0; j < intVar; j++) {
+                dataI[j] = new BigDecimal(inI[j]);
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1423, 1429>
+for (int i = 0; i < nRows; i++) {
+            final BigDecimal[] dataI = BigDecimal[i];
+            final double[] inI = in[i];
+            for (int j = 0; j < nCols; j++) {
+                dataI[j] = new BigDecimal(inI[j]);
+            }
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1443, 1449>
+for (int i = 0; i < nRows; i++) {
+            final BigDecimal[] dataI = data[i];
+            final String[] inI = in[i];
+            for (int j = 0; j < nCols; j++) {
+                dataI[j] = new BigDecimal(inI[j]);
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1443, 1449>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            final BigDecimal[] dataI = BigDecimal[intVar];
+            final String[] inI = String[][]Var[intVar];
+            for (int j = 0; j < intVar; j++) {
+                dataI[j] = new BigDecimal(inI[j]);
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1443, 1449>
+for (int i = 0; i < nRows; i++) {
+            final BigDecimal[] dataI = BigDecimal[i];
+            final String[] inI = in[i];
+            for (int j = 0; j < nCols; j++) {
+                dataI[j] = new BigDecimal(inI[j]);
+            }
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <414, 424>
+for (int row = 0; row < nRows; row++) {
+                final BigDecimal[] dataRow    = data[row];
+                final BigDecimal[] outDataRow = outData[row];
+                for (int col = 0; col < nCols; col++) {
+                    BigDecimal sum = ZERO;
+                    for (int i = 0; i < nSum; i++) {
+                        sum = sum.add(dataRow[i].multiply(m.getEntry(i, col)));
+                    }
+                    outDataRow[col] = sum;
+                }
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <414, 424>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                final BigDecimal[] dataRow    = BigDecimal[intVar];
+                final BigDecimal[] outDataRow = BigDecimal[][]Var[intVar];
+                for (int col = 0; col < intVar; col++) {
+                    BigDecimal sum = BigDecimal;
+                    for (int i = 0; i < intVar; i++) {
+                        sum = sum.add(dataRow[i].multiply(BigMatrix.getEntry(i, col)));
+                    }
+                    outDataRow[col] = sum;
+                }
+            }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <414, 424>
+for (int row = 0; row < nRows; row++) {
+                final BigDecimal[] dataRow    = BigDecimal[row];
+                final BigDecimal[] outDataRow = outData[row];
+                for (int col = 0; col < nCols; col++) {
+                    BigDecimal sum = BigDecimal;
+                    for (int i = 0; i < nSum; i++) {
+                        sum = sum.add(dataRow[i].multiply(BigMatrix.getEntry(i, col)));
+                    }
+                    outDataRow[col] = sum;
+                }
+            }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <876, 881>
+for (int row = 0; row < nRows; row++) {
+            final BigDecimal[] dataRow = data[row];
+            for (int col = 0; col < nCols; col++) {
+                outData[col][row] = dataRow[col];
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <876, 881>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            final BigDecimal[] dataRow = BigDecimal[intVar];
+            for (int col = 0; col < intVar; col++) {
+                BigDecimal[][]Var[col][intVar] = dataRow[col];
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <876, 881>
+for (int row = 0; row < nRows; row++) {
+            final BigDecimal[] dataRow = BigDecimal[row];
+            for (int col = 0; col < nCols; col++) {
+                outData[col][row] = dataRow[col];
+            }
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <678, 683>
+for (int row = 0; row < nRows; row++) {
+            final double[] dataRow = data[row];
+            for (int col = 0; col < nCols; col++) {
+                outData[col][row] = dataRow[col];
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <678, 683>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            final double[] dataRow = doubleVar[intVar];
+            for (int col = 0; col < intVar; col++) {
+                double[][]Var[col][intVar] = dataRow[col];
+            }
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <678, 683>
+for (int row = 0; row < nRows; row++) {
+            final double[] dataRow = data[row];
+            for (int col = 0; col < nCols; col++) {
+                outData[col][row] = dataRow[col];
+            }
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <444, 454>
+for (int row = 0; row < nRows; row++) {
+            final BigDecimal[] dataRow    = data[row];
+            final BigDecimal[] outDataRow = outData[row];
+            for (int col = 0; col < nCols; col++) {
+                BigDecimal sum = ZERO;
+                for (int i = 0; i < nSum; i++) {
+                    sum = sum.add(dataRow[i].multiply(m.data[i][col]));
+                }
+                outDataRow[col] = sum;
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <444, 454>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            final BigDecimal[] dataRow    = BigDecimal[intVar];
+            final BigDecimal[] outDataRow = BigDecimal[][]Var[intVar];
+            for (int col = 0; col < intVar; col++) {
+                BigDecimal sum = BigDecimal;
+                for (int i = 0; i < intVar; i++) {
+                    sum = sum.add(dataRow[i].multiply(BigMatrixImpl.BigDecimal[i][col]));
+                }
+                outDataRow[col] = sum;
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <444, 454>
+for (int row = 0; row < nRows; row++) {
+            final BigDecimal[] dataRow    = BigDecimal[row];
+            final BigDecimal[] outDataRow = outData[row];
+            for (int col = 0; col < nCols; col++) {
+                BigDecimal sum = BigDecimal;
+                for (int i = 0; i < nSum; i++) {
+                    sum = sum.add(dataRow[i].multiply(BigMatrixImpl.BigDecimal[i][col]));
+                }
+                outDataRow[col] = sum;
+            }
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <343, 353>
+for (int row = 0; row < nRows; row++) {
+                final double[] dataRow    = data[row];
+                final double[] outDataRow = outData[row];
+                for (int col = 0; col < nCols; col++) {
+                    double sum = 0;
+                    for (int i = 0; i < nSum; i++) {
+                        sum += dataRow[i] * m.getEntry(i, col);
+                    }
+                    outDataRow[col] = sum;
+                }
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <343, 353>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                final double[] dataRow    = doubleVar[intVar];
+                final double[] outDataRow = double[][]Var[intVar];
+                for (int col = 0; col < intVar; col++) {
+                    double sum = 0;
+                    for (int i = 0; i < intVar; i++) {
+                        sum += dataRow[i] * RealMatrix.getEntry(i, col);
+                    }
+                    outDataRow[col] = sum;
+                }
+            }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <343, 353>
+for (int row = 0; row < nRows; row++) {
+                final double[] dataRow    = data[row];
+                final double[] outDataRow = outData[row];
+                for (int col = 0; col < nCols; col++) {
+                    double sum = 0;
+                    for (int i = 0; i < nSum; i++) {
+                        sum += dataRow[i] * RealMatrix.getEntry(i, col);
+                    }
+                    outDataRow[col] = sum;
+                }
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <956, 969>
+for (int row = col; row < nRows; row++) {
+                final double[] luRow = lu[row];
+                sum = luRow[col];
+                for (int i = 0; i < col; i++) {
+                    sum -= luRow[i] * lu[i][col];
+                }
+                luRow[col] = sum;
+
+                // maintain best permutation choice
+                if (Math.abs(sum) > largest) {
+                    largest = Math.abs(sum);
+                    max = row;
+                }
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <956, 969>
+for (int intVar = intVar; intVar < intVar; intVar++) {
+                final double[] luRow = doubleVar[intVar];
+                doubleVar = luRow[intVar];
+                for (int i = 0; i < intVar; i++) {
+                    doubleVar -= luRow[i] * doubleVar[i][intVar];
+                }
+                luRow[intVar] = doubleVar;
+
+                // maintain best permutation choice
+                if (Math.abs(doubleVar) > doubleVar) {
+                    doubleVar = Math.abs(doubleVar);
+                    intVar = intVar;
+                }
+            }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <956, 969>
+for (int row = col; row < nRows; row++) {
+                final double[] luRow = lu[row];
+                sum = luRow[col];
+                for (int i = 0; i < col; i++) {
+                    sum -= luRow[i] * lu[i][col];
+                }
+                luRow[col] = sum;
+
+                // maintain best permutation choice
+                if (Math.abs(sum) > largest) {
+                    largest = Math.abs(sum);
+                    max = row;
+                }
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <373, 383>
+for (int row = 0; row < nRows; row++) {
+            final double[] dataRow    = data[row];
+            final double[] outDataRow = outData[row];
+            for (int col = 0; col < nCols; col++) {
+                double sum = 0;
+                for (int i = 0; i < nSum; i++) {
+                    sum += dataRow[i] * m.data[i][col];
+                }
+                outDataRow[col] = sum;
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <373, 383>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            final double[] dataRow    = doubleVar[intVar];
+            final double[] outDataRow = double[][]Var[intVar];
+            for (int col = 0; col < intVar; col++) {
+                double sum = 0;
+                for (int i = 0; i < intVar; i++) {
+                    sum += dataRow[i] * RealMatrixImpl.doubleVar[i][col];
+                }
+                outDataRow[col] = sum;
+            }
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <373, 383>
+for (int row = 0; row < nRows; row++) {
+            final double[] dataRow    = data[row];
+            final double[] outDataRow = outData[row];
+            for (int col = 0; col < nCols; col++) {
+                double sum = 0;
+                for (int i = 0; i < nSum; i++) {
+                    sum += dataRow[i] * RealMatrixImpl.data[i][col];
+                }
+                outDataRow[col] = sum;
+            }
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <167, 173>
+for (int row = 0; row < nRows; row++) {
+            for (int col = 0; col < nCols; col++) {
+                expected = (rowSum[row] * colSum[col]) / total;
+                sumSq += (((double) counts[row][col] - expected) * 
+                        ((double) counts[row][col] - expected)) / expected; 
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <167, 173>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            for (int col = 0; col < intVar; col++) {
+                doubleVar = (double[]Var[intVar] * double[]Var[col]) / doubleVar;
+                doubleVar += (((double) long[][]Var[intVar][col] - doubleVar) * 
+                        ((double) long[][]Var[intVar][col] - doubleVar)) / doubleVar; 
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <167, 173>
+for (int row = 0; row < nRows; row++) {
+            for (int col = 0; col < nCols; col++) {
+                expected = (rowSum[row] * colSum[col]) / total;
+                sumSq += (((double) counts[row][col] - expected) * 
+                        ((double) counts[row][col] - expected)) / expected; 
+            }
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <156, 162>
+for (int row = 0; row < nRows; row++) {
+            for (int col = 0; col < nCols; col++) {
+                rowSum[row] += (double) counts[row][col];
+                colSum[col] += (double) counts[row][col];
+                total += (double) counts[row][col];
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <156, 162>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            for (int col = 0; col < intVar; col++) {
+                double[]Var[intVar] += (double) long[][]Var[intVar][col];
+                double[]Var[col] += (double) long[][]Var[intVar][col];
+                doubleVar += (double) long[][]Var[intVar][col];
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <156, 162>
+for (int row = 0; row < nRows; row++) {
+            for (int col = 0; col < nCols; col++) {
+                rowSum[row] += (double) counts[row][col];
+                colSum[col] += (double) counts[row][col];
+                total += (double) counts[row][col];
+            }
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.RealMatrixImpl <1070, 1076>
+for (int row = 0; row < nRows; row++) {
+            final double[] dataRow = data[row];
+            for (int col = 0; col < nCols; col++) {
+               ret = ret * 31 + (11 * (row+1) + 17 * (col+1)) * 
+                   MathUtils.hash(dataRow[col]);
+           }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <1070, 1076>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            final double[] dataRow = doubleVar[intVar];
+            for (int col = 0; col < intVar; col++) {
+               intVar = intVar * 31 + (11 * (intVar+1) + 17 * (col+1)) * 
+                   MathUtils.hash(dataRow[col]);
+           }
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <1070, 1076>
+for (int row = 0; row < nRows; row++) {
+            final double[] dataRow = data[row];
+            for (int col = 0; col < nCols; col++) {
+               ret = ret * 31 + (11 * (row+1) + 17 * (col+1)) * 
+                   MathUtils.hash(dataRow[col]);
+           }
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1319, 1325>
+for (int row = 0; row < nRows; row++) {
+            final BigDecimal[] dataRow = data[row];
+            for (int col = 0; col < nCols; col++) {
+                ret = ret * 31 + (11 * (row+1) + 17 * (col+1)) * 
+                dataRow[col].hashCode();
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1319, 1325>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            final BigDecimal[] dataRow = BigDecimal[intVar];
+            for (int col = 0; col < intVar; col++) {
+                intVar = intVar * 31 + (11 * (intVar+1) + 17 * (col+1)) * 
+                dataRow[col].hashCode();
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1319, 1325>
+for (int row = 0; row < nRows; row++) {
+            final BigDecimal[] dataRow = BigDecimal[row];
+            for (int col = 0; col < nCols; col++) {
+                ret = ret * 31 + (11 * (row+1) + 17 * (col+1)) * 
+                dataRow[col].hashCode();
+            }
+        }
+

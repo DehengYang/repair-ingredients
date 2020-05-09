@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_105/src/java/org/apache/commons/math/stat/regression/SimpleRegression.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_105/src/java/org/apache/commons/math/stat/regression/SimpleRegression.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_105/src/java/org/apache/commons/math/stat/regression/SimpleRegression.java	2020-01-05 06:41:40.685168917 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_105/src/java/org/apache/commons/math/stat/regression/SimpleRegression.java	2020-01-05 06:41:43.053149139 -0800
+@@ -261,7 +261,7 @@
+      * @return sum of squared errors associated with the regression model
+      */
+     public double getSumSquaredErrors() {
+-        return sumYY - sumXY * sumXY / sumXX;
++        return Math.max(0d, sumYY - sumXY * sumXY / sumXX);
+     }
+ 
+     /**

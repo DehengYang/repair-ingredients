@@ -1,0 +1,17 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_48/src/java/org/apache/commons/lang/builder/EqualsBuilder.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_48/src/java/org/apache/commons/lang/builder/EqualsBuilder.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_48/src/java/org/apache/commons/lang/builder/EqualsBuilder.java	2020-01-05 05:30:08.253019749 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_48/src/java/org/apache/commons/lang/builder/EqualsBuilder.java	2020-01-05 05:30:11.696990985 -0800
+@@ -377,8 +377,12 @@
+         }
+         Class lhsClass = lhs.getClass();
+         if (!lhsClass.isArray()) {
++            if (lhs instanceof java.math.BigDecimal) {
++                isEquals = (((java.math.BigDecimal)lhs).compareTo(rhs) == 0);
++            } else {
+                 // The simple case, not an array, just test the element
+                 isEquals = lhs.equals(rhs);
++            }
+         } else if (lhs.getClass() != rhs.getClass()) {
+             // Here when we compare different dimensions, for example: a boolean[][] to a boolean[] 
+             this.setEquals(false);

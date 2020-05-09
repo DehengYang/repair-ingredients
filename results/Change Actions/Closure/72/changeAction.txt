@@ -1,0 +1,28 @@
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, OP3 OP12)
+OP3:      (INS, ClassInstanceCreation, OP2, OP4 OP5 OP6 OP7 OP11)
+OP4:         (INS, New, OP3, null)
+OP5:         (INS, SimpleType, OP3, null)
+OP6:         (INS, SimpleName, OP3, null)
+OP7:         (INS, ClassInstanceCreation, OP3, OP8 OP9 OP10)
+OP8:            (INS, New, OP7, null)
+OP9:            (INS, SimpleType, OP7, null)
+OP10:            (INS, SimpleName, OP7, null)
+OP11:         (INS, BooleanLiteral, OP3, null)
+OP12:      (INS, SimpleName, OP2, OP13 OP14)
+OP13:         (INS, NullLiteral, OP12, null)
+OP14:         (INS, SimpleName, OP12, null)
+
+
+OP1:(UPD, IfStatement, null, OP2 OP10)
+OP2:   (INS, InfixExpression, OP1, OP3 OP6 OP7)
+OP3:      (INS, QualifiedName, OP2, OP4 OP5)
+OP4:         (MOV, SimpleName, OP3, null)
+OP5:         (MOV, SimpleName, OP3, null)
+OP6:      (INS, Operator, OP2, null)
+OP7:      (INS, PrefixExpression, OP2, OP8 OP9)
+OP8:         (INS, Operator, OP7, null)
+OP9:         (INS, SimpleName, OP7, null)
+OP10:   (DEL, QualifiedName, OP1, null)
+
+

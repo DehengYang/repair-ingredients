@@ -1,0 +1,15 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_73/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_73/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_73/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java	2020-01-05 06:38:21.590831772 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_73/src/main/java/org/apache/commons/math/analysis/solvers/BrentSolver.java	2020-01-05 06:38:24.062811126 -0800
+@@ -133,6 +133,10 @@
+             return solve(f, initial, yInitial, max, yMax, initial, yInitial);
+         }
+ 
++        if (yMin * yMax > 0) {
++            throw MathRuntimeException.createIllegalArgumentException(
++                  NON_BRACKETING_MESSAGE, min, max, yMin, yMax);
++        }
+ 
+         // full Brent algorithm starting with provided initial guess
+         return solve(f, min, yMin, max, yMax, initial, yInitial);

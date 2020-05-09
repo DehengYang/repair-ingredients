@@ -1,0 +1,2366 @@
+---patch code 0--- org.joda.time.chrono.ZonedChronology <481, 481>
+return DateTimeZone.convertLocalToUTC(longVar, false, longVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <436, 436>
+return DateTimeZone.convertLocalToUTC(longVar, false);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <448, 448>
+return DateTimeZone.convertLocalToUTC(longVar, false);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <460, 460>
+return DateTimeZone.convertLocalToUTC(longVar, false);
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <481, 481>
+return DateTimeZone.convertLocalToUTC(longVar, false);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <528, 528>
+return DateTimeZone.convertLocalToUTC(longVar, false);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <540, 540>
+return DateTimeZone.convertLocalToUTC(longVar, false);
+
+---patch code ori--- org.joda.time.chrono.ZonedChronology <481, 481>
+return iZone.convertLocalToUTC(localInstant, false, instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.LenientDateTimeField <75, 75>
+return iBase.getZone().convertLocalToUTC(localInstant, false, instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.LenientDateTimeField <75, 75>
+return Chronology.getZone().convertLocalToUTC(longVar, false, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateTimeZone <943, 943>
+return convertLocalToUTC(instantLocal, strict);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateTimeZone <943, 943>
+return convertLocalToUTC(longVar, booleanVar);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ZonedChronology <364, 364>
+return iZone.convertUTCToLocal(instant);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <364, 364>
+return DateTimeZone.convertUTCToLocal(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.CachedDateTimeZone <123, 123>
+return iZone.nextTransition(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.CachedDateTimeZone <123, 123>
+return DateTimeZone.nextTransition(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.CachedDateTimeZone <127, 127>
+return iZone.previousTransition(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.CachedDateTimeZone <127, 127>
+return DateTimeZone.previousTransition(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <635, 635>
+return set(instant, text, null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDateTimeField <635, 635>
+return set(longVar, StringVar, null);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateTimeZone <728, 728>
+return getShortName(instant, null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateTimeZone <728, 728>
+return getShortName(longVar, null);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateTimeZone <768, 768>
+return getName(instant, null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateTimeZone <768, 768>
+return getName(longVar, null);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <106, 106>
+return getAsText(instant, null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDateTimeField <106, 106>
+return getAsText(longVar, null);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <180, 180>
+return getAsShortText(instant, null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDateTimeField <180, 180>
+return getAsShortText(longVar, null);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateTimeUtils <146, 148>
+if (instant == null) {
+            return DateTimeUtils.currentTimeMillis();
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateTimeUtils <164, 166>
+if (instant == null) {
+            return ISOChronology.getInstance();
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BaseChronology <326, 326>
+return FieldUtils.safeAdd(instant, add);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BaseChronology <326, 326>
+return FieldUtils.safeAdd(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.PreciseDurationField <105, 105>
+return FieldUtils.safeAdd(instant, addition);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.PreciseDurationField <105, 105>
+return FieldUtils.safeAdd(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.PreciseDurationField <110, 110>
+return FieldUtils.safeAdd(instant, addition);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.PreciseDurationField <110, 110>
+return FieldUtils.safeAdd(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.MillisDurationField <117, 117>
+return FieldUtils.safeAdd(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.MillisDurationField <117, 117>
+return FieldUtils.safeAdd(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.MillisDurationField <121, 121>
+return FieldUtils.safeAdd(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.MillisDurationField <121, 121>
+return FieldUtils.safeAdd(longVar, longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfYearDateTimeField <52, 52>
+return iChronology.getDayOfYear(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicDayOfYearDateTimeField <52, 52>
+return AssembledChronology.getDayOfYear(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ISOYearOfEraDateTimeField <83, 83>
+return super.set(instant, year);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ISOYearOfEraDateTimeField <83, 83>
+return super.set(longVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <47, 47>
+return iChronology.getDayOfMonth(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <47, 47>
+return AssembledChronology.getDayOfMonth(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <63, 63>
+return iChronology.getDaysInMonthMax(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <63, 63>
+return AssembledChronology.getDaysInMonthMax(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField <54, 54>
+return iChronology.getWeekOfWeekyear(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField <54, 54>
+return AssembledChronology.getWeekOfWeekyear(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJDayOfWeekDateTimeField <56, 56>
+return iChronology.getDayOfWeek(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJDayOfWeekDateTimeField <56, 56>
+return AssembledChronology.getDayOfWeek(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <60, 60>
+return iChronology.getWeekyear(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicWeekyearDateTimeField <60, 60>
+return AssembledChronology.getWeekyear(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <92, 92>
+return add(instant, years);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicWeekyearDateTimeField <92, 92>
+return add(longVar, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <407, 407>
+return DateTimeField.get(longVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <508, 508>
+return DateTimeField.isLeap(longVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <513, 513>
+return DateTimeField.getLeapAmount(longVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <546, 546>
+return DateTimeField.remainder(longVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <555, 555>
+return DateTimeField.getMinimumValue(longVar);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ZonedChronology <559, 559>
+return iField.getMinimumValue(instant);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <572, 572>
+return DateTimeField.getMaximumValue(longVar);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ZonedChronology <576, 576>
+return iField.getMaximumValue(instant);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJYearOfEraDateTimeField <89, 89>
+return super.set(instant, year);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJYearOfEraDateTimeField <89, 89>
+return super.set(longVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <54, 54>
+return iChronology.getYear(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicYearDateTimeField <54, 54>
+return AssembledChronology.getYear(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <63, 63>
+return set(instant, newYear);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicYearDateTimeField <63, 63>
+return set(longVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <78, 78>
+return set(instant, wrappedYear);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicYearDateTimeField <78, 78>
+return set(longVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <632, 632>
+return iGregorianField.get(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <632, 632>
+return DateTimeField.get(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <634, 634>
+return iJulianField.get(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <634, 634>
+return DateTimeField.get(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <682, 682>
+return GJChronology.this.get(partial, instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <682, 682>
+return GJChronology.AssembledChronology.get(ReadablePartial, longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <760, 760>
+return iGregorianField.isLeap(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <760, 760>
+return DateTimeField.isLeap(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <762, 762>
+return iJulianField.isLeap(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <762, 762>
+return DateTimeField.isLeap(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <768, 768>
+return iGregorianField.getLeapAmount(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <768, 768>
+return DateTimeField.getLeapAmount(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <770, 770>
+return iJulianField.getLeapAmount(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <770, 770>
+return DateTimeField.getLeapAmount(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <795, 795>
+return iJulianField.getMinimumValue(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <795, 795>
+return DateTimeField.getMinimumValue(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <818, 818>
+return iGregorianField.getMaximumValue(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <818, 818>
+return DateTimeField.getMaximumValue(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <1045, 1045>
+return iGregorianField.getMinimumValue(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1045, 1045>
+return iGregorianField.getMinimumValue(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <1047, 1047>
+return iJulianField.getMinimumValue(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1047, 1047>
+return iJulianField.getMinimumValue(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <1053, 1053>
+return iGregorianField.getMaximumValue(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1053, 1053>
+return iGregorianField.getMaximumValue(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <1055, 1055>
+return iJulianField.getMaximumValue(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1055, 1055>
+return iJulianField.getMaximumValue(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <72, 72>
+return iChronology.getMonthOfYear(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <72, 72>
+return AssembledChronology.getMonthOfYear(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <153, 153>
+return add(instant, i_months);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <153, 153>
+return add(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDate <668, 668>
+return new DateTime(instant, chrono);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.LocalDate <668, 668>
+return new DateTime(longVar, Chronology);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDate <879, 879>
+return new DateTime(instant, chrono);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.LocalDate <879, 879>
+return new DateTime(longVar, Chronology);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DecoratedDateTimeField <78, 78>
+return iField.get(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DecoratedDateTimeField <78, 78>
+return DateTimeField.get(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DecoratedDateTimeField <102, 102>
+return iField.roundFloor(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DecoratedDateTimeField <102, 102>
+return DateTimeField.roundFloor(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.StrictDateTimeField <69, 69>
+return super.set(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.StrictDateTimeField <69, 69>
+return super.set(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ImpreciseDateTimeField <182, 182>
+return ImpreciseDateTimeField.this.add(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ImpreciseDateTimeField <182, 182>
+return ImpreciseDateTimeField.BaseDateTimeField.add(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ImpreciseDateTimeField <186, 186>
+return ImpreciseDateTimeField.this.add(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ImpreciseDateTimeField <186, 186>
+return ImpreciseDateTimeField.BaseDateTimeField.add(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <96, 96>
+return iField.get(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <96, 96>
+return DateTimeField.get(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <104, 104>
+return iField.getAsText(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <104, 104>
+return DateTimeField.getAsText(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <124, 124>
+return iField.getAsShortText(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <124, 124>
+return DateTimeField.getAsShortText(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <200, 200>
+return iField.isLeap(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <200, 200>
+return DateTimeField.isLeap(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <204, 204>
+return iField.getLeapAmount(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <204, 204>
+return DateTimeField.getLeapAmount(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <216, 216>
+return iField.getMinimumValue(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <216, 216>
+return DateTimeField.getMinimumValue(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <220, 220>
+return iField.getMinimumValue(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <232, 232>
+return iField.getMaximumValue(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <232, 232>
+return DateTimeField.getMaximumValue(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <236, 236>
+return iField.getMaximumValue(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <252, 252>
+return iField.roundFloor(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <252, 252>
+return DateTimeField.roundFloor(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <256, 256>
+return iField.roundCeiling(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <256, 256>
+return DateTimeField.roundCeiling(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <260, 260>
+return iField.roundHalfFloor(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <260, 260>
+return DateTimeField.roundHalfFloor(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <264, 264>
+return iField.roundHalfCeiling(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <264, 264>
+return DateTimeField.roundHalfCeiling(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <268, 268>
+return iField.roundHalfEven(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <268, 268>
+return DateTimeField.roundHalfEven(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <272, 272>
+return iField.remainder(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <272, 272>
+return DateTimeField.remainder(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <464, 464>
+return set(instant, wrapped);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDateTimeField <464, 464>
+return set(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <619, 619>
+return set(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDateTimeField <619, 619>
+return set(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.YearMonthDay <775, 775>
+return new DateTime(instant, chrono);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.YearMonthDay <775, 775>
+return new DateTime(longVar, Chronology);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DurationField <210, 210>
+return subtract(instant, (long) value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DurationField <210, 210>
+return subtract(longVar, (long) intVar);
+
+---patch code 1--- org.joda.time.chrono.ZonedChronology <481, 481>
+return DateTimeZone.convertLocalToUTC(localInstant, false, instant);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.DurationField <210, 210>
+return subtract(instant, (long) value);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.DateTimeZoneBuilder <1524, 1524>
+return iTailZone.getNameKey(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <1524, 1524>
+return DSTZone.getNameKey(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.DateTimeZoneBuilder <1543, 1543>
+return iTailZone.getOffset(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <1543, 1543>
+return DSTZone.getOffset(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.DateTimeZoneBuilder <1562, 1562>
+return iTailZone.getStandardOffset(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <1562, 1562>
+return DSTZone.getStandardOffset(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.DateTimeZoneBuilder <1583, 1583>
+return iTailZone.nextTransition(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <1583, 1583>
+return DSTZone.nextTransition(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicChronology <590, 590>
+return getDaysInMonthMax(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicChronology <590, 590>
+return getDaysInMonthMax(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <835, 835>
+return getMaximumValue(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <835, 835>
+return getMaximumValue(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <847, 847>
+return getMaximumValue(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <847, 847>
+return getMaximumValue(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <892, 892>
+return julianToGregorianByWeekyear(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <892, 892>
+return julianToGregorianByWeekyear(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <894, 894>
+return julianToGregorianByYear(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <894, 894>
+return julianToGregorianByYear(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <900, 900>
+return gregorianToJulianByWeekyear(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <900, 900>
+return gregorianToJulianByWeekyear(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <902, 902>
+return gregorianToJulianByYear(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <902, 902>
+return gregorianToJulianByYear(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJEraDateTimeField <113, 113>
+return roundFloor(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJEraDateTimeField <113, 113>
+return roundFloor(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJEraDateTimeField <118, 118>
+return roundFloor(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJEraDateTimeField <118, 118>
+return roundFloor(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJEraDateTimeField <123, 123>
+return roundFloor(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJEraDateTimeField <123, 123>
+return roundFloor(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateMidnight <413, 413>
+return withMillis(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <413, 413>
+return withMillis(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateMidnight <442, 442>
+return withMillis(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <442, 442>
+return withMillis(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateMidnight <461, 461>
+return withMillis(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <461, 461>
+return withMillis(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateMidnight <501, 501>
+return withMillis(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <501, 501>
+return withMillis(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateMidnight <570, 570>
+return withMillis(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <570, 570>
+return withMillis(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateMidnight <594, 594>
+return withMillis(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <594, 594>
+return withMillis(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateMidnight <618, 618>
+return withMillis(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <618, 618>
+return withMillis(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateMidnight <642, 642>
+return withMillis(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <642, 642>
+return withMillis(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateMidnight <711, 711>
+return withMillis(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <711, 711>
+return withMillis(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateMidnight <735, 735>
+return withMillis(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <735, 735>
+return withMillis(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateMidnight <759, 759>
+return withMillis(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <759, 759>
+return withMillis(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateMidnight <783, 783>
+return withMillis(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <783, 783>
+return withMillis(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <79, 79>
+return add(instant, FieldUtils.safeToInt(value));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicWeekyearDateTimeField <79, 79>
+return add(longVar, FieldUtils.safeToInt(longVar));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <67, 67>
+return add(instant, FieldUtils.safeToInt(years));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicYearDateTimeField <67, 67>
+return add(longVar, FieldUtils.safeToInt(longVar));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDurationField <111, 111>
+return FieldUtils.safeToInt(getValueAsLong(duration, instant));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDurationField <111, 111>
+return FieldUtils.safeToInt(getValueAsLong(longVar, longVar));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <96, 96>
+return iChronology.getDaysInMonthMaxForSet(instant, value);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <96, 96>
+return AssembledChronology.getDaysInMonthMaxForSet(longVar, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <412, 412>
+return DateTimeField.getAsText(longVar, Locale);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <417, 417>
+return DateTimeField.getAsShortText(longVar, Locale);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ZonedChronology <563, 563>
+return iField.getMinimumValue(instant, values);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ZonedChronology <580, 580>
+return iField.getMaximumValue(instant, values);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <84, 84>
+return iChronology.setYear(instant, year);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicYearDateTimeField <84, 84>
+return AssembledChronology.setYear(longVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <562, 562>
+return convertByYear(instant, iJulianChronology, iGregorianChronology);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <562, 562>
+return convertByYear(longVar, BasicGJChronology, BasicGJChronology);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <566, 566>
+return convertByYear(instant, iGregorianChronology, iJulianChronology);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <566, 566>
+return convertByYear(longVar, BasicGJChronology, BasicGJChronology);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <570, 570>
+return convertByWeekyear(instant, iJulianChronology, iGregorianChronology);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <570, 570>
+return convertByWeekyear(longVar, BasicGJChronology, BasicGJChronology);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <574, 574>
+return convertByWeekyear(instant, iGregorianChronology, iJulianChronology);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <574, 574>
+return convertByWeekyear(longVar, BasicGJChronology, BasicGJChronology);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <640, 640>
+return iGregorianField.getAsText(instant, locale);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <640, 640>
+return DateTimeField.getAsText(longVar, Locale);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <642, 642>
+return iJulianField.getAsText(instant, locale);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <642, 642>
+return DateTimeField.getAsText(longVar, Locale);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <652, 652>
+return iGregorianField.getAsShortText(instant, locale);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <652, 652>
+return DateTimeField.getAsShortText(longVar, Locale);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <654, 654>
+return iJulianField.getAsShortText(instant, locale);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <654, 654>
+return DateTimeField.getAsShortText(longVar, Locale);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <663, 663>
+return iGregorianField.add(instant, value);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <663, 663>
+return DateTimeField.add(longVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <667, 667>
+return iGregorianField.add(instant, value);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <667, 667>
+return DateTimeField.add(longVar, longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <1075, 1075>
+return iField.add(instant, value);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1075, 1075>
+return ImpreciseCutoverField.add(longVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <1079, 1079>
+return iField.add(instant, value);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1079, 1079>
+return ImpreciseCutoverField.add(longVar, longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <215, 215>
+return iChronology.get(partial, instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <215, 215>
+return AssembledChronology.get(ReadablePartial, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.convert.AbstractConverter <102, 102>
+return chrono.get(fieldSource, instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.convert.AbstractConverter <102, 102>
+return Chronology.get(ReadablePartial, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DecoratedDateTimeField <82, 82>
+return iField.set(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DecoratedDateTimeField <82, 82>
+return DateTimeField.set(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDurationField <106, 106>
+return iField.getValue(duration, instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDurationField <106, 106>
+return DurationField.getValue(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDurationField <110, 110>
+return iField.getValueAsLong(duration, instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDurationField <110, 110>
+return DurationField.getValueAsLong(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDurationField <122, 122>
+return iField.getMillis(value, instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDurationField <122, 122>
+return DurationField.getMillis(intVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDurationField <126, 126>
+return iField.getMillis(value, instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDurationField <126, 126>
+return DurationField.getMillis(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDurationField <130, 130>
+return iField.add(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDurationField <130, 130>
+return DurationField.add(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDurationField <134, 134>
+return iField.add(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDurationField <134, 134>
+return DurationField.add(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <100, 100>
+return iField.getAsText(instant, locale);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <100, 100>
+return DateTimeField.getAsText(longVar, Locale);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <120, 120>
+return iField.getAsShortText(instant, locale);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <120, 120>
+return DateTimeField.getAsShortText(longVar, Locale);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <140, 140>
+return iField.add(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <140, 140>
+return DateTimeField.add(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <144, 144>
+return iField.add(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <144, 144>
+return DateTimeField.add(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <156, 156>
+return iField.addWrapField(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <156, 156>
+return DateTimeField.addWrapField(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <172, 172>
+return iField.set(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <172, 172>
+return DateTimeField.set(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <180, 180>
+return iField.set(instant, text);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <180, 180>
+return DateTimeField.set(longVar, StringVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <224, 224>
+return iField.getMinimumValue(instant, values);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <240, 240>
+return iField.getMaximumValue(instant, values);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DecoratedDurationField <77, 77>
+return iField.getValueAsLong(duration, instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DecoratedDurationField <77, 77>
+return DurationField.getValueAsLong(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DecoratedDurationField <81, 81>
+return iField.getMillis(value, instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DecoratedDurationField <81, 81>
+return DurationField.getMillis(intVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DecoratedDurationField <85, 85>
+return iField.getMillis(value, instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DecoratedDurationField <85, 85>
+return DurationField.getMillis(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DecoratedDurationField <89, 89>
+return iField.add(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DecoratedDurationField <89, 89>
+return DurationField.add(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DecoratedDurationField <93, 93>
+return iField.add(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DecoratedDurationField <93, 93>
+return DurationField.add(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.format.DateTimeFormatterBuilder <1735, 1735>
+return field.getAsShortText(instant, locale);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <1735, 1735>
+return DateTimeField.getAsShortText(longVar, Locale);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.format.DateTimeFormatterBuilder <1737, 1737>
+return field.getAsText(instant, locale);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <1737, 1737>
+return DateTimeField.getAsText(longVar, Locale);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.format.DateTimeFormatterBuilder <2436, 2436>
+return displayZone.getName(instant, locale);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <2436, 2436>
+return DateTimeZone.getName(longVar, Locale);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.format.DateTimeFormatterBuilder <2438, 2438>
+return displayZone.getShortName(instant, locale);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <2438, 2438>
+return DateTimeZone.getShortName(longVar, Locale);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <243, 243>
+return instant - roundFloor(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicWeekyearDateTimeField <243, 243>
+return longVar - roundFloor(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <137, 137>
+return instant - roundFloor(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicYearDateTimeField <137, 137>
+return longVar - roundFloor(longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <350, 350>
+return instant - roundFloor(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <350, 350>
+return longVar - roundFloor(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.OffsetDateTimeField <100, 100>
+return super.get(instant) + iOffset;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.OffsetDateTimeField <100, 100>
+return super.get(longVar) + intVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <994, 994>
+return instant - roundFloor(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDateTimeField <994, 994>
+return longVar - roundFloor(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DurationField <212, 212>
+return add(instant, -value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DurationField <212, 212>
+return add(longVar, -intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DurationField <227, 227>
+return add(instant, -value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DurationField <227, 227>
+return add(longVar, -longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <212, 212>
+return iChronology.getWeeksInYear(iChronology.getWeekyear(instant)) > 52;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicWeekyearDateTimeField <212, 212>
+return AssembledChronology.getWeeksInYear(AssembledChronology.getWeekyear(longVar)) > 52;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <216, 216>
+return iChronology.getWeeksInYear(iChronology.getWeekyear(instant)) - 52;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicWeekyearDateTimeField <216, 216>
+return AssembledChronology.getWeeksInYear(AssembledChronology.getWeekyear(longVar)) - 52;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ZeroIsMaxDateTimeField <177, 177>
+return getWrappedField().getMaximumValue(instant, values) + 1;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ISOYearOfEraDateTimeField <55, 55>
+return getWrappedField().add(instant, years);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ISOYearOfEraDateTimeField <55, 55>
+return getWrappedField().add(longVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ISOYearOfEraDateTimeField <59, 59>
+return getWrappedField().add(instant, years);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ISOYearOfEraDateTimeField <59, 59>
+return getWrappedField().add(longVar, longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ISOYearOfEraDateTimeField <63, 63>
+return getWrappedField().addWrapField(instant, years);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ISOYearOfEraDateTimeField <63, 63>
+return getWrappedField().addWrapField(longVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.LimitChronology <397, 397>
+return getWrappedField().getValue(duration, instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.LimitChronology <397, 397>
+return getWrappedField().getValue(longVar, longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.LimitChronology <402, 402>
+return getWrappedField().getValueAsLong(duration, instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.LimitChronology <402, 402>
+return getWrappedField().getValueAsLong(longVar, longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.LimitChronology <407, 407>
+return getWrappedField().getMillis(value, instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.LimitChronology <407, 407>
+return getWrappedField().getMillis(intVar, longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.LimitChronology <412, 412>
+return getWrappedField().getMillis(value, instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.LimitChronology <412, 412>
+return getWrappedField().getMillis(longVar, longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.LimitChronology <467, 467>
+return getWrappedField().getAsText(instant, locale);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.LimitChronology <467, 467>
+return getWrappedField().getAsText(longVar, Locale);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.LimitChronology <472, 472>
+return getWrappedField().getAsShortText(instant, locale);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.LimitChronology <472, 472>
+return getWrappedField().getAsShortText(longVar, Locale);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicChronology <477, 477>
+return getDayOfYear(instant, getYear(instant));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicChronology <477, 477>
+return getDayOfYear(longVar, getYear(longVar));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicChronology <508, 508>
+return getWeekOfWeekyear(instant, getYear(instant));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicChronology <508, 508>
+return getWeekOfWeekyear(longVar, getYear(longVar));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJYearOfEraDateTimeField <53, 53>
+return getWrappedField().add(instant, years);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJYearOfEraDateTimeField <53, 53>
+return getWrappedField().add(longVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJYearOfEraDateTimeField <57, 57>
+return getWrappedField().add(instant, years);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJYearOfEraDateTimeField <57, 57>
+return getWrappedField().add(longVar, longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJYearOfEraDateTimeField <61, 61>
+return getWrappedField().addWrapField(instant, years);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJYearOfEraDateTimeField <61, 61>
+return getWrappedField().addWrapField(longVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <99, 99>
+return iChronology.isLeapYear(get(instant));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicYearDateTimeField <99, 99>
+return AssembledChronology.isLeapYear(get(longVar));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <123, 123>
+return iChronology.getYearMillis(get(instant));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicYearDateTimeField <123, 123>
+return AssembledChronology.getYearMillis(get(longVar));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BaseChronology <105, 105>
+return millisOfDay().set(instant, millisOfDay);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BaseChronology <105, 105>
+return millisOfDay().set(longVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BaseChronology <138, 138>
+return millisOfSecond().set(instant, millisOfSecond);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BaseChronology <138, 138>
+return millisOfSecond().set(longVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BaseChronology <166, 166>
+return millisOfSecond().set(instant, millisOfSecond);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BaseChronology <166, 166>
+return millisOfSecond().set(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateMidnight <305, 305>
+return chronology.dayOfMonth().roundFloor(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <305, 305>
+return Chronology.dayOfMonth().roundFloor(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.UnsupportedDateTimeField <225, 225>
+return getDurationField().add(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.UnsupportedDateTimeField <225, 225>
+return getDurationField().add(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.UnsupportedDateTimeField <234, 234>
+return getDurationField().add(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.UnsupportedDateTimeField <234, 234>
+return getDurationField().add(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ScaledDurationField <82, 82>
+return getWrappedField().getMillis(scaled, instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ScaledDurationField <82, 82>
+return getWrappedField().getMillis(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ScaledDurationField <87, 87>
+return getWrappedField().getMillis(scaled, instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ScaledDurationField <87, 87>
+return getWrappedField().getMillis(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ScaledDurationField <92, 92>
+return getWrappedField().add(instant, scaled);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ScaledDurationField <92, 92>
+return getWrappedField().add(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ScaledDurationField <97, 97>
+return getWrappedField().add(instant, scaled);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ScaledDurationField <97, 97>
+return getWrappedField().add(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <94, 94>
+return getAsText(get(instant), locale);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDateTimeField <94, 94>
+return getAsText(get(longVar), Locale);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <168, 168>
+return getAsShortText(get(instant), locale);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDateTimeField <168, 168>
+return getAsShortText(get(longVar), Locale);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <253, 253>
+return getDurationField().add(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDateTimeField <253, 253>
+return getDurationField().add(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <267, 267>
+return getDurationField().add(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDateTimeField <267, 267>
+return getDurationField().add(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ZeroIsMaxDateTimeField <60, 60>
+return getWrappedField().add(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ZeroIsMaxDateTimeField <60, 60>
+return getWrappedField().add(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ZeroIsMaxDateTimeField <64, 64>
+return getWrappedField().add(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ZeroIsMaxDateTimeField <64, 64>
+return getWrappedField().add(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ZeroIsMaxDateTimeField <68, 68>
+return getWrappedField().addWrapField(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ZeroIsMaxDateTimeField <68, 68>
+return getWrappedField().addWrapField(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ZeroIsMaxDateTimeField <89, 89>
+return getWrappedField().set(instant, value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ZeroIsMaxDateTimeField <89, 89>
+return getWrappedField().set(longVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.CachedDateTimeZone <107, 107>
+return getInfo(instant).getNameKey(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.CachedDateTimeZone <107, 107>
+return getInfo(longVar).getNameKey(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.CachedDateTimeZone <111, 111>
+return getInfo(instant).getOffset(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.CachedDateTimeZone <111, 111>
+return getInfo(longVar).getOffset(longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.CachedDateTimeZone <115, 115>
+return getInfo(instant).getStandardOffset(instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.CachedDateTimeZone <115, 115>
+return getInfo(longVar).getStandardOffset(longVar);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ZonedChronology <302, 302>
+return iField.getValue(duration, addOffset(instant));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <302, 302>
+return DurationField.getValue(longVar, addOffset(longVar));
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ZonedChronology <306, 306>
+return iField.getValueAsLong(duration, addOffset(instant));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <306, 306>
+return DurationField.getValueAsLong(longVar, addOffset(longVar));
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ZonedChronology <310, 310>
+return iField.getMillis(value, addOffset(instant));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <310, 310>
+return DurationField.getMillis(intVar, addOffset(longVar));
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ZonedChronology <314, 314>
+return iField.getMillis(value, addOffset(instant));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <314, 314>
+return DurationField.getMillis(longVar, addOffset(longVar));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJEraDateTimeField <85, 85>
+return iChronology.setYear(instant, -year);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJEraDateTimeField <85, 85>
+return AssembledChronology.setYear(longVar, -intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.OffsetDateTimeField <153, 153>
+return super.set(instant, value - iOffset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.OffsetDateTimeField <153, 153>
+return super.set(longVar, intVar - intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ImpreciseDateTimeField <164, 165>
+return ImpreciseDateTimeField.this
+                .getDifference(instant + duration, instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ImpreciseDateTimeField <164, 165>
+return ImpreciseDateTimeField.this
+                .getDifference(longVar + longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ImpreciseDateTimeField <169, 170>
+return ImpreciseDateTimeField.this
+                .getDifferenceAsLong(instant + duration, instant);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ImpreciseDateTimeField <169, 170>
+return ImpreciseDateTimeField.this
+                .getDifferenceAsLong(longVar + longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ImpreciseDateTimeField <174, 174>
+return ImpreciseDateTimeField.this.add(instant, value) - instant;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ImpreciseDateTimeField <174, 174>
+return ImpreciseDateTimeField.BaseDateTimeField.add(longVar, intVar) - longVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ImpreciseDateTimeField <178, 178>
+return ImpreciseDateTimeField.this.add(instant, value) - instant;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ImpreciseDateTimeField <178, 178>
+return ImpreciseDateTimeField.BaseDateTimeField.add(longVar, longVar) - longVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.RemainderDateTimeField <118, 118>
+return set(instant, FieldUtils.getWrappedValue(get(instant), amount, 0, iDivisor - 1));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.RemainderDateTimeField <118, 118>
+return set(longVar, FieldUtils.getWrappedValue(get(longVar), intVar, 0, intVar - 1));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <103, 107>
+if (iChronology.isLeapYear(get(instant))) {
+            return 1;
+        } else {
+            return 0;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicYearDateTimeField <103, 107>
+if (AssembledChronology.isLeapYear(get(longVar))) {
+            return 1;
+        } else {
+            return 0;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJEraDateTimeField <92, 92>
+return set(instant, GJLocaleSymbols.forLocale(locale).eraTextToValue(text));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJEraDateTimeField <92, 92>
+return set(longVar, GJLocaleSymbols.forLocale(Locale).eraTextToValue(StringVar));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <176, 176>
+return iField.set(instant, text, locale);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <176, 176>
+return DateTimeField.set(longVar, StringVar, Locale);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <498, 498>
+return set(instant, fieldIndex, values, wrapped);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <655, 655>
+return set(instant, fieldIndex, values, value);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.DateTimeZoneBuilder <761, 761>
+return iOfYear.next(instant, standardOffset, saveMillis);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <761, 761>
+return OfYear.next(longVar, intVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.DateTimeZoneBuilder <768, 768>
+return iOfYear.previous(instant, standardOffset, saveMillis);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <768, 768>
+return OfYear.previous(longVar, intVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField <111, 111>
+return value > 52 ? getMaximumValue(instant) : 52;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField <111, 111>
+return intVar > 52 ? getMaximumValue(longVar) : 52;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicGJChronology <134, 134>
+return (value > 28 ? getDaysInMonthMax(instant) : 28);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicGJChronology <134, 134>
+return (intVar > 28 ? getDaysInMonthMax(longVar) : 28);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ISOYearOfEraDateTimeField <67, 67>
+return getWrappedField().addWrapField(instant, fieldIndex, values, years);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJYearOfEraDateTimeField <65, 65>
+return getWrappedField().addWrapField(instant, fieldIndex, values, years);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ZeroIsMaxDateTimeField <72, 72>
+return getWrappedField().addWrapField(instant, fieldIndex, values, valueToAdd);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <75, 75>
+return set(instant, get(instant) + years);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicWeekyearDateTimeField <75, 75>
+return set(longVar, get(longVar) + intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicChronology <517, 519>
+if (instant < firstWeekMillis1) {
+            return getWeeksInYear(year - 1);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicChronology <517, 519>
+if (longVar < longVar) {
+            return getWeeksInYear(intVar - 1);
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DividedDateTimeField <129, 129>
+return getWrappedField().add(instant, amount * iDivisor);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DividedDateTimeField <129, 129>
+return getWrappedField().add(longVar, intVar * intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DividedDateTimeField <141, 141>
+return getWrappedField().add(instant, amount * iDivisor);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DividedDateTimeField <141, 141>
+return getWrappedField().add(longVar, longVar * intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ScaledDurationField <63, 63>
+return getWrappedField().getValue(duration, instant) / iScalar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ScaledDurationField <63, 63>
+return getWrappedField().getValue(longVar, longVar) / intVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.ScaledDurationField <67, 67>
+return getWrappedField().getValueAsLong(duration, instant) / iScalar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ScaledDurationField <67, 67>
+return getWrappedField().getValueAsLong(longVar, longVar) / intVar;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <232, 232>
+return set(instant, FieldUtils.getWrappedValue(get(instant), months, MIN, iMax));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <232, 232>
+return set(longVar, FieldUtils.getWrappedValue(get(longVar), intVar, intVar, intVar));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.DateTimeZoneBuilder <1092, 1095>
+if (next <= instant) {
+                    it.remove();
+                    continue;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <1092, 1095>
+if (longVar <= longVar) {
+                    Iterator.remove();
+                    continue;
+                }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <316, 316>
+return (iChronology.getMonthOfYear(instant, thisYear) == iLeapMonth);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <316, 316>
+return (AssembledChronology.getMonthOfYear(longVar, intVar) == intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.AssembledChronology <151, 152>
+return super.getDateTimeMillis
+            (instant, hourOfDay, minuteOfHour, secondOfMinute, millisOfSecond);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.AssembledChronology <151, 152>
+return super.getDateTimeMillis
+            (longVar, intVar, intVar, intVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <148, 148>
+return iField.add(instant, fieldIndex, values, valueToAdd);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <152, 152>
+return iField.addWrapPartial(instant, fieldIndex, values, valueToAdd);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <160, 160>
+return iField.addWrapField(instant, fieldIndex, values, valueToAdd);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <184, 184>
+return iField.set(instant, fieldIndex, values, newValue);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ZonedChronology <320, 320>
+return instant - (iTimeField ? offset : getOffsetFromLocalToSubtract(instant));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <320, 320>
+return longVar - (booleanVar ? intVar : getOffsetFromLocalToSubtract(longVar));
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ZonedChronology <326, 326>
+return instant - (iTimeField ? offset : getOffsetFromLocalToSubtract(instant));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <326, 326>
+return longVar - (booleanVar ? intVar : getOffsetFromLocalToSubtract(longVar));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DividedDateTimeField <153, 153>
+return set(instant, FieldUtils.getWrappedValue(get(instant), amount, iMin, iMax));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DividedDateTimeField <153, 153>
+return set(longVar, FieldUtils.getWrappedValue(get(longVar), intVar, intVar, intVar));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.OffsetDateTimeField <140, 140>
+return set(instant, FieldUtils.getWrappedValue(get(instant), amount, iMin, iMax));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.OffsetDateTimeField <140, 140>
+return set(longVar, FieldUtils.getWrappedValue(get(longVar), intVar, intVar, intVar));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <348, 348>
+return set(instant, fieldIndex, values, values[fieldIndex]);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <433, 433>
+return set(instant, fieldIndex, values, values[fieldIndex]);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.BaseDateTimeField <887, 889>
+if (newInstant != instant) {
+            instant = add(newInstant, 1);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDateTimeField <887, 889>
+if (longVar != longVar) {
+            longVar = add(longVar, 1);
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DividedDateTimeField <205, 205>
+return field.roundFloor(field.set(instant, get(instant) * iDivisor));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DividedDateTimeField <205, 205>
+return DateTimeField.roundFloor(DateTimeField.set(longVar, get(longVar) * intVar));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.AssembledChronology <148, 149>
+return base.getDateTimeMillis
+                (instant, hourOfDay, minuteOfHour, secondOfMinute, millisOfSecond);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.AssembledChronology <148, 149>
+return Chronology.getDateTimeMillis
+                (longVar, intVar, intVar, intVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DelegatedDateTimeField <188, 188>
+return iField.set(instant, fieldIndex, values, text, locale);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <303, 304>
+return iChronology.getYearMonthDayMillis(thisYear, month, thisDom) +
+            iChronology.getMillisOfDay(instant);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <303, 304>
+return AssembledChronology.getYearMonthDayMillis(intVar, intVar, intVar) +
+            AssembledChronology.getMillisOfDay(longVar);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ZonedChronology <142, 146>
+if (offset != zone.getOffset(instant)) {
+            throw new IllegalArgumentException
+                ("Illegal instant due to time zone offset transition: " +
+                    DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSS").print(new Instant(instant)));
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <142, 146>
+if (intVar != DateTimeZone.getOffset(longVar)) {
+            throw new IllegalArgumentException
+                ("Illegal instant due to time zone offset transition: " +
+                    DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSS").print(new Instant(longVar)));
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJYearOfEraDateTimeField <86, 88>
+if (iChronology.getYear(instant) <= 0) {
+            year = 1 - year;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJYearOfEraDateTimeField <86, 88>
+if (AssembledChronology.getYear(longVar) <= 0) {
+            intVar = 1 - intVar;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.DividedDateTimeField <175, 175>
+return getWrappedField().set(instant, value * iDivisor + remainder);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DividedDateTimeField <175, 175>
+return getWrappedField().set(longVar, intVar * intVar + intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.RemainderDateTimeField <132, 132>
+return getWrappedField().set(instant, divided * iDivisor + value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.RemainderDateTimeField <132, 132>
+return getWrappedField().set(longVar, intVar * intVar + intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.LimitChronology <285, 287>
+if ((limit = iLowerLimit) != null && instant < limit.getMillis()) {
+            throw new LimitException(desc, true);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.LimitChronology <285, 287>
+if ((BaseDateTime = BaseDateTime) != null && longVar < BaseDateTime.getMillis()) {
+            throw new LimitException(StringVar, true);
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.LimitChronology <288, 290>
+if ((limit = iUpperLimit) != null && instant >= limit.getMillis()) {
+            throw new LimitException(desc, false);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.LimitChronology <288, 290>
+if ((BaseDateTime = BaseDateTime) != null && longVar >= BaseDateTime.getMillis()) {
+            throw new LimitException(StringVar, false);
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfYearDateTimeField <93, 93>
+return (value > maxLessOne || value < 1) ? getMaximumValue(instant) : maxLessOne;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicDayOfYearDateTimeField <93, 93>
+return (intVar > intVar || intVar < 1) ? getMaximumValue(longVar) : intVar;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <129, 132>
+if (instant != yearStartMillis) {
+            // Bump up to start of next year.
+            instant = iChronology.getYearMillis(year + 1);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicYearDateTimeField <129, 132>
+if (longVar != longVar) {
+            // Bump up to start of next year.
+            longVar = AssembledChronology.getYearMillis(intVar + 1);
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <826, 828>
+if (instant >= iCutover) {
+                max = iJulianField.get(iJulianField.add(iCutover, -1));
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <826, 828>
+if (longVar >= longVar) {
+                intVar = DateTimeField.get(DateTimeField.add(longVar, -1));
+            }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.DateTimeZoneBuilder <849, 853>
+if (instant == Long.MIN_VALUE) {
+                year = Integer.MIN_VALUE;
+            } else {
+                year = chrono.year().get(instant + wallOffset);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <849, 853>
+if (longVar == Long.MIN_VALUE) {
+                intVar = Integer.MIN_VALUE;
+            } else {
+                intVar = Chronology.year().get(longVar + intVar);
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <803, 805>
+if (instant < iCutover) {
+                min = iGregorianField.get(iCutover);
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <803, 805>
+if (longVar < longVar) {
+                intVar = DateTimeField.get(longVar);
+            }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.ZonedChronology <129, 131>
+return localToUTC(getBase().getDateTimeMillis
+                          (instant + getZone().getOffset(instant),
+                           hourOfDay, minuteOfHour, secondOfMinute, millisOfSecond));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <129, 131>
+return localToUTC(getBase().getDateTimeMillis
+                          (longVar + getZone().getOffset(longVar),
+                           intVar, intVar, intVar, intVar));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.DateTimeZoneBuilder <568, 571>
+if (next <= instant) {
+                    next = chrono.year().add(next, 1);
+                    next = setDayOfMonthNext(chrono, next);
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <568, 571>
+if (longVar <= longVar) {
+                    longVar = Chronology.year().add(longVar, 1);
+                    longVar = setDayOfMonthNext(Chronology, longVar);
+                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.format.DateTimeParserBucket <367, 374>
+if (offset != iZone.getOffset(millis)) {
+                String message =
+                    "Illegal instant due to time zone offset transition (" + iZone + ')';
+                if (text != null) {
+                    message = "Cannot parse \"" + text + "\": " + message;
+                }
+                throw new IllegalArgumentException(message);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.format.DateTimeParserBucket <367, 374>
+if (intVar != DateTimeZone.getOffset(longVar)) {
+                String message =
+                    "Illegal instant due to time zone offset transition (" + DateTimeZone + ')';
+                if (StringVar != null) {
+                    message = "Cannot parse \"" + StringVar + "\": " + message;
+                }
+                throw new IllegalArgumentException(message);
+            }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.DateTimeZoneBuilder <610, 613>
+if (prev >= instant) {
+                    prev = chrono.year().add(prev, -1);
+                    prev = setDayOfMonthPrevious(chrono, prev);
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <610, 613>
+if (longVar >= longVar) {
+                    longVar = Chronology.year().add(longVar, -1);
+                    longVar = setDayOfMonthPrevious(Chronology, longVar);
+                }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <338, 346>
+if (instant < iCutoverMillis) {
+            // Maybe it's Julian.
+            instant = iJulianChronology.getDateTimeMillis
+                (year, monthOfYear, dayOfMonth, millisOfDay);
+            if (instant >= iCutoverMillis) {
+                // Okay, it's in the illegal cutover gap.
+                throw new IllegalArgumentException("Specified date does not exist");
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <338, 346>
+if (longVar < longVar) {
+            // Maybe it's Julian.
+            longVar = BasicGJChronology.getDateTimeMillis
+                (intVar, intVar, intVar, intVar);
+            if (longVar >= longVar) {
+                // Okay, it's in the illegal cutover gap.
+                throw new IllegalArgumentException("Specified date does not exist");
+            }
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <699, 709>
+if (instant < iCutover) {
+                    // Only adjust if gap fully crossed.
+                    if (instant + iGapDuration < iCutover) {
+                        instant = gregorianToJulian(instant);
+                    }
+                    // Verify that new value stuck.
+                    if (get(instant) != value) {
+                        throw new IllegalFieldValueException
+                            (iGregorianField.getType(), new Integer(value), null, null);
+                    }
+                }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <699, 709>
+if (longVar < longVar) {
+                    // Only adjust if gap fully crossed.
+                    if (longVar + iGapDuration < longVar) {
+                        longVar = gregorianToJulian(longVar);
+                    }
+                    // Verify that new value stuck.
+                    if (get(longVar) != intVar) {
+                        throw new IllegalFieldValueException
+                            (DateTimeField.getType(), new Integer(intVar), null, null);
+                    }
+                }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <712, 722>
+if (instant >= iCutover) {
+                    // Only adjust if gap fully crossed.
+                    if (instant - iGapDuration >= iCutover) {
+                        instant = julianToGregorian(instant);
+                    }
+                    // Verify that new value stuck.
+                    if (get(instant) != value) {
+                       throw new IllegalFieldValueException
+                            (iJulianField.getType(), new Integer(value), null, null);
+                    }
+                }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <712, 722>
+if (longVar >= longVar) {
+                    // Only adjust if gap fully crossed.
+                    if (longVar - iGapDuration >= longVar) {
+                        longVar = julianToGregorian(longVar);
+                    }
+                    // Verify that new value stuck.
+                    if (get(longVar) != intVar) {
+                       throw new IllegalFieldValueException
+                            (DateTimeField.getType(), new Integer(intVar), null, null);
+                    }
+                }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <366, 375>
+if (instant < iCutoverMillis) {
+            // Maybe it's Julian.
+            instant = iJulianChronology.getDateTimeMillis
+                (year, monthOfYear, dayOfMonth,
+                 hourOfDay, minuteOfHour, secondOfMinute, millisOfSecond);
+            if (instant >= iCutoverMillis) {
+                // Okay, it's in the illegal cutover gap.
+                throw new IllegalArgumentException("Specified date does not exist");
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <366, 375>
+if (longVar < longVar) {
+            // Maybe it's Julian.
+            longVar = BasicGJChronology.getDateTimeMillis
+                (intVar, intVar, intVar,
+                 intVar, intVar, intVar, intVar);
+            if (longVar >= longVar) {
+                // Okay, it's in the illegal cutover gap.
+                throw new IllegalArgumentException("Specified date does not exist");
+            }
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <843, 845>
+if (values[i] <= field.getMaximumValue(instant)) {
+                    instant = field.set(instant, values[i]);
+                }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <843, 845>
+if (int[]Var[intVar] <= DateTimeField.getMaximumValue(longVar)) {
+                    longVar = DateTimeField.set(longVar, int[]Var[intVar]);
+                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.DateTimeZoneBuilder <574, 579>
+if (next <= instant) {
+                    next = chrono.year().add(next, 1);
+                    next = chrono.monthOfYear().set(next, iMonthOfYear);
+                    next = setDayOfMonthNext(chrono, next);
+                    next = setDayOfWeek(chrono, next);
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <574, 579>
+if (longVar <= longVar) {
+                    longVar = Chronology.year().add(longVar, 1);
+                    longVar = Chronology.monthOfYear().set(longVar, intVar);
+                    longVar = setDayOfMonthNext(Chronology, longVar);
+                    longVar = setDayOfWeek(Chronology, longVar);
+                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.DateTimeZoneBuilder <865, 871>
+if (next > instant) {
+                year = chrono.year().get(next + wallOffset);
+                if (year > iToYear) {
+                    // Out of range, return original value.
+                    next = instant;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <865, 871>
+if (longVar > longVar) {
+                intVar = Chronology.year().get(longVar + intVar);
+                if (intVar > intVar) {
+                    // Out of range, return original value.
+                    longVar = longVar;
+                }
+            }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.tz.DateTimeZoneBuilder <616, 621>
+if (prev >= instant) {
+                    prev = chrono.year().add(prev, -1);
+                    prev = chrono.monthOfYear().set(prev, iMonthOfYear);
+                    prev = setDayOfMonthPrevious(chrono, prev);
+                    prev = setDayOfWeek(chrono, prev);
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <616, 621>
+if (longVar >= longVar) {
+                    longVar = Chronology.year().add(longVar, -1);
+                    longVar = Chronology.monthOfYear().set(longVar, intVar);
+                    longVar = setDayOfMonthPrevious(Chronology, longVar);
+                    longVar = setDayOfWeek(Chronology, longVar);
+                }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <83, 87>
+return to.getDateTimeMillis
+            (from.year().get(instant),
+             from.monthOfYear().get(instant),
+             from.dayOfMonth().get(instant),
+             from.millisOfDay().get(instant));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <83, 87>
+return Chronology.getDateTimeMillis
+            (Chronology.year().get(longVar),
+             Chronology.monthOfYear().get(longVar),
+             Chronology.dayOfMonth().get(longVar),
+             Chronology.millisOfDay().get(longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.convert.CalendarConverter <104, 104>
+return GJChronology.getInstance(DateTimeZone, longVar, 4);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.convert.StringConverter <140, 140>
+return FieldUtils.safeAdd(FieldUtils.safeMultiply(longVar, 1000), longVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <851, 861>
+if (instant >= iCutover) {
+                instant = iGregorianField.roundFloor(instant);
+                if (instant < iCutover) {
+                    // Only adjust if gap fully crossed.
+                    if (instant + iGapDuration < iCutover) {
+                        instant = gregorianToJulian(instant);
+                    }
+                }
+            } else {
+                instant = iJulianField.roundFloor(instant);
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <851, 861>
+if (longVar >= longVar) {
+                longVar = DateTimeField.roundFloor(longVar);
+                if (longVar < longVar) {
+                    // Only adjust if gap fully crossed.
+                    if (longVar + iGapDuration < longVar) {
+                        longVar = gregorianToJulian(longVar);
+                    }
+                }
+            } else {
+                longVar = DateTimeField.roundFloor(longVar);
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <866, 876>
+if (instant >= iCutover) {
+                instant = iGregorianField.roundCeiling(instant);
+            } else {
+                instant = iJulianField.roundCeiling(instant);
+                if (instant >= iCutover) {
+                    // Only adjust if gap fully crossed.
+                    if (instant - iGapDuration >= iCutover) {
+                        instant = julianToGregorian(instant);
+                    }
+                }
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <866, 876>
+if (longVar >= longVar) {
+                longVar = DateTimeField.roundCeiling(longVar);
+            } else {
+                longVar = DateTimeField.roundCeiling(longVar);
+                if (longVar >= longVar) {
+                    // Only adjust if gap fully crossed.
+                    if (longVar - iGapDuration >= longVar) {
+                        longVar = julianToGregorian(longVar);
+                    }
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.convert.StringConverter <138, 138>
+return FieldUtils.safeAdd(FieldUtils.safeMultiply(longVar, 1000), -longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicChronology <450, 450>
+return getDayOfMonth(longVar, intVar, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicChronology <459, 459>
+return getDayOfMonth(longVar, intVar, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicYearDateTimeField <91, 91>
+return AssembledChronology.getYearDifference(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <689, 689>
+return DateTimeField.getDifference(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <693, 693>
+return DateTimeField.getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <996, 996>
+return iGregorianField.getDifference(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1001, 1001>
+return iJulianField.getDifference(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1004, 1004>
+return iJulianField.getDifference(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1009, 1009>
+return iGregorianField.getDifference(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1016, 1016>
+return iGregorianField.getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1021, 1021>
+return iJulianField.getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1024, 1024>
+return iJulianField.getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1029, 1029>
+return iGregorianField.getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1083, 1083>
+return ImpreciseCutoverField.getDifference(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <1087, 1087>
+return ImpreciseCutoverField.getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <841, 841>
+return new Interval(longVar, longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.convert.StringConverter <88, 88>
+return Chronology.get(ReadablePartial, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDurationField <138, 138>
+return DurationField.getDifference(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDurationField <142, 142>
+return DurationField.getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.PreciseDurationField <100, 100>
+return FieldUtils.safeMultiply(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <164, 164>
+return DateTimeField.getDifference(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDateTimeField <168, 168>
+return DateTimeField.getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.MillisDurationField <129, 129>
+return FieldUtils.safeSubtract(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DecoratedDurationField <97, 97>
+return DurationField.getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Interval <429, 429>
+return new Interval(longVar, longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Interval <447, 447>
+return new Interval(longVar, longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Interval <465, 465>
+return new Interval(longVar, longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Interval <482, 482>
+return new Interval(longVar, longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <1124, 1124>
+return new Transition(longVar, Rule, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.MillisDurationField <125, 125>
+return FieldUtils.safeToInt(FieldUtils.safeSubtract(longVar, longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.LocalDate <754, 754>
+return new DateTime(longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.SkipUndoDateTimeField <91, 91>
+return super.set(longVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDurationField <98, 98>
+return DurationField.getValue(longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDurationField <102, 102>
+return DurationField.getValueAsLong(longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDurationField <118, 118>
+return DurationField.getMillis(longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ImpreciseDateTimeField <190, 191>
+return ImpreciseDateTimeField.this
+                .getDifference(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ImpreciseDateTimeField <195, 196>
+return ImpreciseDateTimeField.this
+                .getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.FieldUtils <200, 200>
+return FieldUtils.safeToInt(longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.MillisDurationField <85, 85>
+return FieldUtils.safeToInt(longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.MillisDurationField <93, 93>
+return FieldUtils.safeToInt(longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.SkipDateTimeField <96, 96>
+return super.set(longVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.TimeOfDay <184, 184>
+return new TimeOfDay(longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.TimeOfDay <846, 846>
+return new DateTime(longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.YearMonthDay <714, 714>
+return new DateTime(longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.base.AbstractPartial <243, 243>
+return new DateTime(longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.base.BasePeriod <345, 345>
+return new Duration(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.base.BasePeriod <369, 369>
+return new Duration(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.format.DateTimeFormatter <808, 808>
+return new LocalDateTime(longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.format.DateTimeFormatter <847, 847>
+return new DateTime(longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.format.DateTimeFormatter <886, 886>
+return new MutableDateTime(longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.LocalTime <161, 161>
+return new LocalTime(longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.LocalTime <1233, 1233>
+return new DateTime(longVar, Chronology);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.LocalTime <1423, 1423>
+return BaseLocal.withLocalMillis(longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.CachedDateTimeZone <200, 200>
+return Info.getNameKey(longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.CachedDateTimeZone <210, 210>
+return Info.getOffset(longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.CachedDateTimeZone <220, 220>
+return Info.getStandardOffset(longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <1013, 1014>
+return new Transition(longVar, StringVar,
+                                      intVar + intVar, intVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <952, 968>
+if (instant >= iCutover) {
+                instant = iGregorianField.add(instant, value);
+                if (instant < iCutover) {
+                    // Only adjust if gap fully crossed.
+                    if (instant + iGapDuration < iCutover) {
+                        instant = gregorianToJulian(instant);
+                    }
+                }
+            } else {
+                instant = iJulianField.add(instant, value);
+                if (instant >= iCutover) {
+                    // Only adjust if gap fully crossed.
+                    if (instant - iGapDuration >= iCutover) {
+                        instant = julianToGregorian(instant);
+                    }
+                }
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <952, 968>
+if (longVar >= iCutover) {
+                longVar = iGregorianField.add(longVar, intVar);
+                if (longVar < iCutover) {
+                    // Only adjust if gap fully crossed.
+                    if (longVar + iGapDuration < iCutover) {
+                        longVar = gregorianToJulian(longVar);
+                    }
+                }
+            } else {
+                longVar = iJulianField.add(longVar, intVar);
+                if (longVar >= iCutover) {
+                    // Only adjust if gap fully crossed.
+                    if (longVar - iGapDuration >= iCutover) {
+                        longVar = julianToGregorian(longVar);
+                    }
+                }
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <973, 989>
+if (instant >= iCutover) {
+                instant = iGregorianField.add(instant, value);
+                if (instant < iCutover) {
+                    // Only adjust if gap fully crossed.
+                    if (instant + iGapDuration < iCutover) {
+                        instant = gregorianToJulian(instant);
+                    }
+                }
+            } else {
+                instant = iJulianField.add(instant, value);
+                if (instant >= iCutover) {
+                    // Only adjust if gap fully crossed.
+                    if (instant - iGapDuration >= iCutover) {
+                        instant = julianToGregorian(instant);
+                    }
+                }
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <973, 989>
+if (longVar >= iCutover) {
+                longVar = iGregorianField.add(longVar, longVar);
+                if (longVar < iCutover) {
+                    // Only adjust if gap fully crossed.
+                    if (longVar + iGapDuration < iCutover) {
+                        longVar = gregorianToJulian(longVar);
+                    }
+                }
+            } else {
+                longVar = iJulianField.add(longVar, longVar);
+                if (longVar >= iCutover) {
+                    // Only adjust if gap fully crossed.
+                    if (longVar - iGapDuration >= iCutover) {
+                        longVar = julianToGregorian(longVar);
+                    }
+                }
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJChronology <728, 746>
+if (instant >= iCutover) {
+                instant = iGregorianField.set(instant, text, locale);
+                if (instant < iCutover) {
+                    // Only adjust if gap fully crossed.
+                    if (instant + iGapDuration < iCutover) {
+                        instant = gregorianToJulian(instant);
+                    }
+                    // Cannot verify that new value stuck because set may be lenient.
+                }
+            } else {
+                instant = iJulianField.set(instant, text, locale);
+                if (instant >= iCutover) {
+                    // Only adjust if gap fully crossed.
+                    if (instant - iGapDuration >= iCutover) {
+                        instant = julianToGregorian(instant);
+                    }
+                    // Cannot verify that new value stuck because set may be lenient.
+                }
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJChronology <728, 746>
+if (longVar >= longVar) {
+                longVar = DateTimeField.set(longVar, StringVar, Locale);
+                if (longVar < longVar) {
+                    // Only adjust if gap fully crossed.
+                    if (longVar + iGapDuration < longVar) {
+                        longVar = gregorianToJulian(longVar);
+                    }
+                    // Cannot verify that new value stuck because set may be lenient.
+                }
+            } else {
+                longVar = DateTimeField.set(longVar, StringVar, Locale);
+                if (longVar >= longVar) {
+                    // Only adjust if gap fully crossed.
+                    if (longVar - iGapDuration >= longVar) {
+                        longVar = julianToGregorian(longVar);
+                    }
+                    // Cannot verify that new value stuck because set may be lenient.
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDurationField <141, 141>
+return FieldUtils.safeToInt(getDifferenceAsLong(longVar, longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ImpreciseDateTimeField <91, 91>
+return FieldUtils.safeToInt(getDifferenceAsLong(longVar, longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Period <1318, 1318>
+return Weeks.weeks(FieldUtils.safeToInt(longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Period <1349, 1349>
+return Days.days(FieldUtils.safeToInt(longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Period <1380, 1380>
+return Hours.hours(FieldUtils.safeToInt(longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Period <1411, 1411>
+return Minutes.minutes(FieldUtils.safeToInt(longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Period <1441, 1441>
+return Seconds.seconds(FieldUtils.safeToInt(longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Duration <311, 311>
+return Days.days(FieldUtils.safeToInt(longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Duration <328, 328>
+return Hours.hours(FieldUtils.safeToInt(longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Duration <345, 345>
+return Minutes.minutes(FieldUtils.safeToInt(longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Duration <361, 361>
+return Seconds.seconds(FieldUtils.safeToInt(longVar));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicYearDateTimeField <89, 89>
+return -AssembledChronology.getYearDifference(longVar, longVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.DateTimeZone <1021, 1021>
+return instantLocal - newZone.getOffsetFromLocal(instantLocal);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateTimeZone <1021, 1021>
+return longVar - DateTimeZone.getOffsetFromLocal(longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.base.BaseSingleFieldPeriod <145, 145>
+return FieldUtils.safeToInt(longVar / longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Duration <84, 84>
+return new Duration(FieldUtils.safeMultiply(longVar, DateTimeConstants.MILLIS_PER_DAY));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Duration <107, 107>
+return new Duration(FieldUtils.safeMultiply(longVar, DateTimeConstants.MILLIS_PER_HOUR));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Duration <130, 130>
+return new Duration(FieldUtils.safeMultiply(longVar, DateTimeConstants.MILLIS_PER_MINUTE));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Duration <152, 152>
+return new Duration(FieldUtils.safeMultiply(longVar, DateTimeConstants.MILLIS_PER_SECOND));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicChronology <758, 758>
+return set(longVar, GJLocaleSymbols.forLocale(Locale).halfdayTextToValue(StringVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <1258, 1258>
+return BaseDateTime.withMillis(DateTimeField.add(BaseDateTime.getMillis(), longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateTime <2016, 2016>
+return BaseDateTime.withMillis(DateTimeField.add(BaseDateTime.getMillis(), longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.LocalDateTime <2102, 2102>
+return BaseLocal.withLocalMillis(DateTimeField.add(BaseLocal.getLocalMillis(), longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.LocalTime <1402, 1402>
+return BaseLocal.withLocalMillis(DateTimeField.add(BaseLocal.getLocalMillis(), longVar));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <331, 333>
+return DurationField.getDifference
+                (longVar + (booleanVar ? intVar : getOffsetToAdd(longVar)),
+                 longVar + intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <338, 340>
+return DurationField.getDifferenceAsLong
+                (longVar + (booleanVar ? intVar : getOffsetToAdd(longVar)),
+                 longVar + intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <486, 488>
+return DateTimeField.getDifference
+                (longVar + (booleanVar ? intVar : getOffsetToAdd(longVar)),
+                 longVar + intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <493, 495>
+return DateTimeField.getDifferenceAsLong
+                (longVar + (booleanVar ? intVar : getOffsetToAdd(longVar)),
+                 longVar + intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DividedDateTimeField <157, 157>
+return getWrappedField().getDifference(longVar, longVar) / intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DividedDateTimeField <161, 161>
+return getWrappedField().getDifferenceAsLong(longVar, longVar) / intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ScaledDurationField <101, 101>
+return getWrappedField().getDifference(longVar, longVar) / intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ScaledDurationField <105, 105>
+return getWrappedField().getDifferenceAsLong(longVar, longVar) / intVar;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicWeekyearDateTimeField <97, 97>
+return -getDifference(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <238, 238>
+return -getDifference(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ImpreciseDateTimeField <119, 119>
+return -getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateTimeUtils <447, 447>
+return System.currentTimeMillis() + longVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <932, 935>
+return longVar > Transition.longVar &&
+                (intVar != Transition.intVar ||
+                 //iStandardOffset != other.iStandardOffset ||
+                 !(StringVar.equals(Transition.StringVar)));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.LocalDate <565, 565>
+return longVar == BaseLocal.longVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.LocalDateTime <603, 603>
+return longVar == BaseLocal.longVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.LocalTime <625, 625>
+return longVar == BaseLocal.longVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateMidnight <515, 515>
+return withDurationAdded(longVar, 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Instant <193, 193>
+return withDurationAdded(longVar, 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.TimeOfDay <167, 167>
+return fromMillisOfDay(longVar, null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.DateTime <803, 803>
+return withDurationAdded(longVar, 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.LocalTime <145, 145>
+return fromMillisOfDay(longVar, null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Duration <425, 425>
+return withDurationAdded(longVar, 1);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ISOYearOfEraDateTimeField <71, 71>
+return getWrappedField().getDifference(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ISOYearOfEraDateTimeField <75, 75>
+return getWrappedField().getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.LimitChronology <432, 432>
+return getWrappedField().getDifference(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.LimitChronology <438, 438>
+return getWrappedField().getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.LimitChronology <499, 499>
+return getWrappedField().getDifference(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.LimitChronology <505, 505>
+return getWrappedField().getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicChronology <435, 435>
+return getMonthOfYear(longVar, getYear(longVar));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJYearOfEraDateTimeField <69, 69>
+return getWrappedField().getDifference(longVar, longVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.GJYearOfEraDateTimeField <73, 73>
+return getWrappedField().getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDurationField <79, 79>
+return FieldUtils.safeToInt(getValueAsLong(longVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDurationField <135, 135>
+return FieldUtils.safeMultiply(longVar, getUnitMillis());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.UnsupportedDateTimeField <279, 279>
+return getDurationField().getDifference(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.UnsupportedDateTimeField <288, 288>
+return getDurationField().getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDateTimeField <522, 522>
+return getDurationField().getDifference(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.BaseDateTimeField <545, 545>
+return getDurationField().getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ZeroIsMaxDateTimeField <76, 76>
+return getWrappedField().getDifference(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.ZeroIsMaxDateTimeField <80, 80>
+return getWrappedField().getDifferenceAsLong(longVar, longVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Interval <257, 257>
+return new Interval(longVar, longVar, getChronology());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Interval <292, 292>
+return new Interval(longVar, longVar, getChronology());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.Interval <294, 294>
+return new Interval(longVar, longVar, getChronology());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <1993, 1993>
+return new long[] {longVar * longVar / longVar, intVar};
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.format.DateTimeFormatterBuilder <1993, 1993>
+return new long[] {fraction * scalar / rangeMillis, maxDigits};
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.PreciseDurationField <131, 131>
+return (getType() == BaseDurationField.getType()) && (longVar == BaseDurationField.longVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.convert.LongConverter <54, 54>
+return ((Long) Object).longValue();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.convert.LongConverter <67, 67>
+return ((Long) Object).longValue();
+

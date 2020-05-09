@@ -1,0 +1,20 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_23/src/com/google/javascript/jscomp/PeepholeFoldConstants.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_23/src/com/google/javascript/jscomp/PeepholeFoldConstants.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_23/src/com/google/javascript/jscomp/PeepholeFoldConstants.java	2020-01-05 05:16:01.604091048 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_23/src/com/google/javascript/jscomp/PeepholeFoldConstants.java	2020-01-05 05:16:02.824080858 -0800
+@@ -1448,8 +1448,14 @@
+ 
+     Node current = left.getFirstChild();
+     Node elem = null;
+-    for (int i = 0; current != null && i < intIndex; i++) {
++    for (int i = 0; current != null; i++) {
++      if (i != intIndex) {
++        if (mayHaveSideEffects(current)) {
++          return n;
++        }
++      } else {
+         elem = current;
++      }
+ 
+       current = current.getNext();
+     }

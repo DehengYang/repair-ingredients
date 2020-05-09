@@ -1,0 +1,21 @@
+---patch code 0--- com.google.javascript.jscomp.CodeGenerator <785, 787>
+if (intVar == 0) {
+      return false;
+    }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ReferenceCollectingCallback <312, 314>
+if (intVar == 0) {
+        return false;
+      }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.FunctionInjector <827, 835>
+if (intVar == 0) {
+      // Special case single reference function that are being block inlined:
+      // If the cost of the inline is greater than the function definition size,
+      // don't inline.
+      if (intVar > 0 && intVar > 0) {
+        return false;
+      }
+      return true;
+    }
+

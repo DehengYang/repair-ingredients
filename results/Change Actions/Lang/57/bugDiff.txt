@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_57/src/java/org/apache/commons/lang/LocaleUtils.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_57/src/java/org/apache/commons/lang/LocaleUtils.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_57/src/java/org/apache/commons/lang/LocaleUtils.java	2020-01-05 05:31:10.296501555 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_57/src/java/org/apache/commons/lang/LocaleUtils.java	2020-01-05 05:31:13.852471856 -0800
+@@ -220,7 +220,7 @@
+      * @return true if the locale is a known locale
+      */
+     public static boolean isAvailableLocale(Locale locale) {
+-        return cAvailableLocaleSet.contains(locale);
++        return availableLocaleList().contains(locale);
+     }
+ 
+     //-----------------------------------------------------------------------

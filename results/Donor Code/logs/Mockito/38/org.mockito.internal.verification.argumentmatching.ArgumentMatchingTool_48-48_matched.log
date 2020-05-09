@@ -1,0 +1,18 @@
+---patch code 0--- org.mockito.internal.verification.argumentmatching.ArgumentMatchingTool <48, 48>
+return StringDescription.toString(Matcher).equals(Object == null? "null" : Object.toString());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.mockito.internal.matchers.Equals <61, 61>
+return ArgumentMatcher<Object>.Object == null && ArgumentMatcher<Object>.Object == null || ArgumentMatcher<Object>.Object != null && ArgumentMatcher<Object>.Object.equals(ArgumentMatcher<Object>.Object);
+
+---patch code 1--- org.mockito.internal.verification.argumentmatching.ArgumentMatchingTool <48, 48>
+return StringDescription.toString(Matcher).equals(Object == null? "null" : Object.toString());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.mockito.internal.matchers.Equals <61, 61>
+return ArgumentMatcher<Object>.Object == null && ArgumentMatcher<Object>.Object == null || ArgumentMatcher<Object>.Object != null && ArgumentMatcher<Object>.Object.equals(ArgumentMatcher<Object>.Object);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.mockito.internal.matchers.Equals <77, 77>
+return Object != null && Object != null && Object.getClass() == Object.getClass();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.mockito.internal.matchers.Equals <77, 77>
+return Object != null && Object != null && Object.getClass() == Object.getClass();
+

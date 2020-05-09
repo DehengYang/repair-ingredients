@@ -1,0 +1,127 @@
+---patch code 0--- com.google.javascript.jscomp.Compiler <1473, 1474>
+Builder.setTagAsStrict(booleanVar &&
+        CompilerOptions.getLanguageOut() == LanguageMode.ECMASCRIPT5_STRICT);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ant.CompileTask <231, 231>
+CompilerOptions.setManageClosureDependencies(booleanVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.Compiler <218, 218>
+boolean booleanVar = CompilerOptions.shouldColorizeErrorOutput();
+
+---patch code 1--- com.google.javascript.jscomp.Compiler <1473, 1474>
+Builder.setTagAsStrict(firstOutput &&
+        CompilerOptions.getLanguageOut() == LanguageMode.ECMASCRIPT5_STRICT);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.Compiler <218, 218>
+boolean colorize = CompilerOptions.shouldColorizeErrorOutput();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.parsing.JsDocInfoParser <1427, 1429>
+if (!booleanVar && StringBuilder.length() > 0) {
+            StringBuilder.append(' ');
+          }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.AbstractCommandLineRunner <1092, 1092>
+CompilerOptions.setTweakToBooleanLiteral(StringVar, booleanVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.AbstractCommandLineRunner <1094, 1094>
+CompilerOptions.setDefineToBooleanLiteral(StringVar, booleanVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.JsMessageVisitor <231, 232>
+Builder Builder = new Builder(
+        booleanVar ? null : StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FunctionTypeBuilder <603, 606>
+if (!FunctionParamBuilder.addOptionalParams(JSType) && !booleanVar) {
+        reportWarning(DiagnosticType);
+        booleanVar = true;
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FunctionTypeBuilder <608, 611>
+if (!FunctionParamBuilder.addVarArgs(JSType) && !booleanVar) {
+        reportWarning(DiagnosticType);
+        booleanVar = true;
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FunctionTypeBuilder <613, 622>
+if (!FunctionParamBuilder.addRequiredParams(JSType) && !booleanVar) {
+        // An optional parameter was seen and this argument is not an optional
+        // or var arg so it is an error.
+        if (FunctionParamBuilder.hasVarArgs()) {
+          reportWarning(DiagnosticType);
+        } else {
+          reportWarning(DiagnosticType);
+        }
+        booleanVar = true;
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.DotFormatter <100, 100>
+new DotFormatter(Node, LinkedDirectedGraph<N, StringBuilder, booleanVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FunctionTypeBuilder <523, 526>
+booleanVar |= addParameter(
+          FunctionParamBuilder, JSType, booleanVar,
+          booleanVar,
+          booleanVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.Compiler <1213, 1215>
+SourceInformationAnnotator NodeTraversal.AbstractPostOrderCallback =
+              new SourceInformationAnnotator(
+                  CompilerInput.getName(), CompilerOptions.booleanVar != DevMode.OFF);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.Compiler <565, 565>
+return runCallable(Callable, booleanVar, CompilerOptions.tracer.isOn());
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.Compiler <219, 219>
+return CompilerOptions.errorFormat.toFormatter(this, booleanVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.Compiler <1092, 1092>
+boolean booleanVar = CompilerOptions.booleanVar != DevMode.OFF;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.Compiler <1092, 1092>
+boolean devMode = CompilerOptions.devMode != DevMode.OFF;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.DefaultPassConfig <1961, 1962>
+boolean booleanVar =
+        CompilerOptions.anonymousFunctionNaming != AnonymousFunctionNamingPolicy.OFF;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.DefaultPassConfig <1961, 1962>
+boolean preserveAnonymousFunctionNames =
+        CompilerOptions.anonymousFunctionNaming != AnonymousFunctionNamingPolicy.OFF;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.AbstractCommandLineRunner <631, 631>
+boolean booleanVar = !BVar.jsOutputFile.isEmpty();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.AbstractCommandLineRunner <631, 631>
+boolean writeOutputToFile = !options.jsOutputFile.isEmpty();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.DefaultPassConfig <1963, 1972>
+RenameVars RenameVars = new RenameVars(
+        AbstractCompiler,
+        CompilerOptions.renamePrefix,
+        CompilerOptions.variableRenaming == VariableRenamingPolicy.LOCAL,
+        booleanVar,
+        CompilerOptions.generatePseudoNames,
+        CompilerOptions.shadowVariables,
+        VariableMap,
+        char[]Var,
+        Set);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.DefaultPassConfig <649, 651>
+boolean booleanVar = CompilerOptions.optimizeCalls
+        || CompilerOptions.optimizeParameters
+        || CompilerOptions.optimizeReturns;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.DefaultPassConfig <649, 651>
+boolean runOptimizeCalls = CompilerOptions.optimizeCalls
+        || CompilerOptions.optimizeParameters
+        || CompilerOptions.optimizeReturns;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ant.CompileTask <226, 226>
+CompilerOptions.booleanVar = Task.booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ant.CompileTask <227, 227>
+CompilerOptions.booleanVar = Task.booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ant.CompileTask <228, 228>
+CompilerOptions.booleanVar = Task.booleanVar;
+

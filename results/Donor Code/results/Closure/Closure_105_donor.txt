@@ -1,0 +1,12 @@
+chunk1 : com.google.javascript.jscomp.FoldConstants:1477-1477
+fix ingredient(SameFile)  varMapType:ori : (1)
+fix ingredient(SameFile)  varMapType:0 : (1)
+fix ingredient(SameFile)  varMapType:1 : (1)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (7)
+fix ingredient  <0-fine-grained>  varMapType:0 : (7)
+fix ingredient  <1-fine-grained>  varMapType:1 : (7)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (2)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (2)
+
+

@@ -1,0 +1,48 @@
+---patch code 0--- org.apache.commons.lang3.time.FastDateFormat <872, 872>
+Calendar.getTime();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.time.DateUtils <241, 241>
+return Calendar.getTime().getTime() == Calendar.getTime().getTime();
+
+---patch code 1--- org.apache.commons.lang3.time.FastDateFormat <872, 872>
+Calendar.getTime();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang3.time.DateUtils <241, 241>
+return Calendar.getTime().getTime() == Calendar.getTime().getTime();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.time.DateUtils <884, 884>
+Date Date = Calendar.getTime();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang3.time.DateUtils <884, 884>
+Date Date = Calendar.getTime();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.time.DateUtils <437, 437>
+return Calendar.getTime();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang3.time.DateUtils <437, 437>
+return Calendar.getTime();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.time.DateUtils <568, 568>
+return Calendar.getTime();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang3.time.DateUtils <568, 568>
+return Calendar.getTime();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.time.DateUtils <607, 607>
+return Calendar.getTime();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang3.time.DateUtils <607, 607>
+return Calendar.getTime();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.time.DateUtils <714, 714>
+return Calendar.getTime();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang3.time.DateUtils <714, 714>
+return Calendar.getTime();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.time.DateUtils <799, 799>
+return Calendar.getTime();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang3.time.DateUtils <799, 799>
+return Calendar.getTime();
+

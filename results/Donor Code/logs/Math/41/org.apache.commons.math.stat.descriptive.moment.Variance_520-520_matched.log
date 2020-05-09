@@ -1,0 +1,319 @@
+---patch code ori--- org.apache.commons.math.stat.descriptive.moment.Variance <520, 522>
+for (int i = begin; i < begin + length; i++) {
+                    sumWts += weights[i];
+                }
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.stat.descriptive.summary.Sum <162, 164>
+for (int i = begin; i < begin + length; i++) {
+                sum += values[i] * weights[i];
+            }
+
+---patch code 0--- org.apache.commons.math.stat.descriptive.moment.Variance <520, 522>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+                    doubleVar += double[]Var[intVar];
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.stat.descriptive.summary.Sum <162, 164>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+                doubleVar += double[]Var[intVar] * double[]Var[intVar];
+            }
+
+---patch code 1--- org.apache.commons.math.stat.descriptive.moment.Variance <520, 522>
+for (int i = begin; i < begin + length; i++) {
+                    sumWts += weights[i];
+                }
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.stat.descriptive.summary.Sum <162, 164>
+for (int i = begin; i < begin + length; i++) {
+                sum += values[i] * weights[i];
+            }
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.stat.descriptive.summary.Product <164, 166>
+for (int i = begin; i < begin + length; i++) {
+                product *= FastMath.pow(values[i], weights[i]);
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.stat.descriptive.summary.Product <164, 166>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+                doubleVar *= FastMath.pow(double[]Var[intVar], double[]Var[intVar]);
+            }
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.stat.descriptive.summary.Product <164, 166>
+for (int i = begin; i < begin + length; i++) {
+                product *= FastMath.pow(values[i], weights[i]);
+            }
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.stat.descriptive.summary.Sum <123, 125>
+for (int i = begin; i < begin + length; i++) {
+                sum += values[i];
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.stat.descriptive.summary.Sum <123, 125>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+                doubleVar += double[]Var[intVar];
+            }
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.stat.descriptive.summary.Sum <123, 125>
+for (int i = begin; i < begin + length; i++) {
+                sum += values[i];
+            }
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.stat.descriptive.summary.Product <124, 126>
+for (int i = begin; i < begin + length; i++) {
+                product *= values[i];
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.stat.descriptive.summary.Product <124, 126>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+                doubleVar *= double[]Var[intVar];
+            }
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.stat.descriptive.summary.Product <124, 126>
+for (int i = begin; i < begin + length; i++) {
+                product *= values[i];
+            }
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.stat.descriptive.summary.SumOfLogs <134, 136>
+for (int i = begin; i < begin + length; i++) {
+                sumLog += FastMath.log(values[i]);
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.stat.descriptive.summary.SumOfLogs <134, 136>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+                doubleVar += FastMath.log(double[]Var[intVar]);
+            }
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.stat.descriptive.summary.SumOfLogs <134, 136>
+for (int i = begin; i < begin + length; i++) {
+                sumLog += FastMath.log(values[i]);
+            }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.apache.commons.math.stat.descriptive.moment.Mean <214, 216>
+for (int i = begin; i < begin + length; i++) {
+                correction += weights[i] * (values[i] - xbarw);
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Mean <214, 216>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+                doubleVar += double[]Var[intVar] * (double[]Var[intVar] - doubleVar);
+            }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.apache.commons.math.stat.descriptive.moment.Mean <214, 216>
+for (int i = begin; i < begin + length; i++) {
+                correction += weights[i] * (values[i] - xbarw);
+            }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.apache.commons.math.stat.descriptive.moment.Mean <166, 168>
+for (int i = begin; i < begin + length; i++) {
+                correction += values[i] - xbar;
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Mean <166, 168>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+                doubleVar += double[]Var[intVar] - doubleVar;
+            }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.apache.commons.math.stat.descriptive.moment.Mean <166, 168>
+for (int i = begin; i < begin + length; i++) {
+                correction += values[i] - xbar;
+            }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.apache.commons.math.stat.descriptive.moment.Kurtosis <181, 183>
+for (int i = begin; i < begin + length; i++) {
+                accum3 += FastMath.pow(values[i] - mean, 4.0);
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Kurtosis <181, 183>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+                doubleVar += FastMath.pow(double[]Var[intVar] - doubleVar, 4.0);
+            }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.apache.commons.math.stat.descriptive.moment.Kurtosis <181, 183>
+for (int i = begin; i < begin + length; i++) {
+                accum3 += FastMath.pow(values[i] - mean, 4.0);
+            }
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.stat.descriptive.summary.SumOfSquares <122, 124>
+for (int i = begin; i < begin + length; i++) {
+                sumSq += values[i] * values[i];
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.stat.descriptive.summary.SumOfSquares <122, 124>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+                doubleVar += double[]Var[intVar] * double[]Var[intVar];
+            }
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.stat.descriptive.summary.SumOfSquares <122, 124>
+for (int i = begin; i < begin + length; i++) {
+                sumSq += values[i] * values[i];
+            }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.apache.commons.math.stat.descriptive.moment.Skewness <177, 180>
+for (int i = begin; i < begin + length; i++) {
+                final double d = values[i] - m;
+                accum3 += d * d * d;
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Skewness <177, 180>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+                final double d = double[]Var[intVar] - doubleVar;
+                doubleVar += d * d * d;
+            }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.apache.commons.math.stat.descriptive.moment.Skewness <177, 180>
+for (int i = begin; i < begin + length; i++) {
+                final double d = values[i] - m;
+                accum3 += d * d * d;
+            }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.apache.commons.math.stat.descriptive.moment.Skewness <169, 173>
+for (int i = begin; i < begin + length; i++) {
+                final double d = values[i] - m;
+                accum  += d * d;
+                accum2 += d;
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Skewness <169, 173>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+                final double d = double[]Var[intVar] - doubleVar;
+                doubleVar  += d * d;
+                doubleVar += d;
+            }
+
+---fix ingredient(SamePackage)  varMapType:1--- org.apache.commons.math.stat.descriptive.moment.Skewness <169, 173>
+for (int i = begin; i < begin + length; i++) {
+                final double d = values[i] - m;
+                accum  += d * d;
+                accum2 += d;
+            }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.stat.descriptive.moment.Variance <411, 415>
+for (int i = begin; i < begin + length; i++) {
+                    dev = values[i] - mean;
+                    accum += dev * dev;
+                    accum2 += dev;
+                }
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Variance <411, 415>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+                    doubleVar = double[]Var[intVar] - doubleVar;
+                    doubleVar += doubleVar * doubleVar;
+                    doubleVar += doubleVar;
+                }
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.stat.descriptive.moment.Variance <411, 415>
+for (int i = begin; i < begin + length; i++) {
+                    dev = values[i] - mean;
+                    accum += dev * dev;
+                    accum2 += dev;
+                }
+
+---fix ingredient(SameMethod)  varMapType:ori--- org.apache.commons.math.stat.descriptive.moment.Variance <513, 517>
+for (int i = begin; i < begin + length; i++) {
+                    dev = values[i] - mean;
+                    accum += weights[i] * (dev * dev);
+                    accum2 += weights[i] * dev;
+                }
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Variance <513, 517>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+                    doubleVar = double[]Var[intVar] - doubleVar;
+                    doubleVar += double[]Var[intVar] * (doubleVar * doubleVar);
+                    doubleVar += double[]Var[intVar] * doubleVar;
+                }
+
+---fix ingredient(SameMethod)  varMapType:1--- org.apache.commons.math.stat.descriptive.moment.Variance <513, 517>
+for (int i = begin; i < begin + length; i++) {
+                    dev = values[i] - mean;
+                    accum += weights[i] * (dev * dev);
+                    accum2 += weights[i] * dev;
+                }
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.stat.descriptive.rank.Max <131, 138>
+if (test(values, begin, length)) {
+            max = values[begin];
+            for (int i = begin; i < begin + length; i++) {
+                if (!Double.isNaN(values[i])) {
+                    max = (max > values[i]) ? max : values[i];
+                }
+            }
+        }
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.stat.descriptive.rank.Max <131, 138>
+if (test(values, begin, length)) {
+            max = values[begin];
+            for (int i = begin; i < begin + length; i++) {
+                if (!Double.isNaN(values[i])) {
+                    max = (max > values[i]) ? max : values[i];
+                }
+            }
+        }
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.stat.descriptive.rank.Min <131, 138>
+if (test(values, begin, length)) {
+            min = values[begin];
+            for (int i = begin; i < begin + length; i++) {
+                if (!Double.isNaN(values[i])) {
+                    min = (min < values[i]) ? min : values[i];
+                }
+            }
+        }
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.stat.descriptive.rank.Min <131, 138>
+if (test(values, begin, length)) {
+            min = values[begin];
+            for (int i = begin; i < begin + length; i++) {
+                if (!Double.isNaN(values[i])) {
+                    min = (min < values[i]) ? min : values[i];
+                }
+            }
+        }
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic <267, 280>
+for (int i = begin; i < begin + length; i++) {
+            if (Double.isNaN(weights[i])) {
+                throw new MathIllegalArgumentException(LocalizedFormats.NAN_ELEMENT_AT_INDEX, i);
+            }
+            if (Double.isInfinite(weights[i])) {
+                throw new MathIllegalArgumentException(LocalizedFormats.INFINITE_ARRAY_ELEMENT, weights[i], i);
+            }
+            if (weights[i] < 0) {
+                throw new MathIllegalArgumentException(LocalizedFormats.NEGATIVE_ELEMENT_AT_INDEX, i, weights[i]);
+            }
+            if (!containsPositiveWeight && weights[i] > 0.0) {
+                containsPositiveWeight = true;
+            }
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic <267, 280>
+for (int intVar = intVar; intVar < intVar + intVar; intVar++) {
+            if (Double.isNaN(double[]Var[intVar])) {
+                throw new MathIllegalArgumentException(LocalizedFormats.NAN_ELEMENT_AT_INDEX, intVar);
+            }
+            if (Double.isInfinite(double[]Var[intVar])) {
+                throw new MathIllegalArgumentException(LocalizedFormats.INFINITE_ARRAY_ELEMENT, double[]Var[intVar], intVar);
+            }
+            if (double[]Var[intVar] < 0) {
+                throw new MathIllegalArgumentException(LocalizedFormats.NEGATIVE_ELEMENT_AT_INDEX, intVar, double[]Var[intVar]);
+            }
+            if (!booleanVar && double[]Var[intVar] > 0.0) {
+                booleanVar = true;
+            }
+        }
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic <267, 280>
+for (int i = begin; i < begin + length; i++) {
+            if (Double.isNaN(weights[i])) {
+                throw new MathIllegalArgumentException(LocalizedFormats.NAN_ELEMENT_AT_INDEX, i);
+            }
+            if (Double.isInfinite(weights[i])) {
+                throw new MathIllegalArgumentException(LocalizedFormats.INFINITE_ARRAY_ELEMENT, weights[i], i);
+            }
+            if (weights[i] < 0) {
+                throw new MathIllegalArgumentException(LocalizedFormats.NEGATIVE_ELEMENT_AT_INDEX, i, weights[i]);
+            }
+            if (!containsPositiveWeight && weights[i] > 0.0) {
+                containsPositiveWeight = true;
+            }
+        }
+

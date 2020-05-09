@@ -1,0 +1,8 @@
+fixed code:/home/apr/CodeSearchAndMatch2/Defects4J/fixed_bugs_dir/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-231-231
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/linear/SimplexSolver.java-125-125
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/general/GaussNewtonOptimizer.java-71-71
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/general/PowellOptimizer.java-87-87
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/general/NonLinearConjugateGradientOptimizer.java-154-154
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java-271-271
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/direct/MultiDirectional.java-67-67
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/direct/NelderMead.java-77-77

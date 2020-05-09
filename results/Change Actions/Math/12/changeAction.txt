@@ -1,0 +1,14 @@
+OP1:(UPD, TypeDeclaration, null, OP2)
+OP2:   (INS, SimpleType, OP1, null)
+
+
+OP1:(INS, FieldDeclaration, null, OP2 OP3 OP4 OP5 OP6)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (INS, Modifier, OP1, null)
+OP5:   (INS, PrimitiveType, OP1, null)
+OP6:   (INS, VariableDeclarationFragment, OP1, OP7 OP8)
+OP7:      (INS, SimpleName, OP6, null)
+OP8:      (INS, NumberLiteral, OP6, null)
+
+

@@ -1,0 +1,12 @@
+chunk1 : org.apache.commons.lang.BooleanUtils:682-682
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:ori : (2)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:0 : (2)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:1 : (2)
+fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:ori : (8)
+fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0 : (8)
+fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1 : (8)
+fix ingredient  <parseContainCheck2>  varMapType:ori : (8)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (8)
+fix ingredient  <parseContainCheck2>  varMapType:1 : (8)
+
+

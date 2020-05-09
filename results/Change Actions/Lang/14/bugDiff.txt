@@ -1,0 +1,15 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_14/src/main/java/org/apache/commons/lang3/StringUtils.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_14/src/main/java/org/apache/commons/lang3/StringUtils.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_14/src/main/java/org/apache/commons/lang3/StringUtils.java	2020-01-05 05:26:13.746978368 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_14/src/main/java/org/apache/commons/lang3/StringUtils.java	2020-01-05 05:26:17.214949403 -0800
+@@ -785,7 +785,10 @@
+         if (cs1 == null || cs2 == null) {
+             return false;
+         }
++        if (cs1 instanceof String && cs2 instanceof String) {
+             return cs1.equals(cs2);
++        }
++        return CharSequenceUtils.regionMatches(cs1, false, 0, cs2, 0, Math.max(cs1.length(), cs2.length()));
+     }
+ 
+     /**

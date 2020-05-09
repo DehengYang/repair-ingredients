@@ -1,0 +1,12 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_51/src/java/org/apache/commons/lang/BooleanUtils.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_51/src/java/org/apache/commons/lang/BooleanUtils.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_51/src/java/org/apache/commons/lang/BooleanUtils.java	2020-01-05 05:30:29.028846227 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_51/src/java/org/apache/commons/lang/BooleanUtils.java	2020-01-05 05:30:32.472817462 -0800
+@@ -679,6 +679,7 @@
+                         (str.charAt(1) == 'E' || str.charAt(1) == 'e') &&
+                         (str.charAt(2) == 'S' || str.charAt(2) == 's');
+                 }
++                return false;
+             }
+             case 4: {
+                 char ch = str.charAt(0);

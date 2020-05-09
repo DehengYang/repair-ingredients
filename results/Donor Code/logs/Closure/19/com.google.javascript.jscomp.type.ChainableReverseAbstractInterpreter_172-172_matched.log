@@ -1,0 +1,81 @@
+---patch code ori--- com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter <172, 172>
+case Token.THIS:
+
+---fix ingredient  varMapType:ori--- com.google.javascript.jscomp.PeepholeFoldConstants <993, 993>
+case Token.THIS:
+
+---patch code 0--- com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter <172, 172>
+case Token.THIS:
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.PeepholeFoldConstants <993, 993>
+case Token.THIS:
+
+---patch code 1--- com.google.javascript.jscomp.type.ChainableReverseAbstractInterpreter <172, 172>
+case Token.THIS:
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.PeepholeFoldConstants <993, 993>
+case Token.THIS:
+
+---fix ingredient  varMapType:ori--- com.google.javascript.jscomp.AstValidator <159, 159>
+case Token.THIS:
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.AstValidator <159, 159>
+case Token.THIS:
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.AstValidator <159, 159>
+case Token.THIS:
+
+---fix ingredient  varMapType:ori--- com.google.javascript.jscomp.TightenTypes <1069, 1069>
+case Token.THIS:
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.TightenTypes <1069, 1069>
+case Token.THIS:
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.TightenTypes <1069, 1069>
+case Token.THIS:
+
+---fix ingredient  varMapType:ori--- com.google.javascript.jscomp.jsonml.Writer <160, 160>
+case Token.THIS:
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.jsonml.Writer <160, 160>
+case Token.THIS:
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.jsonml.Writer <160, 160>
+case Token.THIS:
+
+---fix ingredient  varMapType:ori--- com.google.javascript.jscomp.parsing.TypeSafeDispatcher <217, 217>
+case Token.THIS:
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.parsing.TypeSafeDispatcher <217, 217>
+case Token.THIS:
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.parsing.TypeSafeDispatcher <217, 217>
+case Token.THIS:
+
+---fix ingredient  varMapType:ori--- com.google.javascript.jscomp.NodeNameExtractor <80, 80>
+case Token.THIS:
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.NodeNameExtractor <80, 80>
+case Token.THIS:
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.NodeNameExtractor <80, 80>
+case Token.THIS:
+
+---fix ingredient  varMapType:ori--- com.google.javascript.jscomp.NodeUtil <805, 805>
+case Token.THIS:
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.NodeUtil <805, 805>
+case Token.THIS:
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.NodeUtil <805, 805>
+case Token.THIS:
+
+---fix ingredient  varMapType:ori--- com.google.javascript.jscomp.NodeUtil <1233, 1233>
+case Token.THIS:
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.NodeUtil <1233, 1233>
+case Token.THIS:
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.NodeUtil <1233, 1233>
+case Token.THIS:
+

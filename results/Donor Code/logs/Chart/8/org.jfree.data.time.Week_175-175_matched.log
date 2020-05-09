@@ -1,0 +1,594 @@
+---patch code ori--- org.jfree.data.time.Week <175, 175>
+this(time, zone, Locale.getDefault());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.TimeTableXYDataset <122, 122>
+this(zone, Locale.getDefault());
+
+---patch code 0--- org.jfree.data.time.Week <175, 175>
+this(Date, TimeZone, Locale.getDefault());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.TimeTableXYDataset <122, 122>
+this(TimeZone, Locale.getDefault());
+
+---patch code 1--- org.jfree.data.time.Week <175, 175>
+this(Date, TimeZone, Locale.getDefault());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.TimeTableXYDataset <122, 122>
+this(TimeZone, Locale.getDefault());
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Week <161, 161>
+this(Date, RegularTimePeriod.TimeZone, Locale.getDefault());
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Week <161, 161>
+this(Date, RegularTimePeriod.TimeZone, Locale.getDefault());
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Week <175, 175>
+this(Date, RegularTimePeriod.TimeZone, Locale.getDefault());
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Week <175, 175>
+this(Date, RegularTimePeriod.TimeZone, Locale.getDefault());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.MonthDateFormat <109, 109>
+this(zone, Locale.getDefault(), chars, true, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.MonthDateFormat <109, 109>
+this(TimeZone, Locale.getDefault(), intVar, true, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.MonthDateFormat <109, 109>
+this(TimeZone, Locale.getDefault(), chars, true, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.MonthDateFormat <86, 86>
+this(zone, Locale.getDefault(), 1, true, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.MonthDateFormat <86, 86>
+this(TimeZone, Locale.getDefault(), 1, true, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.MonthDateFormat <86, 86>
+this(TimeZone, Locale.getDefault(), 1, true, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.QuarterDateFormat <104, 104>
+this(zone, REGULAR_QUARTERS);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.QuarterDateFormat <104, 104>
+this(TimeZone, String[]Var);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.QuarterDateFormat <104, 104>
+this(TimeZone, REGULAR_QUARTERS);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.TimeSeriesCollection <167, 167>
+zone = TimeZone.getDefault();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.TimeSeriesCollection <167, 167>
+TimeZone = TimeZone.getDefault();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.TimeSeriesCollection <167, 167>
+TimeZone = TimeZone.getDefault();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.TimeSeriesCollection <142, 142>
+this(null, zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.TimeSeriesCollection <142, 142>
+this(null, TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.TimeSeriesCollection <142, 142>
+this(null, TimeZone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Quarter <150, 150>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Quarter <150, 150>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Month <134, 134>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Month <134, 134>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Second <144, 144>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Second <144, 144>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Year <114, 114>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Year <114, 114>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Minute <131, 131>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Minute <131, 131>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Millisecond <143, 143>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Millisecond <143, 143>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Hour <138, 138>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Hour <138, 138>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Day <148, 148>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Day <148, 148>
+this(Date, RegularTimePeriod.TimeZone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.TimeTableXYDataset <112, 112>
+this(TimeZone.getDefault(), Locale.getDefault());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.TimeTableXYDataset <112, 112>
+this(TimeZone.getDefault(), Locale.getDefault());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.QuarterDateFormat <114, 114>
+this(zone, quarterSymbols, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.QuarterDateFormat <114, 114>
+this(TimeZone, String[]Var, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.QuarterDateFormat <114, 114>
+this(TimeZone, quarterSymbols, false);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.DynamicTimeSeriesCollection <258, 258>
+this(intVar, intVar, RegularTimePeriod, TimeZone.getDefault());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.DynamicTimeSeriesCollection <258, 258>
+this(nSeries, nMoments, RegularTimePeriod, TimeZone.getDefault());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.PeriodAxis <185, 185>
+this(StringVar, RegularTimePeriod, RegularTimePeriod, TimeZone.getDefault());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.PeriodAxis <185, 185>
+this(label, RegularTimePeriod, RegularTimePeriod, TimeZone.getDefault());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.TimeSeriesCollection <152, 152>
+this(Series, TimeZone.getDefault());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.TimeSeriesCollection <152, 152>
+this(null, TimeZone.getDefault());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateAxis <331, 331>
+this(StringVar, TimeZone.getDefault());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateAxis <331, 331>
+this(label, TimeZone.getDefault());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.DynamicTimeSeriesCollection <244, 244>
+this(nSeries, nMoments, new Millisecond(), zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.DynamicTimeSeriesCollection <244, 244>
+this(intVar, intVar, new Millisecond(), TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.DynamicTimeSeriesCollection <244, 244>
+this(nSeries, nMoments, new Millisecond(), TimeZone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.MonthDateFormat <122, 122>
+this(TimeZone.getDefault(), Locale, intVar, true, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.MonthDateFormat <122, 122>
+this(TimeZone.getDefault(), Locale, chars, true, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.MonthDateFormat <77, 77>
+this(TimeZone.getDefault());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.MonthDateFormat <77, 77>
+this(TimeZone.getDefault());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.QuarterDateFormat <95, 95>
+this(TimeZone.getDefault());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.QuarterDateFormat <95, 95>
+this(TimeZone.getDefault());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.TimeSeriesCollection <132, 132>
+this(null, TimeZone.getDefault());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.TimeSeriesCollection <132, 132>
+this(null, TimeZone.getDefault());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.DynamicTimeSeriesCollection <230, 230>
+this(intVar, intVar, new Millisecond(), TimeZone.getDefault());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.DynamicTimeSeriesCollection <230, 230>
+this(nSeries, nMoments, new Millisecond(), TimeZone.getDefault());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.Second <159, 159>
+this.day = new Day(time, zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Second <159, 159>
+RegularTimePeriod.RegularTimePeriod = new Day(Date, TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Second <159, 159>
+RegularTimePeriod.RegularTimePeriod = new Day(Date, TimeZone);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.Minute <152, 152>
+this.day = new Day(time, zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Minute <152, 152>
+RegularTimePeriod.RegularTimePeriod = new Day(Date, TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Minute <152, 152>
+RegularTimePeriod.RegularTimePeriod = new Day(Date, TimeZone);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.Millisecond <159, 159>
+this.day = new Day(time, zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Millisecond <159, 159>
+RegularTimePeriod.RegularTimePeriod = new Day(Date, TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Millisecond <159, 159>
+RegularTimePeriod.RegularTimePeriod = new Day(Date, TimeZone);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.Hour <158, 158>
+this.day = new Day(time, zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Hour <158, 158>
+RegularTimePeriod.RegularTimePeriod = new Day(Date, TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Hour <158, 158>
+RegularTimePeriod.RegularTimePeriod = new Day(Date, TimeZone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.MonthDateFormat <96, 96>
+this(TimeZone.getDefault(), Locale, 1, true, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.MonthDateFormat <96, 96>
+this(TimeZone.getDefault(), Locale, 1, true, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.DateAxis <345, 345>
+super(label, DateAxis.createStandardDateTickUnits(zone));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateAxis <345, 345>
+super(StringVar, DateAxis.createStandardDateTickUnits(TimeZone));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateAxis <345, 345>
+super(label, DateAxis.createStandardDateTickUnits(TimeZone));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.DateAxis <1092, 1092>
+f1.setTimeZone(zone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateAxis <1092, 1092>
+DateFormat.setTimeZone(TimeZone);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateAxis <1092, 1092>
+DateFormat.setTimeZone(TimeZone);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.DateAxis <1093, 1093>
+f2.setTimeZone(zone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateAxis <1093, 1093>
+DateFormat.setTimeZone(TimeZone);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateAxis <1093, 1093>
+DateFormat.setTimeZone(TimeZone);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.DateAxis <1094, 1094>
+f3.setTimeZone(zone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateAxis <1094, 1094>
+DateFormat.setTimeZone(TimeZone);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateAxis <1094, 1094>
+DateFormat.setTimeZone(TimeZone);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.DateAxis <1095, 1095>
+f4.setTimeZone(zone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateAxis <1095, 1095>
+DateFormat.setTimeZone(TimeZone);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateAxis <1095, 1095>
+DateFormat.setTimeZone(TimeZone);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.DateAxis <1096, 1096>
+f5.setTimeZone(zone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateAxis <1096, 1096>
+DateFormat.setTimeZone(TimeZone);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateAxis <1096, 1096>
+DateFormat.setTimeZone(TimeZone);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.DateAxis <1097, 1097>
+f6.setTimeZone(zone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateAxis <1097, 1097>
+DateFormat.setTimeZone(TimeZone);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateAxis <1097, 1097>
+DateFormat.setTimeZone(TimeZone);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.DateAxis <1098, 1098>
+f7.setTimeZone(zone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateAxis <1098, 1098>
+DateFormat.setTimeZone(TimeZone);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateAxis <1098, 1098>
+DateFormat.setTimeZone(TimeZone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.SegmentedTimeline <339, 339>
+int intVar = TimeZone.getDefault().getRawOffset();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.SegmentedTimeline <339, 339>
+int offset = TimeZone.getDefault().getRawOffset();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.SegmentedTimeline <354, 354>
+int intVar = TimeZone.getDefault().getRawOffset();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.SegmentedTimeline <354, 354>
+int offset = TimeZone.getDefault().getRawOffset();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.Quarter <160, 160>
+Calendar calendar = Calendar.getInstance(zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Quarter <160, 160>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Quarter <160, 160>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.Month <146, 146>
+Calendar calendar = Calendar.getInstance(zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Month <146, 146>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Month <146, 146>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.Second <154, 154>
+Calendar calendar = Calendar.getInstance(zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Second <154, 154>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Second <154, 154>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.Year <124, 124>
+Calendar calendar = Calendar.getInstance(zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Year <124, 124>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Year <124, 124>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.Minute <147, 147>
+Calendar calendar = Calendar.getInstance(zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Minute <147, 147>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Minute <147, 147>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.Millisecond <153, 153>
+Calendar calendar = Calendar.getInstance(zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Millisecond <153, 153>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Millisecond <153, 153>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.Hour <155, 155>
+Calendar calendar = Calendar.getInstance(zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Hour <155, 155>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Hour <155, 155>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.Day <164, 164>
+Calendar calendar = Calendar.getInstance(zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Day <164, 164>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Day <164, 164>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.DateTickUnit <256, 256>
+Calendar calendar = Calendar.getInstance(zone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateTickUnit <256, 256>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateTickUnit <256, 256>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.DateTickUnit <292, 292>
+Calendar calendar = Calendar.getInstance(zone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateTickUnit <292, 292>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateTickUnit <292, 292>
+Calendar Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateTickUnit <238, 238>
+return addToDate(Date, TimeZone.getDefault());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateTickUnit <238, 238>
+return addToDate(Date, TimeZone.getDefault());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateTickUnit <273, 273>
+return rollDate(Date, TimeZone.getDefault());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateTickUnit <273, 273>
+return rollDate(Date, TimeZone.getDefault());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.TimeSeriesCollection <169, 169>
+this.workingCalendar = Calendar.getInstance(zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.TimeSeriesCollection <169, 169>
+AbstractIntervalXYDataset.Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.TimeSeriesCollection <169, 169>
+AbstractIntervalXYDataset.Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.DynamicTimeSeriesCollection <297, 297>
+this.workingCalendar = Calendar.getInstance(zone);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.DynamicTimeSeriesCollection <297, 297>
+AbstractIntervalXYDataset.Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.DynamicTimeSeriesCollection <297, 297>
+AbstractIntervalXYDataset.Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.PeriodAxis <288, 288>
+this.calendar = Calendar.getInstance(zone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.PeriodAxis <288, 288>
+ValueAxis.Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.PeriodAxis <288, 288>
+ValueAxis.Calendar = Calendar.getInstance(TimeZone);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.MonthDateFormat <180, 180>
+this.calendar = new GregorianCalendar(zone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.MonthDateFormat <180, 180>
+DateFormat.calendar = new GregorianCalendar(TimeZone);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.MonthDateFormat <180, 180>
+DateFormat.calendar = new GregorianCalendar(TimeZone);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.QuarterDateFormat <132, 132>
+this.calendar = new GregorianCalendar(zone);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.QuarterDateFormat <132, 132>
+DateFormat.calendar = new GregorianCalendar(TimeZone);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.QuarterDateFormat <132, 132>
+DateFormat.calendar = new GregorianCalendar(TimeZone);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.Week <198, 198>
+Calendar calendar = Calendar.getInstance(zone, locale);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Week <198, 198>
+Calendar Calendar = Calendar.getInstance(TimeZone, Locale);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.Week <198, 198>
+Calendar Calendar = Calendar.getInstance(TimeZone, Locale);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.TimeTableXYDataset <139, 139>
+this.workingCalendar = Calendar.getInstance(zone, locale);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.TimeTableXYDataset <139, 139>
+AbstractIntervalXYDataset.Calendar = Calendar.getInstance(TimeZone, Locale);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.TimeTableXYDataset <139, 139>
+AbstractIntervalXYDataset.Calendar = Calendar.getInstance(TimeZone, Locale);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.RegularTimePeriod <89, 90>
+result = (RegularTimePeriod) constructor.newInstance(
+                    new Object[] {millisecond, zone});
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.RegularTimePeriod <89, 90>
+RegularTimePeriod = (RegularTimePeriod) Constructor.newInstance(
+                    new Object[] {Date, TimeZone});
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.RegularTimePeriod <89, 90>
+RegularTimePeriod = (RegularTimePeriod) Constructor.newInstance(
+                    new Object[] {Date, TimeZone});
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.PeriodAxis <1145, 1146>
+result = (RegularTimePeriod) c.newInstance(new Object[] {
+                    millisecond, zone});
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.PeriodAxis <1145, 1146>
+RegularTimePeriod = (RegularTimePeriod) Constructor.newInstance(new Object[] {
+                    Date, TimeZone});
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.PeriodAxis <1145, 1146>
+RegularTimePeriod = (RegularTimePeriod) Constructor.newInstance(new Object[] {
+                    Date, TimeZone});
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.PeriodAxisLabelInfo <276, 278>
+result = (RegularTimePeriod) c.newInstance(
+                new Object[] {millisecond, zone}
+            );
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.PeriodAxisLabelInfo <276, 278>
+RegularTimePeriod = (RegularTimePeriod) Constructor.newInstance(
+                new Object[] {Date, TimeZone}
+            );
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.PeriodAxisLabelInfo <276, 278>
+RegularTimePeriod = (RegularTimePeriod) Constructor.newInstance(
+                new Object[] {Date, TimeZone}
+            );
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateAxis <1062, 1062>
+return createStandardDateTickUnits(TimeZone.getDefault());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateAxis <1062, 1062>
+return createStandardDateTickUnits(TimeZone.getDefault());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.PeriodAxis <287, 287>
+this.timeZone = zone;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.PeriodAxis <287, 287>
+ValueAxis.TimeZone = TimeZone;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.PeriodAxis <287, 287>
+ValueAxis.TimeZone = TimeZone;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.DateAxis <351, 351>
+this.timeZone = zone;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateAxis <351, 351>
+ValueAxis.TimeZone = TimeZone;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateAxis <351, 351>
+ValueAxis.TimeZone = TimeZone;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.DateAxis <377, 381>
+if (!this.timeZone.equals(zone)) {
+            this.timeZone = zone;
+            setStandardTickUnits(createStandardDateTickUnits(zone));
+            notifyListeners(new AxisChangeEvent(this));
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateAxis <377, 381>
+if (!ValueAxis.TimeZone.equals(TimeZone)) {
+            ValueAxis.TimeZone = TimeZone;
+            setStandardTickUnits(createStandardDateTickUnits(TimeZone));
+            notifyListeners(new AxisChangeEvent(this));
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.DateAxis <377, 381>
+if (!ValueAxis.TimeZone.equals(TimeZone)) {
+            ValueAxis.TimeZone = TimeZone;
+            setStandardTickUnits(createStandardDateTickUnits(TimeZone));
+            notifyListeners(new AxisChangeEvent(this));
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.TimeSeries <772, 774>
+RegularTimePeriod RegularTimePeriod = (RegularTimePeriod) Method.invoke(
+                    Series.Class, new Object[] {Series.Class,
+                            new Date(longVar), TimeZone.getDefault()});
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.TimeSeries <772, 774>
+RegularTimePeriod RegularTimePeriod = (RegularTimePeriod) Method.invoke(
+                    Series.Class, new Object[] {Series.Class,
+                            new Date(latest), TimeZone.getDefault()});
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.SegmentedTimeline <341, 342>
+SegmentedTimeline.Calendar = new GregorianCalendar(TimeZone, 
+                Locale.getDefault());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.SegmentedTimeline <341, 342>
+SegmentedTimeline.Calendar = new GregorianCalendar(TimeZone, 
+                Locale.getDefault());
+

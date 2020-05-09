@@ -1,0 +1,16 @@
+fixed code:/home/apr/CodeSearchAndMatch2/Defects4J/fixed_bugs_dir/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-228-228
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-123-123
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-124-124
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-121-121
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-119-119
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/AbstractUnivariateRealOptimizer.java-127-127
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-215-215
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-217-217
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverImpl.java-157-157
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-238-238
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-140-140
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-141-141
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BracketFinder.java-120-120
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BracketFinder.java-164-170
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BracketFinder.java-178-187
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BracketFinder.java-124-134

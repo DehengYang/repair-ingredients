@@ -1,0 +1,18 @@
+---patch code 0--- org.jfree.data.general.DatasetUtilities <755, 755>
+double doubleVar = IntervalXYDataset.getXValue(intVar, intVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1455, 1455>
+double doubleVar = IntervalXYDataset.getXValue(intVar, intVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.xy.YIntervalRenderer <192, 192>
+double doubleVar = IntervalXYDataset.getXValue(intVar, intVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.xy.XYBarRenderer <867, 867>
+double doubleVar = IntervalXYDataset.getXValue(intVar, intVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.xy.XYErrorRenderer <362, 362>
+double doubleVar = IntervalXYDataset.getXValue(intVar, intVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.xy.DeviationRenderer <272, 272>
+double doubleVar = IntervalXYDataset.getXValue(intVar, intVar);
+

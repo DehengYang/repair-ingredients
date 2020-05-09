@@ -1,0 +1,30 @@
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, Assignment, OP1, OP3 OP7)
+OP3:      (INS, ArrayCreation, OP2, OP4 OP6)
+OP4:         (INS, ArrayType, OP3, OP5)
+OP5:            (INS, SimpleType, OP4, null)
+OP6:         (INS, NumberLiteral, OP3, null)
+OP7:      (DEL, NullLiteral, OP2, null)
+
+
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, Assignment, OP1, OP3 OP4)
+OP3:      (DEL, NullLiteral, OP2, null)
+OP4:      (INS, ArrayCreation, OP2, OP5 OP7)
+OP5:         (INS, ArrayType, OP4, OP6)
+OP6:            (INS, SimpleType, OP5, null)
+OP7:         (INS, NumberLiteral, OP4, null)
+
+
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (UPD, InfixExpression, OP1, OP3 OP10)
+OP3:      (DEL, FieldAccess, OP2, OP4 OP9)
+OP4:         (DEL, ArrayAccess, OP3, OP5 OP8)
+OP5:            (DEL, FieldAccess, OP4, OP6 OP7)
+OP6:               (DEL, ThisExpression, OP5, null)
+OP7:               (DEL, SimpleName, OP5, null)
+OP8:            (DEL, NumberLiteral, OP4, null)
+OP9:         (DEL, SimpleName, OP3, null)
+OP10:      (INS, MethodInvocation, OP2, null)
+
+

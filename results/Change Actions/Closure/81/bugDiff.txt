@@ -1,0 +1,18 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_81/src/com/google/javascript/jscomp/parsing/IRFactory.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_81/src/com/google/javascript/jscomp/parsing/IRFactory.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_81/src/com/google/javascript/jscomp/parsing/IRFactory.java	2020-01-05 05:19:46.138215716 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_81/src/com/google/javascript/jscomp/parsing/IRFactory.java	2020-01-05 05:19:48.270197909 -0800
+@@ -514,6 +514,13 @@
+       Name name = functionNode.getFunctionName();
+       Boolean isUnnamedFunction = false;
+       if (name == null) {
++        int functionType = functionNode.getFunctionType();
++        if (functionType != FunctionNode.FUNCTION_EXPRESSION) {
++          errorReporter.error(
++            "unnamed function statement",
++            sourceName,
++            functionNode.getLineno(), "", 0);
++        }
+         name = new Name();
+         name.setIdentifier("");
+         isUnnamedFunction = true;

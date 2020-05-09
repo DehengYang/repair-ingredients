@@ -1,0 +1,54 @@
+---patch code ori--- com.google.javascript.jscomp.NodeUtil <1262, 1262>
+case Token.DELPROP:
+
+---fix ingredient  varMapType:ori--- com.google.javascript.jscomp.jsonml.Writer <129, 129>
+case Token.DELPROP:
+
+---patch code 0--- com.google.javascript.jscomp.NodeUtil <1262, 1262>
+case Token.DELPROP:
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.jsonml.Writer <129, 129>
+case Token.DELPROP:
+
+---patch code 1--- com.google.javascript.jscomp.NodeUtil <1262, 1262>
+case Token.DELPROP:
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.jsonml.Writer <129, 129>
+case Token.DELPROP:
+
+---fix ingredient  varMapType:ori--- com.google.javascript.jscomp.parsing.TypeSafeDispatcher <162, 162>
+case Token.DELPROP:
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.parsing.TypeSafeDispatcher <162, 162>
+case Token.DELPROP:
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.parsing.TypeSafeDispatcher <162, 162>
+case Token.DELPROP:
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.PureFunctionIdentifier <428, 428>
+case Token.DELPROP:
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.PureFunctionIdentifier <428, 428>
+case Token.DELPROP:
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.PureFunctionIdentifier <428, 428>
+case Token.DELPROP:
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.NodeUtil <993, 993>
+case Token.DELPROP:
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.NodeUtil <993, 993>
+case Token.DELPROP:
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.NodeUtil <993, 993>
+case Token.DELPROP:
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.NodeUtil <1118, 1118>
+case Token.DELPROP:
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.NodeUtil <1118, 1118>
+case Token.DELPROP:
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.NodeUtil <1118, 1118>
+case Token.DELPROP:
+

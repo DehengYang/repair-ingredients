@@ -1,0 +1,42 @@
+---patch code 0--- org.apache.commons.math.linear.ArrayRealVector <721, 721>
+doubleVar = Math.max(doubleVar, Math.abs(doubleVar));
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <828, 828>
+doubleVar = Math.max(doubleVar, Math.abs(doubleVar));
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <841, 841>
+doubleVar = Math.max(doubleVar, Math.abs(doubleVar));
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.optimization.SimpleScalarValueChecker <77, 77>
+final double doubleVar       = Math.max(Math.abs(doubleVar), Math.abs(doubleVar));
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.optimization.SimpleVectorialValueChecker <80, 80>
+final double doubleVar       = Math.max(Math.abs(doubleVar), Math.abs(doubleVar));
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.optimization.SimpleVectorialPointChecker <80, 80>
+final double doubleVar       = Math.max(Math.abs(doubleVar), Math.abs(doubleVar));
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <1200, 1200>
+final double doubleVar = Math.max(Math.abs(doubleVar), Math.abs(doubleVar));
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <178, 178>
+final double doubleVar = Math.max(doubleVar * Math.abs(doubleVar), doubleVar);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <332, 332>
+final double doubleVar = Math.max(doubleVar * Math.abs(doubleVar), doubleVar);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.analysis.solvers.RiddersSolver <159, 159>
+final double doubleVar = Math.max(doubleVar * Math.abs(doubleVar), doubleVar);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator <253, 253>
+doubleVar = Math.max(doubleVar, 1.0e-12 * Math.abs(doubleVar));
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <288, 288>
+doubleVar = Math.max(doubleVar, Math.abs(doubleVar) / (doubleVar * doubleVar));
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <324, 324>
+doubleVar = Math.max(doubleVar, Math.abs(doubleVar) / (doubleVar * doubleVar));
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <1227, 1227>
+doubleVar = Math.max(doubleVar, doubleVar - 100 * MathUtils.EPSILON * Math.abs(doubleVar));
+

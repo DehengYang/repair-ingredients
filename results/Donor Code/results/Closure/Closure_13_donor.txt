@@ -1,0 +1,10 @@
+chunk1 : com.google.javascript.jscomp.PeepholeOptimizationsPass:127-127
+fix ingredient(SameMethod)  varMapType:ori : (1)
+fix ingredient(SameMethod)  varMapType:0 : (1)
+fix ingredient(SameMethod)  varMapType:1 : (1)
+fix ingredient(SameFile)  varMapType:0 : (1)
+fix ingredient(SameFile)  varMapType:1 : (1)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0 : (16)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1 : (16)
+
+

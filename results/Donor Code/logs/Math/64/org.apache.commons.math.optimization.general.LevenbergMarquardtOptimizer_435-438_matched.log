@@ -1,0 +1,30 @@
+---patch code ori--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <435, 438>
+if (checker.converged(getIterations(), previous, current)) {
+                    		return current;
+                    	}
+
+---fix ingredient(SameMethod)  varMapType:ori--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <443, 445>
+if (checker.converged(getIterations(), previous, current)) {
+                        return current;
+                    }
+
+---patch code 0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <435, 438>
+if (VectorialConvergenceChecker.converged(getIterations(), VectorialPointValuePair, VectorialPointValuePair)) {
+                    		return VectorialPointValuePair;
+                    	}
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <443, 445>
+if (VectorialConvergenceChecker.converged(getIterations(), VectorialPointValuePair, VectorialPointValuePair)) {
+                        return VectorialPointValuePair;
+                    }
+
+---patch code 1--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <435, 438>
+if (VectorialConvergenceChecker.converged(getIterations(), VectorialPointValuePair, VectorialPointValuePair)) {
+                    		return VectorialPointValuePair;
+                    	}
+
+---fix ingredient(SameMethod)  varMapType:1--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <443, 445>
+if (VectorialConvergenceChecker.converged(getIterations(), VectorialPointValuePair, VectorialPointValuePair)) {
+                        return VectorialPointValuePair;
+                    }
+

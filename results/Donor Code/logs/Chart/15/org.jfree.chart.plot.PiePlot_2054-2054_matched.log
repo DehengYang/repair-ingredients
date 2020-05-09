@@ -1,0 +1,46 @@
+---patch code ori--- org.jfree.chart.plot.PiePlot <2054, 2057>
+if (this.dataset != null) {
+            state.setTotal(DatasetUtilities.calculatePieDatasetTotal(
+                    plot.getDataset()));
+        }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.WaferMapPlot <189, 191>
+if (this.dataset != null) {
+            this.dataset.removeChangeListener(this);
+        }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.SpiderWebPlot <357, 359>
+if (this.dataset != null) {
+            this.dataset.removeChangeListener(this);
+        }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.SpiderWebPlot <1647, 1649>
+if (this.dataset != null) {
+            this.dataset.addChangeListener(this);
+        }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.PolarPlot <908, 911>
+if (this.dataset != null) {
+            result = Range.combine(result, 
+                    DatasetUtilities.findRangeBounds(this.dataset));
+        }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.PolarPlot <352, 359>
+if (this.dataset != null) {
+            setDatasetGroup(this.dataset.getGroup());
+            this.dataset.addChangeListener(this);
+        }
+empty line
+// send a m_Dataset change event to self...
+DatasetChangeEvent event = new DatasetChangeEvent(this, this.dataset);
+datasetChanged(event);
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.MeterPlot <1165, 1171>
+if (this.dataset != null) {
+            Number n = this.dataset.getValue();
+            if (n != null) {
+                valueStr = this.tickLabelFormat.format(n.doubleValue()) + " " 
+                         + this.units;
+            }
+        }
+

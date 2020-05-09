@@ -1,0 +1,9 @@
+chunk1 : com.google.javascript.jscomp.NodeUtil:2465-2465
+fix ingredient  <ori-fine-grained>  varMapType:ori : (6)
+fix ingredient  <0-fine-grained>  varMapType:0 : (6)
+fix ingredient  <1-fine-grained>  varMapType:1 : (6)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (1)
+
+

@@ -1,0 +1,33 @@
+---patch code 0--- org.mockito.internal.creation.MockSettingsImpl <76, 76>
+return booleanVar;
+
+---fix ingredient  varMapType:0--- org.mockito.internal.invocation.SerializableMethod <50, 50>
+return booleanVar;
+
+---fix ingredient  varMapType:0--- org.mockito.internal.invocation.Invocation <98, 98>
+return booleanVar;
+
+---fix ingredient  varMapType:0--- org.mockito.internal.invocation.Invocation <106, 106>
+return booleanVar;
+
+---fix ingredient  varMapType:0--- org.mockito.internal.runners.util.RunnerProvider <26, 26>
+return booleanVar;
+
+---fix ingredient  varMapType:0--- org.mockito.internal.util.MockName <36, 36>
+return booleanVar;
+
+---fix ingredient  varMapType:0--- org.mockito.internal.reporting.PrintSettings <21, 21>
+return booleanVar;
+
+---fix ingredient  varMapType:0--- org.mockito.exceptions.verification.junit.JUnitTool <23, 23>
+return booleanVar;
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.mockito.internal.matchers.apachecommons.EqualsBuilder <208, 208>
+return reflectionEquals(Object, Object, booleanVar, Class, null);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.mockito.internal.matchers.apachecommons.EqualsBuilder <179, 179>
+return reflectionEquals(Object, Object, booleanVar, null, null);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.mockito.internal.exceptions.base.StackTraceFilter <19, 19>
+return (booleanVar || booleanVar) && !booleanVar && !booleanVar;
+

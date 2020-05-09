@@ -1,0 +1,19 @@
+---patch code 0--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils <198, 205>
+if (doubleVar * doubleVar > 0.0 ) {
+            throw new ConvergenceException(
+                      "number of iterations={0}, maximum iterations={1}, " +
+                      "initial={2}, lower bound={3}, upper bound={4}, final a value={5}, " +
+                      "final b value={6}, f(a)={7}, f(b)={8}",
+                      intVar, intVar, doubleVar,
+                      doubleVar, doubleVar, doubleVar, doubleVar, doubleVar, doubleVar);
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.math.analysis.solvers.BisectionSolver <91, 97>
+if (doubleVar * doubleVar > 0.0) {
+                // max and m bracket the root.
+                doubleVar = doubleVar;
+            } else {
+                // min and m bracket the root.
+                doubleVar = doubleVar;
+            }
+

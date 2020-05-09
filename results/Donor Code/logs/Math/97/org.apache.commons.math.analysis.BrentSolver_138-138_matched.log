@@ -1,0 +1,118 @@
+---patch code 0--- org.apache.commons.math.analysis.BrentSolver <138, 163>
+if (doubleVar > 0) {
+            // check if either value is close to a zero
+            if (Math.abs(doubleVar) <= doubleVar) {
+                setResult(doubleVar, 0);
+                doubleVar = doubleVar;
+            } else if (Math.abs(doubleVar) <= doubleVar) {
+                setResult(doubleVar, 0);
+                doubleVar = doubleVar;
+            } else {
+                // neither value is close to zero and min and max do not bracket root.
+                throw new IllegalArgumentException
+                ("Function values at endpoints do not have different signs." +
+                        "  Endpoints: [" + doubleVar + "," + doubleVar + "]" + 
+                        "  Values: [" + doubleVar + "," + doubleVar + "]");
+            }
+        } else if (doubleVar < 0){
+            // solve using only the first endpoint as initial guess
+            doubleVar = solve(doubleVar, doubleVar, doubleVar, doubleVar, doubleVar, doubleVar);
+        } else {
+            // either min or max is a root
+            if (doubleVar == 0.0) {
+                doubleVar = doubleVar;
+            } else {
+                doubleVar = doubleVar;
+            }
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.descriptive.rank.Percentile <187, 189>
+if ((doubleVar > 100) || (doubleVar <= 0)) {
+            throw new IllegalArgumentException("invalid quantile value: " + doubleVar);
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.descriptive.rank.Percentile <235, 237>
+if (doubleVar <= 0 || doubleVar > 100) {
+            throw new IllegalArgumentException("Illegal quantile value: " + doubleVar);
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.inference.OneWayAnovaImpl <102, 104>
+if ((doubleVar <= 0) || (doubleVar > 0.5)) {
+            throw new IllegalArgumentException("bad significance level: " + doubleVar);
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.inference.TTestImpl <163, 165>
+if ((doubleVar <= 0) || (doubleVar > 0.5)) {
+            throw new IllegalArgumentException("bad significance level: " + doubleVar);
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.inference.TTestImpl <465, 467>
+if ((doubleVar <= 0) || (doubleVar > 0.5)) {
+            throw new IllegalArgumentException("bad significance level: " + doubleVar);
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.inference.TTestImpl <547, 549>
+if ((doubleVar <= 0) || (doubleVar > 0.5)) {
+            throw new IllegalArgumentException("bad significance level: " + doubleVar);
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.inference.TTestImpl <700, 702>
+if ((doubleVar <= 0) || (doubleVar > 0.5)) {
+            throw new IllegalArgumentException("bad significance level: " + doubleVar);
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.inference.TTestImpl <760, 762>
+if ((doubleVar <= 0) || (doubleVar > 0.5)) {
+            throw new IllegalArgumentException("bad significance level: " + doubleVar);
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.inference.TTestImpl <913, 915>
+if ((doubleVar <= 0) || (doubleVar > 0.5)) {
+            throw new IllegalArgumentException("bad significance level: " + doubleVar);
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <134, 137>
+if ((doubleVar <= 0) || (doubleVar > 0.5)) {
+            throw new IllegalArgumentException(
+                    "bad significance level: " + doubleVar);
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <201, 203>
+if ((doubleVar <= 0) || (doubleVar > 0.5)) {
+            throw new IllegalArgumentException("bad significance level: " + doubleVar);
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <296, 299>
+if ((doubleVar <= 0) || (doubleVar > 0.5)) {
+            throw new IllegalArgumentException(
+                    "bad significance level: " + doubleVar);
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <580, 584>
+if (doubleVar > 0) {
+        doubleVar = Math.max(doubleVar, doubleVar);
+      } else if (doubleVar < 0) {
+        doubleVar = Math.min(doubleVar, doubleVar);
+      }
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:0--- org.apache.commons.math.analysis.BrentSolver <255, 260>
+if ((doubleVar > 0) == (doubleVar > 0)) {
+                doubleVar = doubleVar;
+                doubleVar = doubleVar;
+                doubleVar = doubleVar - doubleVar;
+                doubleVar = doubleVar;
+            }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.math.analysis.SecantSolver <146, 150>
+if ((doubleVar > 0) == (doubleVar > 0)) {
+                // New bracket is (x0,x1).                    
+                doubleVar = doubleVar;
+                doubleVar = doubleVar;
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.ode.AdaptiveStepsizeIntegrator <238, 241>
+if (doubleVar > 0) {
+      // use the user provided value
+      return booleanVar ? doubleVar : -doubleVar;
+    }
+

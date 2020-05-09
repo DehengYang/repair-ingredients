@@ -1,0 +1,4 @@
+fixed code:/home/apr/CodeSearchAndMatch2/Defects4J/fixed_bugs_dir/Math/Math_68/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java-166-166
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_68/src/main/java/org/apache/commons/math/optimization/general/AbstractLeastSquaresOptimizer.java-116-116
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_68/src/main/java/org/apache/commons/math/optimization/general/AbstractScalarDifferentiableOptimizer.java-83-83
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_68/src/main/java/org/apache/commons/math/optimization/direct/DirectSearchOptimizer.java-125-125

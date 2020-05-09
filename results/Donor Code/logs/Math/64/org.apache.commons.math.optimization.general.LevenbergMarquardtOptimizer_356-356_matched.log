@@ -1,0 +1,261 @@
+---patch code 0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <356, 356>
+determineLMParameter(double[]Var, doubleVar, double[]Var, double[]Var, double[]Var, double[]Var);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <356, 356>
+if (double[]Var.length != intVar) {
+            throw new FunctionEvaluationException(double[]Var, LocalizedFormats.DIMENSIONS_MISMATCH_SIMPLE,
+                                                  double[]Var.length, intVar);
+        }
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <346, 346>
+determineLMParameter(double[]Var, doubleVar, double[]Var, double[]Var, double[]Var, double[]Var);
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <353, 353>
+determineLMParameter(double[]Var, doubleVar, double[]Var, double[]Var, double[]Var, double[]Var);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <584, 584>
+determineLMDirection(double[]Var, double[]Var, double[]Var, double[]Var);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <598, 598>
+determineLMDirection(double[]Var, double[]Var, double[]Var, double[]Var);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <607, 607>
+double[]Var[intVar] = double[]Var[intVar] * double[]Var[intVar] / doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <621, 621>
+double[]Var[intVar] = double[]Var[intVar] * double[]Var[intVar] / doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <611, 611>
+double[]Var[intVar] /= double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <625, 625>
+double[]Var[intVar] /= double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <532, 532>
+double[]Var[intVar] *= double[]Var[intVar] / doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <582, 582>
+double[]Var[intVar] = doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <542, 542>
+double[]Var[intVar] *= double[]Var[intVar] / doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <596, 596>
+double[]Var[intVar] = doubleVar * double[]Var[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <255, 255>
+double[] double[]Var    = new double[intVar];
+
+---patch code 1--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <356, 356>
+determineLMParameter(qtf, delta, diag, work1, work2, work3);
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <255, 255>
+double[] diag    = new double[cols];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <258, 258>
+double[] double[]Var   = new double[intVar];
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <258, 258>
+double[] work1   = new double[cols];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <259, 259>
+double[] double[]Var   = new double[intVar];
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <259, 259>
+double[] work2   = new double[cols];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <260, 260>
+double[] double[]Var   = new double[intVar];
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <260, 260>
+double[] work3   = new double[cols];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <263, 263>
+double[] double[]Var    = new double[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <263, 263>
+double[] diag    = new double[cols];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <266, 266>
+double[] double[]Var   = new double[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <266, 266>
+double[] work1   = new double[cols];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <267, 267>
+double[] double[]Var   = new double[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <267, 267>
+double[] work2   = new double[cols];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <268, 268>
+double[] double[]Var   = new double[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <268, 268>
+double[] work3   = new double[cols];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <507, 507>
+double doubleVar = Math.abs(getEntry(intVar) - double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <557, 557>
+double doubleVar = Math.abs(getEntry(intVar) - double[]Var[intVar]);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <612, 612>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <677, 677>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <626, 626>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <691, 691>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <451, 451>
+double doubleVar = OpenIntToDoubleHashMap.get(intVar) - double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.LegendreGaussIntegrator <193, 193>
+double doubleVar = Math.min(4, Math.pow(doubleVar / doubleVar, 0.5 / double[]Var.length));
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <298, 298>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <514, 514>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <542, 542>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <556, 556>
+doubleVar /= double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <590, 590>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <304, 304>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <524, 524>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <554, 554>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <570, 570>
+doubleVar /= double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <604, 604>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <512, 514>
+if (Math.abs(double[]Var[intVar]) + doubleVar == doubleVar) {
+                        break;
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <426, 426>
+double doubleVar = double[]Var[intVar] * EstimatedParameter[]Var[intVar].getEstimate();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <511, 511>
+double doubleVar = Math.abs(double[]Var[intVar]) + Math.abs(double[]Var[intVar + 1]);
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <354, 354>
+double doubleVar = double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <417, 417>
+double doubleVar = double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <513, 513>
+double doubleVar = double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <589, 589>
+double doubleVar = double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <361, 361>
+double doubleVar = double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <523, 523>
+double doubleVar = double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <603, 603>
+double doubleVar = double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <785, 785>
+final double doubleVar = doubleVar[intVar] - double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <833, 833>
+final double doubleVar = doubleVar[intVar] - double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <881, 881>
+final double doubleVar = doubleVar[intVar] - double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <619, 619>
+double doubleVar = double[]Var[int[]Var[intVar]];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <633, 633>
+double doubleVar = double[]Var[int[]Var[intVar]];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <137, 137>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <180, 180>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <386, 386>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <389, 389>
+double[]Var[intVar] += double[]Var[intVar] * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <395, 395>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <329, 329>
+double[]Var[intVar] = Math.max(double[]Var[intVar], double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <336, 336>
+double[]Var[intVar] = Math.max(double[]Var[intVar], double[]Var[intVar]);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <541, 541>
+double doubleVar = (double[]Var[intVar] - doubleVar) / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <553, 553>
+double doubleVar = (double[]Var[intVar] - doubleVar) / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.EmpiricalDistributionImpl <443, 443>
+double[]Var[0] = doubleVar + doubleVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <381, 381>
+double[]Var[intVar] += double[][]Var[intVar][intVar] * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <550, 550>
+doubleVar += double[]Var[intVar] * double[]Var[int[]Var[intVar]];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.EmpiricalDistributionImpl <445, 445>
+double[]Var[intVar] = double[]Var[intVar-1] + doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <628, 628>
+double[]Var[int[]Var[intVar]] -= double[]Var[intVar * intVar + intVar] * doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <539, 539>
+doubleVar += double[][]Var[intVar][intVar] * double[]Var[int[]Var[intVar]];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <614, 614>
+double[]Var[int[]Var[intVar]] -= double[][]Var[intVar][intVar] * doubleVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <379, 379>
+double[]Var[intVar] = 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <386, 386>
+double[]Var[intVar] = 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.QRDecompositionImpl <277, 281>
+for (double diag : double[]Var) {
+                if (doubleVar == 0) {
+                    return false;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <550, 550>
+double[]Var[intVar] = double[][]Var[0][intVar] + double[][]Var[intVar+intVar][intVar-1] * (double[][]Var[0][intVar] - double[]Var[intVar]);
+

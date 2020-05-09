@@ -1,0 +1,126 @@
+---patch code 0--- com.google.javascript.jscomp.InlineObjectLiterals <157, 157>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.parsing.ParserRunner <88, 88>
+Set<String> Set = Sets.newHashSet();
+
+---patch code 1--- com.google.javascript.jscomp.InlineObjectLiterals <157, 157>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.parsing.ParserRunner <88, 88>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.VariableNameGenerator <34, 34>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.VariableNameGenerator <34, 34>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.PureFunctionIdentifier <153, 153>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.PureFunctionIdentifier <153, 153>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.InlineFunctions <776, 776>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.InlineFunctions <776, 776>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.JsMessageVisitor <497, 497>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.JsMessageVisitor <497, 497>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.JsMessageVisitor <627, 627>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.JsMessageVisitor <627, 627>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.FunctionArgumentInjector <171, 171>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.FunctionArgumentInjector <171, 171>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.FunctionArgumentInjector <496, 496>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.FunctionArgumentInjector <496, 496>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CheckRequiresForConstructors <157, 157>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.CheckRequiresForConstructors <157, 157>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.StrictModeCheck <178, 178>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.StrictModeCheck <178, 178>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.StrictModeCheck <179, 179>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.StrictModeCheck <179, 179>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.AbstractCommandLineRunner <308, 308>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.AbstractCommandLineRunner <308, 308>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.AbstractCommandLineRunner <318, 318>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.AbstractCommandLineRunner <318, 318>
+Set<String> Set = Sets.newHashSet();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.SymbolTable <944, 944>
+Set<String> Set = Sets.newHashSet(Iterable);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.SymbolTable <944, 944>
+Set<String> Set = Sets.newHashSet(Iterable);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.FunctionInjector <640, 640>
+Set<String> Set = Sets.newHashSet(Set);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.FunctionInjector <640, 640>
+Set<String> Set = Sets.newHashSet(Set);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.FunctionArgumentInjector <329, 329>
+Set<String> Set = Sets.newHashSet(Set);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.FunctionArgumentInjector <329, 329>
+Set<String> Set = Sets.newHashSet(Set);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- com.google.javascript.rhino.jstype.FunctionType <298, 298>
+Set<String> Set = Sets.newHashSet("prototype");
+
+---fix ingredient  <parseContainCheck>  varMapType:1--- com.google.javascript.rhino.jstype.FunctionType <298, 298>
+Set<String> Set = Sets.newHashSet("prototype");
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.InlineFunctions <135, 135>
+Set<String> Set = Sets.newHashSet(Map.keySet());
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.InlineFunctions <135, 135>
+Set<String> Set = Sets.newHashSet(Map.keySet());
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.LinkedFlowScope <443, 443>
+Set<String> Set = Sets.newHashSet(Map.keySet());
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.LinkedFlowScope <443, 443>
+Set<String> Set = Sets.newHashSet(Map.keySet());
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.deps.DepsGenerator <149, 149>
+Set<String> Set = Sets.newHashSet(Map.keySet());
+
+---fix ingredient  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.deps.DepsGenerator <149, 149>
+Set<String> Set = Sets.newHashSet(Map.keySet());
+

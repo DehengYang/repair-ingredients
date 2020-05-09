@@ -1,0 +1,33 @@
+---patch code ori--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <428, 428>
+return current;
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <130, 130>
+return current;
+
+---patch code 0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <428, 428>
+return VectorialPointValuePair;
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <130, 130>
+return VectorialPointValuePair;
+
+---patch code 1--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <428, 428>
+return VectorialPointValuePair;
+
+---fix ingredient(SamePackage)  varMapType:1--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <130, 130>
+return VectorialPointValuePair;
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <151, 151>
+return current;
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <903, 903>
+return current;
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.linear.AbstractRealVector <923, 923>
+return current;
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.genetics.GeneticAlgorithm <117, 117>
+return current;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator <235, 235>
+return currentTime;
+

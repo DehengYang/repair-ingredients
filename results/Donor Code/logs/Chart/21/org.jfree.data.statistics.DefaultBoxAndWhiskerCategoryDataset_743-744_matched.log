@@ -1,0 +1,57 @@
+---patch code ori--- org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset <743, 744>
+this.minimumRangeValueRow = -1;
+this.minimumRangeValueColumn = -1;
+
+---fix ingredient(SameFile)  varMapType:ori--- org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset <106, 115>
+/**
+     * Creates a new dataset.
+     */
+    public DefaultBoxAndWhiskerCategoryDataset() {
+        this.data = new KeyedObjects2D();
+        this.minimumRangeValue = Double.NaN;
+        this.minimumRangeValueRow = -1;
+        this.minimumRangeValueColumn = -1;
+        this.maximumRangeValue = Double.NaN;
+        this.maximumRangeValueRow = -1;
+        this.maximumRangeValueColumn = -1;
+        this.rangeBounds = new Range(0.0, 0.0);
+    }
+
+---patch code 0--- org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset <743, 744>
+AbstractDataset.intVar = -1;
+AbstractDataset.intVar = -1;
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset <106, 115>
+/**
+     * Creates a new dataset.
+     */
+    public DefaultBoxAndWhiskerCategoryDataset() {
+        AbstractDataset.KeyedObjects2DVar = new KeyedObjects2D();
+        AbstractDataset.doubleVar = Double.NaN;
+        AbstractDataset.intVar = -1;
+        AbstractDataset.intVar = -1;
+        AbstractDataset.doubleVar = Double.NaN;
+        AbstractDataset.intVar = -1;
+        AbstractDataset.intVar = -1;
+        AbstractDataset.Range = new Range(0.0, 0.0);
+    }
+
+---patch code 1--- org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset <743, 744>
+AbstractDataset.minimumRangeValueRow = -1;
+AbstractDataset.minimumRangeValueColumn = -1;
+
+---fix ingredient(SameFile)  varMapType:1--- org.jfree.data.statistics.DefaultBoxAndWhiskerCategoryDataset <106, 115>
+/**
+     * Creates a new dataset.
+     */
+    public DefaultBoxAndWhiskerCategoryDataset() {
+        AbstractDataset.data = new KeyedObjects2D();
+        AbstractDataset.minimumRangeValue = Double.NaN;
+        AbstractDataset.minimumRangeValueRow = -1;
+        AbstractDataset.minimumRangeValueColumn = -1;
+        AbstractDataset.maximumRangeValue = Double.NaN;
+        AbstractDataset.maximumRangeValueRow = -1;
+        AbstractDataset.maximumRangeValueColumn = -1;
+        AbstractDataset.Range = new Range(0.0, 0.0);
+    }
+

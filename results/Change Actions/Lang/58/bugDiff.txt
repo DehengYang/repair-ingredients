@@ -1,0 +1,14 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_58/src/java/org/apache/commons/lang/math/NumberUtils.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_58/src/java/org/apache/commons/lang/math/NumberUtils.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_58/src/java/org/apache/commons/lang/math/NumberUtils.java	2020-01-05 05:31:17.316442924 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_58/src/java/org/apache/commons/lang/math/NumberUtils.java	2020-01-05 05:31:20.800413826 -0800
+@@ -451,8 +451,7 @@
+                 case 'L' :
+                     if (dec == null
+                         && exp == null
+-                        && isDigits(numeric.substring(1))
+-                        && (numeric.charAt(0) == '-' || Character.isDigit(numeric.charAt(0)))) {
++                        && (numeric.charAt(0) == '-' && isDigits(numeric.substring(1)) || isDigits(numeric))) {
+                         try {
+                             return createLong(numeric);
+                         } catch (NumberFormatException nfe) {

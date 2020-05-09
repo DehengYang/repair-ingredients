@@ -1,0 +1,13 @@
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, InfixExpression, OP2, OP4 OP5 OP6 OP7)
+OP4:         (MOV, NumberLiteral, OP3, null)
+OP5:         (DEL, InfixExpression, OP3, null)
+OP6:         (MOV, Operator, OP3, null)
+OP7:         (INS, ParenthesizedExpression, OP3, OP8)
+OP8:            (INS, InfixExpression, OP7, OP9 OP10 OP11)
+OP9:               (MOV, SimpleName, OP8, null)
+OP10:               (MOV, Operator, OP8, null)
+OP11:               (MOV, NumberLiteral, OP8, null)
+
+

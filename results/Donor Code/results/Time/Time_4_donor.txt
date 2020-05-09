@@ -1,0 +1,7 @@
+chunk1 : org.joda.time.Partial:464-464
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (6)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (12)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (148)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (35)
+
+

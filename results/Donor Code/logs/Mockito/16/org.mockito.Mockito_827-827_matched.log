@@ -1,0 +1,48 @@
+---patch code ori--- org.mockito.Mockito <827, 827>
+return MOCKITO_CORE.mock(classToMock, mockSettings, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.mockito.MockitoAnnotations <98, 108>
+if (mock != null) {
+                    boolean wasAccessible = field.isAccessible();
+                    field.setAccessible(true);
+                    try {
+                        field.set(testClass, mock);
+                    } catch (IllegalAccessException e) {
+                        throw new MockitoException("Problems initiating mocks annotated with " + annotation, e);
+                    } finally {
+                        field.setAccessible(wasAccessible);
+                    }    
+                }
+
+---patch code 0--- org.mockito.Mockito <827, 827>
+return MOCKITO_CORE.mock(Class, MockSettings, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.mockito.MockitoAnnotations <98, 108>
+if (Object != null) {
+                    boolean wasAccessible = Field.isAccessible();
+                    Field.setAccessible(true);
+                    try {
+                        Field.set(Object, Object);
+                    } catch (IllegalAccessException e) {
+                        throw new MockitoException("Problems initiating mocks annotated with " + annotation, e);
+                    } finally {
+                        Field.setAccessible(wasAccessible);
+                    }    
+                }
+
+---patch code 1--- org.mockito.Mockito <827, 827>
+return MOCKITO_CORE.mock(Class, MockSettings, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.mockito.MockitoAnnotations <98, 108>
+if (Object != null) {
+                    boolean wasAccessible = Field.isAccessible();
+                    Field.setAccessible(true);
+                    try {
+                        Field.set(Object, Object);
+                    } catch (IllegalAccessException e) {
+                        throw new MockitoException("Problems initiating mocks annotated with " + annotation, e);
+                    } finally {
+                        Field.setAccessible(wasAccessible);
+                    }    
+                }
+

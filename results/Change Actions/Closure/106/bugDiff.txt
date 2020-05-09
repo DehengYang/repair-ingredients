@@ -1,0 +1,28 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_106/src/com/google/javascript/jscomp/GlobalNamespace.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_106/src/com/google/javascript/jscomp/GlobalNamespace.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_106/src/com/google/javascript/jscomp/GlobalNamespace.java	2020-01-05 05:21:39.113272137 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_106/src/com/google/javascript/jscomp/GlobalNamespace.java	2020-01-05 05:21:41.997248049 -0800
+@@ -904,6 +904,10 @@
+       // Don't try to collapse if the one global set is a twin reference.
+       // We could theoretically handle this case in CollapseProperties, but
+       // it's probably not worth the effort.
++      Preconditions.checkNotNull(declaration);
++      if (declaration.getTwin() != null) {
++        return false;
++      }
+ 
+       if (isClassOrEnum) {
+         return true;
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_106/src/com/google/javascript/rhino/JSDocInfoBuilder.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_106/src/com/google/javascript/rhino/JSDocInfoBuilder.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_106/src/com/google/javascript/rhino/JSDocInfoBuilder.java	2020-01-05 05:21:39.117272104 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_106/src/com/google/javascript/rhino/JSDocInfoBuilder.java	2020-01-05 05:21:42.001248016 -0800
+@@ -186,9 +186,7 @@
+    * @return {@code true} if the description was recorded.
+    */
+   public boolean recordBlockDescription(String description) {
+-    if (parseDocumentation) {
+     populated = true;
+-    }
+     return currentInfo.documentBlock(description);
+   }
+ 

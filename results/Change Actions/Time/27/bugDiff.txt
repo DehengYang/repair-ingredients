@@ -1,0 +1,16 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_27/src/main/java/org/joda/time/format/PeriodFormatterBuilder.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_27/src/main/java/org/joda/time/format/PeriodFormatterBuilder.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_27/src/main/java/org/joda/time/format/PeriodFormatterBuilder.java	2020-01-05 22:48:22.060547087 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_27/src/main/java/org/joda/time/format/PeriodFormatterBuilder.java	2020-01-05 22:48:23.836547080 -0800
+@@ -798,9 +798,11 @@
+         int size = elementPairs.size();
+         if (size >= 2 && elementPairs.get(0) instanceof Separator) {
+             Separator sep = (Separator) elementPairs.get(0);
++            if (sep.iAfterParser == null && sep.iAfterPrinter == null) {
+                 PeriodFormatter f = toFormatter(elementPairs.subList(2, size), notPrinter, notParser);
+                 sep = sep.finish(f.getPrinter(), f.getParser());
+                 return new PeriodFormatter(sep, sep);
++            }
+         }
+         Object[] comp = createComposite(elementPairs);
+         if (notPrinter) {

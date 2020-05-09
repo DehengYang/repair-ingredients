@@ -1,0 +1,27 @@
+---patch code ori--- org.apache.commons.math.ode.events.EventState <207, 209>
+throw MathRuntimeException.createInternalError(null);
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.stat.ranking.NaturalRanking <213, 213>
+throw MathRuntimeException.createInternalError(null);
+
+---patch code 0--- org.apache.commons.math.ode.events.EventState <207, 209>
+throw MathRuntimeException.createInternalError(null);
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.stat.ranking.NaturalRanking <213, 213>
+throw MathRuntimeException.createInternalError(null);
+
+---patch code 1--- org.apache.commons.math.ode.events.EventState <207, 209>
+throw MathRuntimeException.createInternalError(null);
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.stat.ranking.NaturalRanking <213, 213>
+throw MathRuntimeException.createInternalError(null);
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.stat.ranking.NaturalRanking <361, 361>
+throw MathRuntimeException.createInternalError(null);
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.stat.ranking.NaturalRanking <361, 361>
+throw MathRuntimeException.createInternalError(null);
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.stat.ranking.NaturalRanking <361, 361>
+throw MathRuntimeException.createInternalError(null);
+

@@ -1,0 +1,980 @@
+---patch code 0--- org.apache.commons.math.analysis.solvers.BrentSolver <127, 127>
+setResult(doubleVar, 0);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BrentSolver <127, 127>
+doubleVar = Math.min(doubleVar + 1.0, doubleVar);
+
+---patch code ori--- org.apache.commons.math.analysis.solvers.BrentSolver <127, 127>
+setResult(max, 0);
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.analysis.solvers.BrentSolver <184, 184>
+setResult(max, 0);
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.analysis.solvers.BrentSolver <184, 184>
+setResult(doubleVar, 0);
+
+---patch code 1--- org.apache.commons.math.analysis.solvers.BrentSolver <127, 127>
+setResult(max, 0);
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.analysis.solvers.BrentSolver <184, 184>
+setResult(max, 0);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.math.analysis.solvers.BrentSolver <108, 108>
+setResult(doubleVar, 0);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.math.analysis.solvers.BrentSolver <115, 115>
+setResult(doubleVar, 0);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.math.analysis.solvers.BrentSolver <127, 127>
+setResult(doubleVar, 0);
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.analysis.solvers.BrentSolver <181, 181>
+setResult(doubleVar, 0);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <76, 76>
+setResult(doubleVar, 1);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <467, 467>
+double max = 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <467, 467>
+double doubleVar = 0;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <467, 467>
+double max = 0;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <500, 500>
+double max = 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <500, 500>
+double doubleVar = 0;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <500, 500>
+double max = 0;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <514, 514>
+double max = 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <514, 514>
+double doubleVar = 0;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <514, 514>
+double max = 0;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <550, 550>
+double max = 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <550, 550>
+double doubleVar = 0;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <550, 550>
+double max = 0;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.ArrayRealVector <757, 757>
+double max = 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <757, 757>
+double doubleVar = 0;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.ArrayRealVector <757, 757>
+double max = 0;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.ArrayRealVector <868, 868>
+double max = 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <868, 868>
+double doubleVar = 0;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.ArrayRealVector <868, 868>
+double max = 0;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.ArrayRealVector <882, 882>
+double max = 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <882, 882>
+double doubleVar = 0;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.ArrayRealVector <882, 882>
+double max = 0;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.util.MathUtils <1765, 1765>
+double max = 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.util.MathUtils <1765, 1765>
+double doubleVar = 0;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.util.MathUtils <1765, 1765>
+double max = 0;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.util.MathUtils <1780, 1780>
+int max = 0;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.NewtonSolver <122, 122>
+setResult(doubleVar, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BrentSolver <247, 247>
+setResult(doubleVar, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BrentSolver <254, 254>
+setResult(doubleVar, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BisectionSolver <101, 101>
+setResult(doubleVar, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <180, 180>
+setResult(doubleVar, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <184, 184>
+setResult(doubleVar, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <334, 334>
+setResult(doubleVar, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <338, 338>
+setResult(doubleVar, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.RiddersSolver <149, 149>
+setResult(doubleVar, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.RiddersSolver <161, 161>
+setResult(doubleVar, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.RiddersSolver <165, 165>
+setResult(doubleVar, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.SecantSolver <149, 149>
+setResult(doubleVar, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.SecantSolver <154, 154>
+setResult(doubleVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <90, 90>
+setResult(doubleVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.RombergIntegrator <100, 100>
+setResult(doubleVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.TrapezoidIntegrator <122, 122>
+setResult(doubleVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.LegendreGaussIntegrator <188, 188>
+setResult(doubleVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.univariate.BrentOptimizer <180, 180>
+setResult(doubleVar, (null == GoalType.MAXIMIZE) ? -doubleVar : doubleVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.stat.descriptive.AggregateSummaryStatistics <313, 313>
+double max = current.getMax();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.AggregateSummaryStatistics <313, 313>
+double doubleVar = SummaryStatistics.getMax();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.stat.descriptive.AggregateSummaryStatistics <313, 313>
+double max = SummaryStatistics.getMax();
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.BrentSolver <169, 169>
+verifyInterval(min, max);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BrentSolver <169, 169>
+verifyInterval(doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.BisectionSolver <80, 80>
+verifyInterval(min,max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BisectionSolver <80, 80>
+verifyInterval(doubleVar,doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.SecantSolver <115, 115>
+verifyInterval(min, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.SecantSolver <115, 115>
+verifyInterval(doubleVar, doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <70, 70>
+verifyInterval(min, max);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <70, 70>
+verifyInterval(doubleVar, doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.RombergIntegrator <75, 75>
+verifyInterval(min, max);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.RombergIntegrator <75, 75>
+verifyInterval(doubleVar, doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.TrapezoidIntegrator <111, 111>
+verifyInterval(min, max);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.TrapezoidIntegrator <111, 111>
+verifyInterval(doubleVar, doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.LegendreGaussIntegrator <168, 168>
+verifyInterval(min, max);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.LegendreGaussIntegrator <168, 168>
+verifyInterval(doubleVar, doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastFourierTransformer <454, 454>
+verifyInterval(min, max);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastFourierTransformer <454, 454>
+verifyInterval(doubleVar, doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.stat.descriptive.AggregateSummaryStatistics <322, 322>
+max = current.getMax();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.AggregateSummaryStatistics <322, 322>
+doubleVar = SummaryStatistics.getMax();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.random.EmpiricalDistributionImpl <324, 324>
+max = sampleStats.getMax();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.EmpiricalDistributionImpl <324, 324>
+doubleVar = SummaryStatistics.getMax();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.BisectionSolver <72, 72>
+return solve(min, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BisectionSolver <72, 72>
+return solve(doubleVar, doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.stat.descriptive.SummaryStatistics <682, 682>
+Max.copy(source.max, dest.max);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.LaguerreSolver <187, 187>
+Complex initial = new Complex(0.5 * (min + max), 0.0);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.LaguerreSolver <187, 187>
+Complex Complex = new Complex(0.5 * (doubleVar + doubleVar), 0.0);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.MullerSolver <97, 97>
+if (f.value(max) == 0.0) { return max; }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <97, 97>
+if (UnivariateRealFunction.value(doubleVar) == 0.0) { return doubleVar; }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.RiddersSolver <95, 95>
+if (f.value(max) == 0.0) { return max; }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.RiddersSolver <95, 95>
+if (UnivariateRealFunction.value(doubleVar) == 0.0) { return doubleVar; }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.LaguerreSolver <132, 134>
+if (f.value(max) == 0.0) {
+            return max;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.LaguerreSolver <132, 134>
+if (UnivariateRealFunction.value(doubleVar) == 0.0) {
+            return doubleVar;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.LaguerreSolver <179, 179>
+if (f.value(max) == 0.0) { return max; }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.LaguerreSolver <179, 179>
+if (UnivariateRealFunction.value(doubleVar) == 0.0) { return doubleVar; }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <1269, 1272>
+if (lu[max][col].abs().compareTo(TOO_SMALL) <= 0) {
+                lu = null;
+                throw new SingularMatrixException();
+            }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer <60, 60>
+final int max = (maxIterations < 0) ? Integer.MAX_VALUE : maxIterations;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.NewtonSolver <112, 112>
+verifySequence(min, startValue, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.NewtonSolver <112, 112>
+verifySequence(doubleVar, doubleVar, doubleVar);
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.BrentSolver <103, 103>
+verifySequence(min, initial, max);
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BrentSolver <103, 103>
+verifySequence(doubleVar, doubleVar, doubleVar);
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.BrentSolver <125, 125>
+double yMax = f.value(max);
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BrentSolver <125, 125>
+double doubleVar = UnivariateRealFunction.value(doubleVar);
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.solvers.BrentSolver <125, 125>
+double yMax = UnivariateRealFunction.value(max);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.BrentSolver <174, 174>
+double yMax = f.value(max);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BrentSolver <174, 174>
+double doubleVar = UnivariateRealFunction.value(doubleVar);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.solvers.BrentSolver <174, 174>
+double yMax = UnivariateRealFunction.value(max);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.MullerSolver <100, 100>
+verifyBracketing(min, max, f);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <100, 100>
+verifyBracketing(doubleVar, doubleVar, UnivariateRealFunction);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.MullerSolver <101, 101>
+verifySequence(min, initial, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <101, 101>
+verifySequence(doubleVar, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.MullerSolver <157, 157>
+verifyBracketing(min, max, f);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <157, 157>
+verifyBracketing(doubleVar, doubleVar, UnivariateRealFunction);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.MullerSolver <296, 296>
+verifyBracketing(min, max, f);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <296, 296>
+verifyBracketing(doubleVar, doubleVar, UnivariateRealFunction);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.RiddersSolver <98, 98>
+verifyBracketing(min, max, f);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.RiddersSolver <98, 98>
+verifyBracketing(doubleVar, doubleVar, UnivariateRealFunction);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.RiddersSolver <99, 99>
+verifySequence(min, initial, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.RiddersSolver <99, 99>
+verifySequence(doubleVar, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.RiddersSolver <140, 140>
+verifyBracketing(min, max, f);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.RiddersSolver <140, 140>
+verifyBracketing(doubleVar, doubleVar, UnivariateRealFunction);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.LaguerreSolver <139, 139>
+verifyBracketing(min, max, f);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.LaguerreSolver <139, 139>
+verifyBracketing(doubleVar, doubleVar, UnivariateRealFunction);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.LaguerreSolver <140, 140>
+verifySequence(min, initial, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.LaguerreSolver <140, 140>
+verifySequence(doubleVar, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.LaguerreSolver <180, 180>
+verifyBracketing(min, max, f);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.LaguerreSolver <180, 180>
+verifyBracketing(doubleVar, doubleVar, UnivariateRealFunction);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.TrapezoidIntegrator <114, 114>
+double oldt = stage(f, min, max, 0);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.TrapezoidIntegrator <114, 114>
+double doubleVar = stage(UnivariateRealFunction, doubleVar, doubleVar, 0);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.integration.TrapezoidIntegrator <114, 114>
+double oldt = stage(UnivariateRealFunction, min, max, 0);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.LegendreGaussIntegrator <172, 172>
+double oldt = stage(f, min, max, 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.LegendreGaussIntegrator <172, 172>
+double doubleVar = stage(UnivariateRealFunction, doubleVar, doubleVar, 1);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.integration.LegendreGaussIntegrator <172, 172>
+double oldt = stage(UnivariateRealFunction, min, max, 1);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.SecantSolver <129, 132>
+throw MathRuntimeException.createIllegalArgumentException(
+                  "function values at endpoints do not have different signs, " +
+                  "endpoints: [{0}, {1}], values: [{2}, {3}]",
+                  min, max, y0, y1);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.SecantSolver <129, 132>
+throw MathRuntimeException.createIllegalArgumentException(
+                  "function values at endpoints do not have different signs, " +
+                  "endpoints: [{0}, {1}], values: [{2}, {3}]",
+                  doubleVar, doubleVar, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.NewtonSolver <61, 61>
+return solve(f, min, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.NewtonSolver <61, 61>
+return solve(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.BrentSolver <68, 68>
+return solve(f, min, max);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BrentSolver <68, 68>
+return solve(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.BisectionSolver <59, 59>
+return solve(f, min, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BisectionSolver <59, 59>
+return solve(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.BisectionSolver <66, 66>
+return solve(f, min, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BisectionSolver <66, 66>
+return solve(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.MullerSolver <65, 65>
+return solve(f, min, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <65, 65>
+return solve(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.MullerSolver <105, 105>
+return solve(f, initial, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <105, 105>
+return solve(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.MullerSolver <249, 249>
+return solve2(f, min, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <249, 249>
+return solve2(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.RiddersSolver <64, 64>
+return solve(f, min, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.RiddersSolver <64, 64>
+return solve(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.RiddersSolver <103, 103>
+return solve(f, initial, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.RiddersSolver <103, 103>
+return solve(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.LaguerreSolver <98, 98>
+return solve(p, min, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.LaguerreSolver <98, 98>
+return solve(PolynomialFunction, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.LaguerreSolver <144, 144>
+return solve(f, initial, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.LaguerreSolver <144, 144>
+return solve(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.SecantSolver <68, 68>
+return solve(f, min, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.SecantSolver <68, 68>
+return solve(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.SecantSolver <95, 95>
+return solve(f, min, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.SecantSolver <95, 95>
+return solve(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <61, 61>
+return integrate(f, min, max);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <61, 61>
+return integrate(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.RombergIntegrator <62, 62>
+return integrate(f, min, max);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.RombergIntegrator <62, 62>
+return integrate(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.TrapezoidIntegrator <102, 102>
+return integrate(f, min, max);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.TrapezoidIntegrator <102, 102>
+return integrate(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.LegendreGaussIntegrator <159, 159>
+return integrate(f, min, max);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.LegendreGaussIntegrator <159, 159>
+return integrate(UnivariateRealFunction, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.BisectionSolver <87, 87>
+m = UnivariateRealSolverUtils.midpoint(min, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BisectionSolver <87, 87>
+doubleVar = UnivariateRealSolverUtils.midpoint(doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.BisectionSolver <100, 100>
+m = UnivariateRealSolverUtils.midpoint(min, max);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BisectionSolver <100, 100>
+doubleVar = UnivariateRealSolverUtils.midpoint(doubleVar, doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.RombergIntegrator <79, 79>
+currentRow[0] = qtrap.stage(f, min, max, 0);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.RombergIntegrator <79, 79>
+doubleVar[0] = UnivariateRealIntegratorImpl.stage(UnivariateRealFunction, doubleVar, doubleVar, 0);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastHadamardTransformer <46, 46>
+return fht(FastFourierTransformer.sample(f, min, max, n));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastHadamardTransformer <46, 46>
+return fht(FastFourierTransformer.sample(UnivariateRealFunction, doubleVar, doubleVar, intVar));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <528, 530>
+if (iter.value() > max) {
+                    max = iter.value();
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <528, 530>
+if (Iterator.value() > doubleVar) {
+                    doubleVar = Iterator.value();
+                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <81, 81>
+double oldt = qtrap.stage(f, min, max, 0);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <81, 81>
+double doubleVar = UnivariateRealIntegratorImpl.stage(UnivariateRealFunction, doubleVar, doubleVar, 0);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <81, 81>
+double oldt = null.stage(UnivariateRealFunction, min, max, 0);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.random.EmpiricalDistributionImpl <325, 325>
+delta = (max - min)/(Double.valueOf(binCount)).doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.EmpiricalDistributionImpl <325, 325>
+doubleVar = (doubleVar - doubleVar)/(Double.valueOf(intVar)).doubleValue();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.random.EmpiricalDistributionImpl <325, 325>
+delta = (max - min)/(Double.valueOf(binCount)).doubleValue();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <315, 315>
+return optimize(f, goalType, min, max);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <315, 315>
+return optimize(UnivariateRealFunction, null, doubleVar, doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.optimization.univariate.BrentOptimizer <50, 50>
+return optimize(f, goalType, min, max);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.univariate.BrentOptimizer <50, 50>
+return optimize(UnivariateRealFunction, null, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.NewtonSolver <68, 68>
+return solve(f, min, max, startValue);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.NewtonSolver <68, 68>
+return solve(UnivariateRealFunction, doubleVar, doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.BrentSolver <75, 75>
+return solve(f, min, max, initial);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.BrentSolver <75, 75>
+return solve(UnivariateRealFunction, doubleVar, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.MullerSolver <72, 72>
+return solve(f, min, max, initial);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.MullerSolver <72, 72>
+return solve(UnivariateRealFunction, doubleVar, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.RiddersSolver <71, 71>
+return solve(f, min, max, initial);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.RiddersSolver <71, 71>
+return solve(UnivariateRealFunction, doubleVar, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.LaguerreSolver <105, 105>
+return solve(p, min, max, initial);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.LaguerreSolver <105, 105>
+return solve(PolynomialFunction, doubleVar, doubleVar, doubleVar);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.SecantSolver <75, 75>
+return solve(f, min, max, initial);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.SecantSolver <75, 75>
+return solve(UnivariateRealFunction, doubleVar, doubleVar, doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastCosineTransformer <208, 208>
+return transform2(f, min, max, n);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastCosineTransformer <208, 208>
+return transform2(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastSineTransformer <203, 203>
+return transform2(f, min, max, n);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastSineTransformer <203, 203>
+return transform2(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastHadamardTransformer <59, 60>
+final double[] unscaled =
+            fht(FastFourierTransformer.sample(f, min, max, n));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastHadamardTransformer <59, 60>
+final double[] double[]Var =
+            fht(FastFourierTransformer.sample(UnivariateRealFunction, doubleVar, doubleVar, intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.transform.FastHadamardTransformer <59, 60>
+final double[] unscaled =
+            fht(FastFourierTransformer.sample(UnivariateRealFunction, min, max, n));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.NewtonSolver <86, 86>
+return solve(f, min, max, UnivariateRealSolverUtils.midpoint(min, max));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.NewtonSolver <86, 86>
+return solve(UnivariateRealFunction, doubleVar, doubleVar, UnivariateRealSolverUtils.midpoint(doubleVar, doubleVar));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <75, 75>
+final double s = (4 * qtrap.stage(f, min, max, 1) - qtrap.stage(f, min, max, 0)) / 3.0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <75, 75>
+final double doubleVar = (4 * UnivariateRealIntegratorImpl.stage(UnivariateRealFunction, doubleVar, doubleVar, 1) - UnivariateRealIntegratorImpl.stage(UnivariateRealFunction, doubleVar, doubleVar, 0)) / 3.0;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <75, 75>
+final double s = (4 * null.stage(UnivariateRealFunction, min, max, 1) - null.stage(UnivariateRealFunction, min, max, 0)) / 3.0;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.RombergIntegrator <88, 88>
+currentRow[0] = qtrap.stage(f, min, max, i);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.RombergIntegrator <88, 88>
+doubleVar[0] = UnivariateRealIntegratorImpl.stage(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.TrapezoidIntegrator <116, 116>
+final double t = stage(f, min, max, i);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.TrapezoidIntegrator <116, 116>
+final double doubleVar = stage(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.integration.TrapezoidIntegrator <116, 116>
+final double t = stage(UnivariateRealFunction, min, max, i);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.LegendreGaussIntegrator <178, 178>
+final double t = stage(f, min, max, n);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.LegendreGaussIntegrator <178, 178>
+final double doubleVar = stage(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.integration.LegendreGaussIntegrator <178, 178>
+final double t = stage(UnivariateRealFunction, min, max, n);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastFourierTransformer <110, 110>
+double data[] = sample(f, min, max, n);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastFourierTransformer <110, 110>
+double doubleVar[] = sample(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.transform.FastFourierTransformer <110, 110>
+double data[] = sample(UnivariateRealFunction, min, max, n);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastFourierTransformer <166, 166>
+double data[] = sample(f, min, max, n);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastFourierTransformer <166, 166>
+double doubleVar[] = sample(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.transform.FastFourierTransformer <166, 166>
+double data[] = sample(UnivariateRealFunction, min, max, n);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastFourierTransformer <225, 225>
+double data[] = sample(f, min, max, n);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastFourierTransformer <225, 225>
+double doubleVar[] = sample(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.transform.FastFourierTransformer <225, 225>
+double data[] = sample(UnivariateRealFunction, min, max, n);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastFourierTransformer <284, 284>
+double data[] = sample(f, min, max, n);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastFourierTransformer <284, 284>
+double doubleVar[] = sample(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.transform.FastFourierTransformer <284, 284>
+double data[] = sample(UnivariateRealFunction, min, max, n);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastCosineTransformer <84, 84>
+double data[] = FastFourierTransformer.sample(f, min, max, n);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastCosineTransformer <84, 84>
+double doubleVar[] = FastFourierTransformer.sample(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.transform.FastCosineTransformer <84, 84>
+double data[] = FastFourierTransformer.sample(UnivariateRealFunction, min, max, n);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastCosineTransformer <126, 126>
+double data[] = FastFourierTransformer.sample(f, min, max, n);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastCosineTransformer <126, 126>
+double doubleVar[] = FastFourierTransformer.sample(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.transform.FastCosineTransformer <126, 126>
+double data[] = FastFourierTransformer.sample(UnivariateRealFunction, min, max, n);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastCosineTransformer <168, 168>
+double data[] = FastFourierTransformer.sample(f, min, max, n);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastCosineTransformer <168, 168>
+double doubleVar[] = FastFourierTransformer.sample(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.transform.FastCosineTransformer <168, 168>
+double data[] = FastFourierTransformer.sample(UnivariateRealFunction, min, max, n);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastSineTransformer <84, 84>
+double data[] = FastFourierTransformer.sample(f, min, max, n);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastSineTransformer <84, 84>
+double doubleVar[] = FastFourierTransformer.sample(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.transform.FastSineTransformer <84, 84>
+double data[] = FastFourierTransformer.sample(UnivariateRealFunction, min, max, n);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastSineTransformer <124, 124>
+double data[] = FastFourierTransformer.sample(f, min, max, n);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastSineTransformer <124, 124>
+double doubleVar[] = FastFourierTransformer.sample(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.transform.FastSineTransformer <124, 124>
+double data[] = FastFourierTransformer.sample(UnivariateRealFunction, min, max, n);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.transform.FastSineTransformer <164, 164>
+double data[] = FastFourierTransformer.sample(f, min, max, n);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastSineTransformer <164, 164>
+double doubleVar[] = FastFourierTransformer.sample(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.transform.FastSineTransformer <164, 164>
+double data[] = FastFourierTransformer.sample(UnivariateRealFunction, min, max, n);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.LaguerreSolver <218, 220>
+return (isSequence(min, z.getReal(), max)) &&
+               (Math.abs(z.getImaginary()) <= tolerance ||
+                z.abs() <= functionValueAccuracy);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.LaguerreSolver <218, 220>
+return (isSequence(doubleVar, Complex.getReal(), doubleVar)) &&
+               (Math.abs(Complex.getImaginary()) <= doubleVar ||
+                Complex.abs() <= doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <83, 83>
+final double t = qtrap.stage(f, min, max, i);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <83, 83>
+final double doubleVar = UnivariateRealIntegratorImpl.stage(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.integration.SimpsonIntegrator <83, 83>
+final double t = null.stage(UnivariateRealFunction, min, max, i);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <616, 616>
+final double log10R = Math.log(Math.max(1.0e-10, tol)) / Math.log(10.0);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <616, 616>
+final double doubleVar = Math.log(Math.max(1.0e-10, doubleVar)) / Math.log(10.0);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <616, 616>
+final double log10R = Math.log(Math.max(1.0e-10, tol)) / Math.log(10.0);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.ode.AbstractIntegrator <240, 243>
+newManager.addEventHandler(new EndTimeChecker(endTime),
+                                   Double.POSITIVE_INFINITY,
+                                   Math.ulp(Math.max(Math.abs(startTime), Math.abs(endTime))),
+                                   100);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.AbstractIntegrator <240, 243>
+CombinedEventsManager.addEventHandler(new EndTimeChecker(doubleVar),
+                                   Double.POSITIVE_INFINITY,
+                                   Math.ulp(Math.max(Math.abs(doubleVar), Math.abs(doubleVar))),
+                                   100);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator <249, 251>
+final double h1 = (maxInv2 < 1.0e-15) ?
+                      Math.max(1.0e-6, 0.001 * Math.abs(h)) :
+                      Math.pow(0.01 / maxInv2, 1.0 / order);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator <249, 251>
+final double doubleVar = (doubleVar < 1.0e-15) ?
+                      Math.max(1.0e-6, 0.001 * Math.abs(doubleVar)) :
+                      Math.pow(0.01 / doubleVar, 1.0 / intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.ode.nonstiff.AdaptiveStepsizeIntegrator <249, 251>
+final double h1 = (maxInv2 < 1.0e-15) ?
+                      Math.max(1.0e-6, 0.001 * Math.abs(h)) :
+                      Math.pow(0.01 / maxInv2, 1.0 / order);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <617, 619>
+int targetIter = Math.max(1,
+                              Math.min(sequence.length - 2,
+                                       (int) Math.floor(0.5 - 0.6 * log10R)));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <617, 619>
+int intVar = Math.max(1,
+                              Math.min(int[]Var.length - 2,
+                                       (int) Math.floor(0.5 - 0.6 * doubleVar)));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.SingularValueDecompositionImpl <267, 268>
+return new Solver(singularValues, getUT(), getV(), getRank() == Math
+                .max(m, n));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <874, 875>
+hInt = Math.abs(stepSize / Math.max(Math.pow(interpError, 1.0 / (mu+4)),
+                                                0.01));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <874, 875>
+doubleVar = Math.abs(doubleVar / Math.max(Math.pow(doubleVar, 1.0 / (intVar+4)),
+                                                0.01));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <725, 725>
+maxError = Math.max(4 * error, 1.0);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <725, 725>
+doubleVar = Math.max(4 * doubleVar, 1.0);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <546, 546>
+lmPar = Math.max(2.2251e-308, 0.001 * paru);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <546, 546>
+doubleVar = Math.max(2.2251e-308, 0.001 * doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <589, 589>
+lmPar = Math.max(2.2251e-308, 0.001 * paru);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <589, 589>
+doubleVar = Math.max(2.2251e-308, 0.001 * doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.AbstractRealVector <278, 278>
+d = Math.max(Math.abs(e.getValue() - v.getEntry(e.getIndex())), d);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealVector <278, 278>
+doubleVar = Math.max(Math.abs(Entry.getValue() - RealVector.getEntry(Entry.getIndex())), doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <512, 514>
+if (deltaNorm > 4 * Math.max(1.0e-15, initialNorm)) {
+          return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <512, 514>
+if (doubleVar > 4 * Math.max(1.0e-15, doubleVar)) {
+          return false;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.SingularValueDecompositionImpl <254, 254>
+final double threshold = Math.max(m, n) * Math.ulp(singularValues[0]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.SingularValueDecompositionImpl <254, 254>
+final double doubleVar = Math.max(intVar, intVar) * Math.ulp(double[]Var[0]);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.SingularValueDecompositionImpl <254, 254>
+final double threshold = Math.max(m, n) * Math.ulp(singularValues[0]);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.random.EmpiricalDistributionImpl <359, 361>
+return Math.min(
+                Math.max((int) Math.ceil((value- min) / delta) - 1, 0),
+                binCount - 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.EmpiricalDistributionImpl <359, 361>
+return Math.min(
+                Math.max((int) Math.ceil((doubleVar- doubleVar) / doubleVar) - 1, 0),
+                intVar - 1);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.ode.events.EventState <174, 174>
+final int    n  = Math.max(1, (int) Math.ceil(Math.abs(t1 - t0) / maxCheckInterval));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.events.EventState <174, 174>
+final int    intVar  = Math.max(1, (int) Math.ceil(Math.abs(doubleVar - doubleVar) / doubleVar));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.BigMatrixImpl <583, 583>
+maxColSum = maxColSum.max(sum);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.AbstractRealVector <290, 290>
+d = Math.max(Math.abs(e.getValue() - v[e.getIndex()]), d);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealVector <290, 290>
+doubleVar = Math.max(Math.abs(Entry.getValue() - double[]Var[Entry.getIndex()]), doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.ode.AbstractIntegrator <212, 216>
+if (Math.abs(t - t0) <= 1.0e-12 * Math.max(Math.abs(t0), Math.abs(t))) {
+            throw new IntegratorException(
+                    "too small integration interval: length = {0}",
+                    Math.abs(t - t0));
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.AbstractIntegrator <212, 216>
+if (Math.abs(doubleVar - doubleVar) <= 1.0e-12 * Math.max(Math.abs(doubleVar), Math.abs(doubleVar))) {
+            throw new IntegratorException(
+                    "too small integration interval: length = {0}",
+                    Math.abs(doubleVar - doubleVar));
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <229, 235>
+for (double step = h; step < Double.MAX_VALUE; step *= Math.max(2, yA / yB)) {
+            final double b = a + step;
+            yB = f.value(b);
+            if (yA * yB <= 0) {
+                return b;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <229, 235>
+for (double doubleVar = doubleVar; doubleVar < Double.MAX_VALUE; doubleVar *= Math.max(2, doubleVar / doubleVar)) {
+            final double b = doubleVar + doubleVar;
+            doubleVar = UnivariateRealFunction.value(b);
+            if (doubleVar * doubleVar <= 0) {
+                return b;
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <229, 235>
+for (double step = h; step < Double.MAX_VALUE; step *= Math.max(2, yA / yB)) {
+            final double b = a + step;
+            yB = UnivariateRealFunction.value(b);
+            if (yA * yB <= 0) {
+                return b;
+            }
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.LaguerreSolver <217, 217>
+double tolerance = Math.max(relativeAccuracy * z.abs(), absoluteAccuracy);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.LaguerreSolver <217, 217>
+double doubleVar = Math.max(doubleVar * Complex.abs(), doubleVar);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.solvers.LaguerreSolver <217, 217>
+double tolerance = Math.max(relativeAccuracy * Complex.abs(), absoluteAccuracy);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.LaguerreSolver <345, 346>
+double tolerance = Math.max(relativeAccuracy * z.abs(),
+                                        absoluteAccuracy);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.LaguerreSolver <345, 346>
+double doubleVar = Math.max(doubleVar * Complex.abs(),
+                                        doubleVar);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.solvers.LaguerreSolver <345, 346>
+double tolerance = Math.max(relativeAccuracy * Complex.abs(),
+                                        absoluteAccuracy);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.linear.AbstractRealVector <237, 237>
+norm = Math.max(norm, Math.abs(e.getValue()));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealVector <237, 237>
+doubleVar = Math.max(doubleVar, Math.abs(Entry.getValue()));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils <194, 194>
+a = Math.max(a - 1.0, lowerBound);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.solvers.UnivariateRealSolverUtils <194, 194>
+doubleVar = Math.max(doubleVar - 1.0, doubleVar);
+

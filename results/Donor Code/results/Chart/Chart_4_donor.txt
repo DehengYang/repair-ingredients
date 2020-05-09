@@ -1,0 +1,8 @@
+chunk1 : org.jfree.chart.plot.XYPlot:4493-4493
+fix ingredient(SamePackage)  varMapType:ori : (5)
+fix ingredient(SameFile)  varMapType:ori : (4)
+fix ingredient(SameFile)  varMapType:0 : (2)
+fix ingredient(SameFile)  varMapType:1 : (2)
+fix ingredient  varMapType:ori : (8)
+
+

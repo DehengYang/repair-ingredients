@@ -1,0 +1,15 @@
+chunk1 : org.apache.commons.math.linear.EigenDecompositionImpl:1544-1544
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (7)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (4)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (7)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (62)
+fix ingredient  <0-fine-grained>  varMapType:0 : (62)
+fix ingredient  <1-fine-grained>  varMapType:1 : (66)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (9)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (9)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (9)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (24)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (24)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (24)
+
+

@@ -1,0 +1,8 @@
+chunk1 : org.apache.commons.math.optimization.fitting.GaussianFitter:121-121
+fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:ori : (1)
+fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:0 : (1)
+fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:1 : (1)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:0 : (1)
+fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0 : (2)
+
+

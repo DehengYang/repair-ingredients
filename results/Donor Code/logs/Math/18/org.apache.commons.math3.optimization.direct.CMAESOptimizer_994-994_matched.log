@@ -1,0 +1,2273 @@
+---patch code 0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <994, 996>
+if (double[]Var[intVar] < double[]Var[intVar]) {
+                    return false;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <238, 241>
+if (doubleVar == 0.0) {
+                return;
+            }
+doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <1004, 1006>
+if (!Precision.equals(double[]Var[intVar], double[]Var[intVar])) {
+                return false;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <1030, 1032>
+if (!Precision.equalsIncludingNaN(double[]Var[intVar], double[]Var[intVar])) {
+                return false;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.linear.SimplexTableau <409, 412>
+if (intVar < 0) {
+            double[]Var[intVar] = 0;
+            continue;
+          }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.inference.ChiSquareTest <635, 637>
+if (double[]Var[intVar] <= 0) {
+                throw new NotStrictlyPositiveException(double[]Var[intVar]);
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <564, 566>
+if (double[]Var[intVar] < 0) {
+                    throw new NotPositiveException(double[]Var[intVar]);
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.inference.WilcoxonSignedRankTest <187, 189>
+if (double[]Var[intVar] > 0) {
+                doubleVar += double[]Var[intVar];
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatingFunction <341, 343>
+if (doubleVar <= double[]Var[intVar]) {
+                return intVar - 1;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatingFunction <307, 309>
+if (doubleVar <= double[]Var[intVar]) {
+                return intVar - 1;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathUtils <231, 236>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+            final double x = double[]Var[intVar];
+            if (Double.isInfinite(x) || Double.isNaN(x)) {
+                throw new NotFiniteNumberException(LocalizedFormats.ARRAY_ELEMENT, x, intVar);
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <451, 453>
+if (doubleVar*double[]Var[intVar] > doubleVar) {
+                        break generationLoop;
+                    }
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <991, 998>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+                if (double[]Var[intVar] < 0) {
+                    return false;
+                }
+                if (double[]Var[intVar] > 1.0) {
+                    return false;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.AbstractUnivariateStatistic <300, 302>
+if (double[]Var[intVar] < 0) {
+                throw new MathIllegalArgumentException(LocalizedFormats.NEGATIVE_ELEMENT_AT_INDEX, intVar, double[]Var[intVar]);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.distribution.MultivariateNormalDistribution <133, 135>
+if (double[]Var[intVar] < 0) {
+                throw new NonPositiveDefiniteMatrixException(double[]Var[intVar], intVar, 0);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <637, 639>
+if (double[]Var[intVar] > doubleVar) {
+                intVar++;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <1071, 1073>
+if (Double.isInfinite(double[]Var[intVar])) {
+                 throw new MathIllegalArgumentException(LocalizedFormats.INFINITE_ARRAY_ELEMENT, double[]Var[intVar], intVar);
+             }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <522, 526>
+if (Double.isInfinite(double[]Var[intVar]) ||
+                    Double.isInfinite(double[]Var[intVar])) {
+                    booleanVar = true;
+                    break;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.AbstractUnivariateStatistic <303, 305>
+if (!booleanVar && double[]Var[intVar] > 0.0) {
+                booleanVar = true;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <592, 594>
+if (FastMath.abs(double[]Var[intVar]) <= Precision.doubleVar * doubleVar) {
+                    double[]Var[intVar] = 0;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <595, 597>
+if (FastMath.abs(double[]Var[intVar]) <= Precision.doubleVar * doubleVar) {
+                    double[]Var[intVar]=0;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <702, 704>
+if (FastMath.abs(double[]Var[intVar]) < Precision.doubleVar * doubleVar) {
+                    double[]Var[intVar] = 0;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.AbstractMultipleLinearRegression <134, 136>
+for (int intVar = booleanVar ? 0 : 1; intVar < intVar; intVar++) {
+                double[][]Var[intVar][intVar] = double[]Var[intVar++];
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.RegressionResults <219, 222>
+if (!Double.isNaN(doubleVar) && doubleVar > Double.MIN_VALUE) {
+                double[]Var[intVar] = FastMath.sqrt(doubleVar);
+                continue;
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <512, 516>
+if (!Double.isInfinite(double[]Var[intVar]) ||
+                !Double.isInfinite(double[]Var[intVar])) {
+                booleanVar = true;
+                break;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <1074, 1076>
+if (!Double.isNaN(double[]Var[intVar])) {
+                 doubleVar += double[]Var[intVar];
+             }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <443, 445>
+if (doubleVar*(Math.max(Math.abs(double[]Var[intVar]), double[]Var[intVar])) > doubleVar) {
+                        break;
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.CompositeFormat <153, 158>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+                Number = parseNumber(StringVar, double[]Var[intVar], ParsePosition);
+                if (Number != null) {
+                    break;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.inference.WilcoxonSignedRankTest <102, 106>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+            double[]Var[intVar] = double[]Var[intVar] - double[]Var[intVar];
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.LoessInterpolator <272, 274>
+if (intVar > 0) {
+                    updateBandwidthInterval(double[]Var, double[]Var, intVar, int[]Var);
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.CholeskyDecomposition <141, 143>
+if (double[]Var[intVar] <= doubleVar) {
+                throw new NonPositiveDefiniteMatrixException(double[]Var[intVar], intVar, doubleVar);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.VectorFormat <268, 276>
+if (Number == null) {
+                // invalid coordinate
+                // set index back to initial, error index should already be set
+                ParsePosition.setIndex(intVar);
+                return null;
+            }
+empty line
+// store coordinate
+double[]Var[intVar] = Number.doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.polynomials.PolynomialFunction <400, 404>
+for (int intVar = 0; intVar < doubleVar.length; ++intVar) {
+                double[]Var[intVar] = doubleVar;
+                doubleVar *= doubleVar;
+            }
+return double[]Var;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapter <139, 141>
+if (!(double[]Var[intVar] >= double[]Var[intVar])) {
+                throw new NumberIsTooSmallException(double[]Var[intVar], double[]Var[intVar], true);
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.MultivariateFunctionMappingAdapter <108, 110>
+if (!(double[]Var[intVar] >= double[]Var[intVar])) {
+                throw new NumberIsTooSmallException(double[]Var[intVar], double[]Var[intVar], true);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <296, 300>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+            if (!Precision.equals(double[]Var[intVar], 0.0, doubleVar)) {
+                return true;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.MultivariateSummaryStatistics <337, 340>
+if (intVar > 0) {
+                StringBuilder.append(StringVar);
+            }
+StringBuilder.append(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.rank.Percentile <427, 429>
+if ((intVar >= intVar) || (double[]Var[intVar] > doubleVar)) {
+            --intVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <673, 677>
+if (double[]Var[intVar] > doubleVar) {
+                    doubleVar = 1 / double[]Var[intVar];
+                } else {
+                    doubleVar = 0;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <645, 649>
+if (double[]Var[intVar + 1] == 0.0) {
+                            double[]Var[intVar + 1] -= doubleVar;
+                            double[]Var[intVar] = 0.0;
+                            break;
+                        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <510, 515>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+                if (double[]Var[intVar] == 0 &&
+                    double[]Var[intVar] == 0) {
+                    return false;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.ValueServer <165, 168>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[]Var[intVar] = getNext();
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.distribution.AbstractRealDistribution <268, 271>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[]Var[intVar] = sample();
+        }
+return double[]Var;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1015, 1024>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+                if (double[]Var[intVar] < 0) {
+                    double[]Var[intVar] = 0;
+                } else if (double[]Var[intVar] > 1.0) {
+                    double[]Var[intVar] = 1.0;
+                } else {
+                    double[]Var[intVar] = double[]Var[intVar];
+                }
+            }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.rank.Max <137, 139>
+if (!Double.isNaN(double[]Var[intVar])) {
+                    doubleVar = (doubleVar > double[]Var[intVar]) ? doubleVar : double[]Var[intVar];
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.rank.Min <137, 139>
+if (!Double.isNaN(double[]Var[intVar])) {
+                    doubleVar = (doubleVar < double[]Var[intVar]) ? doubleVar : double[]Var[intVar];
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizer <200, 204>
+if (null == GoalType.MINIMIZE) {
+                for (int intVar = 0; intVar < intVar; ++intVar) {
+                    double[]Var[intVar] = -double[]Var[intVar];
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.rank.Percentile <430, 432>
+double[]Var[intVar] = double[]Var[intVar];
+double[]Var[intVar]     = doubleVar;
+return intVar;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.AbstractSimplex <340, 343>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[]Var[intVar] = doubleVar;
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.UnitSphereRandomVectorGenerator <76, 80>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[]Var[intVar] *= doubleVar;
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.distribution.MultivariateNormalDistribution <215, 219>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[]Var[intVar] += double[]Var[intVar];
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.CholeskyDecomposition <128, 131>
+if (FastMath.abs(doubleVar - doubleVar) > doubleVar) {
+                    throw new NonSymmetricMatrixException(intVar, intVar, doubleVar);
+                }
+double[]Var[intVar] = 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.transform.TransformUtils <62, 65>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+            double[]Var[intVar] *= doubleVar;
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.complex.ComplexUtils <81, 85>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+            Complex[intVar] = new Complex(double[]Var[intVar], 0);
+        }
+empty line
+return Complex;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.clustering.KMeansPlusPlusClusterer <312, 318>
+if (!boolean[]Var[intVar]) {
+                    doubleVar += double[]Var[intVar];
+                    if (doubleVar >= doubleVar) {
+                        intVar = intVar;
+                        break;
+                    }
+                }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <930, 934>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+                double diff = boundaries[1][intVar] - boundaries[0][intVar];
+                double[]Var[intVar] = (double[]Var[intVar] - boundaries[0][intVar]) / diff;
+            }
+return double[]Var;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <956, 960>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+                double diff = boundaries[1][intVar] - boundaries[0][intVar];
+                double[]Var[intVar] = diff * double[]Var[intVar] + boundaries[0][intVar];
+            }
+return double[]Var;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer <100, 106>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                final double v = double[]Var[intVar];
+                final double lo = double[]Var[intVar];
+                if (v < lo) {
+                    throw new NumberIsTooSmallException(v, lo, true);
+                }
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer <112, 118>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                final double v = double[]Var[intVar];
+                final double hi = double[]Var[intVar];
+                if (v > hi) {
+                    throw new NumberIsTooLargeException(v, hi, true);
+                }
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1363, 1366>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[]Var[intVar] = RandomGenerator.nextGaussian();
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.RealVector <710, 713>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[]Var[intVar] = getEntry(intVar);
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.MultivariateSummaryStatistics <187, 190>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+            double[]Var[intVar] = StorelessUnivariateStatistic[]Var[intVar].getResult();
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.moment.VectorialMean <67, 70>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+            double[]Var[intVar] = Mean[]Var[intVar].getResult();
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DerivativeStructure <312, 315>
+for (int intVar = 0; intVar < DerivativeStructure.double[]Var.length; ++intVar) {
+            DerivativeStructure.double[]Var[intVar] *= doubleVar;
+        }
+return DerivativeStructure;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DerivativeStructure <337, 340>
+for (int intVar = 0; intVar < DerivativeStructure.double[]Var.length; ++intVar) {
+            DerivativeStructure.double[]Var[intVar] /= doubleVar;
+        }
+return DerivativeStructure;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.polynomials.PolynomialFunction <223, 226>
+for (int intVar = 0; intVar < doubleVar.length; ++intVar) {
+            double[]Var[intVar] = -doubleVar[intVar];
+        }
+return new PolynomialFunction(double[]Var);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.inference.WilcoxonSignedRankTest <130, 134>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+            double[]Var[intVar] = FastMath.abs(double[]Var[intVar]);
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.clustering.KMeansPlusPlusClusterer <295, 299>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                if (!boolean[]Var[intVar]) {
+                    doubleVar += double[]Var[intVar];
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <392, 399>
+if (booleanVar) {
+            for (int intVar = 0; intVar < intVar; intVar++) {
+                if (MillerUpdatingRegression.boolean[]Var[intVar]) {
+                    double[]Var[intVar] = Double.NaN;
+                }
+            }
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.distribution.MultivariateNormalDistribution <198, 201>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[]Var[intVar] = FastMath.sqrt(double[][]Var[intVar][intVar]);
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DerivativeStructure <384, 387>
+for (int intVar = 0; intVar < DerivativeStructure.double[]Var.length; ++intVar) {
+            DerivativeStructure.double[]Var[intVar] = -double[]Var[intVar];
+        }
+return DerivativeStructure;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.MatrixUtils <295, 298>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            RealMatrix.setEntry(0, intVar, double[]Var[intVar]);
+        }
+return RealMatrix;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.MatrixUtils <344, 347>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            RealMatrix.setEntry(intVar, 0, double[]Var[intVar]);
+        }
+return RealMatrix;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.ode.JacobianMatrices <275, 281>
+if (StringVar.equals(ParameterConfiguration.getParameterName())) {
+                System.arraycopy(double[]Var, 0, double[]Var, intVar, intVar);
+                if (ExpandableStatefulODE != null) {
+                    ExpandableStatefulODE.setSecondaryState(intVar, double[]Var);
+                }
+                return;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizer <290, 293>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+            double[]Var[intVar] = FastMath.sqrt(double[][]Var[intVar][intVar]);
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DerivativeStructure <822, 825>
+for (int intVar = 0; intVar < DerivativeStructure.double[]Var.length; ++intVar) {
+            DerivativeStructure.double[]Var[intVar] = FastMath.toDegrees(double[]Var[intVar]);
+        }
+return DerivativeStructure;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DerivativeStructure <833, 836>
+for (int intVar = 0; intVar < DerivativeStructure.double[]Var.length; ++intVar) {
+            DerivativeStructure.double[]Var[intVar] = FastMath.toRadians(double[]Var[intVar]);
+        }
+return DerivativeStructure;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.StatUtils <705, 708>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            doubleVar += double[]Var[intVar] - double[]Var[intVar];
+        }
+return doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <845, 848>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+            int[]Var[intVar] = dis[i].index;
+        }
+return int[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.AbstractRealMatrix <537, 541>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            double[]Var[intVar] = getEntry(intVar, intVar);
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.AbstractRealMatrix <562, 566>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            double[]Var[intVar] = getEntry(intVar, intVar);
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizer <305, 309>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+                doubleVar += double[]Var[intVar] * double[]Var[intVar];
+            }
+empty line
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <460, 463>
+for (int intVar = 0; intVar < doubleVar.length; intVar++) {
+                doubleVar += doubleVar[intVar] * double[]Var[intVar];
+            }
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <302, 305>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                double[]Var[intVar] = doubleVar[intVar] + double[]Var[intVar];
+            }
+return RealVector;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <328, 331>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                double[]Var[intVar] = doubleVar[intVar] - double[]Var[intVar];
+            }
+return RealVector;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <405, 408>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                double[]Var[intVar] = doubleVar[intVar] * double[]Var[intVar];
+            }
+return RealVector;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <429, 432>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                double[]Var[intVar] = doubleVar[intVar] / double[]Var[intVar];
+            }
+return RealVector;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.transform.TransformUtils <138, 141>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            Complex[]Var[intVar] = new Complex(double[]Var[intVar], double[]Var[intVar]);
+        }
+return Complex[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <412, 415>
+for (int intVar = 0; intVar < doubleVar.length; intVar++) {
+                double[]Var[intVar] *= RealVector.getEntry(intVar);
+            }
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <436, 439>
+for (int intVar = 0; intVar < doubleVar.length; intVar++) {
+                double[]Var[intVar] /= RealVector.getEntry(intVar);
+            }
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <694, 698>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            if (FastMath.abs(double[]Var[intVar]) > doubleVar) {
+                doubleVar=FastMath.abs(double[]Var[intVar]);
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.MultivariateFunctionMappingAdapter <145, 149>
+for (int intVar = 0; intVar < Mapper[]Var.length; ++intVar) {
+            double[]Var[intVar] = Mapper[]Var[intVar].unboundedToBounded(double[]Var[intVar]);
+        }
+empty line
+return double[]Var;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.MultivariateFunctionMappingAdapter <161, 165>
+for (int intVar = 0; intVar < Mapper[]Var.length; ++intVar) {
+            double[]Var[intVar] = Mapper[]Var[intVar].boundedToUnbounded(double[]Var[intVar]);
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DSCompiler <1439, 1444>
+if (intVar > 0) {
+            double[]Var[1] = FastMath.sinh(double[]Var[intVar]);
+            for (int i = 2; i <= intVar; ++i) {
+                double[]Var[i] = double[]Var[i - 2];
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DSCompiler <1465, 1470>
+if (intVar > 0) {
+            double[]Var[1] = FastMath.cosh(double[]Var[intVar]);
+            for (int i = 2; i <= intVar; ++i) {
+                double[]Var[i] = double[]Var[i - 2];
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <57, 60>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+            doubleVar += FastMath.abs(double[]Var[intVar] - double[]Var[intVar]);
+        }
+return doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <567, 571>
+if (double[][]Var != null) {
+                    if (double[]Var[intVar] > double[][]Var[1][intVar] - double[][]Var[0][intVar]) {
+                        throw new OutOfRangeException(double[]Var[intVar], 0, double[][]Var[1][intVar] - double[][]Var[0][intVar]);
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.AbstractMultipleLinearRegression <293, 296>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[]Var[intVar] = FastMath.sqrt(doubleVar * double[][]Var[intVar][intVar]);
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.AbstractLeastSquaresOptimizer <268, 271>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+            double[]Var[intVar] = FastMath.sqrt(double[][]Var[intVar][intVar]) * doubleVar;
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DerivativeStructure <482, 485>
+for (int intVar = 0; intVar < DerivativeStructure.double[]Var.length; ++intVar) {
+            DerivativeStructure.double[]Var[intVar] = FastMath.scalb(double[]Var[intVar], intVar);
+        }
+return DerivativeStructure;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DSCompiler <1139, 1144>
+if (intVar > 0) {
+            double[]Var[1] = FastMath.cos(double[]Var[intVar]);
+            for (int i = 2; i <= intVar; ++i) {
+                double[]Var[i] = -double[]Var[i - 2];
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.polynomials.PolynomialFunction <269, 272>
+for (int intVar = intVar - 1; intVar > 0; intVar--) {
+            double[]Var[intVar - 1] = intVar * double[]Var[intVar];
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <472, 482>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                double[] y = double[]Var[intVar];
+                if (y == null) {
+                    throw new NullArgumentException();
+                }
+                if (y.length != intVar) {
+                    throw new DimensionMismatchException(y.length, intVar);
+                }
+                double[]Var[intVar] = y[intVar];
+            }
+ListVar.add(new Pair<Double, double[]>(double[]Var[intVar], double[]Var));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.distribution.MultivariateNormalDistribution <235, 238>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+            doubleVar += double[]Var[intVar] * double[]Var[intVar];
+        }
+return FastMath.exp(-0.5 * doubleVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.MatrixUtils <217, 220>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+            RealMatrix.setEntry(intVar, intVar, double[]Var[intVar]);
+        }
+return RealMatrix;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DSCompiler <1113, 1118>
+if (intVar > 0) {
+            double[]Var[1] = -FastMath.sin(double[]Var[intVar]);
+            for (int i = 2; i <= intVar; ++i) {
+                double[]Var[i] = -double[]Var[i - 2];
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.polynomials.PolynomialFunctionLagrangeForm <236, 241>
+if (intVar < 0.5*(intVar-intVar+1)) {
+                doubleVar += double[]Var[intVar];    // fork down
+            } else {
+                intVar--;
+                doubleVar += double[]Var[intVar];    // fork up
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <630, 639>
+if (Double.isNaN(doubleVar)) {
+            // either we have split infinite numbers or some coefficients were NaNs,
+            // just rely on the naive implementation and let IEEE754 handle this
+            doubleVar = 0;
+            for (int intVar = 0; intVar < intVar; ++intVar) {
+                doubleVar += double[]Var[intVar] * double[]Var[intVar];
+            }
+        }
+empty line
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.StatUtils <782, 786>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+            // z = (x- mean)/standardDeviation
+            double[]Var[intVar] = (double[]Var[intVar] - doubleVar) / doubleVar;
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <431, 437>
+if (double[]Var[intVar] <= 0) {
+                        double[]Var[intVar] = double[]Var[intVar] < 0 ? -double[]Var[intVar] : 0;
+
+                        for (int i = 0; i <= intVar; i++) {
+                            double[][]Var[i][intVar] = -double[][]Var[i][intVar];
+                        }
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.rank.Percentile <420, 424>
+if (intVar < intVar) {
+                final double tmp = double[]Var[intVar];
+                double[]Var[intVar++] = double[]Var[intVar];
+                double[]Var[intVar--] = tmp;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.LoessInterpolator <282, 286>
+if (double[]Var[intVar] - double[]Var[intVar] > double[]Var[intVar] - double[]Var[intVar]) {
+                    intVar = intVar;
+                } else {
+                    intVar = intVar;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.UncorrelatedRandomVectorGenerator <85, 89>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+      double[]Var[intVar] = double[]Var[intVar] + double[]Var[intVar] * NormalizedRandomGenerator.nextNormalizedDouble();
+    }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <119, 122>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+            doubleVar = FastMath.max(doubleVar, FastMath.abs(double[]Var[intVar] - double[]Var[intVar]));
+        }
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.CholeskyDecomposition <245, 253>
+for (int intVar = intVar - 1; intVar >= 0; intVar--) {
+                double[]Var[intVar] /= double[][]Var[intVar][intVar];
+                final double xJ = double[]Var[intVar];
+                for (int i = 0; i < intVar; i++) {
+                    double[]Var[i] -= xJ * double[][]Var[i][intVar];
+                }
+            }
+empty line
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <961, 966>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                    if (MillerUpdatingRegression.int[]Var[intVar] == intVar) {
+                        double[]Var[intVar] = double[]Var[ intVar];
+                        int[]Var[intVar] = intVar;
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatingFunction <434, 440>
+for (int intVar = 0; intVar < shortVar; intVar++) {
+            for (int j = 0; j < shortVar; j++) {
+                doubleVar += double[][]Var[intVar][j] * double[]Var[intVar] * double[]Var[j];
+            }
+        }
+empty line
+return doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <587, 590>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+            final double range = (double[][]Var == null) ? 1.0 : double[][]Var[1][intVar] - double[][]Var[0][intVar];
+            double[][]Var[intVar][0] = ((double[]Var == null) ? 0.3 : double[]Var[intVar]) / range;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <529, 533>
+for (int intVar = 0; intVar < doubleVar.length; ++intVar) {
+                final double delta = doubleVar[intVar] - double[]Var[intVar];
+                doubleVar += FastMath.abs(delta);
+            }
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.GradientFunction <57, 63>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+            int[]Var[intVar] = 1;
+            double[]Var[intVar] = DerivativeStructure.getPartialDerivative(int[]Var);
+            int[]Var[intVar] = 0;
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.distribution.ExponentialDistribution <232, 243>
+do {
+            ++intVar;
+            doubleVar = RandomGenerator.nextDouble();
+
+            if (doubleVar < doubleVar) {
+                doubleVar = doubleVar;
+            }
+
+            // Step 8:
+        } while (doubleVar > double[]Var[intVar]);
+empty line
+return doubleVar * (doubleVar + doubleVar * double[]Var[0]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.LoessInterpolator <422, 426>
+if (intVar < double[]Var.length && double[]Var[intVar] - double[]Var[intVar] < double[]Var[intVar] - double[]Var[intVar]) {
+            int nextLeft = nextNonzero(double[]Var, int[]Var[0]);
+            int[]Var[0] = nextLeft;
+            int[]Var[1] = intVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <1071, 1076>
+for (int intVar = 0; intVar < MillerUpdatingRegression.int[]Var.length; intVar++) {
+                    if (MillerUpdatingRegression.int[]Var[intVar] == int[]Var[intVar]) {
+                        double[]Var[intVar] = double[]Var[ intVar];
+                        int[]Var[intVar] = intVar;
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.polynomials.PolynomialFunctionLagrangeForm <210, 220>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            // initialize the difference arrays
+            double[]Var[intVar] = doubleVar[intVar];
+            double[]Var[intVar] = doubleVar[intVar];
+            // find out the abscissa closest to z
+            final double dist = FastMath.abs(doubleVar - doubleVar[intVar]);
+            if (dist < doubleVar) {
+                intVar = intVar;
+                doubleVar = dist;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <122, 130>
+if (double[]Var[intVar] != 0) {
+                    if (double[][]Var[intVar][intVar] < 0) {
+                        double[]Var[intVar] = -double[]Var[intVar];
+                    }
+                    for (int intVar = intVar; intVar < intVar; intVar++) {
+                        double[][]Var[intVar][intVar] /= double[]Var[intVar];
+                    }
+                    double[][]Var[intVar][intVar] += 1;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.integration.gauss.BaseRuleFactory <134, 139>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double[]Var[intVar] = T[]Var[intVar].doubleValue();
+            double[]Var[intVar] = T[]Var[intVar].doubleValue();
+        }
+empty line
+return new Pair<double[], double[]>(double[]Var, double[]Var);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <1081, 1088>
+for (int intVar = 0; intVar < intVar; intVar++) {
+             if (Double.isNaN(double[]Var[intVar])) {
+                 double[]Var[intVar] = Double.NaN;
+             } else {
+                 double[]Var[intVar] = double[]Var[intVar] * doubleVar / doubleVar;
+             }
+         }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.EmpiricalDistribution <501, 505>
+for (int intVar = 1; intVar < intVar - 1; intVar++) {
+            double[]Var[intVar] = double[]Var[intVar-1] + doubleVar;
+        }
+double[]Var[intVar - 1] = doubleVar;
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.transform.TransformUtils <102, 107>
+for (int intVar = 0; intVar < Complex[]Var.length; intVar++) {
+            final Complex c = Complex[]Var[intVar];
+            double[]Var[intVar] = c.getReal();
+            double[]Var[intVar] = c.getImaginary();
+        }
+return double[][]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <505, 509>
+for (int intVar = 0; intVar < doubleVar.length; ++intVar) {
+                final double delta = doubleVar[intVar] - double[]Var[intVar];
+                doubleVar += delta * delta;
+            }
+return FastMath.sqrt(doubleVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <87, 91>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+            final double dp = double[]Var[intVar] - double[]Var[intVar];
+            doubleVar += dp * dp;
+        }
+return FastMath.sqrt(doubleVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatingFunction <172, 175>
+final double doubleVar = (doubleVar - double[]Var[intVar]) / (double[]Var[intVar + 1] - double[]Var[intVar]);
+final double doubleVar = (doubleVar - double[]Var[intVar]) / (double[]Var[intVar + 1] - double[]Var[intVar]);
+empty line
+return BicubicSplineFunction[][]Var[intVar][intVar].value(doubleVar, doubleVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BiDiagonalTransformer <144, 155>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+                double[][]Var[intVar][intVar] = double[]Var[intVar];
+                if (intVar < intVar) {
+                    if (intVar > 0) {
+                        double[][]Var[intVar][intVar-1] = double[]Var[intVar - 1];
+                    }
+                } else {
+                    if (intVar < double[]Var.length - 1) {
+                        double[][]Var[intVar][intVar+1] = double[]Var[intVar];
+                    }
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <553, 557>
+for (int intVar = 0; intVar < doubleVar.length; ++intVar) {
+                final double delta = doubleVar[intVar] - double[]Var[intVar];
+                doubleVar = FastMath.max(doubleVar, FastMath.abs(delta));
+            }
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatingFunction <267, 270>
+final double doubleVar = (doubleVar - double[]Var[intVar]) / (double[]Var[intVar + 1] - double[]Var[intVar]);
+final double doubleVar = (doubleVar - double[]Var[intVar]) / (double[]Var[intVar + 1] - double[]Var[intVar]);
+empty line
+return BivariateFunction[][][]Var[intVar][intVar][intVar].value(doubleVar, doubleVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <273, 277>
+if (doubleVar != 0.0) {
+                double[]Var[intVar] = smartAdd(doubleVar * double[]Var[intVar], doubleVar * doubleVar) / doubleVar;
+            } else {
+                double[]Var[intVar] = doubleVar / doubleVar;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.QRDecomposition <355, 365>
+for (int intVar = double[]Var.length - 1; intVar >= 0; --intVar) {
+                double[]Var[intVar] /= double[]Var[intVar];
+                final double yRow = double[]Var[intVar];
+                final double[] qrtRow = double[][]Var[intVar];
+                double[]Var[intVar] = yRow;
+                for (int i = 0; i < intVar; i++) {
+                    double[]Var[i] -= yRow * qrtRow[i];
+                }
+            }
+empty line
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <165, 173>
+if (double[]Var[intVar] != 0) {
+                    if (double[]Var[intVar + 1] < 0) {
+                        double[]Var[intVar] = -double[]Var[intVar];
+                    }
+                    for (int intVar = intVar + 1; intVar < intVar; intVar++) {
+                        double[]Var[intVar] /= double[]Var[intVar];
+                    }
+                    double[]Var[intVar + 1] += 1;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizer <227, 236>
+if (intVar % intVar == 0 ||
+                doubleVar < 0) {
+                // Break conjugation: reset search direction.
+                double[]Var = double[]Var.clone();
+            } else {
+                // Compute new conjugate search direction.
+                for (int intVar = 0; intVar < intVar; ++intVar) {
+                    double[]Var[intVar] = double[]Var[intVar] + doubleVar * double[]Var[intVar];
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.summary.Sum <124, 130>
+if (test(double[]Var, intVar, intVar, true)) {
+            doubleVar = 0.0;
+            for (int i = intVar; i < intVar + intVar; i++) {
+                doubleVar += double[]Var[i];
+            }
+        }
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.summary.Product <125, 131>
+if (test(double[]Var, intVar, intVar, true)) {
+            doubleVar = 1.0;
+            for (int i = intVar; i < intVar + intVar; i++) {
+                doubleVar *= double[]Var[i];
+            }
+        }
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerStepInterpolator <264, 270>
+if (intVar < 0) {
+        return;
+      }
+empty line
+// compute the remaining coefficients
+final double doubleVar = 0.5 * (double[]Var[intVar] + double[]Var[intVar]) + 0.125 * (doubleVar + doubleVar);
+double[][]Var[4][intVar] = 16 * (double[][]Var[0][intVar] - doubleVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.MicrosphereInterpolatingFunction <173, 183>
+for (int intVar = 0; intVar < double[][]Var.length; ++intVar) {
+            final double[] xvalI = double[][]Var[intVar];
+            if (xvalI == null) {
+                throw new NullArgumentException();
+            }
+            if (xvalI.length != intVar) {
+                throw new DimensionMismatchException(xvalI.length, intVar);
+            }
+
+            Map.put(new ArrayRealVector(xvalI), double[]Var[intVar]);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.integration.gauss.GaussIntegratorFactory <126, 131>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+            double[]Var[intVar] = double[]Var[intVar] * doubleVar + doubleVar;
+            double[]Var[intVar] *= doubleVar;
+        }
+empty line
+return new Pair<double[], double[]>(double[]Var, double[]Var);
+
+---patch code 1--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <994, 996>
+if (x[i] < bLoEnc[i]) {
+                    return false;
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.analysis.integration.gauss.GaussIntegratorFactory <126, 131>
+for (int i = 0; i < points.length; i++) {
+            points[i] = points[i] * scale + shift;
+            weights[i] *= scale;
+        }
+empty line
+return new Pair<double[], double[]>(points, weights);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <581, 588>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            if (FastMath.abs(double[]Var[intVar]) > doubleVar) {
+                doubleVar = FastMath.abs(double[]Var[intVar]);
+            }
+            if (FastMath.abs(double[]Var[intVar]) > doubleVar) {
+                doubleVar = FastMath.abs(double[]Var[intVar]);
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatingFunction <472, 480>
+for (int intVar = 0; intVar < shortVar; intVar++) {
+            for (int j = 0; j < shortVar; j++) {
+                for (int k = 0; k < shortVar; k++) {
+                    doubleVar += double[][][]Var[intVar][j][k] * double[]Var[intVar] * double[]Var[j] * double[]Var[k];
+                }
+            }
+        }
+empty line
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.BicubicSplineInterpolatingFunction <347, 356>
+for (int intVar = 0; intVar < 16; intVar++) {
+            double result = 0;
+            final double[] row = double[][]Var[intVar];
+            for (int j = 0; j < 16; j++) {
+                result += row[j] * double[]Var[j];
+            }
+            double[]Var[intVar] = result;
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.summary.SumOfLogs <135, 141>
+if (test(double[]Var, intVar, intVar, true)) {
+            doubleVar = 0.0;
+            for (int i = intVar; i < intVar + intVar; i++) {
+                doubleVar += FastMath.log(double[]Var[i]);
+            }
+        }
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.TriDiagonalTransformer <142, 150>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                double[][]Var[intVar][intVar] = double[]Var[intVar];
+                if (intVar > 0) {
+                    double[][]Var[intVar][intVar - 1] = double[]Var[intVar - 1];
+                }
+                if (intVar < double[]Var.length - 1) {
+                    double[][]Var[intVar][intVar + 1] = double[]Var[intVar];
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.summary.SumOfSquares <123, 129>
+if (test(double[]Var, intVar, intVar, true)) {
+            doubleVar = 0.0;
+            for (int i = intVar; i < intVar + intVar; i++) {
+                doubleVar += double[]Var[i] * double[]Var[i];
+            }
+        }
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.clustering.KMeansPlusPlusClusterer <282, 287>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            if (intVar != intVar) { // That point isn't considered
+                double d = TVar.distanceFrom(ListVar.get(intVar));
+                double[]Var[intVar] = d*d;
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <540, 552>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+                    if (Double.isInfinite(double[][]Var[1][intVar] - double[][]Var[0][intVar])) {
+                        final double max = Double.MAX_VALUE + double[][]Var[0][intVar];
+                        final NumberIsTooLargeException e
+                            = new NumberIsTooLargeException(double[][]Var[1][intVar],
+                                                            max,
+                                                            true);
+                        e.getContext().addMessage(LocalizedFormats.OVERFLOW);
+                        e.getContext().addMessage(LocalizedFormats.INDEX, intVar);
+
+                        throw e;
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DSCompiler <1031, 1038>
+if (intVar > 0) {
+            double inv = 1.0 / double[]Var[intVar];
+            double xk  = inv;
+            for (int i = 1; i <= intVar; ++i) {
+                double[]Var[i] = xk;
+                xk *= -i * inv;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.Array2DRowRealMatrix <380, 388>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            double sum = 0;
+            for (int i = 0; i < intVar; ++i) {
+                sum += doubleVar[i][intVar] * double[]Var[i];
+            }
+            double[]Var[intVar] = sum;
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BlockRealMatrix <943, 949>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                if (intVar >= double[]Var.length) {
+                    double[]Var = AbstractRealMatrix.doubleVar[++intVar];
+                    intVar = 0;
+                }
+                double[]Var[intVar++] = double[]Var[intVar * intVar + intVar];
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BlockRealMatrix <998, 1004>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                if (intVar >= double[]Var.length) {
+                    double[]Var = AbstractRealMatrix.doubleVar[++intVar];
+                    intVar = 0;
+                }
+                double[]Var[intVar * intVar + intVar] = double[]Var[intVar++];
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.BaseAbstractMultivariateSimpleBoundsOptimizer <130, 140>
+if (double[]Var == null) {
+            double[]Var = new double[intVar];
+            for (int i = 0; i < intVar; i++) {
+                double[]Var[i] = Double.POSITIVE_INFINITY;
+            }
+        } else {
+            double[]Var = double[]Var.clone();
+        }
+empty line
+// Base class method performs the non bound-specific initializations.
+return super.optimize(intVar, FUNCVar, null, double[]Var);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.summary.Sum <163, 169>
+if (test(double[]Var, double[]Var, intVar, intVar, true)) {
+            doubleVar = 0.0;
+            for (int i = intVar; i < intVar + intVar; i++) {
+                doubleVar += double[]Var[i] * double[]Var[i];
+            }
+        }
+return doubleVar;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.AbstractSimplex <246, 252>
+for (int i = 0; i < simplex.length; i++) {
+            final PointValuePair vertex = simplex[i];
+            final double[] point = vertex.getPointRef();
+            if (Double.isNaN(vertex.getValue())) {
+                simplex[i] = new PointValuePair(point, MultivariateFunction.value(point), false);
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DSCompiler <1058, 1065>
+if (intVar > 0) {
+            double inv = 1.0 / (1.0 + double[]Var[intVar]);
+            double xk  = inv;
+            for (int i = 1; i <= intVar; ++i) {
+                double[]Var[i] = xk;
+                xk *= -i * inv;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.summary.Product <165, 171>
+if (test(double[]Var, double[]Var, intVar, intVar, true)) {
+            doubleVar = 1.0;
+            for (int i = intVar; i < intVar + intVar; i++) {
+                doubleVar *= FastMath.pow(double[]Var[i], double[]Var[i]);
+            }
+        }
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.differentiation.DSCompiler <1085, 1092>
+if (intVar > 0) {
+            double inv = 1.0 / double[]Var[intVar];
+            double xk  = inv / FastMath.log(10.0);
+            for (int i = 1; i <= intVar; ++i) {
+                double[]Var[i] = xk;
+                xk *= -i * inv;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.LUDecomposition <316, 324>
+for (int intVar = intVar - 1; intVar >= 0; intVar--) {
+                double[]Var[intVar] /= double[][]Var[intVar][intVar];
+                final double bpCol = double[]Var[intVar];
+                for (int i = 0; i < intVar; i++) {
+                    double[]Var[i] -= bpCol * double[][]Var[i][intVar];
+                }
+            }
+empty line
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatingFunction <401, 410>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            double result = 0;
+            final double[] row = double[][]Var[intVar];
+            for (int j = 0; j < intVar; j++) {
+                result += row[j] * double[]Var[j];
+            }
+            double[]Var[intVar] = result;
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.linear.SimplexTableau <414, 428>
+if (int != null && int == 0) {
+              // if the basic row is found to be the objective function row
+              // set the coefficient to 0 -> this case handles unconstrained
+              // variables that are still part of the objective function
+              double[]Var[intVar] = 0;
+          } else if (Set.contains(int)) {
+              // if multiple variables can take a given value
+              // then we choose the first and set the rest equal to 0
+              double[]Var[intVar] = 0 - (booleanVar ? 0 : doubleVar);
+          } else {
+              Set.add(int);
+              double[]Var[intVar] =
+                  (int == null ? 0 : getEntry(int, getRhsOffset())) -
+                  (booleanVar ? 0 : doubleVar);
+          }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.polynomials.PolynomialsUtils <342, 349>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            for (int j = intVar; j < intVar; j++){
+                double[]Var[intVar + 1] += int[][]Var[j + 1][j - intVar] *
+                    double[]Var[j + 1] * FastMath.pow(doubleVar, j - intVar);
+            }
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.SmoothingPolynomialBicubicSplineInterpolator <132, 139>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            final PolynomialFunction f = PolynomialFunction[]Var[intVar];
+            for (int intVar = 0; intVar < intVar; intVar++) {
+                double[][]Var[intVar][intVar] = f.value(double[]Var[intVar]);
+            }
+        }
+empty line
+return super.interpolate(double[]Var, double[]Var, double[][]Var);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.Array2DRowRealMatrix <358, 366>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            final double[] dataRow = doubleVar[intVar];
+            double sum = 0;
+            for (int i = 0; i < intVar; i++) {
+                sum += dataRow[i] * double[]Var[i];
+            }
+            double[]Var[intVar] = sum;
+        }
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.AbstractRealMatrix <659, 667>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            double sum = 0;
+            for (int i = 0; i < intVar; ++i) {
+                sum += getEntry(intVar, i) * double[]Var[i];
+            }
+            double[]Var[intVar] = sum;
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.AbstractRealMatrix <706, 714>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            double sum = 0;
+            for (int i = 0; i < intVar; ++i) {
+                sum += getEntry(i, intVar) * double[]Var[i];
+            }
+            double[]Var[intVar] = sum;
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.random.CorrelatedRandomVectorGenerator <174, 181>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+            double[]Var[intVar] = double[]Var[intVar];
+            for (int j = 0; j < RealMatrix.getColumnDimension(); ++j) {
+                double[]Var[intVar] += RealMatrix.getEntry(intVar, j) * double[]Var[j];
+            }
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.LoessInterpolator <351, 359>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                final double arg = double[]Var[intVar] / (6 * doubleVar);
+                if (arg >= 1) {
+                    double[]Var[intVar] = 0;
+                } else {
+                    final double w = 1 - arg * arg;
+                    double[]Var[intVar] = w * w;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerStepInterpolator <304, 311>
+if (intVar >= 5) {
+      for (int i = 0; i < double[]Var.length; ++i) {
+        final double e = double[][]Var[intVar][i] / double[]Var[i];
+        doubleVar += e * e;
+      }
+      doubleVar = FastMath.sqrt(doubleVar / double[]Var.length) * double[]Var[intVar - 5];
+    }
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BiDiagonalTransformer <355, 360>
+for (int intVar = intVar + 1; intVar < intVar; ++intVar) {
+                    final double c = doubleVar[intVar][intVar];
+                    doubleVar += c * c;
+                }
+final double doubleVar = (double[]Var[intVar] > 0) ? -FastMath.sqrt(doubleVar) : FastMath.sqrt(doubleVar);
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.DividedDifferenceInterpolator <102, 119>
+NonMonotonicSequenceException {
+PolynomialFunctionLagrangeForm.verifyInterpolationArray(doubleVar, doubleVar, true);
+empty line
+final double[] double[]Var = doubleVar.clone();
+empty line
+final int intVar = doubleVar.length;
+final double[] double[]Var = new double [intVar];
+double[]Var[0] = double[]Var[0];
+for (int intVar = 1; intVar < intVar; intVar++) {
+            for (int j = 0; j < intVar-intVar; j++) {
+                final double denominator = doubleVar[j+intVar] - doubleVar[j];
+                double[]Var[j] = (double[]Var[j+1] - double[]Var[j]) / denominator;
+            }
+            double[]Var[intVar] = double[]Var[0];
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.OpenIntToDoubleHashMap <444, 452>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            if (byte[]Var[intVar] == byteVar) {
+                final int key = int[]Var[intVar];
+                final int index = findInsertionIndex(int[]Var, byte[]Var, key, intVar);
+                int[]Var[index]   = key;
+                double[]Var[index] = double[]Var[intVar];
+                byte[]Var[index] = byteVar;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.transform.FastFourierTransformer <136, 145>
+if (intVar < intVar) {
+                // swap indices i & j
+                double temp = double[]Var[intVar];
+                double[]Var[intVar] = double[]Var[intVar];
+                double[]Var[intVar] = temp;
+
+                temp = double[]Var[intVar];
+                double[]Var[intVar] = double[]Var[intVar];
+                double[]Var[intVar] = temp;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.transform.FastCosineTransformer <174, 180>
+for (int intVar = 1; intVar < (intVar >> 1); intVar++) {
+            double[]Var[2 * intVar]     = Complex[]Var[intVar].getReal();
+            double[]Var[2 * intVar + 1] = double[]Var[2 * intVar - 1] - Complex[]Var[intVar].getImaginary();
+        }
+double[]Var[intVar] = Complex[]Var[intVar >> 1].getReal();
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.NonLinearConjugateGradientOptimizer <215, 223>
+if (null == ConjugateGradientFormula.FLETCHER_REEVES) {
+                doubleVar = doubleVar / doubleVar;
+            } else {
+                double deltaMid = 0;
+                for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+                    deltaMid += double[]Var[intVar] * double[]Var[intVar];
+                }
+                doubleVar = (doubleVar - deltaMid) / doubleVar;
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.MultivariateFunctionMappingAdapter <115, 133>
+for (int intVar = 0; intVar < Mapper[]Var.length; ++intVar) {
+            if (Double.isInfinite(double[]Var[intVar])) {
+                if (Double.isInfinite(double[]Var[intVar])) {
+                    // element is unbounded, no transformation is needed
+                    Mapper[]Var[intVar] = new NoBoundsMapper();
+                } else {
+                    // element is simple-bounded on the upper side
+                    Mapper[]Var[intVar] = new UpperBoundMapper(double[]Var[intVar]);
+                }
+            } else {
+                if (Double.isInfinite(double[]Var[intVar])) {
+                    // element is simple-bounded on the lower side
+                    Mapper[]Var[intVar] = new LowerBoundMapper(double[]Var[intVar]);
+                } else {
+                    // element is double-bounded
+                    Mapper[]Var[intVar] = new LowerUpperBoundMapper(double[]Var[intVar], double[]Var[intVar]);
+                }
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.polynomials.PolynomialFunction <204, 213>
+if (doubleVar.length < PolynomialFunction.doubleVar.length) {
+            for (int intVar = intVar; intVar < intVar; ++intVar) {
+                double[]Var[intVar] = -PolynomialFunction.doubleVar[intVar];
+            }
+        } else {
+            System.arraycopy(doubleVar, intVar, double[]Var, intVar,
+                             intVar - intVar);
+        }
+empty line
+return new PolynomialFunction(double[]Var);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.polynomials.PolynomialFunction <176, 185>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            double[]Var[intVar] = doubleVar[intVar] + PolynomialFunction.doubleVar[intVar];
+        }
+System.arraycopy((doubleVar.length < PolynomialFunction.doubleVar.length) ?
+                         PolynomialFunction.doubleVar : doubleVar,
+                         intVar,
+                         double[]Var, intVar,
+                         intVar - intVar);
+empty line
+return new PolynomialFunction(double[]Var);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <261, 270>
+for (int intVar = intVar + 1; intVar < intVar; intVar++) {
+                doubleVar = double[]Var[intVar];
+                double[]Var[intVar] = smartAdd(doubleVar, -doubleVar * double[]Var[intVar]);
+                if (doubleVar != 0.0) {
+                    double[]Var[intVar] = smartAdd(doubleVar * double[]Var[intVar], (doubleVar * doubleVar) * doubleVar) / doubleVar;
+                } else {
+                    double[]Var[intVar] = doubleVar / doubleVar;
+                }
+                ++intVar;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <681, 689>
+if (intVar != intVar) {
+                double[]Var[intVar] = double[]Var[intVar];
+                double[]Var[intVar] = doubleVar;
+                for (int intVar = 0; intVar < intVar; intVar++) {
+                    doubleVar = double[][]Var[intVar][intVar];
+                    double[][]Var[intVar][intVar] = double[][]Var[intVar][intVar];
+                    double[][]Var[intVar][intVar] = doubleVar;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer <784, 793>
+if (intVar > 0) {
+            for (int intVar = intVar - 1; intVar >= 0; --intVar) {
+                int pj = int[]Var[intVar];
+                double sum = 0;
+                for (int i = intVar + 1; i < intVar; ++i) {
+                    sum += double[][]Var[i][pj] * double[]Var[i];
+                }
+                double[]Var[intVar] = (double[]Var[intVar] - sum) / double[]Var[intVar];
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <134, 145>
+if (intVar < intVar &&
+                    double[]Var[intVar] != 0) {
+                    // Apply the transformation.
+                    double t = 0;
+                    for (int i = intVar; i < intVar; i++) {
+                        t += double[][]Var[i][intVar] * double[][]Var[i][intVar];
+                    }
+                    t = -t / double[][]Var[intVar][intVar];
+                    for (int i = intVar; i < intVar; i++) {
+                        double[][]Var[i][intVar] += t * double[][]Var[i][intVar];
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.polynomials.PolynomialFunction <238, 247>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+            double[]Var[intVar] = 0.0;
+            for (int j = FastMath.max(0, intVar + 1 - PolynomialFunction.doubleVar.length);
+                 j < FastMath.min(doubleVar.length, intVar + 1);
+                 ++j) {
+                double[]Var[intVar] += doubleVar[j] * PolynomialFunction.doubleVar[intVar-j];
+            }
+        }
+empty line
+return new PolynomialFunction(double[]Var);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <454, 463>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                final ArrayRealVector v = ArrayRealVector[]Var[intVar];
+                final double[] vData = v.getDataRef();
+                final double s = v.dotProduct(RealVector) / double[]Var[intVar];
+                for (int j = 0; j < intVar; ++j) {
+                    double[]Var[j] += s * vData[j];
+                }
+            }
+empty line
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer <345, 357>
+if (doubleVar != 0) {
+                for (int j = 0; j < intVar; ++j) {
+                    int    pj = int[]Var[j];
+                    double s  = double[]Var[pj];
+                    if (s != 0) {
+                        double sum = 0;
+                        for (int intVar = 0; intVar <= j; ++intVar) {
+                            sum += double[][]Var[intVar][pj] * double[]Var[intVar];
+                        }
+                        doubleVar = FastMath.max(doubleVar, FastMath.abs(sum) / (s * doubleVar));
+                    }
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.TricubicSplineInterpolatingFunction <322, 325>
+final double doubleVar = (doubleVar - double[]Var[intVar]) / (double[]Var[intVar + 1] - double[]Var[intVar]);
+final double doubleVar = (doubleVar - double[]Var[intVar]) / (double[]Var[intVar + 1] - double[]Var[intVar]);
+empty line
+return TricubicSplineFunction[][][]Var[intVar][intVar][intVar].value(doubleVar, doubleVar, doubleVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BlockRealMatrix <1052, 1060>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            final int iHeight = blockHeight(intVar);
+            final double[] block = doubleVar[intVar * intVar + intVar];
+            for (int i = 0; i < iHeight; ++i) {
+                double[]Var[intVar++] = block[i * intVar + intVar];
+            }
+        }
+empty line
+return new ArrayRealVector(double[]Var, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.partitioning.utilities.OrderedTuple <414, 427>
+/** Get a bit from the mantissa of a double.
+     * @param i index of the component
+     * @param k scale of the requested bit
+     * @return the specified bit (either 0 or 1), after the offset has
+     * been added to the double
+     */
+    private int getBit(final int i, final int k) {
+        final long bits = Double.doubleToLongBits(double[]Var[intVar]);
+        final int e = exponent(bits);
+        if ((intVar < e) || (intVar > intVar)) {
+            return 0;
+        } else if (intVar == intVar) {
+            return (sign(bits) == 0L) ? 1 : 0;
+        } else if (intVar > (e + 52)) {
+            return (sign(bits) == 0L) ? 0 : 1;
+        } else {
+            final long m = (sign(bits) == 0L) ? mantissa(bits) : -mantissa(bits);
+            return (int) ((m >> (intVar - e)) & 0x1L);
+        }
+    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BlockRealMatrix <1127, 1135>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            final int iHeight = blockHeight(intVar);
+            final double[] block = doubleVar[intVar * intVar + intVar];
+            for (int i = 0; i < iHeight; ++i) {
+                double[]Var[intVar++] = block[i * intVar + intVar];
+            }
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.moment.SemiVariance <273, 290>
+} else {
+final boolean booleanVar = Direction.getDirection();
+empty line
+double doubleVar = 0.0;
+double doubleVar = 0.0;
+for (int intVar = intVar; intVar < intVar; intVar++) {
+                    if ((double[]Var[intVar] > doubleVar) == booleanVar) {
+                       doubleVar = double[]Var[intVar] - doubleVar;
+                       doubleVar += doubleVar * doubleVar;
+                    }
+                }
+empty line
+if (booleanVar) {
+                    return doubleVar / (intVar - 1.0);
+                } else {
+                    return doubleVar / intVar;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.LeastSquaresConverter <164, 179>
+if (double[]Var != null) {
+            for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+                final double ri = double[]Var[intVar];
+                doubleVar +=  double[]Var[intVar] * ri * ri;
+            }
+        } else if (RealMatrix != null) {
+            for (final double yi : RealMatrix.operate(double[]Var)) {
+                doubleVar += yi * yi;
+            }
+        } else {
+            for (final double ri : double[]Var) {
+                doubleVar += ri * ri;
+            }
+        }
+empty line
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <250, 262>
+if (intVar < intVar &&
+                double[]Var[intVar] != 0) {
+                for (int intVar = intVar + 1; intVar < intVar; intVar++) {
+                    double t = 0;
+                    for (int i = intVar + 1; i < intVar; i++) {
+                        t += double[][]Var[i][intVar] * double[][]Var[i][intVar];
+                    }
+                    t = -t / double[][]Var[intVar + 1][intVar];
+                    for (int i = intVar + 1; i < intVar; i++) {
+                        double[][]Var[i][intVar] += t * double[][]Var[i][intVar];
+                    }
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.Array2DRowRealMatrix <231, 248>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            // Copy all elements of column "col" of "m" so that
+            // will be in contiguous memory.
+            for (int mRow = 0; mRow < intVar; mRow++) {
+                double[]Var[mRow] = double[][]Var[mRow][intVar];
+            }
+
+            for (int row = 0; row < intVar; row++) {
+                final double[] dataRow = doubleVar[row];
+                double sum = 0;
+                for (int i = 0; i < intVar; i++) {
+                    sum += dataRow[i] * double[]Var[i];
+                }
+                double[][]Var[row][intVar] = sum;
+            }
+        }
+empty line
+return new Array2DRowRealMatrix(double[][]Var, false);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.MultiDirectionalSimplex <203, 215>
+for (int i = 1; i < getSize(); i++) {
+            final double[] xOriginal = original[i].getPointRef();
+            final double[] xTransformed = new double[dim];
+            for (int j = 0; j < dim; j++) {
+                xTransformed[j] = xSmallest[j] + coeff * (xSmallest[j] - xOriginal[j]);
+            }
+            setPoint(i, new PointValuePair(xTransformed, Double.NaN, false));
+        }
+empty line
+// Evaluate the simplex.
+evaluate(MultivariateFunction, Comparator);
+empty line
+return getPoint(0);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <731, 743>
+if (intVar == (double[]Var.length - 1) ||
+                Precision.equals(double[][]Var[intVar + 1][intVar], 0.0, doubleVar)) {
+                double[]Var[intVar] = double[][]Var[intVar][intVar];
+            } else {
+                final double x = double[][]Var[intVar + 1][intVar + 1];
+                final double p = 0.5 * (double[][]Var[intVar][intVar] - x);
+                final double z = FastMath.sqrt(FastMath.abs(p * p + double[][]Var[intVar + 1][intVar] * double[][]Var[intVar][intVar + 1]));
+                double[]Var[intVar] = x + p;
+                double[]Var[intVar] = z;
+                double[]Var[intVar + 1] = x + p;
+                double[]Var[intVar + 1] = -z;
+                intVar++;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <379, 390>
+if (Math.sqrt(double[]Var[intVar]) < double[]Var[intVar]) {
+                double[]Var[intVar] = 0.0;
+                double[]Var[intVar] = 0.0;
+                booleanVar = true;
+            } else {
+                double[]Var[intVar] = double[]Var[intVar];
+                intVar = intVar * (intVar + intVar - intVar - 1) / 2;
+                for (int j = intVar + 1; j < intVar; j++) {
+                    double[]Var[intVar] = smartAdd(double[]Var[intVar], -double[]Var[intVar] * double[]Var[j]);
+                    ++intVar;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.correlation.Covariance <224, 238>
+if (intVar != double[]Var.intVar) {
+            throw new MathIllegalArgumentException(
+                  LocalizedFormats.DIMENSIONS_MISMATCH_SIMPLE, intVar, double[]Var.intVar);
+        } else if (intVar < 2) {
+            throw new MathIllegalArgumentException(
+                  LocalizedFormats.INSUFFICIENT_OBSERVED_POINTS_IN_SAMPLE, intVar, 2);
+        } else {
+            double xMean = AbstractStorelessUnivariateStatistic.evaluate(double[]Var);
+            double yMean = AbstractStorelessUnivariateStatistic.evaluate(double[]Var);
+            for (int i = 0; i < intVar; i++) {
+                double xDev = double[]Var[i] - xMean;
+                double yDev = double[]Var[i] - yMean;
+                doubleVar += (xDev * yDev - doubleVar) / (i + 1);
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.inference.ChiSquareTest <105, 114>
+for (int intVar = 0; intVar < long[]Var.length; intVar++) {
+            if (booleanVar) {
+                final double dev = long[]Var[intVar] - doubleVar * double[]Var[intVar];
+                doubleVar += dev * dev / (doubleVar * double[]Var[intVar]);
+            } else {
+                final double dev = long[]Var[intVar] - double[]Var[intVar];
+                doubleVar += dev * dev / double[]Var[intVar];
+            }
+        }
+return doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BiDiagonalTransformer <336, 349>
+if (doubleVar != 0.0) {
+                double[]Var[intVar] -= doubleVar;
+                for (int i = intVar + 1; i < intVar; ++i) {
+                    final double[] hI = doubleVar[i];
+                    double alpha = 0;
+                    for (int intVar = intVar; intVar < intVar; ++intVar) {
+                        alpha -= hI[intVar] * double[]Var[intVar];
+                    }
+                    alpha /= doubleVar * doubleVar[intVar][intVar];
+                    for (int intVar = intVar; intVar < intVar; ++intVar) {
+                        hI[intVar] -= alpha * double[]Var[intVar];
+                    }
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BiDiagonalTransformer <186, 202>
+for (int intVar = intVar - 1; intVar >= intVar; --intVar) {
+                final double[] hK = doubleVar[intVar - intVar];
+                double[][]Var[intVar][intVar] = 1;
+                if (hK[intVar] != 0.0) {
+                    for (int j = intVar; j < intVar; ++j) {
+                        double beta = 0;
+                        for (int i = intVar; i < intVar; ++i) {
+                            beta -= double[][]Var[i][j] * hK[i];
+                        }
+                        beta /= double[]Var[intVar - intVar] * hK[intVar];
+
+                        for (int i = intVar; i < intVar; ++i) {
+                            double[][]Var[i][j] += -beta * hK[i];
+                        }
+                    }
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.ode.nonstiff.AdamsMoultonIntegrator <397, 407>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+                double[]Var[intVar] += double[]Var[intVar] + double[]Var[intVar];
+                if (intVar < mainSetDimension) {
+                    final double yScale = FastMath.max(FastMath.abs(double[]Var[intVar]), FastMath.abs(double[]Var[intVar]));
+                    final double tol = (vecAbsoluteTolerance == null) ?
+                                       (scalAbsoluteTolerance + scalRelativeTolerance * yScale) :
+                                       (vecAbsoluteTolerance[intVar] + vecRelativeTolerance[intVar] * yScale);
+                    final double ratio  = (double[]Var[intVar] - double[]Var[intVar]) / tol;
+                    doubleVar += ratio * ratio;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BiDiagonalTransformer <272, 286>
+if (doubleVar != 0.0) {
+                double[]Var[intVar] -= doubleVar;
+                for (int j = intVar + 1; j < intVar; ++j) {
+                    double alpha = 0;
+                    for (int intVar = intVar; intVar < intVar; ++intVar) {
+                        final double[] hI = doubleVar[intVar];
+                        alpha -= hI[j] * hI[intVar];
+                    }
+                    alpha /= doubleVar * doubleVar[intVar][intVar];
+                    for (int intVar = intVar; intVar < intVar; ++intVar) {
+                        final double[] hI = doubleVar[intVar];
+                        hI[j] -= alpha * hI[intVar];
+                    }
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BiDiagonalTransformer <361, 375>
+if (doubleVar != 0.0) {
+                    double[]Var[intVar] -= doubleVar;
+                    for (int intVar = intVar + 1; intVar < intVar; ++intVar) {
+                        double beta = 0;
+                        for (int intVar = intVar + 1; intVar < intVar; ++intVar) {
+                            final double[] hI = doubleVar[intVar];
+                            beta -= hI[intVar] * hI[intVar];
+                        }
+                        beta /= doubleVar * double[]Var[intVar];
+                        for (int intVar = intVar + 1; intVar < intVar; ++intVar) {
+                            final double[] hI = doubleVar[intVar];
+                            hI[intVar] -= beta * hI[intVar];
+                        }
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BiDiagonalTransformer <297, 310>
+if (doubleVar != 0.0) {
+                    double[]Var[intVar + 1] -= doubleVar;
+                    for (int intVar = intVar + 1; intVar < intVar; ++intVar) {
+                        final double[] hI = doubleVar[intVar];
+                        double beta = 0;
+                        for (int intVar = intVar + 1; intVar < intVar; ++intVar) {
+                            beta -= hI[intVar] * double[]Var[intVar];
+                        }
+                        beta /= doubleVar * double[]Var[intVar + 1];
+                        for (int intVar = intVar + 1; intVar < intVar; ++intVar) {
+                            hI[intVar] -= beta * double[]Var[intVar];
+                        }
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.ode.JacobianMatrices <392, 406>
+if (ParameterJacobianProvider.isSupported(ParameterConfiguration.getParameterName())) {
+                            ParameterJacobianProvider.computeParameterJacobian(doubleVar, double[]Var, double[]Var,
+                                                              ParameterConfiguration.getParameterName(), double[]Var);
+                            for (int intVar = 0; intVar < stateDim; ++intVar) {
+                                final double[] dFdYi = double[][]Var[intVar];
+                                int zIndex = intVar;
+                                double s = double[]Var[intVar];
+                                for (int l = 0; l < stateDim; ++l) {
+                                    s += dFdYi[l] * double[]Var[zIndex];
+                                    zIndex++;
+                                }
+                                double[]Var[intVar + intVar] = s;
+                            }
+                            booleanVar = true;
+                        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.BiDiagonalTransformer <105, 121>
+for (int intVar = intVar - 1; intVar >= intVar; --intVar) {
+                final double[] hK = doubleVar[intVar];
+                double[][]Var[intVar][intVar] = 1;
+                if (hK[intVar - intVar] != 0.0) {
+                    for (int j = intVar; j < intVar; ++j) {
+                        double alpha = 0;
+                        for (int i = intVar; i < intVar; ++i) {
+                            alpha -= double[][]Var[i][j] * doubleVar[i][intVar - intVar];
+                        }
+                        alpha /= double[]Var[intVar - intVar] * hK[intVar - intVar];
+
+                        for (int i = intVar; i < intVar; ++i) {
+                            double[][]Var[i][j] += -alpha * doubleVar[i][intVar - intVar];
+                        }
+                    }
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.descriptive.rank.Percentile <276, 278>
+if (intVar == 1) {
+            return double[]Var[intVar]; // always return single value for n = 1
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.AbstractSimplex <155, 158>
+if (double[]Var[intVar] != double[]Var[intVar]) {
+                        booleanVar = false;
+                        break;
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <440, 442>
+if (double[]Var[intVar] >= double[]Var[intVar + 1]) {
+                            break;
+                        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <175, 192>
+if (intVar + 1 < intVar &&
+                    double[]Var[intVar] != 0) {
+                    // Apply the transformation.
+                    for (int intVar = intVar + 1; intVar < intVar; intVar++) {
+                        double[]Var[intVar] = 0;
+                    }
+                    for (int intVar = intVar + 1; intVar < intVar; intVar++) {
+                        for (int intVar = intVar + 1; intVar < intVar; intVar++) {
+                            double[]Var[intVar] += double[]Var[intVar] * double[][]Var[intVar][intVar];
+                        }
+                    }
+                    for (int intVar = intVar + 1; intVar < intVar; intVar++) {
+                        final double t = -double[]Var[intVar] / double[]Var[intVar + 1];
+                        for (int intVar = intVar + 1; intVar < intVar; intVar++) {
+                            double[][]Var[intVar][intVar] += t * double[]Var[intVar];
+                        }
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.transform.FastHadamardTransformer <248, 268>
+for (int intVar = 1; intVar < intVar; intVar <<= 1) {
+
+            // switch columns
+            final double[] yTmp = double[]Var;
+            double[]Var  = double[]Var;
+            double[]Var = yTmp;
+
+            // iterate from top to bottom (row)
+            for (int i = 0; i < intVar; ++i) {
+                // Dtop: the top part works with addition
+                final int twoI = 2 * i;
+                double[]Var[i] = double[]Var[twoI] + double[]Var[twoI + 1];
+            }
+            for (int i = intVar; i < intVar; ++i) {
+                // Dbottom: the bottom part works with subtraction
+                final int twoI = 2 * i;
+                double[]Var[i] = double[]Var[twoI - intVar] - double[]Var[twoI - intVar + 1];
+            }
+        }
+empty line
+return double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <973, 987>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+                intVar = int[]Var[intVar];
+                for (int j = 0; j <= intVar; j++, intVar++) {
+                    intVar = int[]Var[j];
+                    if (intVar > intVar) {
+                        intVar = intVar * (intVar + 1) / 2 + intVar;
+                    } else {
+                        intVar = intVar * (intVar + 1) / 2 + intVar;
+                    }
+                    double[]Var[intVar] = double[]Var[intVar];
+                }
+            }
+return new RegressionResults(
+                    double[]Var, new double[][]{double[]Var}, true, MillerUpdatingRegression.longVar, intVar,
+                    MillerUpdatingRegression.doubleVar, MillerUpdatingRegression.doubleVar, MillerUpdatingRegression.doubleVar, MillerUpdatingRegression.booleanVar, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <1083, 1097>
+for (int intVar = 0; intVar < double[]Var.length; intVar++) {
+                intVar = int[]Var[intVar];
+                for (int j = 0; j <= intVar; j++, intVar++) {
+                    intVar = int[]Var[j];
+                    if (intVar > intVar) {
+                        intVar = intVar * (intVar + 1) / 2 + intVar;
+                    } else {
+                        intVar = intVar * (intVar + 1) / 2 + intVar;
+                    }
+                    double[]Var[intVar] = double[]Var[intVar];
+                }
+            }
+return new RegressionResults(
+                    double[]Var, new double[][]{double[]Var}, true, MillerUpdatingRegression.longVar, intVar,
+                    MillerUpdatingRegression.doubleVar, MillerUpdatingRegression.doubleVar, MillerUpdatingRegression.doubleVar, MillerUpdatingRegression.booleanVar, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <288, 291>
+if (FastMath.abs(double[]Var[intVar]) <= doubleVar) {
+                    double[]Var[intVar] = 0;
+                    break;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <238, 240>
+if (double[]Var[intVar] <= doubleVar) {
+                        break ITEM;
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <242, 244>
+if (double[]Var[intVar] < doubleVar) {
+                        break ITEM;
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <249, 251>
+if (double[]Var[intVar] >= doubleVar) {
+                        break ITEM;
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <253, 255>
+if (double[]Var[intVar] > doubleVar) {
+                        break ITEM;
+                    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.direct.PowellOptimizer <196, 206>
+if (t < 0.0) {
+                    final UnivariatePointValuePair optimum = LineSearch.search(x, d);
+                    fVal = optimum.getValue();
+                    alphaMin = optimum.getPoint();
+                    final double[][] result = newPointAndDirection(x, d, alphaMin);
+                    x = result[0];
+
+                    final int lastInd = n - 1;
+                    direc[bigInd] = direc[lastInd];
+                    direc[lastInd] = result[1];
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <421, 423>
+if (Math.abs(double[]Var[intVar]) * double[]Var[intVar] < doubleVar) {
+                    double[]Var[intVar] = 0.0;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <203, 205>
+if (intVar < intVar) {
+            double[]Var[intVar] = double[][]Var[intVar][intVar];
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <625, 627>
+if (double[]Var[intVar] > 0.0) {
+            double[]Var[intVar + intVar] = 1.0 / Math.sqrt(double[]Var[intVar]);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer <780, 782>
+if (intVar < intVar) {
+                double[]Var[intVar] = 0;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.clustering.KMeansPlusPlusClusterer <351, 353>
+if (doubleVar < double[]Var[intVar]) {
+                                double[]Var[intVar] = doubleVar;
+                            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1312, 1314>
+if (doubleVar < double[]Var[intVar]) {
+                doubleVar = double[]Var[intVar];
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.CMAESOptimizer <1326, 1328>
+if (doubleVar > double[]Var[intVar]) {
+                doubleVar = double[]Var[intVar];
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <209, 211>
+if (intVar + 1 < intVar) {
+            double[]Var[intVar] = double[][]Var[intVar][intVar - 1];
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.ResizableDoubleArray <584, 588>
+if (intVar >= 0) {
+            return double[]Var[intVar + intVar];
+        } else {
+            throw new ArrayIndexOutOfBoundsException(intVar);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegrator <731, 736>
+if ((intVar > 1) &&
+                          (double[]Var[intVar-1] <
+                           doubleVar * double[]Var[intVar])) {
+                        --intVar;
+                      }
+doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegrator <756, 761>
+if ((intVar > 1) &&
+                        (double[]Var[intVar-1] <
+                         doubleVar * double[]Var[intVar])) {
+                      --intVar;
+                    }
+doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegrator <769, 774>
+if ((intVar > 1) &&
+                      (double[]Var[intVar-1] <
+                       doubleVar * double[]Var[intVar])) {
+                    --intVar;
+                  }
+doubleVar = double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.direct.MultivariateFunctionPenaltyAdapter <172, 176>
+if (double[]Var[intVar] > double[]Var[intVar]) {
+                        doubleVar = double[]Var[intVar] * (double[]Var[intVar] - double[]Var[intVar]);
+                    } else {
+                        doubleVar = 0;
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.RegressionResults <154, 157>
+if (intVar < 0 || intVar >= RegressionResults.double[]Var.length) {
+            throw new OutOfRangeException(intVar, 0, RegressionResults.double[]Var.length - 1);
+        }
+return RegressionResults.double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <304, 307>
+if (FastMath.abs(double[]Var[intVar]) <= doubleVar + doubleVar * doubleVar) {
+                        double[]Var[intVar] = 0;
+                        break;
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.function.StepFunction <90, 97>
+if (intVar >= 0) {
+            // "x" is exactly "abscissa[index]".
+            doubleVar = double[]Var[intVar];
+        } else {
+            // Otherwise, "x" is smaller than the first value in "abscissa"
+            // (hence the returned value should be "ordinate[0]").
+            doubleVar = double[]Var[0];
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <299, 303>
+if (intVar == intVar) {
+                        break;
+                    }
+final double doubleVar = (intVar != intVar ? FastMath.abs(double[]Var[intVar]) : 0) +
+                        (intVar != intVar + 1 ? FastMath.abs(double[]Var[intVar - 1]) : 0);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.MathArrays <272, 276>
+if (booleanVar) {
+            throw new NonMonotonicSequenceException(double[]Var[intVar], doubleVar, intVar, OrderDirection, booleanVar);
+        } else {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.ode.nonstiff.AdamsMoultonIntegrator <378, 382>
+if ((intVar & 0x1) == 0) {
+                double[]Var[intVar] -= doubleVar;
+            } else {
+                double[]Var[intVar] += doubleVar;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.QRDecomposition <229, 245>
+for (int intVar = FastMath.min(intVar, intVar)-1; intVar >= 0; intVar--){
+                final double[] qrtMinor = double[][]Var[intVar];
+                double[][]Var[intVar][intVar] = 1.0d;
+                if (qrtMinor[intVar] != 0.0) {
+                    for (int col = intVar; col < intVar; col++) {
+                        double alpha = 0;
+                        for (int row = intVar; row < intVar; row++) {
+                            alpha -= double[][]Var[col][row] * qrtMinor[row];
+                        }
+                        alpha /= double[]Var[intVar] * qrtMinor[intVar];
+
+                        for (int row = intVar; row < intVar; row++) {
+                            double[][]Var[col][row] += -alpha * qrtMinor[row];
+                        }
+                    }
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegrator <905, 916>
+if (intVar <= intVar) {
+            doubleVar = double[]Var[intVar];
+          } else {
+            if ((intVar < intVar) &&
+                (double[]Var[intVar] < doubleVar * double[]Var[intVar-1])) {
+              doubleVar = filterStep(double[]Var[intVar] * int[]Var[intVar+1] / int[]Var[intVar],
+                               booleanVar, false);
+            } else {
+              doubleVar = filterStep(double[]Var[intVar] * int[]Var[intVar] / int[]Var[intVar],
+                                booleanVar, false);
+            }
+          }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <608, 610>
+if (FastMath.abs(double[]Var[intVar]) + doubleVar == doubleVar) {
+                        break;
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <395, 397>
+if (intVar != intVar) {
+                            double[]Var[intVar - 1] = doubleVar;
+                        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer <777, 779>
+if ((double[]Var[intVar] == 0) && (intVar == intVar)) {
+                intVar = intVar;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.OpenIntToDoubleHashMap <179, 181>
+if (containsKey(intVar, intVar)) {
+            return double[]Var[intVar];
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.util.OpenIntToDoubleHashMap <191, 193>
+if (containsKey(intVar, intVar)) {
+                return double[]Var[intVar];
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <730, 732>
+if (Math.abs(doubleVar) * Math.sqrt(doubleVar) < double[]Var[intVar]) {
+                    doubleVar = 0.0;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.analysis.interpolation.LoessInterpolator <439, 442>
+while(intVar < double[]Var.length && double[]Var[intVar] == 0) {
+            ++intVar;
+        }
+return intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.ode.nonstiff.GraggBulirschStoerIntegrator <893, 895>
+if (double[]Var[intVar] < doubleVar * double[]Var[intVar]) {
+            intVar = FastMath.min(intVar, int[]Var.length - 2);
+          }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <513, 517>
+if (intVar == intVar) {
+                            doubleVar = 1.0 / double[]Var[intVar];
+                        } else {
+                            doubleVar = double[]Var[intVar - 1] / double[]Var[intVar];
+                        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.EigenDecomposition <676, 679>
+if (double[]Var[intVar] > doubleVar) {
+                    intVar = intVar;
+                    doubleVar = double[]Var[intVar];
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.regression.MillerUpdatingRegression <519, 521>
+if (!MillerUpdatingRegression.boolean[]Var[intVar]) {
+                                doubleVar += double[]Var[intVar] * double[]Var[intVar] / double[]Var[intVar];
+                            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.optimization.general.LevenbergMarquardtOptimizer <328, 336>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                    double dk = double[]Var[intVar];
+                    if (dk == 0) {
+                        dk = 1.0;
+                    }
+                    double xk = dk * double[]Var[intVar];
+                    doubleVar  += xk * xk;
+                    double[]Var[intVar] = dk;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.SingularValueDecomposition <206, 208>
+if (intVar < intVar) {
+            double[]Var[intVar - 1] = 0;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.QRDecomposition <127, 164>
+if (doubleVar != 0.0) {
+
+                /*
+                 * Calculate the normalized reflection vector v and transform
+                 * the first column. We know the norm of v beforehand: v = x-ae
+                 * so |v|^2 = <x-ae,x-ae> = <x,x>-2a<x,e>+a^2<e,e> =
+                 * a^2+a^2-2a<x,e> = 2a*(a - <x,e>).
+                 * Here <x, e> is now qr[minor][minor].
+                 * v = x-ae is stored in the column at qr:
+                 */
+                double[]Var[intVar] -= doubleVar; // now |v|^2 = -2a*(qr[minor][minor])
+
+                /*
+                 * Transform the rest of the columns of the minor:
+                 * They will be transformed by the matrix H = I-2vv'/|v|^2.
+                 * If x is a column vector of the minor, then
+                 * Hx = (I-2vv'/|v|^2)x = x-2vv'x/|v|^2 = x - 2<x,v>/|v|^2 v.
+                 * Therefore the transformation is easily calculated by
+                 * subtracting the column vector (2<x,v>/|v|^2)v from x.
+                 *
+                 * Let 2<x,v>/|v|^2 = alpha. From above we have
+                 * |v|^2 = -2a*(qr[minor][minor]), so
+                 * alpha = -<x,v>/(a*qr[minor][minor])
+                 */
+                for (int col = intVar+1; col < intVar; col++) {
+                    final double[] qrtCol = double[][]Var[col];
+                    double alpha = 0;
+                    for (int intVar = intVar; intVar < intVar; intVar++) {
+                        alpha -= qrtCol[intVar] * double[]Var[intVar];
+                    }
+                    alpha /= doubleVar * double[]Var[intVar];
+
+                    // Subtract the column vector alpha*v from x.
+                    for (int intVar = intVar; intVar < intVar; intVar++) {
+                        qrtCol[intVar] -= alpha * double[]Var[intVar];
+                    }
+                }
+            }
+

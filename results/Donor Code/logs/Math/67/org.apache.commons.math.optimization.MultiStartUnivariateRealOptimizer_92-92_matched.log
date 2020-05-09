@@ -1,0 +1,36 @@
+---patch code 0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <92, 92>
+return double[]Var[0];
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.stat.descriptive.rank.Percentile <221, 221>
+return double[]Var[0];
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <308, 308>
+return double[]Var[0];
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.linear.SingularValueDecompositionImpl <244, 244>
+return double[]Var[0];
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.analysis.interpolation.LoessInterpolator <222, 222>
+return new double[]{double[]Var[0], double[]Var[1]};
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.optimization.fitting.HarmonicFitter <101, 101>
+return new HarmonicFunction(double[]Var[0], double[]Var[1], double[]Var[2]);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.analysis.interpolation.LoessInterpolator <218, 218>
+return new double[]{double[]Var[0]};
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.math.linear.SingularValueDecompositionImpl <249, 249>
+return double[]Var[0] / double[]Var[double[]Var.length - 1];
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.SemiVariance <181, 181>
+return evaluate(double[]Var, 0, double[]Var.length);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Variance <219, 219>
+return evaluate(double[]Var, 0, double[]Var.length);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic <43, 43>
+return evaluate(double[]Var, 0, double[]Var.length);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.stat.descriptive.AbstractStorelessUnivariateStatistic <61, 61>
+return evaluate(double[]Var, 0, double[]Var.length);
+

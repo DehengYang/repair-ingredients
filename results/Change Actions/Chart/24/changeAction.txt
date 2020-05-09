@@ -1,0 +1,11 @@
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, CastExpression, OP2, OP4)
+OP4:         (UPD, ParenthesizedExpression, OP3, OP5)
+OP5:            (UPD, InfixExpression, OP4, OP6)
+OP6:               (UPD, InfixExpression, OP5, OP7)
+OP7:                  (UPD, ParenthesizedExpression, OP6, OP8)
+OP8:                     (UPD, InfixExpression, OP7, OP9)
+OP9:                        (UPD, SimpleName, OP8, null)
+
+

@@ -1,0 +1,8 @@
+fixed code:/home/apr/CodeSearchAndMatch2/Defects4J/fixed_bugs_dir/Math/Math_64/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java-449-451
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_64/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java-359-368
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_64/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java-263-268
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_64/src/main/java/org/apache/commons/math/optimization/general/LevenbergMarquardtOptimizer.java-427-433
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_64/src/main/java/org/apache/commons/math/optimization/general/AbstractLeastSquaresOptimizer.java-219-224
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_64/src/main/java/org/apache/commons/math/estimation/LevenbergMarquardtEstimator.java-433-439
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_64/src/main/java/org/apache/commons/math/optimization/general/GaussNewtonOptimizer.java-84-89
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_64/src/main/java/org/apache/commons/math/optimization/general/AbstractLeastSquaresOptimizer.java-213-216

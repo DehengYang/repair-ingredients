@@ -1,0 +1,7 @@
+chunk1 : org.apache.commons.lang3.math.NumberUtils:1413-1413
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (6)
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (2)
+fix ingredient  <0-fine-grained>  varMapType:0 : (37)
+fix ingredient  <1-fine-grained>  varMapType:1 : (3)
+
+

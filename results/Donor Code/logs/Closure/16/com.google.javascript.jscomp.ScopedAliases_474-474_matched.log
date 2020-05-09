@@ -1,0 +1,317 @@
+---patch code 0--- com.google.javascript.jscomp.ScopedAliases <474, 474>
+ListVar.add(new AliasedTypeNode(Node, Node, StringVar));
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ScopedAliases <468, 468>
+ListVar.add(new AliasedTypeNode(Node, Node.getQualifiedName() + StringVar.substring(intVar)));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CommandLineRunner <615, 615>
+ListVar.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CommandLineRunner <618, 618>
+ListVar.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RenamePrototypes <283, 283>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ExternExportsPass <203, 203>
+alreadyExportedPaths.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <348, 348>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <401, 401>
+Set.add(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.jsonml.Reader <1078, 1078>
+Set.add(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.parsing.IRFactory <478, 478>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.JsMessage <354, 354>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.JsMessage <362, 362>
+ListVar.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.JsMessageVisitor <513, 513>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.JsMessageVisitor <650, 650>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RenameProperties <295, 295>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CodeGenerator <74, 74>
+CodeConsumer.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ExpressionDecomposer <614, 614>
+ExpressionDecomposer.Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FunctionArgumentInjector <311, 311>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FunctionArgumentInjector <422, 422>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CheckRequiresForConstructors <117, 117>
+ListVar.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CheckRequiresForConstructors <126, 126>
+ListVar.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CheckRequiresForConstructors <133, 133>
+ListVar.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CheckRequiresForConstructors <141, 141>
+ListVar.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CheckRequiresForConstructors <170, 170>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CheckRequiresForConstructors <183, 183>
+ListVar.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RenameVars <235, 235>
+reservedNames.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RenameVars <242, 242>
+reservedNames.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RenameVars <262, 262>
+externNames.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RenameVars <432, 432>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RenameVars <473, 473>
+ListVar.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RenameVars <475, 475>
+Set.add(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.deps.PathUtil <69, 69>
+ListVar.add(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.deps.JsFileParser <171, 171>
+ListVar.add(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.deps.JsFileParser <174, 174>
+ListVar.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.WhitelistWarningsGuard <128, 128>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.InlineObjectLiterals <185, 185>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedClassProperties <92, 92>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.AbstractCommandLineRunner <1933, 1933>
+AbstractCommandLineRunner.ListVar.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FunctionTypeBuilder <868, 868>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FunctionTypeBuilder <881, 881>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CompilerInput <189, 189>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CompilerInput <194, 194>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CompilerInput <267, 267>
+ListVar.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CompilerInput <273, 273>
+ListVar.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.MethodCompilerPass <108, 108>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.MethodCompilerPass <153, 153>
+externMethodsWithoutSignatures.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.MethodCompilerPass <156, 156>
+externMethods.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.MethodCompilerPass <168, 168>
+externMethodsWithoutSignatures.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.MethodCompilerPass <170, 170>
+externMethods.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NameAnalyzer <149, 149>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NameAnalyzer <150, 150>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ProcessCommonJSModules <232, 232>
+Set.add(StringVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ScopedAliases <315, 315>
+Set.add(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.JSTypeRegistry <599, 599>
+Set.add(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.JSTypeRegistry <854, 854>
+Set.add(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.JSTypeRegistry <1453, 1453>
+Set.add(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.EnumType <116, 116>
+Set.add(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.PrototypeObjectType <194, 194>
+Set.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CommandLineRunner <527, 527>
+warningGuardSpec.add(null, StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.LinkedFlowScope <108, 108>
+FlatFlowScopeCache.dirtySymbols.add(StringVar);
+
+---patch code 1--- com.google.javascript.jscomp.ScopedAliases <474, 474>
+aliasUsages.add(new AliasedTypeNode(Node, Node, baseName));
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.AliasStrings <152, 152>
+StringInfo.occurrences.add(StringOccurrence);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NameAnalyzer <674, 674>
+JsName.prototypeNames.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NameAnalyzer <1080, 1080>
+AliasSet.names.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NameAnalyzer <1083, 1083>
+AliasSet.names.add(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.JSDocInfo <686, 686>
+LazilyInitializedInfo.suppressions.add(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.JSDocInfo <713, 713>
+LazilyInitializedInfo.StringVar.add(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.JSDocInfo <759, 759>
+LazilyInitializedDocumentation.sees.add(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.JSDocInfo <775, 775>
+LazilyInitializedDocumentation.authors.add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CodeConsumer <62, 62>
+add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CodeConsumer <279, 279>
+add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CodeGenerator <283, 283>
+add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CodeGenerator <339, 339>
+add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CodeGenerator <673, 673>
+add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CodeGenerator <963, 963>
+add(StringVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.AliasStrings <447, 452>
+if (!usedHashedAliases.add(StringVar)) {
+        // A collision has been detected (which is very rare). Use the sequence
+        // id to break the tie. This means that the name is no longer invariant
+        // across source code changes and recompilations.
+        StringVar += "_" + intVar;
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <497, 497>
+return Multiset.add(StringVar, 1);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PassConfig <184, 185>
+ListVar.add(
+        findPassIndexByName(ListVar, StringVar), PassFactory);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ProcessTweaks <535, 535>
+ListVar.add(new TweakFunctionCall(StringVar, TweakFunction, Node));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ProcessTweaks <528, 529>
+ListVar.add(new TweakFunctionCall(StringVar, TweakFunction, Node,
+          Node));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.NamedType <123, 125>
+ListVar.add(
+          new PropertyContinuation(
+              StringVar, JSType, booleanVar, Node));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.SimpleErrorReporter <60, 61>
+ListVar.add(formatDetailedMessage(
+            StringVar, StringVar, intVar, intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.SimpleErrorReporter <70, 71>
+ListVar.add(formatDetailedMessage(
+            StringVar, StringVar, intVar, intVar));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CommandLineRunner <893, 893>
+ListVar.add(Map.get(StringVar));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.JSModuleGraph <325, 325>
+Set.add(SortedDependencies.getInputProviding(StringVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.deps.DepsGenerator <426, 426>
+ListVar.add(SourceFile.fromFile(StringVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.deps.JsFunctionParser <144, 144>
+Collection.add(new SymbolInfo(StringVar, StringVar));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.StripCode <160, 160>
+varsToRemove.add(Scope.getVar(StringVar));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeReplaceKnownMethods <737, 737>
+ListVar.add(StringVar.substring(intVar));
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.PeepholeReplaceKnownMethods <737, 737>
+splitStrings.add(stringValue.substring(startIndex));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.AbstractCommandLineRunner <2048, 2048>
+ListVar.add(new Entry(null, StringVar));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ProcessClosurePrimitives <278, 279>
+ListVar.add(
+            new UnrecognizedRequire(Node, StringVar, NodeTraversal.getSourceName()));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ReplaceStrings <373, 373>
+Node = IR.add(Node, IR.string(StringVar));
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ReplaceMessages <225, 226>
+return IR.add(Node,
+                      constructAddOrStringNode(Iterator, Node));
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ReplaceMessages <332, 333>
+return IR.add(Node,
+          constructStringExprNode(Iterator, Node));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeReplaceKnownMethods <722, 722>
+ListVar.add(StringVar.substring(intVar, intVar + 1));
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.PeepholeReplaceKnownMethods <722, 722>
+splitStrings.add(stringValue.substring(i, i + 1));
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.RenamePrototypes <301, 301>
+reservedNames.add(Node.getString());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ExternExportsPass <531, 531>
+NodeTraversal.AbstractPostOrderCallback.exports.add(new SymbolExport(Node.getString(), Node));
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ExternExportsPass <557, 560>
+NodeTraversal.AbstractPostOrderCallback.exports.add(
+        new PropertyExport(Node.getQualifiedName(),
+                           Node.getString(),
+                           Node));
+

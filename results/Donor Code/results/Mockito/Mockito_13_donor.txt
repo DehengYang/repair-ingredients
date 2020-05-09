@@ -1,0 +1,11 @@
+chunk1 : org.mockito.internal.MockHandler:84-84
+fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0 : (1)
+fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1 : (1)
+
+
+chunk2 : org.mockito.internal.MockHandler:77-77
+fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:ori : (1)
+fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:0 : (1)
+fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:1 : (1)
+
+

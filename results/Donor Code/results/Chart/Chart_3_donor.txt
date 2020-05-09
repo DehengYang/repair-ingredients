@@ -1,0 +1,7 @@
+chunk1 : org.jfree.data.time.TimeSeries:1057-1058
+fix ingredient  varMapType:0 : (3)
+fix ingredient  varMapType:1 : (3)
+fix ingredient(SameFile)  varMapType:0 : (3)
+fix ingredient(SameFile)  varMapType:1 : (3)
+
+

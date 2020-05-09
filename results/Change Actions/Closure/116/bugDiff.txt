@@ -1,0 +1,30 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_116/src/com/google/javascript/jscomp/FunctionInjector.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_116/src/com/google/javascript/jscomp/FunctionInjector.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_116/src/com/google/javascript/jscomp/FunctionInjector.java	2020-01-05 05:22:39.112771014 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_116/src/com/google/javascript/jscomp/FunctionInjector.java	2020-01-05 05:22:42.204745190 -0800
+@@ -694,6 +694,15 @@
+ 
+     Node block = fnNode.getLastChild();
+ 
++    boolean hasSideEffects = false;  // empty function case
++    if (block.hasChildren()) {
++      Preconditions.checkState(block.hasOneChild());
++      Node stmt = block.getFirstChild();
++      if (stmt.isReturn()) {
++        hasSideEffects = NodeUtil.mayHaveSideEffects(
++            stmt.getFirstChild(), compiler);
++      }
++    }
+ 
+     // CALL NODE: [ NAME, ARG1, ARG2, ... ]
+     Node cArg = callNode.getFirstChild().getNext();
+@@ -720,6 +729,9 @@
+       // For each named parameter check if a mutable argument use more than one.
+       if (fnParam != null) {
+         if (cArg != null) {
++          if (hasSideEffects && NodeUtil.canBeSideEffected(cArg)) {
++            return CanInlineResult.NO;
++          }
+ 
+           // Check for arguments that are evaluated more than once.
+           // Note: Unlike block inlining, there it is not possible that a

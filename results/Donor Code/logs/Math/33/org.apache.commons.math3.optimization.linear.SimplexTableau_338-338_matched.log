@@ -1,0 +1,171 @@
+---patch code ori--- org.apache.commons.math3.optimization.linear.SimplexTableau <338, 340>
+if (Precision.compareTo(entry, 0d, epsilon) > 0) {
+                columnsToDrop.add(i);
+            }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.optimization.linear.SimplexTableau <382, 387>
+for (int i = getNumObjectiveFunctions(); i < getWidth() - 1; i++) {
+            final double entry = tableau.getEntry(0, i);
+            if (Precision.compareTo(entry, 0d, epsilon) < 0) {
+                return false;
+            }
+        }
+
+---patch code 1--- org.apache.commons.math3.optimization.linear.SimplexTableau <338, 340>
+if (Precision.compareTo(entry, 0d, epsilon) > 0) {
+                columnsToDrop.add(i);
+            }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.optimization.linear.SimplexTableau <382, 387>
+for (int i = getNumObjectiveFunctions(); i < getWidth() - 1; i++) {
+            final double entry = RealMatrix.getEntry(0, i);
+            if (Precision.compareTo(entry, 0d, epsilon) < 0) {
+                return false;
+            }
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.OpenMapRealVector <708, 711>
+if (Double.doubleToLongBits(epsilon) !=
+            Double.doubleToLongBits(other.epsilon)) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.OpenMapRealVector <708, 711>
+if (Double.doubleToLongBits(epsilon) !=
+            Double.doubleToLongBits(SparseRealVector.epsilon)) {
+            return false;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.distribution.PoissonDistribution <154, 158>
+if (x == Integer.MAX_VALUE) {
+            return 1;
+        }
+return Gamma.regularizedGammaQ((double) x + 1, mean, epsilon,
+                                       maxIterations);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.distribution.PoissonDistribution <154, 158>
+if (x == Integer.MAX_VALUE) {
+            return 1;
+        }
+return Gamma.regularizedGammaQ((double) x + 1, mean, epsilon,
+                                       maxIterations);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.fraction.BigFraction <281, 285>
+if (FastMath.abs(a0 - value) < epsilon) {
+            numerator = BigInteger.valueOf(a0);
+            denominator = BigInteger.ONE;
+            return;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.fraction.BigFraction <281, 285>
+if (FastMath.abs(a0 - value) < epsilon) {
+            BigInteger = BigInteger.valueOf(a0);
+            BigInteger = BigInteger.Number;
+            return;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.fraction.Fraction <187, 191>
+if (FastMath.abs(a0 - value) < epsilon) {
+            this.numerator = (int) a0;
+            this.denominator = 1;
+            return;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.fraction.Fraction <187, 191>
+if (FastMath.abs(a0 - value) < epsilon) {
+            Number.numerator = (int) a0;
+            Number.denominator = 1;
+            return;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.ode.events.EventState <157, 176>
+if (g0 == 0) {
+            // excerpt from MATH-421 issue:
+            // If an ODE solver is setup with an EventHandler that return STOP
+            // when the even is triggered, the integrator stops (which is exactly
+            // the expected behavior). If however the user wants to restart the
+            // solver from the final state reached at the event with the same
+            // configuration (expecting the event to be triggered again at a
+            // later time), then the integrator may fail to start. It can get stuck
+            // at the previous event. The use case for the bug MATH-421 is fairly
+            // general, so events occurring exactly at start in the first step should
+            // be ignored.
+
+            // extremely rare case: there is a zero EXACTLY at interval start
+            // we will use the sign slightly after step beginning to force ignoring this zero
+            final double epsilon = FastMath.max(solver.getAbsoluteAccuracy(),
+                                                FastMath.abs(solver.getRelativeAccuracy() * t0));
+            final double tStart = t0 + 0.5 * epsilon;
+            interpolator.setInterpolatedTime(tStart);
+            g0 = handler.g(tStart, interpolator.getInterpolatedState());
+        }
+
+---patch code 0--- org.apache.commons.math3.optimization.linear.SimplexTableau <338, 340>
+if (Precision.compareTo(doubleVar, 0d, doubleVar) > 0) {
+                ListVar.add(intVar);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.ode.events.EventState <157, 176>
+if (doubleVar == 0) {
+            // excerpt from MATH-421 issue:
+            // If an ODE solver is setup with an EventHandler that return STOP
+            // when the even is triggered, the integrator stops (which is exactly
+            // the expected behavior). If however the user wants to restart the
+            // solver from the final state reached at the event with the same
+            // configuration (expecting the event to be triggered again at a
+            // later time), then the integrator may fail to start. It can get stuck
+            // at the previous event. The use case for the bug MATH-421 is fairly
+            // general, so events occurring exactly at start in the first step should
+            // be ignored.
+
+            // extremely rare case: there is a zero EXACTLY at interval start
+            // we will use the sign slightly after step beginning to force ignoring this zero
+            final double epsilon = FastMath.max(UnivariateSolver.getAbsoluteAccuracy(),
+                                                FastMath.abs(UnivariateSolver.getRelativeAccuracy() * doubleVar));
+            final double tStart = doubleVar + 0.5 * epsilon;
+            StepInterpolator.setInterpolatedTime(tStart);
+            doubleVar = EventHandler.g(tStart, StepInterpolator.getInterpolatedState());
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.ode.events.EventState <157, 176>
+if (g0 == 0) {
+            // excerpt from MATH-421 issue:
+            // If an ODE solver is setup with an EventHandler that return STOP
+            // when the even is triggered, the integrator stops (which is exactly
+            // the expected behavior). If however the user wants to restart the
+            // solver from the final state reached at the event with the same
+            // configuration (expecting the event to be triggered again at a
+            // later time), then the integrator may fail to start. It can get stuck
+            // at the previous event. The use case for the bug MATH-421 is fairly
+            // general, so events occurring exactly at start in the first step should
+            // be ignored.
+
+            // extremely rare case: there is a zero EXACTLY at interval start
+            // we will use the sign slightly after step beginning to force ignoring this zero
+            final double epsilon = FastMath.max(UnivariateSolver.getAbsoluteAccuracy(),
+                                                FastMath.abs(UnivariateSolver.getRelativeAccuracy() * t0));
+            final double tStart = t0 + 0.5 * epsilon;
+            StepInterpolator.setInterpolatedTime(tStart);
+            g0 = EventHandler.g(tStart, StepInterpolator.getInterpolatedState());
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.distribution.PoissonDistribution <88, 96>
+throws NotStrictlyPositiveException {
+if (p <= 0) {
+            throw new NotStrictlyPositiveException(LocalizedFormats.MEAN, p);
+        }
+mean = p;
+normal = new NormalDistribution(p, FastMath.sqrt(p));
+this.epsilon = epsilon;
+this.maxIterations = maxIterations;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.distribution.PoissonDistribution <88, 96>
+throws NotStrictlyPositiveException {
+if (p <= 0) {
+            throw new NotStrictlyPositiveException(LocalizedFormats.MEAN, p);
+        }
+mean = p;
+AbstractRealDistribution = new NormalDistribution(p, FastMath.sqrt(p));
+AbstractIntegerDistribution.epsilon = epsilon;
+AbstractIntegerDistribution.maxIterations = maxIterations;
+

@@ -1,0 +1,25 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_72/src/com/google/javascript/jscomp/FunctionToBlockMutator.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_72/src/com/google/javascript/jscomp/FunctionToBlockMutator.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_72/src/com/google/javascript/jscomp/FunctionToBlockMutator.java	2020-01-05 05:19:10.218515721 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_72/src/com/google/javascript/jscomp/FunctionToBlockMutator.java	2020-01-05 05:19:12.170499418 -0800
+@@ -149,6 +149,8 @@
+                 "inline_",
+                 isCallInLoop)));
+     // Make label names unique to this instance.
++    new RenameLabels(compiler, new LabelNameSupplier(idSupplier), false)
++        .process(null, fnNode);
+   }
+ 
+   static class LabelNameSupplier implements Supplier<String> {
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_72/src/com/google/javascript/jscomp/RenameLabels.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_72/src/com/google/javascript/jscomp/RenameLabels.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_72/src/com/google/javascript/jscomp/RenameLabels.java	2020-01-05 05:19:10.222515687 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_72/src/com/google/javascript/jscomp/RenameLabels.java	2020-01-05 05:19:12.174499384 -0800
+@@ -212,7 +212,7 @@
+       String name = nameNode.getString();
+       LabelInfo li = getLabelInfo(name);
+       // This is a label...
+-      if (li.referenced) {
++      if (li.referenced || !removeUnused) {
+         String newName = getNameForId(li.id);
+         if (!name.equals(newName)) {
+           // ... and it is used, give it the short name.

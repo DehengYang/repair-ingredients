@@ -1,0 +1,156 @@
+---patch code ori--- org.apache.commons.math.linear.OpenMapRealVector <345, 345>
+Iterator iter = entries.iterator();
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <397, 397>
+Iterator iter = entries.iterator();
+
+---patch code 0--- org.apache.commons.math.linear.OpenMapRealVector <345, 345>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <397, 397>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---patch code 1--- org.apache.commons.math.linear.OpenMapRealVector <345, 345>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <397, 397>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <412, 412>
+Iterator iter = entries.iterator();
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <412, 412>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <412, 412>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <434, 434>
+Iterator iter = entries.iterator();
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <434, 434>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <434, 434>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <494, 494>
+Iterator iter = entries.iterator();
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <494, 494>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <494, 494>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <542, 542>
+Iterator iter = entries.iterator();
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <542, 542>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <542, 542>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <590, 590>
+Iterator iter = entries.iterator();
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <590, 590>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <590, 590>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <606, 606>
+Iterator iter = entries.iterator();
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <606, 606>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <606, 606>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <636, 636>
+Iterator iter = entries.iterator();
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <636, 636>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <636, 636>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <762, 762>
+Iterator iter = entries.iterator();
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <762, 762>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <762, 762>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <789, 789>
+Iterator iter = entries.iterator();
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <789, 789>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <789, 789>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <820, 820>
+Iterator iter = entries.iterator();
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <820, 820>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <820, 820>
+Iterator Iterator = OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- org.apache.commons.math.linear.SparseFieldVector <222, 222>
+OpenIntToFieldHashMap<T>.Iterator iter = entries.iterator();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- org.apache.commons.math.linear.SparseFieldVector <234, 234>
+OpenIntToFieldHashMap<T>.Iterator iter = entries.iterator();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- org.apache.commons.math.linear.SparseFieldVector <297, 297>
+OpenIntToFieldHashMap<T>.Iterator iter = entries.iterator();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- org.apache.commons.math.linear.SparseFieldVector <327, 327>
+OpenIntToFieldHashMap<T>.Iterator iter = entries.iterator();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- org.apache.commons.math.linear.SparseFieldVector <358, 358>
+OpenIntToFieldHashMap<T>.Iterator iter = entries.iterator();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- org.apache.commons.math.linear.SparseFieldVector <386, 386>
+OpenIntToFieldHashMap<T>.Iterator iter = entries.iterator();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- org.apache.commons.math.linear.SparseFieldVector <414, 414>
+OpenIntToFieldHashMap<T>.Iterator iter = entries.iterator();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- org.apache.commons.math.linear.SparseFieldVector <430, 430>
+OpenIntToFieldHashMap<T>.Iterator iter = entries.iterator();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- org.apache.commons.math.linear.SparseFieldVector <597, 597>
+OpenIntToFieldHashMap<T>.Iterator iter = entries.iterator();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- org.apache.commons.math.linear.SparseFieldVector <633, 633>
+OpenIntToFieldHashMap<T>.Iterator iter = entries.iterator();
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <247, 247>
+Iterator iter = copyThis ? v.entries.iterator() : entries.iterator();
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <247, 247>
+Iterator Iterator = booleanVar ? AbstractRealVector.OpenIntToDoubleHashMap.iterator() : OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <247, 247>
+Iterator Iterator = copyThis ? AbstractRealVector.OpenIntToDoubleHashMap.iterator() : OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.math.linear.OpenMapRealVector <321, 321>
+Iterator iter = thisIsSmaller  ? entries.iterator() : v.entries.iterator();
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <321, 321>
+Iterator Iterator = booleanVar  ? OpenIntToDoubleHashMap.iterator() : AbstractRealVector.OpenIntToDoubleHashMap.iterator();
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:1--- org.apache.commons.math.linear.OpenMapRealVector <321, 321>
+Iterator Iterator = thisIsSmaller  ? OpenIntToDoubleHashMap.iterator() : AbstractRealVector.OpenIntToDoubleHashMap.iterator();
+

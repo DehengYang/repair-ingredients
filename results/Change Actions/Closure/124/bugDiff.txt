@@ -1,0 +1,14 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_124/src/com/google/javascript/jscomp/ExploitAssigns.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_124/src/com/google/javascript/jscomp/ExploitAssigns.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_124/src/com/google/javascript/jscomp/ExploitAssigns.java	2020-01-05 05:23:27.124370017 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_124/src/com/google/javascript/jscomp/ExploitAssigns.java	2020-01-05 05:23:30.152344727 -0800
+@@ -210,7 +210,9 @@
+     }
+     Preconditions.checkArgument(node.isGetProp());
+ 
++    while (node.isGetProp()) {
+       node = node.getFirstChild();
++    }
+     if (node.isName()
+         && isNameAssignedTo(node.getString(), replacement)) {
+       return false;

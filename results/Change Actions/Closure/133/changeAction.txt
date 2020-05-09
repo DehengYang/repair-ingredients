@@ -1,0 +1,7 @@
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, SimpleName, OP2, null)
+
+

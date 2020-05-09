@@ -1,0 +1,655 @@
+---patch code 0--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <95, 95>
+intVar += Character.charCount(Character.codePointAt(CharSequence, intVar));
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <95, 95>
+intVar += Character.charCount(Character.codePointAt(CharSequence, intVar));
+
+---patch code 1--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <95, 95>
+pos += Character.charCount(Character.codePointAt(CharSequence, pt));
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <95, 95>
+pos += Character.charCount(Character.codePointAt(CharSequence, pos));
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <87, 87>
+char[] char[]Var = Character.toChars(Character.codePointAt(CharSequence, intVar));
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <87, 87>
+char[] c = Character.toChars(Character.codePointAt(CharSequence, pos));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.CodePointTranslator <37, 37>
+int intVar = Character.codePointAt(CharSequence, intVar);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.CodePointTranslator <37, 37>
+int codepoint = Character.codePointAt(CharSequence, index);
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <85, 85>
+int intVar = translate(CharSequence, intVar, Writer);
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <85, 85>
+int consumed = translate(CharSequence, pos, Writer);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <166, 166>
+int intVar = ParsePosition.getIndex();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.ExtendedMessageFormat <166, 166>
+int start = ParsePosition.getIndex();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <331, 331>
+int intVar = ParsePosition.getIndex();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.ExtendedMessageFormat <331, 331>
+int start = ParsePosition.getIndex();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <373, 373>
+int intVar = ParsePosition.getIndex();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.ExtendedMessageFormat <373, 373>
+int start = ParsePosition.getIndex();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <375, 375>
+int intVar = ParsePosition.getIndex();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.ExtendedMessageFormat <375, 375>
+int text = ParsePosition.getIndex();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <479, 479>
+int intVar = ParsePosition.getIndex();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.ExtendedMessageFormat <479, 479>
+int start = ParsePosition.getIndex();
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <83, 83>
+int intVar = CharSequence.length();
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <83, 83>
+int len = CharSequence.length();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <79, 79>
+int intVar = CharSequence.length();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <79, 79>
+int seqEnd = CharSequence.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.FastDateParser <272, 272>
+int intVar= ParsePosition.getIndex();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDateParser <272, 272>
+int offset= ParsePosition.getIndex();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <491, 491>
+intVar = ParsePosition.getIndex();
+
+---patch code ori--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <95, 95>
+pos += Character.charCount(Character.codePointAt(input, pt));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.Validate <851, 851>
+throw new IllegalArgumentException(String.format(DEFAULT_MATCHES_PATTERN_EX, input, pattern));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <490, 490>
+ParsePosition.setIndex(intVar + ESCAPED_QUOTE.length());
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <89, 89>
+intVar+= char[]Var.length;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <85, 85>
+char charVar = CharSequence.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2158, 2158>
+int intVar = StringVar.indexOf(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <2158, 2158>
+int pos = str.indexOf(separator);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2200, 2200>
+int intVar = StringVar.indexOf(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <2200, 2200>
+int pos = str.indexOf(separator);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2238, 2238>
+int intVar = StringVar.lastIndexOf(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <2238, 2238>
+int pos = str.lastIndexOf(separator);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2281, 2281>
+int intVar = StringVar.lastIndexOf(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <2281, 2281>
+int pos = str.lastIndexOf(separator);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <588, 588>
+int intVar = intVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <588, 588>
+int pos = offset;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <605, 605>
+int intVar = intVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <605, 605>
+int startPos = pos;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <635, 635>
+int intVar = intVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <635, 635>
+int endPos = pos;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <641, 641>
+int intVar = intVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrTokenizer <641, 641>
+int pos = offset;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <740, 740>
+int intVar = intVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrTokenizer <740, 740>
+int pos = start;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.ExtendedMessageFormat <173, 174>
+formatDescription = parseFormatDescription(pattern,
+                            next(pos));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <451, 451>
+intVar = StrMatcher.splitMatcher().isMatch(char[]Var, ParsePosition.getIndex());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <606, 606>
+intVar += intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <634, 634>
+intVar += intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <660, 660>
+intVar += intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <673, 673>
+intVar += intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <2805, 2805>
+intVar += intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <2818, 2818>
+intVar += longVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <2837, 2837>
+intVar = intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <2843, 2843>
+intVar = intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <766, 766>
+intVar += intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <795, 795>
+intVar += intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <805, 805>
+intVar += intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3107, 3107>
+intVar = intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <2802, 2802>
+intVar = StrBuilder.Reader.size() - intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <2813, 2813>
+longVar = StrBuilder.Reader.size() - intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.Fraction <330, 330>
+intVar = StringVar.indexOf(' ');
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.Fraction <334, 334>
+intVar = StringVar.indexOf('/');
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.Fraction <345, 345>
+intVar = StringVar.indexOf('/');
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <167, 167>
+int intVar = readArgumentIndex(StringVar, next(ParsePosition));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.ExtendedMessageFormat <167, 167>
+int index = readArgumentIndex(pattern, next(ParsePosition));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.Fraction <324, 324>
+int intVar = StringVar.indexOf('.');
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.Fraction <324, 324>
+int pos = str.indexOf('.');
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2201, 2203>
+if (intVar == intVar) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.Fraction <332, 332>
+int intVar = Integer.parseInt(StringVar.substring(0, intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.Fraction <332, 332>
+int whole = Integer.parseInt(str.substring(0, pos));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.Fraction <338, 338>
+int intVar = Integer.parseInt(StringVar.substring(0, intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.Fraction <338, 338>
+int numer = Integer.parseInt(str.substring(0, pos));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.Fraction <350, 350>
+int intVar = Integer.parseInt(StringVar.substring(0, intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.Fraction <350, 350>
+int numer = Integer.parseInt(str.substring(0, pos));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharSet <196, 196>
+Set.add(CharRange.is(StringVar.charAt(intVar)));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.LookupTranslator <67, 67>
+intVar = CharSequence.length() - intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3095, 3095>
+int intVar = Character.getType(char[]Var[intVar]);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3095, 3095>
+int type = Character.getType(c[pos]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.Fraction <339, 339>
+int intVar = Integer.parseInt(StringVar.substring(intVar + 1));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.Fraction <339, 339>
+int denom = Integer.parseInt(str.substring(pos + 1));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.Fraction <351, 351>
+int intVar = Integer.parseInt(StringVar.substring(intVar + 1));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.Fraction <351, 351>
+int denom = Integer.parseInt(str.substring(pos + 1));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <727, 727>
+final BigInteger BigInteger = new BigInteger(StringVar.substring(intVar), intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <385, 385>
+return StringVar.substring(intVar, ParsePosition.getIndex());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <452, 452>
+ParsePosition.setIndex(ParsePosition.getIndex() + intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.FastDateParser <285, 285>
+ParsePosition.setIndex(intVar+Matcher.end());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <758, 758>
+StrBuilder.append(char[]Var, intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <804, 804>
+StrBuilder.append(char[]Var, intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2391, 2391>
+int intVar = StringVar.indexOf(StringVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <2391, 2391>
+int start = str.indexOf(open, pos);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <119, 119>
+intVar = Integer.parseInt(CharSequence.subSequence(intVar, intVar).toString(), 16);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <121, 121>
+intVar = Integer.parseInt(CharSequence.subSequence(intVar, intVar).toString(), 10);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrMatcher <268, 268>
+return isMatch(char[]Var, intVar, 0, char[]Var.length);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.Fraction <333, 333>
+StringVar = StringVar.substring(intVar + 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.Fraction <325, 327>
+if (intVar >= 0) {
+            return getFraction(Double.parseDouble(StringVar));
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1973, 1973>
+delete(0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <778, 778>
+int intVar = getDelimiterMatcher().isMatch(char[]Var, intVar, intVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrTokenizer <778, 778>
+int delimLen = getDelimiterMatcher().isMatch(chars, pos, start, len);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <793, 793>
+int intVar = getIgnoredMatcher().isMatch(char[]Var, intVar, intVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrTokenizer <793, 793>
+int ignoredLen = getIgnoredMatcher().isMatch(chars, pos, start, len);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <802, 802>
+int intVar = getTrimmerMatcher().isMatch(char[]Var, intVar, intVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrTokenizer <802, 802>
+int trimmedLen = getTrimmerMatcher().isMatch(chars, pos, start, len);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDateFormat <386, 386>
+return FastDatePrinter.format(Object, StringBuffer, FieldPosition);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <771, 771>
+StrBuilder.append(char[]Var[intVar++]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <810, 810>
+StrBuilder.append(char[]Var[intVar++]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2204, 2204>
+return StringVar.substring(intVar + StringVar.length());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2285, 2285>
+return StringVar.substring(intVar + StringVar.length());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <598, 598>
+StrBuilder.deleteCharAt(intVar - 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2162, 2162>
+return StringVar.substring(0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2242, 2242>
+return StringVar.substring(0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4247, 4247>
+return new String(char[]Var, 0, intVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.Validate <874, 876>
+if (Pattern.matches(pattern, input) == false) {
+            throw new IllegalArgumentException(String.format(message, values));
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <488, 489>
+StringBuilder.append(char[]Var, intVar, ParsePosition.getIndex() - intVar).append(
+                        charVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.AggregateTranslator <52, 52>
+int intVar = CharSequenceTranslator.translate(CharSequence, intVar, Writer);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.AggregateTranslator <52, 52>
+int consumed = CharSequenceTranslator.translate(CharSequence, index, Writer);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3106, 3106>
+ListVar.add(new String(char[]Var, intVar, intVar - intVar));
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.OctalUnescaper <55, 55>
+Writer.write( Integer.parseInt(CharSequence.subSequence(intVar, intVar).toString(), 8) );
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2401, 2401>
+intVar = intVar + intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2119, 2119>
+return StringVar.substring(intVar, intVar + intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <619, 620>
+intVar = StrMatcher.isMatch(char[]Var, intVar, intVar,
+                                intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <646, 646>
+intVar = readNextToken(char[]Var, intVar, intVar, StrBuilder, ListVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <2025, 2025>
+int intVar = intVar - intVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <2025, 2025>
+int pos = size - len;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharSet <181, 181>
+int intVar = intVar - intVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharSet <181, 181>
+int remainder = len - pos;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <2804, 2804>
+StrBuilder.Reader.getChars(intVar, intVar + intVar, charVar, intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.LookupTranslator <71, 71>
+CharSequence CharSequence = CharSequence.subSequence(intVar, intVar + intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <649, 651>
+if (intVar >= intVar) {
+                addToken(ListVar, "");
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharSet <188, 188>
+Set.add(CharRange.isIn(StringVar.charAt(intVar), StringVar.charAt(intVar + 2)));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.ExtendedMessageFormat <184, 187>
+if (c[pos.getIndex()] != END_FE) {
+                    throw new IllegalArgumentException(
+                            "Unreadable format element at position " + start);
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <184, 187>
+if (char[]Var[ParsePosition.getIndex()] != charVar) {
+                    throw new IllegalArgumentException(
+                            "Unreadable format element at position " + intVar);
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2159, 2161>
+if (intVar == intVar) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2239, 2241>
+if (intVar == intVar) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <590, 591>
+int intVar = StrMatcher.isMatch(char[]Var, intVar, intVar,
+                    intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <590, 591>
+int startMatchLen = StrMatcher.isMatch(chars, pos, offset,
+                    bufEnd);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2282, 2284>
+if (intVar == intVar || intVar == StringVar.length() - StringVar.length()) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2116, 2118>
+if (StringVar.length() <= intVar + intVar) {
+            return StringVar.substring(intVar);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <759, 759>
+intVar += intVar * 2;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharSet <184, 184>
+Set.add(CharRange.isNotIn(StringVar.charAt(intVar + 1), StringVar.charAt(intVar + 3)));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <782, 782>
+return intVar + intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3100, 3100>
+int intVar = intVar - 1;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3100, 3100>
+int newTokenStart = pos - 1;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2110, 2112>
+if (intVar < 0 || intVar > StringVar.length()) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <626, 628>
+String StringVar = new String(char[]Var, intVar
+                                        + intVar, intVar - intVar
+                                        - intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <610, 617>
+if (isEnableSubstitutionInVariables()
+                                && (intVar = StrMatcher.isMatch(char[]Var,
+                                        intVar, intVar, intVar)) != 0) {
+                            // found a nested variable start
+                            intVar++;
+                            intVar += intVar;
+                            continue;
+                        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <105, 105>
+boolean booleanVar = intVar != intVar && CharSequence.charAt(intVar) == ';';
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.OctalUnescaper <47, 53>
+while ( intVar < CharSequence.length() && Character.isDigit(CharSequence.charAt(intVar)) ) {
+                intVar++;
+                if ( Integer.parseInt(CharSequence.subSequence(intVar, intVar).toString(), 10) > intVar) {
+                    intVar--; // rollback
+                    break;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4244, 4244>
+char[]Var[intVar++] = char[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <786, 790>
+if (intVar > 0 && isQuote(char[]Var, intVar, intVar, intVar, intVar)) {
+                    booleanVar = true;
+                    intVar += intVar;
+                    continue;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <494, 501>
+switch (char[]Var[ParsePosition.getIndex()]) {
+            case charVar:
+                next(ParsePosition);
+                return StringBuilder == null ? null : StringBuilder.append(char[]Var, intVar,
+                        ParsePosition.getIndex() - intVar);
+            default:
+                next(ParsePosition);
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.UnicodeUnescaper <40, 42>
+while (intVar + intVar < CharSequence.length() && CharSequence.charAt(intVar + intVar) == 'u') {
+                intVar++;
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.UnicodeUnescaper <44, 46>
+if (intVar + intVar < CharSequence.length() && CharSequence.charAt(intVar + intVar) == '+') {
+                intVar++;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrMatcher <301, 301>
+return Arrays.binarySearch(char[]Var, char[]Var[intVar]) >= 0 ? 1 : 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrMatcher <368, 370>
+if (intVar + intVar > intVar) {
+                return 0;
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.text.translate.UnicodeUnescaper <48, 62>
+if (index + i + 4 <= input.length()) {
+                // Get 4 hex digits
+                CharSequence unicode = input.subSequence(index + i, index + i + 4);
+
+                try {
+                    int value = Integer.parseInt(unicode.toString(), 16);
+                    out.write((char) value);
+                } catch (NumberFormatException nfe) {
+                    throw new IllegalArgumentException("Unable to parse unicode value: " + unicode, nfe);
+                }
+                return i + 4;
+            } else {
+                throw new IllegalArgumentException("Less than 4 hex digits in unicode value: '" + input.subSequence(index, input.length())
+                        + "' due to end of CharSequence");
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.UnicodeUnescaper <48, 62>
+if (intVar + intVar + 4 <= CharSequence.length()) {
+                // Get 4 hex digits
+                CharSequence unicode = CharSequence.subSequence(intVar + intVar, intVar + intVar + 4);
+
+                try {
+                    int value = Integer.parseInt(unicode.toString(), 16);
+                    Writer.write((char) value);
+                } catch (NumberFormatException nfe) {
+                    throw new IllegalArgumentException("Unable to parse unicode value: " + unicode, nfe);
+                }
+                return intVar + 4;
+            } else {
+                throw new IllegalArgumentException("Less than 4 hex digits in unicode value: '" + CharSequence.subSequence(intVar, CharSequence.length())
+                        + "' due to end of CharSequence");
+            }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.UnicodeUnescaper <48, 62>
+if (index + i + 4 <= CharSequence.length()) {
+                // Get 4 hex digits
+                CharSequence unicode = CharSequence.subSequence(index + i, index + i + 4);
+
+                try {
+                    int value = Integer.parseInt(unicode.toString(), 16);
+                    Writer.write((char) value);
+                } catch (NumberFormatException nfe) {
+                    throw new IllegalArgumentException("Unable to parse unicode value: " + unicode, nfe);
+                }
+                return i + 4;
+            } else {
+                throw new IllegalArgumentException("Less than 4 hex digits in unicode value: '" + CharSequence.subSequence(index, CharSequence.length())
+                        + "' due to end of CharSequence");
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <2026, 2030>
+for (int intVar = 0; intVar < intVar; intVar++,intVar++) {
+            if (char[]Var[intVar] != StringVar.charAt(intVar)) {
+                return false;
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <2026, 2030>
+for (int i = 0; i < len; i++,pos++) {
+            if (buffer[pos] != str.charAt(i)) {
+                return false;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1963, 1965>
+while (intVar < intVar && char[]Var[intVar] <= ' ') {
+            intVar++;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <719, 725>
+if (StringVar.startsWith("#", intVar)) { // alternative hex (allowed by Long/Integer)
+            intVar = 16;
+            intVar ++;
+        } else if (StringVar.startsWith("0", intVar) && StringVar.length() > intVar + 1) { // octal; so long as there are additional digits
+            intVar = 8;
+            intVar ++;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrMatcher <371, 375>
+for (int intVar = 0; intVar < char[]Var.length; intVar++, intVar++) {
+                if (char[]Var[intVar] != char[]Var[intVar]) {
+                    return 0;
+                }
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrMatcher <371, 375>
+for (int i = 0; i < chars.length; i++, pos++) {
+                if (chars[i] != buffer[pos]) {
+                    return 0;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrMatcher <334, 334>
+return charVar == char[]Var[intVar] ? 1 : 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1966, 1968>
+while (intVar < intVar && char[]Var[intVar - 1] <= ' ') {
+            intVar--;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <833, 835>
+if (intVar + intVar >= intVar || char[]Var[intVar + intVar] != char[]Var[intVar + intVar]) {
+                return false;
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <98, 103>
+while(intVar < intVar && ( CharSequence.charAt(intVar) >= '0' && CharSequence.charAt(intVar) <= '9' ||
+                                    CharSequence.charAt(intVar) >= 'a' && CharSequence.charAt(intVar) <= 'f' ||
+                                    CharSequence.charAt(intVar) >= 'A' && CharSequence.charAt(intVar) <= 'F' ) )
+            {
+                intVar++;
+            }
+

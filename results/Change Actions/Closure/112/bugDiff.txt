@@ -1,0 +1,22 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_112/src/com/google/javascript/jscomp/TypeInference.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_112/src/com/google/javascript/jscomp/TypeInference.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_112/src/com/google/javascript/jscomp/TypeInference.java	2020-01-05 05:22:14.992972466 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_112/src/com/google/javascript/jscomp/TypeInference.java	2020-01-05 05:22:17.996947376 -0800
+@@ -1189,9 +1189,15 @@
+     }
+ 
+     // Try to infer the template types
+-    Map<TemplateType, JSType> inferred = 
+-        inferTemplateTypesFromParameters(fnType, n);
++    Map<TemplateType, JSType> inferred = Maps.filterKeys(
++        inferTemplateTypesFromParameters(fnType, n),
++        new Predicate<TemplateType>() {
+ 
++          @Override
++          public boolean apply(TemplateType key) {
++            return keys.contains(key);
++          }}
++        );
+ 
+     // Replace all template types. If we couldn't find a replacement, we
+     // replace it with UNKNOWN.

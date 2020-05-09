@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_67/src/com/google/javascript/jscomp/AnalyzePrototypeProperties.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_67/src/com/google/javascript/jscomp/AnalyzePrototypeProperties.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_67/src/com/google/javascript/jscomp/AnalyzePrototypeProperties.java	2020-01-05 05:18:50.162683230 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_67/src/com/google/javascript/jscomp/AnalyzePrototypeProperties.java	2020-01-05 05:18:52.166666492 -0800
+@@ -315,7 +315,7 @@
+       Node n = assign.getFirstChild();
+       if (n != null && NodeUtil.isVarOrSimpleAssignLhs(n, assign)
+           && n.getType() == Token.GETPROP
+-          ) {
++          && assign.getParent().getType() == Token.EXPR_RESULT) {
+         // We want to exclude the assignment itself from the usage list
+         boolean isChainedProperty =
+             n.getFirstChild().getType() == Token.GETPROP;

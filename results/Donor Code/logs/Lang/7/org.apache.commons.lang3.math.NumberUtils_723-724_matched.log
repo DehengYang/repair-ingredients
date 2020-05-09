@@ -1,0 +1,45 @@
+---patch code ori--- org.apache.commons.lang3.math.NumberUtils <723, 724>
+throw new NumberFormatException(str + " is not a valid number.");
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang3.math.NumberUtils <476, 476>
+throw new NumberFormatException(str + " is not a valid number.");
+
+---patch code 0--- org.apache.commons.lang3.math.NumberUtils <723, 724>
+throw new NumberFormatException(StringVar + " is not a valid number.");
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <476, 476>
+throw new NumberFormatException(StringVar + " is not a valid number.");
+
+---patch code 1--- org.apache.commons.lang3.math.NumberUtils <723, 724>
+throw new NumberFormatException(str + " is not a valid number.");
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang3.math.NumberUtils <476, 476>
+throw new NumberFormatException(str + " is not a valid number.");
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang3.math.NumberUtils <486, 486>
+throw new NumberFormatException(str + " is not a valid number.");
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <486, 486>
+throw new NumberFormatException(StringVar + " is not a valid number.");
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang3.math.NumberUtils <486, 486>
+throw new NumberFormatException(str + " is not a valid number.");
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang3.math.NumberUtils <517, 517>
+throw new NumberFormatException(str + " is not a valid number.");
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <517, 517>
+throw new NumberFormatException(StringVar + " is not a valid number.");
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang3.math.NumberUtils <517, 517>
+throw new NumberFormatException(str + " is not a valid number.");
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang3.math.NumberUtils <549, 549>
+throw new NumberFormatException(str + " is not a valid number.");
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <549, 549>
+throw new NumberFormatException(StringVar + " is not a valid number.");
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang3.math.NumberUtils <549, 549>
+throw new NumberFormatException(str + " is not a valid number.");
+

@@ -1,0 +1,166 @@
+---patch code 0--- org.apache.commons.lang3.math.NumberUtils <1413, 1413>
+return booleanVar && !booleanVar && !booleanVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <1413, 1413>
+return booleanVar && !booleanVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <1420, 1420>
+return !booleanVar && booleanVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <1401, 1401>
+return booleanVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <1408, 1408>
+return booleanVar;
+
+---patch code ori--- org.apache.commons.lang3.math.NumberUtils <1413, 1413>
+return foundDigit && !hasExp && !hasDecPoint;
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.math.NumberUtils <1359, 1362>
+if (hasDecPoint || hasExp) {
+                    // two decimal points or dec in exponent   
+                    return false;
+                }
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <1359, 1362>
+if (booleanVar || booleanVar) {
+                    // two decimal points or dec in exponent   
+                    return false;
+                }
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.math.NumberUtils <1396, 1399>
+if (hasDecPoint || hasExp) {
+                    // two decimal points or dec in exponent
+                    return false;
+                }
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <1396, 1399>
+if (booleanVar || booleanVar) {
+                    // two decimal points or dec in exponent
+                    return false;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharRange <217, 217>
+return charVar == CharRange.charVar && charVar == CharRange.charVar && booleanVar == CharRange.booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharRange <160, 160>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharRange <330, 330>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrSubstitutor <908, 908>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <1011, 1011>
+return StrTokenizer.booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <1034, 1034>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.mutable.MutableBoolean <127, 127>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <597, 597>
+return ToStringBuilder.booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <608, 608>
+return ToStringBuilder.booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.EqualsBuilder <968, 968>
+return EqualsBuilder.booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ToStringStyle <1564, 1564>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ToStringStyle <1593, 1593>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ToStringStyle <1614, 1614>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ToStringStyle <1635, 1635>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ToStringStyle <1655, 1655>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ToStringStyle <1676, 1676>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ToStringStyle <1697, 1697>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ToStringStyle <1901, 1901>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ToStringStyle <1925, 1925>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.concurrent.TimedSemaphore <277, 277>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.FastDateFormat <945, 945>
+return booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.BooleanUtils <188, 188>
+return booleanVar;
+
+---patch code 1--- org.apache.commons.lang3.math.NumberUtils <1413, 1413>
+return foundDigit && !hasExp && !hasDecPoint;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.AnnotationUtils <252, 252>
+return Arrays.equals((boolean[]) Object, (boolean[]) Object);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ClassUtils <823, 823>
+return getClass(ClassLoader, StringVar, booleanVar );
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.RandomStringUtils <190, 190>
+return random(intVar, intVar, intVar, booleanVar, booleanVar, char[]Var, Random);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <403, 403>
+return format(Token[]Var, intVar, intVar, intVar, intVar, intVar, intVar, intVar, booleanVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.RandomStringUtils <166, 166>
+return random(intVar, intVar, intVar, booleanVar, booleanVar, null, Random);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.HashCodeBuilder <307, 308>
+return reflectionHashCode(intVar, intVar, TVar, booleanVar,
+                Class, null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ToStringBuilder <202, 202>
+return ReflectionToStringBuilder.toString(TVar, ToStringStyle, booleanVar, false, Class);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.ReflectionToStringBuilder <238, 238>
+return toString(Object, ToStringStyle, booleanVar, booleanVar, null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.EqualsBuilder <352, 352>
+return reflectionEquals(Object, Object, booleanVar, Class, null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.builder.CompareToBuilder <274, 274>
+return reflectionCompare(Object, Object, booleanVar, Class, null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4104, 4104>
+return replaceEach(StringVar, String[]Var, String[]Var, booleanVar, intVar - 1);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.AnnotationUtils <292, 292>
+return Arrays.hashCode((boolean[]) Object);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.mutable.MutableBoolean <77, 77>
+return Boolean.valueOf(MutableBoolean.booleanVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.mutable.MutableBoolean <189, 189>
+return String.valueOf(booleanVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ArrayUtils <4395, 4395>
+return (boolean[]) remove((Object) array, index);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <157, 157>
+return format(Token[]Var, 0, 0, intVar, intVar, intVar, intVar, intVar, booleanVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2681, 2681>
+return splitWorker(StringVar, null, intVar, booleanVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ArrayUtils <2664, 2664>
+return indexOf(boolean[]Var, booleanVar) != intVar;
+

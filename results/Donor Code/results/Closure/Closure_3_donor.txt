@@ -1,0 +1,9 @@
+chunk1 : com.google.javascript.jscomp.FlowSensitiveInlineVariables:155-155
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (52)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (44)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (44)
+
+

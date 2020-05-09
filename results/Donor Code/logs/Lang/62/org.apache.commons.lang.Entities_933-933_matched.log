@@ -1,0 +1,45 @@
+---patch code ori--- org.apache.commons.lang.Entities <933, 933>
+entityValue = -1;
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang.Entities <838, 838>
+entityValue = -1;
+
+---patch code 0--- org.apache.commons.lang.Entities <933, 933>
+intVar = -1;
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.Entities <838, 838>
+intVar = -1;
+
+---patch code 1--- org.apache.commons.lang.Entities <933, 933>
+entityValue = -1;
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang.Entities <838, 838>
+entityValue = -1;
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang.Entities <841, 841>
+entityValue = -1;
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.Entities <841, 841>
+intVar = -1;
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang.Entities <841, 841>
+entityValue = -1;
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang.Entities <851, 851>
+entityValue = -1;
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.Entities <851, 851>
+intVar = -1;
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang.Entities <851, 851>
+entityValue = -1;
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:ori--- org.apache.commons.lang.Entities <909, 909>
+int entityValue = -1;
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.Entities <909, 909>
+int intVar = -1;
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.Entities <909, 909>
+int entityValue = -1;
+

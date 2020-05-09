@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_5/src/main/java/org/apache/commons/math3/complex/Complex.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_5/src/main/java/org/apache/commons/math3/complex/Complex.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_5/src/main/java/org/apache/commons/math3/complex/Complex.java	2020-01-05 06:30:55.906554174 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_5/src/main/java/org/apache/commons/math3/complex/Complex.java	2020-01-05 06:30:59.386525108 -0800
+@@ -302,7 +302,7 @@
+         }
+ 
+         if (real == 0.0 && imaginary == 0.0) {
+-            return NaN;
++            return INF;
+         }
+ 
+         if (isInfinite) {

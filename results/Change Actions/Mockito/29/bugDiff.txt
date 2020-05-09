@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_29/src/org/mockito/internal/matchers/Same.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_29/src/org/mockito/internal/matchers/Same.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_29/src/org/mockito/internal/matchers/Same.java	2020-01-05 22:34:53.804550170 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_29/src/org/mockito/internal/matchers/Same.java	2020-01-05 22:34:56.396550161 -0800
+@@ -26,7 +26,7 @@
+     public void describeTo(Description description) {
+         description.appendText("same(");
+         appendQuoting(description);
+-        description.appendText(wanted.toString());
++        description.appendText(wanted == null ? "null" : wanted.toString());
+         appendQuoting(description);
+         description.appendText(")");
+     }

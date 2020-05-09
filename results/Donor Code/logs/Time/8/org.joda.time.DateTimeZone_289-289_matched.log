@@ -1,0 +1,75 @@
+---patch code ori--- org.joda.time.DateTimeZone <289, 289>
+minutesOffset = hoursInMinutes - Math.abs(minutesOffset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <118, 118>
+monthToUse = Math.abs(monthToUse);
+
+---patch code 0--- org.joda.time.DateTimeZone <289, 289>
+intVar = intVar - Math.abs(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <118, 118>
+intVar = Math.abs(intVar);
+
+---patch code 1--- org.joda.time.DateTimeZone <289, 289>
+minutesOffset = hoursInMinutes - Math.abs(minutesOffset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <118, 118>
+monthToUse = Math.abs(monthToUse);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <170, 170>
+monthToUse = Math.abs(monthToUse);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <170, 170>
+longVar = Math.abs(longVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <170, 170>
+monthToUse = Math.abs(monthToUse);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.format.PeriodFormatterBuilder <1141, 1141>
+int dp = (int) (Math.abs(valueLong) % DateTimeConstants.MILLIS_PER_SECOND);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.format.PeriodFormatterBuilder <1141, 1141>
+int intVar = (int) (Math.abs(longVar) % DateTimeConstants.MILLIS_PER_SECOND);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.format.PeriodFormatterBuilder <1141, 1141>
+int dp = (int) (Math.abs(valueLong) % DateTimeConstants.MILLIS_PER_SECOND);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.format.PeriodFormatterBuilder <1175, 1175>
+int dp = (int) (Math.abs(valueLong) % DateTimeConstants.MILLIS_PER_SECOND);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.format.PeriodFormatterBuilder <1175, 1175>
+int intVar = (int) (Math.abs(longVar) % DateTimeConstants.MILLIS_PER_SECOND);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.format.PeriodFormatterBuilder <1175, 1175>
+int dp = (int) (Math.abs(valueLong) % DateTimeConstants.MILLIS_PER_SECOND);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.format.PeriodFormatterBuilder <1101, 1104>
+if (iFieldType == SECONDS_OPTIONAL_MILLIS &&
+                        (Math.abs(valueLong) % DateTimeConstants.MILLIS_PER_SECOND) == 0) {
+                    sum -= 4; // remove three digits and decimal point
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.format.PeriodFormatterBuilder <1101, 1104>
+if (intVar == SECONDS_OPTIONAL_MILLIS &&
+                        (Math.abs(longVar) % DateTimeConstants.MILLIS_PER_SECOND) == 0) {
+                    intVar -= 4; // remove three digits and decimal point
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.format.PeriodFormatterBuilder <1101, 1104>
+if (iFieldType == SECONDS_OPTIONAL_MILLIS &&
+                        (Math.abs(valueLong) % DateTimeConstants.MILLIS_PER_SECOND) == 0) {
+                    sum -= 4; // remove three digits and decimal point
+                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <128, 129>
+FieldUtils.verifyValueBounds(this, Math.abs(year),
+                                     iChronology.getMinYear(), iChronology.getMaxYear());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.BasicWeekyearDateTimeField <128, 129>
+FieldUtils.verifyValueBounds(this, Math.abs(intVar),
+                                     AssembledChronology.getMinYear(), AssembledChronology.getMaxYear());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.chrono.BasicWeekyearDateTimeField <128, 129>
+FieldUtils.verifyValueBounds(this, Math.abs(year),
+                                     AssembledChronology.getMinYear(), AssembledChronology.getMaxYear());
+

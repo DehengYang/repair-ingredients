@@ -1,0 +1,27 @@
+---patch code ori--- org.apache.commons.math.linear.SingularValueDecompositionImpl <267, 267>
+wi[j] = mi * ei0[j] / singularValues[j];
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.math.linear.SingularValueDecompositionImpl <174, 174>
+wi[j] = (mi * ei0[j] + si * ei1[j]) / singularValues[j];
+
+---patch code 0--- org.apache.commons.math.linear.SingularValueDecompositionImpl <267, 267>
+double[]Var[intVar] = doubleVar * double[]Var[intVar] / double[]Var[intVar];
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.linear.SingularValueDecompositionImpl <174, 174>
+double[]Var[intVar] = (doubleVar * double[]Var[intVar] + doubleVar * double[]Var[intVar]) / double[]Var[intVar];
+
+---patch code 1--- org.apache.commons.math.linear.SingularValueDecompositionImpl <267, 267>
+wi[j] = mi * ei0[j] / singularValues[j];
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:1--- org.apache.commons.math.linear.SingularValueDecompositionImpl <174, 174>
+wi[j] = (mi * ei0[j] + si * ei1[j]) / singularValues[j];
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.math.linear.SingularValueDecompositionImpl <259, 259>
+wi[j] = (mi * ei0[j] + si * ei1[j]) / singularValues[j];
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.linear.SingularValueDecompositionImpl <259, 259>
+double[]Var[intVar] = (doubleVar * double[]Var[intVar] + doubleVar * double[]Var[intVar]) / double[]Var[intVar];
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:1--- org.apache.commons.math.linear.SingularValueDecompositionImpl <259, 259>
+wi[j] = (mi * ei0[j] + si * ei1[j]) / singularValues[j];
+

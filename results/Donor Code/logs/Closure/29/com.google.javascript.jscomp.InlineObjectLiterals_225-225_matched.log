@@ -1,0 +1,90 @@
+---patch code 0--- com.google.javascript.jscomp.InlineObjectLiterals <225, 225>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- com.google.javascript.jscomp.CollapseVariableDeclarations <185, 185>
+Set.add(NodeTraversal.getScope().getVar(Node.getString()));
+
+---patch code 1--- com.google.javascript.jscomp.InlineObjectLiterals <225, 225>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1--- com.google.javascript.jscomp.CollapseVariableDeclarations <185, 185>
+Set.add(NodeTraversal.getScope().getVar(Node.getString()));
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.Normalize <175, 175>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.Normalize <175, 175>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.InlineFunctions <790, 790>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.InlineFunctions <790, 790>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.FunctionArgumentInjector <202, 202>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.FunctionArgumentInjector <202, 202>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.FunctionArgumentInjector <483, 483>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.FunctionArgumentInjector <483, 483>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.FunctionArgumentInjector <498, 498>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.FunctionArgumentInjector <498, 498>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.StrictModeCheck <191, 191>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.StrictModeCheck <191, 191>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.StrictModeCheck <199, 199>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.StrictModeCheck <199, 199>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.GatherRawExports <59, 59>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.GatherRawExports <59, 59>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ProcessClosurePrimitives <203, 203>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ProcessClosurePrimitives <203, 203>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedClassProperties <109, 109>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedClassProperties <109, 109>
+Set.add(Node.getString());
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- com.google.javascript.jscomp.LiveVariablesAnalysis <296, 296>
+Set.add(Scope.getVar(Node.getString()));
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1--- com.google.javascript.jscomp.LiveVariablesAnalysis <296, 296>
+Set.add(Scope.getVar(Node.getString()));
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- com.google.javascript.jscomp.InlineVariables <335, 335>
+Set.add(Scope.getVar(Node.getString()));
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1--- com.google.javascript.jscomp.InlineVariables <335, 335>
+Set.add(Scope.getVar(Node.getString()));
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.ProcessClosurePrimitives <205, 205>
+Set.add(Node.getString().substring(0, intVar));
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.ProcessClosurePrimitives <205, 205>
+Set.add(Node.getString().substring(0, dot));
+

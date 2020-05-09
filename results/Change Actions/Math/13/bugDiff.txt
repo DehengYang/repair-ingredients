@@ -1,0 +1,21 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_13/src/main/java/org/apache/commons/math3/optimization/general/AbstractLeastSquaresOptimizer.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_13/src/main/java/org/apache/commons/math3/optimization/general/AbstractLeastSquaresOptimizer.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_13/src/main/java/org/apache/commons/math3/optimization/general/AbstractLeastSquaresOptimizer.java	2020-01-05 06:31:52.422082149 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_13/src/main/java/org/apache/commons/math3/optimization/general/AbstractLeastSquaresOptimizer.java	2020-01-05 06:31:55.938052784 -0800
+@@ -559,7 +559,16 @@
+      * @return the square-root of the weight matrix.
+      */
+     private RealMatrix squareRoot(RealMatrix m) {
++        if (m instanceof DiagonalMatrix) {
++            final int dim = m.getRowDimension();
++            final RealMatrix sqrtM = new DiagonalMatrix(dim);
++            for (int i = 0; i < dim; i++) {
++               sqrtM.setEntry(i, i, FastMath.sqrt(m.getEntry(i, i)));
++            }
++            return sqrtM;
++        } else {
+             final EigenDecomposition dec = new EigenDecomposition(m);
+             return dec.getSquareRoot();
++        }
+     }
+ }

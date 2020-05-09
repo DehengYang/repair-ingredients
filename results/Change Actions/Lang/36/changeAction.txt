@@ -1,0 +1,31 @@
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (MOV, PrefixExpression, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, InfixExpression, OP2, OP6 OP7 OP8)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, Operator, OP5, null)
+OP8:         (INS, CharacterLiteral, OP5, null)
+
+
+OP1:(INS, IfStatement, null, OP2 OP8 OP14)
+OP2:   (INS, InfixExpression, OP1, OP3 OP6 OP7)
+OP3:      (INS, ArrayAccess, OP2, OP4 OP5)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, SimpleName, OP3, null)
+OP6:      (INS, Operator, OP2, null)
+OP7:      (INS, CharacterLiteral, OP2, null)
+OP8:   (INS, IfStatement, OP1, OP9 OP13)
+OP9:      (INS, InfixExpression, OP8, OP10 OP11 OP12)
+OP10:         (INS, SimpleName, OP9, null)
+OP11:         (INS, Operator, OP9, null)
+OP12:         (INS, SimpleName, OP9, null)
+OP13:      (MOV, ReturnStatement, OP8, null)
+OP14:   (INS, ReturnStatement, OP1, OP15)
+OP15:      (INS, SimpleName, OP14, null)
+
+
+OP1:(INS, ReturnStatement, null, OP2)
+OP2:   (INS, BooleanLiteral, OP1, null)
+
+

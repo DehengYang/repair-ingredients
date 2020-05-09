@@ -1,0 +1,26 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_54/src/main/java/org/apache/commons/math/dfp/Dfp.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_54/src/main/java/org/apache/commons/math/dfp/Dfp.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_54/src/main/java/org/apache/commons/math/dfp/Dfp.java	2020-01-05 06:36:38.367693902 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_54/src/main/java/org/apache/commons/math/dfp/Dfp.java	2020-01-05 06:36:40.847673189 -0800
+@@ -270,6 +270,9 @@
+             // Zero or sub-normal
+             if (x == 0) {
+                 // make sure 0 has the right sign
++                if ((bits & 0x8000000000000000L) != 0) {
++                    sign = -1;
++                }
+                 return;
+             }
+ 
+@@ -2316,7 +2319,10 @@
+ 
+         Dfp y = this;
+         boolean negate = false;
+-        if (lessThan(getZero())) {
++        int cmp0 = compare(this, getZero());
++        if (cmp0 == 0) {
++            return sign < 0 ? -0.0 : +0.0;
++        } else if (cmp0 < 0) {
+             y = negate();
+             negate = true;
+         }

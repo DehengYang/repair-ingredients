@@ -1,0 +1,652 @@
+---patch code ori--- org.joda.time.Partial <464, 464>
+Partial newPartial = new Partial(newTypes, newValues, iChronology);
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <464, 464>
+Partial newPartial = new Partial(iChronology, newTypes, newValues);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <493, 493>
+Partial newPartial = new Partial(iChronology, newTypes, newValues);
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <465, 465>
+iChronology.validate(newPartial, newValues);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <494, 494>
+iChronology.validate(newPartial, newValues);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseInterval <89, 89>
+iChronology = ISOChronology.getInstance();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseInterval <72, 72>
+iChronology = DateTimeUtils.getChronology(chrono);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseInterval <91, 91>
+iChronology = DateTimeUtils.getInstantChronology(start);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseInterval <108, 108>
+iChronology = DateTimeUtils.getInstantChronology(start);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseInterval <125, 125>
+iChronology = DateTimeUtils.getInstantChronology(end);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseInterval <251, 251>
+iChronology = DateTimeUtils.getChronology(chrono);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfYearDateTimeField <69, 69>
+int year = iChronology.getYear(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField <88, 88>
+int weekyear = iChronology.getWeekyear(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <141, 141>
+int thisDow = iChronology.getDayOfWeek(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <145, 145>
+int weeksInFromYear = iChronology.getWeeksInYear( thisWeekyear );
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <146, 146>
+int weeksInToYear = iChronology.getWeeksInYear( year );
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <155, 155>
+int setToWeek = iChronology.getWeekOfWeekyear(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <190, 190>
+int currentWoyWeek = iChronology.getWeekOfWeekyear(workInstant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <236, 236>
+int wow = iChronology.getWeekOfWeekyear(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <76, 76>
+int thisYear = iChronology.getYear(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <129, 129>
+long yearStartMillis = iChronology.getYearMillis(year);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <99, 99>
+long timePart = iChronology.getMillisOfDay(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <104, 104>
+int thisYear = iChronology.getYear(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <159, 159>
+long timePart = iChronology.getMillisOfDay(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <161, 161>
+int thisYear = iChronology.getYear(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <248, 248>
+int minuendYear = iChronology.getYear(minuendInstant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <250, 250>
+int subtrahendYear = iChronology.getYear(subtrahendInstant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <301, 301>
+int thisYear = iChronology.getYear(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <321, 321>
+int thisYear = iChronology.getYear(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <350, 350>
+int year = iChronology.getYear(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJEraDateTimeField <85, 85>
+int year = iChronology.getYear(instant);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDateTime <741, 741>
+Chronology chrono = iChronology.withZone(zone);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BasePartial <197, 197>
+iChronology = base.iChronology;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <281, 281>
+iChronology = partial.iChronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <105, 105>
+int thisMonth = iChronology.getMonthOfYear(instant, thisYear);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <138, 138>
+int maxDay = iChronology.getDaysInYearMonth(yearToUse, monthToUse);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <162, 162>
+int thisMonth = iChronology.getMonthOfYear(instant, thisYear);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <193, 193>
+int maxDay = iChronology.getDaysInYearMonth(i_yearToUse, i_monthToUse);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <249, 249>
+int minuendMonth = iChronology.getMonthOfYear(minuendInstant, minuendYear);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <251, 251>
+int subtrahendMonth = iChronology.getMonthOfYear(subtrahendInstant, subtrahendYear);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <303, 303>
+int thisDom = iChronology.getDayOfMonth(instant, thisYear);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <304, 304>
+int maxDom = iChronology.getDaysInYearMonth(thisYear, month);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <351, 351>
+int month = iChronology.getMonthOfYear(instant, year);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <129, 130>
+FieldUtils.verifyValueBounds(this, Math.abs(year),
+                                     iChronology.getMinYear(), iChronology.getMaxYear());
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <124, 124>
+iChronology = DateTimeUtils.getChronology(chrono).withUTC();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <72, 72>
+return iChronology.getDaysInYearMonth(year, month);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <87, 87>
+return iChronology.getDaysInYearMonth(year, month);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <97, 97>
+return iChronology.getDaysInMonthMaxForSet(instant, value);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <85, 85>
+return iChronology.setYear(instant, year);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <92, 92>
+return iChronology.getYearDifference(minuendInstant, subtrahendInstant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <222, 222>
+return iChronology.get(partial, instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <352, 352>
+return iChronology.getYearMonthMillis(year, month);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseDateTime <126, 126>
+iMillis = checkInstant(instant, iChronology);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseDateTime <256, 256>
+iMillis = checkInstant(instant, iChronology);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseDateTime <317, 317>
+iMillis = checkInstant(instant, iChronology);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <215, 215>
+DurationField loopUnitField = loopType.getDurationType().getField(iChronology);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <232, 232>
+DurationField loopRangeField = loopType.getRangeDurationType().getField(iChronology);
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <437, 437>
+DurationField unitField = fieldType.getDurationType().getField(iChronology);
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <441, 441>
+DurationField loopUnitField = loopType.getDurationType().getField(iChronology);
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <447, 447>
+DurationField rangeField = fieldType.getRangeDurationType().getField(iChronology);
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <448, 448>
+DurationField loopRangeField = loopType.getRangeDurationType().getField(iChronology);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfYearDateTimeField <53, 53>
+return iChronology.getDayOfYear(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfYearDateTimeField <70, 70>
+return iChronology.getDaysInYear(year);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfYearDateTimeField <76, 76>
+return iChronology.getDaysInYear(year);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfYearDateTimeField <86, 86>
+return iChronology.getDaysInYear(year);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <48, 48>
+return iChronology.getDayOfMonth(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <64, 64>
+return iChronology.getDaysInMonthMax(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <74, 74>
+return iChronology.getDaysInMonthMax(month);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <90, 90>
+return iChronology.getDaysInMonthMax(month);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField <55, 55>
+return iChronology.getWeekOfWeekyear(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField <89, 89>
+return iChronology.getWeeksInYear(weekyear);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField <95, 95>
+return iChronology.getWeeksInYear(weekyear);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField <105, 105>
+return iChronology.getWeeksInYear(weekyear);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJDayOfWeekDateTimeField <57, 57>
+return iChronology.getDayOfWeek(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <61, 61>
+return iChronology.getWeekyear(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <55, 55>
+return iChronology.getYear(instant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <54, 54>
+iMax = iChronology.getMaxMonth();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <73, 73>
+return iChronology.getMonthOfYear(instant);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDate <388, 388>
+iChronology = chronology.withUTC();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDate <418, 418>
+iChronology = chronology.withUTC();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseDateTime <125, 125>
+iChronology = checkChronology(chronology);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseDateTime <253, 253>
+iChronology = checkChronology(chronology);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseDateTime <329, 329>
+iChronology = checkChronology(chronology);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseInterval <201, 201>
+iChronology = mi.getChronology();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BasePartial <110, 110>
+iChronology = chronology.withUTC();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BasePartial <135, 135>
+iChronology = chronology.withUTC();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BasePartial <162, 162>
+iChronology = chronology.withUTC();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BasePartial <182, 182>
+iChronology = chronology.withUTC();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BasePartial <212, 212>
+iChronology = chrono.withUTC();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDateTime <337, 337>
+iChronology = chronology.withUTC();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDateTime <383, 383>
+iChronology = chronology.withUTC();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDateTime <413, 413>
+iChronology = chronology.withUTC();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalTime <408, 408>
+iChronology = chronology.withUTC();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalTime <434, 434>
+iChronology = chronology.withUTC();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <169, 169>
+workInstant = iChronology.setYear( workInstant, year );
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <137, 137>
+int dayToUse = iChronology.getDayOfMonth(instant, thisYear, thisMonth);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <145, 146>
+long datePart =
+            iChronology.getYearMonthDayMillis(yearToUse, monthToUse, dayToUse);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <192, 192>
+int dayToUse = iChronology.getDayOfMonth(instant, thisYear, thisMonth);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <198, 199>
+long datePart =
+            iChronology.getYearMonthDayMillis(i_yearToUse, i_monthToUse, dayToUse);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <257, 258>
+int minuendDom = iChronology.getDayOfMonth
+            (minuendInstant, minuendYear, minuendMonth);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <261, 262>
+int subtrahendDom = iChronology.getDayOfMonth
+                (subtrahendInstant, subtrahendYear, subtrahendMonth);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDate <637, 639>
+if (iChronology.equals(other.iChronology)) {
+                return iLocalMillis == other.iLocalMillis;
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDateTime <678, 680>
+if (iChronology.equals(other.iChronology)) {
+                return iLocalMillis == other.iLocalMillis;
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalTime <687, 689>
+if (iChronology.equals(other.iChronology)) {
+                return iLocalMillis == other.iLocalMillis;
+            }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <83, 84>
+FieldUtils.verifyValueBounds
+            (this, year, iChronology.getMinYear(), iChronology.getMaxYear());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <201, 201>
+workInstant = iChronology.dayOfWeek().set( workInstant, thisDow );
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <267, 267>
+subtrahendInstant = iChronology.dayOfMonth().set(subtrahendInstant, minuendDom);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseDateTime <170, 170>
+iChronology = checkChronology(converter.getChronology(instant, chronology));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <272, 273>
+long minuendRem = minuendInstant
+            - iChronology.getYearMonthMillis(minuendYear, minuendMonth);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <274, 275>
+long subtrahendRem = subtrahendInstant
+            - iChronology.getYearMonthMillis(subtrahendYear, subtrahendMonth);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfYearDateTimeField <43, 43>
+iChronology = chronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <43, 43>
+iChronology = chronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField <44, 44>
+iChronology = chronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJDayOfWeekDateTimeField <47, 47>
+iChronology = chronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <46, 46>
+iChronology = chronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJYearOfEraDateTimeField <43, 43>
+iChronology = chronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <47, 47>
+iChronology = chronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <53, 53>
+iChronology = chronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJEraDateTimeField <48, 48>
+iChronology = chronology;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDate <341, 341>
+iChronology = chronology;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDate <458, 458>
+iChronology = chronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.SkipUndoDateTimeField <65, 65>
+iChronology = chronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.field.SkipDateTimeField <66, 66>
+iChronology = chronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseDateTime <149, 149>
+iChronology = chrono;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseInterval <146, 146>
+iChronology = chrono;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseInterval <170, 170>
+iChronology = chrono;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <155, 155>
+iChronology = chronology;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <192, 192>
+iChronology = chronology;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <297, 297>
+iChronology = chronology;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDateTime <513, 513>
+iChronology = chronology;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalTime <362, 362>
+iChronology = chronology;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalTime <508, 508>
+iChronology = chronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <77, 78>
+int wrappedYear = FieldUtils.getWrappedValue
+            (thisYear, years, iChronology.getMinYear(), iChronology.getMaxYear());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseDateTime <171, 171>
+iMillis = checkInstant(converter.getInstantMillis(instant, chronology), iChronology);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <90, 90>
+return -iChronology.getYearDifference(subtrahendInstant, minuendInstant);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJEraDateTimeField <86, 86>
+return iChronology.setYear(instant, -year);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <235, 235>
+instant = iChronology.weekOfWeekyear().roundFloor(instant);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDate <1041, 1041>
+newMillis = iChronology.dayOfMonth().roundFloor(newMillis);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <310, 311>
+return iChronology.getYearMonthDayMillis(thisYear, month, thisDom) +
+            iChronology.getMillisOfDay(instant);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <262, 262>
+iChronology = DateTimeUtils.getChronology(partial.getChronology()).withUTC();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <322, 324>
+if (iChronology.isLeapYear(thisYear)) {
+            return (iChronology.getMonthOfYear(instant, thisYear) == iLeapMonth);
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <231, 231>
+DurationField lastRangeField = types[i - 1].getRangeDurationType().getField(iChronology);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <132, 132>
+instant = iChronology.getYearMillis(year + 1);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfYearDateTimeField <93, 93>
+int maxLessOne = iChronology.getDaysInYearMax() - 1;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDate <467, 469>
+if (iChronology == null) {
+            return new LocalDate(iLocalMillis, ISOChronology.getInstanceUTC());
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDateTime <522, 524>
+if (iChronology == null) {
+            return new LocalDateTime(iLocalMillis, ISOChronology.getInstanceUTC());
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalTime <517, 519>
+if (iChronology == null) {
+            return new LocalTime(iLocalMillis, ISOChronology.getInstanceUTC());
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <219, 219>
+instant = partial.getFieldType(i).getField(iChronology).set(instant, values[i]);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseInterval <193, 193>
+iChronology = (chrono != null ? chrono : input.getChronology());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseDateTime <254, 255>
+long instant = iChronology.getDateTimeMillis(year, monthOfYear, dayOfMonth,
+            hourOfDay, minuteOfHour, secondOfMinute, millisOfSecond);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <100, 100>
+return iChronology.isLeapYear(get(instant));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <124, 124>
+return iChronology.getYearMillis(get(instant));
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDate <471, 471>
+return new LocalDate(iLocalMillis, iChronology.withUTC());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDateTime <526, 526>
+return new LocalDateTime(iLocalMillis, iChronology.withUTC());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalTime <521, 521>
+return new LocalTime(iLocalMillis, iChronology.withUTC());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <213, 213>
+return iChronology.getWeeksInYear(iChronology.getWeekyear(instant)) > 52;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <217, 217>
+return iChronology.getWeeksInYear(iChronology.getWeekyear(instant)) - 52;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfYearDateTimeField <57, 57>
+return iChronology.years();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfYearDateTimeField <65, 65>
+return iChronology.getDaysInYearMax();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfYearDateTimeField <78, 78>
+return iChronology.getDaysInYearMax();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfYearDateTimeField <89, 89>
+return iChronology.getDaysInYearMax();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfYearDateTimeField <101, 101>
+return iChronology.dayOfYear();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <52, 52>
+return iChronology.months();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <60, 60>
+return iChronology.getDaysInMonthMax();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicDayOfMonthDateTimeField <104, 104>
+return iChronology.dayOfMonth();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField <59, 59>
+return iChronology.weekyears();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekOfWeekyearDateTimeField <119, 119>
+return iChronology.weekOfWeekyear();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJDayOfWeekDateTimeField <95, 95>
+return iChronology.weeks();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJDayOfWeekDateTimeField <140, 140>
+return iChronology.dayOfWeek();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <221, 221>
+return iChronology.weeks();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <225, 225>
+return iChronology.getMinYear();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <229, 229>
+return iChronology.getMaxYear();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <251, 251>
+return iChronology.weekyear();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJYearOfEraDateTimeField <48, 48>
+return iChronology.eras();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJYearOfEraDateTimeField <123, 123>
+return iChronology.yearOfEra();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <112, 112>
+return iChronology.days();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <116, 116>
+return iChronology.getMinYear();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <120, 120>
+return iChronology.getMaxYear();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicYearDateTimeField <145, 145>
+return iChronology.year();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <316, 316>
+return iChronology.years();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <335, 335>
+return iChronology.days();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <365, 365>
+return iChronology.monthOfYear();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJEraDateTimeField <151, 151>
+return iChronology.era();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicWeekyearDateTimeField <108, 110>
+if (subtrahendRem >= WEEK_53 && iChronology.getWeeksInYear(minuendWeekyear) <= 52) {
+            subtrahendRem -= DateTimeConstants.MILLIS_PER_WEEK;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDate <619, 619>
+return iChronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseDateTime <304, 304>
+return iChronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BaseInterval <215, 215>
+return iChronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.base.BasePartial <249, 249>
+return iChronology;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.joda.time.Partial <321, 321>
+return iChronology;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDateTime <660, 660>
+return iChronology;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalTime <669, 669>
+return iChronology;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.GJYearOfEraDateTimeField <93, 95>
+if (iChronology.getYear(instant) <= 0) {
+            year = 1 - year;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.joda.time.chrono.BasicMonthOfYearDateTimeField <182, 187>
+if (yearToUse < iChronology.getMinYear() ||
+            yearToUse > iChronology.getMaxYear()) {
+
+            throw new IllegalArgumentException
+                ("Magnitude of add amount is too large: " + months);
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDate <681, 685>
+if (iChronology.equals(other.iChronology)) {
+                return (iLocalMillis < other.iLocalMillis ? -1 :
+                            (iLocalMillis == other.iLocalMillis ? 0 : 1));
+
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDateTime <708, 712>
+if (iChronology.equals(other.iChronology)) {
+                return (iLocalMillis < other.iLocalMillis ? -1 :
+                            (iLocalMillis == other.iLocalMillis ? 0 : 1));
+
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalTime <717, 721>
+if (iChronology.equals(other.iChronology)) {
+                return (iLocalMillis < other.iLocalMillis ? -1 :
+                            (iLocalMillis == other.iLocalMillis ? 0 : 1));
+
+            }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDate <390, 390>
+iLocalMillis = iChronology.getDateTimeMillis(values[0], values[1], values[2], 0);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDate <420, 420>
+iLocalMillis = iChronology.getDateTimeMillis(values[0], values[1], values[2], 0);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDateTime <385, 385>
+iLocalMillis = iChronology.getDateTimeMillis(values[0], values[1], values[2], values[3]);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalDateTime <415, 415>
+iLocalMillis = iChronology.getDateTimeMillis(values[0], values[1], values[2], values[3]);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalTime <410, 410>
+iLocalMillis = iChronology.getDateTimeMillis(0L, values[0], values[1], values[2], values[3]);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.joda.time.LocalTime <436, 436>
+iLocalMillis = iChronology.getDateTimeMillis(0L, values[0], values[1], values[2], values[3]);
+

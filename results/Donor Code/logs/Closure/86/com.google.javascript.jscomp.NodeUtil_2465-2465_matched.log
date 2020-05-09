@@ -1,0 +1,72 @@
+---patch code ori--- com.google.javascript.jscomp.NodeUtil <2465, 2465>
+return false;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.graph.LinkedUndirectedGraph <49, 49>
+return new LinkedUndirectedGraph<N, E>(false, false);
+
+---patch code 0--- com.google.javascript.jscomp.NodeUtil <2465, 2465>
+return false;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.graph.LinkedUndirectedGraph <49, 49>
+return new LinkedUndirectedGraph<N, E>(false, false);
+
+---patch code 1--- com.google.javascript.jscomp.NodeUtil <2465, 2465>
+return false;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.graph.LinkedUndirectedGraph <49, 49>
+return new LinkedUndirectedGraph<N, E>(false, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.graph.LinkedUndirectedGraph <53, 53>
+return new LinkedUndirectedGraph<N, E>(true, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.graph.LinkedUndirectedGraph <53, 53>
+return new LinkedUndirectedGraph<N, E>(true, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.graph.LinkedUndirectedGraph <53, 53>
+return new LinkedUndirectedGraph<N, E>(true, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.graph.LinkedUndirectedGraph <57, 57>
+return new LinkedUndirectedGraph<N, E>(false, true);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.graph.LinkedUndirectedGraph <57, 57>
+return new LinkedUndirectedGraph<N, E>(false, true);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.graph.LinkedUndirectedGraph <57, 57>
+return new LinkedUndirectedGraph<N, E>(false, true);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.graph.LinkedDirectedGraph <52, 52>
+return new LinkedDirectedGraph<N, E>(false, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.graph.LinkedDirectedGraph <52, 52>
+return new LinkedDirectedGraph<N, E>(false, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.graph.LinkedDirectedGraph <52, 52>
+return new LinkedDirectedGraph<N, E>(false, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.graph.LinkedDirectedGraph <56, 56>
+return new LinkedDirectedGraph<N, E>(true, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.graph.LinkedDirectedGraph <56, 56>
+return new LinkedDirectedGraph<N, E>(true, false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.graph.LinkedDirectedGraph <56, 56>
+return new LinkedDirectedGraph<N, E>(true, false);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.graph.LinkedDirectedGraph <60, 60>
+return new LinkedDirectedGraph<N, E>(false, true);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.graph.LinkedDirectedGraph <60, 60>
+return new LinkedDirectedGraph<N, E>(false, true);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.graph.LinkedDirectedGraph <60, 60>
+return new LinkedDirectedGraph<N, E>(false, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.CallGraph <467, 467>
+return constructDirectedGraph(false);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CallGraph <467, 467>
+return constructDirectedGraph(false);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.CallGraph <467, 467>
+return constructDirectedGraph(false);
+

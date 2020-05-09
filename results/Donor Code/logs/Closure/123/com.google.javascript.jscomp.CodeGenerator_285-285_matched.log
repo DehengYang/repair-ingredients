@@ -1,0 +1,56 @@
+---patch code ori--- com.google.javascript.jscomp.CodeGenerator <285, 285>
+Context rhsContext = getContextForNoInOperator(context);
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.CodeGenerator <128, 128>
+Context rhsContext = getContextForNoInOperator(context);
+
+---patch code 0--- com.google.javascript.jscomp.CodeGenerator <285, 285>
+Context Context = getContextForNoInOperator(Context);
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.CodeGenerator <128, 128>
+Context Context = getContextForNoInOperator(Context);
+
+---patch code 1--- com.google.javascript.jscomp.CodeGenerator <285, 285>
+Context Context = getContextForNoInOperator(Context);
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.CodeGenerator <128, 128>
+Context Context = getContextForNoInOperator(Context);
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.CodeGenerator <205, 205>
+addList(first, false, getContextForNoInOperator(context));
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CodeGenerator <205, 205>
+addList(Node, false, getContextForNoInOperator(Context));
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.CodeGenerator <205, 205>
+addList(Node, false, getContextForNoInOperator(Context));
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.CodeGenerator <226, 226>
+addExpr(first, 0, getContextForNoInOperator(context));
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CodeGenerator <226, 226>
+addExpr(Node, 0, getContextForNoInOperator(Context));
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.CodeGenerator <226, 226>
+addExpr(Node, 0, getContextForNoInOperator(Context));
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.CodeGenerator <245, 246>
+unrollBinaryOperator(n, Token.COMMA, ",", context,
+            getContextForNoInOperator(context), 0, 0);
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CodeGenerator <245, 246>
+unrollBinaryOperator(Node, Token.COMMA, ",", Context,
+            getContextForNoInOperator(Context), 0, 0);
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.CodeGenerator <245, 246>
+unrollBinaryOperator(Node, Token.COMMA, ",", Context,
+            getContextForNoInOperator(Context), 0, 0);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CodeGenerator <952, 953>
+addExpr(Node, booleanVar ? 1 : 0,
+            getContextForNoInOperator(Context));
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.CodeGenerator <952, 953>
+addExpr(Node, isArrayOrFunctionArgument ? 1 : 0,
+            getContextForNoInOperator(Context));
+

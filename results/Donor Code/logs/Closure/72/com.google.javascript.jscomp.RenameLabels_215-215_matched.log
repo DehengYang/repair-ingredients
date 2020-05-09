@@ -1,0 +1,54 @@
+---patch code ori--- com.google.javascript.jscomp.RenameLabels <215, 231>
+if (li.referenced || !removeUnused) {
+        String newName = getNameForId(li.id);
+        if (!name.equals(newName)) {
+          // ... and it is used, give it the short name.
+          nameNode.setString(newName);
+          compiler.reportCodeChange();
+        }
+      } else {
+        // ... and it is not referenced, just remove it.
+        Node newChild = node.getLastChild();
+        node.removeChild(newChild);
+        parent.replaceChild(node, newChild);
+        if (newChild.getType() == Token.BLOCK) {
+          NodeUtil.tryMergeBlock(newChild);
+        }
+        compiler.reportCodeChange();
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.PeepholeRemoveDeadCode <248, 253>
+if (removeUnused) {
+          parent.removeChild(n);
+        } else {
+          result = new Node(Token.EMPTY).copyInformationFrom(n);
+          parent.replaceChild(n, result);
+        }
+
+---patch code 1--- com.google.javascript.jscomp.RenameLabels <215, 231>
+if (LabelInfo.referenced || !removeUnused) {
+        String newName = getNameForId(LabelInfo.id);
+        if (!name.equals(newName)) {
+          // ... and it is used, give it the short name.
+          Node.setString(newName);
+          compiler.reportCodeChange();
+        }
+      } else {
+        // ... and it is not referenced, just remove it.
+        Node newChild = Node.getLastChild();
+        Node.removeChild(newChild);
+        Node.replaceChild(Node, newChild);
+        if (newChild.getType() == Token.BLOCK) {
+          NodeUtil.tryMergeBlock(newChild);
+        }
+        compiler.reportCodeChange();
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.PeepholeRemoveDeadCode <248, 253>
+if (removeUnused) {
+          Node.removeChild(Node);
+        } else {
+          Node = new Node(Token.EMPTY).copyInformationFrom(Node);
+          Node.replaceChild(Node, Node);
+        }
+

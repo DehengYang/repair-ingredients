@@ -1,0 +1,21 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_43/src/main/java/org/apache/commons/math/stat/descriptive/SummaryStatistics.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_43/src/main/java/org/apache/commons/math/stat/descriptive/SummaryStatistics.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_43/src/main/java/org/apache/commons/math/stat/descriptive/SummaryStatistics.java	2020-01-05 06:35:25.428303100 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_43/src/main/java/org/apache/commons/math/stat/descriptive/SummaryStatistics.java	2020-01-05 06:35:28.964273567 -0800
+@@ -155,13 +155,13 @@
+         secondMoment.increment(value);
+         // If mean, variance or geomean have been overridden,
+         // need to increment these
+-        if (!(meanImpl instanceof Mean)) {
++        if (meanImpl != mean) {
+             meanImpl.increment(value);
+         }
+-        if (!(varianceImpl instanceof Variance)) {
++        if (varianceImpl != variance) {
+             varianceImpl.increment(value);
+         }
+-        if (!(geoMeanImpl instanceof GeometricMean)) {
++        if (geoMeanImpl != geoMean) {
+             geoMeanImpl.increment(value);
+         }
+         n++;

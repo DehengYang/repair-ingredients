@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_59/src/java/org/apache/commons/lang/text/StrBuilder.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_59/src/java/org/apache/commons/lang/text/StrBuilder.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_59/src/java/org/apache/commons/lang/text/StrBuilder.java	2020-01-05 05:31:24.252384995 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_59/src/java/org/apache/commons/lang/text/StrBuilder.java	2020-01-05 05:31:27.688356298 -0800
+@@ -881,7 +881,7 @@
+             String str = (obj == null ? getNullText() : obj.toString());
+             int strLen = str.length();
+             if (strLen >= width) {
+-                str.getChars(0, strLen, buffer, size);
++                str.getChars(0, width, buffer, size);
+             } else {
+                 int padLen = width - strLen;
+                 str.getChars(0, strLen, buffer, size);

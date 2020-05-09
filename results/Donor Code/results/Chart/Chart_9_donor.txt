@@ -1,0 +1,8 @@
+chunk1 : org.jfree.data.time.TimeSeries:944-944
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (24)
+fix ingredient  <0-fine-grained>  varMapType:0 : (91)
+fix ingredient  <1-fine-grained>  varMapType:1 : (53)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (1)
+
+

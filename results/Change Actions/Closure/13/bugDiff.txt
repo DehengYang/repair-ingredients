@@ -1,0 +1,14 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_13/src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_13/src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_13/src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java	2020-01-05 05:15:43.168245026 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_13/src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java	2020-01-05 05:15:43.932238645 -0800
+@@ -123,8 +123,8 @@
+     do {
+       Node c = node.getFirstChild();
+       while(c != null) {
+-        traverse(c);
+         Node next = c.getNext();
++        traverse(c);
+         c = next;
+       }
+ 

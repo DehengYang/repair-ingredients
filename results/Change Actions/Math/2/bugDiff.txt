@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_2/src/main/java/org/apache/commons/math3/distribution/HypergeometricDistribution.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_2/src/main/java/org/apache/commons/math3/distribution/HypergeometricDistribution.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_2/src/main/java/org/apache/commons/math3/distribution/HypergeometricDistribution.java	2020-01-05 06:30:34.646731738 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_2/src/main/java/org/apache/commons/math3/distribution/HypergeometricDistribution.java	2020-01-05 06:30:38.138702572 -0800
+@@ -265,7 +265,7 @@
+      * size {@code n}, the mean is {@code n * m / N}.
+      */
+     public double getNumericalMean() {
+-        return (double) (getSampleSize() * getNumberOfSuccesses()) / (double) getPopulationSize();
++        return getSampleSize() * (getNumberOfSuccesses() / (double) getPopulationSize());
+     }
+ 
+     /**

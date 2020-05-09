@@ -1,0 +1,20 @@
+chunk1 : org.jfree.chart.renderer.category.StatisticalBarRenderer:409-411
+fix ingredient(SamePackage)  varMapType:0 : (17)
+fix ingredient(SamePackage)  varMapType:1 : (17)
+fix ingredient  varMapType:0 : (2)
+fix ingredient  varMapType:1 : (2)
+fix ingredient  <parseContainCheck2>  <parseContainCheck>  varMapType:0 : (2)
+fix ingredient  <parseContainCheck>  varMapType:0 : (2)
+fix ingredient  <parseContainCheck>  varMapType:1 : (2)
+
+
+chunk2 : org.jfree.chart.renderer.category.StatisticalBarRenderer:259-261
+fix ingredient(SamePackage)  varMapType:0 : (17)
+fix ingredient(SamePackage)  varMapType:1 : (17)
+fix ingredient  varMapType:0 : (2)
+fix ingredient  varMapType:1 : (2)
+fix ingredient  <parseContainCheck2>  <parseContainCheck>  varMapType:0 : (2)
+fix ingredient  <parseContainCheck>  varMapType:0 : (2)
+fix ingredient  <parseContainCheck>  varMapType:1 : (2)
+
+

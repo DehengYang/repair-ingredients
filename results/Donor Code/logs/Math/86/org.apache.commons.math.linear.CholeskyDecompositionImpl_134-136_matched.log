@@ -1,0 +1,10 @@
+---patch code 0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <134, 136>
+if (double[]Var[intVar] < doubleVar) {
+                throw new NotPositiveDefiniteMatrixException();
+            }
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <114, 116>
+if (double[][]Var[intVar][intVar] < doubleVar) {
+                throw new NotPositiveDefiniteMatrixException();
+            }
+

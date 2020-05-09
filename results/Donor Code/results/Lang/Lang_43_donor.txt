@@ -1,0 +1,12 @@
+chunk1 : org.apache.commons.lang.text.ExtendedMessageFormat:422-422
+fix ingredient(SameFile)  varMapType:ori : (2)
+fix ingredient(SameFile)  varMapType:0 : (2)
+fix ingredient(SameFile)  varMapType:1 : (2)
+fix ingredient(SameMethod)  varMapType:ori : (2)
+fix ingredient(SameMethod)  varMapType:0 : (2)
+fix ingredient(SameMethod)  varMapType:1 : (2)
+fix ingredient(SameFile)  <parseContainCheck>  varMapType:ori : (3)
+fix ingredient(SameFile)  <parseContainCheck>  varMapType:0 : (3)
+fix ingredient(SameFile)  <parseContainCheck>  varMapType:1 : (3)
+
+

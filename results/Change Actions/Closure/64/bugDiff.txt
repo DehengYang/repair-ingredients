@@ -1,0 +1,36 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_64/src/com/google/javascript/jscomp/Compiler.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_64/src/com/google/javascript/jscomp/Compiler.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_64/src/com/google/javascript/jscomp/Compiler.java	2020-01-05 05:18:38.266782585 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_64/src/com/google/javascript/jscomp/Compiler.java	2020-01-05 05:18:40.090767351 -0800
+@@ -1429,7 +1429,7 @@
+ 
+         // if LanguageMode is ECMASCRIPT5_STRICT, only print 'use strict'
+         // for the first input file
+-        String code = toSource(root, sourceMap);
++        String code = toSource(root, sourceMap, inputSeqNum == 0);
+         if (!code.isEmpty()) {
+           cb.append(code);
+ 
+@@ -1458,19 +1458,19 @@
+   @Override
+   String toSource(Node n) {
+     initCompilerOptionsIfTesting();
+-    return toSource(n, null);
++    return toSource(n, null, true);
+   }
+ 
+   /**
+    * Generates JavaScript source code for an AST.
+    */
+-  private String toSource(Node n, SourceMap sourceMap) {
++  private String toSource(Node n, SourceMap sourceMap, boolean firstOutput) {
+     CodePrinter.Builder builder = new CodePrinter.Builder(n);
+     builder.setPrettyPrint(options.prettyPrint);
+     builder.setLineBreak(options.lineBreak);
+     builder.setSourceMap(sourceMap);
+     builder.setSourceMapDetailLevel(options.sourceMapDetailLevel);
+-    builder.setTagAsStrict(
++    builder.setTagAsStrict(firstOutput &&
+         options.getLanguageOut() == LanguageMode.ECMASCRIPT5_STRICT);
+     builder.setLineLengthThreshold(options.lineLengthThreshold);
+ 

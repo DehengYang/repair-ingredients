@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_18/src/org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_18/src/org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_18/src/org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java	2020-01-05 22:33:36.788550464 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_18/src/org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java	2020-01-05 22:33:40.276550451 -0800
+@@ -84,6 +84,8 @@
+             return Primitives.defaultValueForPrimitiveOrWrapper(type);
+             //new instances are used instead of Collections.emptyList(), etc.
+             //to avoid UnsupportedOperationException if code under test modifies returned collection
++        } else if (type == Iterable.class) {
++            return new ArrayList<Object>(0);
+         } else if (type == Collection.class) {
+             return new LinkedList<Object>();
+         } else if (type == Set.class) {

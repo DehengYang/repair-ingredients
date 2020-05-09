@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_59/src/main/java/org/apache/commons/math/util/FastMath.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_59/src/main/java/org/apache/commons/math/util/FastMath.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_59/src/main/java/org/apache/commons/math/util/FastMath.java	2020-01-05 06:37:03.371485069 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_59/src/main/java/org/apache/commons/math/util/FastMath.java	2020-01-05 06:37:05.883464088 -0800
+@@ -3479,7 +3479,7 @@
+      * @return b if a is lesser or equal to b, a otherwise
+      */
+     public static float max(final float a, final float b) {
+-        return (a <= b) ? b : (Float.isNaN(a + b) ? Float.NaN : b);
++        return (a <= b) ? b : (Float.isNaN(a + b) ? Float.NaN : a);
+     }
+ 
+     /** Compute the maximum of two values

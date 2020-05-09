@@ -1,0 +1,14 @@
+chunk1 : com.google.javascript.jscomp.ScopedAliases:474-474
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (69)
+fix ingredient  <0-fine-grained>  varMapType:0 : (19)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (8)
+
+
+chunk2 : com.google.javascript.jscomp.ScopedAliases:176-176
+fix ingredient(SameFile)  varMapType:ori : (1)
+fix ingredient(SameFile)  varMapType:0 : (1)
+fix ingredient(SameFile)  varMapType:1 : (1)
+
+

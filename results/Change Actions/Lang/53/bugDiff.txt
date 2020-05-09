@@ -1,0 +1,25 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_53/src/java/org/apache/commons/lang/time/DateUtils.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_53/src/java/org/apache/commons/lang/time/DateUtils.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_53/src/java/org/apache/commons/lang/time/DateUtils.java	2020-01-05 05:30:42.788731304 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_53/src/java/org/apache/commons/lang/time/DateUtils.java	2020-01-05 05:30:46.172703040 -0800
+@@ -640,18 +640,18 @@
+         int millisecs = val.get(Calendar.MILLISECOND);
+         if (!round || millisecs < 500) {
+             time = time - millisecs;
++        }
+         if (field == Calendar.SECOND) {
+             done = true;
+-            }
+         }
+ 
+         // truncate seconds
+         int seconds = val.get(Calendar.SECOND);
+         if (!done && (!round || seconds < 30)) {
+             time = time - (seconds * 1000L);
++        }
+         if (field == Calendar.MINUTE) {
+             done = true;
+-            }
+         }
+ 
+         // truncate minutes

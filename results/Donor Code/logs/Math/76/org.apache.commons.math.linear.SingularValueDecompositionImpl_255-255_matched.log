@@ -1,0 +1,1096 @@
+---patch code ori--- org.apache.commons.math.linear.SingularValueDecompositionImpl <255, 270>
+for (int i = 0; i < p; ++i) {
+                    final double mi = mainBidiagonal[i];
+                    final double[] ei0 = ei1;
+                    final double[] wi  = wData[i];
+                    if (i < m - 1) {
+                        ei1 = eData[i + 1];
+                        final double si = secondaryBidiagonal[i];
+                        for (int j = 0; j < p; ++j) {
+                            wi[j] = (mi * ei0[j] + si * ei1[j]) / singularValues[j];
+                        }
+                    } else {
+                        for (int j = 0; j < p; ++j) {
+                            wi[j] = mi * ei0[j] / singularValues[j];
+                        }
+                    }
+                }
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.math.linear.SingularValueDecompositionImpl <159, 191>
+if (m >= n) {
+                // the tridiagonal matrix is Bt.B, where B is upper bidiagonal
+                final RealMatrix e =
+                    eigenDecomposition.getV().getSubMatrix(0, p - 1, 0, p - 1);
+                final double[][] eData = e.getData();
+                final double[][] wData = new double[m][p];
+                double[] ei1 = eData[0];
+                for (int i = 0; i < p - 1; ++i) {
+                    // compute W = B.E.S^(-1) where E is the eigenvectors matrix
+                    final double mi = mainBidiagonal[i];
+                    final double[] ei0 = ei1;
+                    final double[] wi  = wData[i];
+                        ei1 = eData[i + 1];
+                        final double si = secondaryBidiagonal[i];
+                        for (int j = 0; j < p; ++j) {
+                            wi[j] = (mi * ei0[j] + si * ei1[j]) / singularValues[j];
+                        }
+                }
+                        for (int j = 0; j < p; ++j) {
+                            wData[p - 1][j] = ei1[j] * mainBidiagonal[p - 1] / singularValues[j];
+                        }
+
+                for (int i = p; i < m; ++i) {
+                    wData[i] = new double[p];
+                }
+                cachedU =
+                    transformer.getU().multiply(MatrixUtils.createRealMatrix(wData));
+            } else {
+                // the tridiagonal matrix is B.Bt, where B is lower bidiagonal
+                final RealMatrix e =
+                    eigenDecomposition.getV().getSubMatrix(0, m - 1, 0, p - 1);
+                cachedU = transformer.getU().multiply(e);
+            }
+
+---patch code 1--- org.apache.commons.math.linear.SingularValueDecompositionImpl <255, 270>
+for (int i = 0; i < p; ++i) {
+                    final double mi = mainBidiagonal[i];
+                    final double[] ei0 = ei1;
+                    final double[] wi  = wData[i];
+                    if (i < m - 1) {
+                        ei1 = eData[i + 1];
+                        final double si = secondaryBidiagonal[i];
+                        for (int j = 0; j < p; ++j) {
+                            wi[j] = (mi * ei0[j] + si * ei1[j]) / singularValues[j];
+                        }
+                    } else {
+                        for (int j = 0; j < p; ++j) {
+                            wi[j] = mi * ei0[j] / singularValues[j];
+                        }
+                    }
+                }
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:1--- org.apache.commons.math.linear.SingularValueDecompositionImpl <159, 191>
+if (m >= n) {
+                // the tridiagonal matrix is Bt.B, where B is upper bidiagonal
+                final RealMatrix e =
+                    EigenDecomposition.getV().getSubMatrix(0, p - 1, 0, p - 1);
+                final double[][] eData = e.getData();
+                final double[][] wData = new double[m][p];
+                double[] ei1 = eData[0];
+                for (int i = 0; i < p - 1; ++i) {
+                    // compute W = B.E.S^(-1) where E is the eigenvectors matrix
+                    final double mi = mainBidiagonal[i];
+                    final double[] ei0 = ei1;
+                    final double[] wi  = wData[i];
+                        ei1 = eData[i + 1];
+                        final double si = secondaryBidiagonal[i];
+                        for (int j = 0; j < p; ++j) {
+                            wi[j] = (mi * ei0[j] + si * ei1[j]) / singularValues[j];
+                        }
+                }
+                        for (int j = 0; j < p; ++j) {
+                            wData[p - 1][j] = ei1[j] * mainBidiagonal[p - 1] / singularValues[j];
+                        }
+
+                for (int i = p; i < m; ++i) {
+                    wData[i] = new double[p];
+                }
+                RealMatrix =
+                    BiDiagonalTransformer.getU().multiply(MatrixUtils.createRealMatrix(wData));
+            } else {
+                // the tridiagonal matrix is B.Bt, where B is lower bidiagonal
+                final RealMatrix e =
+                    EigenDecomposition.getV().getSubMatrix(0, m - 1, 0, p - 1);
+                RealMatrix = BiDiagonalTransformer.getU().multiply(e);
+            }
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.math.linear.SingularValueDecompositionImpl <239, 270>
+if (m >= n) {
+                // the tridiagonal matrix is Bt.B, where B is upper bidiagonal
+                final RealMatrix e =
+                    eigenDecomposition.getV().getSubMatrix(0, n - 1, 0, p - 1);
+                cachedV = transformer.getV().multiply(e);
+            } else {
+                // the tridiagonal matrix is B.Bt, where B is lower bidiagonal
+                // compute W = Bt.E.S^(-1) where E is the eigenvectors matrix
+                final RealMatrix e =
+                    eigenDecomposition.getV().getSubMatrix(0, p - 1, 0, p - 1);
+                final double[][] eData = e.getData();
+                final double[][] wData = new double[n][p];
+                double[] ei1 = eData[0];
+                for (int i = 0; i < p - 1; ++i) {
+                    final double mi = mainBidiagonal[i];
+                    final double[] ei0 = ei1;
+                    final double[] wi  = wData[i];
+                        ei1 = eData[i + 1];
+                        final double si = secondaryBidiagonal[i];
+                        for (int j = 0; j < p; ++j) {
+                            wi[j] = (mi * ei0[j] + si * ei1[j]) / singularValues[j];
+                        }
+                }
+                        for (int j = 0; j < p; ++j) {
+                            wData[p - 1][j] = ei1[j] * mainBidiagonal[p - 1] / singularValues[j];
+                        }
+                for (int i = p; i < n; ++i) {
+                    wData[i] = new double[p];
+                }
+                cachedV =
+                    transformer.getV().multiply(MatrixUtils.createRealMatrix(wData));
+            }
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:1--- org.apache.commons.math.linear.SingularValueDecompositionImpl <239, 270>
+if (m >= n) {
+                // the tridiagonal matrix is Bt.B, where B is upper bidiagonal
+                final RealMatrix e =
+                    EigenDecomposition.getV().getSubMatrix(0, n - 1, 0, p - 1);
+                RealMatrix = BiDiagonalTransformer.getV().multiply(e);
+            } else {
+                // the tridiagonal matrix is B.Bt, where B is lower bidiagonal
+                // compute W = Bt.E.S^(-1) where E is the eigenvectors matrix
+                final RealMatrix e =
+                    EigenDecomposition.getV().getSubMatrix(0, p - 1, 0, p - 1);
+                final double[][] eData = e.getData();
+                final double[][] wData = new double[n][p];
+                double[] ei1 = eData[0];
+                for (int i = 0; i < p - 1; ++i) {
+                    final double mi = mainBidiagonal[i];
+                    final double[] ei0 = ei1;
+                    final double[] wi  = wData[i];
+                        ei1 = eData[i + 1];
+                        final double si = secondaryBidiagonal[i];
+                        for (int j = 0; j < p; ++j) {
+                            wi[j] = (mi * ei0[j] + si * ei1[j]) / singularValues[j];
+                        }
+                }
+                        for (int j = 0; j < p; ++j) {
+                            wData[p - 1][j] = ei1[j] * mainBidiagonal[p - 1] / singularValues[j];
+                        }
+                for (int i = p; i < n; ++i) {
+                    wData[i] = new double[p];
+                }
+                RealMatrix =
+                    BiDiagonalTransformer.getV().multiply(MatrixUtils.createRealMatrix(wData));
+            }
+
+---patch code 0--- org.apache.commons.math.linear.SingularValueDecompositionImpl <255, 270>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                    final double mi = double[]Var[intVar];
+                    final double[] ei0 = double[]Var;
+                    final double[] wi  = double[][]Var[intVar];
+                    if (intVar < intVar - 1) {
+                        double[]Var = double[][]Var[intVar + 1];
+                        final double si = double[]Var[intVar];
+                        for (int j = 0; j < intVar; ++j) {
+                            wi[j] = (mi * ei0[j] + si * double[]Var[j]) / double[]Var[j];
+                        }
+                    } else {
+                        for (int j = 0; j < intVar; ++j) {
+                            wi[j] = mi * ei0[j] / double[]Var[j];
+                        }
+                    }
+                }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.AbstractFieldMatrix <951, 956>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                if (intVar > 0) {
+                    StringBuffer.append(",");
+                }
+                StringBuffer.append(getEntry(intVar, intVar));
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <1003, 1008>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                if (intVar > 0) {
+                    StringBuffer.append(",");
+                }
+                StringBuffer.append(getEntry(intVar, intVar));
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.direct.DirectSearchOptimizer <152, 161>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            final double[] vertexI = double[][]Var[intVar];
+            for (int j = 0; j < intVar + 1; ++j) {
+                if (double[]Var[j] == 0.0) {
+                    throw MathRuntimeException.createIllegalArgumentException(
+                          StringVar, j, j + 1);
+                }
+                System.arraycopy(double[]Var, 0, vertexI, 0, j + 1);
+            }
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <218, 226>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            for (int j = intVar + 1; j < intVar; ++j) {
+                final double mij = RealMatrix.getEntry(intVar, j);
+                final double mji = RealMatrix.getEntry(j, intVar);
+                if (Math.abs(mij - mji) > (Math.max(Math.abs(mij), Math.abs(mji)) * doubleVar)) {
+                    return false;
+                }
+            }
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <280, 290>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                    int    pj = int[]Var[intVar];
+                    double s  = double[]Var[pj];
+                    if (s != 0) {
+                        double sum = 0;
+                        for (int i = 0; i <= intVar; ++i) {
+                            sum += double[][]Var[i][pj] * double[]Var[i];
+                        }
+                        doubleVar = Math.max(doubleVar, Math.abs(sum) / (s * doubleVar));
+                    }
+                }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.OpenMapRealMatrix <205, 217>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                final int rightKey = AbstractRealMatrix.computeKey(intVar, intVar);
+                if (AbstractRealMatrix.OpenIntToDoubleHashMap.containsKey(rightKey)) {
+                    final int outKey = AbstractRealMatrix.computeKey(intVar, intVar);
+                    final double outValue =
+                        AbstractRealMatrix.OpenIntToDoubleHashMap.get(outKey) + doubleVar * AbstractRealMatrix.OpenIntToDoubleHashMap.get(rightKey);
+                    if (outValue == 0.0) {
+                        AbstractRealMatrix.OpenIntToDoubleHashMap.remove(outKey);
+                    } else {
+                        AbstractRealMatrix.OpenIntToDoubleHashMap.put(outKey, outValue);
+                    }
+                }
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <314, 326>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+          int    pj = int[]Var[intVar];
+          double s  = double[]Var[pj];
+          if (s != 0) {
+            double sum = 0;
+            int index = pj;
+            for (int i = 0; i <= intVar; ++i) {
+              sum += double[]Var[index] * double[]Var[i];
+              index += intVar;
+            }
+            doubleVar = Math.max(doubleVar, Math.abs(sum) / (s * doubleVar));
+          }
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <396, 421>
+throws IllegalArgumentException, InvalidMatrixException {
+empty line
+if (!isNonSingular()) {
+                throw new SingularMatrixException();
+            }
+empty line
+final int intVar = double[]Var.length;
+if (double[]Var.length != intVar) {
+                throw MathRuntimeException.createIllegalArgumentException(
+                        "vector length mismatch: got {0} but expected {1}",
+                        double[]Var.length, intVar);
+            }
+empty line
+final double[] double[]Var = new double[intVar];
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                final ArrayRealVector v = ArrayRealVector[]Var[intVar];
+                final double[] vData = v.getDataRef();
+                final double s = v.dotProduct(double[]Var) / double[]Var[intVar];
+                for (int j = 0; j < intVar; ++j) {
+                    double[]Var[j] += s * vData[j];
+                }
+            }
+empty line
+return double[]Var;
+empty line
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <520, 542>
+throws InvalidMatrixException {
+empty line
+if (!isNonSingular()) {
+                throw new SingularMatrixException();
+            }
+empty line
+final int intVar = double[]Var.length;
+final double[][] double[][]Var = new double[intVar][intVar];
+empty line
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                final double[] invI = double[][]Var[intVar];
+                for (int j = 0; j < intVar; ++j) {
+                    double invIJ = 0;
+                    for (int k = 0; k < intVar; ++k) {
+                        final double[] vK = ArrayRealVector[]Var[k].getDataRef();
+                        invIJ += vK[intVar] * vK[j] / double[]Var[k];
+                    }
+                    invI[j] = invIJ;
+                }
+            }
+return MatrixUtils.createRealMatrix(double[][]Var);
+empty line
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <432, 457>
+throws IllegalArgumentException, InvalidMatrixException {
+empty line
+if (!isNonSingular()) {
+                throw new SingularMatrixException();
+            }
+empty line
+final int intVar = double[]Var.length;
+if (RealVector.getDimension() != intVar) {
+                throw MathRuntimeException.createIllegalArgumentException(
+                        "vector length mismatch: got {0} but expected {1}",
+                        RealVector.getDimension(), intVar);
+            }
+empty line
+final double[] double[]Var = new double[intVar];
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                final ArrayRealVector v = ArrayRealVector[]Var[intVar];
+                final double[] vData = v.getDataRef();
+                final double s = v.dotProduct(RealVector) / double[]Var[intVar];
+                for (int j = 0; j < intVar; ++j) {
+                    double[]Var[j] += s * vData[j];
+                }
+            }
+empty line
+return new ArrayRealVector(double[]Var, false);
+empty line
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.estimation.AbstractEstimator <213, 243>
+throws EstimationException {
+empty line
+// set up the jacobian
+updateJacobian();
+empty line
+// compute transpose(J).J, avoiding building big intermediate matrices
+final int intVar = EstimationProblem.getMeasurements().length;
+final int intVar = EstimationProblem.getUnboundParameters().length;
+final int intVar  = intVar * intVar;
+double[][] double[][]Var = new double[intVar][intVar];
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            for (int j = intVar; j < intVar; ++j) {
+                double sum = 0;
+                for (int k = 0; k < intVar; k += intVar) {
+                    sum += double[]Var[k + intVar] * double[]Var[k + j];
+                }
+                double[][]Var[intVar][j] = sum;
+                double[][]Var[j][intVar] = sum;
+            }
+        }
+empty line
+try {
+            // compute the covariances matrix
+            RealMatrix inverse =
+                new LUDecompositionImpl(MatrixUtils.createRealMatrix(double[][]Var)).getSolver().getInverse();
+            return inverse.getData();
+        } catch (InvalidMatrixException ime) {
+            throw new EstimationException("unable to compute covariances: singular problem");
+        }
+empty line
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <498, 515>
+if (intVar == intVar) {
+            for (int intVar = 0; intVar < intVar; ++intVar) {
+                int pj = int[]Var[intVar];
+                double[]Var[pj] *= double[]Var[pj] / doubleVar;
+            }
+            doubleVar = 0;
+            for (int intVar = 0; intVar < intVar; ++intVar) {
+                int pj = int[]Var[intVar];
+                double sum = 0;
+                for (int i = 0; i < intVar; ++i) {
+                    sum += double[][]Var[i][pj] * double[]Var[int[]Var[i]];
+                }
+                double s = (double[]Var[pj] - sum) / double[]Var[pj];
+                double[]Var[pj] = s;
+                doubleVar += s * s;
+            }
+            doubleVar = doubleVar / (doubleVar * doubleVar);
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <537, 556>
+if (intVar == intVar) {
+      for (int intVar = 0; intVar < intVar; ++intVar) {
+        int pj = int[]Var[intVar];
+        double[]Var[pj] *= double[]Var[pj] / doubleVar;
+      }
+      doubleVar = 0;
+      for (int intVar = 0; intVar < intVar; ++intVar) {
+        int pj = int[]Var[intVar];
+        double sum = 0;
+        int index = pj;
+        for (int i = 0; i < intVar; ++i) {
+          sum += double[]Var[index] * double[]Var[int[]Var[i]];
+          index += intVar;
+        }
+        double s = (double[]Var[pj] - sum) / double[]Var[pj];
+        double[]Var[pj] = s;
+        doubleVar += s * s;
+      }
+      doubleVar = doubleVar / (doubleVar * doubleVar);
+    }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <468, 500>
+throws IllegalArgumentException, InvalidMatrixException {
+empty line
+if (!isNonSingular()) {
+                throw new SingularMatrixException();
+            }
+empty line
+final int intVar = double[]Var.length;
+if (RealMatrix.getRowDimension() != intVar) {
+                throw MathRuntimeException.createIllegalArgumentException(
+                        "dimensions mismatch: got {0}x{1} but expected {2}x{3}",
+                        RealMatrix.getRowDimension(), RealMatrix.getColumnDimension(), intVar, "n");
+            }
+empty line
+final int intVar = RealMatrix.getColumnDimension();
+final double[][] double[][]Var = new double[intVar][intVar];
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                for (int i = 0; i < intVar; ++i) {
+                    final ArrayRealVector v = ArrayRealVector[]Var[i];
+                    final double[] vData = v.getDataRef();
+                    double s = 0;
+                    for (int j = 0; j < intVar; ++j) {
+                        s += v.getEntry(j) * RealMatrix.getEntry(j, intVar);
+                    }
+                    s /= double[]Var[i];
+                    for (int j = 0; j < intVar; ++j) {
+                        double[][]Var[j][intVar] += s * vData[j];
+                    }
+                }
+            }
+empty line
+return MatrixUtils.createRealMatrix(double[][]Var);
+empty line
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <704, 711>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            if ((double[]Var[intVar] == 0) && (intVar == intVar)) {
+                intVar = intVar;
+            }
+            if (intVar < intVar) {
+                double[]Var[intVar] = 0;
+            }
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <748, 755>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+      if ((double[]Var[intVar] == 0) && (intVar == intVar)) {
+        intVar = intVar;
+      }
+      if (intVar < intVar) {
+        double[]Var[intVar] = 0;
+      }
+    }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.direct.NelderMead <134, 149>
+if (Comparator.compare(RealPointValuePair, RealPointValuePair) < 0) {
+
+                // perform an outside contraction
+                final double[] xC = new double[intVar];
+                for (int intVar = 0; intVar < intVar; ++intVar) {
+                    xC[intVar] = double[]Var[intVar] + doubleVar * (double[]Var[intVar] - double[]Var[intVar]);
+                }
+                final RealPointValuePair outContracted = new RealPointValuePair(xC, evaluate(xC), false);
+
+                if (Comparator.compare(outContracted, RealPointValuePair) <= 0) {
+                    // accept the contraction point
+                    replaceWorstPoint(outContracted, Comparator);
+                    return;
+                }
+
+            } else {
+
+                // perform an inside contraction
+                final double[] xC = new double[intVar];
+                for (int intVar = 0; intVar < intVar; ++intVar) {
+                    xC[intVar] = double[]Var[intVar] - doubleVar * (double[]Var[intVar] - double[]Var[intVar]);
+                }
+                final RealPointValuePair inContracted = new RealPointValuePair(xC, evaluate(xC), false);
+
+                if (Comparator.compare(inContracted, RealPointValuePair) < 0) {
+                    // accept the contraction point
+                    replaceWorstPoint(inContracted, Comparator);
+                    return;
+                }
+
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator <326, 347>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+
+        final double p0 = double[][]Var[0][intVar];
+        final double p1 = double[][]Var[1][intVar];
+        final double p2 = double[][]Var[2][intVar];
+        final double p3 = double[][]Var[3][intVar];
+        double[]Var[intVar] = p0 + doubleVar * (p1 + doubleVar * (p2 * doubleVar + p3 * doubleVar));
+        double[]Var[intVar] = doubleVar * p1 + doubleVar * p2 + doubleVar * p3;
+
+        if (intVar > 3) {
+            double cDot = 0;
+            double c = double[][]Var[intVar][intVar];
+            for (int j = intVar - 1; j > 3; --j) {
+                final double d = 1.0 / (j - 3);
+                cDot = d * (doubleVar * cDot + c);
+                c = double[][]Var[j][intVar] + c * d * doubleVar;
+            }
+            double[]Var[intVar]       += doubleVar * c;
+            double[]Var[intVar] += (doubleVar * cDot + doubleVar * c) / doubleVar;
+        }
+
+    }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.direct.NelderMead <115, 132>
+if (Comparator.compare(RealPointValuePair, RealPointValuePair) < 0) {
+
+            // compute the expansion point
+            final double[] xE = new double[intVar];
+            for (int intVar = 0; intVar < intVar; ++intVar) {
+                xE[intVar] = double[]Var[intVar] + doubleVar * (double[]Var[intVar] - double[]Var[intVar]);
+            }
+            final RealPointValuePair expanded = new RealPointValuePair(xE, evaluate(xE), false);
+
+            if (Comparator.compare(expanded, RealPointValuePair) < 0) {
+                // accept the expansion point
+                replaceWorstPoint(expanded, Comparator);
+            } else {
+                // accept the reflected point
+                replaceWorstPoint(RealPointValuePair, Comparator);
+            }
+
+        } else {
+
+            if (Comparator.compare(RealPointValuePair, RealPointValuePair) < 0) {
+
+                // perform an outside contraction
+                final double[] xC = new double[intVar];
+                for (int intVar = 0; intVar < intVar; ++intVar) {
+                    xC[intVar] = double[]Var[intVar] + doubleVar * (double[]Var[intVar] - double[]Var[intVar]);
+                }
+                final RealPointValuePair outContracted = new RealPointValuePair(xC, evaluate(xC), false);
+
+                if (Comparator.compare(outContracted, RealPointValuePair) <= 0) {
+                    // accept the contraction point
+                    replaceWorstPoint(outContracted, Comparator);
+                    return;
+                }
+
+            } else {
+
+                // perform an inside contraction
+                final double[] xC = new double[intVar];
+                for (int intVar = 0; intVar < intVar; ++intVar) {
+                    xC[intVar] = double[]Var[intVar] - doubleVar * (double[]Var[intVar] - double[]Var[intVar]);
+                }
+                final RealPointValuePair inContracted = new RealPointValuePair(xC, evaluate(xC), false);
+
+                if (Comparator.compare(inContracted, RealPointValuePair) < 0) {
+                    // accept the contraction point
+                    replaceWorstPoint(inContracted, Comparator);
+                    return;
+                }
+
+            }
+
+            // perform a shrink
+            final double[] xSmallest = RealPointValuePair[]Var[0].getPointRef();
+            for (int intVar = 1; intVar < RealPointValuePair[]Var.length; ++intVar) {
+                final double[] x = RealPointValuePair[]Var[intVar].getPoint();
+                for (int intVar = 0; intVar < intVar; ++intVar) {
+                    x[intVar] = xSmallest[intVar] + doubleVar * (x[intVar] - xSmallest[intVar]);
+                }
+                RealPointValuePair[]Var[intVar] = new RealPointValuePair(x, Double.NaN, false);
+            }
+            evaluateSimplex(Comparator);
+
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <419, 438>
+if (doubleVar >= 1.0e-4) {
+          // successful iteration, update the norm
+          booleanVar = false;
+          doubleVar = 0;
+          for (int intVar = 0; intVar < intVar; ++intVar) {
+            double xK = double[]Var[intVar] * EstimatedParameter[]Var[intVar].getEstimate();
+            doubleVar    += xK * xK;
+          }
+          doubleVar = Math.sqrt(doubleVar);
+        } else {
+          // failed iteration, reset the previous values
+          doubleVar = doubleVar;
+          for (int intVar = 0; intVar < intVar; ++intVar) {
+            int pj = int[]Var[intVar];
+            EstimatedParameter[]Var[pj].setEstimate(double[]Var[pj]);
+          }
+          double[]Var    = double[]Var;
+          double[]Var = double[]Var;
+          double[]Var    = double[]Var;
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <382, 401>
+if (doubleVar >= 1.0e-4) {
+                    // successful iteration, update the norm
+                    booleanVar = false;
+                    doubleVar = 0;
+                    for (int intVar = 0; intVar < intVar; ++intVar) {
+                        double xK = double[]Var[intVar] * double[]Var[intVar];
+                        doubleVar    += xK * xK;
+                    }
+                    doubleVar = Math.sqrt(doubleVar);
+                } else {
+                    // failed iteration, reset the previous values
+                    doubleVar = doubleVar;
+                    for (int intVar = 0; intVar < intVar; ++intVar) {
+                        int pj = int[]Var[intVar];
+                        double[]Var[pj] = double[]Var[pj];
+                    }
+                    double[]Var    = double[]Var;
+                    double[]Var = double[]Var;
+                    double[]Var    = double[]Var;
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <171, 175>
+if (null == GoalType.MINIMIZE) {
+                    for (int intVar = 0; intVar < intVar; ++intVar) {
+                        double[]Var[intVar] = -double[]Var[intVar];
+                    }
+                }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <333, 338>
+final int intVar = double[]Var.length;
+final RealMatrix RealMatrix = createRealMatrix(1, intVar);
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            RealMatrix.setEntry(0, intVar, double[]Var[intVar]);
+        }
+return RealMatrix;
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <432, 437>
+final int intVar = double[]Var.length;
+final RealMatrix RealMatrix = createRealMatrix(intVar, 1);
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            RealMatrix.setEntry(intVar, 0, double[]Var[intVar]);
+        }
+return RealMatrix;
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <1780, 1787>
+for (int intVar = 0; intVar < intVar - 1; ++intVar) {
+            final double absG = Math.abs(double[]Var[intVar] + double[]Var[intVar] * double[]Var[intVar + 9] / double[]Var[intVar + 10]);
+            if (absG < doubleVar) {
+                intVar = intVar;
+                doubleVar = absG;
+            }
+            intVar += 6;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <142, 146>
+final RealMatrix RealMatrix = createRealMatrix(intVar, intVar);
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            RealMatrix.setEntry(intVar, intVar, 1.0);
+        }
+return RealMatrix;
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <129, 149>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+
+            final double[] ltI = double[][]Var[intVar];
+
+            // check diagonal element
+            if (ltI[intVar] < doubleVar) {
+                throw new NotPositiveDefiniteMatrixException();
+            }
+
+            ltI[intVar] = Math.sqrt(ltI[intVar]);
+            final double inverse = 1.0 / ltI[intVar];
+
+            for (int q = intVar - 1; q > intVar; --q) {
+                ltI[q] *= inverse;
+                final double[] ltQ = double[][]Var[q];
+                for (int p = q; p < intVar; ++p) {
+                    ltQ[p] -= ltI[q] * ltI[p];
+                }
+            }
+
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <992, 998>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                if (intVar >= double[]Var.length) {
+                    double[]Var = AbstractRealMatrix.doubleVar[++intVar];
+                    intVar = 0;
+                }
+                double[]Var[intVar++] = double[]Var[intVar * intVar + intVar];
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <1050, 1056>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                if (intVar >= double[]Var.length) {
+                    double[]Var = AbstractRealMatrix.doubleVar[++intVar];
+                    intVar = 0;
+                }
+                double[]Var[intVar * intVar + intVar] = double[]Var[intVar++];
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.BlockFieldMatrix <966, 972>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                if (intVar >= T[]Var.length) {
+                    T[]Var = AbstractFieldMatrix<T>.TVar[++intVar];
+                    intVar = 0;
+                }
+                T[]Var[intVar++] = T[]Var[intVar * intVar + intVar];
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.BlockFieldMatrix <1024, 1030>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                if (intVar >= T[]Var.length) {
+                    T[]Var = AbstractFieldMatrix<T>.TVar[++intVar];
+                    intVar = 0;
+                }
+                T[]Var[intVar * intVar + intVar] = T[]Var[intVar++];
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <198, 206>
+if ((getIterations() % intVar == 0) || (doubleVar < 0)) {
+                    // break conjugation: reset search direction
+                    double[]Var = double[]Var.clone();
+                } else {
+                    // compute new conjugate search direction
+                    for (int intVar = 0; intVar < intVar; ++intVar) {
+                        double[]Var[intVar] = double[]Var[intVar] + doubleVar * double[]Var[intVar];
+                    }
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.direct.DirectSearchOptimizer <416, 422>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            if (Comparator.compare(RealPointValuePair[]Var[intVar], RealPointValuePair) > 0) {
+                RealPointValuePair tmp = RealPointValuePair[]Var[intVar];
+                RealPointValuePair[]Var[intVar]         = RealPointValuePair;
+                RealPointValuePair     = tmp;
+            }
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <151, 159>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                RealMatrix.setEntry(intVar, intVar, double[]Var[intVar]);
+                if (intVar > 0) {
+                    RealMatrix.setEntry(intVar, intVar - 1, double[]Var[intVar - 1]);
+                }
+                if (intVar < double[]Var.length - 1) {
+                    RealMatrix.setEntry(intVar, intVar + 1, double[]Var[intVar]);
+                }
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <262, 269>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            if (Double.isNaN(double[]Var[intVar])) {
+                double[]Var[intVar] = double[]Var[--intVar];
+                double[]Var[intVar + 1] = Double.NaN;
+                double[]Var[intVar] = double[]Var[--intVar];
+                double[]Var[intVar + 1] = Double.NaN;
+            }
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.analysis.interpolation.LoessInterpolator <335, 343>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                final double arg = double[]Var[intVar] / (6 * doubleVar);
+                if (arg >= 1) {
+                    double[]Var[intVar] = 0;
+                } else {
+                    final double w = 1 - arg * arg;
+                    double[]Var[intVar] = w * w;
+                }
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <353, 361>
+final int intVar = T[]Var.length;
+if (intVar == 0) {
+            throw MathRuntimeException.createIllegalArgumentException("matrix must have at least one column");
+        }
+final FieldMatrix<T> FieldMatrix = createFieldMatrix(T[]Var[0].getField(), 1, intVar);
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            FieldMatrix.setEntry(0, intVar, T[]Var[intVar]);
+        }
+return FieldMatrix;
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <452, 460>
+final int intVar = T[]Var.length;
+if (intVar == 0) {
+            throw MathRuntimeException.createIllegalArgumentException("matrix must have at least one row");
+        }
+final FieldMatrix<T> FieldMatrix = createFieldMatrix(T[]Var[0].getField(), intVar, 1);
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            FieldMatrix.setEntry(intVar, 0, T[]Var[intVar]);
+        }
+return FieldMatrix;
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.FieldLUDecompositionImpl <422, 428>
+final int intVar = int[]Var.length;
+final T TVar = Field.getOne();
+FieldMatrix<T> FieldMatrix = new Array2DRowFieldMatrix<T>(Field, intVar, intVar);
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                FieldMatrix.setEntry(intVar, intVar, TVar);
+            }
+return solve(FieldMatrix);
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <1848, 1862>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                final double di   = double[]Var[intVar];
+                final double li   = double[]Var[intVar];
+                final double ldi  = li * di;
+                double diP1 = di + doubleVar;
+                if (Math.abs(diP1) < doubleVar) {
+                    diP1 = -doubleVar;
+                }
+                final double liP1 = ldi / diP1;
+                double[]Var[intVar]        = doubleVar;
+                double[]Var[intVar + 1]    = diP1;
+                double[]Var[intVar + 2]    = liP1;
+                doubleVar = li * ((liP1 == 0) ? li * di : liP1 * doubleVar) - doubleVar;
+                intVar += 6;
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.util.OpenIntToDoubleHashMap <454, 462>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            if (byte[]Var[intVar] == byteVar) {
+                final int key = int[]Var[intVar];
+                final int index = findInsertionIndex(int[]Var, byte[]Var, key, intVar);
+                int[]Var[index]   = key;
+                double[]Var[index] = double[]Var[intVar];
+                byte[]Var[index] = byteVar;
+            }
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.util.OpenIntToFieldHashMap <466, 474>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            if (byte[]Var[intVar] == byteVar) {
+                final int key = int[]Var[intVar];
+                final int index = findInsertionIndex(int[]Var, byte[]Var, key, intVar);
+                int[]Var[index]   = key;
+                T[]Var[index] = T[]Var[intVar];
+                byte[]Var[index] = byteVar;
+            }
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <1210, 1226>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+
+            final double range = doubleVar - doubleVar;
+            if ((range < doubleVar) ||
+                (range < doubleVar * Math.max(Math.abs(doubleVar), Math.abs(doubleVar)))) {
+                // search has converged
+                break;
+            }
+
+            final double middle = 0.5 * (doubleVar + doubleVar);
+            if (countEigenValues(middle, intVar, intVar) >= 1) {
+                doubleVar = middle;
+            } else {
+                doubleVar = middle;
+            }
+
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <1232, 1248>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+
+            final double range = doubleVar - doubleVar;
+            if ((range < doubleVar) ||
+                (range < doubleVar * Math.max(Math.abs(doubleVar), Math.abs(doubleVar)))) {
+                // search has converged
+                break;
+            }
+
+            final double middle = 0.5 * (doubleVar + doubleVar);
+            if (countEigenValues(middle, intVar, intVar) >= intVar) {
+                doubleVar = middle;
+            } else {
+                doubleVar = middle;
+            }
+
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.analysis.polynomials.PolynomialFunction <146, 160>
+final int intVar  = Math.min(doubleVar.length, PolynomialFunction.doubleVar.length);
+final int intVar = Math.max(doubleVar.length, PolynomialFunction.doubleVar.length);
+empty line
+// build the coefficients array
+double[] double[]Var = new double[intVar];
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            double[]Var[intVar] = doubleVar[intVar] + PolynomialFunction.doubleVar[intVar];
+        }
+System.arraycopy((doubleVar.length < PolynomialFunction.doubleVar.length) ?
+                         PolynomialFunction.doubleVar : doubleVar,
+                         intVar,
+                         double[]Var, intVar,
+                         intVar - intVar);
+empty line
+return new PolynomialFunction(double[]Var);
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.analysis.integration.LegendreGaussIntegrator <175, 197>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+
+            // improve integral with a larger number of steps
+            final double t = stage(UnivariateRealFunction, doubleVar, doubleVar, intVar);
+
+            // estimate error
+            final double delta = Math.abs(t - doubleVar);
+            final double limit =
+                Math.max(doubleVar,
+                         doubleVar * (Math.abs(doubleVar) + Math.abs(t)) * 0.5);
+
+            // check convergence
+            if ((intVar + 1 >= intVar) && (delta <= limit)) {
+                setResult(t, intVar);
+                return doubleVar;
+            }
+
+            // prepare next iteration
+            double ratio = Math.min(4, Math.pow(delta / limit, 0.5 / double[]Var.length));
+            intVar = Math.max((int) (ratio * intVar), intVar + 1);
+            doubleVar = t;
+
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <148, 169>
+throws IllegalArgumentException {
+empty line
+// safety check
+MatrixUtils.checkMultiplicationCompatible(this, RealMatrix);
+empty line
+final int intVar = getRowDimension();
+final int intVar = RealMatrix.getColumnDimension();
+final int intVar  = getColumnDimension();
+final RealMatrix RealMatrix = createMatrix(intVar, intVar);
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            for (int col = 0; col < intVar; ++col) {
+                double sum = 0;
+                for (int i = 0; i < intVar; ++i) {
+                    sum += getEntry(intVar, i) * RealMatrix.getEntry(i, col);
+                }
+                RealMatrix.setEntry(intVar, col, sum);
+            }
+        }
+empty line
+return RealMatrix;
+empty line
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <236, 258>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+
+            try {
+                UnivariateRealOptimizer.setMaximalIterationCount(intVar - intVar);
+                UnivariateRealOptimizer.setMaxEvaluations(intVar - intVar);
+                final double bound1 = (intVar == 0) ? doubleVar : doubleVar + RandomGenerator.nextDouble() * (doubleVar - doubleVar);
+                final double bound2 = (intVar == 0) ? doubleVar : doubleVar + RandomGenerator.nextDouble() * (doubleVar - doubleVar);
+                double[]Var[intVar]       = UnivariateRealOptimizer.optimize(UnivariateRealFunction, null,
+                                                     Math.min(bound1, bound2),
+                                                     Math.max(bound1, bound2));
+                double[]Var[intVar] = UnivariateRealOptimizer.getFunctionValue();
+            } catch (FunctionEvaluationException fee) {
+                optima[i]       = Double.NaN;
+                optimaValues[i] = Double.NaN;
+            } catch (ConvergenceException ce) {
+                optima[i]       = Double.NaN;
+                optimaValues[i] = Double.NaN;
+            }
+
+            intVar  += UnivariateRealOptimizer.getIterationCount();
+            intVar += UnivariateRealOptimizer.getEvaluations();
+
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.AbstractFieldMatrix <241, 262>
+throws IllegalArgumentException {
+empty line
+// safety check
+checkMultiplicationCompatible(FieldMatrix);
+empty line
+final int intVar = getRowDimension();
+final int intVar = FieldMatrix.getColumnDimension();
+final int intVar  = getColumnDimension();
+final FieldMatrix<T> FieldMatrix = createMatrix(intVar, intVar);
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            for (int col = 0; col < intVar; ++col) {
+                T sum = Field.getZero();
+                for (int i = 0; i < intVar; ++i) {
+                    sum = sum.add(getEntry(intVar, i).multiply(FieldMatrix.getEntry(i, col)));
+                }
+                FieldMatrix.setEntry(intVar, col, sum);
+            }
+        }
+empty line
+return FieldMatrix;
+empty line
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <261, 269>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                    double dk = double[]Var[intVar];
+                    if (dk == 0) {
+                        dk = 1.0;
+                    }
+                    double xk = dk * double[]Var[intVar];
+                    doubleVar  += xk * xk;
+                    double[]Var[intVar] = dk;
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <295, 303>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+          double dk = double[]Var[intVar];
+          if (dk == 0) {
+            dk = 1.0;
+          }
+          double xk = dk * EstimatedParameter[]Var[intVar].getEstimate();
+          doubleVar  += xk * xk;
+          double[]Var[intVar] = dk;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <80, 91>
+MatrixUtils.checkAdditionCompatible(this, RealMatrix);
+empty line
+final int intVar    = getRowDimension();
+final int intVar = getColumnDimension();
+final RealMatrix RealMatrix = createMatrix(intVar, intVar);
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            for (int col = 0; col < intVar; ++col) {
+                RealMatrix.setEntry(intVar, col, getEntry(intVar, col) + RealMatrix.getEntry(intVar, col));
+            }
+        }
+empty line
+return RealMatrix;
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <99, 110>
+MatrixUtils.checkSubtractionCompatible(this, RealMatrix);
+empty line
+final int intVar    = getRowDimension();
+final int intVar = getColumnDimension();
+final RealMatrix RealMatrix = createMatrix(intVar, intVar);
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            for (int col = 0; col < intVar; ++col) {
+                RealMatrix.setEntry(intVar, col, getEntry(intVar, col) - RealMatrix.getEntry(intVar, col));
+            }
+        }
+empty line
+return RealMatrix;
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.AbstractFieldMatrix <173, 184>
+checkAdditionCompatible(FieldMatrix);
+empty line
+final int intVar    = getRowDimension();
+final int intVar = getColumnDimension();
+final FieldMatrix<T> FieldMatrix = createMatrix(intVar, intVar);
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            for (int col = 0; col < intVar; ++col) {
+                FieldMatrix.setEntry(intVar, col, getEntry(intVar, col).add(FieldMatrix.getEntry(intVar, col)));
+            }
+        }
+empty line
+return FieldMatrix;
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.linear.AbstractFieldMatrix <192, 203>
+checkSubtractionCompatible(FieldMatrix);
+empty line
+final int intVar    = getRowDimension();
+final int intVar = getColumnDimension();
+final FieldMatrix<T> FieldMatrix = createMatrix(intVar, intVar);
+for (int intVar = 0; intVar < intVar; ++intVar) {
+            for (int col = 0; col < intVar; ++col) {
+                FieldMatrix.setEntry(intVar, col, getEntry(intVar, col).subtract(FieldMatrix.getEntry(intVar, col)));
+            }
+        }
+empty line
+return FieldMatrix;
+

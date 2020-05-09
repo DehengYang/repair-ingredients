@@ -1,0 +1,10 @@
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, Assignment, OP1, OP3)
+OP3:      (UPD, InfixExpression, OP2, OP4 OP8)
+OP4:         (DEL, ParenthesizedExpression, OP3, OP5)
+OP5:            (DEL, InfixExpression, OP4, OP6 OP7)
+OP6:               (DEL, NumberLiteral, OP5, null)
+OP7:               (DEL, Operator, OP5, null)
+OP8:         (MOV, MethodInvocation, OP3, null)
+
+

@@ -1,0 +1,67 @@
+---patch code ori--- org.apache.commons.lang3.time.FastDateFormat <495, 499>
+if (tokenLen == 2) {
+                    rule = TwoDigitYearField.INSTANCE;
+                } else {
+                    rule = selectNumberRule(Calendar.YEAR, tokenLen < 4 ? 4 : tokenLen);
+                }
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:ori--- org.apache.commons.lang3.time.FastDateFormat <504, 510>
+if (tokenLen == 3) {
+                    rule = new TextField(Calendar.MONTH, shortMonths);
+                } else if (tokenLen == 2) {
+                    rule = TwoDigitMonthField.INSTANCE;
+                } else {
+                    rule = UnpaddedMonthField.INSTANCE;
+                }
+
+---patch code 0--- org.apache.commons.lang3.time.FastDateFormat <495, 499>
+if (intVar == 2) {
+                    Rule = TwoDigitYearField.INSTANCE;
+                } else {
+                    Rule = selectNumberRule(Calendar.YEAR, intVar < 4 ? 4 : intVar);
+                }
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.time.FastDateFormat <504, 510>
+if (intVar == 3) {
+                    Rule = new TextField(Calendar.MONTH, String[]Var);
+                } else if (intVar == 2) {
+                    Rule = TwoDigitMonthField.INSTANCE;
+                } else {
+                    Rule = UnpaddedMonthField.INSTANCE;
+                }
+
+---patch code 1--- org.apache.commons.lang3.time.FastDateFormat <495, 499>
+if (tokenLen == 2) {
+                    Rule = TwoDigitYearField.INSTANCE;
+                } else {
+                    Rule = selectNumberRule(Calendar.YEAR, tokenLen < 4 ? 4 : tokenLen);
+                }
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang3.time.FastDateFormat <504, 510>
+if (tokenLen == 3) {
+                    Rule = new TextField(Calendar.MONTH, shortMonths);
+                } else if (tokenLen == 2) {
+                    Rule = TwoDigitMonthField.INSTANCE;
+                } else {
+                    Rule = UnpaddedMonthField.INSTANCE;
+                }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang3.CharSet <182, 198>
+if (intVar >= 4 && StringVar.charAt(intVar) == '^' && StringVar.charAt(intVar + 2) == '-') {
+                // negated range
+                Set.add(CharRange.isNotIn(StringVar.charAt(intVar + 1), StringVar.charAt(intVar + 3)));
+                intVar += 4;
+            } else if (intVar >= 3 && StringVar.charAt(intVar + 1) == '-') {
+                // range
+                Set.add(CharRange.isIn(StringVar.charAt(intVar), StringVar.charAt(intVar + 2)));
+                intVar += 3;
+            } else if (intVar >= 2 && StringVar.charAt(intVar) == '^') {
+                // negated char
+                Set.add(CharRange.isNot(StringVar.charAt(intVar + 1)));
+                intVar += 2;
+            } else {
+                // char
+                Set.add(CharRange.is(StringVar.charAt(intVar)));
+                intVar += 1;
+            }
+

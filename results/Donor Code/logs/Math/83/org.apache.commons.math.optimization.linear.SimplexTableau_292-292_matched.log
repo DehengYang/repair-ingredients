@@ -1,0 +1,6 @@
+---patch code 0--- org.apache.commons.math.optimization.linear.SimplexTableau <292, 292>
+int intVar = booleanVar ? getNumObjectiveFunctions() : 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <643, 643>
+final double doubleVar        = booleanVar ? double[]Var[0] : double[]Var[1];
+

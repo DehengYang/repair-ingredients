@@ -1,0 +1,15 @@
+---patch code 0--- org.jfree.data.general.DatasetUtilities <1249, 1249>
+double doubleVar = IntervalXYDataset.getYValue(intVar, intVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.xy.XYErrorRenderer <322, 322>
+double doubleVar = IntervalXYDataset.getYValue(intVar, intVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.xy.StackedXYBarRenderer <257, 257>
+double doubleVar = IntervalXYDataset.getYValue(intVar, intVar);
+
+---patch code 1--- org.jfree.data.general.DatasetUtilities <1249, 1249>
+double value = IntervalXYDataset.getYValue(series, item);
+
+---fix ingredient  varMapType:1--- org.jfree.chart.renderer.xy.StackedXYBarRenderer <257, 257>
+double value = IntervalXYDataset.getYValue(series, item);
+

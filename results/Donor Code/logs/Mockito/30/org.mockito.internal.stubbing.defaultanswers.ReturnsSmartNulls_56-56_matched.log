@@ -1,0 +1,45 @@
+---patch code 0--- org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNulls <56, 56>
+new Reporter().smartNullPointerException(Object, Location);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.mockito.internal.util.MockCreationValidator <40, 40>
+new Reporter().mockedTypeIsInconsistentWithSpiedInstanceType(Class, Object);
+
+---patch code 1--- org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNulls <56, 56>
+new Reporter().smartNullPointerException(Object, Location);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.mockito.internal.util.MockCreationValidator <40, 40>
+new Reporter().mockedTypeIsInconsistentWithSpiedInstanceType(Class, Object);
+
+---patch code ori--- org.mockito.internal.stubbing.defaultanswers.ReturnsSmartNulls <56, 56>
+new Reporter().smartNullPointerException(obj, location);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.mockito.internal.invocation.SerializableMethod <80, 81>
+if (getClass() != obj.getClass())
+            return false;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.mockito.internal.invocation.SerializableMethod <80, 81>
+if (getClass() != Object.getClass())
+            return false;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.mockito.internal.invocation.SerializableMethod <80, 81>
+if (getClass() != Object.getClass())
+            return false;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.mockito.internal.creation.DelegatingMethod <51, 51>
+return method.equals(obj);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.mockito.internal.creation.DelegatingMethod <51, 51>
+return Method.equals(Object);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.mockito.internal.creation.DelegatingMethod <51, 51>
+return Method.equals(Object);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.mockito.internal.invocation.SerializableMethod <82, 82>
+SerializableMethod other = (SerializableMethod) obj;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.mockito.internal.invocation.SerializableMethod <82, 82>
+SerializableMethod SerializableMethod = (SerializableMethod) Object;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.mockito.internal.invocation.SerializableMethod <82, 82>
+SerializableMethod SerializableMethod = (SerializableMethod) Object;
+

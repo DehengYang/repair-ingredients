@@ -1,0 +1,14 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_9/src/main/java/org/apache/commons/math3/geometry/euclidean/threed/Line.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_9/src/main/java/org/apache/commons/math3/geometry/euclidean/threed/Line.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_9/src/main/java/org/apache/commons/math3/geometry/euclidean/threed/Line.java	2020-01-05 06:31:24.190317944 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_9/src/main/java/org/apache/commons/math3/geometry/euclidean/threed/Line.java	2020-01-05 06:31:27.714288512 -0800
+@@ -84,7 +84,8 @@
+      * @return a new instance, with reversed direction
+      */
+     public Line revert() {
+-        final Line reverted = new Line(zero, zero.subtract(direction));
++        final Line reverted = new Line(this);
++        reverted.direction = reverted.direction.negate();
+         return reverted;
+     }
+ 

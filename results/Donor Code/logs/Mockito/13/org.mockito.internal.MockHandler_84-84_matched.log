@@ -1,0 +1,12 @@
+---patch code 0--- org.mockito.internal.MockHandler <84, 84>
+MockingProgress.verificationStarted(VerificationMode);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.mockito.internal.MockitoCore <75, 75>
+MockingProgress.verificationStarted(new MockAwareVerificationMode(TVar, VerificationMode));
+
+---patch code 1--- org.mockito.internal.MockHandler <84, 84>
+MockingProgress.verificationStarted(VerificationMode);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1--- org.mockito.internal.MockitoCore <75, 75>
+MockingProgress.verificationStarted(new MockAwareVerificationMode(mock, VerificationMode));
+

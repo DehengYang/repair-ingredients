@@ -1,0 +1,138 @@
+---patch code 0--- org.jfree.data.time.TimeSeries <1057, 1058>
+Series.doubleVar = Double.NaN;
+Series.doubleVar = Double.NaN;
+
+---fix ingredient  varMapType:0--- org.jfree.data.xy.XYSeries <175, 177>
+Series.doubleVar = Double.NaN;
+Series.doubleVar = Double.NaN;
+Series.doubleVar = Double.NaN;
+
+---patch code 1--- org.jfree.data.time.TimeSeries <1057, 1058>
+Series.minY = Double.NaN;
+Series.maxY = Double.NaN;
+
+---fix ingredient  varMapType:1--- org.jfree.data.xy.XYSeries <175, 177>
+Series.maxX = Double.NaN;
+Series.minY = Double.NaN;
+Series.maxY = Double.NaN;
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.time.TimeSeries <192, 194>
+Series.longVar = Long.MAX_VALUE;
+Series.doubleVar = Double.NaN;
+Series.doubleVar = Double.NaN;
+
+---fix ingredient(SameFile)  varMapType:1--- org.jfree.data.time.TimeSeries <192, 194>
+Series.maximumItemAge = Long.MAX_VALUE;
+Series.minY = Double.NaN;
+Series.maxY = Double.NaN;
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.time.TimeSeries <950, 956>
+if (Series.ListVar.size() > 0) {
+            Series.ListVar.clear();
+            Series.Class = null;
+            Series.doubleVar = Double.NaN;
+            Series.doubleVar = Double.NaN;
+            fireSeriesChanged();
+        }
+
+---fix ingredient(SameFile)  varMapType:1--- org.jfree.data.time.TimeSeries <950, 956>
+if (Series.data.size() > 0) {
+            Series.data.clear();
+            Series.Class = null;
+            Series.minY = Double.NaN;
+            Series.maxY = Double.NaN;
+            fireSeriesChanged();
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.data.xy.XYSeries <601, 608>
+if (Series.ListVar.size() > 0) {
+            Series.ListVar.clear();
+            Series.dataoubleVar = Double.NaN;
+            Series.doubleVar = Double.NaN;
+            Series.doubleVar = Double.NaN;
+            Series.doubleVar = Double.NaN;
+            fireSeriesChanged();
+        }
+
+---fix ingredient  varMapType:1--- org.jfree.data.xy.XYSeries <601, 608>
+if (Series.data.size() > 0) {
+            Series.data.clear();
+            Series.minX = Double.NaN;
+            Series.maxX = Double.NaN;
+            Series.minY = Double.NaN;
+            Series.maxY = Double.NaN;
+            fireSeriesChanged();
+        }
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.time.TimeSeries <1245, 1253>
+/**
+     * Finds the bounds of the x and y values for the series, by iterating
+     * through all the data items.
+     *
+     * @since 1.0.14
+     */
+    private void findBoundsByIteration() {
+        Series.doubleVar = Double.NaN;
+        Series.doubleVar = Double.NaN;
+        Iterator iterator = Series.ListVar.iterator();
+        while (iterator.hasNext()) {
+            TimeSeriesDataItem item = (TimeSeriesDataItem) iterator.next();
+            updateBoundsForAddedItem(item);
+        }
+    }
+
+---fix ingredient(SameFile)  varMapType:1--- org.jfree.data.time.TimeSeries <1245, 1253>
+/**
+     * Finds the bounds of the x and y values for the series, by iterating
+     * through all the data items.
+     *
+     * @since 1.0.14
+     */
+    private void findBoundsByIteration() {
+        Series.minY = Double.NaN;
+        Series.maxY = Double.NaN;
+        Iterator iterator = Series.data.iterator();
+        while (iterator.hasNext()) {
+            TimeSeriesDataItem item = (TimeSeriesDataItem) iterator.next();
+            updateBoundsForAddedItem(item);
+        }
+    }
+
+---fix ingredient  varMapType:0--- org.jfree.data.xy.XYSeries <303, 313>
+/**
+     * Finds the bounds of the x and y values for the series, by iterating
+     * through all the data items.
+     *
+     * @since 1.0.13
+     */
+    private void findBoundsByIteration() {
+        Series.doubleVar = Double.NaN;
+        Series.doubleVar = Double.NaN;
+        Series.doubleVar = Double.NaN;
+        Series.doubleVar = Double.NaN;
+        Iterator iterator = Series.ListVar.iterator();
+        while (iterator.hasNext()) {
+            XYDataItem item = (XYDataItem) iterator.next();
+            updateBoundsForAddedItem(item);
+        }
+    }
+
+---fix ingredient  varMapType:1--- org.jfree.data.xy.XYSeries <303, 313>
+/**
+     * Finds the bounds of the x and y values for the series, by iterating
+     * through all the data items.
+     *
+     * @since 1.0.13
+     */
+    private void findBoundsByIteration() {
+        Series.minX = Double.NaN;
+        Series.maxX = Double.NaN;
+        Series.minY = Double.NaN;
+        Series.maxY = Double.NaN;
+        Iterator iterator = Series.data.iterator();
+        while (iterator.hasNext()) {
+            XYDataItem item = (XYDataItem) iterator.next();
+            updateBoundsForAddedItem(item);
+        }
+    }
+

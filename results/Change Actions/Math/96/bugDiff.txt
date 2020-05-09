@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_96/src/java/org/apache/commons/math/complex/Complex.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_96/src/java/org/apache/commons/math/complex/Complex.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_96/src/java/org/apache/commons/math/complex/Complex.java	2020-01-05 06:40:53.861559992 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_96/src/java/org/apache/commons/math/complex/Complex.java	2020-01-05 06:40:57.301531260 -0800
+@@ -255,7 +255,7 @@
+                 if (rhs.isNaN()) {
+                     ret = this.isNaN();
+                 } else {
+-                    ret = (Double.doubleToRawLongBits(real) == Double.doubleToRawLongBits(rhs.getReal())) && (Double.doubleToRawLongBits(imaginary) == Double.doubleToRawLongBits(rhs.getImaginary())); 
++                    ret = (real == rhs.real) && (imaginary == rhs.imaginary); 
+                 }
+             } catch (ClassCastException ex) {
+                 // ignore exception

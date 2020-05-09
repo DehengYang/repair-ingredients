@@ -1,0 +1,43 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_50/src/java/org/apache/commons/lang/time/FastDateFormat.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_50/src/java/org/apache/commons/lang/time/FastDateFormat.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_50/src/java/org/apache/commons/lang/time/FastDateFormat.java	2020-01-05 05:30:22.100904090 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_50/src/java/org/apache/commons/lang/time/FastDateFormat.java	2020-01-05 05:30:25.516875560 -0800
+@@ -282,16 +282,14 @@
+             key = new Pair(key, timeZone);
+         }
+ 
+-        if (locale != null) {
+-            key = new Pair(key, locale);
++        if (locale == null) {
++            locale = Locale.getDefault();
+         }
+ 
++        key = new Pair(key, locale);
+ 
+         FastDateFormat format = (FastDateFormat) cDateInstanceCache.get(key);
+         if (format == null) {
+-            if (locale == null) {
+-                locale = Locale.getDefault();
+-            }
+             try {
+                 SimpleDateFormat formatter = (SimpleDateFormat) DateFormat.getDateInstance(style, locale);
+                 String pattern = formatter.toPattern();
+@@ -462,15 +460,13 @@
+         if (timeZone != null) {
+             key = new Pair(key, timeZone);
+         }
+-        if (locale != null) {
+-            key = new Pair(key, locale);
++        if (locale == null) {
++            locale = Locale.getDefault();
+         }
++        key = new Pair(key, locale);
+ 
+         FastDateFormat format = (FastDateFormat) cDateTimeInstanceCache.get(key);
+         if (format == null) {
+-            if (locale == null) {
+-                locale = Locale.getDefault();
+-            }
+             try {
+                 SimpleDateFormat formatter = (SimpleDateFormat) DateFormat.getDateTimeInstance(dateStyle, timeStyle,
+                         locale);

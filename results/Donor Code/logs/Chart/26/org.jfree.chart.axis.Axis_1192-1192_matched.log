@@ -1,0 +1,75 @@
+---patch code 0--- org.jfree.chart.axis.Axis <1192, 1198>
+if (ChartRenderingInfo != null) {
+                EntityCollection entities = ChartRenderingInfo.getEntityCollection();
+                if (entities != null) {
+                    entities.add(new AxisLabelEntity(this, Shape, 
+                            Axis.StringVar, Axis.StringVar));
+                }
+            }
+
+---fix ingredient  varMapType:0--- org.jfree.chart.JFreeChart <1181, 1187>
+Rectangle2DVar.setRect(Rectangle2DVar);
+JFreeChart.RectangleInsets.trim(Rectangle2DVar);
+empty line
+EntityCollection EntityCollection = null;
+if (ChartRenderingInfo != null) {
+            EntityCollection = ChartRenderingInfo.getEntityCollection();   
+        }
+
+---patch code 1--- org.jfree.chart.axis.Axis <1192, 1198>
+if (ChartRenderingInfo != null) {
+                EntityCollection entities = ChartRenderingInfo.getEntityCollection();
+                if (entities != null) {
+                    entities.add(new AxisLabelEntity(this, Shape, 
+                            Axis.labelToolTip, Axis.labelURL));
+                }
+            }
+
+---fix ingredient  varMapType:1--- org.jfree.chart.JFreeChart <1181, 1187>
+nonTitleArea.setRect(chartArea);
+JFreeChart.RectangleInsets.trim(nonTitleArea);
+empty line
+EntityCollection EntityCollection = null;
+if (ChartRenderingInfo != null) {
+            EntityCollection = ChartRenderingInfo.getEntityCollection();   
+        }
+
+---patch code ori--- org.jfree.chart.axis.Axis <1192, 1198>
+if (owner != null) {
+                EntityCollection entities = owner.getEntityCollection();
+                if (entities != null) {
+                    entities.add(new AxisLabelEntity(this, hotspot, 
+                            this.labelToolTip, this.labelURL));
+                }
+            }
+
+---fix ingredient  varMapType:ori--- org.jfree.chart.renderer.RendererState <86, 91>
+if (this.info != null) {
+            ChartRenderingInfo owner = this.info.getOwner();
+            if (owner != null) {
+                result = owner.getEntityCollection(); 
+            }
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.chart.JFreeChart <1134, 1137>
+if (ChartRenderingInfo != null) {
+            ChartRenderingInfo.clear();
+            ChartRenderingInfo.setChartArea(Rectangle2DVar);
+        }
+
+---fix ingredient  varMapType:1--- org.jfree.chart.JFreeChart <1134, 1137>
+if (ChartRenderingInfo != null) {
+            ChartRenderingInfo.clear();
+            ChartRenderingInfo.setChartArea(chartArea);
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.chart.JFreeChart <1210, 1212>
+if (ChartRenderingInfo != null) {
+            PlotRenderingInfo = ChartRenderingInfo.getPlotInfo();
+        }
+
+---fix ingredient  varMapType:1--- org.jfree.chart.JFreeChart <1210, 1212>
+if (ChartRenderingInfo != null) {
+            PlotRenderingInfo = ChartRenderingInfo.getPlotInfo();
+        }
+

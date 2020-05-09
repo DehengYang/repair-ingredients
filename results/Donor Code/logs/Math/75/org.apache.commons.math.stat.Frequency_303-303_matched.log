@@ -1,0 +1,36 @@
+---patch code ori--- org.apache.commons.math.stat.Frequency <303, 303>
+return getPct((Comparable<?>) v);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.stat.Frequency <331, 331>
+return getPct(Long.valueOf(v));
+
+---patch code 0--- org.apache.commons.math.stat.Frequency <303, 303>
+return getPct((Comparable<?>) Object);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.Frequency <331, 331>
+return getPct(Long.valueOf(intVar));
+
+---patch code 1--- org.apache.commons.math.stat.Frequency <303, 303>
+return getPct((Comparable<?>) Object);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.stat.Frequency <331, 331>
+return getPct(Long.valueOf(v));
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.stat.Frequency <342, 342>
+return getPct(Long.valueOf(v));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.Frequency <342, 342>
+return getPct(Long.valueOf(longVar));
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.stat.Frequency <342, 342>
+return getPct(Long.valueOf(v));
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.stat.Frequency <353, 353>
+return getPct(Character.valueOf(v));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.Frequency <353, 353>
+return getPct(Character.valueOf(charVar));
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.stat.Frequency <353, 353>
+return getPct(Character.valueOf(v));
+

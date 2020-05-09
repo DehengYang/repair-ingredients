@@ -1,0 +1,925 @@
+---patch code ori--- org.jfree.chart.renderer.GrayPaintScale <126, 127>
+int g = (int) ((v - this.lowerBound) / (this.upperBound 
+                - this.lowerBound) * 255.0);
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.GrayPaintScale <126, 127>
+int g = (int) ((value - this.lowerBound) / (this.upperBound 
+                - this.lowerBound) * 255.0);
+
+---patch code 0--- org.jfree.chart.renderer.GrayPaintScale <126, 127>
+int intVar = (int) ((doubleVar - GrayPaintScale.doubleVar) / (GrayPaintScale.doubleVar 
+                - GrayPaintScale.doubleVar) * 255.0);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.jfree.chart.renderer.GrayPaintScale <126, 127>
+int intVar = (int) ((doubleVar - GrayPaintScale.doubleVar) / (GrayPaintScale.doubleVar 
+                - GrayPaintScale.doubleVar) * 255.0);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <184, 186>
+if (SimpleHistogramBin.doubleVar < SimpleHistogramBin.doubleVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <187, 189>
+if (SimpleHistogramBin.doubleVar > SimpleHistogramBin.doubleVar) {
+            return false;
+        }
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.GrayPaintScale <124, 124>
+double v = Math.max(value, this.lowerBound);
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.GrayPaintScale <124, 124>
+double doubleVar = Math.max(doubleVar, GrayPaintScale.doubleVar);
+
+---patch code 1--- org.jfree.chart.renderer.GrayPaintScale <126, 127>
+int g = (int) ((v - GrayPaintScale.lowerBound) / (GrayPaintScale.upperBound 
+                - GrayPaintScale.lowerBound) * 255.0);
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.GrayPaintScale <124, 124>
+double v = Math.max(value, GrayPaintScale.lowerBound);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <1185, 1185>
+Plot.Axis.setRange(Plot.doubleVar, Plot.doubleVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <190, 192>
+if (SimpleHistogramBin.doubleVar == SimpleHistogramBin.doubleVar) {
+            return SimpleHistogramBin.booleanVar && SimpleHistogramBin.booleanVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <193, 195>
+if (SimpleHistogramBin.doubleVar == SimpleHistogramBin.doubleVar) {
+            return SimpleHistogramBin.booleanVar && SimpleHistogramBin.booleanVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <213, 215>
+if (SimpleHistogramBin.doubleVar < SimpleHistogramBin.doubleVar) {
+            return -1;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <105, 105>
+SimpleHistogramBin.doubleVar = doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.GrayPaintScale <89, 89>
+GrayPaintScale.doubleVar = doubleVar;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.LookupPaintScale <197, 197>
+LookupPaintScale.doubleVar = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <437, 437>
+Plot.doubleVar = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <472, 472>
+Plot.doubleVar = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <216, 218>
+if (SimpleHistogramBin.doubleVar > SimpleHistogramBin.doubleVar) {
+            return 1;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <241, 243>
+if (SimpleHistogramBin.doubleVar != SimpleHistogramBin.doubleVar) {
+            return false;
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.GrayPaintScale <152, 154>
+if (GrayPaintScale.doubleVar != GrayPaintScale.doubleVar) {
+            return false;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.LookupPaintScale <323, 325>
+if (LookupPaintScale.doubleVar != LookupPaintScale.doubleVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <1281, 1283>
+if (Plot.doubleVar != Plot.doubleVar) {
+            return false;
+        }
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.GrayPaintScale <125, 125>
+v = Math.min(v, this.upperBound);
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.GrayPaintScale <125, 125>
+doubleVar = Math.min(doubleVar, GrayPaintScale.doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.title.PaintScaleLegend <503, 503>
+double v = base + (i * increment);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.title.PaintScaleLegend <503, 503>
+double doubleVar = doubleVar + (intVar * doubleVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.title.PaintScaleLegend <503, 503>
+double v = base + (i * increment);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.title.PaintScaleLegend <523, 523>
+double v = base + (i * increment);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.title.PaintScaleLegend <523, 523>
+double doubleVar = doubleVar + (intVar * doubleVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.title.PaintScaleLegend <523, 523>
+double v = base + (i * increment);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.title.PaintScaleLegend <546, 546>
+double v = base + (i * increment);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.title.PaintScaleLegend <546, 546>
+double doubleVar = doubleVar + (intVar * doubleVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.title.PaintScaleLegend <546, 546>
+double v = base + (i * increment);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.title.PaintScaleLegend <566, 566>
+double v = base + (i * increment);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.title.PaintScaleLegend <566, 566>
+double doubleVar = doubleVar + (intVar * doubleVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.title.PaintScaleLegend <566, 566>
+double v = base + (i * increment);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.data.statistics.SimpleHistogramBin <166, 168>
+if (value == this.lowerBound) {
+            return this.includeLowerBound;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <166, 168>
+if (doubleVar == SimpleHistogramBin.doubleVar) {
+            return SimpleHistogramBin.booleanVar;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.LookupPaintScale <267, 269>
+if (value < this.lowerBound) {
+            return this.defaultPaint;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.LookupPaintScale <267, 269>
+if (doubleVar < LookupPaintScale.doubleVar) {
+            return LookupPaintScale.Paint;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.PiePlot <2420, 2421>
+double mid = this.startAngle + (this.direction.getFactor()
+                        * ((runningTotal - v / 2.0) * 360) / totalValue);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PiePlot <2420, 2421>
+double doubleVar = Plot.doubleVar + (Plot.Rotation.getFactor()
+                        * ((doubleVar - doubleVar / 2.0) * 360) / doubleVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.PiePlot <2420, 2421>
+double mid = Plot.startAngle + (Plot.Rotation.getFactor()
+                        * ((runningTotal - v / 2.0) * 360) / totalValue);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.LogAxis <538, 538>
+double minorV = v + i * ((next - v) / this.minorTickCount);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.LogAxis <538, 538>
+double doubleVar = doubleVar + intVar * ((doubleVar - doubleVar) / ValueAxis.intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.LogAxis <538, 538>
+double minorV = v + i * ((next - v) / ValueAxis.minorTickCount);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.LogAxis <582, 582>
+double minorV = v + i * ((next - v) / this.minorTickCount);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.LogAxis <582, 582>
+double doubleVar = doubleVar + intVar * ((doubleVar - doubleVar) / ValueAxis.intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.LogAxis <582, 582>
+double minorV = v + i * ((next - v) / ValueAxis.minorTickCount);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.data.general.DatasetUtilities <169, 169>
+totalValue = totalValue + v;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.general.DatasetUtilities <169, 169>
+doubleVar = doubleVar + doubleVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.StackedXYBarRenderer <288, 288>
+v = v / total;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.StackedXYBarRenderer <288, 288>
+doubleVar = doubleVar / doubleVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.StackedXYBarRenderer <291, 291>
+positiveBase = positiveBase + v;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.StackedXYBarRenderer <291, 291>
+doubleVar = doubleVar + doubleVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.StackedXYBarRenderer <294, 294>
+negativeBase = negativeBase + v;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.StackedXYBarRenderer <294, 294>
+doubleVar = doubleVar + doubleVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedBarRenderer3D <339, 339>
+v = v / total;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedBarRenderer3D <339, 339>
+doubleVar = doubleVar / doubleVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedBarRenderer3D <346, 346>
+posBase = posBase + v;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedBarRenderer3D <346, 346>
+doubleVar = doubleVar + doubleVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedBarRenderer3D <354, 354>
+negBase = negBase + v;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedBarRenderer3D <354, 354>
+doubleVar = doubleVar + doubleVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedAreaRenderer <536, 536>
+v = v / total;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedAreaRenderer <536, 536>
+doubleVar = doubleVar / doubleVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.labels.AbstractPieItemLabelGenerator <161, 161>
+percent = v / total;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.labels.AbstractPieItemLabelGenerator <161, 161>
+doubleVar = doubleVar / doubleVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.PiePlot <2323, 2323>
+runningTotal = runningTotal + v;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PiePlot <2323, 2323>
+doubleVar = doubleVar + doubleVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.PiePlot <2417, 2417>
+runningTotal = runningTotal + v;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PiePlot <2417, 2417>
+doubleVar = doubleVar + doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <220, 222>
+if (SimpleHistogramBin.doubleVar < SimpleHistogramBin.doubleVar) {
+            return -1;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.PiePlot <2326, 2327>
+double mid = getStartAngle() + (getDirection().getFactor()
+                        * ((runningTotal - v / 2.0) * 360) / totalValue);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PiePlot <2326, 2327>
+double doubleVar = getStartAngle() + (getDirection().getFactor()
+                        * ((doubleVar - doubleVar / 2.0) * 360) / doubleVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.PiePlot <2326, 2327>
+double mid = getStartAngle() + (getDirection().getFactor()
+                        * ((runningTotal - v / 2.0) * 360) / totalValue);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.data.DataUtilities <157, 157>
+total = total + v.doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.DataUtilities <157, 157>
+doubleVar = doubleVar + Number.doubleValue();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.data.DataUtilities <157, 157>
+total = total + Number.doubleValue();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.data.DataUtilities <164, 164>
+runningTotal = runningTotal + v.doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.DataUtilities <164, 164>
+doubleVar = doubleVar + Number.doubleValue();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.data.DataUtilities <164, 164>
+runningTotal = runningTotal + Number.doubleValue();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.MovingAverage <161, 164>
+if (v != null) {
+                                    sum = sum + v.doubleValue();
+                                    n = n + 1;
+                                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.time.MovingAverage <161, 164>
+if (Number != null) {
+                                    doubleVar = doubleVar + Number.doubleValue();
+                                    intVar = intVar + 1;
+                                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.data.time.MovingAverage <161, 164>
+if (Number != null) {
+                                    sum = sum + Number.doubleValue();
+                                    n = n + 1;
+                                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.ui.FontChooserPanel <97, 97>
+GraphicsEnvironment g = GraphicsEnvironment.getLocalGraphicsEnvironment();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.title.PaintScaleLegend <505, 506>
+double vv = this.axis.valueToJava2D(v, target, 
+                            RectangleEdge.BOTTOM);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.title.PaintScaleLegend <505, 506>
+double doubleVar = Title.Axis.valueToJava2D(doubleVar, Rectangle2DVar, 
+                            RectangleEdge.BOTTOM);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.title.PaintScaleLegend <505, 506>
+double vv = Title.Axis.valueToJava2D(v, target, 
+                            RectangleEdge.BOTTOM);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.title.PaintScaleLegend <525, 526>
+double vv = this.axis.valueToJava2D(v, target, 
+                            RectangleEdge.BOTTOM);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.title.PaintScaleLegend <525, 526>
+double doubleVar = Title.Axis.valueToJava2D(doubleVar, Rectangle2DVar, 
+                            RectangleEdge.BOTTOM);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.title.PaintScaleLegend <525, 526>
+double vv = Title.Axis.valueToJava2D(v, target, 
+                            RectangleEdge.BOTTOM);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.title.PaintScaleLegend <548, 549>
+double vv = this.axis.valueToJava2D(v, target, 
+                            RectangleEdge.LEFT);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.title.PaintScaleLegend <548, 549>
+double doubleVar = Title.Axis.valueToJava2D(doubleVar, Rectangle2DVar, 
+                            RectangleEdge.LEFT);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.title.PaintScaleLegend <548, 549>
+double vv = Title.Axis.valueToJava2D(v, target, 
+                            RectangleEdge.LEFT);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.title.PaintScaleLegend <568, 569>
+double vv = this.axis.valueToJava2D(v, target, 
+                            RectangleEdge.LEFT);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.title.PaintScaleLegend <568, 569>
+double doubleVar = Title.Axis.valueToJava2D(doubleVar, Rectangle2DVar, 
+                            RectangleEdge.LEFT);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.title.PaintScaleLegend <568, 569>
+double vv = Title.Axis.valueToJava2D(v, target, 
+                            RectangleEdge.LEFT);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.data.DataUtilities <155, 155>
+Number v = data.getValue(i);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.data.DataUtilities <162, 162>
+Number v = data.getValue(i);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.TimeSeriesTableModel <239, 239>
+this.series.update(row, v);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.title.PaintScaleLegend <504, 504>
+Paint p = this.scale.getPaint(v);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.title.PaintScaleLegend <504, 504>
+Paint Paint = Title.PaintScale.getPaint(doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.title.PaintScaleLegend <524, 524>
+Paint p = this.scale.getPaint(v);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.title.PaintScaleLegend <524, 524>
+Paint Paint = Title.PaintScale.getPaint(doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.title.PaintScaleLegend <547, 547>
+Paint p = this.scale.getPaint(v);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.title.PaintScaleLegend <547, 547>
+Paint Paint = Title.PaintScale.getPaint(doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.title.PaintScaleLegend <567, 567>
+Paint p = this.scale.getPaint(v);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.title.PaintScaleLegend <567, 567>
+Paint Paint = Title.PaintScale.getPaint(doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.data.statistics.BoxAndWhiskerCalculator <109, 109>
+double v = n.doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.BoxAndWhiskerCalculator <109, 109>
+double doubleVar = Number.doubleValue();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.data.statistics.BoxAndWhiskerCalculator <109, 109>
+double v = Number.doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <106, 106>
+SimpleHistogramBin.doubleVar = doubleVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.data.time.MovingAverage <158, 158>
+Number v = item.getValue();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.ui.FontChooserPanel <98, 98>
+String[] fonts = g.getAvailableFontFamilyNames();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.GrayPaintScale <90, 90>
+GrayPaintScale.doubleVar = doubleVar;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.LookupPaintScale <198, 198>
+LookupPaintScale.doubleVar = doubleVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.LineRenderer3D <533, 533>
+double value = v.doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.LineRenderer3D <533, 533>
+double doubleVar = Number.doubleValue();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.LineRenderer3D <533, 533>
+double value = Number.doubleValue();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.LineAndShapeRenderer <648, 648>
+double value = v.doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.LineAndShapeRenderer <648, 648>
+double doubleVar = Number.doubleValue();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.LineAndShapeRenderer <648, 648>
+double value = Number.doubleValue();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedBarRenderer3D <337, 337>
+double v = n.doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedBarRenderer3D <337, 337>
+double doubleVar = Number.doubleValue();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.StackedBarRenderer3D <337, 337>
+double v = Number.doubleValue();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedAreaRenderer <534, 534>
+double v = n.doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedAreaRenderer <534, 534>
+double doubleVar = Number.doubleValue();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.StackedAreaRenderer <534, 534>
+double v = Number.doubleValue();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedAreaRenderer <538, 538>
+result += v;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedAreaRenderer <538, 538>
+doubleVar += doubleVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.ModuloAxis <149, 149>
+double v = mapValueToFixedRange(value);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.ModuloAxis <149, 149>
+double doubleVar = mapValueToFixedRange(doubleVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.ModuloAxis <149, 149>
+double v = mapValueToFixedRange(value);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.LogAxis <529, 529>
+double v = calculateValue(current);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.LogAxis <529, 529>
+double doubleVar = calculateValue(doubleVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.LogAxis <529, 529>
+double v = calculateValue(current);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.LogAxis <573, 573>
+double v = calculateValue(current);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.LogAxis <573, 573>
+double doubleVar = calculateValue(doubleVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.axis.LogAxis <573, 573>
+double v = calculateValue(current);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.labels.AbstractPieItemLabelGenerator <159, 159>
+double v = value.doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.labels.AbstractPieItemLabelGenerator <159, 159>
+double doubleVar = Number.doubleValue();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.labels.AbstractPieItemLabelGenerator <159, 159>
+double v = Number.doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <461, 461>
+Plot.doubleVar = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <473, 473>
+Plot.doubleVar = doubleVar;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.PiePlot <2573, 2573>
+double v = n.doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PiePlot <2573, 2573>
+double doubleVar = Number.doubleValue();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.PiePlot <2573, 2573>
+double v = Number.doubleValue();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.GroupedStackedBarRenderer <278, 286>
+if (v != null) {
+                    double d = v.doubleValue();
+                    if (d > 0) {
+                        positiveBase = positiveBase + d;
+                    }
+                    else {
+                        negativeBase = negativeBase + d;
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.GroupedStackedBarRenderer <278, 286>
+if (Number != null) {
+                    double d = Number.doubleValue();
+                    if (d > 0) {
+                        doubleVar = doubleVar + d;
+                    }
+                    else {
+                        doubleVar = doubleVar + d;
+                    }
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.GroupedStackedBarRenderer <278, 286>
+if (Number != null) {
+                    double d = Number.doubleValue();
+                    if (d > 0) {
+                        positiveBase = positiveBase + d;
+                    }
+                    else {
+                        negativeBase = negativeBase + d;
+                    }
+                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.StackedXYAreaRenderer2 <415, 415>
+double v = dataset.getYValue(i, index);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.StackedXYAreaRenderer2 <415, 415>
+double doubleVar = TableXYDataset.getYValue(intVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.StackedXYAreaRenderer2 <415, 415>
+double v = TableXYDataset.getYValue(i, index);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.StackedXYBarRenderer <285, 285>
+double v = dataset.getYValue(i, item);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.StackedXYBarRenderer <285, 285>
+double doubleVar = XYDataset.getYValue(intVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.StackedXYBarRenderer <285, 285>
+double v = XYDataset.getYValue(i, item);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StatisticalLineAndShapeRenderer <167, 167>
+Number v = dataset.getValue(row, column);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.LineRenderer3D <518, 518>
+Number v = dataset.getValue(row, column);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.GroupedStackedBarRenderer <277, 277>
+Number v = dataset.getValue(i, column);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.LineAndShapeRenderer <638, 638>
+Number v = dataset.getValue(row, column);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedBarRenderer <313, 313>
+Number v = dataset.getValue(i, column);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <223, 225>
+if (SimpleHistogramBin.doubleVar > SimpleHistogramBin.doubleVar) {
+            return 1;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <244, 246>
+if (SimpleHistogramBin.doubleVar != SimpleHistogramBin.doubleVar) {
+            return false;
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.GrayPaintScale <155, 157>
+if (GrayPaintScale.doubleVar != GrayPaintScale.doubleVar) {
+            return false;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.LookupPaintScale <326, 328>
+if (LookupPaintScale.doubleVar != LookupPaintScale.doubleVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <1284, 1286>
+if (Plot.doubleVar != Plot.doubleVar) {
+            return false;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.data.statistics.BoxAndWhiskerCalculator <110, 112>
+if (!Double.isNaN(v)) {
+                        vlist.add(n);
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.BoxAndWhiskerCalculator <110, 112>
+if (!Double.isNaN(doubleVar)) {
+                        ListVar.add(Number);
+                    }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedBarRenderer <314, 325>
+if (v != null) {
+                double d = v.doubleValue();
+                if (this.renderAsPercentages) {
+                    d = d / total;
+                }
+                if (d > 0) {
+                    positiveBase = positiveBase + d;
+                }
+                else {
+                    negativeBase = negativeBase + d;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedBarRenderer <314, 325>
+if (Number != null) {
+                double d = Number.doubleValue();
+                if (BarRenderer.booleanVar) {
+                    d = d / doubleVar;
+                }
+                if (d > 0) {
+                    doubleVar = doubleVar + d;
+                }
+                else {
+                    doubleVar = doubleVar + d;
+                }
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.StackedBarRenderer <314, 325>
+if (Number != null) {
+                double d = Number.doubleValue();
+                if (BarRenderer.renderAsPercentages) {
+                    d = d / total;
+                }
+                if (d > 0) {
+                    positiveBase = positiveBase + d;
+                }
+                else {
+                    negativeBase = negativeBase + d;
+                }
+            }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.ModuloAxis <151, 151>
+result = trans(v, area, edge);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.ModuloAxis <151, 151>
+doubleVar = trans(doubleVar, Rectangle2DVar, RectangleEdge);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.SpiderWebPlot <1252, 1254>
+if (v > this.maxValue) { 
+                        this.maxValue = v;
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.SpiderWebPlot <1252, 1254>
+if (doubleVar > Plot.doubleVar) { 
+                        Plot.doubleVar = doubleVar;
+                    }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.FastScatterPlot <706, 708>
+if (v < lowest) {
+                    lowest = v;
+                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.FastScatterPlot <709, 711>
+if (v > highest) {
+                    highest = v;
+                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.FastScatterPlot <738, 740>
+if (v < lowest) {
+                    lowest = v;
+                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.FastScatterPlot <741, 743>
+if (v > highest) {
+                    highest = v;
+                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.FastScatterPlot <632, 633>
+double v = this.domainAxis.valueToJava2D(tick.getValue(), 
+                        dataArea, RectangleEdge.BOTTOM);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.FastScatterPlot <632, 633>
+double doubleVar = Plot.Axis.valueToJava2D(Tick.getValue(), 
+                        Rectangle2DVar, RectangleEdge.BOTTOM);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.FastScatterPlot <632, 633>
+double v = Plot.Axis.valueToJava2D(null.getValue(), 
+                        dataArea, RectangleEdge.BOTTOM);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.FastScatterPlot <658, 659>
+double v = this.rangeAxis.valueToJava2D(tick.getValue(), 
+                        dataArea, RectangleEdge.LEFT);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.FastScatterPlot <658, 659>
+double doubleVar = Plot.Axis.valueToJava2D(Tick.getValue(), 
+                        Rectangle2DVar, RectangleEdge.LEFT);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.FastScatterPlot <658, 659>
+double v = Plot.Axis.valueToJava2D(null.getValue(), 
+                        dataArea, RectangleEdge.LEFT);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.data.statistics.SimpleHistogramBin <169, 171>
+if (value == this.upperBound) {
+            return this.includeUpperBound;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <169, 171>
+if (doubleVar == SimpleHistogramBin.doubleVar) {
+            return SimpleHistogramBin.booleanVar;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.LookupPaintScale <270, 272>
+if (value > this.upperBound) {
+            return this.defaultPaint;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.LookupPaintScale <270, 272>
+if (doubleVar > LookupPaintScale.doubleVar) {
+            return LookupPaintScale.Paint;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <991, 991>
+double v = axis.valueToJava2D(value, dataArea, plot.getDomainAxisEdge());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <991, 991>
+double doubleVar = Axis.valueToJava2D(doubleVar, Rectangle2DVar, Plot.getDomainAxisEdge());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <991, 991>
+double v = null.valueToJava2D(value, dataArea, null.getDomainAxisEdge());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <1034, 1034>
+double v = axis.valueToJava2D(value, dataArea, plot.getRangeAxisEdge());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <1034, 1034>
+double doubleVar = Axis.valueToJava2D(doubleVar, Rectangle2DVar, Plot.getRangeAxisEdge());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <1034, 1034>
+double v = null.valueToJava2D(value, dataArea, null.getRangeAxisEdge());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <1073, 1074>
+double v = domainAxis.valueToJava2D(value, dataArea,
+                    plot.getDomainAxisEdge());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <1073, 1074>
+double doubleVar = Axis.valueToJava2D(doubleVar, Rectangle2DVar,
+                    Plot.getDomainAxisEdge());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <1073, 1074>
+double v = null.valueToJava2D(value, dataArea,
+                    null.getDomainAxisEdge());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <1273, 1274>
+double v = rangeAxis.valueToJava2D(value, dataArea,
+                    plot.getRangeAxisEdge());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <1273, 1274>
+double doubleVar = Axis.valueToJava2D(doubleVar, Rectangle2DVar,
+                    Plot.getRangeAxisEdge());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <1273, 1274>
+double v = null.valueToJava2D(value, dataArea,
+                    null.getRangeAxisEdge());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <880, 880>
+double v = axis.valueToJava2D(value, dataArea, plot.getRangeAxisEdge());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <880, 880>
+double doubleVar = Axis.valueToJava2D(doubleVar, Rectangle2DVar, Plot.getRangeAxisEdge());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <880, 880>
+double v = null.valueToJava2D(value, dataArea, null.getRangeAxisEdge());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <1025, 1026>
+double v = axis.valueToJava2D(value, dataArea,
+                    plot.getRangeAxisEdge());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <1025, 1026>
+double doubleVar = Axis.valueToJava2D(doubleVar, Rectangle2DVar,
+                    Plot.getRangeAxisEdge());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <1025, 1026>
+double v = null.valueToJava2D(value, dataArea,
+                    null.getRangeAxisEdge());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.MeterPlot <1071, 1073>
+for (double v = minValue; v <= maxValue; v += this.tickSize) {
+            drawTick(g2, meterArea, v);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.MeterPlot <1071, 1073>
+for (double doubleVar = doubleVar; doubleVar <= doubleVar; doubleVar += Plot.doubleVar) {
+            drawTick(Graphics2DVar, Rectangle2DVar, doubleVar);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.MeterPlot <1071, 1073>
+for (double v = minValue; v <= maxValue; v += Plot.tickSize) {
+            drawTick(g2, meterArea, v);
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.PiePlot <2413, 2413>
+include = this.ignoreZeroValues ? v > 0.0 : v >= 0.0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PiePlot <2413, 2413>
+booleanVar = Plot.booleanVar ? doubleVar > 0.0 : doubleVar >= 0.0;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.StackedXYAreaRenderer2 <416, 423>
+if (!Double.isNaN(v)) {
+                if (v >= 0.0) {
+                    result[1] += v;   
+                }
+                else {
+                    result[0] += v;   
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.StackedXYAreaRenderer2 <416, 423>
+if (!Double.isNaN(doubleVar)) {
+                if (doubleVar >= 0.0) {
+                    double[]Var[1] += doubleVar;   
+                }
+                else {
+                    double[]Var[0] += doubleVar;   
+                }
+            }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedAreaRenderer <568, 575>
+if (!Double.isNaN(v)) {
+                    if (v >= 0.0) {
+                        result[1] += v;   
+                    }
+                    else {
+                        result[0] += v;   
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedAreaRenderer <568, 575>
+if (!Double.isNaN(doubleVar)) {
+                    if (doubleVar >= 0.0) {
+                        double[]Var[1] += doubleVar;   
+                    }
+                    else {
+                        double[]Var[0] += doubleVar;   
+                    }
+                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <939, 941>
+double v = axis.getCategoryMiddle(columnIndex,
+                    dataset.getColumnCount(), dataArea,
+                    plot.getDomainAxisEdge());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <939, 941>
+double doubleVar = Axis.getCategoryMiddle(intVar,
+                    CategoryDataset.getColumnCount(), Rectangle2DVar,
+                    Plot.getDomainAxisEdge());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <939, 941>
+double v = null.getCategoryMiddle(columnIndex,
+                    CategoryDataset.getColumnCount(), dataArea,
+                    null.getDomainAxisEdge());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.PiePlot <2574, 2579>
+if (v == 0.0) {
+                    include = !this.ignoreZeroValues;   
+                }
+                else {
+                    include = v > 0.0;   
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PiePlot <2574, 2579>
+if (doubleVar == 0.0) {
+                    booleanVar = !Plot.booleanVar;   
+                }
+                else {
+                    booleanVar = doubleVar > 0.0;   
+                }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.FastScatterPlot <634, 635>
+Line2D line = new Line2D.Double(v, dataArea.getMinY(), v, 
+                        dataArea.getMaxY());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.FastScatterPlot <634, 635>
+Line2D Line2DVar = new Line2D.Double(doubleVar, Rectangle2DVar.getMinY(), doubleVar, 
+                        Rectangle2DVar.getMaxY());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.FastScatterPlot <660, 661>
+Line2D line = new Line2D.Double(dataArea.getMinX(), v, 
+                        dataArea.getMaxX(), v);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.FastScatterPlot <660, 661>
+Line2D Line2DVar = new Line2D.Double(Rectangle2DVar.getMinX(), doubleVar, 
+                        Rectangle2DVar.getMaxX(), doubleVar);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.ModuloAxis <158, 163>
+if (v > cutoff) {
+                result = transStart(v, area, edge, length1, length2);
+            }
+            else {
+                result = transEnd(v, area, edge, length1, length2);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.ModuloAxis <158, 163>
+if (doubleVar > doubleVar) {
+                doubleVar = transStart(doubleVar, Rectangle2DVar, RectangleEdge, doubleVar, doubleVar);
+            }
+            else {
+                doubleVar = transEnd(doubleVar, Rectangle2DVar, RectangleEdge, doubleVar, doubleVar);
+            }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.data.general.DatasetUtilities <1336, 1339>
+for (int g = 0; g < groupCount; g++) {
+                    minimum[g] = Math.min(minimum[g], negative[g]);
+                    maximum[g] = Math.max(maximum[g], positive[g]);
+                }
+

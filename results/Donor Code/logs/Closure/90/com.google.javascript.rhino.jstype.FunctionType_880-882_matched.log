@@ -1,0 +1,36 @@
+---patch code 0--- com.google.javascript.rhino.jstype.FunctionType <880, 882>
+if (JSType != null) {
+      JSType = JSType.restrictByNotNullOrUndefined();
+    }
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.TypeInference <961, 971>
+if (JSType != null) {
+      JSType = JSType.restrictByNotNullOrUndefined();
+      if (JSType.isUnknownType()) {
+        JSType = getNativeType(UNKNOWN_TYPE);
+      } else if (JSType instanceof FunctionType) {
+        FunctionType ct = (FunctionType) JSType;
+        if (ct.isConstructor()) {
+          JSType = ct.getInstanceType();
+        }
+      }
+    }
+
+---patch code 1--- com.google.javascript.rhino.jstype.FunctionType <880, 882>
+if (JSType != null) {
+      JSType = JSType.restrictByNotNullOrUndefined();
+    }
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.TypeInference <961, 971>
+if (JSType != null) {
+      JSType = JSType.restrictByNotNullOrUndefined();
+      if (JSType.isUnknownType()) {
+        JSType = getNativeType(UNKNOWN_TYPE);
+      } else if (JSType instanceof FunctionType) {
+        FunctionType ct = (FunctionType) JSType;
+        if (ct.isConstructor()) {
+          JSType = ct.getInstanceType();
+        }
+      }
+    }
+

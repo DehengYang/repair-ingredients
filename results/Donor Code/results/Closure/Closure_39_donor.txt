@@ -1,0 +1,5 @@
+chunk1 : com.google.javascript.rhino.jstype.PrototypeObjectType:380-380
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (9)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (9)
+
+

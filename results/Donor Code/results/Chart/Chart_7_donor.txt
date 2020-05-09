@@ -1,0 +1,8 @@
+chunk1 : org.jfree.data.time.TimePeriodValues:302-302
+fix ingredient(SameMethod)  varMapType:0 : (4)
+
+
+chunk2 : org.jfree.data.time.TimePeriodValues:300-300
+fix ingredient(SameMethod)  varMapType:0 : (2)
+
+

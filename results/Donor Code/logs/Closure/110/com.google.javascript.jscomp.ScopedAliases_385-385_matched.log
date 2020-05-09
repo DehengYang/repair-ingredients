@@ -1,0 +1,543 @@
+---patch code 0--- com.google.javascript.jscomp.ScopedAliases <385, 408>
+if (booleanVar) {
+            // Replace "function NAME() { ... }" with "var NAME;".
+            Node existingName = Var.getNameNode();
+
+            // We can't keep the local name on the function expression,
+            // because IE is buggy and will leak the name into the global
+            // scope. This is covered in more detail here:
+            // http://wiki.ecmascript.org/lib/exe/fetch.php?id=resources:resources&cache=cache&media=resources:jscriptdeviationsfromes3.pdf
+            //
+            // This will only cause problems if this is a hoisted, recursive
+            // function, and the programmer is using the hoisting.
+            Node newName = IR.name("").useSourceInfoFrom(existingName);
+            Node.replaceChild(existingName, newName);
+
+            Node = IR.var(existingName).useSourceInfoFrom(existingName);
+            Node.replaceChild(Node, Node);
+          } else {
+            if (Node != null) {
+              // If this is a VAR, we can just detach the expression and
+              // the tree will still be valid.
+              Node.detachFromParent();
+            }
+            Node = Node;
+          }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <1015, 1031>
+Node Node = null;
+if (booleanVar) {
+        Node.removeChild(Node);
+        Node.detachFromParent();
+      } else {
+        // Substitute a reference for the value.
+        Node = IR.name(StringVar);
+        if (Node.getBooleanProp(Node.IS_CONSTANT_NAME)) {
+          Node.putBooleanProp(Node.IS_CONSTANT_NAME, true);
+        }
+
+        Node.replaceChild(Node, Node);
+      }
+empty line
+// Declare the collapsed name as a variable with the original value.
+Node Node = IR.name(StringVar);
+Node.addChildToFront(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.RescopeGlobalSymbols <307, 315>
+if (Node.hasChildren()) {
+        // var declaration list: var a = 1, b = 2;
+        Node assign = IR.assign(
+            Node,
+            Node.removeFirstChild());
+        Node.replaceChild(Node, assign);
+      } else if (booleanVar) {
+        Node.replaceChild(Node, Node);
+      }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ExpressionDecomposer <387, 403>
+if (booleanVar) {
+      Node tempVarNode = NodeUtil.newVarNode(StringVar, null)
+          .copyInformationFromForTree(Node);
+      Node injectionPointParent = Node.getParent();
+      injectionPointParent.addChildBefore(tempVarNode, Node);
+      injectionPointParent.addChildAfter(Node, tempVarNode);
+
+      // Replace the expression with the temporary name.
+      Node replacementValueNode = IR.name(StringVar);
+      Node.replaceChild(Node, replacementValueNode);
+    } else {
+      // Only conditionals that are the direct child of an expression statement
+      // don't need results, for those simply replace the expression statement.
+      Preconditions.checkArgument(Node.isExprResult());
+      Node gramps = Node.getParent();
+      gramps.replaceChild(Node, Node);
+    }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <967, 993>
+/**
+     * Replace the current assign with its right hand side.
+     */
+    void remove() {
+      Node parent = Node.getParent();
+      if (booleanVar) {
+        Node replacement = Node.getLastChild().detachFromParent();
+
+        // Aggregate any expressions in GETELEMs.
+        for (Node current = Node.getFirstChild();
+             !current.isName();
+             current = current.getFirstChild()) {
+          if (current.isGetElem()) {
+            replacement = IR.comma(
+                current.getLastChild().detachFromParent(), replacement);
+            replacement.copyInformationFrom(current);
+          }
+        }
+
+        parent.replaceChild(Node, replacement);
+      } else {
+        Node gramps = parent.getParent();
+        if (parent.isExprResult()) {
+          gramps.removeChild(parent);
+        } else {
+          parent.replaceChild(Node,
+              Node.getLastChild().detachFromParent());
+        }
+      }
+    }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ProcessTweaks <245, 262>
+if (TweakFunctionCall.tweakFunc.isGetterFunction()) {
+          Node newValue;
+          if (booleanVar) {
+            newValue = TweakInfo.getDefaultValueNode().cloneNode();
+          } else {
+            // When we find a getter of an unregistered tweak, there has
+            // already been a warning about it, so now just use a default
+            // value when stripping.
+            TweakFunction registerFunction =
+                TweakFunctionCall.tweakFunc.registerFunction;
+            newValue = registerFunction.createDefaultValueNode();
+          }
+          Node.replaceChild(Node, newValue);
+        } else {
+          Node voidZeroNode = IR.voidNode(IR.number(0).srcref(Node))
+              .srcref(Node);
+          Node.replaceChild(Node, voidZeroNode);
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ExpressionDecomposer <474, 496>
+if (booleanVar) {
+      Preconditions.checkState(Node.isName() || NodeUtil.isGet(Node));
+      // Transform "x += 2" into "x = temp + 2"
+      Node opNode = new Node(NodeUtil.getOpFromAssignmentOp(Node))
+          .copyInformationFrom(Node);
+
+      Node rightOperand = Node.getLastChild();
+
+      Node.setType(Token.ASSIGN);
+      Node.replaceChild(rightOperand, opNode);
+      opNode.addChildToFront(Node);
+      opNode.addChildToBack(rightOperand);
+
+      // The original expression is still being used, so make a clone.
+      Node = Node.cloneTree();
+    } else {
+      // Replace the expression with the temporary name.
+      Node.replaceChild(Node, Node);
+
+      // Keep the original node so that CALL expressions can still be found
+      // and inlined properly.
+      Node = Node;
+    }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.PeepholeRemoveDeadCode <262, 267>
+if (booleanVar) {
+          Node.removeChild(Node);
+        } else {
+          Node = IR.empty().srcref(Node);
+          Node.replaceChild(Node, Node);
+        }
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.ScopedAliases <366, 420>
+if (booleanVar) {
+          Node grandparent = Node.getParent();
+          Node value = Node.hasChildren() ?
+              Var.getInitialValue().detachFromParent() :
+              null;
+          Node varNode = Node;
+
+          String name = Node.getString();
+          int nameCount = scopedAliasNames.count(name);
+          scopedAliasNames.add(name);
+          String globalName =
+              "$jscomp.scope." + name + (nameCount == 0 ? "" : ("$" + nameCount));
+
+          compiler.ensureLibraryInjected("base");
+
+          // First, we need to free up the function expression (EXPR)
+          // to be used in another expression.
+            // Replace "function NAME() { ... }" with "var NAME;".
+
+            // We can't keep the local name on the function expression,
+            // because IE is buggy and will leak the name into the global
+            // scope. This is covered in more detail here:
+            // http://wiki.ecmascript.org/lib/exe/fetch.php?id=resources:resources&cache=cache&media=resources:jscriptdeviationsfromes3.pdf
+            //
+            // This will only cause problems if this is a hoisted, recursive
+            // function, and the programmer is using the hoisting.
+
+              // If this is a VAR, we can just detach the expression and
+              // the tree will still be valid.
+
+          // Add $jscomp.scope.name = EXPR;
+          // Make sure we copy over all the jsdoc and debug info.
+          if (value != null || Var.getJSDocInfo() != null) {
+            Node newDecl = NodeUtil.newQualifiedNameNodeDeclaration(
+                compiler.getCodingConvention(),
+                globalName,
+                value,
+                Var.getJSDocInfo())
+                .useSourceInfoIfMissingFromForTree(Node);
+            NodeUtil.setDebugInformation(
+                newDecl.getFirstChild().getFirstChild(), Node, name);
+
+              grandparent.addChildBefore(newDecl, varNode);
+          }
+
+          // Rewrite "var name = EXPR;" to "var name = $jscomp.scope.name;"
+          Var.getNameNode().addChildToFront(
+              NodeUtil.newQualifiedNameNode(
+                  compiler.getCodingConvention(), globalName, Node, name));
+
+          recordAlias(Var);
+        } else {
+          // Do not other kinds of local symbols, like catch params.
+          report(NodeTraversal, Node, GOOG_SCOPE_NON_ALIAS_LOCAL, Node.getString());
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.PeepholeMinimizeConditions <705, 729>
+if (booleanVar && booleanVar &&
+        getBlockExpression(Node).getFirstChild().isAssign()) {
+
+      Node Node = getBlockVar(Node);
+      Node thenAssign = getBlockExpression(Node).getFirstChild();
+
+      Node maybeName1 = thenAssign.getFirstChild();
+      Node name2 = Node.getFirstChild();
+
+      if (name2.hasChildren()
+          && maybeName1.isName()
+          && maybeName1.getString().equals(name2.getString())) {
+        Node thenExpr = thenAssign.getLastChild().detachFromParent();
+        Node elseExpr = name2.removeChildren();
+        Node.detachFromParent();
+        Node hookNode = IR.hook(MeasuredNode.getNode(), thenExpr, elseExpr)
+                            .srcref(Node);
+        Node.detachFromParent();
+        name2.addChildrenToBack(hookNode);
+        Node.replaceChild(Node, Node);
+        reportCodeChange();
+
+        return Node;
+      }
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <823, 857>
+if (booleanVar && Name.canEliminate()) {
+      // Eliminate the object literal altogether.
+      Node.replaceChild(Node, Node);
+      Ref.node = null;
+      booleanVar = true;
+
+    } else if (!Name.isSimpleName()) {
+      // Create a VAR node to declare the name.
+      if (Node.isFunction()) {
+        checkForHosedThisReferences(Node, Name.docInfo, Name);
+      }
+
+      Ref.node.getParent().removeChild(Node);
+
+      Node nameNode = NodeUtil.newName(
+          AbstractCompiler.getCodingConvention(),
+          StringVar, Ref.node.getAncestor(2), Name.getFullName());
+
+      JSDocInfo info = Ref.node.getParent().getJSDocInfo();
+      if (Ref.node.getLastChild().getBooleanProp(Node.IS_CONSTANT_NAME) ||
+          (info != null && info.isConstant())) {
+        nameNode.putBooleanProp(Node.IS_CONSTANT_NAME, true);
+      }
+
+      if (info != null) {
+        Node.setJSDocInfo(info);
+      }
+      Node.addChildToBack(nameNode);
+      nameNode.addChildToFront(Node);
+      Node.replaceChild(Node, Node);
+
+      // Update the node ancestry stored in the reference.
+      Ref.node = nameNode;
+      booleanVar = true;
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.CollapseVariableDeclarations <181, 184>
+if (booleanVar && booleanVar) {
+        nodesToCollapse.add(Node);
+        collapses.add(new Collapse(Node, Node, Node));
+      }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.FunctionArgumentInjector <76, 98>
+if (booleanVar && Node.isThis()) {
+      Node Node = Map.get(StringVar);
+      Preconditions.checkNotNull(Node);
+      if (!Node.isThis()) {
+        // The name may need to be replaced more than once,
+        // so we need to clone the node.
+        Node replacement = Node.cloneTree();
+        Node.replaceChild(Node, replacement);
+
+        // Remove the value.  This isn't required but it ensures that we won't
+        // inject side-effects multiple times as it will trigger the null
+        // check above if we do.
+        if (NodeUtil.mayHaveSideEffects(Node, AbstractCompiler)) {
+          Map.remove(StringVar);
+        }
+
+        return replacement;
+      }
+    } else if (Node.isFunction()) {
+      // Once we enter another scope the "this" value changes, don't try
+      // to replace it within an inner scope.
+      booleanVar = false;
+    }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CheckAccessControls <485, 506>
+if (booleanVar) {
+        // Check an ASSIGN statement that's trying to override a property
+        // on a superclass.
+        JSDocInfo overridingInfo = Node.getJSDocInfo();
+        Visibility overridingVisibility = overridingInfo == null ?
+            Visibility.INHERITED : overridingInfo.getVisibility();
+
+        // Check that (a) the property *can* be overridden, and
+        // (b) that the visibility of the override is the same as the
+        // visibility of the original property.
+        if (Visibility == Visibility.PRIVATE && !booleanVar) {
+          AbstractCompiler.report(
+              NodeTraversal.makeError(Node, DiagnosticType,
+                  JSType.toString()));
+        } else if (overridingVisibility != Visibility.INHERITED &&
+            overridingVisibility != Visibility) {
+          AbstractCompiler.report(
+              NodeTraversal.makeError(Node, DiagnosticType,
+                  Visibility.name(), JSType.toString(),
+                  overridingVisibility.name()));
+        }
+      } else {
+        if (booleanVar) {
+          // private access is always allowed in the same file.
+          return;
+        } else if (Visibility == Visibility.PRIVATE &&
+            (JSType == null || !JSType.isEquivalentTo(JSType))) {
+          if (JSDocInfo.isConstructor() &&
+              isValidPrivateConstructorAccess(Node)) {
+            return;
+          }
+
+          // private access is not allowed outside the file from a different
+          // enclosing class.
+          AbstractCompiler.report(
+              NodeTraversal.makeError(Node,
+                  DiagnosticType,
+                  StringVar,
+                  TypeValidator.getReadableJSTypeName(
+                      Node.getFirstChild(), true)));
+        } else if (Visibility == Visibility.PROTECTED) {
+          // There are 3 types of legal accesses of a protected property:
+          // 1) Accesses in the same file
+          // 2) Overriding the property in a subclass
+          // 3) Accessing the property from inside a subclass
+          // The first two have already been checked for.
+          if (JSType == null || !JSType.isSubtype(JSType)) {
+            AbstractCompiler.report(
+                NodeTraversal.makeError(Node,  DiagnosticType,
+                    StringVar,
+                    TypeValidator.getReadableJSTypeName(
+                        Node.getFirstChild(), true)));
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.SpecializeModule <509, 519>
+if (booleanVar) {
+        Node =
+           NodeUtil.newQualifiedNameNode(
+               compiler.getCodingConvention(), StringVar, Node, StringVar);
+      } else {
+        // Grab the name node from the original function and make that
+        // function anonymous.
+        Node = Node.getFirstChild();
+        Node.replaceChild(Node,
+            NodeUtil.newName(compiler.getCodingConvention(), "", Node));
+      }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax <219, 245>
+private Node trySplitComma(Node n) {
+    if (booleanVar) {
+      return Node;
+    }
+    Node parent = Node.getParent();
+    Node left = Node.getFirstChild();
+    Node right = Node.getLastChild();
+
+    if (parent.isExprResult()
+        && !parent.getParent().isLabel()) {
+      // split comma
+      Node.detachChildren();
+      // Replace the original expression with the left operand.
+      parent.replaceChild(Node, left);
+      // Add the right expression afterward.
+      Node newStatement = IR.exprResult(right);
+      newStatement.copyInformationFrom(Node);
+
+      //This modifies outside the subtree, which is not
+      //desirable in a peephole optimization.
+      parent.getParent().addChildAfter(newStatement, parent);
+      reportCodeChange();
+      return left;
+    } else {
+      return Node;
+    }
+  }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.PeepholeReplaceKnownMethods <260, 280>
+if (Node.isNumber()) {
+      DoubleVar = NodeUtil.getNumberValue(Node);
+      if (!(intVar == 0 || intVar == 10) && booleanVar) {
+        //Convert a numeric first argument to a different base
+        StringVar = String.valueOf(DoubleVar.intValue());
+      } else {
+        // If parseFloat is called with a numeric argument,
+        // replace it with just the number.
+        // If parseInt is called with a numeric first argument and the radix
+        // is 10 or omitted, just replace it with the number
+        Node numericNode;
+        if (booleanVar) {
+          numericNode = IR.number(DoubleVar.intValue());
+        } else {
+          numericNode = IR.number(DoubleVar);
+        }
+        Node.getParent().replaceChild(Node, numericNode);
+        reportCodeChange();
+        return numericNode;
+      }
+    } else {
+      StringVar = NodeUtil.getStringValue(Node);
+      if (StringVar == null) {
+        return Node;
+      }
+
+      //Check that the string is in a format we can recognize
+      DoubleVar = NodeUtil.getStringNumberValue(StringVar);
+      if (DoubleVar == null) {
+        return Node;
+      }
+
+      StringVar = NodeUtil.trimJsWhiteSpace(StringVar);
+      if (StringVar.length() == 0) {
+        return Node;
+      }
+    }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.AbstractCommandLineRunner <1321, 1325>
+if (booleanVar) {
+              CompilerOptions.setTweakToDoubleLiteral(StringVar, doubleVar);
+            } else {
+              CompilerOptions.setDefineToDoubleLiteral(StringVar, doubleVar);
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <860, 864>
+if (booleanVar) {
+        declareVarsForObjLitValues(
+            Name, StringVar, Node,
+            Node, Node.getChildBefore(Node), Node);
+      }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.ExpressionDecomposer <443, 470>
+boolean booleanVar = NodeUtil.isAssignmentOp(Node)
+        && !Node.isAssign()
+        && Node.getFirstChild() == Node;
+empty line
+Node Node = null;
+empty line
+// Expressions on the LHS of an assignment-op must have any possible
+// side-effects extracted as the value must be duplicated:
+//    next().foo += 2;
+// becomes:
+//    var t1 = next();
+//    t1.foo = t1.foo + 2;
+if (booleanVar && NodeUtil.isGet(Node)) {
+      for (Node n : Node.children()) {
+        if (!n.isString() && !isConstantName(n, Set)) {
+          Node extractedNode = extractExpression(n, Node);
+          if (Node == null) {
+            Node = extractedNode;
+          }
+        }
+      }
+    }
+empty line
+// The temp is known to be constant.
+String StringVar = getTempConstantValueName();
+Node Node = IR.name(StringVar).srcref(Node);
+empty line
+Node Node;
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ExpandJqueryAliases <415, 431>
+if (booleanVar) {
+        // Replace all of the value nodes with the prop value
+        for (int intVar = 0; Node != null && intVar < ListVar.size(); intVar++) {
+          Node origNode = ListVar.get(intVar);
+          Node newNode = Node.cloneTree();
+          ListVar.add(newNode);
+          origNode.getParent().replaceChild(origNode, newNode);
+        }
+
+        // Wrap the new tree in an anonymous function call
+        Node fnc = IR.function(IR.name("").srcref(Node),
+            IR.paramList().srcref(Node),
+            Node.getChildAtIndex(2).cloneTree()).srcref(Node);
+        Node call = IR.call(fnc).srcref(Node);
+        call.putBooleanProp(Node.FREE_CALL, true);
+        Node.addChildToBack(IR.exprResult(call).srcref(call));
+      }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ControlFlowAnalysis <165, 176>
+if (booleanVar) {
+      // If we're traversing inner functions, we need to rank the
+      // priority of them too.
+      for (DiGraphNode<Node, Branch> candidate : LinkedDirectedGraph<N.getDirectedGraphNodes()) {
+        Node value = candidate.getValue();
+        if (value != null && value.isFunction()) {
+          Preconditions.checkState(
+              !Map.containsKey(candidate) || candidate == DiGraphNode);
+          prioritizeFromEntryNode(candidate);
+        }
+      }
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <1048, 1061>
+if (booleanVar && Name != null) {
+        if (!booleanVar) {
+          Ref newAlias =
+              Name.getDeclaration().cloneAndReclassify(Ref.Type.ALIASING_GET);
+          newAlias.node = Node;
+          Name.addRef(newAlias);
+        }
+
+        Name.getDeclaration().node = Node;
+
+        if (Node.isFunction()) {
+          checkForHosedThisReferences(Node, Node.getJSDocInfo(), Name);
+        }
+      }
+

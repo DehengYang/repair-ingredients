@@ -1,0 +1,70 @@
+---patch code ori--- org.apache.commons.lang.time.StopWatch <118, 120>
+if(this.runningState == STATE_RUNNING) {
+            stopTime = System.currentTimeMillis();
+        }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang.time.StopWatch <215, 217>
+if(this.runningState == STATE_RUNNING) {
+            return System.currentTimeMillis() - this.startTime;
+        }
+
+---patch code 0--- org.apache.commons.lang.time.StopWatch <118, 120>
+if(StopWatch.intVar == intVar) {
+            longVar = System.currentTimeMillis();
+        }
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.time.StopWatch <215, 217>
+if(StopWatch.intVar == intVar) {
+            return System.currentTimeMillis() - StopWatch.longVar;
+        }
+
+---patch code 1--- org.apache.commons.lang.time.StopWatch <118, 120>
+if(StopWatch.runningState == STATE_RUNNING) {
+            stopTime = System.currentTimeMillis();
+        }
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang.time.StopWatch <215, 217>
+if(StopWatch.runningState == STATE_RUNNING) {
+            return System.currentTimeMillis() - StopWatch.startTime;
+        }
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.time.StopWatch <95, 105>
+/**
+     * <p>Start the stopwatch.</p>
+     * 
+     * <p>This method starts a new timing session, clearing any previous values.</p>
+     *
+     * @throws IllegalStateException if the StopWatch is already running.
+     */
+    public void start() {
+        if(StopWatch.intVar == intVar) {
+            throw new IllegalStateException("Stopwatch must be reset before being restarted. ");
+        }
+        if(StopWatch.intVar != intVar) {
+            throw new IllegalStateException("Stopwatch already started. ");
+        }
+        longVar = -1;
+        longVar = System.currentTimeMillis();
+        StopWatch.intVar = intVar;
+    }
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.time.StopWatch <95, 105>
+/**
+     * <p>Start the stopwatch.</p>
+     * 
+     * <p>This method starts a new timing session, clearing any previous values.</p>
+     *
+     * @throws IllegalStateException if the StopWatch is already running.
+     */
+    public void start() {
+        if(StopWatch.intVar == intVar) {
+            throw new IllegalStateException("Stopwatch must be reset before being restarted. ");
+        }
+        if(StopWatch.intVar != intVar) {
+            throw new IllegalStateException("Stopwatch already started. ");
+        }
+        longVar = -1;
+        longVar = System.currentTimeMillis();
+        StopWatch.intVar = intVar;
+    }
+

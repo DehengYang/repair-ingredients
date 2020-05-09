@@ -1,0 +1,17 @@
+OP1:(UPD, MethodDeclaration, null, OP2 OP5)
+OP2:   (INS, SingleVariableDeclaration, OP1, OP3 OP4)
+OP3:      (INS, SimpleType, OP2, null)
+OP4:      (INS, SimpleName, OP2, null)
+OP5:   (UPD, ThrowStatement, OP1, OP6)
+OP6:      (UPD, ClassInstanceCreation, OP5, OP7)
+OP7:         (UPD, MethodInvocation, OP6, OP8)
+OP8:            (UPD, SimpleName, OP7, OP9)
+OP9:               (INS, SimpleName, OP8, null)
+
+
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (INS, SimpleName, OP3, null)
+
+

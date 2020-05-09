@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_114/src/com/google/javascript/jscomp/NameAnalyzer.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_114/src/com/google/javascript/jscomp/NameAnalyzer.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_114/src/com/google/javascript/jscomp/NameAnalyzer.java	2020-01-05 05:22:27.036871874 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_114/src/com/google/javascript/jscomp/NameAnalyzer.java	2020-01-05 05:22:30.064846584 -0800
+@@ -575,7 +575,7 @@
+           } else {
+             recordDepScope(nameNode, ns);
+           }
+-        } else {
++        } else if (!(parent.isCall() && parent.getFirstChild() == n)) {
+           // The rhs of the assignment is the caller, so it's used by the
+           // context. Don't associate it w/ the lhs.
+           // FYI: this fixes only the specific case where the assignment is the

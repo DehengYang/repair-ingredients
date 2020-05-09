@@ -1,0 +1,6 @@
+chunk1 : com.google.javascript.jscomp.TypeCheck:518-518
+fix ingredient(SameMethod)  varMapType:ori : (9)
+fix ingredient(SameMethod)  varMapType:0 : (9)
+fix ingredient(SameMethod)  varMapType:1 : (9)
+
+

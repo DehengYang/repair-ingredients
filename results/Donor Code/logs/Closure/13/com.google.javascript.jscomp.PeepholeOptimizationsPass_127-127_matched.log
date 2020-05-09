@@ -1,0 +1,122 @@
+---patch code ori--- com.google.javascript.jscomp.PeepholeOptimizationsPass <127, 127>
+traverse(c);
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.PeepholeOptimizationsPass <126, 126>
+traverse(c);
+
+---patch code 0--- com.google.javascript.jscomp.PeepholeOptimizationsPass <127, 127>
+traverse(Node);
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.PeepholeOptimizationsPass <126, 126>
+traverse(Node);
+
+---patch code 1--- com.google.javascript.jscomp.PeepholeOptimizationsPass <127, 127>
+traverse(Node);
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.PeepholeOptimizationsPass <126, 126>
+traverse(Node);
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.PeepholeOptimizationsPass <108, 108>
+traverse(Node);
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.PeepholeOptimizationsPass <108, 108>
+traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.NodeTraversal <456, 456>
+NodeTraversal.traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.NodeTraversal <456, 456>
+NodeTraversal.traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.NameReferenceGraphConstruction <96, 96>
+NodeTraversal.traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.NameReferenceGraphConstruction <96, 96>
+NodeTraversal.traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.NameReferenceGraphConstruction <97, 97>
+NodeTraversal.traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.NameReferenceGraphConstruction <97, 97>
+NodeTraversal.traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.TypeInference <130, 130>
+FlowScope = traverse(Node, FlowScope);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.TypeInference <130, 130>
+FlowScope = traverse(Node, FlowScope);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.TypeInference <602, 602>
+FlowScope = traverse(Node, FlowScope);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.TypeInference <602, 602>
+FlowScope = traverse(Node, FlowScope);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.TypeInference <751, 751>
+FlowScope = traverse(Node, FlowScope);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.TypeInference <751, 751>
+FlowScope = traverse(Node, FlowScope);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.TypeInference <1127, 1127>
+FlowScope = traverse(Node, FlowScope);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.TypeInference <1127, 1127>
+FlowScope = traverse(Node, FlowScope);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.TypeInference <1324, 1324>
+FlowScope = traverse(Node, FlowScope);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.TypeInference <1324, 1324>
+FlowScope = traverse(Node, FlowScope);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.ExternExportsPass <452, 452>
+new NodeTraversal(AbstractCompiler, this).traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.ExternExportsPass <452, 452>
+new NodeTraversal(AbstractCompiler, this).traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.ProcessClosurePrimitives <142, 142>
+new NodeTraversal(AbstractCompiler, this).traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.ProcessClosurePrimitives <142, 142>
+new NodeTraversal(AbstractCompiler, this).traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.TypeInference <762, 762>
+traverse(Node, FlowScope.createChildFlowScope());
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.TypeInference <762, 762>
+traverse(Node, FlowScope.createChildFlowScope());
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.TypeInference <765, 765>
+traverse(Node, FlowScope.createChildFlowScope());
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.TypeInference <765, 765>
+traverse(Node, FlowScope.createChildFlowScope());
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.CheckProvides <56, 56>
+new NodeTraversal(AbstractCompiler, CheckProvidesCallback).traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.CheckProvides <56, 56>
+new NodeTraversal(AbstractCompiler, CheckProvidesCallback).traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.FieldCleanupPass <49, 49>
+new NodeTraversal(AbstractCompiler, Callback).traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.FieldCleanupPass <49, 49>
+new NodeTraversal(AbstractCompiler, Callback).traverse(Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.TypeInference <160, 160>
+FlowScope FlowScope = traverse(Node, FlowScope.createChildFlowScope());
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.TypeInference <160, 160>
+FlowScope FlowScope = traverse(Node, FlowScope.createChildFlowScope());
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.TypeInference <232, 233>
+FlowScope =
+                    traverse(Node, FlowScope.createChildFlowScope());
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.TypeInference <232, 233>
+FlowScope =
+                    traverse(Node, FlowScope.createChildFlowScope());
+

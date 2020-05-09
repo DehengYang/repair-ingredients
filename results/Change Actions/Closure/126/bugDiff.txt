@@ -1,0 +1,15 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_126/src/com/google/javascript/jscomp/MinimizeExitPoints.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_126/src/com/google/javascript/jscomp/MinimizeExitPoints.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_126/src/com/google/javascript/jscomp/MinimizeExitPoints.java	2020-01-05 05:23:39.084270126 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_126/src/com/google/javascript/jscomp/MinimizeExitPoints.java	2020-01-05 05:23:42.092245004 -0800
+@@ -138,10 +138,6 @@
+        * can cause problems if it changes the completion type of the finally
+        * block. See ECMA 262 Sections 8.9 & 12.14
+        */
+-      if (NodeUtil.hasFinally(n)) {
+-        Node finallyBlock = n.getLastChild();
+-        tryMinimizeExits(finallyBlock, exitType, labelName);
+-      }
+     }
+ 
+     // Just a 'label'.

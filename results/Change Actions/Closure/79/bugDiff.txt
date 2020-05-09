@@ -1,0 +1,24 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_79/src/com/google/javascript/jscomp/Normalize.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_79/src/com/google/javascript/jscomp/Normalize.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_79/src/com/google/javascript/jscomp/Normalize.java	2020-01-05 05:19:38.162282331 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_79/src/com/google/javascript/jscomp/Normalize.java	2020-01-05 05:19:40.150265728 -0800
+@@ -119,7 +119,7 @@
+   public void process(Node externs, Node root) {
+     new NodeTraversal(
+         compiler, new NormalizeStatements(compiler, assertOnChange))
+-        .traverse(root);
++        .traverseRoots(externs, root);
+     if (MAKE_LOCAL_NAMES_UNIQUE) {
+       MakeDeclaredNamesUnique renamer = new MakeDeclaredNamesUnique();
+       NodeTraversal t = new NodeTraversal(compiler, renamer);
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_79/src/com/google/javascript/jscomp/VarCheck.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_79/src/com/google/javascript/jscomp/VarCheck.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_79/src/com/google/javascript/jscomp/VarCheck.java	2020-01-05 05:19:38.162282331 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_79/src/com/google/javascript/jscomp/VarCheck.java	2020-01-05 05:19:40.150265728 -0800
+@@ -218,6 +218,7 @@
+     getSynthesizedExternsRoot().addChildToBack(
+         new Node(Token.VAR, nameNode));
+     varsToDeclareInExterns.remove(varName);
++    compiler.reportCodeChange();
+   }
+ 
+   /**

@@ -1,0 +1,35 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_87/src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_87/src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_87/src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java	2020-01-05 05:20:10.086015701 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_87/src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java	2020-01-05 05:20:12.133998597 -0800
+@@ -520,17 +520,29 @@
+     if (n.getType() == Token.BLOCK) {
+       if (n.hasOneChild()) {
+         Node maybeExpr = n.getFirstChild();
++        if (maybeExpr.getType() == Token.EXPR_RESULT) {
+           // IE has a bug where event handlers behave differently when
+           // their return value is used vs. when their return value is in
+           // an EXPR_RESULT. It's pretty freaking weird. See:
+           // http://code.google.com/p/closure-compiler/issues/detail?id=291
+           // We try to detect this case, and not fold EXPR_RESULTs
+           // into other expressions.
++          if (maybeExpr.getFirstChild().getType() == Token.CALL) {
++            Node calledFn = maybeExpr.getFirstChild().getFirstChild();
+ 
+             // We only have to worry about methods with an implicit 'this'
+             // param, or this doesn't happen.
++            if (calledFn.getType() == Token.GETELEM) {
++              return false;
++            } else if (calledFn.getType() == Token.GETPROP &&
++                       calledFn.getLastChild().getString().startsWith("on")) {
++              return false;
++            }
++          }
+ 
+-          return NodeUtil.isExpressionNode(maybeExpr);
++          return true;
++        }
++        return false;
+       }
+     }
+ 

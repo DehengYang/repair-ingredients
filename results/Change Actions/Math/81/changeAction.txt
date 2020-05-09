@@ -1,0 +1,25 @@
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, MethodInvocation, OP2, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, OP8 OP9)
+OP8:            (INS, SimpleName, OP7, null)
+OP9:            (INS, SimpleName, OP7, null)
+
+
+OP1:(UPD, ForStatement, null, OP2 OP5)
+OP2:   (UPD, InfixExpression, OP1, OP3)
+OP3:      (UPD, InfixExpression, OP2, OP4)
+OP4:         (UPD, NumberLiteral, OP3, null)
+OP5:   (UPD, IfStatement, OP1, OP6)
+OP6:      (UPD, InfixExpression, OP5, OP7)
+OP7:         (UPD, Operator, OP6, null)
+
+
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (UPD, InfixExpression, OP1, OP3)
+OP3:      (UPD, NumberLiteral, OP2, null)
+
+

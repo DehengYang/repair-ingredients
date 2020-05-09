@@ -1,0 +1,42 @@
+---patch code ori--- org.apache.commons.math.optimization.linear.SimplexTableau <277, 279>
+if (!MathUtils.equals(getEntry(i, col), 0.0, epsilon)) {
+                return null;
+            }
+
+---fix ingredient(SameMethod)  varMapType:ori--- org.apache.commons.math.optimization.linear.SimplexTableau <275, 281>
+if (!MathUtils.equals(getEntry(i, col), 0.0, epsilon)) {
+                if (row == null) {
+                row = i;
+                } else {
+                return null;
+                }
+            }
+
+---patch code 0--- org.apache.commons.math.optimization.linear.SimplexTableau <277, 279>
+if (!MathUtils.equals(getEntry(intVar, intVar), 0.0, doubleVar)) {
+                return null;
+            }
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.math.optimization.linear.SimplexTableau <275, 281>
+if (!MathUtils.equals(getEntry(intVar, intVar), 0.0, doubleVar)) {
+                if (int == null) {
+                int = intVar;
+                } else {
+                return null;
+                }
+            }
+
+---patch code 1--- org.apache.commons.math.optimization.linear.SimplexTableau <277, 279>
+if (!MathUtils.equals(getEntry(i, col), 0.0, epsilon)) {
+                return null;
+            }
+
+---fix ingredient(SameMethod)  varMapType:1--- org.apache.commons.math.optimization.linear.SimplexTableau <275, 281>
+if (!MathUtils.equals(getEntry(i, col), 0.0, epsilon)) {
+                if (row == null) {
+                row = i;
+                } else {
+                return null;
+                }
+            }
+

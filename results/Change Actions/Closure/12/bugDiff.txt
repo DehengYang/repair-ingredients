@@ -1,0 +1,17 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_12/src/com/google/javascript/jscomp/MaybeReachingVariableUse.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_12/src/com/google/javascript/jscomp/MaybeReachingVariableUse.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_12/src/com/google/javascript/jscomp/MaybeReachingVariableUse.java	2020-01-05 05:15:41.340260293 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_12/src/com/google/javascript/jscomp/MaybeReachingVariableUse.java	2020-01-05 05:15:42.540250272 -0800
+@@ -157,6 +157,12 @@
+   }
+ 
+   private boolean hasExceptionHandler(Node cfgNode) {
++    List<DiGraphEdge<Node, Branch>> branchEdges = getCfg().getOutEdges(cfgNode);
++    for (DiGraphEdge<Node, Branch> edge : branchEdges) {
++      if (edge.getValue() == Branch.ON_EX) {
++        return true;
++      }
++    }
+     return false;
+   }
+ 

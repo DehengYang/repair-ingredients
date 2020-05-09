@@ -1,0 +1,48 @@
+---patch code 0--- org.apache.commons.lang.ClassUtils <216, 216>
+return StringVar + StringBuffer;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.CompositeFormat <70, 70>
+return Format.format(Object, StringBuffer, FieldPosition);
+
+---patch code 1--- org.apache.commons.lang.ClassUtils <216, 216>
+return out + StringBuffer;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.CompositeFormat <70, 70>
+return Format.format(Object, StringBuffer, FieldPosition);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringBuilder <1022, 1022>
+return StringBuffer;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.builder.ToStringBuilder <1022, 1022>
+return StringBuffer;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <892, 892>
+return StringBuffer;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.time.FastDateFormat <892, 892>
+return StringBuffer;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <791, 791>
+return format((Date) Object, StringBuffer);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.time.FastDateFormat <791, 791>
+return format((Date) Object, StringBuffer);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <793, 793>
+return format((Calendar) Object, StringBuffer);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.time.FastDateFormat <793, 793>
+return format((Calendar) Object, StringBuffer);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <859, 859>
+return applyRules(Calendar, StringBuffer);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.time.FastDateFormat <859, 859>
+return applyRules(Calendar, StringBuffer);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <875, 875>
+return applyRules(Calendar, StringBuffer);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.time.FastDateFormat <875, 875>
+return applyRules(Calendar, StringBuffer);
+

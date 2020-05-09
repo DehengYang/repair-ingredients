@@ -1,0 +1,22 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_24/src/main/java/org/apache/commons/math3/optimization/univariate/BrentOptimizer.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_24/src/main/java/org/apache/commons/math3/optimization/univariate/BrentOptimizer.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_24/src/main/java/org/apache/commons/math3/optimization/univariate/BrentOptimizer.java	2020-01-05 06:33:10.861427016 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_24/src/main/java/org/apache/commons/math3/optimization/univariate/BrentOptimizer.java	2020-01-05 06:33:14.333398018 -0800
+@@ -227,7 +227,7 @@
+ 
+                 if (checker != null) {
+                     if (checker.converged(iter, previous, current)) {
+-                        return current;
++                        return best(current, previous, isMinim);
+                     }
+                 }
+ 
+@@ -264,7 +264,7 @@
+                     }
+                 }
+             } else { // Default termination (Brent's criterion).
+-                return current;
++                return best(current, previous, isMinim);
+             }
+             ++iter;
+         }

@@ -1,0 +1,16 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_17/src/main/java/org/apache/commons/math3/dfp/Dfp.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_17/src/main/java/org/apache/commons/math3/dfp/Dfp.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_17/src/main/java/org/apache/commons/math3/dfp/Dfp.java	2020-01-05 06:32:21.101842613 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_17/src/main/java/org/apache/commons/math3/dfp/Dfp.java	2020-01-05 06:32:24.609813315 -0800
+@@ -1600,7 +1600,11 @@
+      * @return product of this and x
+      */
+     public Dfp multiply(final int x) {
++        if (x >= 0 && x < RADIX) {
+             return multiplyFast(x);
++        } else {
++            return multiply(newInstance(x));
++        }
+     }
+ 
+     /** Multiply this by a single digit 0&lt;=x&lt;radix.

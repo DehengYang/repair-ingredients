@@ -1,0 +1,27 @@
+---patch code ori--- org.apache.commons.math.util.MathUtils <417, 417>
+return equals(x, y, 1);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.util.MathUtils <442, 442>
+return equals(x, y, 1) || FastMath.abs(y - x) <= eps;
+
+---patch code 0--- org.apache.commons.math.util.MathUtils <417, 417>
+return equals(doubleVar, doubleVar, 1);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.util.MathUtils <442, 442>
+return equals(doubleVar, doubleVar, 1) || FastMath.abs(doubleVar - doubleVar) <= doubleVar;
+
+---patch code 1--- org.apache.commons.math.util.MathUtils <417, 417>
+return equals(x, y, 1);
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:1--- org.apache.commons.math.util.MathUtils <442, 442>
+return equals(x, y, 1) || FastMath.abs(y - x) <= eps;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.util.MathUtils <429, 429>
+return (Double.isNaN(x) && Double.isNaN(y)) || equals(x, y, 1);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.util.MathUtils <429, 429>
+return (Double.isNaN(doubleVar) && Double.isNaN(doubleVar)) || equals(doubleVar, doubleVar, 1);
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:1--- org.apache.commons.math.util.MathUtils <429, 429>
+return (Double.isNaN(x) && Double.isNaN(y)) || equals(x, y, 1);
+

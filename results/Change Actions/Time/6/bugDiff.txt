@@ -1,0 +1,51 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_6/src/main/java/org/joda/time/chrono/GJChronology.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_6/src/main/java/org/joda/time/chrono/GJChronology.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_6/src/main/java/org/joda/time/chrono/GJChronology.java	2020-01-05 22:47:18.760547329 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_6/src/main/java/org/joda/time/chrono/GJChronology.java	2020-01-05 22:47:20.100547324 -0800
+@@ -193,6 +193,10 @@
+             cutoverInstant = DEFAULT_CUTOVER;
+         } else {
+             cutoverInstant = gregorianCutover.toInstant();
++            LocalDate cutoverDate = new LocalDate(cutoverInstant.getMillis(), GregorianChronology.getInstance(zone));
++            if (cutoverDate.getYear() <= 0) {
++                throw new IllegalArgumentException("Cutover too early. Must be on or after 0001-01-01.");
++            }
+         }
+ 
+         GJChronology chrono;
+@@ -976,6 +980,17 @@
+                 if (instant < iCutover) {
+                     // Only adjust if gap fully crossed.
+                     if (instant + iGapDuration < iCutover) {
++                        if (iConvertByWeekyear) {
++                            int wyear = iGregorianChronology.weekyear().get(instant);
++                            if (wyear <= 0) {
++                                instant = iGregorianChronology.weekyear().add(instant, -1);
++                            }
++                        } else {
++                            int year = iGregorianChronology.year().get(instant);
++                            if (year <= 0) {
++                                instant = iGregorianChronology.year().add(instant, -1);
++                            }
++                        }
+                         instant = gregorianToJulian(instant);
+                     }
+                 }
+@@ -998,6 +1013,17 @@
+                 if (instant < iCutover) {
+                     // Only adjust if gap fully crossed.
+                     if (instant + iGapDuration < iCutover) {
++                        if (iConvertByWeekyear) {
++                            int wyear = iGregorianChronology.weekyear().get(instant);
++                            if (wyear <= 0) {
++                                instant = iGregorianChronology.weekyear().add(instant, -1);
++                            }
++                        } else {
++                            int year = iGregorianChronology.year().get(instant);
++                            if (year <= 0) {
++                                instant = iGregorianChronology.year().add(instant, -1);
++                            }
++                        }
+                         instant = gregorianToJulian(instant);
+                     }
+                 }

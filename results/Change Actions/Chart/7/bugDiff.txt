@@ -1,0 +1,16 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_7/source/org/jfree/data/time/TimePeriodValues.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_7/source/org/jfree/data/time/TimePeriodValues.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_7/source/org/jfree/data/time/TimePeriodValues.java	2020-01-04 01:53:29.176245438 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_7/source/org/jfree/data/time/TimePeriodValues.java	2020-01-04 01:53:31.372181434 -0800
+@@ -297,9 +297,9 @@
+         }
+         
+         if (this.maxMiddleIndex >= 0) {
+-            long s = getDataItem(this.minMiddleIndex).getPeriod().getStart()
++            long s = getDataItem(this.maxMiddleIndex).getPeriod().getStart()
+                 .getTime();
+-            long e = getDataItem(this.minMiddleIndex).getPeriod().getEnd()
++            long e = getDataItem(this.maxMiddleIndex).getPeriod().getEnd()
+                 .getTime();
+             long maxMiddle = s + (e - s) / 2;
+             if (middle > maxMiddle) {

@@ -1,0 +1,136 @@
+---patch code ori--- org.apache.commons.math.complex.Complex <258, 258>
+ret = (real == rhs.real) && (imaginary == rhs.imaginary);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.complex.Complex <310, 310>
+return Double.isNaN(real) || Double.isNaN(imaginary);
+
+---patch code 1--- org.apache.commons.math.complex.Complex <258, 258>
+ret = (real == Complex.real) && (imaginary == Complex.imaginary);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.complex.Complex <310, 310>
+return Double.isNaN(real) || Double.isNaN(imaginary);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.complex.Complex <358, 362>
+if (Double.isInfinite(real) || Double.isInfinite(imaginary) ||
+            Double.isInfinite(rhs.real)|| Double.isInfinite(rhs.imaginary)) {
+            // we don't use Complex.isInfinite() to avoid testing for NaN again
+            return INF;
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.complex.Complex <358, 362>
+if (Double.isInfinite(real) || Double.isInfinite(imaginary) ||
+            Double.isInfinite(Complex.real)|| Double.isInfinite(Complex.imaginary)) {
+            // we don't use Complex.isInfinite() to avoid testing for NaN again
+            return Complex;
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.complex.Complex <323, 324>
+return !isNaN() && 
+        (Double.isInfinite(real) || Double.isInfinite(imaginary));
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.complex.Complex <323, 324>
+return !isNaN() && 
+        (Double.isInfinite(real) || Double.isInfinite(imaginary));
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.complex.Complex <872, 872>
+return new Complex(real, imaginary);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.complex.Complex <872, 872>
+return new Complex(real, imaginary);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.complex.Complex <155, 155>
+return createComplex(real, -imaginary);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.complex.Complex <155, 155>
+return createComplex(real, -imaginary);
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.complex.Complex <258, 258>
+ret = (Double.doubleToRawLongBits(real) == Double.doubleToRawLongBits(rhs.getReal())) && (Double.doubleToRawLongBits(imaginary) == Double.doubleToRawLongBits(rhs.getImaginary()));
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.complex.Complex <258, 258>
+ret = (Double.doubleToRawLongBits(real) == Double.doubleToRawLongBits(Complex.getReal())) && (Double.doubleToRawLongBits(imaginary) == Double.doubleToRawLongBits(Complex.getImaginary()));
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.complex.Complex <210, 210>
+return createComplex(real/c, imaginary/c);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.complex.Complex <210, 210>
+return createComplex(real/c, imaginary/c);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.complex.Complex <544, 545>
+return createComplex(MathUtils.cosh(real) * Math.cos(imaginary),
+            MathUtils.sinh(real) * Math.sin(imaginary));
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.complex.Complex <544, 545>
+return createComplex(MathUtils.cosh(real) * Math.cos(imaginary),
+            MathUtils.sinh(real) * Math.sin(imaginary));
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.complex.Complex <676, 677>
+return createComplex(Math.sin(real) * MathUtils.cosh(imaginary),
+            Math.cos(real) * MathUtils.sinh(imaginary));
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.complex.Complex <676, 677>
+return createComplex(Math.sin(real) * MathUtils.cosh(imaginary),
+            Math.cos(real) * MathUtils.sinh(imaginary));
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.complex.Complex <710, 711>
+return createComplex(MathUtils.sinh(real) * Math.cos(imaginary),
+            MathUtils.cosh(real) * Math.sin(imaginary));
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.complex.Complex <710, 711>
+return createComplex(MathUtils.sinh(real) * Math.cos(imaginary),
+            MathUtils.cosh(real) * Math.sin(imaginary));
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.complex.Complex <510, 511>
+return createComplex(Math.cos(real) * MathUtils.cosh(imaginary),
+            -Math.sin(real) * MathUtils.sinh(imaginary));
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.complex.Complex <510, 511>
+return createComplex(Math.cos(real) * MathUtils.cosh(imaginary),
+            -Math.sin(real) * MathUtils.sinh(imaginary));
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.complex.Complex <363, 364>
+return createComplex(real * rhs.real - imaginary * rhs.imaginary,
+                real * rhs.imaginary + imaginary * rhs.real);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.complex.Complex <363, 364>
+return createComplex(real * Complex.real - imaginary * Complex.imaginary,
+                real * Complex.imaginary + imaginary * Complex.real);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.complex.Complex <214, 215>
+return createComplex((real * q + imaginary) / denominator,
+                (imaginary * q - real) / denominator);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.complex.Complex <214, 215>
+return createComplex((real * q + imaginary) / denominator,
+                (imaginary * q - real) / denominator);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.complex.Complex <100, 112>
+if (Math.abs(real) < Math.abs(imaginary)) {
+            if (imaginary == 0.0) {
+                return Math.abs(real);
+            }
+            double q = real / imaginary;
+            return (Math.abs(imaginary) * Math.sqrt(1 + q*q));
+        } else {
+            if (real == 0.0) {
+                return Math.abs(imaginary);
+            }
+            double q = imaginary / real;
+            return (Math.abs(real) * Math.sqrt(1 + q*q));
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.complex.Complex <100, 112>
+if (Math.abs(real) < Math.abs(imaginary)) {
+            if (imaginary == 0.0) {
+                return Math.abs(real);
+            }
+            double q = real / imaginary;
+            return (Math.abs(imaginary) * Math.sqrt(1 + q*q));
+        } else {
+            if (real == 0.0) {
+                return Math.abs(imaginary);
+            }
+            double q = imaginary / real;
+            return (Math.abs(real) * Math.sqrt(1 + q*q));
+        }
+

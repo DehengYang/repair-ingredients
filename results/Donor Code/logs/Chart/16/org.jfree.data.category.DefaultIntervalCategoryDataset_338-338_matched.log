@@ -1,0 +1,60 @@
+---patch code ori--- org.jfree.data.category.DefaultIntervalCategoryDataset <338, 341>
+if (categoryKeys.length != getCategoryCount()) {
+            throw new IllegalArgumentException(
+                    "The number of categories does not match the data.");
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.category.DefaultIntervalCategoryDataset <438, 442>
+if ((category < 0) || (category >= getCategoryCount())) {
+            throw new IllegalArgumentException(
+                "DefaultIntervalCategoryDataset.getValue(): "
+                + "category index out of range.");
+        }
+
+---patch code 0--- org.jfree.data.category.DefaultIntervalCategoryDataset <338, 341>
+if (Comparable[]Var.length != getCategoryCount()) {
+            throw new IllegalArgumentException(
+                    "The number of categories does not match the data.");
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.jfree.data.category.DefaultIntervalCategoryDataset <438, 442>
+if ((intVar < 0) || (intVar >= getCategoryCount())) {
+            throw new IllegalArgumentException(
+                "DefaultIntervalCategoryDataset.getValue(): "
+                + "category index out of range.");
+        }
+
+---patch code 1--- org.jfree.data.category.DefaultIntervalCategoryDataset <338, 341>
+if (categoryKeys.length != getCategoryCount()) {
+            throw new IllegalArgumentException(
+                    "The number of categories does not match the data.");
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.jfree.data.category.DefaultIntervalCategoryDataset <438, 442>
+if ((category < 0) || (category >= getCategoryCount())) {
+            throw new IllegalArgumentException(
+                "DefaultIntervalCategoryDataset.getValue(): "
+                + "category index out of range.");
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.jfree.data.category.DefaultIntervalCategoryDataset <488, 492>
+if ((category < 0) || (category >= getCategoryCount())) {
+            throw new IllegalArgumentException(
+                "DefaultIntervalCategoryDataset.getValue(): "
+                + "category index out of range.");
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.jfree.data.category.DefaultIntervalCategoryDataset <488, 492>
+if ((intVar < 0) || (intVar >= getCategoryCount())) {
+            throw new IllegalArgumentException(
+                "DefaultIntervalCategoryDataset.getValue(): "
+                + "category index out of range.");
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.jfree.data.category.DefaultIntervalCategoryDataset <488, 492>
+if ((category < 0) || (category >= getCategoryCount())) {
+            throw new IllegalArgumentException(
+                "DefaultIntervalCategoryDataset.getValue(): "
+                + "category index out of range.");
+        }
+

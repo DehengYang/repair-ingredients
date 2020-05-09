@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_33/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_33/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_33/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java	2020-01-05 06:34:14.692893889 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_33/src/main/java/org/apache/commons/math3/optimization/linear/SimplexTableau.java	2020-01-05 06:34:18.296863788 -0800
+@@ -335,7 +335,7 @@
+         // positive cost non-artificial variables
+         for (int i = getNumObjectiveFunctions(); i < getArtificialVariableOffset(); i++) {
+             final double entry = tableau.getEntry(0, i);
+-            if (Precision.compareTo(entry, 0d, maxUlps) > 0) {
++            if (Precision.compareTo(entry, 0d, epsilon) > 0) {
+                 columnsToDrop.add(i);
+             }
+         }

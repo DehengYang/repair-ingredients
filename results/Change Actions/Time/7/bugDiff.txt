@@ -1,0 +1,15 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_7/src/main/java/org/joda/time/format/DateTimeFormatter.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_7/src/main/java/org/joda/time/format/DateTimeFormatter.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_7/src/main/java/org/joda/time/format/DateTimeFormatter.java	2020-01-05 22:47:21.532547318 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_7/src/main/java/org/joda/time/format/DateTimeFormatter.java	2020-01-05 22:47:23.048547312 -0800
+@@ -705,9 +705,9 @@
+         
+         long instantMillis = instant.getMillis();
+         Chronology chrono = instant.getChronology();
++        int defaultYear = DateTimeUtils.getChronology(chrono).year().get(instantMillis);
+         long instantLocal = instantMillis + chrono.getZone().getOffset(instantMillis);
+         chrono = selectChronology(chrono);
+-        int defaultYear = chrono.year().get(instantLocal);
+         
+         DateTimeParserBucket bucket = new DateTimeParserBucket(
+             instantLocal, chrono, iLocale, iPivotYear, defaultYear);

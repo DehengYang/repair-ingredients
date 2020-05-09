@@ -1,0 +1,6 @@
+chunk1 : org.jfree.chart.axis.Axis:1192-1192
+fix ingredient  varMapType:0 : (3)
+fix ingredient  varMapType:1 : (3)
+fix ingredient  varMapType:ori : (1)
+
+

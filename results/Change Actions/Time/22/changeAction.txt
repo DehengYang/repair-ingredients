@@ -1,0 +1,58 @@
+OP1:(DEL, ConstructorInvocation, null, OP2 OP3 OP4)
+OP2:   (DEL, SimpleName, OP1, null)
+OP3:   (DEL, NullLiteral, OP1, null)
+OP4:   (DEL, NullLiteral, OP1, null)
+
+
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, MethodInvocation, OP2, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, null)
+
+
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP4)
+OP2:   (INS, ArrayType, OP1, OP3)
+OP3:      (INS, PrimitiveType, OP2, null)
+OP4:   (INS, VariableDeclarationFragment, OP1, OP5 OP6)
+OP5:      (INS, SimpleName, OP4, null)
+OP6:      (INS, MethodInvocation, OP4, OP7 OP8 OP9)
+OP7:         (INS, SimpleName, OP6, null)
+OP8:         (INS, MethodInvocation, OP6, null)
+OP9:         (INS, SimpleName, OP6, OP10 OP11)
+OP10:            (INS, ThisExpression, OP9, null)
+OP11:            (INS, SimpleName, OP9, null)
+
+
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, MethodInvocation, OP2, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, null)
+
+
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, ArrayCreation, OP2, OP6 OP8)
+OP6:         (INS, ArrayType, OP5, OP7)
+OP7:            (INS, PrimitiveType, OP6, null)
+OP8:         (INS, NumberLiteral, OP5, null)
+
+
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, OP3 OP4)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, SimpleName, OP2, OP5 OP6 OP7 OP8 OP9)
+OP5:         (INS, SimpleName, OP4, null)
+OP6:         (INS, NumberLiteral, OP4, null)
+OP7:         (INS, SimpleName, OP4, null)
+OP8:         (INS, NumberLiteral, OP4, null)
+OP9:         (INS, NumberLiteral, OP4, null)
+
+

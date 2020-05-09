@@ -1,0 +1,141 @@
+---patch code ori--- com.google.javascript.jscomp.Compiler <1461, 1461>
+return toSource(n, null, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.NodeUtil <1321, 1321>
+return mayBeString(n, true);
+
+---patch code 0--- com.google.javascript.jscomp.Compiler <1461, 1461>
+return toSource(Node, null, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NodeUtil <1321, 1321>
+return mayBeString(Node, true);
+
+---patch code 1--- com.google.javascript.jscomp.Compiler <1461, 1461>
+return toSource(Node, null, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.NodeUtil <1321, 1321>
+return mayBeString(Node, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.PeepholeRemoveDeadCode <145, 145>
+return trySimpilifyUnusedResult(n, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeRemoveDeadCode <145, 145>
+return trySimpilifyUnusedResult(Node, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.PeepholeRemoveDeadCode <145, 145>
+return trySimpilifyUnusedResult(Node, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax <882, 884>
+if (n.getChildCount() < 3) {
+            return true;
+          }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax <882, 884>
+if (Node.getChildCount() < 3) {
+            return true;
+          }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax <882, 884>
+if (Node.getChildCount() < 3) {
+            return true;
+          }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.NodeUtil <773, 775>
+if (n.getFirstChild() != null) {
+          return true;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NodeUtil <773, 775>
+if (Node.getFirstChild() != null) {
+          return true;
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.NodeUtil <773, 775>
+if (Node.getFirstChild() != null) {
+          return true;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.jstype.JSTypeRegistry <1350, 1352>
+if (n.getType() == Token.STRING) {
+      return true;
+    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.JSTypeRegistry <1350, 1352>
+if (Node.getType() == Token.STRING) {
+      return true;
+    }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.rhino.jstype.JSTypeRegistry <1350, 1352>
+if (Node.getType() == Token.STRING) {
+      return true;
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.DefinitionsRemover <81, 83>
+if (!n.getString().equals("")) {
+        return true;
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.DefinitionsRemover <81, 83>
+if (!Node.getString().equals("")) {
+        return true;
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.DefinitionsRemover <81, 83>
+if (!Node.getString().equals("")) {
+        return true;
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.NodeUtil <1012, 1014>
+if (isAssignmentOp(n)) {
+      return true;
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NodeUtil <1012, 1014>
+if (isAssignmentOp(Node)) {
+      return true;
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.NodeUtil <1012, 1014>
+if (isAssignmentOp(Node)) {
+      return true;
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.PeepholeRemoveDeadCode <576, 581>
+switch (n.getFirstChild().getType()) {
+        case Token.HOOK:
+        case Token.AND:
+        case Token.OR:
+          return true;
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeRemoveDeadCode <576, 581>
+switch (Node.getFirstChild().getType()) {
+        case Token.HOOK:
+        case Token.AND:
+        case Token.OR:
+          return true;
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.PeepholeRemoveDeadCode <576, 581>
+switch (Node.getFirstChild().getType()) {
+        case Token.HOOK:
+        case Token.AND:
+        case Token.OR:
+          return true;
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.NameReferenceGraphConstruction <351, 353>
+if (NodeUtil.isName(n)) {
+        return true;
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NameReferenceGraphConstruction <351, 353>
+if (NodeUtil.isName(Node)) {
+        return true;
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.NameReferenceGraphConstruction <351, 353>
+if (NodeUtil.isName(Node)) {
+        return true;
+      }
+

@@ -1,0 +1,24 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_12/src/main/java/org/apache/commons/math3/random/BitsStreamGenerator.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_12/src/main/java/org/apache/commons/math3/random/BitsStreamGenerator.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_12/src/main/java/org/apache/commons/math3/random/BitsStreamGenerator.java	2020-01-05 06:31:45.290141716 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_12/src/main/java/org/apache/commons/math3/random/BitsStreamGenerator.java	2020-01-05 06:31:48.814112284 -0800
+@@ -16,6 +16,7 @@
+  */
+ package org.apache.commons.math3.random;
+ 
++import java.io.Serializable;
+ 
+ import org.apache.commons.math3.exception.NotStrictlyPositiveException;
+ import org.apache.commons.math3.util.FastMath;
+@@ -26,8 +27,10 @@
+  * @since 2.0
+  */
+ public abstract class BitsStreamGenerator
+-    implements RandomGenerator {
++    implements RandomGenerator,
++               Serializable {
+     /** Serializable version identifier */
++    private static final long serialVersionUID = 20130104L;
+     /** Next gaussian. */
+     private double nextGaussian;
+ 

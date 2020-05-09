@@ -1,0 +1,16 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_24/src/main/java/org/joda/time/format/DateTimeParserBucket.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_24/src/main/java/org/joda/time/format/DateTimeParserBucket.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_24/src/main/java/org/joda/time/format/DateTimeParserBucket.java	2020-01-05 22:48:11.308547128 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_24/src/main/java/org/joda/time/format/DateTimeParserBucket.java	2020-01-05 22:48:13.268547121 -0800
+@@ -352,6 +352,11 @@
+             for (int i = 0; i < count; i++) {
+                 millis = savedFields[i].set(millis, resetFields);
+             }
++            if (resetFields) {
++                for (int i = 0; i < count; i++) {
++                    millis = savedFields[i].set(millis, i == (count - 1));
++                }
++            }
+         } catch (IllegalFieldValueException e) {
+             if (text != null) {
+                 e.prependMessage("Cannot parse \"" + text + '"');

@@ -1,0 +1,36 @@
+---patch code ori--- org.jfree.data.KeyedObjects2D <319, 319>
+allNull = true;
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.data.DefaultKeyedValues2D <378, 378>
+allNull = true;
+
+---patch code 0--- org.jfree.data.KeyedObjects2D <319, 319>
+booleanVar = true;
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.data.DefaultKeyedValues2D <378, 378>
+booleanVar = true;
+
+---patch code 1--- org.jfree.data.KeyedObjects2D <319, 319>
+allNull = true;
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.data.DefaultKeyedValues2D <378, 378>
+allNull = true;
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:ori--- org.jfree.data.KeyedObjects2D <300, 300>
+boolean allNull = true;
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:0--- org.jfree.data.KeyedObjects2D <300, 300>
+boolean booleanVar = true;
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:1--- org.jfree.data.KeyedObjects2D <300, 300>
+boolean allNull = true;
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- org.jfree.data.DefaultKeyedValues2D <360, 360>
+boolean allNull = true;
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.jfree.data.DefaultKeyedValues2D <360, 360>
+boolean booleanVar = true;
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.jfree.data.DefaultKeyedValues2D <360, 360>
+boolean allNull = true;
+

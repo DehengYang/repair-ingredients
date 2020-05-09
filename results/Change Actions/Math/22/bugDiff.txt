@@ -1,0 +1,25 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/FDistribution.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/FDistribution.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/FDistribution.java	2020-01-05 06:32:56.657545649 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/FDistribution.java	2020-01-05 06:33:00.161516383 -0800
+@@ -272,7 +272,7 @@
+ 
+     /** {@inheritDoc} */
+     public boolean isSupportLowerBoundInclusive() {
+-        return true;
++        return false;
+     }
+ 
+     /** {@inheritDoc} */
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/UniformRealDistribution.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/UniformRealDistribution.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/UniformRealDistribution.java	2020-01-05 06:32:56.661545615 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/UniformRealDistribution.java	2020-01-05 06:33:00.161516383 -0800
+@@ -181,7 +181,7 @@
+ 
+     /** {@inheritDoc} */
+     public boolean isSupportUpperBoundInclusive() {
+-        return false;
++        return true;
+     }
+ 
+     /**

@@ -1,0 +1,71 @@
+---patch code 0--- com.google.javascript.jscomp.CodeConsumer <245, 247>
+if ((doubleVar < 0 || booleanVar) && charVar == '-') {
+      add(" ");
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TightenTypes <649, 653>
+if (booleanVar && ConcreteFunctionType.getInstanceType() != null) {
+                // We must assume all extern types are instantiated since they
+                // can be created by the browser itself.
+                allInstantiatedTypes.add(ConcreteFunctionType.getInstanceType());
+              }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.deps.JsFileParser <117, 141>
+if (StringVar.indexOf("provide") != -1 ||
+        StringVar.indexOf("require") != -1) {
+      // Iterate over the provides/requires.
+      Matcher.reset(StringVar);
+      while (Matcher.find()) {
+        booleanVar = true;
+
+        // See if it's a require or provide.
+        boolean isRequire = Matcher.group(1).charAt(0) == 'r';
+        // Parse the param.
+        String arg = parseJsString(Matcher.group(2));
+
+        // Add the dependency.
+        if (isRequire) {
+          // goog is always implicit.
+          // TODO(nicksantos): I'm pretty sure we don't need this anymore.
+          // Remove this later.
+          if (!"goog".equals(arg)) {
+            ListVar.add(arg);
+          }
+        } else {
+          ListVar.add(arg);
+        }
+      }
+    }
+
+---patch code 1--- com.google.javascript.jscomp.CodeConsumer <245, 247>
+if ((x < 0 || negativeZero) && prev == '-') {
+      add(" ");
+    }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.deps.JsFileParser <117, 141>
+if (line.indexOf("provide") != -1 ||
+        line.indexOf("require") != -1) {
+      // Iterate over the provides/requires.
+      Matcher.reset(line);
+      while (Matcher.find()) {
+        hasProvidesOrRequires = true;
+
+        // See if it's a require or provide.
+        boolean isRequire = Matcher.group(1).charAt(0) == 'r';
+        // Parse the param.
+        String arg = parseJsString(Matcher.group(2));
+
+        // Add the dependency.
+        if (isRequire) {
+          // goog is always implicit.
+          // TODO(nicksantos): I'm pretty sure we don't need this anymore.
+          // Remove this later.
+          if (!"goog".equals(arg)) {
+            requires.add(arg);
+          }
+        } else {
+          provides.add(arg);
+        }
+      }
+    }
+

@@ -1,0 +1,19 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_96/src/com/google/javascript/jscomp/TypeCheck.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_96/src/com/google/javascript/jscomp/TypeCheck.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_96/src/com/google/javascript/jscomp/TypeCheck.java	2020-01-05 05:20:43.985732567 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_96/src/com/google/javascript/jscomp/TypeCheck.java	2020-01-05 05:20:45.985715863 -0800
+@@ -1406,10 +1406,13 @@
+     Node parameter = null;
+     Node argument = null;
+     while (arguments.hasNext() &&
+-           parameters.hasNext()) {
++           (parameters.hasNext() ||
++            parameter != null && parameter.isVarArgs())) {
+       // If there are no parameters left in the list, then the while loop
+       // above implies that this must be a var_args function.
++      if (parameters.hasNext()) {
+         parameter = parameters.next();
++      }
+       argument = arguments.next();
+       ordinal++;
+ 

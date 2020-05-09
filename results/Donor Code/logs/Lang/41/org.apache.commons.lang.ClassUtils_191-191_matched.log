@@ -1,0 +1,198 @@
+---patch code 0--- org.apache.commons.lang.ClassUtils <191, 191>
+StringBuffer StringBuffer = new StringBuffer();
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.text.ExtendedMessageFormat <152, 152>
+StringBuffer StringBuffer = new StringBuffer(StringVar.length());
+
+---patch code 1--- org.apache.commons.lang.ClassUtils <191, 191>
+StringBuffer StringBuffer = new StringBuffer();
+
+---fix ingredient  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.text.ExtendedMessageFormat <152, 152>
+StringBuffer StringBuffer = new StringBuffer(pattern.length());
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.text.ExtendedMessageFormat <279, 279>
+StringBuffer StringBuffer = new StringBuffer();
+
+---fix ingredient  varMapType:1--- org.apache.commons.lang.text.ExtendedMessageFormat <279, 279>
+StringBuffer StringBuffer = new StringBuffer();
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.ClassUtils <843, 843>
+StringBuffer StringBuffer = new StringBuffer();
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang.ClassUtils <843, 843>
+StringBuffer StringBuffer = new StringBuffer();
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.lang.WordUtils <629, 629>
+StringBuffer StringBuffer = new StringBuffer();
+
+---fix ingredient(SamePackage)  varMapType:1--- org.apache.commons.lang.WordUtils <629, 629>
+StringBuffer StringBuffer = new StringBuffer();
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.CharSetUtils <94, 94>
+StringBuffer StringBuffer = new StringBuffer(StringVar.length());
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.CharSetUtils <94, 94>
+StringBuffer StringBuffer = new StringBuffer(str.length());
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.CharSetUtils <292, 292>
+StringBuffer StringBuffer = new StringBuffer(StringVar.length());
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.CharSetUtils <292, 292>
+StringBuffer StringBuffer = new StringBuffer(str.length());
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <708, 708>
+StringBuffer StringBuffer = new StringBuffer();
+
+---fix ingredient  varMapType:1--- org.apache.commons.lang.time.FastDateFormat <708, 708>
+StringBuffer StringBuffer = new StringBuffer();
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <423, 423>
+StringBuffer StringBuffer = new StringBuffer();
+
+---fix ingredient  varMapType:1--- org.apache.commons.lang.time.DurationFormatUtils <423, 423>
+StringBuffer StringBuffer = new StringBuffer();
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.lang.ObjectUtils <161, 161>
+StringBuffer StringBuffer = new StringBuffer();
+
+---fix ingredient(SamePackage)  varMapType:1--- org.apache.commons.lang.ObjectUtils <161, 161>
+StringBuffer StringBuffer = new StringBuffer();
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.ClassUtils <1010, 1010>
+StringBuffer StringBuffer = new StringBuffer(StringVar);
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.ClassUtils <1010, 1010>
+StringBuffer StringBuffer = new StringBuffer(className);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.WordUtils <281, 281>
+StringBuffer StringBuffer = new StringBuffer(intVar);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.WordUtils <281, 281>
+StringBuffer StringBuffer = new StringBuffer(strLen);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.WordUtils <411, 411>
+StringBuffer StringBuffer = new StringBuffer(intVar);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.WordUtils <411, 411>
+StringBuffer StringBuffer = new StringBuffer(strLen);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.WordUtils <457, 457>
+StringBuffer StringBuffer = new StringBuffer(intVar);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.WordUtils <457, 457>
+StringBuffer StringBuffer = new StringBuffer(strLen);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <2812, 2812>
+StringBuffer StringBuffer = new StringBuffer(intVar);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.StringUtils <2812, 2812>
+StringBuffer StringBuffer = new StringBuffer(bufSize);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <2901, 2901>
+StringBuffer StringBuffer = new StringBuffer(intVar);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.StringUtils <2901, 2901>
+StringBuffer StringBuffer = new StringBuffer(bufSize);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <3738, 3738>
+StringBuffer StringBuffer = new StringBuffer(intVar);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.StringUtils <3738, 3738>
+StringBuffer StringBuffer = new StringBuffer(strLength);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <4012, 4012>
+StringBuffer StringBuffer = new StringBuffer(intVar);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.StringUtils <4012, 4012>
+StringBuffer StringBuffer = new StringBuffer(outputLength);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <4594, 4594>
+StringBuffer StringBuffer = new StringBuffer(intVar);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.StringUtils <4594, 4594>
+StringBuffer StringBuffer = new StringBuffer(strLen);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <3379, 3379>
+StringBuffer StringBuffer = new StringBuffer(StringVar.length() + intVar);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.StringUtils <3379, 3379>
+StringBuffer StringBuffer = new StringBuffer(text.length() + increase);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <3614, 3614>
+StringBuffer StringBuffer = new StringBuffer(StringVar.length() + intVar);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.StringUtils <3614, 3614>
+StringBuffer StringBuffer = new StringBuffer(text.length() + increase);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.text.ExtendedMessageFormat <354, 354>
+StringBuffer StringBuffer = new StringBuffer(StringVar.length() * 2);
+
+---fix ingredient  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.text.ExtendedMessageFormat <354, 354>
+StringBuffer StringBuffer = new StringBuffer(pattern.length() * 2);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.CharRange <218, 218>
+StringBuffer StringBuffer = new StringBuffer(4);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.CharRange <218, 218>
+StringBuffer StringBuffer = new StringBuffer(4);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <2943, 2943>
+StringBuffer StringBuffer = new StringBuffer(256);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.StringUtils <2943, 2943>
+StringBuffer StringBuffer = new StringBuffer(256);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <2987, 2987>
+StringBuffer StringBuffer = new StringBuffer(256);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.StringUtils <2987, 2987>
+StringBuffer StringBuffer = new StringBuffer(256);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.exception.DefaultExceptionContext <90, 90>
+StringBuffer StringBuffer = new StringBuffer(256);
+
+---fix ingredient  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.exception.DefaultExceptionContext <90, 90>
+StringBuffer StringBuffer = new StringBuffer(256);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.math.Range <425, 425>
+StringBuffer StringBuffer = new StringBuffer(32);
+
+---fix ingredient  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.math.Range <425, 425>
+StringBuffer StringBuffer = new StringBuffer(32);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.math.DoubleRange <424, 424>
+StringBuffer StringBuffer = new StringBuffer(32);
+
+---fix ingredient  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.math.DoubleRange <424, 424>
+StringBuffer StringBuffer = new StringBuffer(32);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.math.NumberRange <239, 239>
+StringBuffer StringBuffer = new StringBuffer(32);
+
+---fix ingredient  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.math.NumberRange <239, 239>
+StringBuffer StringBuffer = new StringBuffer(32);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.math.LongRange <405, 405>
+StringBuffer StringBuffer = new StringBuffer(32);
+
+---fix ingredient  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.math.LongRange <405, 405>
+StringBuffer StringBuffer = new StringBuffer(32);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.math.IntRange <392, 392>
+StringBuffer StringBuffer = new StringBuffer(32);
+
+---fix ingredient  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.math.IntRange <392, 392>
+StringBuffer StringBuffer = new StringBuffer(32);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.math.FloatRange <418, 418>
+StringBuffer StringBuffer = new StringBuffer(32);
+
+---fix ingredient  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.math.FloatRange <418, 418>
+StringBuffer StringBuffer = new StringBuffer(32);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.WordUtils <175, 175>
+StringBuffer StringBuffer = new StringBuffer(intVar + 32);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.WordUtils <175, 175>
+StringBuffer StringBuffer = new StringBuffer(inputLineLength + 32);
+

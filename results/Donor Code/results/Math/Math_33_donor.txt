@@ -1,0 +1,8 @@
+chunk1 : org.apache.commons.math3.optimization.linear.SimplexTableau:338-338
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (6)
+fix ingredient  <1-fine-grained>  varMapType:1 : (6)
+fix ingredient  <0-fine-grained>  varMapType:0 : (1)
+
+

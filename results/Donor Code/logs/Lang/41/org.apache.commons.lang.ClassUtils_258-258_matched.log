@@ -1,0 +1,211 @@
+---patch code ori--- org.apache.commons.lang.ClassUtils <258, 260>
+if (className == null || className.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.ClassUtils <187, 189>
+if (className.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+
+---patch code 0--- org.apache.commons.lang.ClassUtils <258, 260>
+if (StringVar == null || StringVar.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.ClassUtils <187, 189>
+if (StringVar.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <833, 835>
+if (StringVar.length() == 0 && intVar >= StringVar.length()) {
+            return StringVar.length();
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.ClassUtils <1006, 1008>
+if (className.length() > 0) {
+                        className = reverseAbbreviationMap.get(className.substring(0, 1));
+                    }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.ClassUtils <1006, 1008>
+if (StringVar.length() > 0) {
+                        StringVar = Map.get(StringVar.substring(0, 1));
+                    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1145, 1147>
+if (StringVar == null || StringVar.length() == 0 || char[]Var == null || char[]Var.length == 0) {
+            return false;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <277, 279>
+if (StringVar == null || StringVar.length() == 0 || intVar == 0) {
+            return StringVar;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <351, 353>
+if (StringVar == null || StringVar.length() == 0 || intVar == 0) {
+            return StringVar;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <407, 409>
+if (StringVar == null || StringVar.length() == 0 || intVar == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.text.StrMatcher <189, 191>
+if (StringVar == null || StringVar.length() == 0) {
+            return StrMatcher;
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.text.StrMatcher <205, 207>
+if (StringVar == null || StringVar.length() == 0) {
+            return StrMatcher;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.lang.WordUtils <539, 541>
+if (StringVar == null || StringVar.length() == 0) {
+            return StringVar;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <610, 612>
+if (StringVar.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <782, 784>
+if (StringVar.length() == 0) {
+            return 0;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1295, 1297>
+if (StringVar.length() == 0) {
+            return true;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2692, 2694>
+if (StringVar.length() == 0) {
+            return ArrayUtils.EMPTY_STRING_ARRAY;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <172, 174>
+if (StringVar != null && StringVar.length() == 0) {
+            StringVar = null;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3542, 3546>
+if (StringVar == null || StringVar.length() == 0 || String[]Var == null || 
+            String[]Var.length == 0 || String[]Var == null || String[]Var.length == 0) 
+        {
+            return StringVar;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <454, 456>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <487, 489>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <531, 533>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4522, 4524>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4553, 4555>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4591, 4593>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1759, 1761>
+if (StringVar.length() == 0) {
+            return StringVar;
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.lang.Validate <354, 356>
+if (StringVar == null || StringVar.length() == 0) {
+            throw new IllegalArgumentException(StringVar);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <394, 398>
+if (StringVar == null) {
+            return null;
+        }
+StringVar = strip(StringVar, null);
+return StringVar.length() == 0 ? null : StringVar;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.CharSetUtils <196, 198>
+if (StringVar.length() == 0 || StringUtils.isEmpty(StringVar)) {
+            return "";
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.CharSetUtils <224, 226>
+if (StringVar.length() == 0 || ArrayUtils.isEmpty(String[]Var)) {
+            return "";
+        }
+
+---patch code 1--- org.apache.commons.lang.ClassUtils <258, 260>
+if (className == null || className.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.exception.DefaultExceptionContext <96, 98>
+if (StringBuffer.length() > 0l) {
+                StringBuffer.append(SystemUtils.LINE_SEPARATOR);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <196, 199>
+if (StringVar.length() != 0) {
+                // strip the space off again
+                StringVar = StringVar.substring(1);
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.text.StrTokenizer <653, 660>
+if (StringVar == null || StringVar.length() == 0) {
+            if (isIgnoreEmptyTokens()) {
+                return;
+            }
+            if (isEmptyTokenAsNull()) {
+                StringVar = null;
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <539, 545>
+if (StringVar.length() == 0) {
+            return StringVar;
+        } else {
+            while ((intVar != 0) && (StringVar.indexOf(StringVar.charAt(intVar - 1)) != -1)) {
+                intVar--;
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <495, 501>
+if (StringVar.length() == 0) {
+            return StringVar;
+        } else {
+            while ((intVar != intVar) && (StringVar.indexOf(StringVar.charAt(intVar)) != -1)) {
+                intVar++;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.exception.ExceptionUtils <988, 993>
+if (intVar != -1 && StringVar.substring(0, intVar).trim().length() == 0) {
+                booleanVar = true;
+                ListVar.add(StringVar);
+            } else if (booleanVar) {
+                break;
+            }
+

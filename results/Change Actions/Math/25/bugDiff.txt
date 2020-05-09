@@ -1,0 +1,16 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_25/src/main/java/org/apache/commons/math3/optimization/fitting/HarmonicFitter.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_25/src/main/java/org/apache/commons/math3/optimization/fitting/HarmonicFitter.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_25/src/main/java/org/apache/commons/math3/optimization/fitting/HarmonicFitter.java	2020-01-05 06:33:17.857368586 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_25/src/main/java/org/apache/commons/math3/optimization/fitting/HarmonicFitter.java	2020-01-05 06:33:21.317339687 -0800
+@@ -320,8 +320,11 @@
+                 }
+                 a = 0.5 * (yMax - yMin);
+             } else {
++                if (c2 == 0) {
+                     // In some ill-conditioned cases (cf. MATH-844), the guesser
+                     // procedure cannot produce sensible results.
++                    throw new MathIllegalStateException(LocalizedFormats.ZERO_DENOMINATOR);
++                }
+ 
+                 a = FastMath.sqrt(c1 / c2);
+                 omega = FastMath.sqrt(c2 / c3);

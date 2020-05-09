@@ -1,0 +1,12 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_38/src/org/mockito/internal/verification/argumentmatching/ArgumentMatchingTool.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_38/src/org/mockito/internal/verification/argumentmatching/ArgumentMatchingTool.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_38/src/org/mockito/internal/verification/argumentmatching/ArgumentMatchingTool.java	2020-01-05 22:35:46.240549970 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_38/src/org/mockito/internal/verification/argumentmatching/ArgumentMatchingTool.java	2020-01-05 22:35:48.852549960 -0800
+@@ -45,6 +45,6 @@
+     }
+ 
+     private boolean toStringEquals(Matcher m, Object arg) {
+-        return StringDescription.toString(m).equals(arg.toString());
++        return StringDescription.toString(m).equals(arg == null? "null" : arg.toString());
+     }
+ }

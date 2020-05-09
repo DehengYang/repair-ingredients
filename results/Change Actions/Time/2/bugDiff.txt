@@ -1,0 +1,36 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_2/src/main/java/org/joda/time/field/UnsupportedDurationField.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_2/src/main/java/org/joda/time/field/UnsupportedDurationField.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_2/src/main/java/org/joda/time/field/UnsupportedDurationField.java	2020-01-05 22:47:06.916547374 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_2/src/main/java/org/joda/time/field/UnsupportedDurationField.java	2020-01-05 22:47:09.232547365 -0800
+@@ -224,6 +224,9 @@
+      * @return zero always
+      */
+     public int compareTo(DurationField durationField) {
++        if (durationField.isSupported()) {
++            return 1;
++        }
+         return 0;
+     }
+ 
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_2/src/main/java/org/joda/time/Partial.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_2/src/main/java/org/joda/time/Partial.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_2/src/main/java/org/joda/time/Partial.java	2020-01-05 22:47:06.912547374 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_2/src/main/java/org/joda/time/Partial.java	2020-01-05 22:47:09.228547365 -0800
+@@ -215,7 +215,7 @@
+             DurationField loopUnitField = loopType.getDurationType().getField(iChronology);
+             if (i > 0) {
+                 int compare = lastUnitField.compareTo(loopUnitField);
+-                if (compare < 0 || (compare != 0 && loopUnitField.isSupported() == false)) {
++                if (compare < 0) {
+                     throw new IllegalArgumentException("Types array must be in order largest-smallest: " +
+                             types[i - 1].getName() + " < " + loopType.getName());
+                 } else if (compare == 0) {
+@@ -446,6 +446,9 @@
+                         if (compare > 0) {
+                             break;
+                         } else if (compare == 0) {
++                            if (fieldType.getRangeDurationType() == null) {
++                                break;
++                            }
+                             DurationField rangeField = fieldType.getRangeDurationType().getField(iChronology);
+                             DurationField loopRangeField = loopType.getRangeDurationType().getField(iChronology);
+                             if (rangeField.compareTo(loopRangeField) > 0) {

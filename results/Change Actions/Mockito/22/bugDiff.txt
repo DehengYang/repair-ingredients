@@ -1,0 +1,15 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_22/src/org/mockito/internal/matchers/Equality.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_22/src/org/mockito/internal/matchers/Equality.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_22/src/org/mockito/internal/matchers/Equality.java	2020-01-05 22:34:06.724550350 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_22/src/org/mockito/internal/matchers/Equality.java	2020-01-05 22:34:10.224550337 -0800
+@@ -10,7 +10,9 @@
+ public class Equality {
+ 
+     public static boolean areEqual(Object o1, Object o2) {
+-        if (o1 == null || o2 == null) {
++        if (o1 == o2 ) {
++            return true;
++	} else if (o1 == null || o2 == null) {
+             return o1 == null && o2 == null;
+         } else if (isArray(o1)) {
+             return isArray(o2) && areArraysEqual(o1, o2);

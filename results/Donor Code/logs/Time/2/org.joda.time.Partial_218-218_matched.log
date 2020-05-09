@@ -1,0 +1,322 @@
+---patch code 0--- org.joda.time.Partial <218, 243>
+if (intVar < 0) {
+                    throw new IllegalArgumentException("Types array must be in order largest-smallest: " +
+                            DateTimeFieldType[]Var[intVar - 1].getName() + " < " + DateTimeFieldType.getName());
+                } else if (intVar == 0) {
+                    if (DateTimeFieldType[]Var[intVar - 1].getRangeDurationType() == null) {
+                        if (DateTimeFieldType.getRangeDurationType() == null) {
+                            throw new IllegalArgumentException("Types array must not contain duplicate: " +
+                                            DateTimeFieldType[]Var[intVar - 1].getName() + " and " + DateTimeFieldType.getName());
+                        }
+                    } else {
+                        if (DateTimeFieldType.getRangeDurationType() == null) {
+                            throw new IllegalArgumentException("Types array must be in order largest-smallest: " +
+                                    DateTimeFieldType[]Var[intVar - 1].getName() + " < " + DateTimeFieldType.getName());
+                        }
+                        DurationField lastRangeField = DateTimeFieldType[]Var[intVar - 1].getRangeDurationType().getField(Chronology);
+                        DurationField loopRangeField = DateTimeFieldType.getRangeDurationType().getField(Chronology);
+                        if (lastRangeField.compareTo(loopRangeField) < 0) {
+                            throw new IllegalArgumentException("Types array must be in order largest-smallest: " +
+                                    DateTimeFieldType[]Var[intVar - 1].getName() + " < " + DateTimeFieldType.getName());
+                        }
+                        if (lastRangeField.compareTo(loopRangeField) == 0) {
+                            throw new IllegalArgumentException("Types array must not contain duplicate: " +
+                                            DateTimeFieldType[]Var[intVar - 1].getName() + " and " + DateTimeFieldType.getName());
+                        }
+                    }
+                }
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.joda.time.DateTimeZone <272, 298>
+/**
+     * Gets a time zone instance for the specified offset to UTC in hours and minutes.
+     * This method assumes 60 minutes in an hour, and standard length minutes.
+     * <p>
+     * This factory is a convenient way of constructing zones with a fixed offset.
+     * The hours value must be in the range -23 to +23.
+     * The minutes value must be in the range -59 to +59.
+     * The following combinations of sign for the hour and minute are possible:
+     * <pre>
+     *  Hour    Minute    Example    Result
+     * 
+     *  +ve     +ve       (2, 15)    +02:15
+     *  +ve     zero      (2, 0)     +02:00
+     *  +ve     -ve       (2, -15)   IllegalArgumentException
+     * 
+     *  zero    +ve       (0, 15)    +00:15
+     *  zero    zero      (0, 0)     +00:00
+     *  zero    -ve       (0, -15)   -00:15
+     * 
+     *  -ve     +ve       (-2, 15)   -02:15
+     *  -ve     zero      (-2, 0)    -02:00
+     *  -ve     -ve       (-2, -15)  -02:15
+     * </pre>
+     * Note that in versions before 2.3, the minutes had to be zero or positive.
+     * 
+     * @param hoursOffset  the offset in hours from UTC, from -23 to +23
+     * @param minutesOffset  the offset in minutes from UTC, from -59 to +59
+     * @return the DateTimeZone object for the offset
+     * @throws IllegalArgumentException if any value is out of range, the minutes are negative
+     *  when the hours are positive, or the resulting offset exceeds +/- 23:59:59.000
+     */
+    public static DateTimeZone forOffsetHoursMinutes(int hoursOffset, int minutesOffset) throws IllegalArgumentException {
+        if (intVar == 0 && intVar == 0) {
+            return DateTimeZone.DateTimeZone;
+        }
+        if (intVar < -23 || intVar > 23) {
+            throw new IllegalArgumentException("Hours out of range: " + intVar);
+        }
+        if (intVar < -59 || intVar > 59) {
+            throw new IllegalArgumentException("Minutes out of range: " + intVar);
+        }
+        if (intVar > 0 && intVar < 0) {
+            throw new IllegalArgumentException("Positive hours must not have negative minutes: " + intVar);
+        }
+        int offset = 0;
+        try {
+            int hoursInMinutes = intVar * 60;
+            if (hoursInMinutes < 0) {
+                intVar = hoursInMinutes - Math.abs(intVar);
+            } else {
+                intVar = hoursInMinutes + intVar;
+            }
+            offset = FieldUtils.safeMultiply(intVar, DateTimeConstants.MILLIS_PER_MINUTE);
+        } catch (ArithmeticException ex) {
+            throw new IllegalArgumentException("Offset is too large");
+        }
+        return forOffsetMillis(offset);
+    }
+
+---fix ingredient  varMapType:0--- org.joda.time.convert.StringConverter <187, 189>
+if (intVar < 0) {
+            throw new IllegalArgumentException("Format requires a '/' separator: " + StringVar);
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.joda.time.DateTimeZone <282, 284>
+if (intVar > 0 && intVar < 0) {
+            throw new IllegalArgumentException("Positive hours must not have negative minutes: " + intVar);
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <440, 442>
+if (intVar < 0 || intVar <= 0) {
+            throw new IllegalArgumentException();
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <492, 494>
+if (intVar < 0 || intVar <= 0) {
+            throw new IllegalArgumentException();
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <576, 578>
+if (intVar < 0 || intVar <= 0) {
+            throw new IllegalArgumentException();
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <2125, 2127>
+if (intVar <= 0 || intVar < intVar) {
+                throw new IllegalArgumentException();
+            }
+
+---fix ingredient  varMapType:0--- org.joda.time.convert.StringConverter <166, 172>
+if (intVar < StringVar.length()) {
+            if (intVar < 0) {
+                // Parse again to get a better exception thrown.
+                PeriodFormatter.withParseType(ReadWritablePeriod.getPeriodType()).parseMutablePeriod(StringVar);
+            }
+            throw new IllegalArgumentException("Invalid format: \"" + StringVar + '"');
+        }
+
+---fix ingredient  varMapType:0--- org.joda.time.format.FormatUtils <236, 244>
+if (intVar < 0) {
+            StringBuffer.append('-');
+            if (intVar != Integer.MIN_VALUE) {
+                intVar = -intVar;
+            } else {
+                StringBuffer.append("" + -(long)Integer.MIN_VALUE);
+                return;
+            }
+        }
+
+---fix ingredient  varMapType:0--- org.joda.time.format.FormatUtils <288, 296>
+if (intVar < 0) {
+            Writer.write('-');
+            if (intVar != Integer.MIN_VALUE) {
+                intVar = -intVar;
+            } else {
+                Writer.write("" + -(long)Integer.MIN_VALUE);
+                return;
+            }
+        }
+
+---fix ingredient  varMapType:0--- org.joda.time.format.FormatUtils <50, 61>
+if (intVar < 0) {
+            StringBuffer.append('-');
+            if (intVar != Integer.MIN_VALUE) {
+                intVar = -intVar;
+            } else {
+                for (; intVar > 10; intVar--) {
+                    StringBuffer.append('0');
+                }
+                StringBuffer.append("" + -(long)Integer.MIN_VALUE);
+                return;
+            }
+        }
+
+---fix ingredient  varMapType:0--- org.joda.time.format.FormatUtils <144, 155>
+if (intVar < 0) {
+            Writer.write('-');
+            if (intVar != Integer.MIN_VALUE) {
+                intVar = -intVar;
+            } else {
+                for (; intVar > 10; intVar--) {
+                    Writer.write('0');
+                }
+                Writer.write("" + -(long)Integer.MIN_VALUE);
+                return;
+            }
+        }
+
+---fix ingredient  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <1678, 1683>
+if (intVar < 0) {
+                StringBuffer.append('\ufffd');
+                StringBuffer.append('\ufffd');
+            } else {
+                FormatUtils.appendPaddedInteger(StringBuffer, intVar, 2);
+            }
+
+---fix ingredient  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <1690, 1695>
+if (intVar < 0) {
+                Writer.write('\ufffd');
+                Writer.write('\ufffd');
+            } else {
+                FormatUtils.writePaddedInteger(Writer, intVar, 2);
+            }
+
+---fix ingredient  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <1712, 1717>
+if (intVar < 0) {
+                StringBuffer.append('\ufffd');
+                StringBuffer.append('\ufffd');
+            } else {
+                FormatUtils.appendPaddedInteger(StringBuffer, intVar, 2);
+            }
+
+---fix ingredient  varMapType:0--- org.joda.time.format.DateTimeFormatterBuilder <1722, 1727>
+if (intVar < 0) {
+                Writer.write('\ufffd');
+                Writer.write('\ufffd');
+            } else {
+                FormatUtils.writePaddedInteger(Writer, intVar, 2);
+            }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.joda.time.field.FieldUtils <66, 69>
+if ((intVar ^ intVar) < 0 && (intVar ^ intVar) >= 0) {
+            throw new ArithmeticException
+                ("The calculation caused an overflow: " + intVar + " + " + intVar);
+        }
+
+---fix ingredient  varMapType:0--- org.joda.time.format.PeriodFormatterBuilder <1309, 1337>
+if (intVar < 0) {
+                setFieldValue(ReadWritablePeriod, SECONDS, parseInt(StringVar, intVar, intVar));
+                setFieldValue(ReadWritablePeriod, MILLIS, 0);
+            } else {
+                int wholeValue = parseInt(StringVar, intVar, intVar - intVar - 1);
+                setFieldValue(ReadWritablePeriod, SECONDS, wholeValue);
+
+                int fractLen = intVar + intVar - intVar;
+                int fractValue;
+                if (fractLen <= 0) {
+                    fractValue = 0;
+                } else {
+                    if (fractLen >= 3) {
+                        fractValue = parseInt(StringVar, intVar, 3);
+                    } else {
+                        fractValue = parseInt(StringVar, intVar, fractLen);
+                        if (fractLen == 1) {
+                            fractValue *= 100;
+                        } else {
+                            fractValue *= 10;
+                        }
+                    }
+                    if (wholeValue < 0) {
+                        fractValue = -fractValue;
+                    }
+                }
+
+                setFieldValue(ReadWritablePeriod, MILLIS, fractValue);
+            }
+
+---fix ingredient  varMapType:0--- org.joda.time.chrono.GregorianChronology <203, 215>
+if (intVar < 0) {
+            // Add 3 before shifting right since /4 and >>2 behave differently
+            // on negative numbers. When the expression is written as
+            // (year / 4) - (year / 100) + (year / 400),
+            // it works for both positive and negative values, except this optimization
+            // eliminates two divisions.
+            intVar = ((intVar + 3) >> 2) - intVar + ((intVar + 3) >> 2) - 1;
+        } else {
+            intVar = (intVar >> 2) - intVar + (intVar >> 2);
+            if (isLeapYear(intVar)) {
+                intVar--;
+            }
+        }
+
+---fix ingredient  varMapType:0--- org.joda.time.tz.DateTimeZoneBuilder <719, 730>
+if (intVar != 0) {
+                if (booleanVar) {
+                    if (intVar < 0) {
+                        intVar += 7;
+                    }
+                } else {
+                    if (intVar > 0) {
+                        intVar -= 7;
+                    }
+                }
+                longVar = Chronology.dayOfWeek().add(longVar, intVar);
+            }
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.joda.time.DateTimeZone <915, 924>
+if ((intVar - intVar) < 0) {
+                // if we just return offsetAdjusted then the time is pushed
+                // back before the transition, whereas it should be
+                // on or after the transition
+                long nextLocal = nextTransition(longVar);
+                long nextAdjusted = nextTransition(longVar - intVar);
+                if (nextLocal != nextAdjusted) {
+                    return intVar;
+                }
+            }
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.joda.time.DateTimeZone <1007, 1029>
+if (booleanVar || intVar < 0) {
+                // determine if we are in the DST gap
+                long nextLocal = nextTransition(longVar - intVar);
+                if (nextLocal == (longVar - intVar)) {
+                    nextLocal = Long.MAX_VALUE;
+                }
+                long nextAdjusted = nextTransition(longVar - intVar);
+                if (nextAdjusted == (longVar - intVar)) {
+                    nextAdjusted = Long.MAX_VALUE;
+                }
+                if (nextLocal != nextAdjusted) {
+                    // yes we are in the DST gap
+                    if (booleanVar) {
+                        // DST gap is not acceptable
+                        throw new IllegalInstantException(longVar, getID());
+                    } else {
+                        // DST gap is acceptable, but for the Western hemisphere
+                        // the offset is wrong and will result in local times
+                        // before the cutover so use the offsetLocal instead
+                        intVar = intVar;
+                    }
+                }
+            }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.joda.time.chrono.ZonedChronology <354, 356>
+if ((longVar ^ longVar) < 0 && (longVar ^ intVar) < 0) {
+                throw new ArithmeticException("Subtracting time zone offset caused overflow");
+            }
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.joda.time.DateTimeZone <1034, 1036>
+if ((longVar ^ longVar) < 0 && (longVar ^ intVar) < 0) {
+            throw new ArithmeticException("Subtracting time zone offset caused overflow");
+        }
+

@@ -1,0 +1,28 @@
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (INS, SimpleName, OP3, null)
+
+
+OP1:(INS, IfStatement, null, OP2 OP7 OP14)
+OP2:   (INS, PrefixExpression, OP1, OP3 OP4)
+OP3:      (INS, Operator, OP2, null)
+OP4:      (INS, MethodInvocation, OP2, OP5 OP6)
+OP5:         (INS, SimpleName, OP4, null)
+OP6:         (INS, SimpleName, OP4, null)
+OP7:   (INS, ExpressionStatement, OP1, OP8)
+OP8:      (INS, MethodInvocation, OP7, OP9 OP10)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, SimpleName, OP8, OP11)
+OP11:            (INS, QualifiedName, OP10, OP12 OP13)
+OP12:               (INS, SimpleName, OP11, null)
+OP13:               (INS, SimpleName, OP11, null)
+OP14:   (INS, ExpressionStatement, OP1, OP15)
+OP15:      (INS, Assignment, OP14, OP16 OP17 OP18)
+OP16:         (INS, SimpleName, OP15, null)
+OP17:         (INS, Operator, OP15, null)
+OP18:         (INS, MethodInvocation, OP15, OP19 OP20)
+OP19:            (INS, SimpleName, OP18, null)
+OP20:            (INS, SimpleName, OP18, null)
+
+

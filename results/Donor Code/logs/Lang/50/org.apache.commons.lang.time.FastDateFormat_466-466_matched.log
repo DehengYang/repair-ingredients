@@ -1,0 +1,36 @@
+---patch code ori--- org.apache.commons.lang.time.FastDateFormat <466, 466>
+key = new Pair(key, locale);
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang.time.FastDateFormat <286, 286>
+key = new Pair(key, locale);
+
+---patch code 0--- org.apache.commons.lang.time.FastDateFormat <466, 466>
+Object = new Pair(Object, Locale);
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <286, 286>
+Object = new Pair(Object, Locale);
+
+---patch code 1--- org.apache.commons.lang.time.FastDateFormat <466, 466>
+Object = new Pair(Object, Locale);
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang.time.FastDateFormat <286, 286>
+Object = new Pair(Object, Locale);
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang.time.FastDateFormat <372, 372>
+key = new Pair(key, locale);
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <372, 372>
+Object = new Pair(Object, Locale);
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang.time.FastDateFormat <372, 372>
+Object = new Pair(Object, Locale);
+
+---fix ingredient(SameMethod)  varMapType:ori--- org.apache.commons.lang.time.FastDateFormat <466, 466>
+key = new Pair(key, locale);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <466, 466>
+Object = new Pair(Object, Locale);
+
+---fix ingredient(SameMethod)  varMapType:1--- org.apache.commons.lang.time.FastDateFormat <466, 466>
+Object = new Pair(Object, Locale);
+

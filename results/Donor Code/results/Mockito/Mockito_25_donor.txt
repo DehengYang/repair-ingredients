@@ -1,0 +1,7 @@
+chunk1 : org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:56-56
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient  <1-fine-grained>  varMapType:1 : (2)
+
+

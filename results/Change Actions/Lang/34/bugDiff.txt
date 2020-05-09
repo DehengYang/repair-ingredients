@@ -1,0 +1,22 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_34/src/main/java/org/apache/commons/lang3/builder/ToStringStyle.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_34/src/main/java/org/apache/commons/lang3/builder/ToStringStyle.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_34/src/main/java/org/apache/commons/lang3/builder/ToStringStyle.java	2020-01-05 05:28:31.549827425 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_34/src/main/java/org/apache/commons/lang3/builder/ToStringStyle.java	2020-01-05 05:28:35.061798092 -0800
+@@ -145,7 +145,7 @@
+      * @return Set the registry of objects being traversed
+      */
+     static Map<Object, Object> getRegistry() {
+-        return REGISTRY.get() != null ? REGISTRY.get() : Collections.<Object, Object>emptyMap();
++        return REGISTRY.get();
+     }
+ 
+     /**
+@@ -161,7 +161,7 @@
+      */
+     static boolean isRegistered(Object value) {
+         Map<Object, Object> m = getRegistry();
+-        return m.containsKey(value);
++        return m != null && m.containsKey(value);
+     }
+ 
+     /**

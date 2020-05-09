@@ -1,0 +1,11 @@
+chunk1 : com.google.javascript.jscomp.MakeDeclaredNamesUnique:176-176
+fix ingredient(SameFile)  varMapType:ori : (1)
+fix ingredient(SameFile)  varMapType:0 : (1)
+fix ingredient(SameFile)  varMapType:1 : (1)
+fix ingredient(SameMethod)  varMapType:ori : (2)
+fix ingredient(SameMethod)  varMapType:0 : (2)
+fix ingredient(SameMethod)  varMapType:1 : (2)
+fix ingredient(SamePackage)  varMapType:0 : (11)
+fix ingredient(SamePackage)  varMapType:1 : (11)
+
+

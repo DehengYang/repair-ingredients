@@ -1,0 +1,29 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_84/src/main/java/org/apache/commons/math/optimization/direct/MultiDirectional.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_84/src/main/java/org/apache/commons/math/optimization/direct/MultiDirectional.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_84/src/main/java/org/apache/commons/math/optimization/direct/MultiDirectional.java	2020-01-05 06:39:30.030260159 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_84/src/main/java/org/apache/commons/math/optimization/direct/MultiDirectional.java	2020-01-05 06:39:33.518231027 -0800
+@@ -61,6 +61,7 @@
+     protected void iterateSimplex(final Comparator<RealPointValuePair> comparator)
+         throws FunctionEvaluationException, OptimizationException, IllegalArgumentException {
+ 
++        final RealConvergenceChecker checker = getConvergenceChecker();
+         while (true) {
+ 
+             incrementIterationsCounter();
+@@ -89,8 +90,16 @@
+             final RealPointValuePair contracted = evaluateNewSimplex(original, gamma, comparator);
+             if (comparator.compare(contracted, best) < 0) {
+                 // accept the contracted simplex
++                return;
++            }
+ 
+             // check convergence
++            final int iter = getIterations();
++            boolean converged = true;
++            for (int i = 0; i < simplex.length; ++i) {
++                converged &= checker.converged(iter, original[i], simplex[i]);
++            }
++            if (converged) {
+                 return;
+             }
+ 

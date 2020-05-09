@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_104/src/java/org/apache/commons/math/special/Gamma.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_104/src/java/org/apache/commons/math/special/Gamma.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_104/src/java/org/apache/commons/math/special/Gamma.java	2020-01-05 06:41:35.917208738 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_104/src/java/org/apache/commons/math/special/Gamma.java	2020-01-05 06:41:38.309188761 -0800
+@@ -34,7 +34,7 @@
+     private static final long serialVersionUID = -6587513359895466954L;
+ 
+     /** Maximum allowed numerical error. */
+-    private static final double DEFAULT_EPSILON = 10e-9;
++    private static final double DEFAULT_EPSILON = 10e-15;
+ 
+     /** Lanczos coefficients */
+     private static double[] lanczos =

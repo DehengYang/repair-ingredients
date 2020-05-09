@@ -1,0 +1,14 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_49/src/java/org/apache/commons/lang/math/Fraction.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_49/src/java/org/apache/commons/lang/math/Fraction.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_49/src/java/org/apache/commons/lang/math/Fraction.java	2020-01-05 05:30:15.192961786 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_49/src/java/org/apache/commons/lang/math/Fraction.java	2020-01-05 05:30:18.576933523 -0800
+@@ -463,6 +463,9 @@
+      * @return a new reduced fraction instance, or this if no simplification possible
+      */
+     public Fraction reduce() {
++        if (numerator == 0) {
++            return equals(ZERO) ? this : ZERO;
++        }
+         int gcd = greatestCommonDivisor(Math.abs(numerator), denominator);
+         if (gcd == 1) {
+             return this;

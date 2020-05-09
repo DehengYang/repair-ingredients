@@ -1,0 +1,7 @@
+chunk1 : org.apache.commons.math3.linear.RectangularCholeskyDecomposition:78-78
+fix ingredient(SamePackage)  varMapType:0 : (2)
+fix ingredient  <0-fine-grained>  varMapType:0 : (102)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (15)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (16)
+
+

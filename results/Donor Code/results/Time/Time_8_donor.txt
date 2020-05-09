@@ -1,0 +1,15 @@
+chunk1 : org.joda.time.DateTimeZone:289-289
+fix ingredient  <ori-fine-grained>  varMapType:ori : (6)
+fix ingredient  <0-fine-grained>  varMapType:0 : (6)
+fix ingredient  <1-fine-grained>  varMapType:1 : (6)
+
+
+chunk2 : org.joda.time.DateTimeZone:279-279
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (1)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (2)
+fix ingredient  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient  <1-fine-grained>  varMapType:1 : (2)
+
+

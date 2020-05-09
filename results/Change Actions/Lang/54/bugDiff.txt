@@ -1,0 +1,14 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_54/src/java/org/apache/commons/lang/LocaleUtils.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_54/src/java/org/apache/commons/lang/LocaleUtils.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Lang/Lang_54/src/java/org/apache/commons/lang/LocaleUtils.java	2020-01-05 05:30:49.684673708 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_54/src/java/org/apache/commons/lang/LocaleUtils.java	2020-01-05 05:30:53.104645144 -0800
+@@ -111,6 +111,9 @@
+                 throw new IllegalArgumentException("Invalid locale format: " + str);
+             }
+             char ch3 = str.charAt(3);
++            if (ch3 == '_') {
++                return new Locale(str.substring(0, 2), "", str.substring(4));
++            }
+             char ch4 = str.charAt(4);
+             if (ch3 < 'A' || ch3 > 'Z' || ch4 < 'A' || ch4 > 'Z') {
+                 throw new IllegalArgumentException("Invalid locale format: " + str);

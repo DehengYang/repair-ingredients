@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_125/src/com/google/javascript/jscomp/TypeCheck.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_125/src/com/google/javascript/jscomp/TypeCheck.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_125/src/com/google/javascript/jscomp/TypeCheck.java	2020-01-05 05:23:33.316318301 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_125/src/com/google/javascript/jscomp/TypeCheck.java	2020-01-05 05:23:36.284293512 -0800
+@@ -1658,7 +1658,7 @@
+     JSType type = getJSType(constructor).restrictByNotNullOrUndefined();
+     if (type.isConstructor() || type.isEmptyType() || type.isUnknownType()) {
+       FunctionType fnType = type.toMaybeFunctionType();
+-      if (fnType != null) {
++      if (fnType != null && fnType.hasInstanceType()) {
+         visitParameterList(t, n, fnType);
+         ensureTyped(t, n, fnType.getInstanceType());
+       } else {

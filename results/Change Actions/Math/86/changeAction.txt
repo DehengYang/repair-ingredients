@@ -1,0 +1,21 @@
+OP1:(DEL, IfStatement, null, OP2)
+OP2:   (DEL, InfixExpression, OP1, OP3 OP8 OP9)
+OP3:      (DEL, ArrayAccess, OP2, OP4 OP7)
+OP4:         (DEL, ArrayAccess, OP3, OP5 OP6)
+OP5:            (DEL, SimpleName, OP4, null)
+OP6:            (DEL, SimpleName, OP4, null)
+OP7:         (DEL, SimpleName, OP3, null)
+OP8:      (DEL, Operator, OP2, null)
+OP9:      (DEL, SimpleName, OP2, null)
+
+
+OP1:(INS, IfStatement, null, OP2 OP3)
+OP2:   (MOV, ThrowStatement, OP1, null)
+OP3:   (INS, InfixExpression, OP1, OP4 OP7 OP8)
+OP4:      (INS, ArrayAccess, OP3, OP5 OP6)
+OP5:         (INS, SimpleName, OP4, null)
+OP6:         (INS, SimpleName, OP4, null)
+OP7:      (INS, Operator, OP3, null)
+OP8:      (INS, SimpleName, OP3, null)
+
+

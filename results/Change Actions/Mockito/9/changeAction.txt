@@ -1,0 +1,17 @@
+OP1:(INS, IfStatement, null, OP2 OP9)
+OP2:   (INS, MethodInvocation, OP1, OP3 OP4)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, SimpleName, OP2, OP5)
+OP5:         (INS, MethodInvocation, OP4, OP6 OP7 OP8)
+OP6:            (INS, SimpleName, OP5, null)
+OP7:            (INS, MethodInvocation, OP5, null)
+OP8:            (INS, SimpleName, OP5, null)
+OP9:   (INS, ReturnStatement, OP1, OP10)
+OP10:      (INS, MethodInvocation, OP9, OP11 OP14)
+OP11:         (INS, ClassInstanceCreation, OP10, OP12 OP13)
+OP12:            (INS, New, OP11, null)
+OP13:            (INS, SimpleType, OP11, null)
+OP14:         (INS, SimpleName, OP10, OP15)
+OP15:            (INS, SimpleName, OP14, null)
+
+

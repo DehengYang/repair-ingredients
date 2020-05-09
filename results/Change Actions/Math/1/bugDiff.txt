@@ -1,0 +1,27 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_1/src/main/java/org/apache/commons/math3/fraction/BigFraction.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_1/src/main/java/org/apache/commons/math3/fraction/BigFraction.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_1/src/main/java/org/apache/commons/math3/fraction/BigFraction.java	2020-01-05 06:30:27.578790770 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_1/src/main/java/org/apache/commons/math3/fraction/BigFraction.java	2020-01-05 06:30:31.090761437 -0800
+@@ -303,6 +303,9 @@
+             if ((p2 > overflow) || (q2 > overflow)) {
+                 // in maxDenominator mode, if the last fraction was very close to the actual value
+                 // q2 may overflow in the next iteration; in this case return the last one.
++                if (epsilon == 0.0 && FastMath.abs(q1) < maxDenominator) {
++                    break;
++                }
+                 throw new FractionConversionException(value, p2, q2);
+             }
+ 
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_1/src/main/java/org/apache/commons/math3/fraction/Fraction.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_1/src/main/java/org/apache/commons/math3/fraction/Fraction.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_1/src/main/java/org/apache/commons/math3/fraction/Fraction.java	2020-01-05 06:30:27.578790770 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_1/src/main/java/org/apache/commons/math3/fraction/Fraction.java	2020-01-05 06:30:31.090761437 -0800
+@@ -212,6 +212,9 @@
+             if ((FastMath.abs(p2) > overflow) || (FastMath.abs(q2) > overflow)) {
+                 // in maxDenominator mode, if the last fraction was very close to the actual value
+                 // q2 may overflow in the next iteration; in this case return the last one.
++                if (epsilon == 0.0 && FastMath.abs(q1) < maxDenominator) {
++                    break;
++                }
+                 throw new FractionConversionException(value, p2, q2);
+             }
+ 

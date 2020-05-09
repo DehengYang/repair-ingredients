@@ -1,0 +1,77 @@
+---patch code ori--- org.apache.commons.lang3.reflect.TypeUtils <675, 677>
+if (toClass.equals(cls)) {
+            return typeVarAssigns;
+        }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang3.reflect.TypeUtils <633, 636>
+if (toClass.equals(cls)) {
+            // target class has been reached. Done.
+            return typeVarAssigns;
+        }
+
+---patch code 0--- org.apache.commons.lang3.reflect.TypeUtils <675, 677>
+if (Class.equals(Class)) {
+            return HashMap;
+        }
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang3.reflect.TypeUtils <633, 636>
+if (Class.equals(Class)) {
+            // target class has been reached. Done.
+            return Map;
+        }
+
+---patch code 1--- org.apache.commons.lang3.reflect.TypeUtils <675, 677>
+if (Class.equals(Class)) {
+            return HashMap;
+        }
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang3.reflect.TypeUtils <633, 636>
+if (Class.equals(Class)) {
+            // target class has been reached. Done.
+            return Map;
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang3.ClassUtils <642, 644>
+if (Class.equals(Class)) {
+            return true;
+        }
+
+---fix ingredient  varMapType:1--- org.apache.commons.lang3.ClassUtils <642, 644>
+if (Class.equals(Class)) {
+            return true;
+        }
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang3.reflect.TypeUtils <719, 721>
+if (Class.equals(Class)) {
+            return getTypeArguments(ParameterizedType, Class, null);
+        }
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang3.reflect.TypeUtils <719, 721>
+if (Class.equals(Class)) {
+            return getTypeArguments(ParameterizedType, Class, null);
+        }
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang3.reflect.TypeUtils <675, 680>
+if (cls.getTypeParameters().length > 0 || toClass.equals(cls)) {
+            return typeVarAssigns;
+        }
+empty line
+// walk the inheritance hierarchy until the target class is reached
+return getTypeArguments(getClosestParentType(cls, toClass), toClass, typeVarAssigns);
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang3.reflect.TypeUtils <675, 680>
+if (Class.getTypeParameters().length > 0 || Class.equals(Class)) {
+            return HashMap;
+        }
+empty line
+// walk the inheritance hierarchy until the target class is reached
+return getTypeArguments(getClosestParentType(Class, Class), Class, HashMap);
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang3.reflect.TypeUtils <675, 680>
+if (Class.getTypeParameters().length > 0 || Class.equals(Class)) {
+            return HashMap;
+        }
+empty line
+// walk the inheritance hierarchy until the target class is reached
+return getTypeArguments(getClosestParentType(Class, Class), Class, HashMap);
+

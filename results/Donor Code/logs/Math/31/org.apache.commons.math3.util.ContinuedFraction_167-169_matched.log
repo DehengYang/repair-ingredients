@@ -1,0 +1,29 @@
+---patch code 0--- org.apache.commons.math3.util.ContinuedFraction <167, 169>
+doubleVar = doubleVar;
+doubleVar = doubleVar;
+doubleVar = doubleVar;
+
+---fix ingredient(SameMethod)  <parseContainCheck>  <parseContainCheck>  <parseContainCheck>  varMapType:0--- org.apache.commons.math3.util.ContinuedFraction <134, 137>
+double doubleVar = 1.0;
+double doubleVar = 1.0;
+double doubleVar = doubleVar;
+double doubleVar = doubleVar;
+
+---fix ingredient(SameMethod)  <parseContainCheck>  <parseContainCheck>  <parseContainCheck>  varMapType:0--- org.apache.commons.math3.util.ContinuedFraction <159, 162>
+if (doubleVar != 0) {
+                        doubleVar = (doubleVar / doubleVar * doubleVar) + doubleVar / doubleVar;
+                        doubleVar = (doubleVar / doubleVar * doubleVar) + doubleVar / doubleVar;
+                    }
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.math3.util.ContinuedFraction <128, 130>
+if (Precision.equals(doubleVar, 0.0, doubleVar)) {
+            doubleVar = doubleVar;
+        }
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  <parseContainCheck2>  <parseContainCheck2>  varMapType:0--- org.apache.commons.math3.util.ContinuedFraction <140, 144>
+final double doubleVar = getA(intVar, doubleVar);
+final double doubleVar = getB(intVar, doubleVar);
+empty line
+double doubleVar = doubleVar * doubleVar + doubleVar * doubleVar;
+double doubleVar = doubleVar * doubleVar + doubleVar * doubleVar;
+

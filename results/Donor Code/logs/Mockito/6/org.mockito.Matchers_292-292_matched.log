@@ -1,0 +1,18 @@
+---patch code ori--- org.mockito.Matchers <292, 292>
+return (T) reportMatcher(new InstanceOf(clazz)).returnFor(clazz);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.mockito.Matchers <476, 476>
+return reportMatcher(new InstanceOf(clazz)).<T>returnFor(clazz);
+
+---patch code 0--- org.mockito.Matchers <292, 292>
+return (T) reportMatcher(new InstanceOf(Class)).returnFor(Class);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.mockito.Matchers <476, 476>
+return reportMatcher(new InstanceOf(Class)).<T>returnFor(Class);
+
+---patch code 1--- org.mockito.Matchers <292, 292>
+return (T) reportMatcher(new InstanceOf(Class)).returnFor(Class);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.mockito.Matchers <476, 476>
+return reportMatcher(new InstanceOf(Class)).<T>returnFor(Class);
+

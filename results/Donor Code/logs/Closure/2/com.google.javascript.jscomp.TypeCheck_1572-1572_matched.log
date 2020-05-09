@@ -1,0 +1,26 @@
+---patch code ori--- com.google.javascript.jscomp.TypeCheck <1572, 1578>
+if (implicitProto == null) {
+      // This can be the case if interfaceType is proxy to a non-existent
+      // object (which is a bad type annotation, but shouldn't crash).
+      currentPropertyNames = ImmutableSet.of();
+    } else {
+      currentPropertyNames = implicitProto.getOwnPropertyNames();
+    }
+
+---fix ingredient  <parseContainCheck>  varMapType:ori--- com.google.javascript.rhino.jstype.ObjectType <568, 582>
+if (unknown) {
+      ObjectType implicitProto = getImplicitPrototype();
+      if (implicitProto == null ||
+          implicitProto.isNativeObjectType()) {
+        unknown = false;
+        for (ObjectType interfaceType : getCtorExtendedInterfaces()) {
+          if (interfaceType.isUnknownType()) {
+            unknown = true;
+            break;
+          }
+        }
+      } else {
+        unknown = implicitProto.isUnknownType();
+      }
+    }
+

@@ -1,0 +1,197 @@
+---patch code 0--- org.jfree.chart.util.ShapeUtilities <275, 275>
+PathIterator PathIterator = GeneralPath.getPathIterator(null);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.jfree.chart.util.ShapeUtilities <275, 275>
+PathIterator PathIterator = GeneralPath.getPathIterator(null);
+
+---patch code 1--- org.jfree.chart.util.ShapeUtilities <275, 275>
+PathIterator PathIterator = GeneralPath.getPathIterator(null);
+
+---fix ingredient(SameMethod)  varMapType:1--- org.jfree.chart.util.ShapeUtilities <275, 275>
+PathIterator PathIterator = GeneralPath.getPathIterator(null);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.jfree.chart.util.ShapeUtilities <274, 274>
+PathIterator PathIterator = GeneralPath.getPathIterator(null);
+
+---fix ingredient(SameMethod)  varMapType:1--- org.jfree.chart.util.ShapeUtilities <274, 274>
+PathIterator PathIterator = GeneralPath.getPathIterator(null);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.RingPlot <392, 392>
+GeneralPath.append(DoubleVar.getPathIterator(null), false);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.RingPlot <392, 392>
+GeneralPath.append(arc.getPathIterator(null), false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.RingPlot <393, 393>
+GeneralPath.append(DoubleVar.getPathIterator(null), true);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.RingPlot <393, 393>
+GeneralPath.append(arc2.getPathIterator(null), true);
+
+---patch code ori--- org.jfree.chart.util.ShapeUtilities <275, 275>
+PathIterator iterator2 = p2.getPathIterator(null);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.BarRenderer3D <196, 196>
+setBaseNegativeItemLabelPosition(p2);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.ValueAxis <289, 289>
+Polygon p2 = new Polygon();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.BarRenderer3D <194, 195>
+ItemLabelPosition p2 = new ItemLabelPosition(ItemLabelAnchor.INSIDE12, 
+                TextAnchor.TOP_CENTER);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.ValueAxis <290, 290>
+p2.addPoint(0, 0);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.ValueAxis <292, 292>
+p2.addPoint(2, -2);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.Outlier <148, 148>
+Point2D p2 = outlier.getPoint();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.CategoryAxis <1325, 1327>
+if (!PaintUtilities.equal(p1, p2)) {
+                return false;  
+            }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.PaintMap <160, 162>
+if (!PaintUtilities.equal(p1, p2)) {
+                return false;
+            }
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.util.ShapeUtilities <271, 273>
+if (p1.getWindingRule() != p2.getWindingRule()) {
+            return false;
+        }
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.jfree.chart.util.ShapeUtilities <271, 273>
+if (GeneralPath.getWindingRule() != GeneralPath.getWindingRule()) {
+            return false;
+        }
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.jfree.chart.util.ShapeUtilities <271, 273>
+if (GeneralPath.getWindingRule() != GeneralPath.getWindingRule()) {
+            return false;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.CategoryAxis <1324, 1324>
+Paint p2 = (Paint) map2.get(entry.getKey());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.PaintMap <159, 159>
+Paint p2 = that.getPaint(key);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedBarRenderer3D <564, 564>
+bottom.lineTo((float) p2.getX(), (float) p2.getY());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedBarRenderer3D <564, 564>
+GeneralPath.lineTo((float) Point2DVar.getX(), (float) Point2DVar.getY());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.StackedBarRenderer3D <564, 564>
+GeneralPath.lineTo((float) p2.getX(), (float) p2.getY());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedBarRenderer3D <575, 575>
+back.moveTo((float) p2.getX(), (float) p2.getY());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedBarRenderer3D <575, 575>
+GeneralPath.moveTo((float) Point2DVar.getX(), (float) Point2DVar.getY());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.StackedBarRenderer3D <575, 575>
+GeneralPath.moveTo((float) p2.getX(), (float) p2.getY());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedBarRenderer3D <591, 591>
+left.lineTo((float) p2.getX(), (float) p2.getY());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedBarRenderer3D <591, 591>
+GeneralPath.lineTo((float) Point2DVar.getX(), (float) Point2DVar.getY());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.StackedBarRenderer3D <591, 591>
+GeneralPath.lineTo((float) p2.getX(), (float) p2.getY());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedBarRenderer3D <762, 762>
+right.lineTo((float) p2.getX(), (float) p2.getY());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedBarRenderer3D <762, 762>
+GeneralPath.lineTo((float) Point2DVar.getX(), (float) Point2DVar.getY());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.StackedBarRenderer3D <762, 762>
+GeneralPath.lineTo((float) p2.getX(), (float) p2.getY());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedBarRenderer3D <773, 773>
+back.moveTo((float) p2.getX(), (float) p2.getY());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedBarRenderer3D <773, 773>
+GeneralPath.moveTo((float) Point2DVar.getX(), (float) Point2DVar.getY());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.StackedBarRenderer3D <773, 773>
+GeneralPath.moveTo((float) p2.getX(), (float) p2.getY());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedBarRenderer3D <789, 789>
+top.lineTo((float) p2.getX(), (float) p2.getY());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.StackedBarRenderer3D <789, 789>
+GeneralPath.lineTo((float) Point2DVar.getX(), (float) Point2DVar.getY());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.StackedBarRenderer3D <789, 789>
+GeneralPath.lineTo((float) p2.getX(), (float) p2.getY());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.ValueAxis <294, 294>
+this.downArrow = p2;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.PeriodAxis <800, 801>
+RegularTimePeriod p2 = this.labelInfo[band].createInstance(
+                new Date(axisMax), this.timeZone);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.axis.PeriodAxis <804, 805>
+String label2 = this.labelInfo[band].getDateFormat().format(
+                new Date(p2.getMiddleMillisecond(this.calendar)));
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedBarRenderer3D <555, 556>
+Point2D p2 = new Point2D.Double(p1.getX() + getXOffset(), 
+                p1.getY() - getYOffset());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.StackedBarRenderer3D <753, 754>
+Point2D p2 = new Point2D.Double(p1.getX() + getXOffset(), 
+                p1.getY() - getYOffset());
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.Outlier <149, 157>
+if (p1.equals(p2)) {
+            return 0;
+        } 
+        else if ((p1.getX() < p2.getX()) || (p1.getY() < p2.getY())) {
+            return -1;
+        } 
+        else {
+            return 1;
+        }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.util.PaintUtilities <85, 97>
+if (p1 instanceof GradientPaint && p2 instanceof GradientPaint) {
+            GradientPaint gp1 = (GradientPaint) p1;
+            GradientPaint gp2 = (GradientPaint) p2;
+            result = gp1.getColor1().equals(gp2.getColor1()) 
+                && gp1.getColor2().equals(gp2.getColor2())
+                && gp1.getPoint1().equals(gp2.getPoint1())    
+                && gp1.getPoint2().equals(gp2.getPoint2())
+                && gp1.isCyclic() == gp2.isCyclic()
+                && gp1.getTransparency() == gp1.getTransparency(); 
+        }
+        else {
+            result = p1.equals(p2);
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.util.ShapeUtilities <246, 248>
+if (!Arrays.equals(p1.xpoints, p2.xpoints)) {
+            return false;
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.util.ShapeUtilities <249, 251>
+if (!Arrays.equals(p1.ypoints, p2.ypoints)) {
+            return false;
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.util.ShapeUtilities <243, 245>
+if (p1.npoints != p2.npoints) {
+            return false;
+        }
+

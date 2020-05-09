@@ -1,0 +1,173 @@
+---patch code 0--- org.jfree.data.general.DatasetUtilities <1258, 1258>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <761, 761>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <774, 774>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <989, 989>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <995, 995>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1001, 1001>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1015, 1015>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1125, 1125>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1174, 1174>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1248, 1248>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1265, 1265>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1278, 1278>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1335, 1335>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1351, 1351>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1417, 1417>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1463, 1463>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1482, 1482>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1593, 1593>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1827, 1827>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1890, 1890>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <2035, 2035>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <2153, 2153>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.xy.VectorRenderer <126, 126>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.xy.VectorRenderer <137, 137>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.xy.VectorRenderer <182, 182>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.xy.VectorRenderer <193, 193>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.xy.ClusteredXYBarRenderer <188, 188>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.category.WaterfallBarRenderer <300, 300>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:0--- org.jfree.data.general.DatasetUtilities <1156, 1156>
+doubleVar = Math.max(doubleVar, doubleVar + doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.data.statistics.DefaultMultiValueCategoryDataset <137, 137>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.data.statistics.BoxAndWhiskerCalculator <156, 156>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.data.statistics.BoxAndWhiskerCalculator <159, 159>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.data.xy.XYSeriesCollection <575, 575>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.data.xy.XYSeriesCollection <608, 608>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.data.xy.XYSeriesCollection <708, 708>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.data.xy.XYSeriesCollection <764, 764>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.xy.XYDifferenceRenderer <583, 583>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.xy.XYDifferenceRenderer <605, 605>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.category.BarRenderer <847, 847>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  varMapType:0--- org.jfree.chart.axis.SubCategoryAxis <235, 235>
+doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.jfree.chart.axis.LogAxis <405, 405>
+doubleVar = Math.max(doubleVar - doubleVar, ValueAxis.doubleVar);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.jfree.chart.renderer.GrayPaintScale <165, 165>
+double doubleVar = Math.max(doubleVar, GrayPaintScale.doubleVar);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.jfree.chart.renderer.xy.CandlestickRenderer <799, 799>
+double doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.jfree.chart.renderer.xy.CandlestickRenderer <801, 801>
+double doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.jfree.chart.renderer.xy.XYBarRenderer <844, 844>
+double doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <1401, 1401>
+double doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <1600, 1600>
+double doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.jfree.chart.renderer.category.BarRenderer <840, 840>
+double doubleVar = Math.max(AbstractCategoryItemRenderer.doubleVar, doubleVar);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <1249, 1249>
+double doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.jfree.chart.plot.PolarPlot <1291, 1291>
+double doubleVar = Math.max(doubleVar, doubleVar);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.jfree.chart.axis.SymbolAxis <501, 501>
+doubleVar = Math.max(0.0, doubleVar + doubleVar);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.jfree.chart.axis.SymbolAxis <514, 514>
+doubleVar = Math.max(0.0, doubleVar - doubleVar);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.jfree.chart.renderer.xy.CandlestickRenderer <746, 746>
+doubleVar = Math.max(Math.min(1, AbstractXYItemRenderer.doubleVar), doubleVar);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.jfree.chart.renderer.xy.CandlestickRenderer <747, 747>
+doubleVar = Math.max(Math.min(3, AbstractXYItemRenderer.doubleVar), doubleVar);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.jfree.chart.axis.NumberAxis <495, 495>
+doubleVar = Math.max(0.0, doubleVar - getLowerMargin() * doubleVar);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.jfree.chart.renderer.category.GroupedStackedBarRenderer <321, 322>
+double doubleVar = Math.max(Math.abs(doubleVar - doubleVar),
+                getMinimumBarLength());
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.jfree.chart.renderer.category.StackedBarRenderer <368, 369>
+double doubleVar = Math.max(Math.abs(doubleVar - doubleVar),
+                getMinimumBarLength());
+

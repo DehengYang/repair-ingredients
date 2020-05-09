@@ -1,0 +1,10 @@
+chunk1 : com.google.javascript.jscomp.ProcessClosurePrimitives:789-789
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (13)
+fix ingredient(SamePackage)  varMapType:0 : (3)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (13)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (10)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (3)
+fix ingredient  <0-fine-grained>  varMapType:0 : (3)
+fix ingredient  <1-fine-grained>  varMapType:1 : (3)
+
+

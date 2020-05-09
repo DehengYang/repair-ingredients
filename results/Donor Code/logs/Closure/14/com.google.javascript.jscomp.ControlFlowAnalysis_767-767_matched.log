@@ -1,0 +1,27 @@
+---patch code ori--- com.google.javascript.jscomp.ControlFlowAnalysis <767, 767>
+cfa.createEdge(fromNode, Branch.ON_EX, finallyNode);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.ControlFlowAnalysis <848, 848>
+createEdge(cfgNode, Branch.ON_EX, catchBlock);
+
+---patch code 0--- com.google.javascript.jscomp.ControlFlowAnalysis <767, 767>
+ControlFlowAnalysis.createEdge(Node, Branch.ON_EX, Node);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ControlFlowAnalysis <848, 848>
+createEdge(Node, Branch.ON_EX, Node);
+
+---patch code 1--- com.google.javascript.jscomp.ControlFlowAnalysis <767, 767>
+ControlFlowAnalysis.createEdge(Node, Branch.ON_EX, Node);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ControlFlowAnalysis <848, 848>
+createEdge(Node, Branch.ON_EX, Node);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.ControlFlowAnalysis <842, 842>
+createEdge(cfgNode, Branch.ON_EX, handler.getLastChild());
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ControlFlowAnalysis <842, 842>
+createEdge(Node, Branch.ON_EX, Node.getLastChild());
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.ControlFlowAnalysis <842, 842>
+createEdge(Node, Branch.ON_EX, Node.getLastChild());
+

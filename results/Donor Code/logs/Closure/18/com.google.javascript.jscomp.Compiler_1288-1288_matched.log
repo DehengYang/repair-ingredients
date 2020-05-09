@@ -1,0 +1,333 @@
+---patch code ori--- com.google.javascript.jscomp.Compiler <1288, 1319>
+if (options.dependencyOptions.needsManagement()) {
+        for (CompilerInput input : inputs) {
+          // Forward-declare all the provided types, so that they
+          // are not flagged even if they are dropped from the process.
+          for (String provide : input.getProvides()) {
+            getTypeRegistry().forwardDeclareType(provide);
+          }
+        }
+
+        try {
+          inputs =
+              (moduleGraph == null ? new JSModuleGraph(modules) : moduleGraph)
+              .manageDependencies(options.dependencyOptions, inputs);
+          staleInputs = true;
+        } catch (CircularDependencyException e) {
+          report(JSError.make(
+              JSModule.CIRCULAR_DEPENDENCY_ERROR, e.getMessage()));
+
+          // If in IDE mode, we ignore the error and keep going.
+          if (hasErrors()) {
+            return null;
+          }
+        } catch (MissingProvideException e) {
+          report(JSError.make(
+              MISSING_ENTRY_ERROR, e.getMessage()));
+
+          // If in IDE mode, we ignore the error and keep going.
+          if (hasErrors()) {
+            return null;
+          }
+        }
+      }
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:ori--- com.google.javascript.jscomp.Compiler <1288, 1319>
+if (options.dependencyOptions.needsManagement() && options.closurePass) {
+        for (CompilerInput input : inputs) {
+          // Forward-declare all the provided types, so that they
+          // are not flagged even if they are dropped from the process.
+          for (String provide : input.getProvides()) {
+            getTypeRegistry().forwardDeclareType(provide);
+          }
+        }
+
+        try {
+          inputs =
+              (moduleGraph == null ? new JSModuleGraph(modules) : moduleGraph)
+              .manageDependencies(options.dependencyOptions, inputs);
+          staleInputs = true;
+        } catch (CircularDependencyException e) {
+          report(JSError.make(
+              JSModule.CIRCULAR_DEPENDENCY_ERROR, e.getMessage()));
+
+          // If in IDE mode, we ignore the error and keep going.
+          if (hasErrors()) {
+            return null;
+          }
+        } catch (MissingProvideException e) {
+          report(JSError.make(
+              MISSING_ENTRY_ERROR, e.getMessage()));
+
+          // If in IDE mode, we ignore the error and keep going.
+          if (hasErrors()) {
+            return null;
+          }
+        }
+      }
+
+---patch code 0--- com.google.javascript.jscomp.Compiler <1288, 1319>
+if (CompilerOptions.dependencyOptions.needsManagement()) {
+        for (CompilerInput input : ListVar) {
+          // Forward-declare all the provided types, so that they
+          // are not flagged even if they are dropped from the process.
+          for (String provide : CompilerInput.getProvides()) {
+            getTypeRegistry().forwardDeclareType(provide);
+          }
+        }
+
+        try {
+          ListVar =
+              (JSModuleGraph == null ? new JSModuleGraph(ListVar) : JSModuleGraph)
+              .manageDependencies(CompilerOptions.dependencyOptions, ListVar);
+          booleanVar = true;
+        } catch (CircularDependencyException e) {
+          report(JSError.make(
+              JSModule.CIRCULAR_DEPENDENCY_ERROR, e.getMessage()));
+
+          // If in IDE mode, we ignore the error and keep going.
+          if (hasErrors()) {
+            return null;
+          }
+        } catch (MissingProvideException e) {
+          report(JSError.make(
+              MISSING_ENTRY_ERROR, e.getMessage()));
+
+          // If in IDE mode, we ignore the error and keep going.
+          if (hasErrors()) {
+            return null;
+          }
+        }
+      }
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.Compiler <1288, 1319>
+if (CompilerOptions.dependencyOptions.needsManagement() && CompilerOptions.closurePass) {
+        for (CompilerInput input : ListVar) {
+          // Forward-declare all the provided types, so that they
+          // are not flagged even if they are dropped from the process.
+          for (String provide : CompilerInput.getProvides()) {
+            getTypeRegistry().forwardDeclareType(provide);
+          }
+        }
+
+        try {
+          ListVar =
+              (JSModuleGraph == null ? new JSModuleGraph(ListVar) : JSModuleGraph)
+              .manageDependencies(CompilerOptions.dependencyOptions, ListVar);
+          booleanVar = true;
+        } catch (CircularDependencyException e) {
+          report(JSError.make(
+              JSModule.CIRCULAR_DEPENDENCY_ERROR, e.getMessage()));
+
+          // If in IDE mode, we ignore the error and keep going.
+          if (hasErrors()) {
+            return null;
+          }
+        } catch (MissingProvideException e) {
+          report(JSError.make(
+              MISSING_ENTRY_ERROR, e.getMessage()));
+
+          // If in IDE mode, we ignore the error and keep going.
+          if (hasErrors()) {
+            return null;
+          }
+        }
+      }
+
+---patch code 1--- com.google.javascript.jscomp.Compiler <1288, 1319>
+if (CompilerOptions.dependencyOptions.needsManagement()) {
+        for (CompilerInput input : inputs) {
+          // Forward-declare all the provided types, so that they
+          // are not flagged even if they are dropped from the process.
+          for (String provide : CompilerInput.getProvides()) {
+            getTypeRegistry().forwardDeclareType(provide);
+          }
+        }
+
+        try {
+          inputs =
+              (JSModuleGraph == null ? new JSModuleGraph(modules) : JSModuleGraph)
+              .manageDependencies(CompilerOptions.dependencyOptions, inputs);
+          staleInputs = true;
+        } catch (CircularDependencyException e) {
+          report(JSError.make(
+              JSModule.CIRCULAR_DEPENDENCY_ERROR, e.getMessage()));
+
+          // If in IDE mode, we ignore the error and keep going.
+          if (hasErrors()) {
+            return null;
+          }
+        } catch (MissingProvideException e) {
+          report(JSError.make(
+              MISSING_ENTRY_ERROR, e.getMessage()));
+
+          // If in IDE mode, we ignore the error and keep going.
+          if (hasErrors()) {
+            return null;
+          }
+        }
+      }
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.Compiler <1288, 1319>
+if (CompilerOptions.dependencyOptions.needsManagement() && CompilerOptions.closurePass) {
+        for (CompilerInput input : inputs) {
+          // Forward-declare all the provided types, so that they
+          // are not flagged even if they are dropped from the process.
+          for (String provide : CompilerInput.getProvides()) {
+            getTypeRegistry().forwardDeclareType(provide);
+          }
+        }
+
+        try {
+          inputs =
+              (JSModuleGraph == null ? new JSModuleGraph(modules) : JSModuleGraph)
+              .manageDependencies(CompilerOptions.dependencyOptions, inputs);
+          staleInputs = true;
+        } catch (CircularDependencyException e) {
+          report(JSError.make(
+              JSModule.CIRCULAR_DEPENDENCY_ERROR, e.getMessage()));
+
+          // If in IDE mode, we ignore the error and keep going.
+          if (hasErrors()) {
+            return null;
+          }
+        } catch (MissingProvideException e) {
+          report(JSError.make(
+              MISSING_ENTRY_ERROR, e.getMessage()));
+
+          // If in IDE mode, we ignore the error and keep going.
+          if (hasErrors()) {
+            return null;
+          }
+        }
+      }
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:ori--- com.google.javascript.jscomp.Compiler <1367, 1404>
+/**
+   * Hoists inputs with the @externs annotation into the externs list.
+   */
+  private void hoistExterns(Node externsRoot) {
+    boolean staleInputs = false;
+    for (CompilerInput input : inputs) {
+      if (options.dependencyOptions.needsManagement() &&
+          options.closurePass) {
+        // If we're doing scanning dependency info anyway, use that
+        // information to skip sources that obviously aren't externs.
+        if (!input.getProvides().isEmpty() || !input.getRequires().isEmpty()) {
+          continue;
+        }
+      }
+
+      Node n = input.getAstRoot(this);
+
+      // Inputs can have a null AST on a parse error.
+      if (n == null) {
+        continue;
+      }
+
+      JSDocInfo info = n.getJSDocInfo();
+      if (info != null && info.isExterns()) {
+        // If the input file is explicitly marked as an externs file, then
+        // assume the programmer made a mistake and throw it into
+        // the externs pile anyways.
+        externsRoot.addChildToBack(n);
+        input.setIsExtern(true);
+
+        input.getModule().remove(input);
+
+        externs.add(input);
+        staleInputs = true;
+      }
+    }
+
+    if (staleInputs) {
+      repartitionInputs();
+    }
+  }
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.Compiler <1367, 1404>
+/**
+   * Hoists inputs with the @externs annotation into the externs list.
+   */
+  private void hoistExterns(Node externsRoot) {
+    boolean staleInputs = false;
+    for (CompilerInput input : ListVar) {
+      if (CompilerOptions.dependencyOptions.needsManagement() &&
+          CompilerOptions.closurePass) {
+        // If we're doing scanning dependency info anyway, use that
+        // information to skip sources that obviously aren't externs.
+        if (!input.getProvides().isEmpty() || !input.getRequires().isEmpty()) {
+          continue;
+        }
+      }
+
+      Node n = input.getAstRoot(this);
+
+      // Inputs can have a null AST on a parse error.
+      if (n == null) {
+        continue;
+      }
+
+      JSDocInfo info = n.getJSDocInfo();
+      if (info != null && info.isExterns()) {
+        // If the input file is explicitly marked as an externs file, then
+        // assume the programmer made a mistake and throw it into
+        // the externs pile anyways.
+        Node.addChildToBack(n);
+        input.setIsExtern(true);
+
+        input.getModule().remove(input);
+
+        ListVar.add(input);
+        staleInputs = true;
+      }
+    }
+
+    if (staleInputs) {
+      repartitionInputs();
+    }
+  }
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.Compiler <1367, 1404>
+/**
+   * Hoists inputs with the @externs annotation into the externs list.
+   */
+  private void hoistExterns(Node externsRoot) {
+    boolean staleInputs = false;
+    for (CompilerInput input : inputs) {
+      if (CompilerOptions.dependencyOptions.needsManagement() &&
+          CompilerOptions.closurePass) {
+        // If we're doing scanning dependency info anyway, use that
+        // information to skip sources that obviously aren't externs.
+        if (!input.getProvides().isEmpty() || !input.getRequires().isEmpty()) {
+          continue;
+        }
+      }
+
+      Node n = input.getAstRoot(this);
+
+      // Inputs can have a null AST on a parse error.
+      if (n == null) {
+        continue;
+      }
+
+      JSDocInfo info = n.getJSDocInfo();
+      if (info != null && info.isExterns()) {
+        // If the input file is explicitly marked as an externs file, then
+        // assume the programmer made a mistake and throw it into
+        // the externs pile anyways.
+        Node.addChildToBack(n);
+        input.setIsExtern(true);
+
+        input.getModule().remove(input);
+
+        externs.add(input);
+        staleInputs = true;
+      }
+    }
+
+    if (staleInputs) {
+      repartitionInputs();
+    }
+  }
+

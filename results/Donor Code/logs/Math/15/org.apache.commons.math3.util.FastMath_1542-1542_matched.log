@@ -1,0 +1,15 @@
+---patch code 0--- org.apache.commons.math3.util.FastMath <1542, 1544>
+if (doubleVar >= doubleVar || doubleVar <= -doubleVar) {
+                return pow(-doubleVar, doubleVar);
+            }
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.math3.util.FastMath <1541, 1543>
+if (doubleVar >= doubleVar || doubleVar <= -doubleVar) {
+                return pow(-doubleVar, doubleVar);
+            }
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math3.util.FastMath <3333, 3335>
+if (doubleVar >= doubleVar || doubleVar <= -doubleVar) {
+            return doubleVar;
+        }
+

@@ -1,0 +1,27 @@
+---patch code ori--- org.apache.commons.math.optimization.fitting.GaussianFitter <121, 121>
+return fit(guess);
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:ori--- org.apache.commons.math.optimization.fitting.GaussianFitter <121, 121>
+return fit(new Gaussian.Parametric(), guess);
+
+---patch code 0--- org.apache.commons.math.optimization.fitting.GaussianFitter <121, 121>
+return fit(double[]Var);
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.optimization.fitting.GaussianFitter <121, 121>
+return fit(new Gaussian.Parametric(), double[]Var);
+
+---patch code 1--- org.apache.commons.math.optimization.fitting.GaussianFitter <121, 121>
+return fit(guess);
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:1--- org.apache.commons.math.optimization.fitting.GaussianFitter <121, 121>
+return fit(new Gaussian.Parametric(), guess);
+
+---fix ingredient(SameFile)  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.optimization.fitting.GaussianFitter <110, 110>
+return fit(ParametricUnivariateRealFunction, double[]Var);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.optimization.fitting.CurveFitter <126, 126>
+return fit(Integer.MAX_VALUE, ParametricUnivariateRealFunction, double[]Var);
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.optimization.fitting.HarmonicFitter <61, 61>
+return fit(new HarmonicOscillator.Parametric(), double[]Var);
+

@@ -1,0 +1,16 @@
+chunk1 : org.apache.commons.lang.text.StrBuilder:1730-1730
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (48)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (48)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (23)
+fix ingredient  <1-fine-grained>  varMapType:1 : (23)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (2)
+fix ingredient(SameFile)  varMapType:0 : (2)
+fix ingredient  varMapType:0 : (2)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:0 : (1)
+fix ingredient  <0-fine-grained>  varMapType:0 : (10)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (5)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (2)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (2)
+
+

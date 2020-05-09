@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_34/src/org/mockito/internal/invocation/InvocationMatcher.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_34/src/org/mockito/internal/invocation/InvocationMatcher.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_34/src/org/mockito/internal/invocation/InvocationMatcher.java	2020-01-05 22:35:24.796550052 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_34/src/org/mockito/internal/invocation/InvocationMatcher.java	2020-01-05 22:35:27.676550041 -0800
+@@ -103,7 +103,7 @@
+     public void captureArgumentsFrom(Invocation i) {
+         int k = 0;
+         for (Matcher m : matchers) {
+-            if (m instanceof CapturesArguments) {
++            if (m instanceof CapturesArguments && i.getArguments().length > k) {
+                 ((CapturesArguments) m).captureFrom(i.getArguments()[k]);
+             }
+             k++;

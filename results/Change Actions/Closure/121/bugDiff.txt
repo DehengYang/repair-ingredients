@@ -1,0 +1,18 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_121/src/com/google/javascript/jscomp/InlineVariables.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_121/src/com/google/javascript/jscomp/InlineVariables.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_121/src/com/google/javascript/jscomp/InlineVariables.java	2020-01-05 05:23:09.068520821 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_121/src/com/google/javascript/jscomp/InlineVariables.java	2020-01-05 05:23:12.052495899 -0800
+@@ -301,10 +301,12 @@
+       if (!maybeModifiedArguments &&
+           !staleVars.contains(v) &&
+           referenceInfo.isWellDefined() &&
+-          referenceInfo.isAssignedOnceInLifetime()) {
++          referenceInfo.isAssignedOnceInLifetime() &&
+           // Inlining the variable based solely on well-defined and assigned
+           // once is *NOT* correct. We relax the correctness requirement if
+           // the variable is declared constant.
++          (isInlineableDeclaredConstant(v, referenceInfo) ||
++           referenceInfo.isOnlyAssignmentSameScopeAsDeclaration())) {
+         List<Reference> refs = referenceInfo.references;
+         for (int i = 1 /* start from a read */; i < refs.size(); i++) {
+           Node nameNode = refs.get(i).getNode();

@@ -1,0 +1,85 @@
+---patch code ori--- org.jfree.data.general.DatasetUtilities <758, 761>
+if (!Double.isNaN(value)) {
+                        minimum = Math.min(minimum, value);
+                        maximum = Math.max(maximum, value);
+                    }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.jfree.data.general.DatasetUtilities <1276, 1279>
+if (!Double.isNaN(value)) {
+                        minimum = Math.min(minimum, value);
+                        maximum = Math.max(maximum, value);
+                    }
+
+---patch code 0--- org.jfree.data.general.DatasetUtilities <758, 761>
+if (!Double.isNaN(doubleVar)) {
+                        doubleVar = Math.min(doubleVar, doubleVar);
+                        doubleVar = Math.max(doubleVar, doubleVar);
+                    }
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1276, 1279>
+if (!Double.isNaN(doubleVar)) {
+                        doubleVar = Math.min(doubleVar, doubleVar);
+                        doubleVar = Math.max(doubleVar, doubleVar);
+                    }
+
+---patch code 1--- org.jfree.data.general.DatasetUtilities <758, 761>
+if (!Double.isNaN(value)) {
+                        minimum = Math.min(minimum, value);
+                        maximum = Math.max(maximum, value);
+                    }
+
+---fix ingredient(SameFile)  varMapType:1--- org.jfree.data.general.DatasetUtilities <1276, 1279>
+if (!Double.isNaN(value)) {
+                        minimum = Math.min(minimum, value);
+                        maximum = Math.max(maximum, value);
+                    }
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <2150, 2154>
+if (!Double.isNaN(doubleVar)) {
+                        doubleVar = doubleVar + doubleVar;
+                        doubleVar = Math.min(doubleVar, doubleVar);
+                        doubleVar = Math.max(doubleVar, doubleVar);
+                    }
+
+---fix ingredient(SameMethod)  varMapType:0--- org.jfree.data.general.DatasetUtilities <772, 775>
+if (!Double.isNaN(doubleVar)) {
+                        doubleVar = Math.min(doubleVar, doubleVar);
+                        doubleVar = Math.max(doubleVar, doubleVar);
+                    }
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1013, 1016>
+if (!Double.isNaN(doubleVar)) {
+                            doubleVar = Math.min(doubleVar, doubleVar);
+                            doubleVar = Math.max(doubleVar, doubleVar);
+                        }
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:0--- org.jfree.data.general.DatasetUtilities <1123, 1126>
+if (!Double.isNaN(doubleVar)){
+	                            doubleVar = Math.min(doubleVar, doubleVar);
+	                            doubleVar = Math.max(doubleVar, doubleVar);
+							}
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1172, 1175>
+if (!Double.isNaN(doubleVar)) {
+                            doubleVar = Math.min(doubleVar, doubleVar);
+                            doubleVar = Math.max(doubleVar, doubleVar);
+                        }
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1349, 1352>
+if (!Double.isNaN(doubleVar)) {
+                        doubleVar = Math.min(doubleVar, doubleVar);
+                        doubleVar = Math.max(doubleVar, doubleVar);
+                    }
+
+---fix ingredient(SameFile)  varMapType:0--- org.jfree.data.general.DatasetUtilities <1480, 1483>
+if (!Double.isNaN(doubleVar)) {
+                            doubleVar = Math.min(doubleVar, doubleVar);
+                            doubleVar = Math.max(doubleVar, doubleVar);
+                        }
+
+---fix ingredient(SameFile)  <parseContainCheck>  <parseContainCheck>  varMapType:0--- org.jfree.data.general.DatasetUtilities <1154, 1157>
+if (!Double.isNaN(doubleVar)) {
+                            doubleVar = Math.min(doubleVar, doubleVar - doubleVar);
+                            doubleVar = Math.max(doubleVar, doubleVar + doubleVar);
+                        }
+

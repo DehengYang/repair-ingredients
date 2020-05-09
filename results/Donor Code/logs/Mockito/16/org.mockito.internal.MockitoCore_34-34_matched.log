@@ -1,0 +1,31 @@
+---patch code 0--- org.mockito.internal.MockitoCore <34, 36>
+if (booleanVar) {
+            MockingProgress.resetOngoingStubbing();
+        }
+
+---fix ingredient  varMapType:0--- org.mockito.internal.stubbing.InvocationContainerImpl <59, 63>
+if (booleanVar) {
+            LinkedList.getFirst().addAnswer(Answer);
+        } else {
+            LinkedList.addFirst(new StubbedInvocationMatcher(InvocationMatcher, Answer));
+        }
+
+---fix ingredient  varMapType:0--- org.mockito.internal.debugging.WarningsPrinterImpl <52, 56>
+if (booleanVar) {
+            for (InvocationMatcher i1 : ListVar) {
+                MockitoLogger.log(thisMethodWasNotStubbed(i1));
+            }
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.mockito.internal.invocation.InvocationsFinder <87, 89>
+if (!Invocation.isVerified() && booleanVar) {
+                return Invocation;
+            }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.mockito.internal.exceptions.base.StackTraceFilter <44, 48>
+if (booleanVar && intVar != -1) {
+            ListVar = ListVar.subList(0, intVar);
+        } else {
+            ListVar = new LinkedList<StackTraceElement>();
+        }
+

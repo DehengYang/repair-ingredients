@@ -1,0 +1,27 @@
+---patch code 0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <258, 259>
+double[] double[]Var  = new double[intVar];
+double[] double[]Var     = new double[intVar];
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <1360, 1365>
+if (double[]Var.length != intVar) {
+            throw MathRuntimeException.createIllegalArgumentException(
+                    LocalizedFormats.VECTOR_LENGTH_MISMATCH,
+                    double[]Var.length, intVar);
+        }
+final double[] double[]Var = new double[intVar];
+
+---fix ingredient(SamePackage)  <parseContainCheck>  <parseContainCheck>  varMapType:0--- org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer <301, 314>
+throws FunctionEvaluationException, OptimizationException {
+if (intVar <= intVar) {
+            throw new OptimizationException(
+                    LocalizedFormats.NO_DEGREES_OF_FREEDOM,
+                    intVar, intVar);
+        }
+double[] double[]Var = new double[intVar];
+final double doubleVar = Math.sqrt(getChiSquare() / (intVar - intVar));
+double[][] double[][]Var = getCovariances();
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+            double[]Var[intVar] = Math.sqrt(double[][]Var[intVar][intVar]) * doubleVar;
+        }
+return double[]Var;
+

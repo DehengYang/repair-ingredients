@@ -1,0 +1,6 @@
+chunk1 : org.mockito.exceptions.Reporter:421-421
+fix ingredient(SameMethod)  varMapType:ori : (1)
+fix ingredient(SameMethod)  varMapType:0 : (1)
+fix ingredient(SameMethod)  varMapType:1 : (1)
+
+

@@ -1,0 +1,40 @@
+chunk1 : org.apache.commons.math.linear.OpenMapRealVector:358-358
+fix ingredient(SameFile)  varMapType:ori : (11)
+fix ingredient(SameFile)  varMapType:0 : (11)
+fix ingredient(SameFile)  varMapType:1 : (11)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori : (10)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:ori : (2)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:0 : (2)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:1 : (2)
+
+
+chunk2 : org.apache.commons.math.linear.OpenMapRealVector:345-345
+fix ingredient(SameFile)  varMapType:ori : (11)
+fix ingredient(SameFile)  varMapType:0 : (11)
+fix ingredient(SameFile)  varMapType:1 : (11)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori : (10)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:ori : (2)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:0 : (2)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:1 : (2)
+
+
+chunk3 : org.apache.commons.math.linear.OpenMapRealVector:383-383
+fix ingredient(SameFile)  varMapType:ori : (11)
+fix ingredient(SameFile)  varMapType:0 : (11)
+fix ingredient(SameFile)  varMapType:1 : (11)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori : (10)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:ori : (2)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:0 : (2)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:1 : (2)
+
+
+chunk4 : org.apache.commons.math.linear.OpenMapRealVector:370-370
+fix ingredient(SameFile)  varMapType:ori : (11)
+fix ingredient(SameFile)  varMapType:0 : (11)
+fix ingredient(SameFile)  varMapType:1 : (11)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori : (10)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:ori : (2)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:0 : (2)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:1 : (2)
+
+

@@ -1,0 +1,1150 @@
+---patch code 0--- org.jfree.data.time.TimeSeries <944, 946>
+if ((intVar < 0)  || (intVar < intVar)) {
+            booleanVar = true;
+        }
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.TimeSeries <933, 938>
+if (intVar < 0) {
+            intVar = -(intVar + 1);
+            if (intVar == Series.ListVar.size()) {
+                booleanVar = true;  // start is after last data item
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Week <635, 637>
+if ((intVar < 1) || (intVar > intVar)) {
+                intVar = -1;
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Second <442, 444>
+if ((intVar >= 0) && (intVar <= 59)) {
+                        RegularTimePeriod = new Second(intVar, RegularTimePeriod);
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.LogarithmicAxis <809, 828>
+if (!booleanVar) {  // did not do zero tick last iteration
+                        if (Math.abs(doubleVar - 1.0) < 0.0001
+                            && doubleVar <= 0.0 && doubleVar >= 0.0) {
+                            //tick value is 1.0 and 0.0 is within data range
+                            doubleVar = 0.0;     //set tick value to zero
+                            booleanVar = true;        //indicate zero tick
+                        }
+                    }
+                    else {     //did zero tick last iteration
+                        booleanVar = false;         //clear flag
+                    }
+//show tick label if "1e#"-style and it's one
+// of the first two, if it's the first or last
+// in the set, or if it's 1-5; beyond that
+// show fewer as the values get larger:
+StringVar = ((NumberAxis.booleanVar && intVar < 2)
+                                || intVar < 1
+                                || (intVar < 1 && intVar < 5) || (intVar < 4 - intVar)
+                                || doubleVar >= doubleVar)
+                                   ? makeTickLabel(doubleVar) : "";
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.LogarithmicAxis <773, 800>
+if (NumberAxis.booleanVar
+                        || (intVar < 0 && doubleVar > 0.0
+                        && doubleVar < 1.0)) {
+                        //showing "1e#"-style ticks or negative exponent
+                        // generating tick value between 0 & 1; show fewer
+                        if (intVar == 0 || (intVar > -4 && intVar < 2)
+                                   || doubleVar >= doubleVar) {
+                          //first tick of series, or not too small a value and
+                          // one of first 3 ticks, or last tick to be displayed
+                            // set exact number of fractional digits to be shown
+                            // (no effect if showing "1e#"-style ticks):
+                            NumberAxis.NumberFormat
+                                .setMaximumFractionDigits(-intVar);
+                               //create tick label (force use of fmt obj):
+                            StringVar = makeTickLabel(doubleVar, true);
+                        }
+                        else {    //no tick label to be shown
+                            StringVar = "";
+                        }
+                    }
+                    else {     //tick value not between 0 & 1
+                               //show tick label if it's the first or last in
+                               // the set, or if it's 1-5; beyond that show
+                               // fewer as the values get larger:
+                        StringVar = (intVar < 1 || (intVar < 1 && intVar < 5) || (intVar < 4 - intVar)
+                                         || doubleVar >= doubleVar)
+                                         ? makeTickLabel(doubleVar) : "";
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.ChartUtilities <238, 240>
+if ((intVar != 1) || (intVar != 1)) {
+            booleanVar = true;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.DynamicTimeSeriesCollection <547, 549>
+if (intVar < 0) {
+            intVar += AbstractIntervalXYDataset.intVar;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.DynamicTimeSeriesCollection <594, 596>
+if (AbstractIntervalXYDataset.intVar >= AbstractIntervalXYDataset.intVar) {
+            AbstractIntervalXYDataset.intVar = 0;
+        }
+
+---patch code 1--- org.jfree.data.time.TimeSeries <944, 946>
+if ((endIndex < 0)  || (endIndex < startIndex)) {
+            emptyRange = true;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.AbstractRenderer <639, 641>
+if (Paint == null) {
+            Paint = AbstractRenderer.Paint;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.AbstractRenderer <794, 796>
+if (Paint == null) {
+            Paint = AbstractRenderer.Paint;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.AbstractRenderer <954, 956>
+if (Paint == null) {
+            Paint = AbstractRenderer.Paint;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.AbstractRenderer <1796, 1798>
+if (Paint == null) {
+            Paint = AbstractRenderer.Paint;   
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYAreaRenderer <221, 223>
+if (intVar == intVar) {
+            AbstractXYItemRenderer.booleanVar = true;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYAreaRenderer <224, 226>
+if (intVar == intVar) {
+            AbstractXYItemRenderer.booleanVar = true;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYAreaRenderer <231, 233>
+if (intVar == intVar) {
+            AbstractXYItemRenderer.booleanVar = true;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.LogarithmicAxis <916, 918>
+if (intVar == intVar) {
+                intVar = 1;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.SpiderWebPlot <787, 789>
+if (Paint == null) {
+            Paint = Plot.Paint;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.needle.MeterNeedle <137, 139>
+if (Paint != null) {
+            MeterNeedle.Paint = Paint;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.needle.MeterNeedle <177, 179>
+if (Paint != null) {
+            MeterNeedle.Paint = Paint;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.needle.MeterNeedle <197, 199>
+if (Paint != null) {
+            MeterNeedle.Paint = Paint;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYStepAreaRenderer <158, 167>
+if (intVar == intVar) {
+            AbstractXYItemRenderer.booleanVar = true;
+        }
+        else if (intVar == intVar) {
+            AbstractXYItemRenderer.booleanVar = true;
+        }
+        else if (intVar == intVar) {
+            AbstractXYItemRenderer.booleanVar = true;
+            AbstractXYItemRenderer.booleanVar = true;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.KeyedObjects2D <341, 344>
+if (intVar >= 0 && KeyedObjects.getObject(intVar) != null) {
+                booleanVar = false;
+                break;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.DefaultKeyedValues2D <384, 387>
+if (intVar >= 0 && DefaultKeyedValues.getValue(intVar) != null) {
+                booleanVar = false;
+                break;
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.SpreadsheetDate <109, 116>
+if ((intVar >= 1900) && (intVar <= 9999)) {
+            SerialDate.intVar = intVar;
+        }
+        else {
+            throw new IllegalArgumentException(
+                "The 'year' argument must be in range 1900 to 9999."
+            );
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.SpreadsheetDate <118, 126>
+if ((intVar >= MonthConstants.JANUARY)
+                && (intVar <= MonthConstants.DECEMBER)) {
+            SerialDate.intVar = intVar;
+        }
+        else {
+            throw new IllegalArgumentException(
+                "The 'month' argument must be in the range 1 to 12."
+            );
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PiePlot <886, 890>
+if (Plot.PieDataset != null) {
+            if (intVar >= 0 && intVar < Plot.PieDataset.getItemCount()) {
+                Comparable = Plot.PieDataset.getKey(intVar);
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.LogarithmicAxis <756, 761>
+if (intVar == intVar && intVar > 0
+                && Math.pow(10, intVar) > doubleVar) {
+              //only 1 power of 10 value, it's > 0 and its resulting
+              // tick value will be larger than lower bound of data
+            --intVar;       //decrement to generate more ticks
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.LogarithmicAxis <903, 908>
+if (intVar == intVar && intVar > 0
+                && Math.pow(10, intVar) > doubleVar) {
+              //only 1 power of 10 value, it's > 0 and its resulting
+              // tick value will be larger than lower bound of data
+            --intVar;       //decrement to generate more ticks
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.LayeredBarRenderer <303, 305>
+if (GradientPaintTransformer != null && Paint instanceof GradientPaint) {
+            Paint = GradientPaintTransformer.transform((GradientPaint) Paint, bar);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.LayeredBarRenderer <434, 436>
+if (GradientPaintTransformer != null && Paint instanceof GradientPaint) {
+            Paint = GradientPaintTransformer.transform((GradientPaint) Paint, bar);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.BarRenderer <760, 762>
+if (GradientPaintTransformer != null && Paint instanceof GradientPaint) {
+            Paint = GradientPaintTransformer.transform((GradientPaint) Paint, bar);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.StackedBarRenderer <357, 359>
+if (GradientPaintTransformer != null && Paint instanceof GradientPaint) {
+                Paint = GradientPaintTransformer.transform((GradientPaint) Paint, bar);
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.block.RectangleConstraint <350, 352>
+if (RectangleConstraint.LengthConstraintType == LengthConstraintType.FIXED) {
+               result.height = RectangleConstraint.height;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.block.RectangleConstraint <362, 364>
+if (RectangleConstraint.LengthConstraintType == LengthConstraintType.FIXED) {
+                result.height = RectangleConstraint.height;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.block.RectangleConstraint <374, 376>
+if (RectangleConstraint.LengthConstraintType == LengthConstraintType.FIXED) {
+                result.height = RectangleConstraint.height;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.util.AbstractObjectList <110, 112>
+if (intVar >= 0 && intVar < AbstractObjectList.intVar) {
+            Object = AbstractObjectList.Object[]Var[intVar];
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.MultiplePiePlot <447, 454>
+if (intVar == intVar) {
+                intVar = 0;
+                ++intVar;
+
+                if (intVar == intVar - 1 && intVar != 0) {
+                    intVar = (intVar * intVar) / 2;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.MinMaxCategoryRenderer <417, 419>
+if (EntityCollection != null && Shape != null) {
+                addItemEntity(EntityCollection, CategoryDataset, intVar, intVar, Shape);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYAreaRenderer <227, 230>
+if (intVar == intVar) {
+            AbstractXYItemRenderer.booleanVar = true;
+            AbstractXYItemRenderer.booleanVar = true;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYAreaRenderer <234, 237>
+if (intVar == intVar) {
+            AbstractXYItemRenderer.booleanVar = true;
+            AbstractXYItemRenderer.booleanVar = true;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.editor.DefaultPlotEditor <511, 516>
+if (intVar == intVar) {
+            JPanel.PlotOrientation = PlotOrientation.VERTICAL;
+        }
+        else {
+            JPanel.PlotOrientation = PlotOrientation.HORIZONTAL;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Minute <481, 483>
+if ((intVar >= 0) && (intVar <= 59)) {
+                    RegularTimePeriod = new Minute(intVar, new Hour(intVar, RegularTimePeriod));
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <657, 662>
+if ((intVar >= 0) && (intVar < String[]Var.length)) {
+            if (Plot.intVar != intVar) {
+                Plot.intVar = intVar;
+                fireChangeEvent();
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.block.ColumnArrangement <324, 336>
+if (ColumnArrangement.HorizontalAlignment != HorizontalAlignment.LEFT) {
+                for (int intVar = 0; intVar < ListVar.size(); intVar++) {
+                    //Block b = (Block) blocks.get(i);
+                    if (ColumnArrangement.HorizontalAlignment 
+                            == HorizontalAlignment.CENTER) {
+                        //TODO: shift block right by half
+                    }
+                    else if (ColumnArrangement.HorizontalAlignment 
+                            == HorizontalAlignment.RIGHT) {
+                        //TODO: shift block over to right
+                    }
+                }            
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.block.FlowArrangement <379, 390>
+if (FlowArrangement.VerticalAlignment != VerticalAlignment.TOP) {
+                for (int intVar = 0; intVar < ListVar.size(); intVar++) {
+                    //Block b = (Block) blocks.get(i);
+                    if (FlowArrangement.VerticalAlignment == VerticalAlignment.CENTER) {
+                        //TODO: shift block down by half
+                    }
+                    else if (FlowArrangement.VerticalAlignment 
+                            == VerticalAlignment.BOTTOM) {
+                        //TODO: shift block down to bottom
+                    }
+                }            
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.category.CategoryToPieDataset <264, 271>
+if (intVar != -1) {
+            if (AbstractDataset.TableOrder == TableOrder.BY_ROW) {
+                Number = AbstractDataset.CategoryDataset.getValue(AbstractDataset.intVar, intVar);
+            }
+            else if (AbstractDataset.TableOrder == TableOrder.BY_COLUMN) {
+                Number = AbstractDataset.CategoryDataset.getValue(intVar, AbstractDataset.intVar);
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.SpreadsheetDate <148, 154>
+if ((intVar >= intVar) && (intVar <= intVar)) {
+            SerialDate.intVar = intVar;
+        }
+        else {
+            throw new IllegalArgumentException(
+                "SpreadsheetDate: Serial must be in range 2 to 2958465.");
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.SerialDate <713, 715>
+if (intVar >= 4) {
+            intVar = 7 - intVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.StandardXYItemRenderer <266, 268>
+if ((intVar & intVar) != 0) {
+            AbstractXYItemRenderer.booleanVar = true;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.StandardXYItemRenderer <269, 271>
+if ((intVar & intVar) != 0) {
+            AbstractXYItemRenderer.booleanVar = true;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.StandardXYItemRenderer <272, 274>
+if ((intVar & intVar) != 0) {
+            AbstractXYItemRenderer.booleanVar = true;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.StandardXYItemRenderer <275, 277>
+if ((intVar & intVar) != 0) {
+            AbstractXYItemRenderer.booleanVar = true;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.SpreadsheetDate <128, 133>
+if ((intVar >= 1) && (intVar <= SerialDate.lastDayOfMonth(intVar, intVar))) {
+            SerialDate.intVar = intVar;
+        }
+        else {
+            throw new IllegalArgumentException("Invalid 'day' argument.");
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.MovingAverage <158, 166>
+if (longVar > longVar) {
+                                if (Number != null) {
+                                    doubleVar = doubleVar + Number.doubleValue();
+                                    intVar = intVar + 1;
+                                }
+                            }
+                            else {
+                                booleanVar = true;
+                            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.MovingAverage <340, 348>
+if (doubleVar > doubleVar) {
+                                if (Number != null) {
+                                    doubleVar = doubleVar + Number.doubleValue();
+                                    intVar = intVar + 1;
+                                }
+                            }
+                            else {
+                                booleanVar = true;
+                            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.ThermometerPlot <930, 934>
+if ((range >= 0) 
+                && (range < Plot.subrangePaint.length) && (Paint != null)) {
+            Plot.subrangePaint[range] = Paint;
+            fireChangeEvent();
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.SpreadsheetDate <423, 434>
+if (intVar == SerialDate.intVar) {
+            return (intVar >= intVar && intVar <= intVar);
+        }
+        else if (intVar == SerialDate.intVar) {
+            return (intVar >= intVar && intVar < intVar);
+        }
+        else if (intVar == SerialDate.intVar) {
+            return (intVar > intVar && intVar <= intVar);
+        }
+        else {
+            return (intVar > intVar && intVar < intVar);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.KeyToGroupMap <138, 145>
+if (intVar < 0) {
+            if (KeyToGroupMap.Comparable.equals(Comparable)) {
+                intVar = 0;
+            }
+        }
+        else {
+            intVar = intVar + 1;   
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.JFreeChart <966, 969>
+if (Paint != null) {
+                JFreeChart.Paint = Paint;
+                fireChartChanged();
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.ThermometerPlot <622, 625>
+if (Paint != null) {
+            Plot.Paint = Paint;
+            fireChangeEvent();
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.MeterPlot <781, 783>
+if (Paint == null) {
+                Paint = MeterInterval.getOutlinePaint();
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.HistogramDataset <198, 200>
+if (intVar >= intVar) {
+                    intVar = intVar - 1;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.ui.LCBLayout <218, 220>
+if (intVar == 0) {
+                    intVar = intVar + LCBLayout.intVar;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.ui.LCBLayout <221, 223>
+if (intVar == 1) {
+                    intVar = intVar + LCBLayout.intVar;
+                }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Quarter <121, 123>
+if ((intVar < intVar) || (intVar > intVar)) {
+            throw new IllegalArgumentException("Quarter outside valid range.");
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Quarter <136, 138>
+if ((intVar < intVar) || (intVar > intVar)) {
+            throw new IllegalArgumentException("Quarter outside valid range.");
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Week <127, 130>
+if ((intVar < intVar) && (intVar > intVar)) {
+            throw new IllegalArgumentException(
+                    "The 'week' argument must be in the range 1 - 53.");
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Week <143, 146>
+if ((intVar < intVar) && (intVar > intVar)) {
+            throw new IllegalArgumentException(
+                    "The 'week' argument must be in the range 1 - 53.");
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.CompassPlot <221, 224>
+if ((intVar != intVar) && (intVar != intVar)) {
+            throw new IllegalArgumentException(
+                    "MeterPlot.setLabelType(int): unrecognised type.");
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.AbstractRenderer <632, 638>
+if (Paint == null && AbstractRenderer.autoPopulateSeriesPaint) {
+            DrawingSupplier supplier = getDrawingSupplier();
+            if (supplier != null) {
+                Paint = supplier.getNextPaint();
+                setSeriesPaint(series, Paint, false);
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.AbstractRenderer <787, 793>
+if (Paint == null && AbstractRenderer.autoPopulateSeriesFillPaint) {
+            DrawingSupplier supplier = getDrawingSupplier();
+            if (supplier != null) {
+                Paint = supplier.getNextFillPaint();
+                setSeriesFillPaint(series, Paint, false);
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.AbstractRenderer <947, 953>
+if (Paint == null && AbstractRenderer.autoPopulateSeriesOutlinePaint) {
+            DrawingSupplier supplier = getDrawingSupplier();
+            if (supplier != null) {
+                Paint = supplier.getNextOutlinePaint();
+                setSeriesOutlinePaint(series, Paint, false);
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.xy.DefaultIntervalXYDataset <413, 418>
+if (intVar != data[1].intVar || intVar != data[2].intVar 
+                || intVar != data[3].intVar || intVar != data[4].intVar 
+                || intVar != data[5].intVar) {
+            throw new IllegalArgumentException(
+                "The 'data' array must contain two arrays with equal length.");
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.BoxAndWhiskerRenderer <544, 549>
+if (RendererState.getInfo() != null && Shape != null) {
+            EntityCollection entities = RendererState.getEntityCollection();
+            if (entities != null) {
+                addItemEntity(entities, CategoryDataset, intVar, intVar, Shape);
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.BoxAndWhiskerRenderer <767, 772>
+if (RendererState.getInfo() != null && Shape != null) {
+            EntityCollection entities = RendererState.getEntityCollection();
+            if (entities != null) {
+                addItemEntity(entities, CategoryDataset, intVar, intVar, Shape);
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.ChartPanel <1716, 1721>
+if (JPanel.ChartRenderingInfo != null) {
+            EntityCollection entities = JPanel.ChartRenderingInfo.getEntityCollection();
+            if (entities != null) {
+                ChartEntity = entities.getEntity(intVar, intVar);
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.ChartPanel <1755, 1760>
+if (JPanel.ChartRenderingInfo != null) {
+            EntityCollection entities = JPanel.ChartRenderingInfo.getEntityCollection();
+            if (entities != null) {
+                ChartEntity = entities.getEntity(intVar, intVar);
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.SerialDate <452, 463>
+if ((intVar < 1) || (intVar > 12)) {
+            for (int i = 0; i < String[]Var.length; i++) {
+                if (StringVar.equals(String[]Var[i])) {
+                    intVar = i + 1;
+                    break;
+                }
+                if (StringVar.equals(String[]Var[i])) {
+                    intVar = i + 1;
+                    break;
+                }
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.DynamicTimeSeriesCollection <408, 411>
+if (intVar < AbstractIntervalXYDataset.intVar) {
+            booleanVar = true;
+            intVar = intVar;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.SpreadsheetDate <451, 455>
+if (intVar > MonthConstants.FEBRUARY) {
+            if (SerialDate.isLeapYear(intVar)) {
+                intVar = intVar + 1;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <689, 695>
+if ((intVar >= 0) && (intVar < 4)) {
+            Plot.intVar = intVar;
+            fireChangeEvent();
+        }
+        else {
+            throw new IllegalArgumentException("Location not recognised.");
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <721, 727>
+if ((intVar >= 0) && (intVar < 3)) {
+            Plot.intVar = intVar;
+            fireChangeEvent();
+        }
+        else {
+            throw new IllegalArgumentException("Location not recognised.");
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.entity.XYItemEntity <159, 168>
+if (Object instanceof XYItemEntity && super.equals(Object)) {
+            XYItemEntity ie = (XYItemEntity) Object;
+            if (ChartEntity.intVar != ie.intVar) {
+                return false;   
+            }
+            if (ChartEntity.intVar != ie.intVar) {
+                return false;   
+            }
+            return true;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.Plot <550, 564>
+if (Paint == null) {
+            if (Plot.Paint != null) {
+                Plot.Paint = null;
+                fireChangeEvent();
+            }
+        }
+        else {
+            if (Plot.Paint != null) {
+                if (Plot.Paint.equals(Paint)) {
+                    return;  // nothing to do
+                }
+            }
+            Plot.Paint = Paint;
+            fireChangeEvent();
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.Plot <806, 820>
+if (Paint == null) {
+            if (Plot.Paint != null) {
+                Plot.Paint = null;
+                fireChangeEvent();
+            }
+        }
+        else {
+            if (Plot.Paint != null) {
+                if (Plot.Paint.equals(Paint)) {
+                    return;  // nothing to do
+                }
+            }
+            Plot.Paint = Paint;
+            fireChangeEvent();
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYBlockRenderer <384, 386>
+if (EntityCollection != null) {
+            addEntity(EntityCollection, Rectangle2DVar, XYDataset, intVar, intVar, 0.0, 0.0);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYBarRenderer <697, 699>
+if (EntityCollection != null) {
+            addEntity(EntityCollection, Rectangle2DVar, XYDataset, intVar, intVar, 0.0, 0.0);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYAreaRenderer <562, 564>
+if (EntityCollection != null) {
+            addEntity(EntityCollection, Polygon, XYDataset, intVar, intVar, 0.0, 0.0);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYAreaRenderer2 <378, 380>
+if (EntityCollection != null) {
+            addEntity(EntityCollection, Polygon, XYDataset, intVar, intVar, 0.0, 0.0);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYStepAreaRenderer <524, 526>
+if (EntityCollection != null) {
+            addEntity(EntityCollection, Shape, XYDataset, intVar, intVar, 0.0, 0.0);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.StackedXYAreaRenderer <582, 584>
+if (EntityCollection != null) {
+                addEntity(EntityCollection, Shape, XYDataset, intVar, intVar, 0.0, 0.0);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.util.AbstractObjectList <211, 220>
+if (intVar > 0) {
+            intVar = HashUtilities.hashCode(intVar, AbstractObjectList.Object[]Var[0]);
+            if (intVar > 1) {
+                intVar = HashUtilities.hashCode(intVar, AbstractObjectList.Object[]Var[intVar - 1]);
+                if (intVar > 2) {
+                    intVar = HashUtilities.hashCode(intVar, 
+                    		AbstractObjectList.Object[]Var[intVar / 2]);
+                }
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.SpreadsheetDate <166, 176>
+if (intVar == intVar) {
+          SerialDate.intVar = intVar;
+      }
+      else {
+          int ss1 = calcSerial(1, 1, intVar);
+          while (ss1 <= SerialDate.intVar) {
+              intVar = intVar + 1;
+              ss1 = calcSerial(1, 1, intVar);
+          }
+          SerialDate.intVar = intVar - 1;
+      }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.category.CategoryToPieDataset <175, 180>
+if (AbstractDataset.TableOrder == TableOrder.BY_ROW) {
+            Number = AbstractDataset.CategoryDataset.getValue(AbstractDataset.intVar, intVar);
+        }
+        else if (AbstractDataset.TableOrder == TableOrder.BY_COLUMN) {
+            Number = AbstractDataset.CategoryDataset.getValue(intVar, AbstractDataset.intVar);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYBarRenderer <942, 945>
+if (AbstractXYItemRenderer.GradientPaintTransformer != null) {
+            AbstractXYItemRenderer.GradientPaintTransformer = (GradientPaintTransformer)
+                ObjectUtilities.clone(AbstractXYItemRenderer.GradientPaintTransformer);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <1158, 1160>
+if (GradientPaintTransformer != null) {
+                    GradientPaint = GradientPaintTransformer.transform(GradientPaint, rect);
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <1357, 1359>
+if (GradientPaintTransformer != null) {
+                    GradientPaint = GradientPaintTransformer.transform(GradientPaint, rect);
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <1097, 1099>
+if (GradientPaintTransformer != null) {
+                    GradientPaint = GradientPaintTransformer.transform(GradientPaint, rect);
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.block.BorderArrangement <151, 156>
+if (LengthConstraintType == LengthConstraintType.FIXED) {
+                contentSize = arrangeFF(null, g2, RectangleConstraint);
+            }
+            else if (LengthConstraintType == LengthConstraintType.RANGE) {
+                contentSize = arrangeFR(null, g2, RectangleConstraint);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.SpiderWebPlot <1389, 1394>
+if (Plot.TableOrder == TableOrder.BY_ROW) {
+            Number = Plot.CategoryDataset.getValue(intVar, intVar);
+        }
+        else if (Plot.TableOrder == TableOrder.BY_COLUMN) {
+            Number = Plot.CategoryDataset.getValue(intVar, intVar);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Month <228, 238>
+if (RegularTimePeriod.intVar != MonthConstants.JANUARY) {
+            RegularTimePeriod = new Month(RegularTimePeriod.intVar - 1, RegularTimePeriod.intVar);
+        }
+        else {
+            if (RegularTimePeriod.intVar > 1900) {
+                RegularTimePeriod = new Month(MonthConstants.DECEMBER, RegularTimePeriod.intVar - 1);
+            }
+            else {
+                RegularTimePeriod = null;
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Month <249, 259>
+if (RegularTimePeriod.intVar != MonthConstants.DECEMBER) {
+            RegularTimePeriod = new Month(RegularTimePeriod.intVar + 1, RegularTimePeriod.intVar);
+        }
+        else {
+            if (RegularTimePeriod.intVar < 9999) {
+                RegularTimePeriod = new Month(MonthConstants.JANUARY, RegularTimePeriod.intVar + 1);
+            }
+            else {
+                RegularTimePeriod = null;
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYDifferenceRenderer <639, 651>
+if ((l_x1 == l_x3) && (l_y1 == l_y3)) {
+                    b_colinear = true;
+                }
+                else {
+                    // the intersect is at the next point for both the minuend 
+                    // and subtrahend
+                    l_intersectX = new Double(l_x2);
+                    l_intersectY = new Double(l_y2);
+
+                    b_intersect             = true;
+                    b_minuendAtIntersect    = true;
+                    b_subtrahendAtIntersect = true;
+                 }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.CompassPlot <376, 378>
+if ((intVar >= 0) && (intVar < Plot.MeterNeedle[]Var.length)) {
+            Plot.MeterNeedle[]Var[intVar].setFillPaint(Paint);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.CompassPlot <376, 378>
+if ((series >= 0) && (series < Plot.seriesNeedle.length)) {
+            Plot.seriesNeedle[series].setFillPaint(Paint);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.CompassPlot <391, 393>
+if ((intVar >= 0) && (intVar < Plot.MeterNeedle[]Var.length)) {
+            Plot.MeterNeedle[]Var[intVar].setOutlinePaint(Paint);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.CompassPlot <391, 393>
+if ((series >= 0) && (series < Plot.seriesNeedle.length)) {
+            Plot.seriesNeedle[series].setOutlinePaint(Paint);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.CompassPlot <407, 409>
+if ((intVar >= 0) && (intVar < Plot.MeterNeedle[]Var.length)) {
+            Plot.MeterNeedle[]Var[intVar].setOutlineStroke(Stroke);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYStepAreaRenderer <430, 438>
+if (transY0 != transY1) {
+                // not just a horizontal bar but need to perform a 'step'.
+                if (PlotOrientation == PlotOrientation.VERTICAL) {
+                    AbstractXYItemRenderer.Polygon.addPoint((int) transX1, (int) transY0);
+                }
+                else if (PlotOrientation == PlotOrientation.HORIZONTAL) {
+                    AbstractXYItemRenderer.Polygon.addPoint((int) transY0, (int) transX1);
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.LineAndShapeRenderer <813, 820>
+if (PlotOrientation == PlotOrientation.HORIZONTAL) {
+                    drawItemLabel(Graphics2DVar, PlotOrientation, CategoryDataset, intVar, intVar, doubleVar, 
+                            doubleVar, (doubleVar < 0.0));
+                }
+                else if (PlotOrientation == PlotOrientation.VERTICAL) {
+                    drawItemLabel(Graphics2DVar, PlotOrientation, CategoryDataset, intVar, intVar, doubleVar, 
+                            doubleVar, (doubleVar < 0.0));
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.statistics.SimpleHistogramBin <251, 253>
+if (SimpleHistogramBin.intVar != SimpleHistogramBin.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.ComparableObjectSeries <408, 410>
+if (Series.intVar != Series.intVar) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.data.xy.IntervalXYDelegate <440, 442>
+if (IntervalXYDelegate.intervalPositionFactor != IntervalXYDelegate.intervalPositionFactor) {
+            return false;   
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.data.xy.XYSeries <665, 667>
+if (Series.intVar != Series.intVar) {
+            return false;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.data.time.Millisecond <297, 299>
+if (RegularTimePeriod.intVar != RegularTimePeriod.intVar) {
+            return false;
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.data.time.TimeTableXYDataset <532, 534>
+if (AbstractIntervalXYDataset.domainIsPointsInTime != AbstractIntervalXYDataset.domainIsPointsInTime) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.JFreeChart <1618, 1620>
+if (JFreeChart.intVar != JFreeChart.intVar) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.GrayPaintScale <150, 152>
+if (GrayPaintScale.lowerBound != GrayPaintScale.lowerBound) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.GrayPaintScale <153, 155>
+if (GrayPaintScale.upperBound != GrayPaintScale.upperBound) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.CandlestickRenderer <905, 907>
+if (AbstractXYItemRenderer.intVar != AbstractXYItemRenderer.intVar) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.CandlestickRenderer <914, 916>
+if (AbstractXYItemRenderer.useOutlinePaint != AbstractXYItemRenderer.useOutlinePaint) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYBubbleRenderer <336, 338>
+if (AbstractXYItemRenderer.intVar != AbstractXYItemRenderer.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <1556, 1558>
+if (AbstractRenderer.intVar != AbstractRenderer.intVar) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYStepRenderer <333, 335>
+if (XYLineAndShapeRenderer.stepPoint != XYLineAndShapeRenderer.stepPoint) {
+        	return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYSplineAndShapeRenderer <313, 315>
+if (XYLineAndShapeRenderer.intVar != XYLineAndShapeRenderer.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYDotRenderer <341, 343>
+if (AbstractXYItemRenderer.intVar != AbstractXYItemRenderer.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYDotRenderer <344, 346>
+if (AbstractXYItemRenderer.intVar != AbstractXYItemRenderer.intVar) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYLineAndShapeRenderer <1163, 1165>
+if (AbstractXYItemRenderer.useOutlinePaint != AbstractXYItemRenderer.useOutlinePaint) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYLineAndShapeRenderer <1166, 1168>
+if (AbstractXYItemRenderer.useFillPaint != AbstractXYItemRenderer.useFillPaint) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.LookupPaintScale <122, 124>
+if (LookupPaintScale.value != PaintItem.value) {
+                return false;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.LookupPaintScale <321, 323>
+if (LookupPaintScale.lowerBound != LookupPaintScale.lowerBound) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.LookupPaintScale <324, 326>
+if (LookupPaintScale.upperBound != LookupPaintScale.upperBound) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.BarRenderer <694, 696>
+if (AbstractCategoryItemRenderer.GradientPaintTransformer != null) {
+            LegendItem.setFillPaintTransformer(AbstractCategoryItemRenderer.GradientPaintTransformer);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.ScatterRenderer <496, 498>
+if (AbstractCategoryItemRenderer.useFillPaint != AbstractCategoryItemRenderer.useFillPaint) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.ScatterRenderer <502, 504>
+if (AbstractCategoryItemRenderer.useOutlinePaint != AbstractCategoryItemRenderer.useOutlinePaint) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.LineAndShapeRenderer <870, 872>
+if (AbstractCategoryItemRenderer.useOutlinePaint != AbstractCategoryItemRenderer.useOutlinePaint) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.LogAxis <880, 882>
+if (ValueAxis.intVar != ValueAxis.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.TickUnit <180, 182>
+if (TickUnit.intVar != TickUnit.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateTickUnit <400, 402>
+if (TickUnit.intVar != TickUnit.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.axis.DateTickUnit <403, 405>
+if (TickUnit.intVar != TickUnit.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.block.GridArrangement <281, 283>
+if (GridArrangement.intVar != GridArrangement.intVar) {
+            return false;   
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.block.GridArrangement <284, 286>
+if (GridArrangement.intVar != GridArrangement.intVar) {
+            return false;   
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.LegendItem <786, 788>
+if (LegendItem.intVar != LegendItem.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.LegendItem <789, 791>
+if (LegendItem.intVar != LegendItem.intVar) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.util.StandardGradientPaintTransformer <152, 154>
+if (StandardGradientPaintTransformer.GradientPaintTransformType != StandardGradientPaintTransformer.GradientPaintTransformType) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.CombinedRangeCategoryPlot <513, 515>
+if (CategoryPlot.intVar != CategoryPlot.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <1456, 1458>
+if (Plot.intVar != Plot.intVar) {
+            return false;   
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <1476, 1478>
+if (Plot.intVar != Plot.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <1479, 1481>
+if (Plot.intVar != Plot.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <1494, 1496>
+if (Plot.intVar != Plot.intVar) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.ThermometerPlot <1503, 1505>
+if (Plot.useSubrangePaint != Plot.useSubrangePaint) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <1506, 1508>
+if (Plot.intVar != Plot.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <1509, 1511>
+if (Plot.intVar != Plot.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <1512, 1514>
+if (Plot.intVar != Plot.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.CategoryPlot <3982, 3984>
+if (Plot.intVar != Plot.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.CompassPlot <763, 765>
+if (Plot.intVar != Plot.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.DefaultDrawingSupplier <361, 363>
+if (DefaultDrawingSupplier.intVar != DefaultDrawingSupplier.intVar) {
+            return false;   
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.DefaultDrawingSupplier <361, 363>
+if (DefaultDrawingSupplier.paintIndex != DefaultDrawingSupplier.paintIndex) {
+            return false;   
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.DefaultDrawingSupplier <368, 370>
+if (DefaultDrawingSupplier.intVar != DefaultDrawingSupplier.intVar) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.DefaultDrawingSupplier <368, 370>
+if (DefaultDrawingSupplier.outlinePaintIndex != DefaultDrawingSupplier.outlinePaintIndex) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.DefaultDrawingSupplier <374, 376>
+if (DefaultDrawingSupplier.intVar != DefaultDrawingSupplier.intVar) {
+            return false;   
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.DefaultDrawingSupplier <381, 383>
+if (DefaultDrawingSupplier.intVar != DefaultDrawingSupplier.intVar) {
+            return false;   
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.DefaultDrawingSupplier <387, 389>
+if (DefaultDrawingSupplier.intVar != DefaultDrawingSupplier.intVar) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.SpiderWebPlot <1505, 1507>
+if (Plot.interiorGap != Plot.interiorGap) {
+            return false;   
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.CombinedDomainXYPlot <675, 677>
+if (XYPlot.intVar != XYPlot.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PiePlot <2891, 2893>
+if (Plot.intVar != Plot.intVar) {
+            return false;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.PiePlot <2894, 2896>
+if (Plot.interiorGap != Plot.interiorGap) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.dial.DialValueIndicator <599, 601>
+if (AbstractDialLayer.intVar != AbstractDialLayer.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.dial.StandardDialScale <909, 911>
+if (AbstractDialLayer.intVar != AbstractDialLayer.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.dial.DialPointer <175, 177>
+if (AbstractDialLayer.intVar != AbstractDialLayer.intVar) {
+            return false;
+        }
+

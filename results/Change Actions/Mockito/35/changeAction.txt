@@ -1,0 +1,34 @@
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (INS, SimpleName, OP3, null)
+
+
+OP1:(UPD, ReturnStatement, null, OP2 OP10)
+OP2:   (UPD, MethodInvocation, OP1, OP3 OP4)
+OP3:      (UPD, SimpleName, OP2, null)
+OP4:      (INS, SimpleName, OP2, OP5)
+OP5:         (INS, CastExpression, OP4, OP6 OP7)
+OP6:            (INS, SimpleType, OP5, null)
+OP7:            (INS, MethodInvocation, OP5, OP8 OP9)
+OP8:               (MOV, SimpleName, OP7, null)
+OP9:               (INS, SimpleName, OP7, null)
+OP10:   (INS, CastExpression, OP1, OP11 OP12)
+OP11:      (MOV, MethodInvocation, OP10, null)
+OP12:      (INS, SimpleType, OP10, null)
+
+
+OP1:(UPD, ReturnStatement, null, OP2 OP10)
+OP2:   (UPD, MethodInvocation, OP1, OP3 OP4)
+OP3:      (UPD, SimpleName, OP2, null)
+OP4:      (INS, SimpleName, OP2, OP5)
+OP5:         (INS, CastExpression, OP4, OP6 OP7)
+OP6:            (INS, SimpleType, OP5, null)
+OP7:            (INS, MethodInvocation, OP5, OP8 OP9)
+OP8:               (MOV, SimpleName, OP7, null)
+OP9:               (INS, SimpleName, OP7, null)
+OP10:   (INS, CastExpression, OP1, OP11 OP12)
+OP11:      (MOV, MethodInvocation, OP10, null)
+OP12:      (INS, SimpleType, OP10, null)
+
+

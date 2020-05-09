@@ -1,0 +1,90 @@
+---patch code ori--- org.mockito.internal.MockHandler <77, 85>
+if (((MockAwareVerificationMode) verificationMode).getMock() == invocation.getMock()) {                
+                VerificationDataImpl data = new VerificationDataImpl(invocationContainerImpl, invocationMatcher);            
+                verificationMode.verify(data);
+                return null;
+            } else {
+                // this means there is an invocation on a different mock. Re-adding verification mode 
+                // - see VerifyingWithAnExtraCallToADifferentMockTest (bug 138)
+                mockingProgress.verificationStarted(verificationMode);
+            }
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:ori--- org.mockito.internal.MockHandler <74, 90>
+if (verificationMode != null) {
+            //We need to check if verification was started on the correct mock 
+            // - see VerifyingWithAnExtraCallToADifferentMockTest (bug 138)
+            if (verificationMode instanceof MockAwareVerificationMode && ((MockAwareVerificationMode) verificationMode).getMock() == invocation.getMock()) {                
+                VerificationDataImpl data = new VerificationDataImpl(invocationContainerImpl, invocationMatcher);            
+                verificationMode.verify(data);
+                return null;
+                // this means there is an invocation on a different mock. Re-adding verification mode 
+                // - see VerifyingWithAnExtraCallToADifferentMockTest (bug 138)
+            }
+        }
+empty line
+invocationContainerImpl.setInvocationForPotentialStubbing(invocationMatcher);
+OngoingStubbingImpl<T> ongoingStubbing = new OngoingStubbingImpl<T>(invocationContainerImpl);
+mockingProgress.reportOngoingStubbing(ongoingStubbing);
+empty line
+StubbedInvocationMatcher stubbedInvocation = invocationContainerImpl.findAnswerFor(invocation);
+
+---patch code 0--- org.mockito.internal.MockHandler <77, 85>
+if (((MockAwareVerificationMode) VerificationMode).getMock() == Invocation.getMock()) {                
+                VerificationDataImpl data = new VerificationDataImpl(InvocationContainerImpl, InvocationMatcher);            
+                VerificationMode.verify(data);
+                return null;
+            } else {
+                // this means there is an invocation on a different mock. Re-adding verification mode 
+                // - see VerifyingWithAnExtraCallToADifferentMockTest (bug 138)
+                MockingProgress.verificationStarted(VerificationMode);
+            }
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:0--- org.mockito.internal.MockHandler <74, 90>
+if (VerificationMode != null) {
+            //We need to check if verification was started on the correct mock 
+            // - see VerifyingWithAnExtraCallToADifferentMockTest (bug 138)
+            if (VerificationMode instanceof MockAwareVerificationMode && ((MockAwareVerificationMode) VerificationMode).getMock() == Invocation.getMock()) {                
+                VerificationDataImpl data = new VerificationDataImpl(InvocationContainerImpl, InvocationMatcher);            
+                VerificationMode.verify(data);
+                return null;
+                // this means there is an invocation on a different mock. Re-adding verification mode 
+                // - see VerifyingWithAnExtraCallToADifferentMockTest (bug 138)
+            }
+        }
+empty line
+InvocationContainerImpl.setInvocationForPotentialStubbing(InvocationMatcher);
+OngoingStubbingImpl<T> BaseStubbing<T> = new OngoingStubbingImpl<T>(InvocationContainerImpl);
+MockingProgress.reportOngoingStubbing(BaseStubbing<T>);
+empty line
+StubbedInvocationMatcher InvocationMatcher = InvocationContainerImpl.findAnswerFor(Invocation);
+
+---patch code 1--- org.mockito.internal.MockHandler <77, 85>
+if (((MockAwareVerificationMode) VerificationMode).getMock() == Invocation.getMock()) {                
+                VerificationDataImpl data = new VerificationDataImpl(InvocationContainerImpl, InvocationMatcher);            
+                VerificationMode.verify(data);
+                return null;
+            } else {
+                // this means there is an invocation on a different mock. Re-adding verification mode 
+                // - see VerifyingWithAnExtraCallToADifferentMockTest (bug 138)
+                MockingProgress.verificationStarted(VerificationMode);
+            }
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:1--- org.mockito.internal.MockHandler <74, 90>
+if (VerificationMode != null) {
+            //We need to check if verification was started on the correct mock 
+            // - see VerifyingWithAnExtraCallToADifferentMockTest (bug 138)
+            if (VerificationMode instanceof MockAwareVerificationMode && ((MockAwareVerificationMode) VerificationMode).getMock() == Invocation.getMock()) {                
+                VerificationDataImpl data = new VerificationDataImpl(InvocationContainerImpl, InvocationMatcher);            
+                VerificationMode.verify(data);
+                return null;
+                // this means there is an invocation on a different mock. Re-adding verification mode 
+                // - see VerifyingWithAnExtraCallToADifferentMockTest (bug 138)
+            }
+        }
+empty line
+InvocationContainerImpl.setInvocationForPotentialStubbing(InvocationMatcher);
+OngoingStubbingImpl<T> null = new OngoingStubbingImpl<T>(InvocationContainerImpl);
+MockingProgress.reportOngoingStubbing(null);
+empty line
+StubbedInvocationMatcher InvocationMatcher = InvocationContainerImpl.findAnswerFor(Invocation);
+

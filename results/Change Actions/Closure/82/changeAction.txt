@@ -1,0 +1,14 @@
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, InfixExpression, OP1, OP3)
+OP3:      (INS, ParenthesizedExpression, OP2, OP4)
+OP4:         (INS, InfixExpression, OP3, OP5 OP11 OP12)
+OP5:            (INS, MethodInvocation, OP4, OP6 OP7)
+OP6:               (INS, SimpleName, OP5, null)
+OP7:               (INS, SimpleName, OP5, OP8)
+OP8:                  (INS, QualifiedName, OP7, OP9 OP10)
+OP9:                     (INS, SimpleName, OP8, null)
+OP10:                     (INS, SimpleName, OP8, null)
+OP11:            (INS, Operator, OP4, null)
+OP12:            (INS, ThisExpression, OP4, null)
+
+

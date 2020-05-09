@@ -1,0 +1,90 @@
+---patch code ori--- com.google.javascript.jscomp.TypeCheck <518, 518>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.TypeCheck <479, 479>
+typeable = false;
+
+---patch code 0--- com.google.javascript.jscomp.TypeCheck <518, 518>
+booleanVar = false;
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.TypeCheck <479, 479>
+booleanVar = false;
+
+---patch code 1--- com.google.javascript.jscomp.TypeCheck <518, 518>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.TypeCheck <479, 479>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.TypeCheck <544, 544>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.TypeCheck <544, 544>
+booleanVar = false;
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.TypeCheck <544, 544>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.TypeCheck <549, 549>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.TypeCheck <549, 549>
+booleanVar = false;
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.TypeCheck <549, 549>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.TypeCheck <564, 564>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.TypeCheck <564, 564>
+booleanVar = false;
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.TypeCheck <564, 564>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.TypeCheck <695, 695>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.TypeCheck <695, 695>
+booleanVar = false;
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.TypeCheck <695, 695>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.TypeCheck <734, 734>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.TypeCheck <734, 734>
+booleanVar = false;
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.TypeCheck <734, 734>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.TypeCheck <742, 742>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.TypeCheck <742, 742>
+booleanVar = false;
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.TypeCheck <742, 742>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.TypeCheck <765, 765>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.TypeCheck <765, 765>
+booleanVar = false;
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.TypeCheck <765, 765>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.TypeCheck <773, 773>
+typeable = false;
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.TypeCheck <773, 773>
+booleanVar = false;
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.TypeCheck <773, 773>
+typeable = false;
+

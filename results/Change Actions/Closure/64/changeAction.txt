@@ -1,0 +1,34 @@
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, null)
+
+
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, MethodInvocation, OP2, OP4)
+OP4:         (UPD, SimpleName, OP3, OP5)
+OP5:            (INS, InfixExpression, OP4, OP6 OP7 OP8)
+OP6:               (INS, SimpleName, OP5, null)
+OP7:               (INS, Operator, OP5, null)
+OP8:               (INS, NumberLiteral, OP5, null)
+
+
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (INS, BooleanLiteral, OP3, null)
+
+
+OP1:(UPD, MethodDeclaration, null, OP2 OP5)
+OP2:   (INS, SingleVariableDeclaration, OP1, OP3 OP4)
+OP3:      (INS, PrimitiveType, OP2, null)
+OP4:      (INS, SimpleName, OP2, null)
+OP5:   (UPD, ExpressionStatement, OP1, OP6)
+OP6:      (UPD, MethodInvocation, OP5, OP7)
+OP7:         (UPD, SimpleName, OP6, OP8)
+OP8:            (INS, InfixExpression, OP7, OP9 OP10 OP11)
+OP9:               (MOV, InfixExpression, OP8, null)
+OP10:               (INS, SimpleName, OP8, null)
+OP11:               (INS, Operator, OP8, null)
+
+

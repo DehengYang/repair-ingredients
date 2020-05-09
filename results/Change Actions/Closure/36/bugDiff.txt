@@ -1,0 +1,14 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_36/src/com/google/javascript/jscomp/InlineVariables.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_36/src/com/google/javascript/jscomp/InlineVariables.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_36/src/com/google/javascript/jscomp/InlineVariables.java	2020-01-05 05:16:46.203718547 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_36/src/com/google/javascript/jscomp/InlineVariables.java	2020-01-05 05:16:48.195701910 -0800
+@@ -572,6 +572,9 @@
+ 
+           // issue 668: Don't inline singleton getter methods
+           // calls as this confused class removing logic.
++          if (convention.getSingletonGetterClassName(callNode) != null) {
++            return false;
++          }
+         }
+       }
+ 

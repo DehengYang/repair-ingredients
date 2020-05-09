@@ -1,0 +1,49 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_98/src/com/google/javascript/jscomp/ReferenceCollectingCallback.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_98/src/com/google/javascript/jscomp/ReferenceCollectingCallback.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_98/src/com/google/javascript/jscomp/ReferenceCollectingCallback.java	2020-01-05 05:20:52.941657767 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_98/src/com/google/javascript/jscomp/ReferenceCollectingCallback.java	2020-01-05 05:20:55.965632510 -0800
+@@ -358,6 +358,14 @@
+       }
+ 
+       // Make sure this assignment is not in a loop.
++      for (BasicBlock block = ref.getBasicBlock();
++           block != null; block = block.getParent()) {
++        if (block.isFunction) {
++          break;
++        } else if (block.isLoop) {
++          return false;
++        }
++      }
+ 
+       return true;
+     }
+@@ -542,10 +550,12 @@
+     /**
+      * Whether this block denotes a function scope.
+      */
++    private final boolean isFunction;
+ 
+     /**
+      * Whether this block denotes a loop.
+      */
++    private final boolean isLoop;
+ 
+     /**
+      * Creates a new block.
+@@ -558,7 +568,16 @@
+       // only named functions may be hoisted.
+       this.isHoisted = NodeUtil.isHoistedFunctionDeclaration(root);
+ 
++      this.isFunction = root.getType() == Token.FUNCTION;
+ 
++      if (root.getParent() != null) {
++        int pType = root.getParent().getType();
++        this.isLoop = pType == Token.DO ||
++            pType == Token.WHILE ||
++            pType == Token.FOR;
++      } else {
++        this.isLoop = false;
++      }
+     }
+ 
+     BasicBlock getParent() {

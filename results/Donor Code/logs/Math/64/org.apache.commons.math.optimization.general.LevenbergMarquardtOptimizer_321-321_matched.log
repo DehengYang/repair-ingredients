@@ -1,0 +1,2035 @@
+---patch code 0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <321, 321>
+doubleVar += double[][]Var[intVar][intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <321, 321>
+qTy(double[]Var);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <316, 316>
+doubleVar += double[][]Var[intVar][intVar] * double[]Var[intVar];
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <554, 554>
+doubleVar += double[][]Var[intVar][intVar] * double[]Var[intVar];
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <748, 748>
+doubleVar += double[][]Var[intVar][intVar] * double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <539, 539>
+doubleVar += double[][]Var[intVar][intVar] * double[]Var[int[]Var[intVar]];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <763, 763>
+doubleVar += double[]Var[intVar * intVar + intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <323, 323>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <567, 567>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <381, 381>
+double[]Var[intVar] += double[][]Var[intVar][intVar] * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <550, 550>
+doubleVar += double[]Var[intVar] * double[]Var[int[]Var[intVar]];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer <191, 191>
+final double[] double[]Var = double[][]Var[intVar];
+
+---patch code 1--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <321, 321>
+sum += jacobian[i][pj] * qtf[i];
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer <191, 191>
+final double[] ji = jacobian[i];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <84, 84>
+final double[] double[]Var   = double[][]Var[intVar];
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <84, 84>
+final double[] grad   = jacobian[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.clustering.KMeansPlusPlusClusterer <124, 124>
+double[]Var[intVar] = intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.summary.Sum <125, 125>
+doubleVar += double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.util.MathUtils <1251, 1251>
+doubleVar += double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer <273, 273>
+doubleVar += double[][]Var[intVar][intVar] * double[][]Var[intVar][intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <614, 614>
+double[]Var[int[]Var[intVar]] -= double[][]Var[intVar][intVar] * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <628, 628>
+double[]Var[int[]Var[intVar]] -= double[]Var[intVar * intVar + intVar] * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.summary.Sum <164, 164>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <389, 389>
+double[]Var[intVar] += double[]Var[intVar] * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <884, 884>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <890, 890>
+double[]Var[intVar] -= doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <425, 425>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <432, 432>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.util.MathUtils <1790, 1790>
+doubleVar += Math.abs(double[]Var[intVar] - double[]Var[intVar]);
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <863, 863>
+doubleVar += double[][]Var[intVar][intVar] * double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <867, 867>
+double[]Var[intVar] -= doubleVar * double[][]Var[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <512, 512>
+double[]Var[int[]Var[intVar]] -= doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <109, 109>
+doubleVar -= double[]Var[intVar] * doubleVar[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <121, 121>
+doubleVar -= double[]Var[intVar] * doubleVar[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <448, 448>
+doubleVar += doubleVar[intVar][intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <456, 456>
+doubleVar += doubleVar[intVar][intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <285, 285>
+doubleVar += double[]Var[intVar] * Array2DRowRealMatrixVar.doubleVar[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <286, 286>
+doubleVar += double[]Var[intVar] * AbstractRealMatrix.doubleVar[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <687, 687>
+doubleVar += getEntry(intVar, intVar) * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <739, 739>
+doubleVar += getEntry(intVar, intVar) * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <679, 679>
+double[]Var[intVar * intVar + intVar] = double[]Var[intVar * intVar + int[]Var[intVar]];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <676, 676>
+doubleVar += Math.abs(double[]Var[intVar * intVar + intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <733, 733>
+double[]Var[intVar * intVar + intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <730, 730>
+double doubleVar = double[]Var[intVar * intVar + intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.TricubicSplineInterpolatingFunction <407, 407>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.interpolation.TricubicSplineInterpolatingFunction <407, 407>
+final double[] row = AINV[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.BicubicSplineInterpolatingFunction <330, 330>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.interpolation.BicubicSplineInterpolatingFunction <330, 330>
+final double[] row = AINV[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <249, 249>
+double[]Var[intVar]       = Double.NaN;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <250, 250>
+double[]Var[intVar] = Double.NaN;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <252, 252>
+double[]Var[intVar]       = Double.NaN;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <253, 253>
+double[]Var[intVar] = Double.NaN;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.special.Gamma <104, 104>
+doubleVar = doubleVar + (double[]Var[intVar] / (doubleVar + intVar));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <503, 503>
+double[]Var[int[]Var[intVar]] -= doubleVar * double[][]Var[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.AdamsNordsieckTransformer <263, 263>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.ode.nonstiff.AdamsNordsieckTransformer <263, 263>
+final double[] msI = multistep[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.AdamsNordsieckTransformer <304, 304>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.ode.nonstiff.AdamsNordsieckTransformer <304, 304>
+final double[] dataI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.AdamsNordsieckTransformer <305, 305>
+final double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.sampling.NordsieckStepInterpolator <153, 153>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.ode.sampling.NordsieckStepInterpolator <153, 153>
+final double[] nDataI = nData[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.sampling.NordsieckStepInterpolator <199, 199>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.ode.sampling.NordsieckStepInterpolator <199, 199>
+final double[] nDataI = nData[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <416, 416>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <416, 416>
+final double[] dFdYi = dFdY[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <431, 431>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <431, 431>
+final double[] dFdYi = dFdY[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <432, 432>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <432, 432>
+final double[] dFdPi = dFdP[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.MultivariateSummaryStatistics <149, 149>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.inference.OneWayAnovaImpl <155, 155>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <281, 281>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <282, 282>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.SimpleVectorialValueChecker <77, 77>
+final double doubleVar         = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.SimpleVectorialValueChecker <78, 78>
+final double doubleVar         = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.SimpleVectorialPointChecker <77, 77>
+final double doubleVar         = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.SimpleVectorialPointChecker <78, 78>
+final double doubleVar         = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.LeastSquaresConverter <176, 176>
+final double doubleVar = double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <85, 85>
+final double doubleVar   = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.direct.DirectSearchOptimizer <146, 146>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.direct.DirectSearchOptimizer <146, 146>
+final double[] vertexI = startConfiguration[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.direct.DirectSearchOptimizer <182, 182>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.direct.DirectSearchOptimizer <182, 182>
+final double[] refI = referenceSimplex[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.direct.DirectSearchOptimizer <371, 371>
+final double[] double[]Var   = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.direct.DirectSearchOptimizer <371, 371>
+final double[] confI   = startConfiguration[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.TricubicSplineInterpolator <108, 108>
+final double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.TricubicSplineInterpolator <140, 140>
+final double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.MicrosphereInterpolatingFunction <166, 166>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.interpolation.MicrosphereInterpolatingFunction <166, 166>
+final double[] xvalI = xval[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.LoessInterpolator <248, 248>
+final double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.LoessInterpolator <438, 438>
+final double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <169, 169>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.LUDecompositionImpl <169, 169>
+final double[] luI = lu[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <185, 185>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.LUDecompositionImpl <185, 185>
+final double[] luI = lu[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <387, 387>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.LUDecompositionImpl <387, 387>
+final double[] bpI = bp[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <403, 403>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.LUDecompositionImpl <403, 403>
+final double[] bpI = bp[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.QRDecompositionImpl <429, 429>
+final double doubleVar  = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.QRDecompositionImpl <430, 430>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.QRDecompositionImpl <430, 430>
+final double[] yI = y[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <930, 930>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.MatrixUtils <930, 930>
+final double[] dataI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <113, 113>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.CholeskyDecompositionImpl <113, 113>
+final double[] lI = lTData[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <119, 119>
+final double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <132, 132>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.CholeskyDecompositionImpl <132, 132>
+final double[] ltI = lTData[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <320, 320>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.CholeskyDecompositionImpl <320, 320>
+final double[] xI = x[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <321, 321>
+final double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <336, 336>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.CholeskyDecompositionImpl <336, 336>
+final double[] xI = x[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <465, 465>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.Array2DRowRealMatrix <465, 465>
+final double[] rowI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <481, 481>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.Array2DRowRealMatrix <481, 481>
+final double[] rowI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <499, 499>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.Array2DRowRealMatrix <499, 499>
+final double[] rowI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <517, 517>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.Array2DRowRealMatrix <517, 517>
+final double[] rowI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <534, 534>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.Array2DRowRealMatrix <534, 534>
+final double[] rowI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <567, 567>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.Array2DRowRealMatrix <567, 567>
+final double[] rowI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1477, 1477>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BigMatrixImpl <1477, 1477>
+final double[] inI = in[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <473, 473>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <473, 473>
+final double[] rowI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <489, 489>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <489, 489>
+final double[] rowI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <507, 507>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <507, 507>
+final double[] rowI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <525, 525>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <525, 525>
+final double[] rowI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <542, 542>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <542, 542>
+final double[] rowI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <575, 575>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.RealMatrixImpl <575, 575>
+final double[] rowI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <230, 230>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.TriDiagonalTransformer <230, 230>
+final double[] hI = householderVectors[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <231, 231>
+final double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <256, 256>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.TriDiagonalTransformer <256, 256>
+final double[] hI = householderVectors[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <182, 182>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.AbstractRealMatrix <182, 182>
+final double[] dataI = data[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <362, 362>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.AbstractRealMatrix <362, 362>
+final double[] destinationI = destination[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BiDiagonalTransformer <275, 275>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BiDiagonalTransformer <275, 275>
+final double[] hI = householderVectors[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BiDiagonalTransformer <280, 280>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BiDiagonalTransformer <280, 280>
+final double[] hI = householderVectors[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BiDiagonalTransformer <298, 298>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BiDiagonalTransformer <298, 298>
+final double[] hI = householderVectors[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BiDiagonalTransformer <337, 337>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BiDiagonalTransformer <337, 337>
+final double[] hI = householderVectors[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BiDiagonalTransformer <364, 364>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BiDiagonalTransformer <364, 364>
+final double[] hI = householderVectors[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BiDiagonalTransformer <369, 369>
+final double[] double[]Var = doubleVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.BiDiagonalTransformer <369, 369>
+final double[] hI = householderVectors[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.SingularValueDecompositionImpl <301, 301>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.SingularValueDecompositionImpl <301, 301>
+final double[] suTi = suT[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <435, 435>
+final double[] double[]Var = double[][]Var[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.EigenDecompositionImpl <435, 435>
+final double[] invI = invData[i];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <576, 576>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <495, 495>
+double[]Var[intVar]       = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.sampling.NordsieckStepInterpolator <146, 146>
+double[]Var[intVar] *= doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.summary.Product <125, 125>
+doubleVar *= double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Variance <510, 510>
+doubleVar += double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <80, 80>
+doubleVar += double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <287, 287>
+doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <288, 288>
+doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.fitting.PolynomialFitter <93, 93>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer <221, 221>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <556, 556>
+doubleVar /= double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <570, 570>
+doubleVar /= double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.UnitSphereRandomVectorGenerator <68, 68>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.UnitSphereRandomVectorGenerator <75, 75>
+double[]Var[intVar] *= doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.TricubicSplineInterpolatingFunction <411, 411>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.BicubicSplineInterpolatingFunction <334, 334>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <144, 144>
+doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <146, 146>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <395, 395>
+doubleVar /= double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <585, 585>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.util.MathUtils <1927, 1927>
+doubleVar = double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer <192, 192>
+final double doubleVar = -Math.sqrt(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <488, 488>
+doubleVar=Math.abs(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <491, 491>
+doubleVar=Math.abs(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <598, 598>
+doubleVar=Math.abs(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.AdamsBashforthIntegrator <242, 242>
+final double doubleVar = Math.abs(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.polynomials.PolynomialFunction <179, 179>
+double[]Var[intVar] = -PolynomialFunction.doubleVar[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <127, 127>
+double[]Var[intVar] = -double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <171, 171>
+double[]Var[intVar] = -double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.polynomials.PolynomialFunction <197, 197>
+double[]Var[intVar] = -doubleVar[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastFourierTransformer <861, 861>
+double[]Var[intVar] = -double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.polynomials.PolynomialFunctionLagrangeForm <242, 242>
+double[]Var[0] *= -doubleVar[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <478, 478>
+double[]Var[intVar] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.VectorialCovariance <71, 71>
+double[]Var[intVar] += double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.LeastSquaresConverter <169, 169>
+double[]Var[intVar] -= double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <116, 116>
+double[]Var[intVar] += double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.CorrelatedRandomVectorGenerator <293, 293>
+double[]Var[intVar] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.polynomials.PolynomialFunctionLagrangeForm <179, 179>
+double[]Var[intVar] = doubleVar[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.polynomials.PolynomialFunctionLagrangeForm <180, 180>
+double[]Var[intVar] = doubleVar[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <145, 145>
+double[]Var[intVar] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <290, 290>
+double[]Var[intVar] += double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <331, 331>
+double[]Var[intVar] -= double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <621, 621>
+double[]Var[intVar] *= double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <659, 659>
+double[]Var[intVar] /= double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <478, 478>
+double[]Var[intVar] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <479, 479>
+double[]Var[intVar] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <584, 584>
+double[]Var[intVar] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.util.OpenIntToDoubleHashMap <452, 452>
+double[]Var[intVar] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.DividedDifferenceInterpolator <112, 112>
+double[]Var[intVar] = double[]Var[0];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <139, 139>
+double[]Var[intVar] = Math.sqrt(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.RungeKuttaIntegrator <112, 112>
+double[][]Var [intVar] = new double[double[]Var.length];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator <197, 197>
+double[][]Var[intVar] = new double[double[]Var.length];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator <201, 201>
+double[][]Var[intVar] = new double[double[]Var.length];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.summary.SumOfLogs <135, 135>
+doubleVar += Math.log(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.SingularValueDecompositionImpl <140, 140>
+double[]Var[intVar] = Math.sqrt(Math.abs(double[]Var[intVar]));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.direct.DirectSearchOptimizer <376, 376>
+RealPointValuePair[]Var[intVar + 1] = new RealPointValuePair(double[]Var, Double.NaN);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.MultistepIntegrator <345, 345>
+double[][]Var[intVar - 1] = double[]Var;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <284, 284>
+double[]Var[intVar + 1]       = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <285, 285>
+double[]Var[intVar + 1] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <294, 294>
+double[]Var[intVar + 1]       = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <295, 295>
+double[]Var[intVar + 1] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.SingularValueDecompositionImpl <297, 297>
+doubleVar=1.0 / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <549, 549>
+double[]Var[intVar + 1] -= doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.sampling.DummyStepInterpolator <146, 146>
+double[]Var[intVar] = ObjectInput.readDouble();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator <428, 428>
+double[]Var[intVar] = ObjectInput.readDouble();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <820, 820>
+double[]Var[intVar] = ObjectInput.readDouble();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <247, 247>
+double[]Var[intVar] = UnivariateRealOptimizer.getFunctionValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.fitting.CurveFitter <135, 135>
+double[]Var[intVar]  = WeightedObservedPoint.getY();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.fitting.CurveFitter <136, 136>
+double[]Var[intVar] = WeightedObservedPoint.getWeight();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.CorrelatedRandomVectorGenerator <287, 287>
+double[]Var[intVar] = NormalizedRandomGenerator.nextNormalizedDouble();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <824, 824>
+double[]Var[intVar] = ObjectInputStream.readDouble();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <140, 140>
+final double doubleVar = 1.0 / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealVector <768, 768>
+double[]Var[intVar] = getEntry(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <615, 615>
+ArrayRealVector[]Var[intVar] = new ArrayRealVector(double[]Var);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator <343, 343>
+double[]Var[intVar]       += doubleVar * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.SemiVariance <288, 288>
+doubleVar = double[]Var[intVar] - doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Mean <165, 165>
+doubleVar += double[]Var[intVar] - doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Variance <401, 401>
+doubleVar = double[]Var[intVar] - doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Variance <503, 503>
+doubleVar = double[]Var[intVar] - doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Variance <505, 505>
+doubleVar += double[]Var[intVar] * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.LeastSquaresConverter <177, 177>
+doubleVar +=  double[]Var[intVar] * doubleVar * doubleVar;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer <222, 222>
+doubleVar += double[]Var[intVar] * doubleVar * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.LoessInterpolator <337, 337>
+double[]Var[intVar] = doubleVar * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastCosineTransformer <245, 245>
+double[]Var[intVar] = doubleVar - doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastSineTransformer <237, 237>
+double[]Var[intVar]     = doubleVar + doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.sampling.DummyStepInterpolator <124, 124>
+ObjectOutput.writeDouble(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.sampling.AbstractStepInterpolator <386, 386>
+ObjectOutput.writeDouble(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <796, 796>
+ObjectOutput.writeDouble(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.MultivariateSummaryStatistics <338, 338>
+StringBuffer.append(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.direct.NelderMead <92, 92>
+final double[] double[]Var = RealPointValuePair[]Var[intVar].getPointRef();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.direct.NelderMead <92, 92>
+final double[] x = simplex[i].getPointRef();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.EmpiricalDistributionImpl <300, 300>
+sampleStats.addValue(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.EmpiricalDistributionImpl <310, 310>
+SummaryStatistics.addValue(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.AdamsNordsieckTransformer <192, 192>
+double[]Var[intVar] = BigFraction[]Var[intVar].doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.MultivariateSummaryStatistics <186, 186>
+double[]Var[intVar] = StorelessUnivariateStatistic[]Var[intVar].getResult();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.VectorialMean <68, 68>
+double[]Var[intVar] = Mean[]Var[intVar].getResult();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.ranking.NaturalRanking <239, 239>
+double[]Var[IntDoublePair[]Var[intVar].getPosition()] = intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.regression.AbstractMultipleLinearRegression <53, 53>
+double[]Var[intVar] = double[]Var[intVar++];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1055, 1055>
+BigDecimal[intVar] = new BigDecimal(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <1127, 1127>
+BigDecimal[intVar] = new BigDecimal(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator <248, 248>
+final double doubleVar   = doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator <249, 249>
+final double doubleVar   = doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Skewness <167, 167>
+final double doubleVar = double[]Var[intVar] - doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Skewness <175, 175>
+final double doubleVar = double[]Var[intVar] - doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.correlation.Covariance <235, 235>
+double doubleVar = double[]Var[intVar] - doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.correlation.Covariance <236, 236>
+double doubleVar = double[]Var[intVar] - doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <232, 232>
+double doubleVar = double[]Var[intVar] * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <533, 533>
+double doubleVar = doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <534, 534>
+double doubleVar = doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.util.MathUtils <1258, 1262>
+if (Double.isNaN(double[]Var[intVar])) {
+                 double[]Var[intVar] = Double.NaN;
+             } else {
+                 double[]Var[intVar] = double[]Var[intVar] * doubleVar / doubleVar;
+             }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.DormandPrince54StepInterpolator <191, 191>
+double[]Var[intVar] = doubleVar - double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.summary.SumOfSquares <124, 124>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.StatUtils <578, 578>
+doubleVar += double[]Var[intVar] - double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.StatUtils <625, 625>
+doubleVar = double[]Var[intVar] - double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.PowellOptimizer <193, 193>
+double[]Var[intVar] = double[]Var[intVar] * doubleVar;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <137, 137>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <166, 166>
+double[]Var[intVar] += doubleVar * double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <180, 180>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <189, 189>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <273, 273>
+double[]Var[intVar] += doubleVar * double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <282, 282>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.QRDecompositionImpl <327, 327>
+double[]Var[intVar] -= doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <228, 228>
+double[]Var[intVar] -= doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <267, 267>
+double[]Var[intVar] -= doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <715, 715>
+doubleVar += doubleVar[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <244, 244>
+doubleVar += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <250, 250>
+double[]Var[intVar] -= doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.VectorialMean <57, 57>
+Mean[]Var[intVar].increment(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator <254, 254>
+double[][]Var[0][intVar] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <613, 613>
+double[]Var[intVar] = double[][]Var[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator <250, 250>
+final double doubleVar = double[]Var[intVar] - double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <95, 95>
+final double doubleVar = long[]Var[intVar] - double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer <220, 220>
+final double doubleVar = double[]Var[intVar] - double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <86, 86>
+final double doubleVar = double[]Var[intVar] - double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <785, 785>
+final double doubleVar = doubleVar[intVar] - double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <833, 833>
+final double doubleVar = doubleVar[intVar] - double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <881, 881>
+final double doubleVar = doubleVar[intVar] - double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.util.MathUtils <1820, 1820>
+final double doubleVar = double[]Var[intVar] - double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.AbstractEstimator <163, 163>
+double[]Var[intVar] = Math.sqrt(WeightedMeasurement.getWeight()) * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.SimpleRealPointChecker <77, 77>
+final double doubleVar = Math.abs(double[]Var[intVar] - double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <507, 507>
+double doubleVar = Math.abs(getEntry(intVar) - double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <557, 557>
+double doubleVar = Math.abs(getEntry(intVar) - double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <380, 380>
+BigDecimal[][]Var[0][intVar] = new BigDecimal(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <663, 663>
+setEntry(intVar + intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <716, 716>
+AbstractRealVector.setEntry(intVar, -double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <608, 608>
+double[]Var[intVar] *= RealVector.getEntry(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <646, 646>
+double[]Var[intVar] /= RealVector.getEntry(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <184, 184>
+double[]Var[intVar] = getEntry(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <527, 527>
+double[]Var[intVar] = getEntry(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <559, 559>
+double[]Var[intVar] = getEntry(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealVector <89, 89>
+setEntry(intVar + intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.regression.AbstractMultipleLinearRegression <56, 56>
+double[][]Var[intVar][intVar] = double[]Var[intVar++];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <816, 816>
+double[]Var[intVar] = BigDecimal[intVar][intVar].doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BigMatrixImpl <857, 857>
+double[]Var[intVar] = BigDecimal[intVar][intVar].doubleValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.AdamsMoultonIntegrator <437, 437>
+double[]Var[intVar] += double[]Var[intVar] + double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.DormandPrince54StepInterpolator <192, 192>
+double[]Var[intVar] = double[]Var[intVar] - double[]Var[intVar] - doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.linear.LinearConstraint <129, 129>
+double[]Var[intVar] = double[]Var[intVar] - double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.PowellOptimizer <145, 145>
+double[]Var[intVar] = double[]Var[intVar] - double[]Var[intVar];
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.PowellOptimizer <194, 194>
+double[]Var[intVar] = double[]Var[intVar] + double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.BicubicSplineInterpolatingFunction <417, 417>
+doubleVar += double[][]Var[intVar][intVar] * double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <283, 283>
+double[]Var[intVar] -= doubleVar * doubleVar[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <292, 292>
+double[]Var[intVar] -= doubleVar * doubleVar[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <327, 327>
+double[]Var[intVar] -= doubleVar * doubleVar[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <336, 336>
+double[]Var[intVar] -= doubleVar * doubleVar[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <237, 237>
+double[]Var[intVar] -= doubleVar * double[][]Var[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <276, 276>
+double[]Var[intVar] -= doubleVar * double[][]Var[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.ranking.NaturalRanking <194, 194>
+IntDoublePair[]Var[intVar] = new IntDoublePair(double[]Var[intVar], intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Kurtosis <179, 179>
+doubleVar += Math.pow(double[]Var[intVar] - doubleVar, 4.0);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.summary.Product <165, 165>
+doubleVar *= Math.pow(double[]Var[intVar], double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.regression.AbstractMultipleLinearRegression <155, 155>
+double[]Var[intVar] = Math.sqrt(doubleVar * double[][]Var[intVar][intVar]);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.AbstractLeastSquaresOptimizer <311, 311>
+double[]Var[intVar] = Math.sqrt(double[][]Var[intVar][intVar]) * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.AbstractEstimator <268, 268>
+double[]Var[intVar] = Math.sqrt(double[][]Var[intVar][intVar]) * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.polynomials.PolynomialFunction <149, 149>
+double[]Var[intVar] = doubleVar[intVar] + PolynomialFunction.doubleVar[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.polynomials.PolynomialFunction <175, 175>
+double[]Var[intVar] = doubleVar[intVar] - PolynomialFunction.doubleVar[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.LoessInterpolator <309, 309>
+double[]Var[intVar] = Math.abs(double[]Var[intVar] - double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <546, 546>
+setEntry(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <578, 578>
+setEntry(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.PowellOptimizer <116, 116>
+final double[] double[]Var = Arrays.copyOf(double[][]Var[intVar], intVar);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.general.PowellOptimizer <116, 116>
+final double[] d = Arrays.copyOf(direc[i], n);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.BicubicSplineInterpolatingFunction <378, 378>
+BicubicSplineInterpolatingFunction.double[]Var[intVar][intVar] = double[]Var[intVar + shortVar * intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.EmpiricalDistributionImpl <445, 445>
+double[]Var[intVar] = double[]Var[intVar-1] + doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.polynomials.PolynomialFunction <242, 242>
+double[]Var[intVar - 1] = intVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.ranking.NaturalRanking <357, 357>
+double[]Var[Iterator.next()] = longVar + intVar++;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.VectorialCovariance <73, 73>
+double[]Var[intVar++] += double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator <301, 301>
+final double doubleVar = double[][]Var[intVar][intVar] / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.correlation.PearsonsCorrelation <236, 236>
+SimpleRegression.addData(double[]Var[intVar], double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.AdamsMoultonIntegrator <439, 439>
+final double doubleVar = Math.max(Math.abs(double[]Var[intVar]), Math.abs(double[]Var[intVar]));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <437, 437>
+final double doubleVar = Math.max(Math.abs(double[]Var[intVar]), Math.abs(double[]Var[intVar]));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.SimpleRealPointChecker <78, 78>
+final double doubleVar       = Math.max(Math.abs(double[]Var[intVar]), Math.abs(double[]Var[intVar]));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <521, 521>
+double[]Var[intVar] = 0.5 * (double[]Var[intVar] + double[]Var[intVar] + doubleVar * double[][]Var[intVar][intVar]);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.PowellOptimizer <146, 146>
+double[]Var[intVar] = 2 * double[]Var[intVar] - double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastHadamardTransformer <186, 186>
+double[]Var[intVar] = double[]Var[intVar] + double[]Var[intVar + 1];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator <213, 213>
+double[]Var[intVar] = 1.0 / (intVar * intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerStepInterpolator <216, 216>
+double[]Var[intVar] *= doubleVar / (intVar + 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <538, 538>
+double[]Var[intVar + 1] = doubleVar * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <544, 544>
+double[]Var[intVar + 1] = doubleVar * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <553, 553>
+doubleVar = double[]Var[intVar + 1] - doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <556, 556>
+double[]Var[intVar + 1] = doubleVar + doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.GaussNewtonEstimator <187, 187>
+double[]Var[intVar] = WeightedMeasurement[]Var[intVar].getPartial(EstimatedParameter[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.SmoothingPolynomialBicubicSplineInterpolator <114, 114>
+double[][]Var[intVar][intVar] = PolynomialFunction.value(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.SmoothingPolynomialBicubicSplineInterpolator <136, 136>
+double[][]Var[intVar][intVar] = PolynomialFunction.value(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.BicubicSplineInterpolator <90, 90>
+double[][]Var[intVar][intVar] = UnivariateRealFunction.value(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.BicubicSplineInterpolator <99, 99>
+double[][]Var[intVar][intVar] = UnivariateRealFunction.value(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.SmoothingBicubicSplineInterpolator <95, 95>
+double[][]Var[intVar][intVar] = PolynomialSplineFunction.value(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.SmoothingBicubicSplineInterpolator <112, 112>
+double[][]Var[intVar][intVar] = PolynomialSplineFunction.value(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.SmoothingBicubicSplineInterpolator <121, 121>
+double[][]Var[intVar][intVar] = UnivariateRealFunction.value(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.SmoothingBicubicSplineInterpolator <130, 130>
+double[][]Var[intVar][intVar] = UnivariateRealFunction.value(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <364, 364>
+double[]Var[intVar] = getEntry(int[]Var[intVar], int[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Mean <213, 213>
+doubleVar += double[]Var[intVar] * (double[]Var[intVar] - doubleVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <238, 238>
+double[]Var[intVar] = doubleVar * (double[]Var[intVar] + doubleVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator <248, 248>
+double[]Var[intVar] = doubleVar + doubleVar * Math.abs(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.util.MathUtils <1852, 1852>
+doubleVar = Math.max(doubleVar, Math.abs(double[]Var[intVar] - double[]Var[intVar]));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <438, 438>
+double[]Var[intVar] = doubleVar + doubleVar * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <425, 425>
+double[]Var[intVar + intVar * intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <441, 441>
+double[]Var[intVar + intVar * intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.Variance <504, 504>
+doubleVar += double[]Var[intVar] * (doubleVar * doubleVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <96, 96>
+doubleVar += doubleVar * doubleVar / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.fitting.PolynomialFitter <103, 103>
+doubleVar = doubleVar * doubleVar + double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.LoessInterpolator <308, 308>
+double[]Var[intVar] = doubleVar * doubleVar + doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastCosineTransformer <246, 246>
+double[]Var[intVar-intVar] = doubleVar + doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastSineTransformer <238, 238>
+double[]Var[intVar - intVar] = doubleVar - doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.TricubicSplineInterpolatingFunction <476, 476>
+doubleVar += double[][][]Var[intVar][intVar][intVar] * double[]Var[intVar] * double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.BicubicSplineInterpolator <82, 82>
+PolynomialSplineFunction[]Var[intVar] = SplineInterpolator.interpolate(double[]Var, double[][]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.SmoothingBicubicSplineInterpolator <103, 103>
+PolynomialSplineFunction[]Var[intVar] = SplineInterpolator.interpolate(double[]Var, double[][]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <998, 998>
+double[]Var[intVar++] = double[]Var[intVar * intVar + intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <1056, 1056>
+double[]Var[intVar * intVar + intVar] = double[]Var[intVar++];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <1113, 1113>
+double[]Var[intVar++] = double[]Var[intVar * intVar + intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <1198, 1198>
+double[]Var[intVar++] = double[]Var[intVar * intVar + intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <1228, 1228>
+double[]Var[intVar * intVar + intVar] = double[]Var[intVar++];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.AdamsMoultonIntegrator <443, 443>
+final double doubleVar  = (double[]Var[intVar] - double[]Var[intVar]) / doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <92, 92>
+final double doubleVar = long[]Var[intVar] - doubleVar * double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <541, 541>
+double doubleVar = (double[]Var[intVar] - doubleVar) / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <553, 553>
+double doubleVar = (double[]Var[intVar] - doubleVar) / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <279, 279>
+AbstractRealVector.setEntry(intVar + intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.OpenMapRealVector <451, 451>
+double doubleVar = OpenIntToDoubleHashMap.get(intVar) - double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <303, 303>
+final double doubleVar = AbstractRealVector.dotProduct(double[]Var) / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <345, 345>
+final double doubleVar = AbstractRealVector.dotProduct(RealVector) / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.util.CompositeFormat <153, 153>
+Number = parseNumber(StringVar, double[]Var[intVar], ParsePosition);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <443, 443>
+double[]Var[intVar] = double[]Var[intVar] + double[]Var[intVar] * doubleVar;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <202, 202>
+double[]Var[intVar] = double[]Var[intVar] + doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <440, 440>
+doubleVar += double[]Var[intVar] * double[]Var[intVar] / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.polynomials.PolynomialFunction <216, 216>
+double[]Var[intVar] += doubleVar[intVar] * PolynomialFunction.doubleVar[intVar-intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.MultivariateSummaryStatistics <251, 251>
+double[]Var[intVar] = Math.sqrt(RealMatrix.getEntry(intVar, intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.TricubicSplineInterpolatingFunction <300, 300>
+TricubicSplineFunction[][][]Var[intVar][intVar][intVar] = new TricubicSplineFunction(computeSplineCoefficients(double[]Var));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.EulerStepInterpolator <85, 85>
+double[]Var[intVar] = double[]Var[intVar] - doubleVar * double[][]Var[0][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <479, 479>
+double[]Var[intVar] = double[]Var[intVar] + doubleVar * double[][]Var[0][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.UncorrelatedRandomVectorGenerator <86, 86>
+double[]Var[intVar] = double[]Var[intVar] + double[]Var[intVar] * NormalizedRandomGenerator.nextNormalizedDouble();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.AbstractUnivariateStatistic <157, 160>
+if (Double.isInfinite(double[]Var[intVar])) {
+                throw MathRuntimeException.createIllegalArgumentException(
+                        LocalizedFormats.INFINITE_ARRAY_ELEMENT, double[]Var[intVar], intVar);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.SmoothingPolynomialBicubicSplineInterpolator <102, 102>
+PolynomialFitter.addObservedPoint(1, double[]Var[intVar], double[][]Var[intVar][intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.SmoothingPolynomialBicubicSplineInterpolator <124, 124>
+PolynomialFitter.addObservedPoint(1, double[]Var[intVar], double[][]Var[intVar][intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <171, 171>
+RealMatrix.setEntry(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <187, 187>
+RealMatrix.setEntry(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.MatrixUtils <205, 205>
+RealMatrix.setEntry(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <483, 483>
+RealMatrixPreservingVisitor.visit(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <519, 519>
+RealMatrixPreservingVisitor.visit(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <491, 491>
+RealMatrixPreservingVisitor.visit(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <527, 527>
+RealMatrixPreservingVisitor.visit(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <152, 152>
+RealMatrix.setEntry(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BiDiagonalTransformer <143, 143>
+RealMatrix.setEntry(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <497, 499>
+if (Math.abs(double[]Var[intVar])<=MathUtils.EPSILON*doubleVar) {
+                    double[]Var[intVar]=0.0;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <500, 502>
+if (Math.abs(double[]Var[intVar])<=MathUtils.EPSILON*doubleVar) {
+                    double[]Var[intVar]=0.0;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <604, 606>
+if (Math.abs(double[]Var[intVar])<MathUtils.EPSILON*doubleVar) {
+                    double[]Var[intVar]=0.0;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <157, 157>
+RealMatrix.setEntry(intVar, intVar + 1, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BiDiagonalTransformer <150, 150>
+RealMatrix.setEntry(intVar, intVar + 1, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <494, 494>
+double[]Var[intVar]       = double[]Var[intVar] + doubleVar * double[][]Var[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.random.CorrelatedRandomVectorGenerator <295, 295>
+double[]Var[intVar] += RealMatrix.getEntry(intVar, intVar) * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator <252, 252>
+double[]Var[intVar] = double[]Var[intVar] + double[]Var[intVar] * Math.abs(double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <122, 122>
+doubleVar += RealMatrix.getEntry(intVar, intVar) * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BiDiagonalTransformer <191, 191>
+doubleVar -= RealMatrix.getEntry(intVar, intVar) * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <667, 667>
+System.arraycopy(double[]Var, intVar, double[][]Var[intVar], 0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <680, 680>
+System.arraycopy(double[]Var, intVar, double[][]Var[intVar], 0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <699, 699>
+System.arraycopy(double[]Var, intVar, double[][]Var[intVar], 0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <712, 712>
+System.arraycopy(double[]Var, intVar, double[][]Var[intVar], 0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.TricubicSplineInterpolator <84, 84>
+BicubicSplineInterpolatingFunction[]Var[intVar] = BicubicSplineInterpolator.interpolate(double[]Var, double[]Var, double[][][]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <467, 467>
+double[]Var[intVar] = RealMatrixChangingVisitor.visit(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <501, 501>
+double[]Var[intVar] = RealMatrixChangingVisitor.visit(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <535, 535>
+double[]Var[intVar] = RealMatrixChangingVisitor.visit(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <568, 568>
+double[]Var[intVar] = RealMatrixChangingVisitor.visit(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.ArrayRealVector <984, 984>
+RealMatrix.setEntry(intVar, intVar, doubleVar[intVar] * double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <475, 475>
+double[]Var[intVar] = RealMatrixChangingVisitor.visit(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <509, 509>
+double[]Var[intVar] = RealMatrixChangingVisitor.visit(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <543, 543>
+double[]Var[intVar] = RealMatrixChangingVisitor.visit(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <576, 576>
+double[]Var[intVar] = RealMatrixChangingVisitor.visit(intVar, intVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <117, 117>
+RealMatrix.setEntry(intVar, intVar, doubleVar * double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <127, 127>
+RealMatrix.addToEntry(intVar, intVar, doubleVar * double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.polynomials.PolynomialFunctionLagrangeForm <240, 240>
+double[]Var[intVar] = double[]Var[intVar-1] - double[]Var[intVar] * doubleVar[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <518, 518>
+double[][]Var[intVar][intVar] = (double[]Var[intVar] - double[]Var[intVar]) / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.jacobians.FirstOrderIntegratorWithJacobians <528, 528>
+double[][]Var[intVar][intVar] = (double[]Var[intVar] - double[]Var[intVar]) / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.rank.Max <133, 133>
+doubleVar = (doubleVar > double[]Var[intVar]) ? doubleVar : double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.rank.Min <133, 133>
+doubleVar = (doubleVar < double[]Var[intVar]) ? doubleVar : double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.QRDecompositionImpl <234, 234>
+RealMatrix.setEntry(intVar, intVar, double[][]Var[intVar][intVar] / -double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.TricubicSplineInterpolatingFunction <437, 437>
+double[][][]Var[intVar][intVar][intVar] = double[]Var[intVar + shortVar * (intVar + shortVar * intVar)];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BiDiagonalTransformer <196, 196>
+RealMatrix.addToEntry(intVar, intVar, -doubleVar * double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.inference.ChiSquareTestImpl <93, 93>
+doubleVar += doubleVar * doubleVar / (doubleVar * double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <258, 258>
+double[]Var[intVar] -= double[]Var[intVar] * double[]Var[intVar] + double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.transform.FastHadamardTransformer <192, 192>
+double[]Var[intVar] = double[]Var[intVar - intVar] - double[]Var[intVar - intVar + 1];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <718, 718>
+double[]Var[intVar] = -doubleVar * doubleVar + doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <732, 732>
+double[]Var[intVar] = -doubleVar * doubleVar + doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.polynomials.PolynomialFunctionLagrangeForm <272, 272>
+double[]Var[intVar] = double[]Var[intVar+1] + double[]Var[intVar+1] * doubleVar[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.TricubicSplineInterpolatingFunction <323, 323>
+final double doubleVar = (doubleVar - double[]Var[intVar]) / (double[]Var[intVar + 1] - double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.BicubicSplineInterpolatingFunction <169, 169>
+final double doubleVar = (doubleVar - double[]Var[intVar]) / (double[]Var[intVar + 1] - double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.BicubicSplineInterpolatingFunction <240, 240>
+final double doubleVar = (doubleVar - double[]Var[intVar]) / (double[]Var[intVar + 1] - double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.stat.descriptive.moment.VectorialCovariance <93, 93>
+double doubleVar = doubleVar * (longVar * double[]Var[intVar++] - double[]Var[intVar] * double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.LoessInterpolator <262, 266>
+if (double[]Var[intVar] - double[]Var[intVar] > double[]Var[intVar] - double[]Var[intVar]) {
+                    intVar = intVar;
+                } else {
+                    intVar = intVar;
+                }
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <352, 352>
+double[]Var[intVar] = -double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <359, 359>
+double[]Var[intVar] = -double[]Var[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <312, 312>
+double doubleVar  = double[]Var[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <378, 378>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <612, 612>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <677, 677>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <318, 318>
+double doubleVar  = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <385, 385>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <626, 626>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <691, 691>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <805, 805>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <821, 821>
+double doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <844, 844>
+double doubleVar   = double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <514, 514>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <542, 542>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <590, 590>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <524, 524>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <554, 554>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <604, 604>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <851, 851>
+double[]Var[intVar] -= doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <107, 107>
+doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <111, 111>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <119, 119>
+doubleVar = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.LUDecompositionImpl <123, 123>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <543, 543>
+double[]Var[intVar] += doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <616, 616>
+double[]Var[intVar] += doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <678, 678>
+double[]Var[intVar] += doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <1390, 1390>
+double[]Var[intVar] += doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <1439, 1439>
+double[]Var[intVar] += doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <287, 287>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <427, 427>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.Array2DRowRealMatrix <450, 450>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <288, 288>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <434, 434>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.RealMatrixImpl <458, 458>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <689, 689>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <716, 716>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <741, 741>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.AbstractRealMatrix <769, 769>
+double[]Var[intVar] = doubleVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <338, 338>
+double[]Var[intVar] = double[]Var[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <429, 429>
+double[]Var[intVar] = double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <611, 611>
+double[]Var[intVar] /= double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <667, 667>
+double[]Var[intVar] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <625, 625>
+double[]Var[intVar] /= double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <681, 681>
+double[]Var[intVar] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <742, 742>
+double[]Var[intVar]       = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <743, 743>
+double[]Var[intVar] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <244, 246>
+double[]Var[intVar]       = UnivariateRealOptimizer.optimize(UnivariateRealFunction, null,
+                                                     Math.min(doubleVar, doubleVar),
+                                                     Math.max(doubleVar, doubleVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer <264, 269>
+if (Double.isNaN(double[]Var[intVar])) {
+                double[]Var[intVar] = double[]Var[--intVar];
+                double[]Var[intVar + 1] = Double.NaN;
+                double[]Var[intVar] = double[]Var[--intVar];
+                double[]Var[intVar + 1] = Double.NaN;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.special.Gamma <106, 106>
+doubleVar = doubleVar + double[]Var[0];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.polynomials.PolynomialFunctionLagrangeForm <207, 212>
+if (intVar < 0.5*(intVar-intVar+1)) {
+                doubleVar += double[]Var[intVar];    // fork down
+            } else {
+                intVar--;
+                doubleVar += double[]Var[intVar];    // fork up
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <532, 532>
+double[]Var[intVar] *= double[]Var[intVar] / doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <582, 582>
+double[]Var[intVar] = doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <542, 542>
+double[]Var[intVar] *= double[]Var[intVar] / doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <596, 596>
+double[]Var[intVar] = doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.AdamsBashforthIntegrator <243, 245>
+final double doubleVar = (double[]Var == null) ?
+                                       (doubleVar + doubleVar * doubleVar) :
+                                       (double[]Var[intVar] + double[]Var[intVar] * doubleVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.DormandPrince54StepInterpolator <209, 209>
+double[]Var[intVar] = double[]Var[intVar] + doubleVar * double[]Var[intVar] + doubleVar * double[]Var[intVar] + doubleVar * double[]Var[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <283, 283>
+double[][]Var[intVar][intVar] = double[]Var[intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <354, 354>
+double doubleVar = double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <513, 513>
+double doubleVar = double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <589, 589>
+double doubleVar = double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <361, 361>
+double doubleVar = double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <523, 523>
+double doubleVar = double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <603, 603>
+double doubleVar = double[]Var[intVar] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.RungeKuttaIntegrator <165, 165>
+doubleVar    += double[]Var[intVar] * double[][]Var[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator <281, 281>
+doubleVar    += double[]Var[intVar] * double[][]Var[intVar][intVar];
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <353, 353>
+double[]Var[intVar] = double[]Var[intVar] + double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <345, 345>
+double[]Var[intVar] = EstimatedParameter[]Var[intVar].getEstimate();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <613, 613>
+doubleVar += double[]Var[intVar++] * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <1436, 1436>
+doubleVar += double[]Var[intVar] * double[]Var[intVar++];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <435, 435>
+EstimatedParameter[]Var[intVar].setEstimate(double[]Var[intVar]);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <727, 727>
+double[]Var[intVar] = double[][]Var[intVar][int[]Var[intVar]];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <728, 728>
+double[][]Var[intVar][int[]Var[intVar]] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.LoessInterpolator <394, 398>
+if (intVar < double[]Var.length && double[]Var[intVar] - double[]Var[intVar] < double[]Var[intVar] - double[]Var[intVar]) {
+            int nextLeft = nextNonzero(double[]Var, int[]Var[0]);
+            int[]Var[0] = nextLeft;
+            int[]Var[1] = intVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <548, 551>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+      // Aitken-Neville's recursive formula
+      double[]Var[intVar] = double[][]Var[0][intVar] + double[][]Var[intVar+intVar][intVar-1] * (double[][]Var[0][intVar] - double[]Var[intVar]);
+    }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <607, 607>
+double[]Var[intVar] = double[]Var[intVar] * double[]Var[intVar] / doubleVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <750, 750>
+double[]Var[intVar] = (double[]Var[intVar] - doubleVar) / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <621, 621>
+double[]Var[intVar] = double[]Var[intVar] * double[]Var[intVar] / doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <765, 765>
+double[]Var[intVar] = (double[]Var[intVar] - doubleVar) / double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.direct.DirectSearchOptimizer <205, 210>
+if (intVar > 0) {
+                final double[] confI = double[][]Var[intVar - 1];
+                for (int k = 0; k < intVar; ++k) {
+                    confI[k] = double[]Var[k] - double[]Var[k];
+                }
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.direct.DirectSearchOptimizer <205, 210>
+if (i > 0) {
+                final double[] confI = startConfiguration[i - 1];
+                for (int k = 0; k < n; ++k) {
+                    confI[k] = refI[k] - ref0[k];
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <360, 360>
+EstimatedParameter[]Var[intVar].setEstimate(double[]Var[intVar] + double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.RungeKuttaIntegrator <154, 154>
+double[]Var[intVar] = double[]Var[intVar] + doubleVar * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.RungeKuttaIntegrator <167, 167>
+double[]Var[intVar] = double[]Var[intVar] + doubleVar * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator <270, 270>
+double[]Var[intVar] = double[]Var[intVar] + doubleVar * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator <283, 283>
+double[]Var[intVar] = double[]Var[intVar] + doubleVar * doubleVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <289, 289>
+double[]Var[intVar * intVar + intVar] = double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <858, 858>
+doubleVar += double[]Var[intVar] * double[]Var[intVar + intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <862, 862>
+double[]Var[intVar + intVar] -= doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.EigenDecompositionImpl <577, 582>
+for (int intVar = intVar + 1; intVar < intVar; intVar++) {
+                if (double[]Var[intVar] > doubleVar) {
+                    intVar = intVar;
+                    doubleVar = double[]Var[intVar];
+                }
+            }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.ode.nonstiff.RungeKuttaIntegrator <152, 152>
+doubleVar += double[][]Var[intVar-1][intVar] * double[][]Var[intVar][intVar];
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator <268, 268>
+doubleVar += double[][]Var[intVar-1][intVar] * double[][]Var[intVar][intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.BicubicSplineInterpolator <111, 113>
+double[][]Var[intVar][intVar] = (double[][]Var[intVar][intVar] - double[][]Var[intVar][intVar] -
+                                 double[][]Var[intVar][intVar] + double[][]Var[intVar][intVar]) /
+                    ((double[]Var[intVar] - double[]Var[intVar]) * (double[]Var[intVar] - double[]Var[intVar]));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.SmoothingBicubicSplineInterpolator <142, 144>
+double[][]Var[intVar][intVar] = (double[][]Var[intVar][intVar] - double[][]Var[intVar][intVar] -
+                                double[][]Var[intVar][intVar] + double[][]Var[intVar][intVar]) /
+                    ((double[]Var[intVar] - double[]Var[intVar]) * (double[]Var[intVar] - double[]Var[intVar]));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.TriDiagonalTransformer <233, 237>
+for (int intVar = intVar + 1; intVar < intVar; ++intVar) {
+                        final double hIJ = double[]Var[intVar];
+                        doubleVar   += hIJ * double[]Var[intVar];
+                        double[]Var[intVar] += hIJ * doubleVar;
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.AbstractEstimator <133, 133>
+double[]Var[intVar++] = doubleVar * WeightedMeasurement.getPartial(EstimatedParameter[]Var[intVar]);
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <839, 839>
+doubleVar += double[][]Var[intVar][intVar] * double[][]Var[intVar][int[]Var[intVar + intVar]];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <709, 709>
+double[][]Var[intVar][intVar] = doubleVar * doubleVar + doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <1388, 1388>
+doubleVar += double[]Var[intVar++] * double[]Var[intVar++];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <710, 710>
+double doubleVar = double[]Var[intVar * intVar + intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.BlockRealMatrix <540, 540>
+doubleVar += double[]Var[intVar] * RealMatrix.getEntry(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GraggBulirschStoerIntegrator <540, 544>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+        // Aitken-Neville's recursive formula
+        double[][]Var[intVar-intVar-1][intVar] = double[][]Var[intVar-intVar][intVar] +
+                         double[][]Var[intVar+intVar][intVar-1] * (double[][]Var[intVar-intVar][intVar] - double[][]Var[intVar-intVar-1][intVar]);
+      }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.linear.CholeskyDecompositionImpl <142, 148>
+for (int intVar = intVar - 1; intVar > intVar; --intVar) {
+                double[]Var[intVar] *= doubleVar;
+                final double[] ltQ = double[][]Var[intVar];
+                for (int p = intVar; p < intVar; ++p) {
+                    ltQ[p] -= double[]Var[intVar] * double[]Var[p];
+                }
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.linear.CholeskyDecompositionImpl <142, 148>
+for (int q = order - 1; q > i; --q) {
+                ltI[q] *= inverse;
+                final double[] ltQ = lTData[q];
+                for (int p = q; p < order; ++p) {
+                    ltQ[p] -= ltI[q] * ltI[p];
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.MidpointStepInterpolator <91, 96>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+      final double yDot1 = double[][]Var[0][intVar];
+      final double yDot2 = double[][]Var[1][intVar];
+      double[]Var[intVar] = double[]Var[intVar] + doubleVar * yDot1 - doubleVar * yDot2;
+      double[]Var[intVar] = doubleVar * yDot1 + doubleVar * yDot2;
+    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.integration.LegendreGaussIntegrator <226, 226>
+doubleVar += double[]Var[intVar] * UnivariateRealFunction.value(doubleVar + doubleVar * double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.direct.NelderMead <168, 174>
+for (int intVar = 1; intVar < RealPointValuePair[]Var.length; ++intVar) {
+                final double[] x = RealPointValuePair[]Var[intVar].getPoint();
+                for (int intVar = 0; intVar < intVar; ++intVar) {
+                    x[intVar] = double[]Var[intVar] + doubleVar * (x[intVar] - double[]Var[intVar]);
+                }
+                RealPointValuePair[]Var[intVar] = new RealPointValuePair(x, Double.NaN, false);
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.direct.NelderMead <168, 174>
+for (int i = 1; i < simplex.length; ++i) {
+                final double[] x = simplex[i].getPoint();
+                for (int j = 0; j < n; ++j) {
+                    x[j] = xSmallest[j] + sigma * (x[j] - xSmallest[j]);
+                }
+                simplex[i] = new RealPointValuePair(x, Double.NaN, false);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.optimization.direct.MultiDirectional <130, 137>
+for (int intVar = 1; intVar <= intVar; ++intVar) {
+            final double[] xOriginal    = RealPointValuePair[]Var[intVar].getPointRef();
+            final double[] xTransformed = new double[intVar];
+            for (int j = 0; j < intVar; ++j) {
+                xTransformed[j] = double[]Var[j] + doubleVar * (double[]Var[j] - xOriginal[j]);
+            }
+            RealPointValuePair[]Var[intVar] = new RealPointValuePair(xTransformed, Double.NaN, false);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.optimization.direct.MultiDirectional <130, 137>
+for (int i = 1; i <= n; ++i) {
+            final double[] xOriginal    = original[i].getPointRef();
+            final double[] xTransformed = new double[n];
+            for (int j = 0; j < n; ++j) {
+                xTransformed[j] = xSmallest[j] + coeff * (xSmallest[j] - xOriginal[j]);
+            }
+            simplex[i] = new RealPointValuePair(xTransformed, Double.NaN, false);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.ClassicalRungeKuttaStepInterpolator <98, 106>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+            final double yDot1  = double[][]Var[0][intVar];
+            final double yDot23 = double[][]Var[1][intVar] + double[][]Var[2][intVar];
+            final double yDot4  = double[][]Var[3][intVar];
+            double[]Var[intVar] =
+                double[]Var[intVar] + doubleVar  * yDot1 + doubleVar * yDot23 + doubleVar  * yDot4;
+            double[]Var[intVar] =
+                doubleVar * yDot1 + doubleVar * yDot23 + doubleVar * yDot4;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.estimation.LevenbergMarquardtEstimator <723, 723>
+double[]Var[intVar * intVar + intVar] = doubleVar * doubleVar + doubleVar * double[]Var[intVar];
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.BicubicSplineInterpolatingFunction <144, 149>
+final double[] double[]Var = new double[] {
+                    double[][]Var[intVar][intVar], double[][]Var[intVar][intVar], double[][]Var[intVar][intVar], double[][]Var[intVar][intVar],
+                    double[][]Var[intVar][intVar], double[][]Var[intVar][intVar], double[][]Var[intVar][intVar], double[][]Var[intVar][intVar],
+                    double[][]Var[intVar][intVar], double[][]Var[intVar][intVar], double[][]Var[intVar][intVar], double[][]Var[intVar][intVar],
+                    double[][]Var[intVar][intVar], double[][]Var[intVar][intVar], double[][]Var[intVar][intVar], double[][]Var[intVar][intVar]
+                };
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.interpolation.BicubicSplineInterpolatingFunction <144, 149>
+final double[] beta = new double[] {
+                    f[i][j], f[ip1][j], f[i][jp1], f[ip1][jp1],
+                    dFdX[i][j], dFdX[ip1][j], dFdX[i][jp1], dFdX[ip1][jp1],
+                    dFdY[i][j], dFdY[ip1][j], dFdY[i][jp1], dFdY[ip1][jp1],
+                    d2FdXdY[i][j], d2FdXdY[ip1][j], d2FdXdY[i][jp1], d2FdXdY[ip1][jp1]
+                };
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.GillStepInterpolator <111, 120>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+        final double yDot1 = double[][]Var[0][intVar];
+        final double yDot2 = double[][]Var[1][intVar];
+        final double yDot3 = double[][]Var[2][intVar];
+        final double yDot4 = double[][]Var[3][intVar];
+        double[]Var[intVar] =
+            double[]Var[intVar] - doubleVar * yDot1 - doubleVar * yDot2 - doubleVar * yDot3 - doubleVar * yDot4;
+        double[]Var[intVar] =
+            doubleVar * yDot1 + doubleVar * yDot2 + doubleVar * yDot3 + doubleVar * yDot4;
+     }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.ThreeEighthesStepInterpolator <102, 112>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+          final double yDot1 = double[][]Var[0][intVar];
+          final double yDot2 = double[][]Var[1][intVar];
+          final double yDot3 = double[][]Var[2][intVar];
+          final double yDot4 = double[][]Var[3][intVar];
+          double[]Var[intVar] =
+              double[]Var[intVar] - doubleVar * yDot1 - doubleVar * yDot2 - doubleVar * yDot3 - doubleVar * yDot4;
+          double[]Var[intVar] =
+              doubleVar * yDot1 + doubleVar * yDot2 + doubleVar * yDot3 + doubleVar * yDot4;
+
+      }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.TricubicSplineInterpolator <148, 166>
+for (int intVar = 0; intVar < intVar ; intVar++) {
+            final int nI = nextIndex(intVar, intVar);
+            final int pI = previousIndex(intVar);
+            for (int intVar = 0; intVar < intVar; intVar++) {
+                final int nJ = nextIndex(intVar, intVar);
+                final int pJ = previousIndex(intVar);
+                for (int intVar = 0; intVar < intVar; intVar++) {
+                    final int nK = nextIndex(intVar, intVar);
+                    final int pK = previousIndex(intVar);
+
+                    // XXX Not sure about this formula
+                    double[][][]Var[intVar][intVar][intVar] = (double[][][]Var[nI][nJ][nK] - double[][][]Var[nI][pJ][nK] -
+                                          double[][][]Var[pI][nJ][nK] + double[][][]Var[pI][pJ][nK] -
+                                          double[][][]Var[nI][nJ][pK] + double[][][]Var[nI][pJ][pK] +
+                                          double[][][]Var[pI][nJ][pK] - double[][][]Var[pI][pJ][pK]) /
+                        ((double[]Var[nI] - double[]Var[pI]) * (double[]Var[nJ] - double[]Var[pJ]) * (double[]Var[nK] - double[]Var[pK])) ;
+                }
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.HighamHall54StepInterpolator <89, 99>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+        final double yDot0 = double[][]Var[0][intVar];
+        final double yDot2 = double[][]Var[2][intVar];
+        final double yDot3 = double[][]Var[3][intVar];
+        final double yDot4 = double[][]Var[4][intVar];
+        final double yDot5 = double[][]Var[5][intVar];
+        double[]Var[intVar] =
+            double[]Var[intVar] + doubleVar * yDot0 + doubleVar * yDot2 + doubleVar * yDot3 + doubleVar * yDot4 + doubleVar * yDot5;
+        double[]Var[intVar] =
+            doubleVar * yDot0 + doubleVar * yDot2 + doubleVar * yDot3 + doubleVar * yDot4 + doubleVar * yDot5;
+    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.ode.nonstiff.DormandPrince853StepInterpolator <371, 383>
+for (int intVar = 0; intVar < double[]Var.length; ++intVar) {
+      double[]Var[intVar] = double[]Var[intVar] -
+                             doubleVar * (double[][]Var[0][intVar] -
+                                               doubleVar * (double[][]Var[1][intVar] +
+                                                        doubleVar * (double[][]Var[2][intVar] +
+                                                                 doubleVar * (double[][]Var[3][intVar] +
+                                                                        doubleVar * (double[][]Var[4][intVar] +
+                                                                                 doubleVar * (double[][]Var[5][intVar] +
+                                                                                        doubleVar * (double[][]Var[6][intVar])))))));
+      double[]Var[intVar] =  double[][]Var[0][intVar] + doubleVar * double[][]Var[1][intVar] + doubleVar * double[][]Var[2][intVar] +
+                                    doubleVar * double[][]Var[3][intVar] + doubleVar * double[][]Var[4][intVar] +
+                                    doubleVar * double[][]Var[5][intVar] + doubleVar * double[][]Var[6][intVar];
+    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.analysis.interpolation.TricubicSplineInterpolatingFunction <258, 298>
+final double[] double[]Var = new double[] {
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                        double[][][]Var[intVar][intVar][intVar], double[][][]Var[intVar][intVar][intVar],
+                    };
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.analysis.interpolation.TricubicSplineInterpolatingFunction <258, 298>
+final double[] beta = new double[] {
+                        f[i][j][k], f[ip1][j][k],
+                        f[i][jp1][k], f[ip1][jp1][k],
+                        f[i][j][kp1], f[ip1][j][kp1],
+                        f[i][jp1][kp1], f[ip1][jp1][kp1],
+
+                        dFdX[i][j][k], dFdX[ip1][j][k],
+                        dFdX[i][jp1][k], dFdX[ip1][jp1][k],
+                        dFdX[i][j][kp1], dFdX[ip1][j][kp1],
+                        dFdX[i][jp1][kp1], dFdX[ip1][jp1][kp1],
+
+                        dFdY[i][j][k], dFdY[ip1][j][k],
+                        dFdY[i][jp1][k], dFdY[ip1][jp1][k],
+                        dFdY[i][j][kp1], dFdY[ip1][j][kp1],
+                        dFdY[i][jp1][kp1], dFdY[ip1][jp1][kp1],
+
+                        dFdZ[i][j][k], dFdZ[ip1][j][k],
+                        dFdZ[i][jp1][k], dFdZ[ip1][jp1][k],
+                        dFdZ[i][j][kp1], dFdZ[ip1][j][kp1],
+                        dFdZ[i][jp1][kp1], dFdZ[ip1][jp1][kp1],
+
+                        d2FdXdY[i][j][k], d2FdXdY[ip1][j][k],
+                        d2FdXdY[i][jp1][k], d2FdXdY[ip1][jp1][k],
+                        d2FdXdY[i][j][kp1], d2FdXdY[ip1][j][kp1],
+                        d2FdXdY[i][jp1][kp1], d2FdXdY[ip1][jp1][kp1],
+
+                        d2FdXdZ[i][j][k], d2FdXdZ[ip1][j][k],
+                        d2FdXdZ[i][jp1][k], d2FdXdZ[ip1][jp1][k],
+                        d2FdXdZ[i][j][kp1], d2FdXdZ[ip1][j][kp1],
+                        d2FdXdZ[i][jp1][kp1], d2FdXdZ[ip1][jp1][kp1],
+
+                        d2FdYdZ[i][j][k], d2FdYdZ[ip1][j][k],
+                        d2FdYdZ[i][jp1][k], d2FdYdZ[ip1][jp1][k],
+                        d2FdYdZ[i][j][kp1], d2FdYdZ[ip1][j][kp1],
+                        d2FdYdZ[i][jp1][kp1], d2FdYdZ[ip1][jp1][kp1],
+
+                        d3FdXdYdZ[i][j][k], d3FdXdYdZ[ip1][j][k],
+                        d3FdXdYdZ[i][jp1][k], d3FdXdYdZ[ip1][jp1][k],
+                        d3FdXdYdZ[i][j][kp1], d3FdXdYdZ[ip1][j][kp1],
+                        d3FdXdYdZ[i][jp1][kp1], d3FdXdYdZ[ip1][jp1][kp1],
+                    };
+

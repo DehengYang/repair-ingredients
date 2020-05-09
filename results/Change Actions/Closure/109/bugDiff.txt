@@ -1,0 +1,17 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_109/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_109/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_109/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java	2020-01-05 05:21:56.889123671 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_109/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java	2020-01-05 05:21:59.877098715 -0800
+@@ -1905,7 +1905,11 @@
+    * For expressions on the right hand side of a this: or new:
+    */
+   private Node parseContextTypeExpression(JsDocToken token) {
+-          return parseTypeName(token);
++    if (token == JsDocToken.QMARK) {
++      return newNode(Token.QMARK);
++    } else {
++      return parseBasicTypeExpression(token);
++    }
+   }
+ 
+   /**

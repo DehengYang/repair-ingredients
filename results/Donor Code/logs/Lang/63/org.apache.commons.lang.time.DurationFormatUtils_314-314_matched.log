@@ -1,0 +1,24 @@
+---patch code ori--- org.apache.commons.lang.time.DurationFormatUtils <314, 314>
+end.add(Calendar.MONTH, 1);
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.apache.commons.lang.time.DateUtils <819, 819>
+end.add(Calendar.MONTH, 1);
+
+---patch code 0--- org.apache.commons.lang.time.DurationFormatUtils <314, 314>
+Calendar.add(Calendar.MONTH, 1);
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.lang.time.DateUtils <819, 819>
+Calendar.add(Calendar.MONTH, 1);
+
+---patch code 1--- org.apache.commons.lang.time.DurationFormatUtils <314, 314>
+Calendar.add(Calendar.MONTH, 1);
+
+---fix ingredient(SamePackage)  varMapType:1--- org.apache.commons.lang.time.DateUtils <819, 819>
+Calendar.add(Calendar.MONTH, 1);
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.lang.time.DateUtils <684, 684>
+Calendar.add(Calendar.MONTH, 1);
+
+---fix ingredient(SamePackage)  varMapType:1--- org.apache.commons.lang.time.DateUtils <684, 684>
+Calendar.add(Calendar.MONTH, 1);
+

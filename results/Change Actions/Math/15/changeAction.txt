@@ -1,0 +1,22 @@
+OP1:(INS, FieldDeclaration, null, OP2 OP3 OP4 OP5 OP6)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (INS, Modifier, OP1, null)
+OP5:   (INS, PrimitiveType, OP1, null)
+OP6:   (INS, VariableDeclarationFragment, OP1, OP7 OP8)
+OP7:      (INS, SimpleName, OP6, null)
+OP8:      (INS, InfixExpression, OP6, OP9 OP10 OP11)
+OP9:         (INS, NumberLiteral, OP8, null)
+OP10:         (INS, Operator, OP8, null)
+OP11:         (INS, SimpleName, OP8, null)
+
+
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (UPD, InfixExpression, OP1, OP3 OP5)
+OP3:      (UPD, InfixExpression, OP2, OP4)
+OP4:         (UPD, SimpleName, OP3, null)
+OP5:      (UPD, InfixExpression, OP2, OP6)
+OP6:         (UPD, PrefixExpression, OP5, OP7)
+OP7:            (UPD, SimpleName, OP6, null)
+
+

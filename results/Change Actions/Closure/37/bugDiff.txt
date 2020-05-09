@@ -1,0 +1,30 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_37/src/com/google/javascript/jscomp/NodeTraversal.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_37/src/com/google/javascript/jscomp/NodeTraversal.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_37/src/com/google/javascript/jscomp/NodeTraversal.java	2020-01-05 05:16:50.235684872 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_37/src/com/google/javascript/jscomp/NodeTraversal.java	2020-01-05 05:16:52.583665262 -0800
+@@ -538,7 +538,7 @@
+ 
+     // Body
+     Preconditions.checkState(body.getNext() == null &&
+-            body.isBlock());
++            body.isBlock(), body);
+     traverseBranch(body, n);
+ 
+     popScope();
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_37/src/com/google/javascript/jscomp/parsing/IRFactory.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_37/src/com/google/javascript/jscomp/parsing/IRFactory.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_37/src/com/google/javascript/jscomp/parsing/IRFactory.java	2020-01-05 05:16:50.235684872 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_37/src/com/google/javascript/jscomp/parsing/IRFactory.java	2020-01-05 05:16:52.587665228 -0800
+@@ -664,9 +664,13 @@
+       node.addChildToBack(lp);
+ 
+       Node bodyNode = transform(functionNode.getBody());
++      if (!bodyNode.isBlock()) {
+         // When in ideMode Rhino tries to parse some constructs the compiler
+         // doesn't support, repair it here. see Rhino's
+         // Parser#parseFunctionBodyExpr.
++        Preconditions.checkState(config.isIdeMode);
++        bodyNode = IR.block();
++      }
+       parseDirectives(bodyNode);
+       node.addChildToBack(bodyNode);
+      return node;

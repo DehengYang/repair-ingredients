@@ -1,0 +1,7 @@
+chunk1 : org.joda.time.Partial:218-218
+fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0 : (5)
+fix ingredient  varMapType:0 : (13)
+fix ingredient  <parseContainCheck>  varMapType:0 : (3)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (3)
+
+

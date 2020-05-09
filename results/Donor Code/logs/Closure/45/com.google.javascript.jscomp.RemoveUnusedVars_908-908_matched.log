@@ -1,0 +1,22 @@
+---patch code 0--- com.google.javascript.jscomp.RemoveUnusedVars <908, 908>
+RemoveUnusedVars.booleanVar = NodeUtil.isExpressionResultUsed(Node);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedClassProperties <139, 139>
+return NodeUtil.isExpressionResultUsed(Node);
+
+---patch code 1--- com.google.javascript.jscomp.RemoveUnusedVars <908, 908>
+RemoveUnusedVars.maybeAliased = NodeUtil.isExpressionResultUsed(Node);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedClassProperties <139, 139>
+return NodeUtil.isExpressionResultUsed(Node);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.OptimizeReturns <104, 106>
+if (NodeUtil.isExpressionResultUsed(Node)) {
+          return true;
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.OptimizeReturns <104, 106>
+if (NodeUtil.isExpressionResultUsed(Node)) {
+          return true;
+        }
+

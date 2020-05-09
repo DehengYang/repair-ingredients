@@ -1,0 +1,6 @@
+chunk1 : org.jfree.chart.imagemap.StandardToolTipTagFragmentGenerator:65-65
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (2)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (2)
+
+

@@ -1,0 +1,9 @@
+---patch code ori--- org.mockito.internal.matchers.Same <29, 29>
+description.appendText(wanted == null ? "null" : wanted.toString());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.mockito.internal.matchers.Equals <77, 77>
+return wanted != null && object != null && object.getClass() == wanted.getClass();
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.mockito.internal.matchers.Equals <61, 61>
+return this.wanted == null && other.wanted == null || this.wanted != null && this.wanted.equals(other.wanted);
+

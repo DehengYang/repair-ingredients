@@ -1,0 +1,57 @@
+---patch code ori--- com.google.javascript.rhino.jstype.PrototypeObjectType <557, 559>
+if (hasReferenceName()) {
+      return;
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- com.google.javascript.rhino.jstype.InstanceObjectType <175, 179>
+if (hasReferenceName()) {
+      return getReferenceName().hashCode();
+    } else {
+      return super.hashCode();
+    }
+
+---patch code 0--- com.google.javascript.rhino.jstype.PrototypeObjectType <557, 559>
+if (hasReferenceName()) {
+      return;
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.rhino.jstype.InstanceObjectType <175, 179>
+if (hasReferenceName()) {
+      return getReferenceName().hashCode();
+    } else {
+      return super.hashCode();
+    }
+
+---patch code 1--- com.google.javascript.rhino.jstype.PrototypeObjectType <557, 559>
+if (hasReferenceName()) {
+      return;
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.rhino.jstype.InstanceObjectType <175, 179>
+if (hasReferenceName()) {
+      return getReferenceName().hashCode();
+    } else {
+      return super.hashCode();
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- com.google.javascript.rhino.jstype.EnumElementType <155, 159>
+if (hasReferenceName()) {
+      return getReferenceName().hashCode();
+    } else {
+      return super.hashCode();
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.rhino.jstype.EnumElementType <155, 159>
+if (hasReferenceName()) {
+      return getReferenceName().hashCode();
+    } else {
+      return super.hashCode();
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.rhino.jstype.EnumElementType <155, 159>
+if (hasReferenceName()) {
+      return getReferenceName().hashCode();
+    } else {
+      return super.hashCode();
+    }
+

@@ -1,0 +1,18 @@
+---patch code ori--- com.google.javascript.jscomp.Normalize <89, 89>
+removeDuplicateDeclarations(root);
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.Normalize <94, 94>
+removeDuplicateDeclarations(root);
+
+---patch code 0--- com.google.javascript.jscomp.Normalize <89, 89>
+removeDuplicateDeclarations(Node);
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.Normalize <94, 94>
+removeDuplicateDeclarations(Node);
+
+---patch code 1--- com.google.javascript.jscomp.Normalize <89, 89>
+removeDuplicateDeclarations(Node);
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.Normalize <94, 94>
+removeDuplicateDeclarations(Node);
+

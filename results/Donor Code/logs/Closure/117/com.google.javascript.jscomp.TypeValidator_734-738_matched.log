@@ -1,0 +1,42 @@
+---patch code ori--- com.google.javascript.jscomp.TypeValidator <734, 738>
+if (type.isFunctionPrototypeType() ||
+        (type.toObjectType() != null &&
+         type.toObjectType().getConstructor() != null)) {
+      return type.toString();
+    }
+
+---fix ingredient(SameMethod)  varMapType:ori--- com.google.javascript.jscomp.TypeValidator <763, 767>
+if (type.isFunctionPrototypeType() ||
+        (type.toObjectType() != null &&
+         type.toObjectType().getConstructor() != null)) {
+      return type.toString();
+    }
+
+---patch code 0--- com.google.javascript.jscomp.TypeValidator <734, 738>
+if (JSType.isFunctionPrototypeType() ||
+        (JSType.toObjectType() != null &&
+         JSType.toObjectType().getConstructor() != null)) {
+      return JSType.toString();
+    }
+
+---fix ingredient(SameMethod)  varMapType:0--- com.google.javascript.jscomp.TypeValidator <763, 767>
+if (JSType.isFunctionPrototypeType() ||
+        (JSType.toObjectType() != null &&
+         JSType.toObjectType().getConstructor() != null)) {
+      return JSType.toString();
+    }
+
+---patch code 1--- com.google.javascript.jscomp.TypeValidator <734, 738>
+if (JSType.isFunctionPrototypeType() ||
+        (JSType.toObjectType() != null &&
+         JSType.toObjectType().getConstructor() != null)) {
+      return JSType.toString();
+    }
+
+---fix ingredient(SameMethod)  varMapType:1--- com.google.javascript.jscomp.TypeValidator <763, 767>
+if (JSType.isFunctionPrototypeType() ||
+        (JSType.toObjectType() != null &&
+         JSType.toObjectType().getConstructor() != null)) {
+      return JSType.toString();
+    }
+

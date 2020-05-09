@@ -1,0 +1,811 @@
+---patch code ori--- org.jfree.data.xy.XYSeries <552, 577>
+if (index >= 0) {
+            XYDataItem existing = (XYDataItem) this.data.get(index);
+            try {
+                overwritten = (XYDataItem) existing.clone();
+            }
+            catch (CloneNotSupportedException e) {
+                throw new SeriesException("Couldn't clone XYDataItem!");
+            }
+            existing.setY(y);
+        }
+        else {
+            // if the series is sorted, the negative index is a result from
+            // Collections.binarySearch() and tells us where to insert the
+            // new item...otherwise it will be just -1 and we should just
+            // append the value to the list...
+            if (this.autoSort) {
+                this.data.add(-index - 1, new XYDataItem(x, y));
+            }
+            else {
+                this.data.add(new XYDataItem(x, y));
+            }
+            // check if this addition will exceed the maximum item count...
+            if (getItemCount() > this.maximumItemCount) {
+                this.data.remove(0);
+            }
+        }
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:ori--- org.jfree.data.xy.XYSeries <548, 573>
+if (index >= 0 && !this.allowDuplicateXValues) {
+            XYDataItem existing = (XYDataItem) this.data.get(index);
+            try {
+                overwritten = (XYDataItem) existing.clone();
+            }
+            catch (CloneNotSupportedException e) {
+                throw new SeriesException("Couldn't clone XYDataItem!");
+            }
+            existing.setY(y);
+        }
+        else {
+            // if the series is sorted, the negative index is a result from
+            // Collections.binarySearch() and tells us where to insert the
+            // new item...otherwise it will be just -1 and we should just
+            // append the value to the list...
+            if (this.autoSort) {
+                this.data.add(-index - 1, new XYDataItem(x, y));
+            }
+            else {
+                this.data.add(new XYDataItem(x, y));
+            }
+            // check if this addition will exceed the maximum item count...
+            if (getItemCount() > this.maximumItemCount) {
+                this.data.remove(0);
+            }
+        }
+
+---patch code 0--- org.jfree.data.xy.XYSeries <552, 577>
+if (intVar >= 0) {
+            XYDataItem existing = (XYDataItem) Series.ListVar.get(intVar);
+            try {
+                XYDataItem = (XYDataItem) existing.clone();
+            }
+            catch (CloneNotSupportedException e) {
+                throw new SeriesException("Couldn't clone XYDataItem!");
+            }
+            existing.setY(Number);
+        }
+        else {
+            // if the series is sorted, the negative index is a result from
+            // Collections.binarySearch() and tells us where to insert the
+            // new item...otherwise it will be just -1 and we should just
+            // append the value to the list...
+            if (Series.booleanVar) {
+                Series.ListVar.add(-intVar - 1, new XYDataItem(Number, Number));
+            }
+            else {
+                Series.ListVar.add(new XYDataItem(Number, Number));
+            }
+            // check if this addition will exceed the maximum item count...
+            if (getItemCount() > Series.intVar) {
+                Series.ListVar.remove(0);
+            }
+        }
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:0--- org.jfree.data.xy.XYSeries <548, 573>
+if (intVar >= 0 && !Series.booleanVar) {
+            XYDataItem existing = (XYDataItem) Series.ListVar.get(intVar);
+            try {
+                XYDataItem = (XYDataItem) existing.clone();
+            }
+            catch (CloneNotSupportedException e) {
+                throw new SeriesException("Couldn't clone XYDataItem!");
+            }
+            existing.setY(Number);
+        }
+        else {
+            // if the series is sorted, the negative index is a result from
+            // Collections.binarySearch() and tells us where to insert the
+            // new item...otherwise it will be just -1 and we should just
+            // append the value to the list...
+            if (Series.booleanVar) {
+                Series.ListVar.add(-intVar - 1, new XYDataItem(Number, Number));
+            }
+            else {
+                Series.ListVar.add(new XYDataItem(Number, Number));
+            }
+            // check if this addition will exceed the maximum item count...
+            if (getItemCount() > Series.intVar) {
+                Series.ListVar.remove(0);
+            }
+        }
+
+---patch code 1--- org.jfree.data.xy.XYSeries <552, 577>
+if (index >= 0) {
+            XYDataItem existing = (XYDataItem) Series.data.get(index);
+            try {
+                XYDataItem = (XYDataItem) existing.clone();
+            }
+            catch (CloneNotSupportedException e) {
+                throw new SeriesException("Couldn't clone XYDataItem!");
+            }
+            existing.setY(Number);
+        }
+        else {
+            // if the series is sorted, the negative index is a result from
+            // Collections.binarySearch() and tells us where to insert the
+            // new item...otherwise it will be just -1 and we should just
+            // append the value to the list...
+            if (Series.autoSort) {
+                Series.data.add(-index - 1, new XYDataItem(Number, Number));
+            }
+            else {
+                Series.data.add(new XYDataItem(Number, Number));
+            }
+            // check if this addition will exceed the maximum item count...
+            if (getItemCount() > Series.maximumItemCount) {
+                Series.data.remove(0);
+            }
+        }
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:1--- org.jfree.data.xy.XYSeries <548, 573>
+if (index >= 0 && !Series.allowDuplicateXValues) {
+            XYDataItem existing = (XYDataItem) Series.data.get(index);
+            try {
+                XYDataItem = (XYDataItem) existing.clone();
+            }
+            catch (CloneNotSupportedException e) {
+                throw new SeriesException("Couldn't clone XYDataItem!");
+            }
+            existing.setY(Number);
+        }
+        else {
+            // if the series is sorted, the negative index is a result from
+            // Collections.binarySearch() and tells us where to insert the
+            // new item...otherwise it will be just -1 and we should just
+            // append the value to the list...
+            if (Series.autoSort) {
+                Series.data.add(-index - 1, new XYDataItem(Number, Number));
+            }
+            else {
+                Series.data.add(new XYDataItem(Number, Number));
+            }
+            // check if this addition will exceed the maximum item count...
+            if (getItemCount() > Series.maximumItemCount) {
+                Series.data.remove(0);
+            }
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.data.DefaultKeyedValues2D <323, 337>
+if (intVar >= 0) {
+            DefaultKeyedValues = (DefaultKeyedValues) DefaultKeyedValues2D.ListVar.get(intVar);
+        }
+        else {
+            DefaultKeyedValues = new DefaultKeyedValues();
+            if (DefaultKeyedValues2D.booleanVar) {
+                intVar = -intVar - 1;
+                DefaultKeyedValues2D.ListVar.add(intVar, Comparable);
+                DefaultKeyedValues2D.ListVar.add(intVar, DefaultKeyedValues);
+            }
+            else {
+                DefaultKeyedValues2D.ListVar.add(Comparable);
+                DefaultKeyedValues2D.ListVar.add(DefaultKeyedValues);
+            }
+        }
+
+---fix ingredient  varMapType:ori--- org.jfree.data.time.TimeSeries <700, 725>
+TimeSeriesDataItem key = new TimeSeriesDataItem(period, value);
+int index = Collections.binarySearch(this.data, key);
+if (index >= 0) {
+            TimeSeriesDataItem existing
+                = (TimeSeriesDataItem) this.data.get(index);
+            overwritten = (TimeSeriesDataItem) existing.clone();
+            existing.setValue(value);
+            removeAgedItems(false);  // remove old items if necessary, but
+                                     // don't notify anyone, because that
+                                     // happens next anyway...
+            fireSeriesChanged();
+        }
+        else {
+            this.data.add(-index - 1, new TimeSeriesDataItem(period, value));
+
+            // check if this addition will exceed the maximum item count...
+            if (getItemCount() > this.maximumItemCount) {
+                this.data.remove(0);
+            }
+
+            removeAgedItems(false);  // remove old items if necessary, but
+                                     // don't notify anyone, because that
+                                     // happens next anyway...
+            fireSeriesChanged();
+        }
+return overwritten;
+
+---fix ingredient  varMapType:0--- org.jfree.data.time.TimeSeries <700, 725>
+TimeSeriesDataItem TimeSeriesDataItem = new TimeSeriesDataItem(RegularTimePeriod, Number);
+int intVar = Collections.binarySearch(Series.ListVar, TimeSeriesDataItem);
+if (intVar >= 0) {
+            TimeSeriesDataItem existing
+                = (TimeSeriesDataItem) Series.ListVar.get(intVar);
+            TimeSeriesDataItem = (TimeSeriesDataItem) existing.clone();
+            existing.setValue(Number);
+            removeAgedItems(false);  // remove old items if necessary, but
+                                     // don't notify anyone, because that
+                                     // happens next anyway...
+            fireSeriesChanged();
+        }
+        else {
+            Series.ListVar.add(-intVar - 1, new TimeSeriesDataItem(RegularTimePeriod, Number));
+
+            // check if this addition will exceed the maximum item count...
+            if (getItemCount() > Series.intVar) {
+                Series.ListVar.remove(0);
+            }
+
+            removeAgedItems(false);  // remove old items if necessary, but
+                                     // don't notify anyone, because that
+                                     // happens next anyway...
+            fireSeriesChanged();
+        }
+return TimeSeriesDataItem;
+
+---fix ingredient  varMapType:1--- org.jfree.data.time.TimeSeries <700, 725>
+TimeSeriesDataItem TimeSeriesDataItem = new TimeSeriesDataItem(RegularTimePeriod, Number);
+int index = Collections.binarySearch(Series.data, TimeSeriesDataItem);
+if (index >= 0) {
+            TimeSeriesDataItem existing
+                = (TimeSeriesDataItem) Series.data.get(index);
+            TimeSeriesDataItem = (TimeSeriesDataItem) existing.clone();
+            existing.setValue(Number);
+            removeAgedItems(false);  // remove old items if necessary, but
+                                     // don't notify anyone, because that
+                                     // happens next anyway...
+            fireSeriesChanged();
+        }
+        else {
+            Series.data.add(-index - 1, new TimeSeriesDataItem(RegularTimePeriod, Number));
+
+            // check if this addition will exceed the maximum item count...
+            if (getItemCount() > Series.maximumItemCount) {
+                Series.data.remove(0);
+            }
+
+            removeAgedItems(false);  // remove old items if necessary, but
+                                     // don't notify anyone, because that
+                                     // happens next anyway...
+            fireSeriesChanged();
+        }
+return TimeSeriesDataItem;
+
+---fix ingredient  varMapType:ori--- org.jfree.data.ComparableObjectSeries <220, 255>
+if (this.autoSort) {
+            int index = Collections.binarySearch(this.data, item);
+            if (index < 0) {
+                this.data.add(-index - 1, item);
+            }
+            else {
+                if (this.allowDuplicateXValues) {
+                    // need to make sure we are adding *after* any duplicates
+                    int size = this.data.size();
+                    while (index < size
+                           && item.compareTo(this.data.get(index)) == 0) {
+                        index++;
+                    }
+                    if (index < this.data.size()) {
+                        this.data.add(index, item);
+                    }
+                    else {
+                        this.data.add(item);
+                    }
+                }
+                else {
+                    throw new SeriesException("X-value already exists.");
+                }
+            }
+        }
+        else {
+            if (!this.allowDuplicateXValues) {
+                // can't allow duplicate values, so we need to check whether
+                // there is an item with the given x-value already
+                int index = indexOf(item.getComparable());
+                if (index >= 0) {
+                    throw new SeriesException("X-value already exists.");
+                }
+            }
+            this.data.add(item);
+        }
+
+---fix ingredient  varMapType:1--- org.jfree.data.ComparableObjectSeries <220, 255>
+if (Series.autoSort) {
+            int index = Collections.binarySearch(Series.data, ComparableObjectItem);
+            if (index < 0) {
+                Series.data.add(-index - 1, ComparableObjectItem);
+            }
+            else {
+                if (Series.allowDuplicateXValues) {
+                    // need to make sure we are adding *after* any duplicates
+                    int size = Series.data.size();
+                    while (index < size
+                           && ComparableObjectItem.compareTo(Series.data.get(index)) == 0) {
+                        index++;
+                    }
+                    if (index < Series.data.size()) {
+                        Series.data.add(index, ComparableObjectItem);
+                    }
+                    else {
+                        Series.data.add(ComparableObjectItem);
+                    }
+                }
+                else {
+                    throw new SeriesException("X-value already exists.");
+                }
+            }
+        }
+        else {
+            if (!Series.allowDuplicateXValues) {
+                // can't allow duplicate values, so we need to check whether
+                // there is an item with the given x-value already
+                int index = indexOf(ComparableObjectItem.getComparable());
+                if (index >= 0) {
+                    throw new SeriesException("X-value already exists.");
+                }
+            }
+            Series.data.add(ComparableObjectItem);
+        }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.jfree.data.xy.XYSeries <352, 387>
+if (this.autoSort) {
+            int index = Collections.binarySearch(this.data, item);
+            if (index < 0) {
+                this.data.add(-index - 1, item);
+            }
+            else {
+                if (this.allowDuplicateXValues) {
+                    // need to make sure we are adding *after* any duplicates
+                    int size = this.data.size();
+                    while (index < size
+                           && item.compareTo(this.data.get(index)) == 0) {
+                        index++;
+                    }
+                    if (index < this.data.size()) {
+                        this.data.add(index, item);
+                    }
+                    else {
+                        this.data.add(item);
+                    }
+                }
+                else {
+                    throw new SeriesException("X-value already exists.");
+                }
+            }
+        }
+        else {
+            if (!this.allowDuplicateXValues) {
+                // can't allow duplicate values, so we need to check whether
+                // there is an item with the given x-value already
+                int index = indexOf(item.getX());
+                if (index >= 0) {
+                    throw new SeriesException("X-value already exists.");
+                }
+            }
+            this.data.add(item);
+        }
+
+---fix ingredient(SameFile)  varMapType:1--- org.jfree.data.xy.XYSeries <352, 387>
+if (Series.autoSort) {
+            int index = Collections.binarySearch(Series.data, XYDataItem);
+            if (index < 0) {
+                Series.data.add(-index - 1, XYDataItem);
+            }
+            else {
+                if (Series.allowDuplicateXValues) {
+                    // need to make sure we are adding *after* any duplicates
+                    int size = Series.data.size();
+                    while (index < size
+                           && XYDataItem.compareTo(Series.data.get(index)) == 0) {
+                        index++;
+                    }
+                    if (index < Series.data.size()) {
+                        Series.data.add(index, XYDataItem);
+                    }
+                    else {
+                        Series.data.add(XYDataItem);
+                    }
+                }
+                else {
+                    throw new SeriesException("X-value already exists.");
+                }
+            }
+        }
+        else {
+            if (!Series.allowDuplicateXValues) {
+                // can't allow duplicate values, so we need to check whether
+                // there is an item with the given x-value already
+                int index = indexOf(XYDataItem.getX());
+                if (index >= 0) {
+                    throw new SeriesException("X-value already exists.");
+                }
+            }
+            Series.data.add(XYDataItem);
+        }
+
+---fix ingredient  varMapType:ori--- org.jfree.data.time.TimeSeries <820, 824>
+int index = getIndex(period);
+if (index >= 0) {
+            this.data.remove(index);
+            fireSeriesChanged();
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.data.time.TimeSeries <820, 824>
+int intVar = getIndex(RegularTimePeriod);
+if (intVar >= 0) {
+            Series.ListVar.remove(intVar);
+            fireSeriesChanged();
+        }
+
+---fix ingredient  varMapType:1--- org.jfree.data.time.TimeSeries <820, 824>
+int index = getIndex(RegularTimePeriod);
+if (index >= 0) {
+            Series.data.remove(index);
+            fireSeriesChanged();
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.data.KeyedObjects2D <278, 285>
+if (intVar >= 0) {
+            KeyedObjects = (KeyedObjects) KeyedObjects2D.ListVar.get(intVar);
+        }
+        else {
+            KeyedObjects2D.ListVar.add(Comparable);
+            KeyedObjects = new KeyedObjects();
+            KeyedObjects2D.ListVar.add(KeyedObjects);
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.data.KeyedObjects <202, 209>
+if (intVar >= 0) {
+            KeyedObject ko = (KeyedObject) KeyedObjects.ListVar.get(intVar);
+            ko.setObject(Object);
+        }
+        else {
+            KeyedObject ko = new KeyedObject(Comparable, Object);
+            KeyedObjects.ListVar.add(ko);
+        }
+
+---fix ingredient  varMapType:ori--- org.jfree.data.time.TimeSeries <614, 625>
+TimeSeriesDataItem temp = new TimeSeriesDataItem(period, value);
+int index = Collections.binarySearch(this.data, temp);
+if (index >= 0) {
+            TimeSeriesDataItem pair = (TimeSeriesDataItem) this.data.get(index);
+            pair.setValue(value);
+            fireSeriesChanged();
+        }
+        else {
+            throw new SeriesException(
+                "TimeSeries.update(TimePeriod, Number):  period does not exist."
+            );
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.data.time.TimeSeries <614, 625>
+TimeSeriesDataItem TimeSeriesDataItem = new TimeSeriesDataItem(RegularTimePeriod, Number);
+int intVar = Collections.binarySearch(Series.ListVar, TimeSeriesDataItem);
+if (intVar >= 0) {
+            TimeSeriesDataItem pair = (TimeSeriesDataItem) Series.ListVar.get(intVar);
+            pair.setValue(Number);
+            fireSeriesChanged();
+        }
+        else {
+            throw new SeriesException(
+                "TimeSeries.update(TimePeriod, Number):  period does not exist."
+            );
+        }
+
+---fix ingredient  varMapType:1--- org.jfree.data.time.TimeSeries <614, 625>
+TimeSeriesDataItem TimeSeriesDataItem = new TimeSeriesDataItem(RegularTimePeriod, Number);
+int index = Collections.binarySearch(Series.data, TimeSeriesDataItem);
+if (index >= 0) {
+            TimeSeriesDataItem pair = (TimeSeriesDataItem) Series.data.get(index);
+            pair.setValue(Number);
+            fireSeriesChanged();
+        }
+        else {
+            throw new SeriesException(
+                "TimeSeries.update(TimePeriod, Number):  period does not exist."
+            );
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.data.DefaultKeyedValues <232, 240>
+if (intVar >= 0) {
+            DefaultKeyedValues.ArrayList.set(intVar, Comparable);
+            DefaultKeyedValues.ArrayList.set(intVar, Number);
+        }
+        else {
+            DefaultKeyedValues.ArrayList.add(Comparable);
+            DefaultKeyedValues.ArrayList.add(Number);
+            DefaultKeyedValues.HashMap.put(Comparable, new Integer(DefaultKeyedValues.ArrayList.size() - 1));
+        }
+
+---fix ingredient  varMapType:ori--- org.jfree.chart.renderer.LookupPaintScale <249, 256>
+PaintItem item = new PaintItem(value, paint);
+int index = Collections.binarySearch(this.lookupTable, item);
+if (index >= 0) {
+            this.lookupTable.set(index, item);
+        }
+        else {
+            this.lookupTable.add(-(index + 1), item);
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.chart.renderer.LookupPaintScale <249, 256>
+PaintItem PaintItem = new PaintItem(doubleVar, Paint);
+int intVar = Collections.binarySearch(LookupPaintScale.ListVar, PaintItem);
+if (intVar >= 0) {
+            LookupPaintScale.ListVar.set(intVar, PaintItem);
+        }
+        else {
+            LookupPaintScale.ListVar.add(-(intVar + 1), PaintItem);
+        }
+
+---fix ingredient  varMapType:1--- org.jfree.chart.renderer.LookupPaintScale <249, 256>
+PaintItem PaintItem = new PaintItem(value, Paint);
+int index = Collections.binarySearch(LookupPaintScale.lookupTable, PaintItem);
+if (index >= 0) {
+            LookupPaintScale.lookupTable.set(index, PaintItem);
+        }
+        else {
+            LookupPaintScale.lookupTable.add(-(index + 1), PaintItem);
+        }
+
+---fix ingredient  varMapType:ori--- org.jfree.chart.axis.TickUnits <153, 161>
+int index = Collections.binarySearch(this.tickUnits, unit);
+if (index >= 0) {
+            return (TickUnit) this.tickUnits.get(index);
+        }
+        else {
+            index = -(index + 1);
+            return (TickUnit) this.tickUnits.get(Math.min(index,
+                    this.tickUnits.size() - 1));
+        }
+
+---fix ingredient  varMapType:0--- org.jfree.chart.axis.TickUnits <153, 161>
+int intVar = Collections.binarySearch(TickUnits.ListVar, TickUnit);
+if (intVar >= 0) {
+            return (TickUnit) TickUnits.ListVar.get(intVar);
+        }
+        else {
+            intVar = -(intVar + 1);
+            return (TickUnit) TickUnits.ListVar.get(Math.min(intVar,
+                    TickUnits.ListVar.size() - 1));
+        }
+
+---fix ingredient  varMapType:1--- org.jfree.chart.axis.TickUnits <153, 161>
+int index = Collections.binarySearch(TickUnits.tickUnits, TickUnit);
+if (index >= 0) {
+            return (TickUnit) TickUnits.tickUnits.get(index);
+        }
+        else {
+            index = -(index + 1);
+            return (TickUnit) TickUnits.tickUnits.get(Math.min(index,
+                    TickUnits.tickUnits.size() - 1));
+        }
+
+---fix ingredient  varMapType:ori--- org.jfree.data.KeyedObjects2D <112, 123>
+Object result = null;
+KeyedObjects rowData = (KeyedObjects) this.rows.get(row);
+if (rowData != null) {
+            Comparable columnKey = (Comparable) this.columnKeys.get(column);
+            if (columnKey != null) {
+                int index = rowData.getIndex(columnKey);
+                if (index >= 0) {
+                    result = rowData.getObject(columnKey);
+                }
+            }
+        }
+return result;
+
+---fix ingredient  varMapType:1--- org.jfree.data.KeyedObjects2D <112, 123>
+Object Object = null;
+KeyedObjects KeyedObjects = (KeyedObjects) KeyedObjects2D.rows.get(row);
+if (KeyedObjects != null) {
+            Comparable columnKey = (Comparable) KeyedObjects2D.columnKeys.get(column);
+            if (columnKey != null) {
+                int index = KeyedObjects.getIndex(columnKey);
+                if (index >= 0) {
+                    Object = KeyedObjects.getObject(columnKey);
+                }
+            }
+        }
+return Object;
+
+---fix ingredient  varMapType:0--- org.jfree.data.DefaultKeyedValues <282, 285>
+if (intVar >= 0) {
+                DefaultKeyedValues.ArrayList.remove(intVar);
+                DefaultKeyedValues.ArrayList.remove(intVar);
+            }
+
+---fix ingredient  varMapType:ori--- org.jfree.data.DefaultKeyedValues2D <146, 154>
+if (rowData != null) {
+            Comparable columnKey = (Comparable) this.columnKeys.get(column);
+            // the row may not have an entry for this key, in which case the
+            // return value is null
+            int index = rowData.getIndex(columnKey);
+            if (index >= 0) {
+                result = rowData.getValue(index);
+            }
+        }
+
+---fix ingredient  varMapType:1--- org.jfree.data.DefaultKeyedValues2D <146, 154>
+if (DefaultKeyedValues != null) {
+            Comparable columnKey = (Comparable) DefaultKeyedValues2D.columnKeys.get(column);
+            // the row may not have an entry for this key, in which case the
+            // return value is null
+            int index = DefaultKeyedValues.getIndex(columnKey);
+            if (index >= 0) {
+                Number = DefaultKeyedValues.getValue(index);
+            }
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.data.xy.DefaultXYDataset <288, 292>
+if (intVar >= 0) {
+            AbstractXYDataset.ListVar.remove(intVar);
+            AbstractXYDataset.ListVar.remove(intVar);
+            notifyListeners(new DatasetChangeEvent(this, this));
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.data.xy.DefaultXYZDataset <333, 337>
+if (intVar >= 0) {
+            AbstractXYZDataset.ListVar.remove(intVar);
+            AbstractXYZDataset.ListVar.remove(intVar);
+            notifyListeners(new DatasetChangeEvent(this, this));
+        }
+
+---fix ingredient  varMapType:ori--- org.jfree.data.DefaultKeyedValues2D <468, 482>
+if (columnKey == null) {
+            throw new IllegalArgumentException("Null 'columnKey' argument.");
+        }
+if (!this.columnKeys.contains(columnKey)) {
+            throw new UnknownKeyException("Unknown key: " + columnKey);
+        }
+Iterator iterator = this.rows.iterator();
+while (iterator.hasNext()) {
+            DefaultKeyedValues rowData = (DefaultKeyedValues) iterator.next();
+            int index = rowData.getIndex(columnKey);
+            if (index >= 0) {
+                rowData.removeValue(columnKey);
+            }
+        }
+this.columnKeys.remove(columnKey);
+
+---fix ingredient  varMapType:1--- org.jfree.data.DefaultKeyedValues2D <468, 482>
+if (Comparable == null) {
+            throw new IllegalArgumentException("Null 'columnKey' argument.");
+        }
+if (!DefaultKeyedValues2D.columnKeys.contains(Comparable)) {
+            throw new UnknownKeyException("Unknown key: " + Comparable);
+        }
+Iterator Iterator = DefaultKeyedValues2D.rows.iterator();
+while (Iterator.hasNext()) {
+            DefaultKeyedValues rowData = (DefaultKeyedValues) Iterator.next();
+            int index = rowData.getIndex(Comparable);
+            if (index >= 0) {
+                rowData.removeValue(Comparable);
+            }
+        }
+DefaultKeyedValues2D.columnKeys.remove(Comparable);
+
+---fix ingredient  varMapType:ori--- org.jfree.data.DefaultKeyedValues2D <468, 482>
+if (columnKey == null) {
+            throw new IllegalArgumentException("Null 'columnKey' argument.");
+        }
+if (!this.columnKeys.contains(columnKey)) {
+            throw new UnknownKeyException("Unknown key: " + columnKey);
+        }
+Iterator iterator = this.rows.iterator();
+while (iterator.hasNext()) {
+            DefaultKeyedValues rowData = (DefaultKeyedValues) iterator.next();
+            int index = rowData.getIndex(columnKey);
+            if (index >= 0) {
+                rowData.removeValue(columnKey);
+            }
+        }
+this.columnKeys.remove(columnKey);
+
+---fix ingredient  varMapType:1--- org.jfree.data.DefaultKeyedValues2D <468, 482>
+if (Comparable == null) {
+            throw new IllegalArgumentException("Null 'columnKey' argument.");
+        }
+if (!DefaultKeyedValues2D.columnKeys.contains(Comparable)) {
+            throw new UnknownKeyException("Unknown key: " + Comparable);
+        }
+Iterator Iterator = DefaultKeyedValues2D.rows.iterator();
+while (Iterator.hasNext()) {
+            DefaultKeyedValues rowData = (DefaultKeyedValues) Iterator.next();
+            int index = rowData.getIndex(Comparable);
+            if (index >= 0) {
+                rowData.removeValue(Comparable);
+            }
+        }
+DefaultKeyedValues2D.columnKeys.remove(Comparable);
+
+---fix ingredient  varMapType:ori--- org.jfree.data.DefaultKeyedValues2D <468, 482>
+if (columnKey == null) {
+            throw new IllegalArgumentException("Null 'columnKey' argument.");
+        }
+if (!this.columnKeys.contains(columnKey)) {
+            throw new UnknownKeyException("Unknown key: " + columnKey);
+        }
+Iterator iterator = this.rows.iterator();
+while (iterator.hasNext()) {
+            DefaultKeyedValues rowData = (DefaultKeyedValues) iterator.next();
+            int index = rowData.getIndex(columnKey);
+            if (index >= 0) {
+                rowData.removeValue(columnKey);
+            }
+        }
+this.columnKeys.remove(columnKey);
+
+---fix ingredient  varMapType:1--- org.jfree.data.DefaultKeyedValues2D <468, 482>
+if (Comparable == null) {
+            throw new IllegalArgumentException("Null 'columnKey' argument.");
+        }
+if (!DefaultKeyedValues2D.columnKeys.contains(Comparable)) {
+            throw new UnknownKeyException("Unknown key: " + Comparable);
+        }
+Iterator Iterator = DefaultKeyedValues2D.rows.iterator();
+while (Iterator.hasNext()) {
+            DefaultKeyedValues rowData = (DefaultKeyedValues) Iterator.next();
+            int index = rowData.getIndex(Comparable);
+            if (index >= 0) {
+                rowData.removeValue(Comparable);
+            }
+        }
+DefaultKeyedValues2D.columnKeys.remove(Comparable);
+
+---fix ingredient  varMapType:0--- org.jfree.data.DefaultKeyedValues2D <279, 287>
+if (intVar >= 0) {
+            DefaultKeyedValues rowData
+                = (DefaultKeyedValues) DefaultKeyedValues2D.ListVar.get(intVar);
+            int col = rowData.getIndex(Comparable);
+            return (col >= 0 ? rowData.getValue(col) : null);
+        }
+        else {
+            throw new UnknownKeyException("Unrecognised rowKey: " + Comparable);
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.jfree.chart.axis.LogarithmicAxis <937, 958>
+if (intVar >= 0) {   // if positive exponent then
+                                                // make integer
+                                    NumberFormat format
+                                        = getNumberFormatOverride();
+                                    if (format != null) {
+                                        StringVar = format.format(doubleVar);
+                                    }
+                                    else {
+                                        StringVar = Long.toString((long)
+                                                Math.rint(doubleVar));
+                                    }
+                                }
+                                else {
+                                    //negative exponent; create fractional value
+                                    //set exact number of fractional digits to
+                                    // be shown:
+                                    NumberAxis.NumberFormat
+                                        .setMaximumFractionDigits(-intVar);
+                                    //create tick label:
+                                    StringVar = NumberAxis.NumberFormat.format(
+                                            doubleVar);
+                                }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <854, 859>
+if ((intVar >= 0) && (intVar < 3)) {
+            setSubrange(intVar, doubleVar, doubleVar);
+            setDisplayRange(intVar, doubleVar, doubleVar);
+            setAxisRange();
+            fireChangeEvent();
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.jfree.data.time.MovingAverage <152, 167>
+if ((intVar - intVar) >= 0) {
+                            TimeSeriesDataItem item = Series.getDataItem(
+                                    intVar - intVar);
+                            RegularTimePeriod p = item.getPeriod();
+                            Number v = item.getValue();
+                            long currentIndex = p.getSerialIndex();
+                            if (currentIndex > longVar) {
+                                if (v != null) {
+                                    doubleVar = doubleVar + v.doubleValue();
+                                    intVar = intVar + 1;
+                                }
+                            }
+                            else {
+                                booleanVar = true;
+                            }
+                        }
+

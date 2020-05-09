@@ -1,0 +1,189 @@
+---patch code ori--- org.apache.commons.lang.text.StrBuilder <1776, 1776>
+int len = size - strLen + 1;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.Entities <646, 646>
+int high = size - 1;
+
+---patch code 0--- org.apache.commons.lang.text.StrBuilder <1776, 1776>
+int intVar = intVar - intVar + 1;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <646, 646>
+int intVar = size - 1;
+
+---patch code 1--- org.apache.commons.lang.text.StrBuilder <1776, 1776>
+int len = size - strLen + 1;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.Entities <646, 646>
+int high = size - 1;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <1049, 1049>
+ensureCapacity(size + 1);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1049, 1049>
+ensureCapacity(size + 1);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.Entities <570, 570>
+ensureCapacity(size + 1);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.Entities <570, 570>
+ensureCapacity(size + 1);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.Entities <667, 667>
+ensureCapacity(size + 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <667, 667>
+ensureCapacity(size + 1);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.Entities <667, 667>
+ensureCapacity(size + 1);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <1838, 1838>
+return lastIndexOf(ch, size - 1);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1838, 1838>
+return lastIndexOf(ch, size - 1);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <1870, 1870>
+return lastIndexOf(str, size - 1);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1870, 1870>
+return lastIndexOf(str, size - 1);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <1375, 1375>
+return replace(matcher, replaceStr, 0, size, -1);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1375, 1375>
+return replace(StrMatcher, replaceStr, 0, size, -1);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <1224, 1224>
+return replace(matcher, null, 0, size, -1);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1224, 1224>
+return replace(StrMatcher, null, 0, size, -1);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <1849, 1849>
+startIndex = (startIndex >= size ? size - 1 : startIndex);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1849, 1849>
+startIndex = (startIndex >= size ? size - 1 : startIndex);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <1884, 1884>
+startIndex = (startIndex >= size ? size - 1 : startIndex);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1884, 1884>
+startIndex = (startIndex >= size ? size - 1 : startIndex);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <1937, 1937>
+startIndex = (startIndex >= size ? size - 1 : startIndex);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1937, 1937>
+startIndex = (startIndex >= size ? size - 1 : startIndex);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <2140, 2142>
+for (int i = size - 1; i >= 0; i--) {
+            hash = 31 * hash + buf[i];
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <2140, 2142>
+for (int i = size - 1; i >= 0; i--) {
+            hash = 31 * hash + buf[i];
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <1390, 1390>
+return replace(matcher, replaceStr, 0, size, 1);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1390, 1390>
+return replace(StrMatcher, replaceStr, 0, size, 1);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <2110, 2114>
+for (int i = size - 1; i >= 0; i--) {
+            if (thisBuf[i] != otherBuf[i]) {
+                return false;
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <2110, 2114>
+for (int i = size - 1; i >= 0; i--) {
+            if (thisBuf[i] != otherBuf[i]) {
+                return false;
+            }
+        }
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1895, 1902>
+for (int intVar = intVar - intVar + 1; intVar >= 0; intVar--) {
+                for (int j = 0; j < intVar; j++) {
+                    if (StringVar.charAt(j) != char[]Var[intVar + j]) {
+                        continue outer;
+                    }
+                }
+                return intVar;
+            }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <2084, 2090>
+for (int i = size - 1; i >= 0; i--) {
+            char c1 = thisBuf[i];
+            char c2 = otherBuf[i];
+            if (c1 != c2 && Character.toUpperCase(c1) != Character.toUpperCase(c2)) {
+                return false;
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <2084, 2090>
+for (int i = size - 1; i >= 0; i--) {
+            char c1 = thisBuf[i];
+            char c2 = otherBuf[i];
+            if (c1 != c2 && Character.toUpperCase(c1) != Character.toUpperCase(c2)) {
+                return false;
+            }
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <1467, 1471>
+for (int leftIdx = 0, rightIdx = size - 1; leftIdx < half; leftIdx++,rightIdx--) {
+            char swap = buf[leftIdx];
+            buf[leftIdx] = buf[rightIdx];
+            buf[rightIdx] = swap;
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1467, 1471>
+for (int leftIdx = 0, rightIdx = size - 1; leftIdx < half; leftIdx++,rightIdx--) {
+            char swap = buf[leftIdx];
+            buf[leftIdx] = buf[rightIdx];
+            buf[rightIdx] = swap;
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.exception.ExceptionUtils <824, 824>
+int causeFrameIndex = causeFrames.size() - 1;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.exception.ExceptionUtils <824, 824>
+int intVar = ListVar.size() - 1;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.exception.ExceptionUtils <824, 824>
+int causeFrameIndex = causeFrames.size() - 1;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.exception.ExceptionUtils <825, 825>
+int wrapperFrameIndex = wrapperFrames.size() - 1;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.exception.ExceptionUtils <825, 825>
+int intVar = ListVar.size() - 1;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.exception.ExceptionUtils <825, 825>
+int wrapperFrameIndex = wrapperFrames.size() - 1;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrSubstitutor <602, 602>
+priorVariables.remove(priorVariables.size() - 1);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrSubstitutor <602, 602>
+ListVar.remove(ListVar.size() - 1);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrSubstitutor <602, 602>
+priorVariables.remove(priorVariables.size() - 1);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.exception.ExceptionUtils <336, 336>
+return (list.size() < 2 ? null : (Throwable)list.get(list.size() - 1));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.exception.ExceptionUtils <336, 336>
+return (ListVar.size() < 2 ? null : (Throwable)ListVar.get(ListVar.size() - 1));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.exception.ExceptionUtils <336, 336>
+return (list.size() < 2 ? null : (Throwable)list.get(list.size() - 1));
+

@@ -1,0 +1,78 @@
+---patch code ori--- org.apache.commons.lang.text.ExtendedMessageFormat <422, 422>
+next(pos);
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang.text.ExtendedMessageFormat <188, 188>
+next(pos);
+
+---patch code 0--- org.apache.commons.lang.text.ExtendedMessageFormat <422, 422>
+next(ParsePosition);
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.text.ExtendedMessageFormat <188, 188>
+next(ParsePosition);
+
+---patch code 1--- org.apache.commons.lang.text.ExtendedMessageFormat <422, 422>
+next(ParsePosition);
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang.text.ExtendedMessageFormat <188, 188>
+next(ParsePosition);
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang.text.ExtendedMessageFormat <375, 375>
+next(pos);
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.text.ExtendedMessageFormat <375, 375>
+next(ParsePosition);
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang.text.ExtendedMessageFormat <375, 375>
+next(ParsePosition);
+
+---fix ingredient(SameMethod)  varMapType:ori--- org.apache.commons.lang.text.ExtendedMessageFormat <435, 435>
+next(pos);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.lang.text.ExtendedMessageFormat <435, 435>
+next(ParsePosition);
+
+---fix ingredient(SameMethod)  varMapType:1--- org.apache.commons.lang.text.ExtendedMessageFormat <435, 435>
+next(ParsePosition);
+
+---fix ingredient(SameMethod)  varMapType:ori--- org.apache.commons.lang.text.ExtendedMessageFormat <439, 439>
+next(pos);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.lang.text.ExtendedMessageFormat <439, 439>
+next(ParsePosition);
+
+---fix ingredient(SameMethod)  varMapType:1--- org.apache.commons.lang.text.ExtendedMessageFormat <439, 439>
+next(ParsePosition);
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:ori--- org.apache.commons.lang.text.ExtendedMessageFormat <164, 164>
+int index = readArgumentIndex(pattern, next(pos));
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.text.ExtendedMessageFormat <164, 164>
+int intVar = readArgumentIndex(StringVar, next(ParsePosition));
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.text.ExtendedMessageFormat <164, 164>
+int index = readArgumentIndex(pattern, next(ParsePosition));
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:ori--- org.apache.commons.lang.text.ExtendedMessageFormat <170, 171>
+formatDescription = parseFormatDescription(pattern,
+                            next(pos));
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.text.ExtendedMessageFormat <170, 171>
+StringVar = parseFormatDescription(StringVar,
+                            next(ParsePosition));
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.text.ExtendedMessageFormat <170, 171>
+formatDescription = parseFormatDescription(pattern,
+                            next(ParsePosition));
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:ori--- org.apache.commons.lang.text.ExtendedMessageFormat <362, 363>
+sb.append(START_FE).append(
+                            readArgumentIndex(pattern, next(pos)));
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.text.ExtendedMessageFormat <362, 363>
+StringBuffer.append(charVar).append(
+                            readArgumentIndex(StringVar, next(ParsePosition)));
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.text.ExtendedMessageFormat <362, 363>
+StringBuffer.append(START_FE).append(
+                            readArgumentIndex(pattern, next(ParsePosition)));
+

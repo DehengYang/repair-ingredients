@@ -1,0 +1,16 @@
+chunk1 : org.jfree.chart.plot.ValueMarker:95-95
+fix ingredient(SamePackage)  varMapType:ori : (2)
+fix ingredient(SamePackage)  varMapType:0 : (2)
+fix ingredient(SamePackage)  varMapType:1 : (2)
+fix ingredient(SameMethod)  varMapType:0 : (1)
+fix ingredient(SameMethod)  varMapType:1 : (1)
+fix ingredient  <0-fine-grained>  varMapType:0 : (14)
+fix ingredient  <1-fine-grained>  varMapType:1 : (14)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (8)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (8)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (3)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (4)
+
+

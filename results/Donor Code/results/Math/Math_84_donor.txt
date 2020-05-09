@@ -1,0 +1,9 @@
+chunk1 : org.apache.commons.math.optimization.direct.MultiDirectional:93-94
+fix ingredient  <parseContainCheck>  varMapType:ori : (990)
+fix ingredient  <parseContainCheck>  varMapType:0 : (990)
+fix ingredient  <parseContainCheck>  varMapType:1 : (990)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori : (5)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0 : (5)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1 : (5)
+
+

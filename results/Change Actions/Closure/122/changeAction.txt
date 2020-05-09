@@ -1,0 +1,35 @@
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, SimpleType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, OP6 OP7)
+OP6:         (MOV, SimpleName, OP5, null)
+OP7:         (MOV, SimpleName, OP5, null)
+
+
+OP1:(DEL, IfStatement, null, OP2)
+OP2:   (DEL, InfixExpression, OP1, OP3 OP10 OP11)
+OP3:      (DEL, InfixExpression, OP2, OP4 OP6 OP7)
+OP4:         (DEL, MethodInvocation, OP3, OP5)
+OP5:            (DEL, MethodInvocation, OP4, null)
+OP6:         (DEL, Operator, OP3, null)
+OP7:         (DEL, PrefixExpression, OP3, OP8 OP9)
+OP8:            (DEL, Operator, OP7, null)
+OP9:            (DEL, NumberLiteral, OP7, null)
+OP10:      (DEL, Operator, OP2, null)
+OP11:      (DEL, InfixExpression, OP2, OP12 OP13 OP14)
+OP12:         (DEL, MethodInvocation, OP11, null)
+OP13:         (DEL, Operator, OP11, null)
+OP14:         (DEL, PrefixExpression, OP11, OP15 OP16)
+OP15:            (DEL, Operator, OP14, null)
+OP16:            (DEL, NumberLiteral, OP14, null)
+
+
+OP1:(INS, IfStatement, null, OP2 OP6)
+OP2:   (INS, MethodInvocation, OP1, OP3 OP4 OP5)
+OP3:      (MOV, SimpleName, OP2, null)
+OP4:      (MOV, MethodInvocation, OP2, null)
+OP5:      (MOV, SimpleName, OP2, null)
+OP6:   (MOV, ExpressionStatement, OP1, null)
+
+

@@ -1,0 +1,20 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_42/src/com/google/javascript/jscomp/parsing/IRFactory.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_42/src/com/google/javascript/jscomp/parsing/IRFactory.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_42/src/com/google/javascript/jscomp/parsing/IRFactory.java	2020-01-05 05:17:10.239517797 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_42/src/com/google/javascript/jscomp/parsing/IRFactory.java	2020-01-05 05:17:12.223501229 -0800
+@@ -565,8 +565,15 @@
+ 
+     @Override
+     Node processForInLoop(ForInLoop loopNode) {
++      if (loopNode.isForEach()) {
++        errorReporter.error(
++            "unsupported language extension: for each",
++            sourceName,
++            loopNode.getLineno(), "", 0);
+ 
+         // Return the bare minimum to put the AST in a valid state.
++        return newNode(Token.EXPR_RESULT, Node.newNumber(0));
++      }
+       return newNode(
+           Token.FOR,
+           transform(loopNode.getIterator()),

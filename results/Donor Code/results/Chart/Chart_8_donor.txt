@@ -1,0 +1,14 @@
+chunk1 : org.jfree.data.time.Week:175-175
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (20)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (34)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (34)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (2)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (1)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (22)
+fix ingredient  <0-fine-grained>  varMapType:0 : (34)
+fix ingredient  <1-fine-grained>  varMapType:1 : (34)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (1)
+
+

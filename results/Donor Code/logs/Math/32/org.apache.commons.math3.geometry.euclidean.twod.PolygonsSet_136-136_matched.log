@@ -1,0 +1,256 @@
+---patch code ori--- org.apache.commons.math3.geometry.euclidean.twod.PolygonsSet <136, 143>
+if (tree.getCut() == null && (Boolean) tree.getAttribute()) {
+                // the instance covers the whole space
+                setSize(Double.POSITIVE_INFINITY);
+                setBarycenter(Vector2D.NaN);
+            } else {
+                setSize(0);
+                setBarycenter(new Vector2D(0, 0));
+            }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <279, 282>
+if (includeBoundaryAttributes && (tree.getCut() != null) && (tree.getAttribute() == null)) {
+            // we need to compute the boundary attributes
+            recurseBuildBoundary(tree);
+        }
+
+---patch code 0--- org.apache.commons.math3.geometry.euclidean.twod.PolygonsSet <136, 143>
+if (BSPTree.getCut() == null && (Boolean) BSPTree.getAttribute()) {
+                // the instance covers the whole space
+                setSize(Double.POSITIVE_INFINITY);
+                setBarycenter(Vector2D.NaN);
+            } else {
+                setSize(0);
+                setBarycenter(new Vector2D(0, 0));
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <279, 282>
+if (booleanVar && (BSPTree.getCut() != null) && (BSPTree.getAttribute() == null)) {
+            // we need to compute the boundary attributes
+            recurseBuildBoundary(BSPTree);
+        }
+
+---patch code 1--- org.apache.commons.math3.geometry.euclidean.twod.PolygonsSet <136, 143>
+if (BSPTree.getCut() == null && (Boolean) BSPTree.getAttribute()) {
+                // the instance covers the whole space
+                setSize(Double.POSITIVE_INFINITY);
+                setBarycenter(Vector2D.NaN);
+            } else {
+                setSize(0);
+                setBarycenter(new Vector2D(0, 0));
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <279, 282>
+if (includeBoundaryAttributes && (BSPTree.getCut() != null) && (BSPTree.getAttribute() == null)) {
+            // we need to compute the boundary attributes
+            recurseBuildBoundary(BSPTree);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <265, 268>
+if (BSPTree.getCut() == null) {
+            // the point is in the interior of a cell, just check the attribute
+            return ((Boolean) BSPTree.getAttribute()) ? Location.INSIDE : Location.OUTSIDE;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <265, 268>
+if (BSPTree.getCut() == null) {
+            // the point is in the interior of a cell, just check the attribute
+            return ((Boolean) BSPTree.getAttribute()) ? Location.INSIDE : Location.OUTSIDE;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <570, 572>
+if (BSPTree.getCut() == null) {
+            return (Boolean) BSPTree.getAttribute() ? SubHyperplane.copySelf() : null;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <570, 572>
+if (BSPTree.getCut() == null) {
+            return (Boolean) BSPTree.getAttribute() ? SubHyperplane.copySelf() : null;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <236, 239>
+if (BSPTree.getCut() == null) {
+            // if we find an inside node, the region is not empty
+            return !((Boolean) BSPTree.getAttribute());
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <236, 239>
+if (BSPTree.getCut() == null) {
+            // if we find an inside node, the region is not empty
+            return !((Boolean) BSPTree.getAttribute());
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <495, 497>
+if ((BSPTree.getPlus().getCut() != null) || ((Boolean) BSPTree.getPlus().getAttribute())) {
+                    Sides.rememberPlusFound();
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <495, 497>
+if ((BSPTree.getPlus().getCut() != null) || ((Boolean) BSPTree.getPlus().getAttribute())) {
+                    Sides.rememberPlusFound();
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <498, 500>
+if ((BSPTree.getMinus().getCut() != null) || ((Boolean) BSPTree.getMinus().getAttribute())) {
+                    Sides.rememberMinusFound();
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <498, 500>
+if ((BSPTree.getMinus().getCut() != null) || ((Boolean) BSPTree.getMinus().getAttribute())) {
+                    Sides.rememberMinusFound();
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <502, 504>
+if ((BSPTree.getPlus().getCut() != null) || ((Boolean) BSPTree.getPlus().getAttribute())) {
+                    Sides.rememberMinusFound();
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <502, 504>
+if ((BSPTree.getPlus().getCut() != null) || ((Boolean) BSPTree.getPlus().getAttribute())) {
+                    Sides.rememberMinusFound();
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <505, 507>
+if ((BSPTree.getMinus().getCut() != null) || ((Boolean) BSPTree.getMinus().getAttribute())) {
+                    Sides.rememberPlusFound();
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <505, 507>
+if ((BSPTree.getMinus().getCut() != null) || ((Boolean) BSPTree.getMinus().getAttribute())) {
+                    Sides.rememberPlusFound();
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <439, 446>
+if (BSPTree.getCut() == null) {
+            if ((Boolean) BSPTree.getAttribute()) {
+                // this is an inside cell expanding across the hyperplane
+                Sides.rememberPlusFound();
+                Sides.rememberMinusFound();
+            }
+            return;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <439, 446>
+if (BSPTree.getCut() == null) {
+            if ((Boolean) BSPTree.getAttribute()) {
+                // this is an inside cell expanding across the hyperplane
+                Sides.rememberPlusFound();
+                Sides.rememberMinusFound();
+            }
+            return;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet <167, 174>
+BSPTree<Euclidean1D> BSPTree = getTree(false);
+double  doubleVar  = Double.POSITIVE_INFINITY;
+while (BSPTree.getCut() != null) {
+            final OrientedPoint op = (OrientedPoint) BSPTree.getCut().getHyperplane();
+            doubleVar  = op.getLocation().getX();
+            BSPTree = op.isDirect() ? BSPTree.getMinus() : BSPTree.getPlus();
+        }
+return ((Boolean) BSPTree.getAttribute()) ? Double.NEGATIVE_INFINITY : doubleVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet <167, 174>
+BSPTree<Euclidean1D> BSPTree = getTree(false);
+double  inf  = Double.POSITIVE_INFINITY;
+while (BSPTree.getCut() != null) {
+            final OrientedPoint op = (OrientedPoint) BSPTree.getCut().getHyperplane();
+            inf  = op.getLocation().getX();
+            BSPTree = op.isDirect() ? BSPTree.getMinus() : BSPTree.getPlus();
+        }
+return ((Boolean) BSPTree.getAttribute()) ? Double.NEGATIVE_INFINITY : inf;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet <184, 191>
+BSPTree<Euclidean1D> BSPTree = getTree(false);
+double  doubleVar  = Double.NEGATIVE_INFINITY;
+while (BSPTree.getCut() != null) {
+            final OrientedPoint op = (OrientedPoint) BSPTree.getCut().getHyperplane();
+            doubleVar  = op.getLocation().getX();
+            BSPTree = op.isDirect() ? BSPTree.getPlus() : BSPTree.getMinus();
+        }
+return ((Boolean) BSPTree.getAttribute()) ? Double.POSITIVE_INFINITY : doubleVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.euclidean.oned.IntervalsSet <184, 191>
+BSPTree<Euclidean1D> BSPTree = getTree(false);
+double  sup  = Double.NEGATIVE_INFINITY;
+while (BSPTree.getCut() != null) {
+            final OrientedPoint op = (OrientedPoint) BSPTree.getCut().getHyperplane();
+            sup  = op.getLocation().getX();
+            BSPTree = op.isDirect() ? BSPTree.getPlus() : BSPTree.getMinus();
+        }
+return ((Boolean) BSPTree.getAttribute()) ? Double.POSITIVE_INFINITY : sup;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.partitioning.RegionFactory <136, 156>
+/** Recursively build the complement of a BSP tree.
+     * @param node current node of the original tree
+     * @return new tree, complement of the node
+     */
+    private BSPTree<S> recurseComplement(final BSPTree<S> node) {
+        if (BSPTree.getCut() == null) {
+            return new BSPTree<S>(((Boolean) BSPTree.getAttribute()) ? Boolean.FALSE : Boolean.TRUE);
+        }
+
+        @SuppressWarnings("unchecked")
+        BoundaryAttribute<S> attribute = (BoundaryAttribute<S>) BSPTree.getAttribute();
+        if (attribute != null) {
+            final SubHyperplane<S> plusOutside =
+                (attribute.getPlusInside() == null) ? null : attribute.getPlusInside().copySelf();
+            final SubHyperplane<S> plusInside  =
+                (attribute.getPlusOutside() == null) ? null : attribute.getPlusOutside().copySelf();
+            attribute = new BoundaryAttribute<S>(plusOutside, plusInside);
+        }
+
+        return new BSPTree<S>(BSPTree.getCut().copySelf(),
+                              recurseComplement(BSPTree.getPlus()),
+                              recurseComplement(BSPTree.getMinus()),
+                              attribute);
+
+    }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.partitioning.RegionFactory <136, 156>
+/** Recursively build the complement of a BSP tree.
+     * @param node current node of the original tree
+     * @return new tree, complement of the node
+     */
+    private BSPTree<S> recurseComplement(final BSPTree<S> node) {
+        if (BSPTree.getCut() == null) {
+            return new BSPTree<S>(((Boolean) BSPTree.getAttribute()) ? Boolean.FALSE : Boolean.TRUE);
+        }
+
+        @SuppressWarnings("unchecked")
+        BoundaryAttribute<S> attribute = (BoundaryAttribute<S>) BSPTree.getAttribute();
+        if (attribute != null) {
+            final SubHyperplane<S> plusOutside =
+                (attribute.getPlusInside() == null) ? null : attribute.getPlusInside().copySelf();
+            final SubHyperplane<S> plusInside  =
+                (attribute.getPlusOutside() == null) ? null : attribute.getPlusOutside().copySelf();
+            attribute = new BoundaryAttribute<S>(plusOutside, plusInside);
+        }
+
+        return new BSPTree<S>(BSPTree.getCut().copySelf(),
+                              recurseComplement(BSPTree.getPlus()),
+                              recurseComplement(BSPTree.getMinus()),
+                              attribute);
+
+    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <620, 622>
+if (BSPTree.getCut() == null) {
+            return new BSPTree<S>(BSPTree.getAttribute());
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.partitioning.AbstractRegion <620, 622>
+if (BSPTree.getCut() == null) {
+            return new BSPTree<S>(BSPTree.getAttribute());
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.geometry.partitioning.AbstractSubHyperplane <126, 128>
+if (BSPTree.getCut() == null) {
+            return new BSPTree<T>(BSPTree.getAttribute());
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.geometry.partitioning.AbstractSubHyperplane <126, 128>
+if (BSPTree.getCut() == null) {
+            return new BSPTree<T>(BSPTree.getAttribute());
+        }
+

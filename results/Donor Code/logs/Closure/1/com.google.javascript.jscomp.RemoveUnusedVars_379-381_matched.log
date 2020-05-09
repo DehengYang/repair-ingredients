@@ -1,0 +1,151 @@
+---patch code ori--- com.google.javascript.jscomp.RemoveUnusedVars <379, 381>
+if (!removeGlobals) {
+      return;
+    }
+
+---fix ingredient(SameFile)  <parseContainCheck>  <parseContainCheck>  varMapType:ori--- com.google.javascript.jscomp.RemoveUnusedVars <309, 311>
+if (!removeGlobals && var.isGlobal()) {
+      return false;
+    }
+
+---patch code 0--- com.google.javascript.jscomp.RemoveUnusedVars <379, 381>
+if (!booleanVar) {
+      return;
+    }
+
+---fix ingredient(SameFile)  <parseContainCheck>  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <309, 311>
+if (!booleanVar && Var.isGlobal()) {
+      return false;
+    }
+
+---patch code 1--- com.google.javascript.jscomp.RemoveUnusedVars <379, 381>
+if (!removeGlobals) {
+      return;
+    }
+
+---fix ingredient(SameFile)  <parseContainCheck>  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedVars <309, 311>
+if (!removeGlobals && Var.isGlobal()) {
+      return false;
+    }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax <172, 174>
+if (!booleanVar) {
+      return;
+    }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CodePrinter <516, 518>
+if (!booleanVar) {
+        return;
+      }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.OptimizeParameters <207, 209>
+if (!booleanVar) {
+        return;
+      }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.OptimizeParameters <213, 215>
+if (!booleanVar) {
+      return;
+    }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CrossModuleCodeMotion <149, 151>
+if (!booleanVar) {
+        return;
+      }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <760, 762>
+if (!booleanVar) {
+      return;
+    }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <807, 809>
+if (!booleanVar) {
+      return;
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.PeepholeFoldConstants <465, 467>
+if (!booleanVar) {
+      return Node;
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax <1539, 1541>
+if(!booleanVar) {
+      return Node;
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.PeepholeReplaceKnownMethods <237, 239>
+if (!booleanVar) {
+        return Node;
+      }
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- com.google.javascript.jscomp.TypeCheck <1208, 1213>
+if (!booleanVar
+        && !booleanVar
+        && !booleanVar) {
+      // nothing to do here, it's just a plain new property
+      return;
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.ExpandJqueryAliases <440, 442>
+if (!booleanVar) {
+        return null;
+      }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.NameAnalyzer <1516, 1518>
+if (!booleanVar) {
+      return null;
+    }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- com.google.javascript.rhino.jstype.ArrowType <143, 145>
+if (!booleanVar) {
+          return false;
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- com.google.javascript.rhino.JSDocInfo <668, 670>
+if (!booleanVar) {
+      return false;
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.InlineVariables <720, 722>
+if (!booleanVar && !booleanVar) {
+          return false;
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.PeepholeFoldConstants <954, 960>
+if (!booleanVar) {
+          return TernaryValue.UNKNOWN;
+        } else if (!booleanVar) {
+          return TernaryValue.UNKNOWN;
+        } else {
+          return TernaryValue.forBoolean(compareToUndefined(Node, intVar));
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.FunctionInjector <188, 198>
+if (booleanVar) {
+      if (!booleanVar && !NodeTraversal.inGlobalScope()) {
+        // TODO(johnlenz): Allow inlining into any scope without local names or
+        // inner functions.
+        return CanInlineResult.NO;
+      } else if (NodeUtil.isWithinLoop(Node)) {
+        // An inner closure maybe relying on a local value holding a value for a
+        // single iteration through a loop.
+        return CanInlineResult.NO;
+      }
+    }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RenameVars <258, 264>
+if (booleanVar) {
+        // Keep track of extern globals.
+        if (!booleanVar) {
+          externNames.add(StringVar);
+        }
+        return;
+      }
+
+---fix ingredient  <parseContainCheck2>  <parseContainCheck>  varMapType:0--- com.google.javascript.rhino.jstype.FunctionType <752, 756>
+if (booleanVar && !booleanVar) {
+        return booleanVar ? PrototypeObjectType : this;
+      } else if (booleanVar && !booleanVar) {
+        return booleanVar ? this : PrototypeObjectType;
+      }
+

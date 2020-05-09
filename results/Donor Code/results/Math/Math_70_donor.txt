@@ -1,0 +1,16 @@
+chunk1 : org.apache.commons.math.analysis.solvers.BisectionSolver:72-72
+fix ingredient(SamePackage)  varMapType:ori : (6)
+fix ingredient(SamePackage)  varMapType:0 : (12)
+fix ingredient(SamePackage)  varMapType:1 : (6)
+fix ingredient(SameFile)  varMapType:ori : (2)
+fix ingredient(SameFile)  varMapType:0 : (2)
+fix ingredient(SameFile)  varMapType:1 : (2)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (37)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (26)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (32)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (170)
+fix ingredient  <0-fine-grained>  varMapType:0 : (13)
+fix ingredient  <1-fine-grained>  varMapType:1 : (13)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (1)
+
+

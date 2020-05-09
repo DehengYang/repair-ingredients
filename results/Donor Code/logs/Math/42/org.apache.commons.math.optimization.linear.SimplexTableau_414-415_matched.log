@@ -1,0 +1,75 @@
+---patch code ori--- org.apache.commons.math.optimization.linear.SimplexTableau <414, 424>
+coefficients[i] = 0;
+if (basicRows.contains(basicRow)) {
+              // if multiple variables can take a given value
+              // then we choose the first and set the rest equal to 0
+              coefficients[i] = 0 - (restrictToNonNegative ? 0 : mostNegative);
+          } else {
+              basicRows.add(basicRow);
+              coefficients[i] =
+                  (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                  (restrictToNonNegative ? 0 : mostNegative);
+          }
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:ori--- org.apache.commons.math.optimization.linear.SimplexTableau <413, 422>
+if (basicRows.contains(basicRow)) {
+              // if multiple variables can take a given value
+              // then we choose the first and set the rest equal to 0
+              coefficients[i] = 0 - (restrictToNonNegative ? 0 : mostNegative);
+          } else {
+              basicRows.add(basicRow);
+              coefficients[i] =
+                  (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                  (restrictToNonNegative ? 0 : mostNegative);
+          }
+
+---patch code 0--- org.apache.commons.math.optimization.linear.SimplexTableau <414, 424>
+double[]Var[intVar] = 0;
+if (Set.contains(int)) {
+              // if multiple variables can take a given value
+              // then we choose the first and set the rest equal to 0
+              double[]Var[intVar] = 0 - (booleanVar ? 0 : doubleVar);
+          } else {
+              Set.add(int);
+              double[]Var[intVar] =
+                  (int == null ? 0 : getEntry(int, getRhsOffset())) -
+                  (booleanVar ? 0 : doubleVar);
+          }
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:0--- org.apache.commons.math.optimization.linear.SimplexTableau <413, 422>
+if (Set.contains(int)) {
+              // if multiple variables can take a given value
+              // then we choose the first and set the rest equal to 0
+              double[]Var[intVar] = 0 - (booleanVar ? 0 : doubleVar);
+          } else {
+              Set.add(int);
+              double[]Var[intVar] =
+                  (int == null ? 0 : getEntry(int, getRhsOffset())) -
+                  (booleanVar ? 0 : doubleVar);
+          }
+
+---patch code 1--- org.apache.commons.math.optimization.linear.SimplexTableau <414, 424>
+coefficients[i] = 0;
+if (Set.contains(basicRow)) {
+              // if multiple variables can take a given value
+              // then we choose the first and set the rest equal to 0
+              coefficients[i] = 0 - (restrictToNonNegative ? 0 : mostNegative);
+          } else {
+              Set.add(basicRow);
+              coefficients[i] =
+                  (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                  (restrictToNonNegative ? 0 : mostNegative);
+          }
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:1--- org.apache.commons.math.optimization.linear.SimplexTableau <413, 422>
+if (Set.contains(basicRow)) {
+              // if multiple variables can take a given value
+              // then we choose the first and set the rest equal to 0
+              coefficients[i] = 0 - (restrictToNonNegative ? 0 : mostNegative);
+          } else {
+              Set.add(basicRow);
+              coefficients[i] =
+                  (basicRow == null ? 0 : getEntry(basicRow, getRhsOffset())) -
+                  (restrictToNonNegative ? 0 : mostNegative);
+          }
+

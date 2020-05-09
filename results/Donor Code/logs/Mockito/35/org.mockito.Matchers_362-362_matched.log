@@ -1,0 +1,18 @@
+---patch code ori--- org.mockito.Matchers <362, 362>
+return reportMatcher(new InstanceOf(clazz)).<T>returnFor(clazz);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.mockito.ArgumentCaptor <84, 84>
+return handyReturnValues.returnFor(clazz);
+
+---patch code 0--- org.mockito.Matchers <362, 362>
+return reportMatcher(new InstanceOf(Class)).<T>returnFor(Class);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.mockito.ArgumentCaptor <84, 84>
+return HandyReturnValues.returnFor(Class);
+
+---patch code 1--- org.mockito.Matchers <362, 362>
+return reportMatcher(new InstanceOf(Class)).<T>returnFor(Class);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.mockito.ArgumentCaptor <84, 84>
+return HandyReturnValues.returnFor(Class);
+

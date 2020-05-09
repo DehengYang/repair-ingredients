@@ -1,0 +1,165 @@
+---patch code ori--- com.google.javascript.jscomp.FoldConstants <1477, 1477>
+StringBuilder sb = null;
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.FoldConstants <1712, 1712>
+StringBuilder sb = null;
+
+---patch code 0--- com.google.javascript.jscomp.FoldConstants <1477, 1477>
+StringBuilder StringBuilder = null;
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.FoldConstants <1712, 1712>
+StringBuilder StringBuilder = null;
+
+---patch code 1--- com.google.javascript.jscomp.FoldConstants <1477, 1477>
+StringBuilder StringBuilder = null;
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.FoldConstants <1712, 1712>
+StringBuilder StringBuilder = null;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.ScriptRuntime <256, 256>
+StringBuffer sb = null;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.ScriptRuntime <256, 256>
+StringBuffer StringBuffer = null;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.rhino.ScriptRuntime <256, 256>
+StringBuffer StringBuffer = null;
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.FoldConstants <1728, 1728>
+if (null == sb) { return n.cloneTree(); }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FoldConstants <1728, 1728>
+if (null == StringBuilder) { return Node.cloneTree(); }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.FoldConstants <1728, 1728>
+if (null == StringBuilder) { return Node.cloneTree(); }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.Decompiler <895, 897>
+if (sb != null) {
+            sb.append(ScriptRuntime.numberToString(number, 10));
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.Decompiler <895, 897>
+if (StringBuffer != null) {
+            StringBuffer.append(ScriptRuntime.numberToString(doubleVar, 10));
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.rhino.Decompiler <895, 897>
+if (StringBuffer != null) {
+            StringBuffer.append(ScriptRuntime.numberToString(number, 10));
+        }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.ScriptRuntime <264, 266>
+if (sb != null) {
+                    sb.append((char)c);
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.ScriptRuntime <264, 266>
+if (StringBuffer != null) {
+                    StringBuffer.append((char)intVar);
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.rhino.ScriptRuntime <264, 266>
+if (StringBuffer != null) {
+                    StringBuffer.append((char)c);
+                }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.FoldConstants <1720, 1720>
+if (null == sb) { sb = new StringBuilder(s.length() + 16); }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FoldConstants <1720, 1720>
+if (null == StringBuilder) { StringBuilder = new StringBuilder(StringVar.length() + 16); }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.FoldConstants <1720, 1720>
+if (null == StringBuilder) { StringBuilder = new StringBuilder(s.length() + 16); }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.ScriptRuntime <312, 312>
+return (sb == null) ? s : sb.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.ScriptRuntime <312, 312>
+return (StringBuffer == null) ? StringVar : StringBuffer.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.rhino.ScriptRuntime <312, 312>
+return (StringBuffer == null) ? s : StringBuffer.toString();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.ScriptRuntime <269, 273>
+if (sb == null) {
+                sb = new StringBuffer(L + 3);
+                sb.append(s);
+                sb.setLength(i);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.ScriptRuntime <269, 273>
+if (StringBuffer == null) {
+                StringBuffer = new StringBuffer(intVar + 3);
+                StringBuffer.append(StringVar);
+                StringBuffer.setLength(intVar);
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.rhino.ScriptRuntime <269, 273>
+if (StringBuffer == null) {
+                StringBuffer = new StringBuffer(L + 3);
+                StringBuffer.append(s);
+                StringBuffer.setLength(i);
+            }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.Decompiler <872, 875>
+if (sb != null) {
+                int ival = source.charAt(offset);
+                number = ival;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.Decompiler <872, 875>
+if (StringBuffer != null) {
+                int ival = StringVar.charAt(intVar);
+                doubleVar = ival;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.rhino.Decompiler <872, 875>
+if (StringBuffer != null) {
+                int ival = source.charAt(offset);
+                number = ival;
+            }
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- com.google.javascript.rhino.Decompiler <878, 889>
+if (sb != null) {
+                long lbits;
+                lbits = (long)source.charAt(offset) << 48;
+                lbits |= (long)source.charAt(offset + 1) << 32;
+                lbits |= (long)source.charAt(offset + 2) << 16;
+                lbits |= source.charAt(offset + 3);
+                if (type == 'J') {
+                    number = lbits;
+                } else {
+                    number = Double.longBitsToDouble(lbits);
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.Decompiler <878, 889>
+if (StringBuffer != null) {
+                long lbits;
+                lbits = (long)StringVar.charAt(intVar) << 48;
+                lbits |= (long)StringVar.charAt(intVar + 1) << 32;
+                lbits |= (long)StringVar.charAt(intVar + 2) << 16;
+                lbits |= StringVar.charAt(intVar + 3);
+                if (charVar == 'J') {
+                    doubleVar = lbits;
+                } else {
+                    doubleVar = Double.longBitsToDouble(lbits);
+                }
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.rhino.Decompiler <878, 889>
+if (StringBuffer != null) {
+                long lbits;
+                lbits = (long)source.charAt(offset) << 48;
+                lbits |= (long)source.charAt(offset + 1) << 32;
+                lbits |= (long)source.charAt(offset + 2) << 16;
+                lbits |= source.charAt(offset + 3);
+                if (type == 'J') {
+                    number = lbits;
+                } else {
+                    number = Double.longBitsToDouble(lbits);
+                }
+            }
+

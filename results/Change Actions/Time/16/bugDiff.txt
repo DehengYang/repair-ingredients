@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_16/src/main/java/org/joda/time/format/DateTimeFormatter.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_16/src/main/java/org/joda/time/format/DateTimeFormatter.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Time/Time_16/src/main/java/org/joda/time/format/DateTimeFormatter.java	2020-01-05 22:47:47.328547220 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Time/Time_16/src/main/java/org/joda/time/format/DateTimeFormatter.java	2020-01-05 22:47:48.652547215 -0800
+@@ -706,7 +706,7 @@
+         chrono = selectChronology(chrono);
+         
+         DateTimeParserBucket bucket = new DateTimeParserBucket(
+-            instantLocal, chrono, iLocale, iPivotYear, iDefaultYear);
++            instantLocal, chrono, iLocale, iPivotYear, chrono.year().get(instantLocal));
+         int newPos = parser.parseInto(bucket, text, position);
+         instant.setMillis(bucket.computeMillis(false, text));
+         if (iOffsetParsed && bucket.getOffsetInteger() != null) {

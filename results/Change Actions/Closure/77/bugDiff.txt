@@ -1,0 +1,12 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_77/src/com/google/javascript/jscomp/CodeGenerator.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_77/src/com/google/javascript/jscomp/CodeGenerator.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_77/src/com/google/javascript/jscomp/CodeGenerator.java	2020-01-05 05:19:30.174349048 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_77/src/com/google/javascript/jscomp/CodeGenerator.java	2020-01-05 05:19:32.198332143 -0800
+@@ -963,6 +963,7 @@
+     for (int i = 0; i < s.length(); i++) {
+       char c = s.charAt(i);
+       switch (c) {
++        case '\0': sb.append("\\0"); break;
+         case '\n': sb.append("\\n"); break;
+         case '\r': sb.append("\\r"); break;
+         case '\t': sb.append("\\t"); break;

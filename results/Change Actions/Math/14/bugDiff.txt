@@ -1,0 +1,36 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_14/src/main/java/org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_14/src/main/java/org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_14/src/main/java/org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java	2020-01-05 06:31:59.502023018 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_14/src/main/java/org/apache/commons/math3/optim/nonlinear/vector/jacobian/AbstractLeastSquaresOptimizer.java	2020-01-05 06:32:03.009993718 -0800
+@@ -264,7 +264,16 @@
+      * @return the square-root of the weight matrix.
+      */
+     private RealMatrix squareRoot(RealMatrix m) {
++        if (m instanceof DiagonalMatrix) {
++            final int dim = m.getRowDimension();
++            final RealMatrix sqrtM = new DiagonalMatrix(dim);
++            for (int i = 0; i < dim; i++) {
++                sqrtM.setEntry(i, i, FastMath.sqrt(m.getEntry(i, i)));
++            }
++            return sqrtM;
++        } else {
+             final EigenDecomposition dec = new EigenDecomposition(m);
+             return dec.getSquareRoot();
++        }
+     }
+ }
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_14/src/main/java/org/apache/commons/math3/optim/nonlinear/vector/Weight.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_14/src/main/java/org/apache/commons/math3/optim/nonlinear/vector/Weight.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_14/src/main/java/org/apache/commons/math3/optim/nonlinear/vector/Weight.java	2020-01-05 06:31:59.502023018 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_14/src/main/java/org/apache/commons/math3/optim/nonlinear/vector/Weight.java	2020-01-05 06:32:03.009993718 -0800
+@@ -40,10 +40,7 @@
+      */
+     public Weight(double[] weight) {
+         final int dim = weight.length;
+-        weightMatrix = org.apache.commons.math3.linear.MatrixUtils.createRealMatrix(dim, dim);
+-        for (int i = 0; i < dim; i++) {
+-            weightMatrix.setEntry(i, i, weight[i]);
+-        }
++        weightMatrix = new DiagonalMatrix(weight);
+     }
+ 
+     /**

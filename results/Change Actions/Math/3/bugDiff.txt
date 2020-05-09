@@ -1,0 +1,15 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_3/src/main/java/org/apache/commons/math3/util/MathArrays.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_3/src/main/java/org/apache/commons/math3/util/MathArrays.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_3/src/main/java/org/apache/commons/math3/util/MathArrays.java	2020-01-05 06:30:41.666673106 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_3/src/main/java/org/apache/commons/math3/util/MathArrays.java	2020-01-05 06:30:45.194643640 -0800
+@@ -818,7 +818,10 @@
+             throw new DimensionMismatchException(len, b.length);
+         }
+ 
++        if (len == 1) {
+             // Revert to scalar multiplication.
++            return a[0] * b[0];
++        }
+ 
+         final double[] prodHigh = new double[len];
+         double prodLowSum = 0;

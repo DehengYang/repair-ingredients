@@ -1,0 +1,18 @@
+---patch code ori--- com.google.javascript.jscomp.ScopedAliases <176, 176>
+this.aliasDefinition = aliasDefinition;
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.ScopedAliases <158, 158>
+this.aliasDefinition = aliasDefinition;
+
+---patch code 0--- com.google.javascript.jscomp.ScopedAliases <176, 176>
+ScopedAliases.Node = Node;
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.ScopedAliases <158, 158>
+ScopedAliases.Node = Node;
+
+---patch code 1--- com.google.javascript.jscomp.ScopedAliases <176, 176>
+ScopedAliases.Node = Node;
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.ScopedAliases <158, 158>
+ScopedAliases.Node = Node;
+

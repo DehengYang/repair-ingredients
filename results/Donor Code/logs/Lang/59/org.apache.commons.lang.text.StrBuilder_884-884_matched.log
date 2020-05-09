@@ -1,0 +1,2216 @@
+---patch code ori--- org.apache.commons.lang.text.StrBuilder <884, 884>
+str.getChars(0, width, buffer, size);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <840, 840>
+str.getChars(strLen - width, strLen, buffer, size);
+
+---patch code 0--- org.apache.commons.lang.text.StrBuilder <884, 884>
+StringVar.getChars(0, intVar, char[]Var, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <840, 840>
+StringVar.getChars(intVar - intVar, intVar, char[]Var, intVar);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.lang.text.StrBuilder <884, 884>
+StringVar.getChars(0, intVar, char[]Var, intVar);
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.lang.text.StrBuilder <887, 887>
+StringVar.getChars(0, intVar, char[]Var, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <846, 846>
+StringVar.getChars(0, intVar, char[]Var, intVar + intVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.text.StrBuilder <476, 476>
+StringVar.getChars(0, intVar, char[]Var, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <525, 525>
+StringBuffer.getChars(0, intVar, char[]Var, intVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.text.StrBuilder <948, 948>
+StringVar.getChars(0, intVar, char[]Var, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <504, 504>
+StringVar.getChars(intVar, intVar + intVar, char[]Var, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <553, 553>
+StringBuffer.getChars(intVar, intVar + intVar, char[]Var, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <602, 602>
+StrBuilder.getChars(intVar, intVar + intVar, char[]Var, intVar);
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1260, 1260>
+StringVar.getChars(0, intVar, char[]Var, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <2279, 2279>
+StrBuilder.Reader.getChars(intVar, intVar + intVar, charVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1404, 1404>
+StringBuffer.append(intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <2157, 2157>
+return new String(char[]Var, 0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3726, 3726>
+return rightPad(StringVar, intVar, ' ');
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3838, 3838>
+return leftPad(StringVar, intVar, ' ');
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3956, 3956>
+return center(StringVar, intVar, ' ');
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <245, 245>
+System.arraycopy(char[]Var, 0, char[]Var, 0, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <354, 354>
+System.arraycopy(char[]Var, 0, charVar, 0, intVar);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <836, 836>
+ensureCapacity(size + width);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <836, 836>
+ensureCapacity(intVar + intVar);
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <880, 880>
+ensureCapacity(size + width);
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <880, 880>
+ensureCapacity(intVar + intVar);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <848, 848>
+size += width;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <848, 848>
+intVar += intVar;
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <892, 892>
+size += width;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <892, 892>
+intVar += intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1870, 1870>
+return lastIndexOf(StringVar, intVar - 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3759, 3759>
+return rightPad(StringVar, intVar, String.valueOf(charVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3871, 3871>
+return leftPad(StringVar, intVar, String.valueOf(charVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3754, 3754>
+int intVar = intVar - StringVar.length();
+
+---patch code 1--- org.apache.commons.lang.text.StrBuilder <884, 884>
+str.getChars(0, width, buffer, size);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3754, 3754>
+int pads = size - str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3866, 3866>
+int intVar = intVar - StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3866, 3866>
+int pads = size - str.length();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <2167, 2167>
+return new StringBuffer(intVar).append(char[]Var, 0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3801, 3801>
+return rightPad(StringVar, intVar, StringVar.charAt(0));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3913, 3913>
+return leftPad(StringVar, intVar, StringVar.charAt(0));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3993, 3993>
+StringVar = rightPad(StringVar, intVar, charVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4036, 4036>
+StringVar = rightPad(StringVar, intVar, StringVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <666, 666>
+char[]Var[intVar++] = 't';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <667, 667>
+char[]Var[intVar++] = 'r';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <668, 668>
+char[]Var[intVar++] = 'u';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <669, 669>
+char[]Var[intVar++] = 'e';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <672, 672>
+char[]Var[intVar++] = 'f';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <673, 673>
+char[]Var[intVar++] = 'a';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <674, 674>
+char[]Var[intVar++] = 'l';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <675, 675>
+char[]Var[intVar++] = 's';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <676, 676>
+char[]Var[intVar++] = 'e';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1525, 1527>
+if (char[]Var[intVar] != StringVar.charAt(intVar)) {
+                return false;
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1553, 1555>
+if (char[]Var[intVar] != StringVar.charAt(intVar)) {
+                return false;
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <690, 690>
+char[]Var[intVar++] = charVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <816, 816>
+char[]Var[intVar++] = charVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <844, 844>
+char[]Var[intVar + intVar] = charVar;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <889, 889>
+char[]Var[intVar + intVar + intVar] = charVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1114, 1114>
+System.arraycopy(char[]Var, intVar, char[]Var, intVar, intVar - intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <122, 127>
+if (StringVar == null) {
+            char[]Var = new char[intVar];
+        } else {
+            char[]Var = new char[StringVar.length() + intVar];
+            append(StringVar);
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1020, 1020>
+System.arraycopy(char[]Var, intVar, char[]Var, intVar + 4, intVar - intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1028, 1028>
+System.arraycopy(char[]Var, intVar, char[]Var, intVar + 5, intVar - intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1050, 1050>
+System.arraycopy(char[]Var, intVar, char[]Var, intVar + 1, intVar - intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1897, 1899>
+if (StringVar.charAt(intVar) != char[]Var[intVar + intVar]) {
+                        continue outer;
+                    }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1605, 1609>
+if (intVar >= intVar) {
+            return new String(char[]Var, 0, intVar);
+        } else {
+            return new String(char[]Var, 0, intVar);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3984, 3986>
+if (StringVar == null || intVar <= 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4024, 4026>
+if (StringVar == null || intVar <= 0) {
+            return StringVar;
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <946, 946>
+System.arraycopy(char[]Var, intVar, char[]Var, intVar + intVar, intVar - intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <970, 970>
+System.arraycopy(char[]Var, intVar, char[]Var, intVar + intVar, intVar - intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1001, 1001>
+System.arraycopy(char[]Var, intVar, char[]Var, intVar + intVar, intVar - intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1256, 1256>
+System.arraycopy(char[]Var, intVar, char[]Var, intVar + intVar, intVar - intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1186, 1186>
+int intVar = indexOf(StringVar, 0);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1186, 1186>
+int index = indexOf(str, 0);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1204, 1204>
+int intVar = indexOf(StringVar, 0);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1204, 1204>
+int index = indexOf(str, 0);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <814, 814>
+int intVar = StringVar.indexOf('&');
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.Entities <814, 814>
+int firstAmp = str.indexOf('&');
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.Fraction <325, 325>
+int intVar = StringVar.indexOf('.');
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.math.Fraction <325, 325>
+int pos = str.indexOf('.');
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <418, 418>
+int intVar = StringVar.indexOf('.');
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.math.NumberUtils <418, 418>
+int decPos = str.indexOf('.');
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <228, 232>
+if (intVar > char[]Var.length) {
+            char[] old = char[]Var;
+            char[]Var = new char[intVar];
+            System.arraycopy(old, 0, char[]Var, 0, intVar);
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1762, 1764>
+if (StringVar == null || intVar >= intVar) {
+            return -1;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.LocaleUtils <98, 98>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.LocaleUtils <98, 98>
+int len = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <241, 241>
+char[] char[]Var = new char[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <353, 353>
+char charVar[] = new char[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <472, 472>
+int intVar = StringVar.length();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <472, 472>
+int strLen = str.length();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <521, 521>
+int intVar = StringBuffer.length();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <521, 521>
+int strLen = StringBuffer.length();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <570, 570>
+int intVar = StrBuilder.length();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <570, 570>
+int strLen = StrBuilder.length();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <838, 838>
+int intVar = StringVar.length();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <838, 838>
+int strLen = str.length();
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <882, 882>
+int intVar = StringVar.length();
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <882, 882>
+int strLen = str.length();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1496, 1496>
+delete(intVar, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1517, 1517>
+int intVar = StringVar.length();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1517, 1517>
+int len = str.length();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1544, 1544>
+int intVar = StringVar.length();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1544, 1544>
+int len = str.length();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1765, 1765>
+int intVar = StringVar.length();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1765, 1765>
+int strLen = str.length();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1888, 1888>
+int intVar = StringVar.length();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1888, 1888>
+int strLen = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <784, 784>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.Entities <784, 784>
+int len = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <173, 173>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.WordUtils <173, 173>
+int inputLineLength = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <280, 280>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.WordUtils <280, 280>
+int strLen = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <281, 281>
+StringBuffer StringBuffer = new StringBuffer(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <410, 410>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.WordUtils <410, 410>
+int strLen = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <411, 411>
+StringBuffer StringBuffer = new StringBuffer(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <457, 457>
+StringBuffer StringBuffer = new StringBuffer(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <545, 545>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.WordUtils <545, 545>
+int strLen = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1303, 1303>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <1303, 1303>
+int strSize = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2133, 2133>
+int intVar = StringVar.length() ;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <2133, 2133>
+int len = str.length() ;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2269, 2269>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <2269, 2269>
+int len = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2397, 2397>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <2397, 2397>
+int len = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2878, 2878>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <2878, 2878>
+int sz = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3209, 3209>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3209, 3209>
+int strLength = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3301, 3301>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3301, 3301>
+int len = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3545, 3545>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3545, 3545>
+int strLen = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3637, 3637>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3637, 3637>
+int inputLength = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3795, 3795>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3795, 3795>
+int strLen = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3907, 3907>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3907, 3907>
+int strLen = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3987, 3987>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3987, 3987>
+int strLen = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4030, 4030>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <4030, 4030>
+int strLen = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4204, 4204>
+StringBuffer StringBuffer = new StringBuffer(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4295, 4295>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <4295, 4295>
+int sz = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4329, 4329>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <4329, 4329>
+int sz = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4362, 4362>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <4362, 4362>
+int sz = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4396, 4396>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <4396, 4396>
+int sz = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4434, 4434>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <4434, 4434>
+int sz = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4468, 4468>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <4468, 4468>
+int sz = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4504, 4504>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <4504, 4504>
+int sz = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4536, 4536>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <4536, 4536>
+int sz = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringEscapeUtils <301, 301>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringEscapeUtils <301, 301>
+int sz = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <284, 284>
+int intVar = StringBuffer.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.builder.ToStringStyle <284, 284>
+int len = StringBuffer.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <541, 541>
+StringBuffer.append(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.CharSet <187, 187>
+int intVar = StringVar.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.CharSet <187, 187>
+int len = str.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3550, 3550>
+String StringVar = StringVar.substring(0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringBuilder <394, 394>
+ToStringStyle.append(StringBuffer, null, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1627, 1631>
+if (intVar >= intVar) {
+            return new String(char[]Var, 0, intVar);
+        } else {
+            return new String(char[]Var, intVar - intVar, intVar);
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1486, 1486>
+int intVar = intVar;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1486, 1486>
+int len = size;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1820, 1820>
+int intVar = intVar;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1820, 1820>
+int len = size;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <390, 390>
+System.arraycopy(char[]Var, 0, char[]Var, 0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <585, 585>
+System.arraycopy(String[]Var, 0, String[]Var, 0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <588, 588>
+System.arraycopy(int[]Var, 0, int[]Var, 0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.Fraction <333, 333>
+int intVar = Integer.parseInt(StringVar.substring(0, intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.math.Fraction <333, 333>
+int whole = Integer.parseInt(str.substring(0, pos));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.Fraction <339, 339>
+int intVar = Integer.parseInt(StringVar.substring(0, intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.math.Fraction <339, 339>
+int numer = Integer.parseInt(str.substring(0, pos));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.Fraction <351, 351>
+int intVar = Integer.parseInt(StringVar.substring(0, intVar));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.math.Fraction <351, 351>
+int numer = Integer.parseInt(str.substring(0, pos));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <2360, 2360>
+StrBuilder.Writer.append(StringVar, intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <750, 750>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <786, 786>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <822, 822>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <284, 284>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <414, 414>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <550, 550>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1096, 1096>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1164, 1164>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1306, 1306>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1705, 1705>
+int intVar = StringVar.indexOf(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <1705, 1705>
+int pos = str.indexOf(separator);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1745, 1745>
+int intVar = StringVar.indexOf(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <1745, 1745>
+int pos = str.indexOf(separator);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1781, 1781>
+int intVar = StringVar.lastIndexOf(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <1781, 1781>
+int pos = str.lastIndexOf(separator);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1822, 1822>
+int intVar = StringVar.lastIndexOf(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <1822, 1822>
+int pos = str.lastIndexOf(separator);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1885, 1885>
+int intVar = StringVar.indexOf(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <1885, 1885>
+int start = str.indexOf(open);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3212, 3212>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3368, 3368>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3465, 3465>
+int intVar = StringVar.lastIndexOf(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3465, 3465>
+int idx = str.lastIndexOf(sep);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3487, 3487>
+int intVar = StringVar.indexOf(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3487, 3487>
+int idx = str.indexOf(sep);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3508, 3508>
+int intVar = StringVar.indexOf(StringVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3508, 3508>
+int idx = str.indexOf(sep);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3551, 3551>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3575, 3575>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringEscapeUtils <181, 181>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringEscapeUtils <306, 306>
+char charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.builder.ToStringStyle <373, 373>
+appendDetail(StringBuffer, fieldName, (int[]) Object);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.builder.ToStringStyle <375, 375>
+appendSummary(StringBuffer, fieldName, (int[]) Object);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <528, 528>
+appendDetail(StringBuffer, StringVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1449, 1449>
+NumberRule.appendTo(StringBuffer, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1456, 1456>
+NumberRule.appendTo(StringBuffer, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1491, 1491>
+NumberRule.appendTo(StringBuffer, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1498, 1498>
+NumberRule.appendTo(StringBuffer, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1196, 1196>
+StringBuffer.append(Integer.toString(intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1299, 1299>
+StringBuffer.append(Integer.toString(intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1341, 1341>
+StringBuffer.append(Integer.toString(intVar));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <375, 375>
+System.arraycopy(char[]Var, intVar, charVar, 0, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <623, 623>
+System.arraycopy(char[]Var, 0, char[]Var, intVar, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <971, 971>
+System.arraycopy(charVar, 0, char[]Var, intVar, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1167, 1172>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            if (char[]Var[intVar] == charVar) {
+                deleteImpl(intVar, intVar + 1, 1);
+                break;
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1167, 1172>
+for (int i = 0; i < size; i++) {
+            if (buffer[i] == ch) {
+                deleteImpl(i, i + 1, 1);
+                break;
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <574, 574>
+System.arraycopy(StrBuilder.char[]Var, 0, char[]Var, intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.Fraction <340, 340>
+int intVar = Integer.parseInt(StringVar.substring(intVar + 1));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.math.Fraction <340, 340>
+int denom = Integer.parseInt(str.substring(pos + 1));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.Fraction <352, 352>
+int intVar = Integer.parseInt(StringVar.substring(intVar + 1));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.math.Fraction <352, 352>
+int denom = Integer.parseInt(str.substring(pos + 1));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2071, 2071>
+return splitWorker(StringVar, StringVar, intVar, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2372, 2372>
+return splitWorker(StringVar, StringVar, intVar, true);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <431, 431>
+StringVar = StringVar.substring(0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <434, 434>
+StringVar = StringVar.substring(0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <820, 820>
+StringBuffer.append(StringVar.substring(0, intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1562, 1562>
+StringBuffer.append(getTimeZoneDisplay(TimeZone, true, intVar, Locale));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1564, 1564>
+StringBuffer.append(getTimeZoneDisplay(TimeZone, false, intVar, Locale));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <562, 562>
+return StringVar.substring(0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1709, 1709>
+return StringVar.substring(0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1785, 1785>
+return StringVar.substring(0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2141, 2141>
+return split( StringVar, null, intVar ) ;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3367, 3367>
+int intVar = StringVar.length() - 1;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3367, 3367>
+int lastIdx = str.length() - 1;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3377, 3377>
+return StringVar.substring(0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3571, 3571>
+int intVar = StringVar.length() - 1;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3571, 3571>
+int lastIdx = str.length() - 1;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3583, 3583>
+return StringVar.substring(0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4732, 4732>
+return abbreviate(StringVar, 0, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1191, 1191>
+StringBuffer.append((char)(intVar + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1234, 1234>
+StringBuffer.append((char)(intVar + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.Fraction <331, 331>
+intVar = StringVar.indexOf(' ');
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.Fraction <335, 335>
+intVar = StringVar.indexOf('/');
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.Fraction <346, 346>
+intVar = StringVar.indexOf('/');
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <835, 835>
+String StringVar = StringVar.substring(intVar + 1, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <182, 182>
+int intVar = StringVar.lastIndexOf(' ', intVar + intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.WordUtils <182, 182>
+int spaceToWrapAt = str.lastIndexOf(' ', wrapLength + offset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringBuilder <734, 734>
+ToStringStyle.append(StringBuffer, StringVar, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1657, 1661>
+if (intVar <= intVar + intVar) {
+            return new String(char[]Var, intVar, intVar - intVar);
+        } else {
+            return new String(char[]Var, intVar, intVar);
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <864, 864>
+return appendFixedWidthPadLeft(String.valueOf(value), width, padChar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <864, 864>
+return appendFixedWidthPadLeft(String.valueOf(intVar), intVar, charVar);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <908, 908>
+return appendFixedWidthPadRight(String.valueOf(value), width, padChar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <908, 908>
+return appendFixedWidthPadRight(String.valueOf(intVar), intVar, charVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1189, 1189>
+intVar = indexOf(StringVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <464, 464>
+charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <735, 735>
+return StringVar.indexOf(charVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <852, 852>
+return StringVar.indexOf(StringVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <914, 914>
+return StringVar.lastIndexOf(charVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <978, 978>
+return StringVar.lastIndexOf(StringVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1388, 1388>
+intVar = StringVar.indexOf(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1438, 1438>
+intVar = StringVar.lastIndexOf(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1557, 1557>
+return StringVar.substring(intVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4208, 4208>
+charVar = StringVar.charAt(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <295, 295>
+StringBuffer.setLength(intVar - intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.CharSetUtils <327, 327>
+StringBuffer.append(char[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.CharSetUtils <382, 382>
+StringBuffer.append(char[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.CharSetUtils <384, 384>
+StringBuffer.append(char[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <433, 435>
+String StringVar = booleanVar
+                                ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0')
+                                : Integer.toString(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <205, 205>
+StringBuffer.append(StringVar.substring(intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <213, 213>
+StringBuffer.append(StringVar.substring(intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2160, 2160>
+ArrayList.add( StringVar.substring( intVar ) ) ;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2177, 2177>
+ArrayList.add( StringVar.substring( intVar ) ) ;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1183, 1183>
+appendTo(StringBuffer, Calendar.get(intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1275, 1275>
+appendTo(StringBuffer, Calendar.get(intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1330, 1330>
+appendTo(StringBuffer, Calendar.get(intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.Fraction <334, 334>
+StringVar = StringVar.substring(intVar + 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <429, 429>
+StringVar = StringVar.substring(intVar + 1);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <111, 111>
+char[]Var = new char[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <814, 814>
+ensureCapacity(intVar + intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <969, 969>
+ensureCapacity(intVar + intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1000, 1000>
+ensureCapacity(intVar + intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1465, 1465>
+int intVar = intVar / 2;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1465, 1465>
+int half = size / 2;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1569, 1569>
+return substring(intVar, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1921, 1921>
+return lastIndexOf(StrMatcher, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <646, 646>
+int intVar = size - 1;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.Entities <646, 646>
+int high = size - 1;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <518, 518>
+return StringVar.substring(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1489, 1489>
+return StringVar.substring(intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringEscapeUtils <179, 179>
+intVar = StringVar.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <151, 151>
+return toInt(StringVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <186, 186>
+StringBuffer.append(StringVar.substring(intVar, intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <199, 199>
+intVar = StringVar.indexOf(' ', intVar + intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <201, 201>
+StringBuffer.append(StringVar.substring(intVar, intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <804, 804>
+intVar = StringVar.indexOf(StringVar, intVar + 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2164, 2164>
+ArrayList.add( StringVar.substring( intVar, intVar ) ) ;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2280, 2280>
+ListVar.add(StringVar.substring(intVar, intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2293, 2293>
+ListVar.add(StringVar.substring(intVar, intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2416, 2416>
+ListVar.add(StringVar.substring(intVar, intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2438, 2438>
+ListVar.add(StringVar.substring(intVar, intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2459, 2459>
+ListVar.add(StringVar.substring(intVar, intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2472, 2472>
+ListVar.add(StringVar.substring(intVar, intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <427, 427>
+StringVar = StringVar.substring(intVar + 1, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1390, 1390>
+return replace(StrMatcher, StringVar, 0, intVar, 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <824, 824>
+int intVar = StringVar.indexOf(';', intVar + 1);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.Entities <824, 824>
+int semi = str.indexOf(';', i + 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <829, 829>
+int intVar = StringVar.indexOf('&', intVar + 1);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.Entities <829, 829>
+int amph = str.indexOf('&', i + 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3807, 3807>
+return StringVar.concat(StringVar.substring(0, intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3919, 3919>
+return StringVar.substring(0, intVar).concat(StringVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1293, 1297>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                if (char[]Var[intVar] == charVar) {
+                    char[]Var[intVar] = charVar;
+                }
+            }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1293, 1297>
+for (int i = 0; i < size; i++) {
+                if (buffer[i] == search) {
+                    buffer[i] = replace;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2152, 2152>
+intVar = StringVar.indexOf( StringVar, intVar ) ;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <849, 849>
+appendDetail(StringBuffer, StringVar, long[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <910, 910>
+appendDetail(StringBuffer, StringVar, int[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <971, 971>
+appendDetail(StringBuffer, StringVar, short[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1032, 1032>
+appendDetail(StringBuffer, StringVar, byte[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1093, 1093>
+appendDetail(StringBuffer, StringVar, char[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1154, 1154>
+appendDetail(StringBuffer, StringVar, double[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1215, 1215>
+appendDetail(StringBuffer, StringVar, float[]Var[intVar]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1276, 1276>
+appendDetail(StringBuffer, StringVar, boolean[]Var[intVar]);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <651, 651>
+System.arraycopy(char[]Var, intVar, char[]Var, intVar, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1002, 1002>
+System.arraycopy(charVar, intVar, char[]Var, intVar, intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1312, 1317>
+for (int intVar = 0; intVar < intVar; intVar++) {
+                if (char[]Var[intVar] == charVar) {
+                    char[]Var[intVar] = charVar;
+                    break;
+                }
+            }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1312, 1317>
+for (int i = 0; i < size; i++) {
+                if (buffer[i] == search) {
+                    buffer[i] = replace;
+                    break;
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <407, 408>
+StringBuffer.append(booleanVar ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0') : Integer
+                            .toString(intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <411, 412>
+StringBuffer.append(booleanVar ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0') : Integer
+                            .toString(intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <415, 416>
+StringBuffer.append(booleanVar ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0') : Integer
+                            .toString(intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <419, 420>
+StringBuffer.append(booleanVar ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0') : Integer
+                            .toString(intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <423, 424>
+StringBuffer.append(booleanVar ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0') : Integer
+                            .toString(intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <427, 428>
+StringBuffer.append(booleanVar ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0') : Integer
+                            .toString(intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <438, 440>
+StringBuffer.append(booleanVar
+                                ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0')
+                                : Integer.toString(intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <503, 503>
+StringVar = StringVar.substring(intVar + 1, StringVar.length());
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <2079, 2081>
+if (StrBuilder.intVar != StrBuilder.intVar) {
+            return false;
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <2105, 2107>
+if (StrBuilder.intVar != StrBuilder.intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1485, 1487>
+if (intVar > StringVar.length()) {
+            return StringVar;
+        }
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <842, 842>
+int padLen = width - strLen;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <842, 842>
+int intVar = intVar - intVar;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <842, 842>
+int padLen = width - strLen;
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <886, 886>
+int padLen = width - strLen;
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <886, 886>
+int intVar = intVar - intVar;
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <886, 886>
+int padLen = width - strLen;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <944, 944>
+int intVar = intVar + intVar;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <944, 944>
+int newSize = size + strLen;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1551, 1551>
+int intVar = intVar - intVar;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1551, 1551>
+int pos = size - len;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3796, 3796>
+int intVar = intVar - intVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3796, 3796>
+int pads = size - strLen;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3908, 3908>
+int intVar = intVar - intVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3908, 3908>
+int pads = size - strLen;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3988, 3988>
+int intVar = intVar - intVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <3988, 3988>
+int pads = size - strLen;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4031, 4031>
+int intVar = intVar - intVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <4031, 4031>
+int pads = size - strLen;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <477, 477>
+intVar += intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <505, 505>
+intVar += intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <526, 526>
+intVar += intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <554, 554>
+intVar += intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <575, 575>
+intVar += intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <603, 603>
+intVar += intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <624, 624>
+intVar += intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <652, 652>
+intVar += intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <947, 947>
+intVar = intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <972, 972>
+intVar += intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1003, 1003>
+intVar += intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1115, 1115>
+intVar -= intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1257, 1257>
+intVar = intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <227, 229>
+if ((Character.isWhitespace(StringVar.charAt(intVar)) == false)) {
+                return false;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4297, 4299>
+if (Character.isLetter(StringVar.charAt(intVar)) == false) {
+                return false;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4364, 4366>
+if (Character.isLetterOrDigit(StringVar.charAt(intVar)) == false) {
+                return false;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4436, 4438>
+if (CharUtils.isAsciiPrintable(StringVar.charAt(intVar)) == false) {
+                return false;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <4436, 4438>
+if (CharUtils.isAsciiPrintable(str.charAt(i)) == false) {
+                return false;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4470, 4472>
+if (Character.isDigit(StringVar.charAt(intVar)) == false) {
+                return false;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4538, 4540>
+if ((Character.isWhitespace(StringVar.charAt(intVar)) == false)) {
+                return false;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1261, 1261>
+intVar = intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1151, 1151>
+StringBuffer.append(String[]Var[Calendar.get(intVar)]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <419, 419>
+int intVar = StringVar.indexOf('e') + StringVar.indexOf('E') + 1;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.math.NumberUtils <419, 419>
+int expPos = str.indexOf('e') + str.indexOf('E') + 1;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <583, 583>
+int intVar = Math.max(intVar, intVar + intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.Entities <583, 583>
+int newSize = Math.max(capacity, size + growBy);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1479, 1479>
+intVar = StringVar.length() + intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1534, 1534>
+intVar = StringVar.length() + intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1537, 1537>
+intVar = StringVar.length() + intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <942, 942>
+int intVar = (StringVar == null ? 0 : StringVar.length());
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <942, 942>
+int strLen = (str == null ? 0 : str.length());
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1184, 1184>
+int intVar = (StringVar == null ? 0 : StringVar.length());
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1184, 1184>
+int len = (str == null ? 0 : str.length());
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1202, 1202>
+int intVar = (StringVar == null ? 0 : StringVar.length());
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1202, 1202>
+int len = (str == null ? 0 : str.length());
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1375, 1375>
+return replace(StrMatcher, StringVar, 0, intVar, -1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3510, 3510>
+return StringVar.substring(0, intVar + StringVar.length());
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1587, 1587>
+return new String(char[]Var, intVar, intVar - intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1667, 1667>
+return StringVar.substring(intVar, intVar + intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <194, 194>
+StringBuffer.append(StringVar.substring(intVar, intVar + intVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1887, 1887>
+int intVar = StringVar.indexOf(StringVar, intVar + StringVar.length());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <1887, 1887>
+int end = str.indexOf(close, start + open.length());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <552, 554>
+while ((intVar != 0) && Character.isWhitespace(StringVar.charAt(intVar - 1))) {
+                intVar--;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3761, 3761>
+return StringVar.concat(padding(intVar, charVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3873, 3873>
+return padding(intVar, charVar).concat(StringVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1838, 1838>
+return lastIndexOf(charVar, intVar - 1);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <414, 414>
+System.arraycopy(char[]Var, intVar, charVar, intVar, intVar - intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1889, 1889>
+return StringVar.substring(intVar + StringVar.length(), intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <673, 673>
+System.arraycopy(values, intVar, values, intVar + 1, size - intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <675, 675>
+System.arraycopy(names, intVar, names, intVar + 1, size - intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1767, 1767>
+return indexOf(StringVar.charAt(0), intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <142, 142>
+return wrap(StringVar, intVar, null, false);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3642, 3642>
+return padding(intVar, StringVar.charAt(0));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringEscapeUtils <446, 446>
+StringWriter StringWriter = new StringWriter ((int)(str.length() * 1.5));
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringEscapeUtils <518, 518>
+StringWriter StringWriter = new StringWriter ((int)(str.length() * 1.5));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <199, 207>
+if (intVar > intVar) {
+            ensureCapacity(intVar);
+            int oldEnd = intVar;
+            int newEnd = intVar;
+            intVar = intVar;
+            for (int i = oldEnd; i < newEnd; i++) {
+                char[]Var[i] = '\0';
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <199, 207>
+if (length > size) {
+            ensureCapacity(length);
+            int oldEnd = size;
+            int newEnd = length;
+            size = length;
+            for (int i = oldEnd; i < newEnd; i++) {
+                buffer[i] = '\0';
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrMatcher <275, 275>
+return Arrays.binarySearch(char[]Var, char[]Var[intVar]) >= 0 ? 1 : 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <508, 510>
+while ((intVar != intVar) && Character.isWhitespace(StringVar.charAt(intVar))) {
+                intVar++;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <262, 262>
+char[]Var[intVar] = (char) (55296 + Random.nextInt(128));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <269, 269>
+char[]Var[intVar] = (char) (56320 + Random.nextInt(128));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3992, 3992>
+StringVar = leftPad(StringVar, intVar + intVar / 2, charVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4035, 4035>
+StringVar = leftPad(StringVar, intVar + intVar / 2, StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <260, 260>
+char[]Var[intVar] = charVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <271, 271>
+char[]Var[intVar] = charVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.RandomStringUtils <277, 277>
+char[]Var[intVar] = charVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <322, 322>
+char[]Var[intVar] = charVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1051, 1051>
+char[]Var[intVar] = charVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <571, 571>
+String[]Var[intVar] = StringVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <572, 572>
+int[]Var[intVar] = intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <178, 181>
+if (StringVar.charAt(intVar) == ' ') {
+                intVar++;
+                continue;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1749, 1749>
+return StringVar.substring(intVar + StringVar.length());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1826, 1826>
+return StringVar.substring(intVar + StringVar.length());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3489, 3489>
+return StringVar.substring(intVar + StringVar.length());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4777, 4779>
+if (StringVar.length() <= intVar) {
+            return StringVar;
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1024, 1024>
+char[]Var[intVar] = 'e';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1033, 1033>
+char[]Var[intVar] = 'e';
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1541, 1543>
+if (intVar > StringVar.length()) {
+            intVar = StringVar.length();
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4780, 4782>
+if (intVar > StringVar.length()) {
+            intVar = StringVar.length();
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1658, 1660>
+if (intVar < 0 || intVar > StringVar.length()) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.NumberUtils <597, 601>
+for (int intVar = 0; intVar < StringVar.length(); intVar++) {
+            if (!Character.isDigit(StringVar.charAt(intVar))) {
+                return false;
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.NumberUtils <597, 601>
+for (int i = 0; i < str.length(); i++) {
+            if (!Character.isDigit(str.charAt(i))) {
+                return false;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <1510, 1514>
+for (int intVar = 0; intVar < StringVar.length(); intVar++) {
+            if (!Character.isDigit(StringVar.charAt(intVar))) {
+                return false;
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.math.NumberUtils <1510, 1514>
+for (int i = 0; i < str.length(); i++) {
+            if (!Character.isDigit(str.charAt(i))) {
+                return false;
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1849, 1849>
+intVar = (intVar >= intVar ? intVar - 1 : intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1884, 1884>
+intVar = (intVar >= intVar ? intVar - 1 : intVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1937, 1937>
+intVar = (intVar >= intVar ? intVar - 1 : intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1589, 1593>
+if (StringVar.length() <= intVar) {
+            return StringVar;
+        } else {
+            return StringVar.substring(0, intVar);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <442, 442>
+StringVar = StringVar.substring(intVar + 1, StringVar.length() - 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3371, 3373>
+if (StringVar.charAt(intVar - 1) == CharUtils.CR) {
+                intVar--;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3577, 3579>
+if (StringVar.charAt(intVar - 1) == CharUtils.CR) {
+                intVar--;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4331, 4333>
+if ((Character.isLetter(StringVar.charAt(intVar)) == false) && (StringVar.charAt(intVar) != ' ')) {
+                return false;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4398, 4400>
+if ((Character.isLetterOrDigit(StringVar.charAt(intVar)) == false) && (StringVar.charAt(intVar) != ' ')) {
+                return false;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4506, 4508>
+if ((Character.isDigit(StringVar.charAt(intVar)) == false) && (StringVar.charAt(intVar) != ' ')) {
+                return false;
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <2184, 2186>
+if (intVar > intVar) {
+            intVar = intVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1201, 1205>
+for (int intVar = 0; intVar < StringVar.length(); intVar++) {
+            if (StringVar.indexOf(StringVar.charAt(intVar)) < 0) {
+                return intVar;
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.StringUtils <1201, 1205>
+for (int i = 0; i < str.length(); i++) {
+            if (searchChars.indexOf(str.charAt(i)) < 0) {
+                return i;
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1780, 1782>
+if (StringVar.charAt(intVar) != char[]Var[intVar + intVar]) {
+                    continue outer;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4264, 4267>
+while ((intVar = StringVar.indexOf(StringVar, intVar)) != -1) {
+            intVar++;
+            intVar += StringVar.length();
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <514, 516>
+while ((intVar != intVar) && (StringVar.indexOf(StringVar.charAt(intVar)) != -1)) {
+                intVar++;
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <665, 665>
+ensureCapacity(intVar + 4);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <671, 671>
+ensureCapacity(intVar + 5);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1019, 1019>
+ensureCapacity(intVar + 4);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1027, 1027>
+ensureCapacity(intVar + 5);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1049, 1049>
+ensureCapacity(intVar + 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <570, 570>
+ensureCapacity(intVar + 1);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2882, 2884>
+if (!Character.isWhitespace(StringVar.charAt(intVar))) {
+                char[]Var[intVar++] = StringVar.charAt(intVar);
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1776, 1776>
+int intVar = intVar - intVar + 1;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1776, 1776>
+int len = size - strLen + 1;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <305, 305>
+return char[]Var[intVar];
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <336, 338>
+if (intVar < 0 || intVar >= intVar) {
+            throw new StringIndexOutOfBoundsException(intVar);
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <2200, 2202>
+if (intVar < 0 || intVar > intVar) {
+            throw new StringIndexOutOfBoundsException(intVar);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1823, 1825>
+if (intVar == -1 || intVar == (StringVar.length() - StringVar.length())) {
+            return StringVar;
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1253, 1253>
+int intVar = intVar - intVar + intVar;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1253, 1253>
+int newSize = size - removeLen + insertLen;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1854, 1856>
+if (char[]Var[intVar] == charVar) {
+                return intVar;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <289, 292>
+if (StringBuffer.charAt(intVar - 1 - intVar) != StringVar.charAt(intVar - 1 - intVar)) {
+                    booleanVar = false;
+                    break;
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.CharSet <193, 193>
+Set.add(new CharRange(StringVar.charAt(intVar + 1), StringVar.charAt(intVar + 3), true));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <609, 613>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                if (String[]Var[intVar].equals(StringVar)) {
+                    return int[]Var[intVar];
+                }
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.Entities <609, 613>
+for (int i = 0; i < size; ++i) {
+                if (names[i].equals(name)) {
+                    return values[i];
+                }
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrMatcher <307, 307>
+return charVar == char[]Var[intVar] ? 1 : 0;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1144, 1156>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            if (char[]Var[intVar] == charVar) {
+                int start = intVar;
+                while (++intVar < intVar) {
+                    if (char[]Var[intVar] != charVar) {
+                        break;
+                    }
+                }
+                int len = intVar - start;
+                deleteImpl(start, intVar, len);
+                intVar -= len;
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1144, 1156>
+for (int i = 0; i < size; i++) {
+            if (buffer[i] == ch) {
+                int start = i;
+                while (++i < size) {
+                    if (buffer[i] != ch) {
+                        break;
+                    }
+                }
+                int len = i - start;
+                deleteImpl(start, i, len);
+                i -= len;
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <498, 500>
+if (intVar < 0 || (intVar + intVar) > StringVar.length()) {
+            throw new StringIndexOutOfBoundsException("length must be valid");
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <547, 549>
+if (intVar < 0 || (intVar + intVar) > StringBuffer.length()) {
+            throw new StringIndexOutOfBoundsException("length must be valid");
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <596, 598>
+if (intVar < 0 || (intVar + intVar) > StrBuilder.length()) {
+            throw new StringIndexOutOfBoundsException("length must be valid");
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1021, 1021>
+char[]Var[intVar++] = 't';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1022, 1022>
+char[]Var[intVar++] = 'r';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1023, 1023>
+char[]Var[intVar++] = 'u';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1029, 1029>
+char[]Var[intVar++] = 'f';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1030, 1030>
+char[]Var[intVar++] = 'a';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1031, 1031>
+char[]Var[intVar++] = 'l';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1032, 1032>
+char[]Var[intVar++] = 's';
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1521, 1523>
+if (intVar > intVar) {
+            return false;
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1548, 1550>
+if (intVar > intVar) {
+            return false;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <172, 174>
+if(StringVar == null) {
+            return intVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <1623, 1627>
+if (StringVar.length() <= intVar) {
+            return StringVar;
+        } else {
+            return StringVar.substring(StringVar.length() - intVar);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <454, 456>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <503, 505>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <547, 549>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4106, 4108>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4150, 4152>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4201, 4203>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <287, 287>
+intVar = 0;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1025, 1025>
+intVar += 4;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1034, 1034>
+intVar += 5;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1673, 1677>
+for (int intVar = 0; intVar < StrBuilder.intVar; intVar++) {
+            if (char[]Var[intVar] == charVar) {
+                return true;
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1673, 1677>
+for (int i = 0; i < StrBuilder.size; i++) {
+            if (thisBuf[i] == ch) {
+                return true;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <559, 563>
+for (int intVar = StringVar.length() - 1; intVar >= 0; intVar--) {
+            if (StringVar.charAt(intVar) != '0') {
+                return false;
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.math.NumberUtils <559, 563>
+for (int i = str.length() - 1; i >= 0; i--) {
+            if (str.charAt(i) != '0') {
+                return false;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <849, 851>
+if (StringVar.length() == 0 && intVar >= StringVar.length()) {
+            return StringVar.length();
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <2084, 2090>
+for (int intVar = intVar - 1; intVar >= 0; intVar--) {
+            char c1 = charVar[intVar];
+            char c2 = charVar[intVar];
+            if (c1 != c2 && Character.toUpperCase(c1) != Character.toUpperCase(c2)) {
+                return false;
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <2084, 2090>
+for (int i = size - 1; i >= 0; i--) {
+            char c1 = thisBuf[i];
+            char c2 = otherBuf[i];
+            if (c1 != c2 && Character.toUpperCase(c1) != Character.toUpperCase(c2)) {
+                return false;
+            }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrMatcher <344, 346>
+if (char[]Var[intVar] != char[]Var[intVar]) {
+                    return 0;
+                }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <182, 182>
+return intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <260, 260>
+return intVar;
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1052, 1052>
+intVar++;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <573, 573>
+intVar++;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <558, 560>
+while ((intVar != 0) && (StringVar.indexOf(StringVar.charAt(intVar - 1)) != -1)) {
+                intVar--;
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1238, 1238>
+return replace(StrMatcher, null, 0, intVar, 1);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <2110, 2114>
+for (int intVar = intVar - 1; intVar >= 0; intVar--) {
+            if (charVar[intVar] != charVar[intVar]) {
+                return false;
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <2110, 2114>
+for (int i = size - 1; i >= 0; i--) {
+            if (thisBuf[i] != otherBuf[i]) {
+                return false;
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <495, 497>
+if (intVar < 0 || intVar > StringVar.length()) {
+            throw new StringIndexOutOfBoundsException("startIndex must be valid");
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <544, 546>
+if (intVar < 0 || intVar > StringBuffer.length()) {
+            throw new StringIndexOutOfBoundsException("startIndex must be valid");
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <593, 595>
+if (intVar < 0 || intVar > StrBuilder.length()) {
+            throw new StringIndexOutOfBoundsException("startIndex must be valid");
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.Entities <597, 601>
+for (int intVar = 0; intVar < intVar; ++intVar) {
+                if (int[]Var[intVar] == intVar) {
+                    return String[]Var[intVar];
+                }
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.Entities <597, 601>
+for (int i = 0; i < size; ++i) {
+                if (values[i] == value) {
+                    return names[i];
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1193, 1193>
+StringBuffer.append((char)(intVar / 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1194, 1194>
+StringBuffer.append((char)(intVar % 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1236, 1236>
+StringBuffer.append((char)(intVar / 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1237, 1237>
+StringBuffer.append((char)(intVar % 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1286, 1286>
+StringBuffer.append((char)(intVar / 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1287, 1287>
+StringBuffer.append((char)(intVar % 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1338, 1338>
+StringBuffer.append((char)(intVar / 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1339, 1339>
+StringBuffer.append((char)(intVar % 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1377, 1377>
+StringBuffer.append((char)(intVar / 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1378, 1378>
+StringBuffer.append((char)(intVar % 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1413, 1413>
+StringBuffer.append((char)(intVar / 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1414, 1414>
+StringBuffer.append((char)(intVar % 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1610, 1610>
+StringBuffer.append((char)(intVar / 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1611, 1611>
+StringBuffer.append((char)(intVar % 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1618, 1618>
+StringBuffer.append((char)(intVar / 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1619, 1619>
+StringBuffer.append((char)(intVar % 10 + '0'));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3466, 3472>
+if (intVar == StringVar.length() - StringVar.length()) {
+            return StringVar;
+        } else if (intVar != -1) {
+            return StringVar.substring(intVar);
+        } else {
+            return StringVar;
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <2140, 2142>
+for (int intVar = intVar - 1; intVar >= 0; intVar--) {
+            intVar = 31 * intVar + charVar[intVar];
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <2140, 2142>
+for (int i = size - 1; i >= 0; i--) {
+            hash = 31 * hash + buf[i];
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1730, 1734>
+for (int intVar = intVar; intVar < intVar; intVar++) {
+            if (char[]Var[intVar] == charVar) {
+                return intVar;
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1730, 1734>
+for (int i = startIndex; i < size; i++) {
+            if (thisBuf[i] == ch) {
+                return i;
+            }
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1224, 1224>
+return replace(StrMatcher, null, 0, intVar, -1);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1726, 1728>
+if (intVar >= intVar) {
+            return -1;
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1772, 1774>
+if (intVar > intVar) {
+            return -1;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.exception.NestableDelegate <386, 402>
+for (int intVar=ListVar.size(), intVar=intVar-1; intVar > 0; intVar--) {
+             String[] curr = (String[]) ListVar.get(intVar);
+             String[] next = (String[]) ListVar.get(intVar-1); 
+             
+             List currList = new ArrayList(Arrays.asList(curr));
+             List nextList = new ArrayList(Arrays.asList(next));
+             ExceptionUtils.removeCommonFrames(currList, nextList);
+
+             int trimmed = curr.length - currList.size();
+             if (trimmed > 0) {
+                 currList.add("\t... "+trimmed+" more");
+                 ListVar.set(
+                     intVar, 
+                     currList.toArray(new String[currList.size()])
+                 );
+             }
+         }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.exception.NestableDelegate <386, 402>
+for (int size=stacks.size(), i=size-1; i > 0; i--) {
+             String[] curr = (String[]) stacks.get(i);
+             String[] next = (String[]) stacks.get(i-1); 
+             
+             List currList = new ArrayList(Arrays.asList(curr));
+             List nextList = new ArrayList(Arrays.asList(next));
+             ExceptionUtils.removeCommonFrames(currList, nextList);
+
+             int trimmed = curr.length - currList.size();
+             if (trimmed > 0) {
+                 currList.add("\t... "+trimmed+" more");
+                 stacks.set(
+                     i, 
+                     currList.toArray(new String[currList.size()])
+                 );
+             }
+         }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4783, 4785>
+if ((StringVar.length() - intVar) < (intVar - 3)) {
+            intVar = StringVar.length() - (intVar - 3);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4792, 4794>
+if ((intVar + (intVar - 3)) < StringVar.length()) {
+            return "..." + abbreviate(StringVar.substring(intVar), intVar - 3);
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1654, 1656>
+if (intVar <= 0 || intVar >= intVar) {
+            return "";
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1467, 1471>
+for (int intVar = 0, intVar = intVar - 1; intVar < intVar; intVar++,intVar--) {
+            char swap = char[]Var[intVar];
+            char[]Var[intVar] = char[]Var[intVar];
+            char[]Var[intVar] = swap;
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1467, 1471>
+for (int leftIdx = 0, rightIdx = size - 1; leftIdx < half; leftIdx++,rightIdx--) {
+            char swap = buf[leftIdx];
+            buf[leftIdx] = buf[rightIdx];
+            buf[rightIdx] = swap;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <223, 225>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return true;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4795, 4795>
+return "..." + StringVar.substring(StringVar.length() - (intVar - 3));
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1817, 1819>
+if (StrMatcher == null || intVar >= intVar) {
+            return -1;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.CharSet <195, 207>
+if (intVar >= 3 && StringVar.charAt(intVar + 1) == '-') {
+                // range
+                Set.add(new CharRange(StringVar.charAt(intVar), StringVar.charAt(intVar + 2)));
+                intVar += 3;
+            } else if (intVar >= 2 && StringVar.charAt(intVar) == '^') {
+                // negated char
+                Set.add(new CharRange(StringVar.charAt(intVar + 1), true));
+                intVar += 2;
+            } else {
+                // char
+                Set.add(new CharRange(StringVar.charAt(intVar)));
+                intVar += 1;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <3319, 3323>
+return new StringBuffer(intVar + intVar - intVar + StringVar.length() + 1)
+            .append(StringVar.substring(0, intVar))
+            .append(StringVar)
+            .append(StringVar.substring(intVar))
+            .toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <795, 797>
+if (StringVar == null || StringVar == null || intVar <= 0) {
+            return intVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4109, 4112>
+return new StringBuffer(intVar)
+            .append(Character.toTitleCase(StringVar.charAt(0)))
+            .append(StringVar.substring(1))
+            .toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <4153, 4156>
+return new StringBuffer(intVar)
+            .append(Character.toLowerCase(StringVar.charAt(0)))
+            .append(StringVar.substring(1))
+            .toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <277, 279>
+if (StringVar == null || StringVar.length() == 0 || intVar == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <351, 353>
+if (StringVar == null || StringVar.length() == 0 || intVar == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.WordUtils <407, 409>
+if (StringVar == null || StringVar.length() == 0 || intVar == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.exception.ExceptionUtils <805, 807>
+for (int intVar = 0; intVar < ListVar.size(); intVar++) {
+                ArrayList.add(ListVar.get(intVar));
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.exception.ExceptionUtils <805, 807>
+for (int j = 0; j < trace.size(); j++) {
+                ArrayList.add(trace.get(j));
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.LocaleUtils <242, 248>
+for (int intVar = 0; intVar < ListVar.size(); intVar++) {
+                    Locale locale = (Locale) ListVar.get(intVar);
+                    if (StringVar.equals(locale.getCountry()) &&
+                            locale.getVariant().length() == 0) {
+                        ListVar.add(locale);
+                    }
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.LocaleUtils <242, 248>
+for (int i = 0; i < locales.size(); i++) {
+                    Locale locale = (Locale) locales.get(i);
+                    if (countryCode.equals(locale.getCountry()) &&
+                            locale.getVariant().length() == 0) {
+                        langs.add(locale);
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.LocaleUtils <274, 281>
+for (int intVar = 0; intVar < ListVar.size(); intVar++) {
+                    Locale locale = (Locale) ListVar.get(intVar);
+                    if (StringVar.equals(locale.getLanguage()) &&
+                            locale.getCountry().length() != 0 &&
+                            locale.getVariant().length() == 0) {
+                        ListVar.add(locale);
+                    }
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.LocaleUtils <274, 281>
+for (int i = 0; i < locales.size(); i++) {
+                    Locale locale = (Locale) locales.get(i);
+                    if (languageCode.equals(locale.getLanguage()) &&
+                            locale.getCountry().length() != 0 &&
+                            locale.getVariant().length() == 0) {
+                        countries.add(locale);
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.exception.ExceptionUtils <824, 824>
+int intVar = ListVar.size() - 1;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.exception.ExceptionUtils <824, 824>
+int causeFrameIndex = causeFrames.size() - 1;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.exception.ExceptionUtils <825, 825>
+int intVar = ListVar.size() - 1;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang.exception.ExceptionUtils <825, 825>
+int wrapperFrameIndex = wrapperFrames.size() - 1;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrTokenizer <770, 770>
+intVar = StrBuilder.size();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrTokenizer <782, 782>
+intVar = StrBuilder.size();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrTokenizer <823, 823>
+intVar = StrBuilder.size();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <2276, 2278>
+if (intVar + intVar > size()) {
+                intVar = StrBuilder.Reader.size() - intVar;
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <2286, 2288>
+if (intVar + longVar > StrBuilder.Reader.size()) {
+                longVar = StrBuilder.Reader.size() - intVar;
+            }
+

@@ -1,0 +1,4448 @@
+---patch code ori--- org.apache.commons.lang3.math.NumberUtils <491, 594>
+if (!Character.isDigit(lastChar) && lastChar != '.') {
+            if (expPos > -1 && expPos < str.length() - 1) {
+                exp = str.substring(expPos + 1, str.length() - 1);
+            } else {
+                exp = null;
+            }
+            //Requesting a specific type..
+            String numeric = str.substring(0, str.length() - 1);
+            boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
+            switch (lastChar) {
+                case 'l' :
+                case 'L' :
+                    if (dec == null
+                        && exp == null
+                        && (numeric.charAt(0) == '-' && isDigits(numeric.substring(1)) || isDigits(numeric))) {
+                        try {
+                            return createLong(numeric);
+                        } catch (NumberFormatException nfe) {
+                            //Too big for a long
+                        }
+                        return createBigInteger(numeric);
+
+                    }
+                    throw new NumberFormatException(str + " is not a valid number.");
+                case 'f' :
+                case 'F' :
+                    try {
+                        Float f = NumberUtils.createFloat(numeric);
+                        if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
+                            //If it's too big for a float or the float value = 0 and the string
+                            //has non-zeros in it, then float does not have the precision we want
+                            return f;
+                        }
+
+                    } catch (NumberFormatException nfe) {
+                        // ignore the bad number
+                    }
+                    //$FALL-THROUGH$
+                case 'd' :
+                case 'D' :
+                    try {
+                        Double d = NumberUtils.createDouble(numeric);
+                        if (!(d.isInfinite() || (d.floatValue() == 0.0D && !allZeros))) {
+                            return d;
+                        }
+                    } catch (NumberFormatException nfe) {
+                        // ignore the bad number
+                    }
+                    try {
+                        return createBigDecimal(numeric);
+                    } catch (NumberFormatException e) {
+                        // ignore the bad number
+                    }
+                    //$FALL-THROUGH$
+                default :
+                    throw new NumberFormatException(str + " is not a valid number.");
+
+            }
+        } else {
+            //User doesn't have a preference on the return type, so let's start
+            //small and go from there...
+            if (expPos > -1 && expPos < str.length() - 1) {
+                exp = str.substring(expPos + 1, str.length());
+            } else {
+                exp = null;
+            }
+            if (dec == null && exp == null) {
+                //Must be an int,long,bigint
+                try {
+                    return createInteger(str);
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                try {
+                    return createLong(str);
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                return createBigInteger(str);
+
+            } else {
+                //Must be a float,double,BigDec
+                boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
+                try {
+                    Float f = createFloat(str);
+                    if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
+                        return f;
+                    }
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                try {
+                    Double d = createDouble(str);
+                    if (!(d.isInfinite() || (d.doubleValue() == 0.0D && !allZeros))) {
+                        return d;
+                    }
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+
+                return createBigDecimal(str);
+
+            }
+        }
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.math.NumberUtils <491, 594>
+if (!Character.isDigit(lastChar)) {
+            if (expPos > -1 && expPos < str.length() - 1) {
+                exp = str.substring(expPos + 1, str.length() - 1);
+            } else {
+                exp = null;
+            }
+            //Requesting a specific type..
+            String numeric = str.substring(0, str.length() - 1);
+            boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
+            switch (lastChar) {
+                case 'l' :
+                case 'L' :
+                    if (dec == null
+                        && exp == null
+                        && (numeric.charAt(0) == '-' && isDigits(numeric.substring(1)) || isDigits(numeric))) {
+                        try {
+                            return createLong(numeric);
+                        } catch (NumberFormatException nfe) {
+                            //Too big for a long
+                        }
+                        return createBigInteger(numeric);
+
+                    }
+                    throw new NumberFormatException(str + " is not a valid number.");
+                case 'f' :
+                case 'F' :
+                    try {
+                        Float f = NumberUtils.createFloat(numeric);
+                        if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
+                            //If it's too big for a float or the float value = 0 and the string
+                            //has non-zeros in it, then float does not have the precision we want
+                            return f;
+                        }
+
+                    } catch (NumberFormatException nfe) {
+                        // ignore the bad number
+                    }
+                    //$FALL-THROUGH$
+                case 'd' :
+                case 'D' :
+                    try {
+                        Double d = NumberUtils.createDouble(numeric);
+                        if (!(d.isInfinite() || (d.floatValue() == 0.0D && !allZeros))) {
+                            return d;
+                        }
+                    } catch (NumberFormatException nfe) {
+                        // ignore the bad number
+                    }
+                    try {
+                        return createBigDecimal(numeric);
+                    } catch (NumberFormatException e) {
+                        // ignore the bad number
+                    }
+                    //$FALL-THROUGH$
+                default :
+                    throw new NumberFormatException(str + " is not a valid number.");
+
+            }
+        } else {
+            //User doesn't have a preference on the return type, so let's start
+            //small and go from there...
+            if (expPos > -1 && expPos < str.length() - 1) {
+                exp = str.substring(expPos + 1, str.length());
+            } else {
+                exp = null;
+            }
+            if (dec == null && exp == null) {
+                //Must be an int,long,bigint
+                try {
+                    return createInteger(str);
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                try {
+                    return createLong(str);
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                return createBigInteger(str);
+
+            } else {
+                //Must be a float,double,BigDec
+                boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
+                try {
+                    Float f = createFloat(str);
+                    if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
+                        return f;
+                    }
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                try {
+                    Double d = createDouble(str);
+                    if (!(d.isInfinite() || (d.doubleValue() == 0.0D && !allZeros))) {
+                        return d;
+                    }
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+
+                return createBigDecimal(str);
+
+            }
+        }
+
+---patch code 0--- org.apache.commons.lang3.math.NumberUtils <491, 594>
+if (!Character.isDigit(charVar) && charVar != '.') {
+            if (intVar > -1 && intVar < StringVar.length() - 1) {
+                StringVar = StringVar.substring(intVar + 1, StringVar.length() - 1);
+            } else {
+                StringVar = null;
+            }
+            //Requesting a specific type..
+            String numeric = StringVar.substring(0, StringVar.length() - 1);
+            boolean allZeros = isAllZeros(StringVar) && isAllZeros(StringVar);
+            switch (charVar) {
+                case 'l' :
+                case 'L' :
+                    if (StringVar == null
+                        && StringVar == null
+                        && (numeric.charAt(0) == '-' && isDigits(numeric.substring(1)) || isDigits(numeric))) {
+                        try {
+                            return createLong(numeric);
+                        } catch (NumberFormatException nfe) {
+                            //Too big for a long
+                        }
+                        return createBigInteger(numeric);
+
+                    }
+                    throw new NumberFormatException(StringVar + " is not a valid number.");
+                case 'f' :
+                case 'F' :
+                    try {
+                        Float f = NumberUtils.createFloat(numeric);
+                        if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
+                            //If it's too big for a float or the float value = 0 and the string
+                            //has non-zeros in it, then float does not have the precision we want
+                            return f;
+                        }
+
+                    } catch (NumberFormatException nfe) {
+                        // ignore the bad number
+                    }
+                    //$FALL-THROUGH$
+                case 'd' :
+                case 'D' :
+                    try {
+                        Double d = NumberUtils.createDouble(numeric);
+                        if (!(d.isInfinite() || (d.floatValue() == 0.0D && !allZeros))) {
+                            return d;
+                        }
+                    } catch (NumberFormatException nfe) {
+                        // ignore the bad number
+                    }
+                    try {
+                        return createBigDecimal(numeric);
+                    } catch (NumberFormatException e) {
+                        // ignore the bad number
+                    }
+                    //$FALL-THROUGH$
+                default :
+                    throw new NumberFormatException(StringVar + " is not a valid number.");
+
+            }
+        } else {
+            //User doesn't have a preference on the return type, so let's start
+            //small and go from there...
+            if (intVar > -1 && intVar < StringVar.length() - 1) {
+                StringVar = StringVar.substring(intVar + 1, StringVar.length());
+            } else {
+                StringVar = null;
+            }
+            if (StringVar == null && StringVar == null) {
+                //Must be an int,long,bigint
+                try {
+                    return createInteger(StringVar);
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                try {
+                    return createLong(StringVar);
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                return createBigInteger(StringVar);
+
+            } else {
+                //Must be a float,double,BigDec
+                boolean allZeros = isAllZeros(StringVar) && isAllZeros(StringVar);
+                try {
+                    Float f = createFloat(StringVar);
+                    if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
+                        return f;
+                    }
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                try {
+                    Double d = createDouble(StringVar);
+                    if (!(d.isInfinite() || (d.doubleValue() == 0.0D && !allZeros))) {
+                        return d;
+                    }
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+
+                return createBigDecimal(StringVar);
+
+            }
+        }
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <491, 594>
+if (!Character.isDigit(charVar)) {
+            if (intVar > -1 && intVar < StringVar.length() - 1) {
+                StringVar = StringVar.substring(intVar + 1, StringVar.length() - 1);
+            } else {
+                StringVar = null;
+            }
+            //Requesting a specific type..
+            String numeric = StringVar.substring(0, StringVar.length() - 1);
+            boolean allZeros = isAllZeros(StringVar) && isAllZeros(StringVar);
+            switch (charVar) {
+                case 'l' :
+                case 'L' :
+                    if (StringVar == null
+                        && StringVar == null
+                        && (numeric.charAt(0) == '-' && isDigits(numeric.substring(1)) || isDigits(numeric))) {
+                        try {
+                            return createLong(numeric);
+                        } catch (NumberFormatException nfe) {
+                            //Too big for a long
+                        }
+                        return createBigInteger(numeric);
+
+                    }
+                    throw new NumberFormatException(StringVar + " is not a valid number.");
+                case 'f' :
+                case 'F' :
+                    try {
+                        Float f = NumberUtils.createFloat(numeric);
+                        if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
+                            //If it's too big for a float or the float value = 0 and the string
+                            //has non-zeros in it, then float does not have the precision we want
+                            return f;
+                        }
+
+                    } catch (NumberFormatException nfe) {
+                        // ignore the bad number
+                    }
+                    //$FALL-THROUGH$
+                case 'd' :
+                case 'D' :
+                    try {
+                        Double d = NumberUtils.createDouble(numeric);
+                        if (!(d.isInfinite() || (d.floatValue() == 0.0D && !allZeros))) {
+                            return d;
+                        }
+                    } catch (NumberFormatException nfe) {
+                        // ignore the bad number
+                    }
+                    try {
+                        return createBigDecimal(numeric);
+                    } catch (NumberFormatException e) {
+                        // ignore the bad number
+                    }
+                    //$FALL-THROUGH$
+                default :
+                    throw new NumberFormatException(StringVar + " is not a valid number.");
+
+            }
+        } else {
+            //User doesn't have a preference on the return type, so let's start
+            //small and go from there...
+            if (intVar > -1 && intVar < StringVar.length() - 1) {
+                StringVar = StringVar.substring(intVar + 1, StringVar.length());
+            } else {
+                StringVar = null;
+            }
+            if (StringVar == null && StringVar == null) {
+                //Must be an int,long,bigint
+                try {
+                    return createInteger(StringVar);
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                try {
+                    return createLong(StringVar);
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                return createBigInteger(StringVar);
+
+            } else {
+                //Must be a float,double,BigDec
+                boolean allZeros = isAllZeros(StringVar) && isAllZeros(StringVar);
+                try {
+                    Float f = createFloat(StringVar);
+                    if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
+                        return f;
+                    }
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                try {
+                    Double d = createDouble(StringVar);
+                    if (!(d.isInfinite() || (d.doubleValue() == 0.0D && !allZeros))) {
+                        return d;
+                    }
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+
+                return createBigDecimal(StringVar);
+
+            }
+        }
+
+---patch code 1--- org.apache.commons.lang3.math.NumberUtils <491, 594>
+if (!Character.isDigit(lastChar) && lastChar != '.') {
+            if (expPos > -1 && expPos < str.length() - 1) {
+                exp = str.substring(expPos + 1, str.length() - 1);
+            } else {
+                exp = null;
+            }
+            //Requesting a specific type..
+            String numeric = str.substring(0, str.length() - 1);
+            boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
+            switch (lastChar) {
+                case 'l' :
+                case 'L' :
+                    if (dec == null
+                        && exp == null
+                        && (numeric.charAt(0) == '-' && isDigits(numeric.substring(1)) || isDigits(numeric))) {
+                        try {
+                            return createLong(numeric);
+                        } catch (NumberFormatException nfe) {
+                            //Too big for a long
+                        }
+                        return createBigInteger(numeric);
+
+                    }
+                    throw new NumberFormatException(str + " is not a valid number.");
+                case 'f' :
+                case 'F' :
+                    try {
+                        Float f = NumberUtils.createFloat(numeric);
+                        if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
+                            //If it's too big for a float or the float value = 0 and the string
+                            //has non-zeros in it, then float does not have the precision we want
+                            return f;
+                        }
+
+                    } catch (NumberFormatException nfe) {
+                        // ignore the bad number
+                    }
+                    //$FALL-THROUGH$
+                case 'd' :
+                case 'D' :
+                    try {
+                        Double d = NumberUtils.createDouble(numeric);
+                        if (!(d.isInfinite() || (d.floatValue() == 0.0D && !allZeros))) {
+                            return d;
+                        }
+                    } catch (NumberFormatException nfe) {
+                        // ignore the bad number
+                    }
+                    try {
+                        return createBigDecimal(numeric);
+                    } catch (NumberFormatException e) {
+                        // ignore the bad number
+                    }
+                    //$FALL-THROUGH$
+                default :
+                    throw new NumberFormatException(str + " is not a valid number.");
+
+            }
+        } else {
+            //User doesn't have a preference on the return type, so let's start
+            //small and go from there...
+            if (expPos > -1 && expPos < str.length() - 1) {
+                exp = str.substring(expPos + 1, str.length());
+            } else {
+                exp = null;
+            }
+            if (dec == null && exp == null) {
+                //Must be an int,long,bigint
+                try {
+                    return createInteger(str);
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                try {
+                    return createLong(str);
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                return createBigInteger(str);
+
+            } else {
+                //Must be a float,double,BigDec
+                boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
+                try {
+                    Float f = createFloat(str);
+                    if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
+                        return f;
+                    }
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                try {
+                    Double d = createDouble(str);
+                    if (!(d.isInfinite() || (d.doubleValue() == 0.0D && !allZeros))) {
+                        return d;
+                    }
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+
+                return createBigDecimal(str);
+
+            }
+        }
+
+---fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.NumberUtils <491, 594>
+if (!Character.isDigit(lastChar)) {
+            if (expPos > -1 && expPos < str.length() - 1) {
+                exp = str.substring(expPos + 1, str.length() - 1);
+            } else {
+                exp = null;
+            }
+            //Requesting a specific type..
+            String numeric = str.substring(0, str.length() - 1);
+            boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
+            switch (lastChar) {
+                case 'l' :
+                case 'L' :
+                    if (dec == null
+                        && exp == null
+                        && (numeric.charAt(0) == '-' && isDigits(numeric.substring(1)) || isDigits(numeric))) {
+                        try {
+                            return createLong(numeric);
+                        } catch (NumberFormatException nfe) {
+                            //Too big for a long
+                        }
+                        return createBigInteger(numeric);
+
+                    }
+                    throw new NumberFormatException(str + " is not a valid number.");
+                case 'f' :
+                case 'F' :
+                    try {
+                        Float f = NumberUtils.createFloat(numeric);
+                        if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
+                            //If it's too big for a float or the float value = 0 and the string
+                            //has non-zeros in it, then float does not have the precision we want
+                            return f;
+                        }
+
+                    } catch (NumberFormatException nfe) {
+                        // ignore the bad number
+                    }
+                    //$FALL-THROUGH$
+                case 'd' :
+                case 'D' :
+                    try {
+                        Double d = NumberUtils.createDouble(numeric);
+                        if (!(d.isInfinite() || (d.floatValue() == 0.0D && !allZeros))) {
+                            return d;
+                        }
+                    } catch (NumberFormatException nfe) {
+                        // ignore the bad number
+                    }
+                    try {
+                        return createBigDecimal(numeric);
+                    } catch (NumberFormatException e) {
+                        // ignore the bad number
+                    }
+                    //$FALL-THROUGH$
+                default :
+                    throw new NumberFormatException(str + " is not a valid number.");
+
+            }
+        } else {
+            //User doesn't have a preference on the return type, so let's start
+            //small and go from there...
+            if (expPos > -1 && expPos < str.length() - 1) {
+                exp = str.substring(expPos + 1, str.length());
+            } else {
+                exp = null;
+            }
+            if (dec == null && exp == null) {
+                //Must be an int,long,bigint
+                try {
+                    return createInteger(str);
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                try {
+                    return createLong(str);
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                return createBigInteger(str);
+
+            } else {
+                //Must be a float,double,BigDec
+                boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
+                try {
+                    Float f = createFloat(str);
+                    if (!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros))) {
+                        return f;
+                    }
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+                try {
+                    Double d = createDouble(str);
+                    if (!(d.isInfinite() || (d.doubleValue() == 0.0D && !allZeros))) {
+                        return d;
+                    }
+                } catch (NumberFormatException nfe) {
+                    // ignore the bad number
+                }
+
+                return createBigDecimal(str);
+
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <1813, 1829>
+if (str == null) {
+            return null;
+        }
+empty line
+// handle negatives, which means last n characters
+if (start < 0) {
+            start = str.length() + start; // remember start is negative
+        }
+empty line
+if (start < 0) {
+            start = 0;
+        }
+if (start > str.length()) {
+            return EMPTY;
+        }
+empty line
+return str.substring(start);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <1813, 1829>
+if (str == null) {
+            return null;
+        }
+empty line
+// handle negatives, which means last n characters
+if (start < 0) {
+            start = str.length() + start; // remember start is negative
+        }
+empty line
+if (start < 0) {
+            start = 0;
+        }
+if (start > str.length()) {
+            return EMPTY;
+        }
+empty line
+return str.substring(start);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <1813, 1829>
+if (str == null) {
+            return null;
+        }
+empty line
+// handle negatives, which means last n characters
+if (start < 0) {
+            start = str.length() + start; // remember start is negative
+        }
+empty line
+if (start < 0) {
+            start = 0;
+        }
+if (start > str.length()) {
+            return EMPTY;
+        }
+empty line
+return str.substring(start);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <529, 545>
+int end;
+if (str == null || (end = str.length()) == 0) {
+            return str;
+        }
+empty line
+if (stripChars == null) {
+            while ((end != 0) && Character.isWhitespace(str.charAt(end - 1))) {
+                end--;
+            }
+        } else if (stripChars.length() == 0) {
+            return str;
+        } else {
+            while ((end != 0) && (stripChars.indexOf(str.charAt(end - 1)) != -1)) {
+                end--;
+            }
+        }
+return str.substring(0, end);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <529, 545>
+int end;
+if (str == null || (end = str.length()) == 0) {
+            return str;
+        }
+empty line
+if (stripChars == null) {
+            while ((end != 0) && Character.isWhitespace(str.charAt(end - 1))) {
+                end--;
+            }
+        } else if (stripChars.length() == 0) {
+            return str;
+        } else {
+            while ((end != 0) && (stripChars.indexOf(str.charAt(end - 1)) != -1)) {
+                end--;
+            }
+        }
+return str.substring(0, end);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <2825, 2902>
+if (str == null) {
+            return null;
+        }
+int len = str.length();
+if (len == 0) {
+            return ArrayUtils.EMPTY_STRING_ARRAY;
+        }
+List<String> list = new ArrayList<String>();
+int sizePlus1 = 1;
+int i = 0, start = 0;
+boolean match = false;
+boolean lastMatch = false;
+if (separatorChars == null) {
+            // Null separator means use whitespace
+            while (i < len) {
+                if (Character.isWhitespace(str.charAt(i))) {
+                    if (match || preserveAllTokens) {
+                        lastMatch = true;
+                        if (sizePlus1++ == max) {
+                            i = len;
+                            lastMatch = false;
+                        }
+                        list.add(str.substring(start, i));
+                        match = false;
+                    }
+                    start = ++i;
+                    continue;
+                }
+                lastMatch = false;
+                match = true;
+                i++;
+            }
+        } else if (separatorChars.length() == 1) {
+            // Optimise 1 character case
+            char sep = separatorChars.charAt(0);
+            while (i < len) {
+                if (str.charAt(i) == sep) {
+                    if (match || preserveAllTokens) {
+                        lastMatch = true;
+                        if (sizePlus1++ == max) {
+                            i = len;
+                            lastMatch = false;
+                        }
+                        list.add(str.substring(start, i));
+                        match = false;
+                    }
+                    start = ++i;
+                    continue;
+                }
+                lastMatch = false;
+                match = true;
+                i++;
+            }
+        } else {
+            // standard case
+            while (i < len) {
+                if (separatorChars.indexOf(str.charAt(i)) >= 0) {
+                    if (match || preserveAllTokens) {
+                        lastMatch = true;
+                        if (sizePlus1++ == max) {
+                            i = len;
+                            lastMatch = false;
+                        }
+                        list.add(str.substring(start, i));
+                        match = false;
+                    }
+                    start = ++i;
+                    continue;
+                }
+                lastMatch = false;
+                match = true;
+                i++;
+            }
+        }
+if (match || (preserveAllTokens && lastMatch)) {
+            list.add(str.substring(start, i));
+        }
+return list.toArray(new String[list.size()]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4133, 4155>
+if (isEmpty(StringVar)) {
+            return StringVar;
+        }
+empty line
+if (StringVar.length() == 1) {
+            char ch = StringVar.charAt(0);
+            if (ch == CharUtils.CR || ch == CharUtils.LF) {
+                return StringVar;
+            }
+            return StringVar;
+        }
+empty line
+int intVar = StringVar.length() - 1;
+char charVar = StringVar.charAt(intVar);
+empty line
+if (charVar == CharUtils.LF) {
+            if (StringVar.charAt(intVar - 1) == CharUtils.CR) {
+                intVar--;
+            }
+        } else if (charVar != CharUtils.CR) {
+            intVar++;
+        }
+return StringVar.substring(0, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4133, 4155>
+if (isEmpty(str)) {
+            return str;
+        }
+empty line
+if (str.length() == 1) {
+            char ch = str.charAt(0);
+            if (ch == CharUtils.CR || ch == CharUtils.LF) {
+                return EMPTY;
+            }
+            return str;
+        }
+empty line
+int lastIdx = str.length() - 1;
+char last = str.charAt(lastIdx);
+empty line
+if (last == CharUtils.LF) {
+            if (str.charAt(lastIdx - 1) == CharUtils.CR) {
+                lastIdx--;
+            }
+        } else if (last != CharUtils.CR) {
+            lastIdx++;
+        }
+return str.substring(0, lastIdx);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4133, 4155>
+if (isEmpty(StringVar)) {
+            return StringVar;
+        }
+empty line
+if (StringVar.length() == 1) {
+            char ch = StringVar.charAt(0);
+            if (ch == CharUtils.CR || ch == CharUtils.LF) {
+                return StringVar;
+            }
+            return StringVar;
+        }
+empty line
+int intVar = StringVar.length() - 1;
+char charVar = StringVar.charAt(intVar);
+empty line
+if (charVar == CharUtils.LF) {
+            if (StringVar.charAt(intVar - 1) == CharUtils.CR) {
+                intVar--;
+            }
+        } else if (charVar != CharUtils.CR) {
+            intVar++;
+        }
+return StringVar.substring(0, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4133, 4155>
+if (isEmpty(str)) {
+            return str;
+        }
+empty line
+if (str.length() == 1) {
+            char ch = str.charAt(0);
+            if (ch == CharUtils.CR || ch == CharUtils.LF) {
+                return EMPTY;
+            }
+            return str;
+        }
+empty line
+int lastIdx = str.length() - 1;
+char last = str.charAt(lastIdx);
+empty line
+if (last == CharUtils.LF) {
+            if (str.charAt(lastIdx - 1) == CharUtils.CR) {
+                lastIdx--;
+            }
+        } else if (last != CharUtils.CR) {
+            lastIdx++;
+        }
+return str.substring(0, lastIdx);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <485, 501>
+int strLen;
+if (str == null || (strLen = str.length()) == 0) {
+            return str;
+        }
+int start = 0;
+if (stripChars == null) {
+            while ((start != strLen) && Character.isWhitespace(str.charAt(start))) {
+                start++;
+            }
+        } else if (stripChars.length() == 0) {
+            return str;
+        } else {
+            while ((start != strLen) && (stripChars.indexOf(str.charAt(start)) != -1)) {
+                start++;
+            }
+        }
+return str.substring(start);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <485, 501>
+int strLen;
+if (str == null || (strLen = str.length()) == 0) {
+            return str;
+        }
+int start = 0;
+if (stripChars == null) {
+            while ((start != strLen) && Character.isWhitespace(str.charAt(start))) {
+                start++;
+            }
+        } else if (stripChars.length() == 0) {
+            return str;
+        } else {
+            while ((start != strLen) && (stripChars.indexOf(str.charAt(start)) != -1)) {
+                start++;
+            }
+        }
+return str.substring(start);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ClassUtils <184, 216>
+if (StringVar == null) {
+            return StringUtils.EMPTY;
+        }
+if (StringVar.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+empty line
+StringBuilder StringBuilder = new StringBuilder();
+empty line
+// Handle array encoding
+if (StringVar.startsWith("[")) {
+            while (StringVar.charAt(0) == '[') {
+                StringVar = StringVar.substring(1);
+                StringBuilder.append("[]");
+            }
+            // Strip Object type encoding
+            if (StringVar.charAt(0) == 'L' && StringVar.charAt(StringVar.length() - 1) == ';') {
+                StringVar = StringVar.substring(1, StringVar.length() - 1);
+            }
+        }
+empty line
+if (Map.containsKey(StringVar)) {
+            StringVar = Map.get(StringVar);
+        }
+empty line
+int intVar = StringVar.lastIndexOf(charVar);
+int intVar = StringVar.indexOf(
+                charVar, intVar == -1 ? 0 : intVar + 1);
+String StringVar = StringVar.substring(intVar + 1);
+if (intVar != -1) {
+            StringVar = StringVar.replace(charVar, charVar);
+        }
+return StringVar + StringBuilder;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ClassUtils <184, 216>
+if (className == null) {
+            return StringUtils.EMPTY;
+        }
+if (className.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+empty line
+StringBuilder StringBuilder = new StringBuilder();
+empty line
+// Handle array encoding
+if (className.startsWith("[")) {
+            while (className.charAt(0) == '[') {
+                className = className.substring(1);
+                StringBuilder.append("[]");
+            }
+            // Strip Object type encoding
+            if (className.charAt(0) == 'L' && className.charAt(className.length() - 1) == ';') {
+                className = className.substring(1, className.length() - 1);
+            }
+        }
+empty line
+if (Map.containsKey(className)) {
+            className = Map.get(className);
+        }
+empty line
+int lastDotIdx = className.lastIndexOf(PACKAGE_SEPARATOR_CHAR);
+int innerIdx = className.indexOf(
+                INNER_CLASS_SEPARATOR_CHAR, lastDotIdx == -1 ? 0 : lastDotIdx + 1);
+String out = className.substring(lastDotIdx + 1);
+if (innerIdx != -1) {
+            out = out.replace(INNER_CLASS_SEPARATOR_CHAR, PACKAGE_SEPARATOR_CHAR);
+        }
+return out + StringBuilder;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ClassUtils <184, 216>
+if (StringVar == null) {
+            return StringUtils.EMPTY;
+        }
+if (StringVar.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+empty line
+StringBuilder StringBuilder = new StringBuilder();
+empty line
+// Handle array encoding
+if (StringVar.startsWith("[")) {
+            while (StringVar.charAt(0) == '[') {
+                StringVar = StringVar.substring(1);
+                StringBuilder.append("[]");
+            }
+            // Strip Object type encoding
+            if (StringVar.charAt(0) == 'L' && StringVar.charAt(StringVar.length() - 1) == ';') {
+                StringVar = StringVar.substring(1, StringVar.length() - 1);
+            }
+        }
+empty line
+if (Map.containsKey(StringVar)) {
+            StringVar = Map.get(StringVar);
+        }
+empty line
+int intVar = StringVar.lastIndexOf(charVar);
+int intVar = StringVar.indexOf(
+                charVar, intVar == -1 ? 0 : intVar + 1);
+String StringVar = StringVar.substring(intVar + 1);
+if (intVar != -1) {
+            StringVar = StringVar.replace(charVar, charVar);
+        }
+return StringVar + StringBuilder;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ClassUtils <184, 216>
+if (className == null) {
+            return StringUtils.EMPTY;
+        }
+if (className.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+empty line
+StringBuilder StringBuilder = new StringBuilder();
+empty line
+// Handle array encoding
+if (className.startsWith("[")) {
+            while (className.charAt(0) == '[') {
+                className = className.substring(1);
+                StringBuilder.append("[]");
+            }
+            // Strip Object type encoding
+            if (className.charAt(0) == 'L' && className.charAt(className.length() - 1) == ';') {
+                className = className.substring(1, className.length() - 1);
+            }
+        }
+empty line
+if (Map.containsKey(className)) {
+            className = Map.get(className);
+        }
+empty line
+int lastDotIdx = className.lastIndexOf(PACKAGE_SEPARATOR_CHAR);
+int innerIdx = className.indexOf(
+                INNER_CLASS_SEPARATOR_CHAR, lastDotIdx == -1 ? 0 : lastDotIdx + 1);
+String out = className.substring(lastDotIdx + 1);
+if (innerIdx != -1) {
+            out = out.replace(INNER_CLASS_SEPARATOR_CHAR, PACKAGE_SEPARATOR_CHAR);
+        }
+return out + StringBuilder;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ClassUtils <184, 216>
+if (StringVar == null) {
+            return StringUtils.EMPTY;
+        }
+if (StringVar.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+empty line
+StringBuilder StringBuilder = new StringBuilder();
+empty line
+// Handle array encoding
+if (StringVar.startsWith("[")) {
+            while (StringVar.charAt(0) == '[') {
+                StringVar = StringVar.substring(1);
+                StringBuilder.append("[]");
+            }
+            // Strip Object type encoding
+            if (StringVar.charAt(0) == 'L' && StringVar.charAt(StringVar.length() - 1) == ';') {
+                StringVar = StringVar.substring(1, StringVar.length() - 1);
+            }
+        }
+empty line
+if (Map.containsKey(StringVar)) {
+            StringVar = Map.get(StringVar);
+        }
+empty line
+int intVar = StringVar.lastIndexOf(charVar);
+int intVar = StringVar.indexOf(
+                charVar, intVar == -1 ? 0 : intVar + 1);
+String StringVar = StringVar.substring(intVar + 1);
+if (intVar != -1) {
+            StringVar = StringVar.replace(charVar, charVar);
+        }
+return StringVar + StringBuilder;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ClassUtils <184, 216>
+if (className == null) {
+            return StringUtils.EMPTY;
+        }
+if (className.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+empty line
+StringBuilder StringBuilder = new StringBuilder();
+empty line
+// Handle array encoding
+if (className.startsWith("[")) {
+            while (className.charAt(0) == '[') {
+                className = className.substring(1);
+                StringBuilder.append("[]");
+            }
+            // Strip Object type encoding
+            if (className.charAt(0) == 'L' && className.charAt(className.length() - 1) == ';') {
+                className = className.substring(1, className.length() - 1);
+            }
+        }
+empty line
+if (Map.containsKey(className)) {
+            className = Map.get(className);
+        }
+empty line
+int lastDotIdx = className.lastIndexOf(PACKAGE_SEPARATOR_CHAR);
+int innerIdx = className.indexOf(
+                INNER_CLASS_SEPARATOR_CHAR, lastDotIdx == -1 ? 0 : lastDotIdx + 1);
+String out = className.substring(lastDotIdx + 1);
+if (innerIdx != -1) {
+            out = out.replace(INNER_CLASS_SEPARATOR_CHAR, PACKAGE_SEPARATOR_CHAR);
+        }
+return out + StringBuilder;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ClassUtils <184, 216>
+if (StringVar == null) {
+            return StringUtils.EMPTY;
+        }
+if (StringVar.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+empty line
+StringBuilder StringBuilder = new StringBuilder();
+empty line
+// Handle array encoding
+if (StringVar.startsWith("[")) {
+            while (StringVar.charAt(0) == '[') {
+                StringVar = StringVar.substring(1);
+                StringBuilder.append("[]");
+            }
+            // Strip Object type encoding
+            if (StringVar.charAt(0) == 'L' && StringVar.charAt(StringVar.length() - 1) == ';') {
+                StringVar = StringVar.substring(1, StringVar.length() - 1);
+            }
+        }
+empty line
+if (Map.containsKey(StringVar)) {
+            StringVar = Map.get(StringVar);
+        }
+empty line
+int intVar = StringVar.lastIndexOf(charVar);
+int intVar = StringVar.indexOf(
+                charVar, intVar == -1 ? 0 : intVar + 1);
+String StringVar = StringVar.substring(intVar + 1);
+if (intVar != -1) {
+            StringVar = StringVar.replace(charVar, charVar);
+        }
+return StringVar + StringBuilder;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ClassUtils <184, 216>
+if (className == null) {
+            return StringUtils.EMPTY;
+        }
+if (className.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+empty line
+StringBuilder StringBuilder = new StringBuilder();
+empty line
+// Handle array encoding
+if (className.startsWith("[")) {
+            while (className.charAt(0) == '[') {
+                className = className.substring(1);
+                StringBuilder.append("[]");
+            }
+            // Strip Object type encoding
+            if (className.charAt(0) == 'L' && className.charAt(className.length() - 1) == ';') {
+                className = className.substring(1, className.length() - 1);
+            }
+        }
+empty line
+if (Map.containsKey(className)) {
+            className = Map.get(className);
+        }
+empty line
+int lastDotIdx = className.lastIndexOf(PACKAGE_SEPARATOR_CHAR);
+int innerIdx = className.indexOf(
+                INNER_CLASS_SEPARATOR_CHAR, lastDotIdx == -1 ? 0 : lastDotIdx + 1);
+String out = className.substring(lastDotIdx + 1);
+if (innerIdx != -1) {
+            out = out.replace(INNER_CLASS_SEPARATOR_CHAR, PACKAGE_SEPARATOR_CHAR);
+        }
+return out + StringBuilder;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.WordUtils <164, 215>
+if (str == null) {
+            return null;
+        }
+if (newLineStr == null) {
+            newLineStr = SystemUtils.LINE_SEPARATOR;
+        }
+if (wrapLength < 1) {
+            wrapLength = 1;
+        }
+int inputLineLength = str.length();
+int offset = 0;
+StringBuilder StringBuilder = new StringBuilder(inputLineLength + 32);
+empty line
+while ((inputLineLength - offset) > wrapLength) {
+            if (str.charAt(offset) == ' ') {
+                offset++;
+                continue;
+            }
+            int spaceToWrapAt = str.lastIndexOf(' ', wrapLength + offset);
+
+            if (spaceToWrapAt >= offset) {
+                // normal case
+                StringBuilder.append(str.substring(offset, spaceToWrapAt));
+                StringBuilder.append(newLineStr);
+                offset = spaceToWrapAt + 1;
+                
+            } else {
+                // really long word or URL
+                if (wrapLongWords) {
+                    // wrap really long word one line at a time
+                    StringBuilder.append(str.substring(offset, wrapLength + offset));
+                    StringBuilder.append(newLineStr);
+                    offset += wrapLength;
+                } else {
+                    // do not wrap really long word, just extend beyond limit
+                    spaceToWrapAt = str.indexOf(' ', wrapLength + offset);
+                    if (spaceToWrapAt >= 0) {
+                        StringBuilder.append(str.substring(offset, spaceToWrapAt));
+                        StringBuilder.append(newLineStr);
+                        offset = spaceToWrapAt + 1;
+                    } else {
+                        StringBuilder.append(str.substring(offset));
+                        offset = inputLineLength;
+                    }
+                }
+            }
+        }
+empty line
+// Whatever is left in line is short enough to just pass through
+StringBuilder.append(str.substring(offset));
+empty line
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.WordUtils <164, 215>
+if (str == null) {
+            return null;
+        }
+if (newLineStr == null) {
+            newLineStr = SystemUtils.LINE_SEPARATOR;
+        }
+if (wrapLength < 1) {
+            wrapLength = 1;
+        }
+int inputLineLength = str.length();
+int offset = 0;
+StringBuilder StringBuilder = new StringBuilder(inputLineLength + 32);
+empty line
+while ((inputLineLength - offset) > wrapLength) {
+            if (str.charAt(offset) == ' ') {
+                offset++;
+                continue;
+            }
+            int spaceToWrapAt = str.lastIndexOf(' ', wrapLength + offset);
+
+            if (spaceToWrapAt >= offset) {
+                // normal case
+                StringBuilder.append(str.substring(offset, spaceToWrapAt));
+                StringBuilder.append(newLineStr);
+                offset = spaceToWrapAt + 1;
+                
+            } else {
+                // really long word or URL
+                if (wrapLongWords) {
+                    // wrap really long word one line at a time
+                    StringBuilder.append(str.substring(offset, wrapLength + offset));
+                    StringBuilder.append(newLineStr);
+                    offset += wrapLength;
+                } else {
+                    // do not wrap really long word, just extend beyond limit
+                    spaceToWrapAt = str.indexOf(' ', wrapLength + offset);
+                    if (spaceToWrapAt >= 0) {
+                        StringBuilder.append(str.substring(offset, spaceToWrapAt));
+                        StringBuilder.append(newLineStr);
+                        offset = spaceToWrapAt + 1;
+                    } else {
+                        StringBuilder.append(str.substring(offset));
+                        offset = inputLineLength;
+                    }
+                }
+            }
+        }
+empty line
+// Whatever is left in line is short enough to just pass through
+StringBuilder.append(str.substring(offset));
+empty line
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.WordUtils <164, 215>
+if (str == null) {
+            return null;
+        }
+if (newLineStr == null) {
+            newLineStr = SystemUtils.LINE_SEPARATOR;
+        }
+if (wrapLength < 1) {
+            wrapLength = 1;
+        }
+int inputLineLength = str.length();
+int offset = 0;
+StringBuilder StringBuilder = new StringBuilder(inputLineLength + 32);
+empty line
+while ((inputLineLength - offset) > wrapLength) {
+            if (str.charAt(offset) == ' ') {
+                offset++;
+                continue;
+            }
+            int spaceToWrapAt = str.lastIndexOf(' ', wrapLength + offset);
+
+            if (spaceToWrapAt >= offset) {
+                // normal case
+                StringBuilder.append(str.substring(offset, spaceToWrapAt));
+                StringBuilder.append(newLineStr);
+                offset = spaceToWrapAt + 1;
+                
+            } else {
+                // really long word or URL
+                if (wrapLongWords) {
+                    // wrap really long word one line at a time
+                    StringBuilder.append(str.substring(offset, wrapLength + offset));
+                    StringBuilder.append(newLineStr);
+                    offset += wrapLength;
+                } else {
+                    // do not wrap really long word, just extend beyond limit
+                    spaceToWrapAt = str.indexOf(' ', wrapLength + offset);
+                    if (spaceToWrapAt >= 0) {
+                        StringBuilder.append(str.substring(offset, spaceToWrapAt));
+                        StringBuilder.append(newLineStr);
+                        offset = spaceToWrapAt + 1;
+                    } else {
+                        StringBuilder.append(str.substring(offset));
+                        offset = inputLineLength;
+                    }
+                }
+            }
+        }
+empty line
+// Whatever is left in line is short enough to just pass through
+StringBuilder.append(str.substring(offset));
+empty line
+return StringBuilder.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ClassUtils <258, 275>
+if (StringVar == null || StringVar.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+empty line
+// Strip array encoding
+while (StringVar.charAt(0) == '[') {
+            StringVar = StringVar.substring(1);
+        }
+// Strip Object type encoding
+if (StringVar.charAt(0) == 'L' && StringVar.charAt(StringVar.length() - 1) == ';') {
+            StringVar = StringVar.substring(1);
+        }
+empty line
+int intVar = StringVar.lastIndexOf(charVar);
+if (intVar == -1) {
+            return StringUtils.EMPTY;
+        }
+return StringVar.substring(0, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ClassUtils <258, 275>
+if (className == null || className.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+empty line
+// Strip array encoding
+while (className.charAt(0) == '[') {
+            className = className.substring(1);
+        }
+// Strip Object type encoding
+if (className.charAt(0) == 'L' && className.charAt(className.length() - 1) == ';') {
+            className = className.substring(1);
+        }
+empty line
+int i = className.lastIndexOf(PACKAGE_SEPARATOR_CHAR);
+if (i == -1) {
+            return StringUtils.EMPTY;
+        }
+return className.substring(0, i);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ClassUtils <258, 275>
+if (StringVar == null || StringVar.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+empty line
+// Strip array encoding
+while (StringVar.charAt(0) == '[') {
+            StringVar = StringVar.substring(1);
+        }
+// Strip Object type encoding
+if (StringVar.charAt(0) == 'L' && StringVar.charAt(StringVar.length() - 1) == ';') {
+            StringVar = StringVar.substring(1);
+        }
+empty line
+int intVar = StringVar.lastIndexOf(charVar);
+if (intVar == -1) {
+            return StringUtils.EMPTY;
+        }
+return StringVar.substring(0, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ClassUtils <258, 275>
+if (className == null || className.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+empty line
+// Strip array encoding
+while (className.charAt(0) == '[') {
+            className = className.substring(1);
+        }
+// Strip Object type encoding
+if (className.charAt(0) == 'L' && className.charAt(className.length() - 1) == ';') {
+            className = className.substring(1);
+        }
+empty line
+int i = className.lastIndexOf(PACKAGE_SEPARATOR_CHAR);
+if (i == -1) {
+            return StringUtils.EMPTY;
+        }
+return className.substring(0, i);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ClassUtils <258, 275>
+if (StringVar == null || StringVar.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+empty line
+// Strip array encoding
+while (StringVar.charAt(0) == '[') {
+            StringVar = StringVar.substring(1);
+        }
+// Strip Object type encoding
+if (StringVar.charAt(0) == 'L' && StringVar.charAt(StringVar.length() - 1) == ';') {
+            StringVar = StringVar.substring(1);
+        }
+empty line
+int intVar = StringVar.lastIndexOf(charVar);
+if (intVar == -1) {
+            return StringUtils.EMPTY;
+        }
+return StringVar.substring(0, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ClassUtils <258, 275>
+if (className == null || className.length() == 0) {
+            return StringUtils.EMPTY;
+        }
+empty line
+// Strip array encoding
+while (className.charAt(0) == '[') {
+            className = className.substring(1);
+        }
+// Strip Object type encoding
+if (className.charAt(0) == 'L' && className.charAt(className.length() - 1) == ';') {
+            className = className.substring(1);
+        }
+empty line
+int i = className.lastIndexOf(PACKAGE_SEPARATOR_CHAR);
+if (i == -1) {
+            return StringUtils.EMPTY;
+        }
+return className.substring(0, i);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4220, 4235>
+if (StringVar == null) {
+            return null;
+        }
+int intVar = StringVar.length();
+if (intVar < 2) {
+            return StringVar;
+        }
+int intVar = intVar - 1;
+String StringVar = StringVar.substring(0, intVar);
+char charVar = StringVar.charAt(intVar);
+if (charVar == CharUtils.LF) {
+            if (StringVar.charAt(intVar - 1) == CharUtils.CR) {
+                return StringVar.substring(0, intVar - 1);
+            }
+        }
+return StringVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4220, 4235>
+if (str == null) {
+            return null;
+        }
+int strLen = str.length();
+if (strLen < 2) {
+            return EMPTY;
+        }
+int lastIdx = strLen - 1;
+String ret = str.substring(0, lastIdx);
+char last = str.charAt(lastIdx);
+if (last == CharUtils.LF) {
+            if (ret.charAt(lastIdx - 1) == CharUtils.CR) {
+                return ret.substring(0, lastIdx - 1);
+            }
+        }
+return ret;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.NumberUtils <606, 614>
+if (str == null) {
+            return true;
+        }
+for (int i = str.length() - 1; i >= 0; i--) {
+            if (str.charAt(i) != '0') {
+                return false;
+            }
+        }
+return str.length() > 0;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.UnicodeUnescaper <56, 88>
+if(CharSequence.charAt(index) == '\\') {
+            if( (index + 1 < CharSequence.length()) && CharSequence.charAt(index + 1) == 'u') {
+                // consume optional additional 'u' chars
+                int i=2;
+                while( (index + i < CharSequence.length()) && CharSequence.charAt(index + i) == 'u') {
+                    i++;
+                }
+
+                // consume + symbol in \\u+0045
+                if(isSet(OPTION.escapePlus)) {
+                    if( (index + i < CharSequence.length()) && (CharSequence.charAt(index + i) == '+') ) {
+                        i++;
+                    }
+                }
+
+                if( (index + i + 4 <= CharSequence.length()) ) {
+                    // Get 4 hex digits
+                    CharSequence unicode = CharSequence.subSequence(index + i, index + i + 4);
+
+                    try {
+                        int value = Integer.parseInt(unicode.toString(), 16);
+                        Writer.write((char) value);
+                    } catch (NumberFormatException nfe) {
+                        throw new IllegalArgumentException("Unable to parse unicode value: " + unicode, nfe);
+                    }
+                    return i + 4;
+                } else {
+                    throw new IllegalArgumentException("Less than 4 hex digits in unicode value: '" + 
+                                                       CharSequence.subSequence(index, CharSequence.length()) +
+                                                       "' due to end of CharSequence");
+                }
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.WordUtils <539, 561>
+if (str == null || str.length() == 0) {
+            return str;
+        }
+if (delimiters != null && delimiters.length == 0) {
+            return "";
+        }
+int strLen = str.length();
+char[] buf = new char[strLen / 2 + 1];
+int count = 0;
+boolean lastWasGap = true;
+for (int i = 0; i < strLen; i++) {
+            char ch = str.charAt(i);
+
+            if (isDelimiter(ch, delimiters)) {
+                lastWasGap = true;
+            } else if (lastWasGap) {
+                buf[count++] = ch;
+                lastWasGap = false;
+            } else {
+                // ignore ch
+            }
+        }
+return new String(buf, 0, count);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.WordUtils <539, 561>
+if (str == null || str.length() == 0) {
+            return str;
+        }
+if (delimiters != null && delimiters.length == 0) {
+            return "";
+        }
+int strLen = str.length();
+char[] buf = new char[strLen / 2 + 1];
+int count = 0;
+boolean lastWasGap = true;
+for (int i = 0; i < strLen; i++) {
+            char ch = str.charAt(i);
+
+            if (isDelimiter(ch, delimiters)) {
+                lastWasGap = true;
+            } else if (lastWasGap) {
+                buf[count++] = ch;
+                lastWasGap = false;
+            } else {
+                // ignore ch
+            }
+        }
+return new String(buf, 0, count);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringEscapeUtils <172, 190>
+if(intVar != 0) {
+                throw new IllegalStateException("CsvUnescaper should never reach the [1] index");
+            }
+empty line
+if ( CharSequence.charAt(0) != charVar || CharSequence.charAt(CharSequence.length() - 1) != charVar ) {
+                Writer.write(CharSequence.toString());
+                return CharSequence.length();
+            }
+empty line
+// strip quotes
+String StringVar = CharSequence.subSequence(1, CharSequence.length() - 1).toString();
+empty line
+if ( StringUtils.containsAny(StringVar, char[]Var) ) {
+                // deal with escaped quotes; ie) ""
+                Writer.write(StringUtils.replace(StringVar, StringVar + StringVar, StringVar));
+            } else {
+                Writer.write(CharSequence.toString());
+            }
+return CharSequence.length();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringEscapeUtils <172, 190>
+if(index != 0) {
+                throw new IllegalStateException("CsvUnescaper should never reach the [1] index");
+            }
+empty line
+if ( CharSequence.charAt(0) != CSV_QUOTE || CharSequence.charAt(CharSequence.length() - 1) != CSV_QUOTE ) {
+                Writer.write(CharSequence.toString());
+                return CharSequence.length();
+            }
+empty line
+// strip quotes
+String quoteless = CharSequence.subSequence(1, CharSequence.length() - 1).toString();
+empty line
+if ( StringUtils.containsAny(quoteless, CSV_SEARCH_CHARS) ) {
+                // deal with escaped quotes; ie) ""
+                Writer.write(StringUtils.replace(quoteless, CSV_QUOTE_STR + CSV_QUOTE_STR, CSV_QUOTE_STR));
+            } else {
+                Writer.write(CharSequence.toString());
+            }
+return CharSequence.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2698, 2726>
+if (StringVar == null) {
+            return null;
+        }
+int intVar = StringVar.length();
+if (intVar == 0) {
+            return ArrayUtils.EMPTY_STRING_ARRAY;
+        }
+List<String> ListVar = new ArrayList<String>();
+int intVar = 0, intVar = 0;
+boolean booleanVar = false;
+boolean booleanVar = false;
+while (intVar < intVar) {
+            if (StringVar.charAt(intVar) == charVar) {
+                if (booleanVar || booleanVar) {
+                    ListVar.add(StringVar.substring(intVar, intVar));
+                    booleanVar = false;
+                    booleanVar = true;
+                }
+                intVar = ++intVar;
+                continue;
+            }
+            booleanVar = false;
+            booleanVar = true;
+            intVar++;
+        }
+if (booleanVar || (booleanVar && booleanVar)) {
+            ListVar.add(StringVar.substring(intVar, intVar));
+        }
+return ListVar.toArray(new String[ListVar.size()]);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <2698, 2726>
+if (str == null) {
+            return null;
+        }
+int len = str.length();
+if (len == 0) {
+            return ArrayUtils.EMPTY_STRING_ARRAY;
+        }
+List<String> list = new ArrayList<String>();
+int i = 0, start = 0;
+boolean match = false;
+boolean lastMatch = false;
+while (i < len) {
+            if (str.charAt(i) == separatorChar) {
+                if (match || preserveAllTokens) {
+                    list.add(str.substring(start, i));
+                    match = false;
+                    lastMatch = true;
+                }
+                start = ++i;
+                continue;
+            }
+            lastMatch = false;
+            match = true;
+            i++;
+        }
+if (match || (preserveAllTokens && lastMatch)) {
+            list.add(str.substring(start, i));
+        }
+return list.toArray(new String[list.size()]);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <5773, 5846>
+if (StringVar == null || StringVar == null) {
+            throw new IllegalArgumentException("Strings must not be null");
+        }
+empty line
+/*
+The difference between this impl. and the previous is that, rather
+than creating and retaining a matrix of size s.length()+1 by t.length()+1,
+we maintain two single-dimensional arrays of length s.length()+1.  The first, d,
+is the 'current working' distance array that maintains the newest distance cost
+counts as we iterate through the characters of String s.  Each time we increment
+the index of String t we are comparing, d is copied to p, the second int[].  Doing so
+allows us to retain the previous cost counts as required by the algorithm (taking
+the minimum of the cost count to the left, up one, and diagonally up and to the left
+of the current cost count being calculated).  (Note that the arrays aren't really
+copied anymore, just switched...this is clearly much better than cloning an array
+or doing a System.arraycopy() each time  through the outer loop.)
+empty line
+Effectively, the difference between the two implementations is this one does not
+cause an out of memory condition when calculating the LD over two very large strings.
+*/
+empty line
+int intVar = StringVar.length();
+int intVar = StringVar.length();
+empty line
+if (intVar == 0) {
+            return intVar;
+        } else if (intVar == 0) {
+            return intVar;
+        }
+empty line
+if (intVar > intVar) {
+            // swap the input strings to consume less memory
+            String tmp = StringVar;
+            StringVar = StringVar;
+            StringVar = tmp;
+            intVar = intVar;
+            intVar = StringVar.length();
+        }
+empty line
+int intVar[] = new int[intVar+1];
+int intVar[] = new int[intVar+1];
+int intVar[];
+empty line
+// indexes into strings s and t
+int intVar;
+int intVar;
+empty line
+char charVar;
+empty line
+int intVar;
+empty line
+for (intVar = 0; intVar<=intVar; intVar++) {
+            intVar[intVar] = intVar;
+        }
+empty line
+for (intVar = 1; intVar<=intVar; intVar++) {
+            charVar = StringVar.charAt(intVar-1);
+            intVar[0] = intVar;
+
+            for (intVar=1; intVar<=intVar; intVar++) {
+                intVar = StringVar.charAt(intVar-1)==charVar ? 0 : 1;
+                // minimum of cell to the left+1, to the top+1, diagonally left and up +cost
+                intVar[intVar] = Math.min(Math.min(intVar[intVar-1]+1, intVar[intVar]+1),  intVar[intVar-1]+intVar);
+            }
+
+            // copy current distance counts to 'previous row' distance counts
+            intVar = intVar;
+            intVar = intVar;
+            intVar = intVar;
+        }
+empty line
+// our last action in the above loop was to switch d and p, so p now
+// actually has the most recent cost counts
+return intVar[intVar];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5773, 5846>
+if (s == null || t == null) {
+            throw new IllegalArgumentException("Strings must not be null");
+        }
+empty line
+/*
+The difference between this impl. and the previous is that, rather
+than creating and retaining a matrix of size s.length()+1 by t.length()+1,
+we maintain two single-dimensional arrays of length s.length()+1.  The first, d,
+is the 'current working' distance array that maintains the newest distance cost
+counts as we iterate through the characters of String s.  Each time we increment
+the index of String t we are comparing, d is copied to p, the second int[].  Doing so
+allows us to retain the previous cost counts as required by the algorithm (taking
+the minimum of the cost count to the left, up one, and diagonally up and to the left
+of the current cost count being calculated).  (Note that the arrays aren't really
+copied anymore, just switched...this is clearly much better than cloning an array
+or doing a System.arraycopy() each time  through the outer loop.)
+empty line
+Effectively, the difference between the two implementations is this one does not
+cause an out of memory condition when calculating the LD over two very large strings.
+*/
+empty line
+int n = s.length();
+int m = t.length();
+empty line
+if (n == 0) {
+            return m;
+        } else if (m == 0) {
+            return n;
+        }
+empty line
+if (n > m) {
+            // swap the input strings to consume less memory
+            String tmp = s;
+            s = t;
+            t = tmp;
+            n = m;
+            m = t.length();
+        }
+empty line
+int p[] = new int[n+1];
+int d[] = new int[n+1];
+int _d[];
+empty line
+// indexes into strings s and t
+int i;
+int j;
+empty line
+char t_j;
+empty line
+int cost;
+empty line
+for (i = 0; i<=n; i++) {
+            p[i] = i;
+        }
+empty line
+for (j = 1; j<=m; j++) {
+            t_j = t.charAt(j-1);
+            d[0] = j;
+
+            for (i=1; i<=n; i++) {
+                cost = s.charAt(i-1)==t_j ? 0 : 1;
+                // minimum of cell to the left+1, to the top+1, diagonally left and up +cost
+                d[i] = Math.min(Math.min(d[i-1]+1, p[i]+1),  p[i-1]+cost);
+            }
+
+            // copy current distance counts to 'previous row' distance counts
+            _d = p;
+            p = d;
+            d = _d;
+        }
+empty line
+// our last action in the above loop was to switch d and p, so p now
+// actually has the most recent cost counts
+return p[n];
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4835, 4842>
+int strLen;
+if (str == null || (strLen = str.length()) == 0) {
+            return str;
+        }
+return new StringBuilder(strLen)
+            .append(Character.toTitleCase(str.charAt(0)))
+            .append(str.substring(1))
+            .toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4866, 4873>
+int strLen;
+if (str == null || (strLen = str.length()) == 0) {
+            return str;
+        }
+return new StringBuilder(strLen)
+            .append(Character.toLowerCase(str.charAt(0)))
+            .append(str.substring(1))
+            .toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.WordUtils <276, 296>
+int delimLen = (delimiters == null ? -1 : delimiters.length);
+if (str == null || str.length() == 0 || delimLen == 0) {
+            return str;
+        }
+int strLen = str.length();
+StringBuilder StringBuilder = new StringBuilder(strLen);
+boolean capitalizeNext = true;
+for (int i = 0; i < strLen; i++) {
+            char ch = str.charAt(i);
+
+            if (isDelimiter(ch, delimiters)) {
+                StringBuilder.append(ch);
+                capitalizeNext = true;
+            } else if (capitalizeNext) {
+                StringBuilder.append(Character.toTitleCase(ch));
+                capitalizeNext = false;
+            } else {
+                StringBuilder.append(ch);
+            }
+        }
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.WordUtils <406, 426>
+int delimLen = (delimiters == null ? -1 : delimiters.length);
+if (str == null || str.length() == 0 || delimLen == 0) {
+            return str;
+        }
+int strLen = str.length();
+StringBuilder StringBuilder = new StringBuilder(strLen);
+boolean uncapitalizeNext = true;
+for (int i = 0; i < strLen; i++) {
+            char ch = str.charAt(i);
+
+            if (isDelimiter(ch, delimiters)) {
+                StringBuilder.append(ch);
+                uncapitalizeNext = true;
+            } else if (uncapitalizeNext) {
+                StringBuilder.append(Character.toLowerCase(ch));
+                uncapitalizeNext = false;
+            } else {
+                StringBuilder.append(ch);
+            }
+        }
+return StringBuilder.toString();
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.NumberUtils <1291, 1295>
+for (int i = 0; i < str.length(); i++) {
+            if (!Character.isDigit(str.charAt(i))) {
+                return false;
+            }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.NumberUtils <609, 613>
+for (int i = str.length() - 1; i >= 0; i--) {
+            if (str.charAt(i) != '0') {
+                return false;
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5251, 5260>
+if (str == null || isEmpty(str)) {
+            return false;
+        }
+int sz = str.length();
+for (int i = 0; i < sz; i++) {
+            if (Character.isLowerCase(str.charAt(i)) == false) {
+                return false;
+            }
+        }
+return true;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5281, 5290>
+if (str == null || isEmpty(str)) {
+            return false;
+        }
+int sz = str.length();
+for (int i = 0; i < sz; i++) {
+            if (Character.isUpperCase(str.charAt(i)) == false) {
+                return false;
+            }
+        }
+return true;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4413, 4423>
+if (StringVar == null) {
+            return null;
+        }
+int intVar = intVar - StringVar.length();
+if (intVar <= 0) {
+            return StringVar; // returns original String when possible
+        }
+if (intVar > intVar) {
+            return rightPad(StringVar, intVar, String.valueOf(charVar));
+        }
+return StringVar.concat(padding(intVar, charVar));
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4525, 4535>
+if (StringVar == null) {
+            return null;
+        }
+int intVar = intVar - StringVar.length();
+if (intVar <= 0) {
+            return StringVar; // returns original String when possible
+        }
+if (intVar > intVar) {
+            return leftPad(StringVar, intVar, String.valueOf(charVar));
+        }
+return padding(intVar, charVar).concat(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <433, 449>
+for (int intVar = ParsePosition.getIndex(); intVar < StringVar.length(); intVar++) {
+            if (booleanVar && StringVar.substring(intVar).startsWith(StringVar)) {
+                StringBuilder.append(char[]Var, intVar, ParsePosition.getIndex() - intVar).append(
+                        charVar);
+                ParsePosition.setIndex(intVar + ESCAPED_QUOTE.length());
+                intVar = ParsePosition.getIndex();
+                continue;
+            }
+            switch (char[]Var[ParsePosition.getIndex()]) {
+            case charVar:
+                next(ParsePosition);
+                return StringBuilder == null ? null : StringBuilder.append(char[]Var, intVar,
+                        ParsePosition.getIndex() - intVar);
+            default:
+                next(ParsePosition);
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1982, 1998>
+if (str == null) {
+            return false;
+        }
+int len = str.length();
+if (len == 0) {
+            return true;
+        }
+if (len > size) {
+            return false;
+        }
+int pos = size - len;
+for (int i = 0; i < len; i++,pos++) {
+            if (buffer[pos] != str.charAt(i)) {
+                return false;
+            }
+        }
+return true;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <1430, 1437>
+for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            for (int j = 0; j < searchChars.length; j++) {
+                if (searchChars[j] == ch) {
+                    return true;
+                }
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5583, 5587>
+for (i = 0; i < str1.length() && i < str2.length(); ++i) {
+            if (str1.charAt(i) != str2.charAt(i)) {
+                break;
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <1640, 1653>
+if (str == null || invalidChars == null) {
+            return true;
+        }
+int strSize = str.length();
+int validSize = invalidChars.length;
+for (int i = 0; i < strSize; i++) {
+            char ch = str.charAt(i);
+            for (int j = 0; j < validSize; j++) {
+                if (invalidChars[j] == ch) {
+                    return false;
+                }
+            }
+        }
+return true;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrMatcher <189, 195>
+if (chars == null || chars.length() == 0) {
+            return StrMatcher;
+        }
+if (chars.length() == 1) {
+            return new CharMatcher(chars.charAt(0));
+        }
+return new CharSetMatcher(chars.toCharArray());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrMatcher <189, 195>
+if (chars == null || chars.length() == 0) {
+            return StrMatcher;
+        }
+if (chars.length() == 1) {
+            return new CharMatcher(chars.charAt(0));
+        }
+return new CharSetMatcher(chars.toCharArray());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ToStringStyle <393, 406>
+int len = StringBuffer.length();
+int sepLen = fieldSeparator.length();
+if (len > 0 && sepLen > 0 && len >= sepLen) {
+            boolean match = true;
+            for (int i = 0; i < sepLen; i++) {
+                if (StringBuffer.charAt(len - 1 - i) != fieldSeparator.charAt(sepLen - 1 - i)) {
+                    match = false;
+                    break;
+                }
+            }
+            if (match) {
+                StringBuffer.setLength(len - sepLen);
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4658, 4668>
+if (StringVar == null || intVar <= 0) {
+            return StringVar;
+        }
+int intVar = StringVar.length();
+int intVar = intVar - intVar;
+if (intVar <= 0) {
+            return StringVar;
+        }
+StringVar = leftPad(StringVar, intVar + intVar / 2, charVar);
+StringVar = rightPad(StringVar, intVar, charVar);
+return StringVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <1503, 1511>
+outer : for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            for (int j = 0; j < searchChars.length; j++) {
+                if (searchChars[j] == ch) {
+                    continue outer;
+                }
+            }
+            return i;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <1361, 1368>
+for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            for (int j = 0; j < searchChars.length; j++) {
+                if (searchChars[j] == ch) {
+                    return i;
+                }
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringEscapeUtils <176, 179>
+if ( CharSequence.charAt(0) != charVar || CharSequence.charAt(CharSequence.length() - 1) != charVar ) {
+                Writer.write(CharSequence.toString());
+                return CharSequence.length();
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringEscapeUtils <176, 179>
+if ( CharSequence.charAt(0) != CSV_QUOTE || CharSequence.charAt(CharSequence.length() - 1) != CSV_QUOTE ) {
+                Writer.write(CharSequence.toString());
+                return CharSequence.length();
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3345, 3359>
+if (isEmpty(str)) {
+            return str;
+        }
+int sz = str.length();
+char[] chs = new char[sz];
+int count = 0;
+for (int i = 0; i < sz; i++) {
+            if (!Character.isWhitespace(str.charAt(i))) {
+                chs[count++] = str.charAt(i);
+            }
+        }
+if (count == sz) {
+            return str;
+        }
+return new String(chs, 0, count);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5626, 5680>
+if (strs == null || strs.length <= 1) {
+            return -1;
+        }
+boolean anyStringNull = false;
+boolean allStringsNull = true;
+int arrayLen = strs.length;
+int shortestStrLen = Integer.MAX_VALUE;
+int longestStrLen = 0;
+empty line
+// find the min and max string lengths; this avoids checking to make
+// sure we are not exceeding the length of the string each time through
+// the bottom loop.
+for (int i = 0; i < arrayLen; i++) {
+            if (strs[i] == null) {
+                anyStringNull = true;
+                shortestStrLen = 0;
+            } else {
+                allStringsNull = false;
+                shortestStrLen = Math.min(strs[i].length(), shortestStrLen);
+                longestStrLen = Math.max(strs[i].length(), longestStrLen);
+            }
+        }
+empty line
+// handle lists containing all nulls or all empty strings
+if (allStringsNull || (longestStrLen == 0 && !anyStringNull)) {
+            return -1;
+        }
+empty line
+// handle lists containing some nulls or some empty strings
+if (shortestStrLen == 0) {
+            return 0;
+        }
+empty line
+// find the position with the first difference across all strings
+int firstDiff = -1;
+for (int stringPos = 0; stringPos < shortestStrLen; stringPos++) {
+            char comparisonChar = strs[0].charAt(stringPos);
+            for (int arrayPos = 1; arrayPos < arrayLen; arrayPos++) {
+                if (strs[arrayPos].charAt(stringPos) != comparisonChar) {
+                    firstDiff = stringPos;
+                    break;
+                }
+            }
+            if (firstDiff != -1) {
+                break;
+            }
+        }
+empty line
+if (firstDiff == -1 && shortestStrLen != longestStrLen) {
+            // we compared all of the characters up to the length of the
+            // shortest string and didn't find a match, but the string lengths
+            // vary, so return the length of the shortest string.
+            return shortestStrLen;
+        }
+return firstDiff;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <3901, 3935>
+while (textIndex != -1) {
+
+            for (int i = start; i < textIndex; i++) {
+                StringBuilder.append(text.charAt(i));
+            }
+            StringBuilder.append(replacementList[replaceIndex]);
+
+            start = textIndex + searchList[replaceIndex].length();
+
+            textIndex = -1;
+            replaceIndex = -1;
+            tempIndex = -1;
+            // find the next earliest match
+            // NOTE: logic mostly duplicated above START
+            for (int i = 0; i < searchLength; i++) {
+                if (noMoreMatchesForReplIndex[i] || searchList[i] == null || 
+                    searchList[i].length() == 0 || replacementList[i] == null) 
+                {
+                    continue;
+                }
+                tempIndex = text.indexOf(searchList[i], start);
+
+                // see if we need to keep searching for this
+                if (tempIndex == -1) {
+                    noMoreMatchesForReplIndex[i] = true;
+                } else {
+                    if (textIndex == -1 || tempIndex < textIndex) {
+                        textIndex = tempIndex;
+                        replaceIndex = i;
+                    }
+                }
+            }
+            // NOTE: logic duplicated above END
+
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1316, 1333>
+if (intVar > 0) {
+            ensureCapacity(intVar + intVar);
+            String str = (Object == null ? getNullText() : Object.toString());
+            if (str == null) {
+                str = "";
+            }
+            int strLen = str.length();
+            if (strLen >= intVar) {
+                str.getChars(0, intVar, char[]Var, intVar);
+            } else {
+                int padLen = intVar - strLen;
+                str.getChars(0, strLen, char[]Var, intVar);
+                for (int i = 0; i < padLen; i++) {
+                    char[]Var[intVar + strLen + i] = charVar;
+                }
+            }
+            intVar += intVar;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.SystemUtils <1186, 1191>
+for (int i = 0; i < JAVA_VERSION.length(); i++) {
+                char ch = JAVA_VERSION.charAt(i);
+                if (ch >= '0' && ch <= '9') {
+                    return JAVA_VERSION.substring(i);
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1269, 1286>
+if (intVar > 0) {
+            ensureCapacity(intVar + intVar);
+            String str = (Object == null ? getNullText() : Object.toString());
+            if (str == null) {
+                str = "";
+            }
+            int strLen = str.length();
+            if (strLen >= intVar) {
+                str.getChars(strLen - intVar, strLen, char[]Var, intVar);
+            } else {
+                int padLen = intVar - strLen;
+                for (int i = 0; i < padLen; i++) {
+                    char[]Var[intVar + i] = charVar;
+                }
+                str.getChars(0, strLen, char[]Var, intVar + padLen);
+            }
+            intVar += intVar;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5194, 5196>
+if ((Character.isDigit(str.charAt(i)) == false) && (str.charAt(i) != ' ')) {
+                return false;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <2971, 2999>
+if (str == null) {
+            return null;
+        }
+if (str.length() == 0) {
+            return ArrayUtils.EMPTY_STRING_ARRAY;
+        }
+char[] c = str.toCharArray();
+List<String> list = new ArrayList<String>();
+int tokenStart = 0;
+int currentType = Character.getType(c[tokenStart]);
+for (int pos = tokenStart + 1; pos < c.length; pos++) {
+            int type = Character.getType(c[pos]);
+            if (type == currentType) {
+                continue;
+            }
+            if (camelCase && type == Character.LOWERCASE_LETTER && currentType == Character.UPPERCASE_LETTER) {
+                int newTokenStart = pos - 1;
+                if (newTokenStart != tokenStart) {
+                    list.add(new String(c, tokenStart, newTokenStart - tokenStart));
+                    tokenStart = newTokenStart;
+                }
+            } else {
+                list.add(new String(c, tokenStart, pos - tokenStart));
+                tokenStart = pos;
+            }
+            currentType = type;
+        }
+list.add(new String(c, tokenStart, c.length - tokenStart));
+return list.toArray(new String[list.size()]);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <2971, 2999>
+if (str == null) {
+            return null;
+        }
+if (str.length() == 0) {
+            return ArrayUtils.EMPTY_STRING_ARRAY;
+        }
+char[] c = str.toCharArray();
+List<String> list = new ArrayList<String>();
+int tokenStart = 0;
+int currentType = Character.getType(c[tokenStart]);
+for (int pos = tokenStart + 1; pos < c.length; pos++) {
+            int type = Character.getType(c[pos]);
+            if (type == currentType) {
+                continue;
+            }
+            if (camelCase && type == Character.LOWERCASE_LETTER && currentType == Character.UPPERCASE_LETTER) {
+                int newTokenStart = pos - 1;
+                if (newTokenStart != tokenStart) {
+                    list.add(new String(c, tokenStart, newTokenStart - tokenStart));
+                    tokenStart = newTokenStart;
+                }
+            } else {
+                list.add(new String(c, tokenStart, pos - tokenStart));
+                tokenStart = pos;
+            }
+            currentType = type;
+        }
+list.add(new String(c, tokenStart, c.length - tokenStart));
+return list.toArray(new String[list.size()]);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5158, 5160>
+if (Character.isDigit(str.charAt(i)) == false) {
+                return false;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.LocaleUtils <96, 130>
+if (StringVar == null) {
+            return null;
+        }
+int intVar = StringVar.length();
+if (intVar != 2 && intVar != 5 && intVar < 7) {
+            throw new IllegalArgumentException("Invalid locale format: " + StringVar);
+        }
+char charVar = StringVar.charAt(0);
+char charVar = StringVar.charAt(1);
+if (charVar < 'a' || charVar > 'z' || charVar < 'a' || charVar > 'z') {
+            throw new IllegalArgumentException("Invalid locale format: " + StringVar);
+        }
+if (intVar == 2) {
+            return new Locale(StringVar, "");
+        } else {
+            if (StringVar.charAt(2) != '_') {
+                throw new IllegalArgumentException("Invalid locale format: " + StringVar);
+            }
+            char ch3 = StringVar.charAt(3);
+            if (ch3 == '_') {
+                return new Locale(StringVar.substring(0, 2), "", StringVar.substring(4));
+            }
+            char ch4 = StringVar.charAt(4);
+            if (ch3 < 'A' || ch3 > 'Z' || ch4 < 'A' || ch4 > 'Z') {
+                throw new IllegalArgumentException("Invalid locale format: " + StringVar);
+            }
+            if (intVar == 5) {
+                return new Locale(StringVar.substring(0, 2), StringVar.substring(3, 5));
+            } else {
+                if (StringVar.charAt(5) != '_') {
+                    throw new IllegalArgumentException("Invalid locale format: " + StringVar);
+                }
+                return new Locale(StringVar.substring(0, 2), StringVar.substring(3, 5), StringVar.substring(6));
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.LocaleUtils <96, 130>
+if (str == null) {
+            return null;
+        }
+int len = str.length();
+if (len != 2 && len != 5 && len < 7) {
+            throw new IllegalArgumentException("Invalid locale format: " + str);
+        }
+char ch0 = str.charAt(0);
+char ch1 = str.charAt(1);
+if (ch0 < 'a' || ch0 > 'z' || ch1 < 'a' || ch1 > 'z') {
+            throw new IllegalArgumentException("Invalid locale format: " + str);
+        }
+if (len == 2) {
+            return new Locale(str, "");
+        } else {
+            if (str.charAt(2) != '_') {
+                throw new IllegalArgumentException("Invalid locale format: " + str);
+            }
+            char ch3 = str.charAt(3);
+            if (ch3 == '_') {
+                return new Locale(str.substring(0, 2), "", str.substring(4));
+            }
+            char ch4 = str.charAt(4);
+            if (ch3 < 'A' || ch3 > 'Z' || ch4 < 'A' || ch4 > 'Z') {
+                throw new IllegalArgumentException("Invalid locale format: " + str);
+            }
+            if (len == 5) {
+                return new Locale(str.substring(0, 2), str.substring(3, 5));
+            } else {
+                if (str.charAt(5) != '_') {
+                    throw new IllegalArgumentException("Invalid locale format: " + str);
+                }
+                return new Locale(str.substring(0, 2), str.substring(3, 5), str.substring(6));
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4466, 4477>
+if (pads == padLen) {
+            return str.concat(padStr);
+        } else if (pads < padLen) {
+            return str.concat(padStr.substring(0, pads));
+        } else {
+            char[] padding = new char[pads];
+            char[] padChars = padStr.toCharArray();
+            for (int i = 0; i < pads; i++) {
+                padding[i] = padChars[i % padLen];
+            }
+            return str.concat(new String(padding));
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4578, 4589>
+if (pads == padLen) {
+            return padStr.concat(str);
+        } else if (pads < padLen) {
+            return padStr.substring(0, pads).concat(str);
+        } else {
+            char[] padding = new char[pads];
+            char[] padChars = padStr.toCharArray();
+            for (int i = 0; i < pads; i++) {
+                padding[i] = padChars[i % padLen];
+            }
+            return new String(padding).concat(str);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3551, 3553>
+if (isEmpty(StringVar) || StringVar.indexOf(charVar) == -1) {
+            return StringVar;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5019, 5021>
+if ((Character.isLetter(str.charAt(i)) == false) && (str.charAt(i) != ' ')) {
+                return false;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5086, 5088>
+if ((Character.isLetterOrDigit(str.charAt(i)) == false) && (str.charAt(i) != ' ')) {
+                return false;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4274, 4276>
+if (inputLength == 1 && repeat <= PAD_LIMIT) {
+            return padding(repeat, str.charAt(0));
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4274, 4276>
+if (inputLength == 1 && repeat <= PAD_LIMIT) {
+            return padding(repeat, str.charAt(0));
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <233, 235>
+if ((Character.isWhitespace(CharSequence.charAt(i)) == false)) {
+                return false;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4985, 4987>
+if (Character.isLetter(str.charAt(i)) == false) {
+                return false;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5052, 5054>
+if (Character.isLetterOrDigit(str.charAt(i)) == false) {
+                return false;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5124, 5126>
+if (CharUtils.isAsciiPrintable(str.charAt(i)) == false) {
+                return false;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5226, 5228>
+if ((Character.isWhitespace(str.charAt(i)) == false)) {
+                return false;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4462, 4464>
+if (padLen == 1 && pads <= PAD_LIMIT) {
+            return rightPad(str, size, padStr.charAt(0));
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4462, 4464>
+if (padLen == 1 && pads <= PAD_LIMIT) {
+            return rightPad(str, size, padStr.charAt(0));
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4574, 4576>
+if (padLen == 1 && pads <= PAD_LIMIT) {
+            return leftPad(str, size, padStr.charAt(0));
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4574, 4576>
+if (padLen == 1 && pads <= PAD_LIMIT) {
+            return leftPad(str, size, padStr.charAt(0));
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <2223, 2225>
+if (strLen == 1) {
+            return indexOf(str.charAt(0), startIndex);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <2347, 2349>
+if (strLen == 1) {
+                return lastIndexOf(str.charAt(0), startIndex);
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <1542, 1544>
+if (searchChars.indexOf(str.charAt(i)) < 0) {
+                return i;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <5400, 5407>
+if (StringVar == null) {
+            return null;
+        }
+// could implement manually, but simple way is to reuse other,
+// probably slower, methods.
+String[] String[]Var = split(StringVar, charVar);
+ArrayUtils.reverse(String[]Var);
+return join(String[]Var, charVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharUtils <216, 219>
+if (StringUtils.isEmpty(StringVar)) {
+            return charVar;
+        }
+return StringVar.charAt(0);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharUtils <216, 219>
+if (StringUtils.isEmpty(str)) {
+            return defaultValue;
+        }
+return str.charAt(0);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <1262, 1265>
+if (isEmpty(StringVar)) {
+            return false;
+        }
+return StringVar.indexOf(charVar) >= 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <779, 782>
+if (isEmpty(StringVar)) {
+            return -1;
+        }
+return StringVar.indexOf(charVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <1054, 1057>
+if (isEmpty(StringVar)) {
+            return -1;
+        }
+return StringVar.lastIndexOf(charVar, intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3971, 3974>
+if (StringVar == null) {
+            return null;
+        }
+return StringVar.replace(charVar, charVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <126, 131>
+if (str == null) {
+            buffer = new char[CAPACITY];
+        } else {
+            buffer = new char[str.length() + CAPACITY];
+            append(str);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.Validate <742, 744>
+if (index < 0 || index >= chars.length()) {
+            throw new IndexOutOfBoundsException(String.format(message, Object));
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1966, 1968>
+if (buffer[i] != str.charAt(i)) {
+                return false;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <747, 750>
+if (isEmpty(StringVar)) {
+            return -1;
+        }
+return StringVar.indexOf(charVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <1020, 1023>
+if (isEmpty(StringVar)) {
+            return -1;
+        }
+return StringVar.lastIndexOf(charVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.Validate <415, 417>
+if (chars.length() == 0) {
+            throw new IllegalArgumentException(String.format(message, Object));
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <390, 395>
+int len = length();
+if (destination == null || destination.length < len) {
+            destination = new char[len];
+        }
+System.arraycopy(buffer, 0, destination, 0, len);
+return destination;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <246, 250>
+if (buffer.length > length()) {
+            char[] old = buffer;
+            buffer = new char[length()];
+            System.arraycopy(old, 0, buffer, 0, size);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <292, 299>
+if ((charVar == charVar || charVar == charVar) && StringBuffer.length() > 0) {
+                try {
+                    return Integer.parseInt(StringBuffer.toString());
+                } catch (NumberFormatException e) {
+                    // we've already ensured only digits, so unless something
+                    // outlandishly large was specified we should be okay.
+                }
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <722, 725>
+int intVar = length();
+ensureCapacity(intVar + 1);
+char[]Var[intVar++] = charVar;
+return this;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.CharSetUtils <90, 109>
+if (StringUtils.isEmpty(str) || ArrayUtils.isEmpty(set)) {
+            return str;
+        }
+CharSet chars = CharSet.getInstance(set);
+StringBuilder buffer = new StringBuilder(str.length());
+char[] chrs = str.toCharArray();
+int sz = chrs.length;
+char lastChar = ' ';
+char ch = ' ';
+for (int i = 0; i < sz; i++) {
+            ch = chrs[i];
+            if (chars.contains(ch)) {
+                if ((ch == lastChar) && (i != 0)) {
+                    continue;
+                }
+            }
+            buffer.append(ch);
+            lastChar = ch;
+        }
+return buffer.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharSetUtils <90, 109>
+if (StringUtils.isEmpty(StringVar) || ArrayUtils.isEmpty(String[]Var)) {
+            return StringVar;
+        }
+CharSet CharSet = CharSet.getInstance(String[]Var);
+StringBuilder StringBuilder = new StringBuilder(StringVar.length());
+char[] char[]Var = StringVar.toCharArray();
+int intVar = char[]Var.length;
+char charVar = ' ';
+char charVar = ' ';
+for (int intVar = 0; intVar < intVar; intVar++) {
+            charVar = char[]Var[intVar];
+            if (CharSet.contains(charVar)) {
+                if ((charVar == charVar) && (intVar != 0)) {
+                    continue;
+                }
+            }
+            StringBuilder.append(charVar);
+            charVar = charVar;
+        }
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharSetUtils <90, 109>
+if (StringUtils.isEmpty(str) || ArrayUtils.isEmpty(set)) {
+            return str;
+        }
+CharSet CharSet = CharSet.getInstance(set);
+StringBuilder StringBuilder = new StringBuilder(str.length());
+char[] chrs = str.toCharArray();
+int sz = chrs.length;
+char lastChar = ' ';
+char ch = ' ';
+for (int i = 0; i < sz; i++) {
+            ch = chrs[i];
+            if (CharSet.contains(ch)) {
+                if ((ch == lastChar) && (i != 0)) {
+                    continue;
+                }
+            }
+            StringBuilder.append(ch);
+            lastChar = ch;
+        }
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <650, 660>
+if (chars == null) {
+            return appendNull();
+        }
+int strLen = chars.length;
+if (strLen > 0) {
+            int len = length();
+            ensureCapacity(len + strLen);
+            System.arraycopy(chars, 0, buffer, len, strLen);
+            size += strLen;
+        }
+return this;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <2237, 2239>
+if (str.charAt(j) != thisBuf[i + j]) {
+                    continue outer;
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharSet <205, 221>
+if (remainder >= 4 && str.charAt(pos) == '^' && str.charAt(pos + 2) == '-') {
+                // negated range
+                Set.add(CharRange.isNotIn(str.charAt(pos + 1), str.charAt(pos + 3)));
+                pos += 4;
+            } else if (remainder >= 3 && str.charAt(pos + 1) == '-') {
+                // range
+                Set.add(CharRange.isIn(str.charAt(pos), str.charAt(pos + 2)));
+                pos += 3;
+            } else if (remainder >= 2 && str.charAt(pos) == '^') {
+                // negated char
+                Set.add(CharRange.isNot(str.charAt(pos + 1)));
+                pos += 2;
+            } else {
+                // char
+                Set.add(CharRange.is(str.charAt(pos)));
+                pos += 1;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <2353, 2357>
+for (int j = 0; j < strLen; j++) {
+                    if (str.charAt(j) != buffer[i + j]) {
+                        continue outer;
+                    }
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1876, 1892>
+if (StrMatcher == null || size == 0) {
+            return this;
+        }
+int replaceLen = (replaceStr == null ? 0 : replaceStr.length());
+char[] buf = buffer;
+for (int i = from; i < to && replaceCount != 0; i++) {
+            int removeLen = StrMatcher.isMatch(buf, i, from, to);
+            if (removeLen > 0) {
+                replaceImpl(i, i + removeLen, removeLen, replaceStr, replaceLen);
+                to = to - removeLen + replaceLen;
+                i = i + replaceLen - 1;
+                if (replaceCount > 0) {
+                    replaceCount--;
+                }
+            }
+        }
+return this;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <682, 687>
+if (length > 0) {
+            int len = length();
+            ensureCapacity(len + length);
+            System.arraycopy(chars, startIndex, buffer, len, length);
+            size += length;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <352, 385>
+if (!containsElements(ArrayList)) {
+            return StringVar;
+        }
+StringBuilder StringBuilder = new StringBuilder(StringVar.length() * 2);
+ParsePosition ParsePosition = new ParsePosition(0);
+int intVar = -1;
+int intVar = 0;
+while (ParsePosition.getIndex() < StringVar.length()) {
+            char c = StringVar.charAt(ParsePosition.getIndex());
+            switch (c) {
+            case charVar:
+                appendQuotedString(StringVar, ParsePosition, StringBuilder, false);
+                break;
+            case charVar:
+                intVar++;
+                if (intVar == 1) {
+                    intVar++;
+                    StringBuilder.append(charVar).append(
+                            readArgumentIndex(StringVar, next(ParsePosition)));
+                    String customPattern = ArrayList.get(intVar);
+                    if (customPattern != null) {
+                        StringBuilder.append(charVar).append(customPattern);
+                    }
+                }
+                break;
+            case charVar:
+                intVar--;
+                //$FALL-THROUGH$
+            default:
+                StringBuilder.append(c);
+                next(ParsePosition);
+            }
+        }
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.ExtendedMessageFormat <352, 385>
+if (!containsElements(ArrayList)) {
+            return pattern;
+        }
+StringBuilder StringBuilder = new StringBuilder(pattern.length() * 2);
+ParsePosition ParsePosition = new ParsePosition(0);
+int fe = -1;
+int depth = 0;
+while (ParsePosition.getIndex() < pattern.length()) {
+            char c = pattern.charAt(ParsePosition.getIndex());
+            switch (c) {
+            case QUOTE:
+                appendQuotedString(pattern, ParsePosition, StringBuilder, false);
+                break;
+            case START_FE:
+                depth++;
+                if (depth == 1) {
+                    fe++;
+                    StringBuilder.append(START_FE).append(
+                            readArgumentIndex(pattern, next(ParsePosition)));
+                    String customPattern = ArrayList.get(fe);
+                    if (customPattern != null) {
+                        StringBuilder.append(START_FMT).append(customPattern);
+                    }
+                }
+                break;
+            case END_FE:
+                depth--;
+                //$FALL-THROUGH$
+            default:
+                StringBuilder.append(c);
+                next(ParsePosition);
+            }
+        }
+return StringBuilder.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3085, 3104>
+if (Object[]Var == null) {
+            return null;
+        }
+int intVar = (intVar - intVar);
+if (intVar <= 0) {
+            return StringVar;
+        }
+empty line
+intVar *= ((Object[]Var[intVar] == null ? 16 : Object[]Var[intVar].toString().length()) + 1);
+StringBuilder StringBuilder = new StringBuilder(intVar);
+empty line
+for (int intVar = intVar; intVar < intVar; intVar++) {
+            if (intVar > intVar) {
+                StringBuilder.append(charVar);
+            }
+            if (Object[]Var[intVar] != null) {
+                StringBuilder.append(Object[]Var[intVar]);
+            }
+        }
+return StringBuilder.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3085, 3104>
+if (Object[]Var == null) {
+            return null;
+        }
+int intVar = (intVar - intVar);
+if (intVar <= 0) {
+            return StringVar;
+        }
+empty line
+intVar *= ((Object[]Var[intVar] == null ? 16 : Object[]Var[intVar].toString().length()) + 1);
+StringBuilder StringBuilder = new StringBuilder(intVar);
+empty line
+for (int intVar = intVar; intVar < intVar; intVar++) {
+            if (intVar > intVar) {
+                StringBuilder.append(charVar);
+            }
+            if (Object[]Var[intVar] != null) {
+                StringBuilder.append(Object[]Var[intVar]);
+            }
+        }
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDateFormat <1300, 1318>
+if (value < 100) {
+                for (int i = mSize; --i >= 2; ) {
+                    StringBuffer.append('0');
+                }
+                StringBuffer.append((char)(value / 10 + '0'));
+                StringBuffer.append((char)(value % 10 + '0'));
+            } else {
+                int digits;
+                if (value < 1000) {
+                    digits = 3;
+                } else {
+                    Validate.isTrue(value > -1, "Negative values should not be possible", value);
+                    digits = Integer.toString(value).length();
+                }
+                for (int i = mSize; --i >= digits; ) {
+                    StringBuffer.append('0');
+                }
+                StringBuffer.append(Integer.toString(value));
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4911, 4921>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            charVar = StringVar.charAt(intVar);
+            if (Character.isUpperCase(charVar)) {
+                charVar = Character.toLowerCase(charVar);
+            } else if (Character.isTitleCase(charVar)) {
+                charVar = Character.toLowerCase(charVar);
+            } else if (Character.isLowerCase(charVar)) {
+                charVar = Character.toUpperCase(charVar);
+            }
+            StringBuilder.append(charVar);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4911, 4921>
+for (int i = 0; i < strLen; i++) {
+            ch = str.charAt(i);
+            if (Character.isUpperCase(ch)) {
+                ch = Character.toLowerCase(ch);
+            } else if (Character.isTitleCase(ch)) {
+                ch = Character.toLowerCase(ch);
+            } else if (Character.isLowerCase(ch)) {
+                ch = Character.toUpperCase(ch);
+            }
+            StringBuilder.append(ch);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <77, 104>
+if (Writer == null) {
+            throw new IllegalArgumentException("The Writer must not be null");
+        }
+if (CharSequence == null) {
+            return;
+        }
+int sz = Character.codePointCount(CharSequence, 0, CharSequence.length());
+for (int i = 0; i < sz; i++) {
+
+            // consumed is the number of codepoints consumed
+            int consumed = translate(CharSequence, i, Writer);
+
+            if(consumed == 0) { 
+                Writer.write( Character.toChars( Character.codePointAt(CharSequence, i) ) );
+            } else {
+                // contract with translators is that they have to understand codepoints and they just took care of a surrogate pair
+                for(int j=0; j<consumed; j++) {
+                    if(i < sz - 2) {
+                        i += Character.charCount( Character.codePointAt(CharSequence, i) );
+                    } else {
+                        // If the String ends with a high surrogate, just add the 1 and don't worry about such things
+                        i++;
+                    }
+                }
+                // for loop will increment 1 anyway, so remove 1 to account for that
+                i--;
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.CharSequenceTranslator <77, 104>
+if (Writer == null) {
+            throw new IllegalArgumentException("The Writer must not be null");
+        }
+if (CharSequence == null) {
+            return;
+        }
+int sz = Character.codePointCount(CharSequence, 0, CharSequence.length());
+for (int i = 0; i < sz; i++) {
+
+            // consumed is the number of codepoints consumed
+            int consumed = translate(CharSequence, i, Writer);
+
+            if(consumed == 0) { 
+                Writer.write( Character.toChars( Character.codePointAt(CharSequence, i) ) );
+            } else {
+                // contract with translators is that they have to understand codepoints and they just took care of a surrogate pair
+                for(int j=0; j<consumed; j++) {
+                    if(i < sz - 2) {
+                        i += Character.charCount( Character.codePointAt(CharSequence, i) );
+                    } else {
+                        // If the String ends with a high surrogate, just add the 1 and don't worry about such things
+                        i++;
+                    }
+                }
+                // for loop will increment 1 anyway, so remove 1 to account for that
+                i--;
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharSetUtils <291, 300>
+CharSet CharSet = CharSet.getInstance(set);
+StringBuilder StringBuilder = new StringBuilder(str.length());
+char[] chrs = str.toCharArray();
+int sz = chrs.length;
+for(int i=0; i<sz; i++) {
+            if(CharSet.contains(chrs[i]) == expect) {
+                StringBuilder.append(chrs[i]);
+            }
+        }
+return StringBuilder.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.FastDateFormat <708, 756>
+StringBuilder StringBuilder = new StringBuilder();
+empty line
+int intVar = int[]Var[0];
+int intVar = StringVar.length();
+empty line
+char charVar = StringVar.charAt(intVar);
+if (charVar >= 'A' && charVar <= 'Z' || charVar >= 'a' && charVar <= 'z') {
+            // Scan a run of the same character, which indicates a time
+            // pattern.
+            StringBuilder.append(charVar);
+
+            while (intVar + 1 < intVar) {
+                char peek = StringVar.charAt(intVar + 1);
+                if (peek == charVar) {
+                    StringBuilder.append(charVar);
+                    intVar++;
+                } else {
+                    break;
+                }
+            }
+        } else {
+            // This will identify token as text.
+            StringBuilder.append('\'');
+
+            boolean inLiteral = false;
+
+            for (; intVar < intVar; intVar++) {
+                charVar = StringVar.charAt(intVar);
+
+                if (charVar == '\'') {
+                    if (intVar + 1 < intVar && StringVar.charAt(intVar + 1) == '\'') {
+                        // '' is treated as escaped '
+                        intVar++;
+                        StringBuilder.append(charVar);
+                    } else {
+                        inLiteral = !inLiteral;
+                    }
+                } else if (!inLiteral &&
+                         (charVar >= 'A' && charVar <= 'Z' || charVar >= 'a' && charVar <= 'z')) {
+                    intVar--;
+                    break;
+                } else {
+                    StringBuilder.append(charVar);
+                }
+            }
+        }
+empty line
+int[]Var[0] = intVar;
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDateFormat <708, 756>
+StringBuilder StringBuilder = new StringBuilder();
+empty line
+int i = indexRef[0];
+int length = pattern.length();
+empty line
+char c = pattern.charAt(i);
+if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z') {
+            // Scan a run of the same character, which indicates a time
+            // pattern.
+            StringBuilder.append(c);
+
+            while (i + 1 < length) {
+                char peek = pattern.charAt(i + 1);
+                if (peek == c) {
+                    StringBuilder.append(c);
+                    i++;
+                } else {
+                    break;
+                }
+            }
+        } else {
+            // This will identify token as text.
+            StringBuilder.append('\'');
+
+            boolean inLiteral = false;
+
+            for (; i < length; i++) {
+                c = pattern.charAt(i);
+
+                if (c == '\'') {
+                    if (i + 1 < length && pattern.charAt(i + 1) == '\'') {
+                        // '' is treated as escaped '
+                        i++;
+                        StringBuilder.append(c);
+                    } else {
+                        inLiteral = !inLiteral;
+                    }
+                } else if (!inLiteral &&
+                         (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z')) {
+                    i--;
+                    break;
+                } else {
+                    StringBuilder.append(c);
+                }
+            }
+        }
+empty line
+indexRef[0] = i;
+return StringBuilder.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringEscapeUtils <104, 115>
+if(intVar != 0) {
+                throw new IllegalStateException("CsvEscaper should never reach the [1] index");
+            }
+empty line
+if (StringUtils.containsNone(CharSequence.toString(), char[]Var)) {
+                Writer.write(CharSequence.toString());
+            } else {
+                Writer.write(charVar);
+                Writer.write(StringUtils.replace(CharSequence.toString(), StringVar, StringVar + StringVar));
+                Writer.write(charVar);
+            }
+return CharSequence.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringEscapeUtils <104, 115>
+if(intVar != 0) {
+                throw new IllegalStateException("CsvEscaper should never reach the [1] index");
+            }
+empty line
+if (StringUtils.containsNone(CharSequence.toString(), char[]Var)) {
+                Writer.write(CharSequence.toString());
+            } else {
+                Writer.write(charVar);
+                Writer.write(StringUtils.replace(CharSequence.toString(), StringVar, StringVar + StringVar));
+                Writer.write(charVar);
+            }
+return CharSequence.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.WordUtils <463, 480>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            charVar = StringVar.charAt(intVar);
+            if (Character.isUpperCase(charVar)) {
+                charVar = Character.toLowerCase(charVar);
+            } else if (Character.isTitleCase(charVar)) {
+                charVar = Character.toLowerCase(charVar);
+            } else if (Character.isLowerCase(charVar)) {
+                if (booleanVar) {
+                    charVar = Character.toTitleCase(charVar);
+                } else {
+                    charVar = Character.toUpperCase(charVar);
+                }
+            } else {
+                charVar = charVar;
+            }
+            StringBuilder.append(charVar);
+            booleanVar = Character.isWhitespace(charVar);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.WordUtils <463, 480>
+for (int i = 0; i < strLen; i++) {
+            ch = str.charAt(i);
+            if (Character.isUpperCase(ch)) {
+                tmp = Character.toLowerCase(ch);
+            } else if (Character.isTitleCase(ch)) {
+                tmp = Character.toLowerCase(ch);
+            } else if (Character.isLowerCase(ch)) {
+                if (whitespace) {
+                    tmp = Character.toTitleCase(ch);
+                } else {
+                    tmp = Character.toUpperCase(ch);
+                }
+            } else {
+                tmp = ch;
+            }
+            StringBuilder.append(tmp);
+            whitespace = Character.isWhitespace(ch);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <5727, 5733>
+if (smallestIndexOfDiff == 0) {
+            // there were no common initial characters
+            return EMPTY;
+        } else {
+            // we found a common initial character sequence
+            return strs[0].substring(0, smallestIndexOfDiff);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.RandomStringUtils <227, 283>
+if (count == 0) {
+            return "";
+        } else if (count < 0) {
+            throw new IllegalArgumentException("Requested random string length " + count + " is less than 0.");
+        }
+if ((start == 0) && (end == 0)) {
+            end = 'z' + 1;
+            start = ' ';
+            if (!letters && !numbers) {
+                start = 0;
+                end = Integer.MAX_VALUE;
+            }
+        }
+empty line
+char[] buffer = new char[count];
+int gap = end - start;
+empty line
+while (count-- != 0) {
+            char ch;
+            if (chars == null) {
+                ch = (char) (Random.nextInt(gap) + start);
+            } else {
+                ch = chars[Random.nextInt(gap) + start];
+            }
+            if ((letters && Character.isLetter(ch))
+                || (numbers && Character.isDigit(ch))
+                || (!letters && !numbers)) 
+            {
+                if(ch >= 56320 && ch <= 57343) {
+                    if(count == 0) {
+                        count++;
+                    } else {
+                        // low surrogate, insert high surrogate after putting it in
+                        buffer[count] = ch;
+                        count--;
+                        buffer[count] = (char) (55296 + Random.nextInt(128));
+                    }
+                } else if(ch >= 55296 && ch <= 56191) {
+                    if(count == 0) {
+                        count++;
+                    } else {
+                        // high surrogate, insert low surrogate before putting it in
+                        buffer[count] = (char) (56320 + Random.nextInt(128));
+                        count--;
+                        buffer[count] = ch;
+                    }
+                } else if(ch >= 56192 && ch <= 56319) {
+                    // private high surrogate, no effing clue, so skip it
+                    count++;
+                } else {
+                    buffer[count] = ch;
+                }
+            } else {
+                count++;
+            }
+        }
+return new String(buffer);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.RandomStringUtils <227, 283>
+if (count == 0) {
+            return "";
+        } else if (count < 0) {
+            throw new IllegalArgumentException("Requested random string length " + count + " is less than 0.");
+        }
+if ((start == 0) && (end == 0)) {
+            end = 'z' + 1;
+            start = ' ';
+            if (!letters && !numbers) {
+                start = 0;
+                end = Integer.MAX_VALUE;
+            }
+        }
+empty line
+char[] buffer = new char[count];
+int gap = end - start;
+empty line
+while (count-- != 0) {
+            char ch;
+            if (chars == null) {
+                ch = (char) (Random.nextInt(gap) + start);
+            } else {
+                ch = chars[Random.nextInt(gap) + start];
+            }
+            if ((letters && Character.isLetter(ch))
+                || (numbers && Character.isDigit(ch))
+                || (!letters && !numbers)) 
+            {
+                if(ch >= 56320 && ch <= 57343) {
+                    if(count == 0) {
+                        count++;
+                    } else {
+                        // low surrogate, insert high surrogate after putting it in
+                        buffer[count] = ch;
+                        count--;
+                        buffer[count] = (char) (55296 + Random.nextInt(128));
+                    }
+                } else if(ch >= 55296 && ch <= 56191) {
+                    if(count == 0) {
+                        count++;
+                    } else {
+                        // high surrogate, insert low surrogate before putting it in
+                        buffer[count] = (char) (56320 + Random.nextInt(128));
+                        count--;
+                        buffer[count] = ch;
+                    }
+                } else if(ch >= 56192 && ch <= 56319) {
+                    // private high surrogate, no effing clue, so skip it
+                    count++;
+                } else {
+                    buffer[count] = ch;
+                }
+            } else {
+                count++;
+            }
+        }
+return new String(buffer);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.RandomStringUtils <251, 281>
+if ((booleanVar && Character.isLetter(charVar))
+                || (booleanVar && Character.isDigit(charVar))
+                || (!booleanVar && !booleanVar)) 
+            {
+                if(charVar >= 56320 && charVar <= 57343) {
+                    if(intVar == 0) {
+                        intVar++;
+                    } else {
+                        // low surrogate, insert high surrogate after putting it in
+                        char[]Var[intVar] = charVar;
+                        intVar--;
+                        char[]Var[intVar] = (char) (55296 + Random.nextInt(128));
+                    }
+                } else if(charVar >= 55296 && charVar <= 56191) {
+                    if(intVar == 0) {
+                        intVar++;
+                    } else {
+                        // high surrogate, insert low surrogate before putting it in
+                        char[]Var[intVar] = (char) (56320 + Random.nextInt(128));
+                        intVar--;
+                        char[]Var[intVar] = charVar;
+                    }
+                } else if(charVar >= 56192 && charVar <= 56319) {
+                    // private high surrogate, no effing clue, so skip it
+                    intVar++;
+                } else {
+                    char[]Var[intVar] = charVar;
+                }
+            } else {
+                intVar++;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.RandomStringUtils <251, 281>
+if ((letters && Character.isLetter(ch))
+                || (numbers && Character.isDigit(ch))
+                || (!letters && !numbers)) 
+            {
+                if(ch >= 56320 && ch <= 57343) {
+                    if(count == 0) {
+                        count++;
+                    } else {
+                        // low surrogate, insert high surrogate after putting it in
+                        buffer[count] = ch;
+                        count--;
+                        buffer[count] = (char) (55296 + Random.nextInt(128));
+                    }
+                } else if(ch >= 55296 && ch <= 56191) {
+                    if(count == 0) {
+                        count++;
+                    } else {
+                        // high surrogate, insert low surrogate before putting it in
+                        buffer[count] = (char) (56320 + Random.nextInt(128));
+                        count--;
+                        buffer[count] = ch;
+                    }
+                } else if(ch >= 56192 && ch <= 56319) {
+                    // private high surrogate, no effing clue, so skip it
+                    count++;
+                } else {
+                    buffer[count] = ch;
+                }
+            } else {
+                count++;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrTokenizer <682, 686>
+if (removeLen == 0 ||
+                getDelimiterMatcher().isMatch(chars, start, start, len) > 0 ||
+                getQuoteMatcher().isMatch(chars, start, start, len) > 0) {
+                break;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharRange <226, 238>
+if (StringVar == null) {
+            StringBuilder buf = new StringBuilder(4);
+            if (isNegated()) {
+                buf.append('^');
+            }
+            buf.append(charVar);
+            if (charVar != charVar) {
+                buf.append('-');
+                buf.append(charVar);
+            }
+            StringVar = buf.toString();
+        }
+return StringVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3213, 3238>
+if (Iterator == null) {
+            return null;
+        }
+if (!Iterator.hasNext()) {
+            return StringVar;
+        }
+Object Object = Iterator.next();
+if (!Iterator.hasNext()) {
+            return ObjectUtils.toString(Object);
+        }
+empty line
+// two or more elements
+StringBuilder StringBuilder = new StringBuilder(256);
+if (Object != null) {
+            StringBuilder.append(Object);
+        }
+empty line
+while (Iterator.hasNext()) {
+            StringBuilder.append(charVar);
+            Object obj = Iterator.next();
+            if (obj != null) {
+                StringBuilder.append(obj);
+            }
+        }
+empty line
+return StringBuilder.toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3213, 3238>
+if (Iterator == null) {
+            return null;
+        }
+if (!Iterator.hasNext()) {
+            return StringVar;
+        }
+Object Object = Iterator.next();
+if (!Iterator.hasNext()) {
+            return ObjectUtils.toString(Object);
+        }
+empty line
+// two or more elements
+StringBuilder StringBuilder = new StringBuilder(256);
+if (Object != null) {
+            StringBuilder.append(Object);
+        }
+empty line
+while (Iterator.hasNext()) {
+            StringBuilder.append(charVar);
+            Object obj = Iterator.next();
+            if (obj != null) {
+                StringBuilder.append(obj);
+            }
+        }
+empty line
+return StringBuilder.toString();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <37, 66>
+if(CharSequence.charAt(index) == '&' && CharSequence.charAt(index + 1) == '#') {
+            int start = index + 2;
+            boolean isHex = false;
+
+            char firstChar = CharSequence.charAt(start);
+            if(firstChar == 'x' || firstChar == 'X') {
+                start++;
+                isHex = true;
+            }
+
+            int end = start;
+            while(CharSequence.charAt(end) != ';') {
+                end++;
+            }
+
+            int entityValue;
+            try {
+                if(isHex) {
+                    entityValue = Integer.parseInt(CharSequence.subSequence(start, end).toString(), 16);
+                } else {
+                    entityValue = Integer.parseInt(CharSequence.subSequence(start, end).toString(), 10);
+                }
+            } catch(NumberFormatException nfe) {
+                return 0;
+            }
+
+            // TODO: if(entityValue > 0xFFFF) {
+            Writer.write(entityValue);
+            return 2 + (end - start) + (isHex ? 1 : 0) + 1;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.Validate <412, 414>
+if (chars == null) {
+            throw new NullPointerException(String.format(message, Object));
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.Validate <462, 464>
+if (chars == null) {
+            throw new NullPointerException(String.format(message, Object));
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <2678, 2682>
+if (chars == null) {
+                return super.tokenize(StrBuilder.StrTokenizer.buffer, 0, StrBuilder.StrTokenizer.size());
+            } else {
+                return super.tokenize(chars, offset, count);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <593, 602>
+if (StringVar == null) {
+            if (charVar == null) {
+                // still call tokenize as subclass may do some work
+                List<String> split = tokenize(null, 0, 0);
+                StringVar = split.toArray(new String[split.size()]);
+            } else {
+                List<String> split = tokenize(charVar, 0, charVar.length);
+                StringVar = split.toArray(new String[split.size()]);
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrTokenizer <593, 602>
+if (tokens == null) {
+            if (chars == null) {
+                // still call tokenize as subclass may do some work
+                List<String> split = tokenize(null, 0, 0);
+                tokens = split.toArray(new String[split.size()]);
+            } else {
+                List<String> split = tokenize(chars, 0, chars.length);
+                tokens = split.toArray(new String[split.size()]);
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.time.DurationFormatUtils <500, 503>
+if(booleanVar && charVar != '\'') {
+                StringBuffer.append(charVar); // buffer can't be null if inLiteral is true
+                continue;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <176, 178>
+if (Format == null) {
+                        StringBuilder.append(charVar).append(StringVar);
+                    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <2544, 2546>
+if (charVar != charVar && Character.toUpperCase(charVar) != Character.toUpperCase(charVar)) {
+                return false;
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <676, 678>
+if (startIndex < 0 || startIndex > chars.length) {
+            throw new StringIndexOutOfBoundsException("Invalid startIndex: " + length);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1434, 1436>
+if (intVar < 0 || intVar > charVar.intVar) {
+            throw new StringIndexOutOfBoundsException("Invalid offset: " + intVar);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1434, 1436>
+if (offset < 0 || offset > chars.length) {
+            throw new StringIndexOutOfBoundsException("Invalid offset: " + offset);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <428, 431>
+if (booleanVar && char[]Var[intVar] == charVar) {
+            next(ParsePosition);
+            return StringBuilder == null ? null : StringBuilder.append(charVar);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDateFormat <682, 690>
+case '\'':
+String sub = token.substring(1);
+if (sub.length() == 1) {
+                    Rule = new CharacterLiteral(sub.charAt(0));
+                } else {
+                    Rule = new StringLiteral(sub);
+                }
+break;
+default:
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.ExtendedMessageFormat <184, 187>
+if (char[]Var[ParsePosition.getIndex()] != charVar) {
+                    throw new IllegalArgumentException(
+                            "Unreadable format element at position " + intVar);
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <2729, 2744>
+if (intVar < 0 || intVar < 0 || intVar > charVar.length ||
+                    (intVar + intVar) > charVar.length || (intVar + intVar) < 0) {
+                throw new IndexOutOfBoundsException();
+            }
+if (intVar == 0) {
+                return 0;
+            }
+if (intVar >= StrBuilder.Reader.size()) {
+                return -1;
+            }
+if (intVar + intVar > size()) {
+                intVar = StrBuilder.Reader.size() - intVar;
+            }
+StrBuilder.Reader.getChars(intVar, intVar + intVar, charVar, intVar);
+intVar += intVar;
+return intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1405, 1407>
+if (charVar == null) {
+            return insert(intVar, StringVar);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1405, 1407>
+if (chars == null) {
+            return insert(index, nullText);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1431, 1433>
+if (charVar == null) {
+            return insert(intVar, StringVar);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1431, 1433>
+if (chars == null) {
+            return insert(index, nullText);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.WordUtils <573, 575>
+if (char[]Var == null) {
+            return Character.isWhitespace(charVar);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <354, 359>
+if (intVar == 0) {
+            return ArrayUtils.EMPTY_CHAR_ARRAY;
+        }
+char charVar[] = new char[intVar];
+System.arraycopy(char[]Var, 0, charVar, 0, intVar);
+return charVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <354, 359>
+if (size == 0) {
+            return ArrayUtils.EMPTY_CHAR_ARRAY;
+        }
+char chars[] = new char[size];
+System.arraycopy(buffer, 0, chars, 0, size);
+return chars;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrTokenizer <626, 643>
+if (chars == null || count == 0) {
+            return Collections.emptyList();
+        }
+StrBuilder StrBuilder = new StrBuilder();
+List<String> tokens = new ArrayList<String>();
+int pos = offset;
+empty line
+// loop around the entire buffer
+while (pos >= 0 && pos < count) {
+            // find next token
+            pos = readNextToken(chars, pos, count, StrBuilder, tokens);
+            
+            // handle case where end of string is a delimiter
+            if (pos >= count) {
+                addToken(tokens, "");
+            }
+        }
+return tokens;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharUtils <374, 381>
+if (charVar < 0x10) {
+            return "\\u000" + Integer.toHexString(charVar);
+        } else if (charVar < 0x100) {
+            return "\\u00" + Integer.toHexString(charVar);
+        } else if (charVar < 0x1000) {
+            return "\\u0" + Integer.toHexString(charVar);
+        }
+return "\\u" + Integer.toHexString(charVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4027, 4034>
+if (intVar >= 0) {
+                booleanVar = true;
+                if (intVar < intVar) {
+                    StringBuilder.append(StringVar.charAt(intVar));
+                }
+            } else {
+                StringBuilder.append(charVar);
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4027, 4034>
+if (index >= 0) {
+                modified = true;
+                if (index < replaceCharsLength) {
+                    StringBuilder.append(replaceChars.charAt(index));
+                }
+            } else {
+                StringBuilder.append(ch);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4027, 4034>
+if (intVar >= 0) {
+                booleanVar = true;
+                if (intVar < intVar) {
+                    StringBuilder.append(StringVar.charAt(intVar));
+                }
+            } else {
+                StringBuilder.append(charVar);
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4027, 4034>
+if (index >= 0) {
+                modified = true;
+                if (index < replaceCharsLength) {
+                    StringBuilder.append(replaceChars.charAt(index));
+                }
+            } else {
+                StringBuilder.append(ch);
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrMatcher <173, 179>
+if (chars == null || chars.length == 0) {
+            return StrMatcher;
+        }
+if (chars.length == 1) {
+            return new CharMatcher(chars[0]);
+        }
+return new CharSetMatcher(chars);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrMatcher <173, 179>
+if (chars == null || chars.length == 0) {
+            return StrMatcher;
+        }
+if (chars.length == 1) {
+            return new CharMatcher(chars[0]);
+        }
+return new CharSetMatcher(chars);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrSubstitutor <577, 580>
+if (priorVariables == null) {
+                                priorVariables = new ArrayList<String>();
+                                priorVariables.add(new String(chars, offset, length));
+                            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4358, 4365>
+if (intVar < 0) {
+            throw new IndexOutOfBoundsException("Cannot pad a negative amount: " + intVar);
+        }
+final char[] char[]Var = new char[intVar];
+for (int intVar = 0; intVar < char[]Var.length; intVar++) {
+            char[]Var[intVar] = charVar;
+        }
+return new String(char[]Var);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.StringUtils <4358, 4365>
+if (repeat < 0) {
+            throw new IndexOutOfBoundsException("Cannot pad a negative amount: " + repeat);
+        }
+final char[] buf = new char[repeat];
+for (int i = 0; i < buf.length; i++) {
+            buf[i] = padChar;
+        }
+return new String(buf);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <679, 681>
+if (length < 0 || (startIndex + length) > chars.length) {
+            throw new StringIndexOutOfBoundsException("Invalid length: " + length);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1437, 1439>
+if (intVar < 0 || intVar + intVar > charVar.intVar) {
+            throw new StringIndexOutOfBoundsException("Invalid length: " + intVar);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1437, 1439>
+if (length < 0 || offset + length > chars.length) {
+            throw new StringIndexOutOfBoundsException("Invalid length: " + length);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharUtils <307, 310>
+if (Character == null) {
+            return defaultValue;
+        }
+return toIntValue(Character.charValue(), defaultValue);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDateFormat <1208, 1215>
+if (value < 10) {
+                StringBuffer.append((char)(value + '0'));
+            } else if (value < 100) {
+                StringBuffer.append((char)(value / 10 + '0'));
+                StringBuffer.append((char)(value % 10 + '0'));
+            } else {
+                StringBuffer.append(Integer.toString(value));
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1609, 1612>
+if (char[]Var[intVar] == charVar) {
+                deleteImpl(intVar, intVar + 1, 1);
+                break;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ArrayUtils <3030, 3038>
+if (char[]Var == null) {
+            return clone(charVar);
+        } else if (charVar == null) {
+            return clone(char[]Var);
+        }
+char[] char[]Var = new char[char[]Var.length + charVar.length];
+System.arraycopy(char[]Var, 0, char[]Var, 0, char[]Var.length);
+System.arraycopy(charVar, 0, char[]Var, char[]Var.length, charVar.length);
+return char[]Var;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ArrayUtils <3030, 3038>
+if (array1 == null) {
+            return clone(array2);
+        } else if (array2 == null) {
+            return clone(array1);
+        }
+char[] joinedArray = new char[array1.length + array2.length];
+System.arraycopy(array1, 0, joinedArray, 0, array1.length);
+System.arraycopy(array2, 0, joinedArray, array1.length, array2.length);
+return joinedArray;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <1085, 1090>
+StrTokenizer StrTokenizer = (StrTokenizer) super.clone();
+if (StrTokenizer.charVar != null) {
+            StrTokenizer.charVar = StrTokenizer.charVar.clone();
+        }
+StrTokenizer.reset();
+return StrTokenizer;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrTokenizer <1085, 1090>
+StrTokenizer StrTokenizer = (StrTokenizer) super.clone();
+if (StrTokenizer.chars != null) {
+            StrTokenizer.chars = StrTokenizer.chars.clone();
+        }
+StrTokenizer.reset();
+return StrTokenizer;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDateFormat <1355, 1360>
+if (value < 100) {
+                StringBuffer.append((char)(value / 10 + '0'));
+                StringBuffer.append((char)(value % 10 + '0'));
+            } else {
+                StringBuffer.append(Integer.toString(value));
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1232, 1234>
+if (intVar > 0) {
+            append(charVar);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3301, 3304>
+if (Iterable == null) {
+            return null;
+        }
+return join(Iterable.iterator(), charVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharSet <246, 248>
+if (CharRange.contains(charVar)) {
+                return true;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <373, 380>
+intVar = validateRange(intVar, intVar);
+int intVar = intVar - intVar;
+if (intVar == 0) {
+            return ArrayUtils.EMPTY_CHAR_ARRAY;
+        }
+char charVar[] = new char[intVar];
+System.arraycopy(char[]Var, intVar, charVar, 0, intVar);
+return charVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <373, 380>
+endIndex = validateRange(startIndex, endIndex);
+int len = endIndex - startIndex;
+if (len == 0) {
+            return ArrayUtils.EMPTY_CHAR_ARRAY;
+        }
+char chars[] = new char[len];
+System.arraycopy(buffer, startIndex, chars, 0, len);
+return chars;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharUtils <261, 263>
+if (isAsciiNumeric(charVar) == false) {
+            return intVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <3051, 3055>
+if (Object[]Var == null) {
+            return null;
+        }
+empty line
+return join(Object[]Var, charVar, 0, Object[]Var.length);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <232, 236>
+if (capacity > buffer.length) {
+            char[] old = buffer;
+            buffer = new char[capacity * 2];
+            System.arraycopy(old, 0, buffer, 0, size);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharUtils <329, 332>
+if (charVar < 128) {
+            return String[]Var[charVar];
+        }
+return new String(new char[] {charVar});
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharUtils <329, 332>
+if (ch < 128) {
+            return CHAR_STRING_ARRAY[ch];
+        }
+return new String(new char[] {ch});
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ArrayUtils <588, 604>
+if (array == null) {
+            return null;
+        }
+if (startIndexInclusive < 0) {
+            startIndexInclusive = 0;
+        }
+if (endIndexExclusive > array.length) {
+            endIndexExclusive = array.length;
+        }
+int newSize = endIndexExclusive - startIndexInclusive;
+if (newSize <= 0) {
+            return EMPTY_CHAR_ARRAY;
+        }
+empty line
+char[] subarray = new char[newSize];
+System.arraycopy(array, startIndexInclusive, subarray, 0, newSize);
+return subarray;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.EqualsBuilder <379, 407>
+if (!Class.isArray()) {
+            // The simple case, not an array, just test the element
+            isEquals = Object.equals(Object);
+        } else if (Object.getClass() != Object.getClass()) {
+            // Here when we compare different dimensions, for example: a boolean[][] to a boolean[] 
+            EqualsBuilder.setEquals(false);
+        }
+        // 'Switch' on type of array, to dispatch to the correct handler
+        // This handles multi dimensional arrays of the same depth
+        else if (Object instanceof long[]) {
+            append((long[]) Object, (long[]) Object);
+        } else if (Object instanceof int[]) {
+            append((int[]) Object, (int[]) Object);
+        } else if (Object instanceof short[]) {
+            append((short[]) Object, (short[]) Object);
+        } else if (Object instanceof char[]) {
+            append((char[]) Object, (char[]) Object);
+        } else if (Object instanceof byte[]) {
+            append((byte[]) Object, (byte[]) Object);
+        } else if (Object instanceof double[]) {
+            append((double[]) Object, (double[]) Object);
+        } else if (Object instanceof float[]) {
+            append((float[]) Object, (float[]) Object);
+        } else if (Object instanceof boolean[]) {
+            append((boolean[]) Object, (boolean[]) Object);
+        } else {
+            // Not an array of primitives
+            append((Object[]) Object, (Object[]) Object);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ArrayUtils <2273, 2282>
+if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return EMPTY_CHAR_ARRAY;
+        }
+final char[] result = new char[array.length];
+for (int i = 0; i < array.length; i++) {
+            result[i] = array[i].charValue();
+        }
+return result;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharUtils <239, 241>
+if (isAsciiNumeric(charVar) == false) {
+            throw new IllegalArgumentException("The character " + charVar + " is not in the range '0' - '9'");
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharUtils <239, 241>
+if (isAsciiNumeric(ch) == false) {
+            throw new IllegalArgumentException("The character " + ch + " is not in the range '0' - '9'");
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ArrayUtils <2295, 2305>
+if (Character[]Var == null) {
+            return null;
+        } else if (Character[]Var.length == 0) {
+            return char[]Var;
+        }
+final char[] char[]Var = new char[Character[]Var.length];
+for (int intVar = 0; intVar < Character[]Var.length; intVar++) {
+            Character b = Character[]Var[intVar];
+            char[]Var[intVar] = (b == null ? charVar : b.charValue());
+        }
+return char[]Var;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ArrayUtils <2295, 2305>
+if (array == null) {
+            return null;
+        } else if (array.length == 0) {
+            return EMPTY_CHAR_ARRAY;
+        }
+final char[] result = new char[array.length];
+for (int i = 0; i < array.length; i++) {
+            Character b = array[i];
+            result[i] = (b == null ? valueForNull : b.charValue());
+        }
+return result;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ArrayUtils <4065, 4069>
+int intVar = indexOf(char[]Var, charVar);
+if (intVar == intVar) {
+            return clone(char[]Var);
+        }
+return remove(char[]Var, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.Validate <465, 467>
+if (StringUtils.isBlank(chars)) {
+            throw new IllegalArgumentException(String.format(message, Object));
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.CompareToBuilder <456, 492>
+if (Object.getClass().isArray()) {
+            // switch on type of array, to dispatch to the correct handler
+            // handles multi dimensional arrays
+            // throws a ClassCastException if rhs is not the correct array type
+            if (Object instanceof long[]) {
+                append((long[]) Object, (long[]) Object);
+            } else if (Object instanceof int[]) {
+                append((int[]) Object, (int[]) Object);
+            } else if (Object instanceof short[]) {
+                append((short[]) Object, (short[]) Object);
+            } else if (Object instanceof char[]) {
+                append((char[]) Object, (char[]) Object);
+            } else if (Object instanceof byte[]) {
+                append((byte[]) Object, (byte[]) Object);
+            } else if (Object instanceof double[]) {
+                append((double[]) Object, (double[]) Object);
+            } else if (Object instanceof float[]) {
+                append((float[]) Object, (float[]) Object);
+            } else if (Object instanceof boolean[]) {
+                append((boolean[]) Object, (boolean[]) Object);
+            } else {
+                // not an array of primitives
+                // throws a ClassCastException if rhs is not an array
+                append((Object[]) Object, (Object[]) Object, Comparator);
+            }
+        } else {
+            // the simple case, not an array, just test the element
+            if (Comparator == null) {
+                @SuppressWarnings("unchecked") // assume this can be done; if not throw CCE as per Javadoc
+                final Comparable<Object> comparable = (Comparable<Object>) Object;
+                comparison = comparable.compareTo(Object);
+            } else {
+                @SuppressWarnings("unchecked") // assume this can be done; if not throw CCE as per Javadoc
+                final Comparator<Object> comparator2 = (Comparator<Object>) Comparator;
+                comparison = comparator2.compare(Object, Object);
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrTokenizer <796, 800>
+if (trimmedLen > 0) {
+                    StrBuilder.append(chars, pos, trimmedLen);
+                    pos += trimmedLen;
+                    continue;
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrTokenizer <777, 783>
+if (quoteLen > 0) {
+                    if (isQuote(chars, pos, len, quoteStart, quoteLen)) {
+                        quoting = true;
+                        pos += quoteLen;
+                        continue;
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharUtils <171, 174>
+if (Character == null) {
+            return charVar;
+        }
+return Character.charValue();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharUtils <171, 174>
+if (Character == null) {
+            return defaultValue;
+        }
+return Character.charValue();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ArrayUtils <3326, 3328>
+char[] char[]Var = (char[])copyArrayGrow1(char[]Var, Character.TYPE);
+char[]Var[char[]Var.length - 1] = charVar;
+return char[]Var;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.ArrayUtils <3326, 3328>
+char[] newArray = (char[])copyArrayGrow1(array, Character.TYPE);
+newArray[newArray.length - 1] = element;
+return newArray;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrTokenizer <705, 707>
+if (quoteLen > 0) {
+            return readWithQuotes(chars, start + quoteLen, len, StrBuilder, tokens, start, quoteLen);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1247, 1252>
+if (intVar >= 0) {
+            ensureCapacity(intVar + intVar);
+            for (int i = 0; i < intVar; i++) {
+                char[]Var[intVar++] = charVar;
+            }
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.RandomStringUtils <300, 303>
+if (chars == null) {
+            return random(count, 0, 0, false, false, null, Random);
+        }
+return random(count, chars.toCharArray());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1409, 1414>
+if (intVar > 0) {
+            ensureCapacity(intVar + intVar);
+            System.arraycopy(char[]Var, intVar, char[]Var, intVar + intVar, intVar - intVar);
+            System.arraycopy(charVar, 0, char[]Var, intVar, intVar);
+            intVar += intVar;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1409, 1414>
+if (len > 0) {
+            ensureCapacity(size + len);
+            System.arraycopy(buffer, index, buffer, index + len, size - index);
+            System.arraycopy(chars, 0, buffer, index, len);
+            size += len;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.RandomStringUtils <246, 250>
+if (char[]Var == null) {
+                charVar = (char) (Random.nextInt(intVar) + intVar);
+            } else {
+                charVar = char[]Var[Random.nextInt(intVar) + intVar];
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.RandomStringUtils <246, 250>
+if (chars == null) {
+                ch = (char) (Random.nextInt(gap) + start);
+            } else {
+                ch = chars[Random.nextInt(gap) + start];
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <255, 259>
+if (StringVar != null) {
+            charVar = StringVar.toCharArray();
+        } else {
+            charVar = null;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrTokenizer <255, 259>
+if (input != null) {
+            chars = input.toCharArray();
+        } else {
+            chars = null;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <474, 478>
+if (StringVar != null) {
+            StrTokenizer.charVar = StringVar.toCharArray();
+        } else {
+            StrTokenizer.charVar = null;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrTokenizer <474, 478>
+if (input != null) {
+            StrTokenizer.chars = input.toCharArray();
+        } else {
+            StrTokenizer.chars = null;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ClassUtils <719, 722>
+if (Class == null) {
+            return false;
+        }
+return Class.getName().indexOf(charVar) >= 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharRange <182, 184>
+if (CharRange.booleanVar) {
+            return charVar == 0 && charVar == Character.MAX_VALUE;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharRange <173, 185>
+if (CharRange == null) {
+            throw new IllegalArgumentException("The Range must not be null");
+        }
+if (booleanVar) {
+            if (CharRange.booleanVar) {
+                return charVar >= CharRange.charVar && charVar <= CharRange.charVar;
+            }
+            return CharRange.charVar < charVar || CharRange.charVar > charVar;
+        }
+if (CharRange.booleanVar) {
+            return charVar == 0 && charVar == Character.MAX_VALUE;
+        }
+return charVar <= CharRange.charVar && charVar >= CharRange.charVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharRange <173, 185>
+if (CharRange == null) {
+            throw new IllegalArgumentException("The Range must not be null");
+        }
+if (booleanVar) {
+            if (CharRange.booleanVar) {
+                return charVar >= CharRange.charVar && charVar <= CharRange.charVar;
+            }
+            return CharRange.charVar < charVar || CharRange.charVar > charVar;
+        }
+if (CharRange.booleanVar) {
+            return charVar == 0 && charVar == Character.MAX_VALUE;
+        }
+return charVar <= CharRange.charVar && charVar >= CharRange.charVar;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.NumberUtils <1324, 1340>
+if (sz > start + 1) {
+            if (chars[start] == '0' && chars[start + 1] == 'x') {
+                int i = start + 2;
+                if (i == sz) {
+                    return false; // str == "0x"
+                }
+                // checking hex (it can't be anything else)
+                for (; i < chars.length; i++) {
+                    if ((chars[i] < '0' || chars[i] > '9')
+                        && (chars[i] < 'a' || chars[i] > 'f')
+                        && (chars[i] < 'A' || chars[i] > 'F')) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ArrayUtils <1693, 1706>
+if (char[]Var == null) {
+            return intVar;
+        }
+if (intVar < 0) {
+            return intVar;
+        } else if (intVar >= char[]Var.length) {
+            intVar = char[]Var.length - 1;
+        }
+for (int intVar = intVar; intVar >= 0; intVar--) {
+            if (charVar == char[]Var[intVar]) {
+                return intVar;
+            }
+        }
+return intVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.time.FastDateFormat <1251, 1256>
+if (value < 10) {
+                StringBuffer.append((char)(value + '0'));
+            } else {
+                StringBuffer.append((char)(value / 10 + '0'));
+                StringBuffer.append((char)(value % 10 + '0'));
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.ArrayUtils <1648, 1659>
+if (char[]Var == null) {
+            return intVar;
+        }
+if (intVar < 0) {
+            intVar = 0;
+        }
+for (int intVar = intVar; intVar < char[]Var.length; intVar++) {
+            if (charVar == char[]Var[intVar]) {
+                return intVar;
+            }
+        }
+return intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1440, 1445>
+if (intVar > 0) {
+            ensureCapacity(intVar + intVar);
+            System.arraycopy(char[]Var, intVar, char[]Var, intVar + intVar, intVar - intVar);
+            System.arraycopy(charVar, intVar, char[]Var, intVar, intVar);
+            intVar += intVar;
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <1440, 1445>
+if (length > 0) {
+            ensureCapacity(size + length);
+            System.arraycopy(buffer, index, buffer, index + length, size - index);
+            System.arraycopy(chars, offset, buffer, index, length);
+            size += length;
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.NumberUtils <1395, 1399>
+if (chars[i] == 'l'
+                || chars[i] == 'L') {
+                // not allowing L with an exponent
+                return foundDigit && !hasExp;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharRange <199, 206>
+if (Object == this) {
+            return true;
+        }
+if (Object instanceof CharRange == false) {
+            return false;
+        }
+CharRange CharRange = (CharRange) Object;
+return charVar == CharRange.charVar && charVar == CharRange.charVar && booleanVar == CharRange.booleanVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharRange <199, 206>
+if (Object == this) {
+            return true;
+        }
+if (Object instanceof CharRange == false) {
+            return false;
+        }
+CharRange CharRange = (CharRange) Object;
+return charVar == CharRange.charVar && charVar == CharRange.charVar && booleanVar == CharRange.booleanVar;
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.math.NumberUtils <1351, 1376>
+if (chars[i] == '.') {
+                if (hasDecPoint || hasExp) {
+                    // two decimal points or dec in exponent   
+                    return false;
+                }
+                hasDecPoint = true;
+            } else if (chars[i] == 'e' || chars[i] == 'E') {
+                // we've already taken care of hex.
+                if (hasExp) {
+                    // two E's
+                    return false;
+                }
+                if (!foundDigit) {
+                    return false;
+                }
+                hasExp = true;
+                allowSigns = true;
+            } else if (chars[i] == '+' || chars[i] == '-') {
+                if (!allowSigns) {
+                    return false;
+                }
+                allowSigns = false;
+                foundDigit = false; // we need a digit after the E
+            } else {
+                return false;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1175, 1180>
+if (size() > 0) {
+            append(charVar);
+        }
+        else {
+            append(charVar);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharUtils <151, 154>
+if (Character == null) {
+            throw new IllegalArgumentException("The Character must not be null");
+        }
+return Character.charValue();
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharUtils <353, 356>
+if (Character == null) {
+            return null;
+        }
+return toString(Character.charValue());
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.CharUtils <401, 404>
+if (Character == null) {
+            return null;
+        }
+return unicodeEscaped(Character.charValue());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <2597, 2602>
+char charVar[] = char[]Var;
+int intVar = 0;
+for (int intVar = intVar - 1; intVar >= 0; intVar--) {
+            intVar = 31 * intVar + charVar[intVar];
+        }
+return intVar;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <2597, 2602>
+char buf[] = buffer;
+int hash = 0;
+for (int i = size - 1; i >= 0; i--) {
+            hash = 31 * hash + buf[i];
+        }
+return hash;
+

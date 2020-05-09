@@ -1,0 +1,16 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_89/src/java/org/apache/commons/math/stat/Frequency.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_89/src/java/org/apache/commons/math/stat/Frequency.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_89/src/java/org/apache/commons/math/stat/Frequency.java	2020-01-05 06:40:05.145966869 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_89/src/java/org/apache/commons/math/stat/Frequency.java	2020-01-05 06:40:08.617937871 -0800
+@@ -107,7 +107,11 @@
+      */
+     @Deprecated
+     public void addValue(Object v) {
++        if (v instanceof Comparable<?>){
+             addValue((Comparable<?>) v);            
++        } else {
++            throw new IllegalArgumentException("Object must implement Comparable");
++        }
+     }
+     
+     /**

@@ -1,0 +1,22 @@
+---patch code 0--- org.mockito.internal.util.reflection.GenericMetadataSupport <79, 81>
+if (TypeVariable != Type) {
+                Map.put(TypeVariable, Type);
+            }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.mockito.internal.util.reflection.GenericMetadataSupport <105, 108>
+if (TypeVariable.getBounds()[0] instanceof TypeVariable) {
+            return boundsOf((TypeVariable) TypeVariable.getBounds()[0]);
+        }
+return new TypeVarBoundedType(TypeVariable);
+
+---patch code 1--- org.mockito.internal.util.reflection.GenericMetadataSupport <79, 81>
+if (TypeVariable != Type) {
+                Map.put(TypeVariable, Type);
+            }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.mockito.internal.util.reflection.GenericMetadataSupport <105, 108>
+if (TypeVariable.getBounds()[0] instanceof TypeVariable) {
+            return boundsOf((TypeVariable) TypeVariable.getBounds()[0]);
+        }
+return new TypeVarBoundedType(TypeVariable);
+

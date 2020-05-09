@@ -1,0 +1,13 @@
+chunk1 : org.jfree.chart.plot.MultiplePiePlot:145-145
+fix ingredient  <ori-fine-grained>  varMapType:ori : (24)
+fix ingredient  <0-fine-grained>  varMapType:0 : (24)
+fix ingredient  <1-fine-grained>  varMapType:1 : (24)
+fix ingredient(SamePackage)  varMapType:ori : (1)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (13)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (13)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (12)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (3)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (3)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (3)
+
+

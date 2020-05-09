@@ -1,0 +1,72 @@
+---patch code ori--- org.apache.commons.math.optimization.univariate.BrentOptimizer <231, 231>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.optimization.linear.SimplexSolver <125, 125>
+incrementIterationsCounter();
+
+---patch code 0--- org.apache.commons.math.optimization.univariate.BrentOptimizer <231, 231>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.linear.SimplexSolver <125, 125>
+incrementIterationsCounter();
+
+---patch code 1--- org.apache.commons.math.optimization.univariate.BrentOptimizer <231, 231>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.optimization.linear.SimplexSolver <125, 125>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <71, 71>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <71, 71>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.optimization.general.GaussNewtonOptimizer <71, 71>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.optimization.general.PowellOptimizer <87, 87>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.general.PowellOptimizer <87, 87>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.optimization.general.PowellOptimizer <87, 87>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <154, 154>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <154, 154>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.optimization.general.NonLinearConjugateGradientOptimizer <154, 154>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <271, 271>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <271, 271>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer <271, 271>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.optimization.direct.MultiDirectional <67, 67>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.direct.MultiDirectional <67, 67>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.optimization.direct.MultiDirectional <67, 67>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:ori--- org.apache.commons.math.optimization.direct.NelderMead <77, 77>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.optimization.direct.NelderMead <77, 77>
+incrementIterationsCounter();
+
+---fix ingredient  varMapType:1--- org.apache.commons.math.optimization.direct.NelderMead <77, 77>
+incrementIterationsCounter();
+

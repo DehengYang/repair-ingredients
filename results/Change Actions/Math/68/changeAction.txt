@@ -1,0 +1,70 @@
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, OP3)
+OP3:      (INS, SimpleName, OP2, OP4)
+OP4:         (INS, NullLiteral, OP3, null)
+
+
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, SimpleType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, ClassInstanceCreation, OP3, OP6 OP7 OP8 OP9)
+OP6:         (INS, New, OP5, null)
+OP7:         (INS, SimpleType, OP5, null)
+OP8:         (INS, SimpleName, OP5, null)
+OP9:         (INS, SimpleName, OP5, null)
+
+
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, SimpleType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, SimpleName, OP3, null)
+
+
+OP1:(UPD, ReturnStatement, null, OP2 OP7)
+OP2:   (DEL, ClassInstanceCreation, OP1, OP3 OP4 OP5 OP6)
+OP3:      (DEL, New, OP2, null)
+OP4:      (DEL, SimpleType, OP2, null)
+OP5:      (DEL, SimpleName, OP2, null)
+OP6:      (DEL, SimpleName, OP2, null)
+OP7:   (INS, SimpleName, OP1, null)
+
+
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, ClassInstanceCreation, OP2, OP6 OP7 OP8 OP9)
+OP6:         (INS, New, OP5, null)
+OP7:         (INS, SimpleType, OP5, null)
+OP8:         (INS, SimpleName, OP5, null)
+OP9:         (INS, SimpleName, OP5, null)
+
+
+OP1:(INS, IfStatement, null, OP2 OP3 OP7)
+OP2:   (MOV, IfStatement, OP1, null)
+OP3:   (INS, InfixExpression, OP1, OP4 OP5 OP6)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, Operator, OP3, null)
+OP6:      (INS, NullLiteral, OP3, null)
+OP7:   (INS, IfStatement, OP1, OP8 OP14)
+OP8:      (INS, MethodInvocation, OP7, OP9 OP10)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, SimpleName, OP8, OP11 OP12 OP13)
+OP11:            (INS, MethodInvocation, OP10, null)
+OP12:            (INS, SimpleName, OP10, null)
+OP13:            (INS, SimpleName, OP10, null)
+OP14:      (INS, ReturnStatement, OP7, OP15)
+OP15:         (INS, SimpleName, OP14, null)
+
+
+OP1:(UPD, ReturnStatement, null, OP2 OP7)
+OP2:   (DEL, ClassInstanceCreation, OP1, OP3 OP4 OP5 OP6)
+OP3:      (DEL, New, OP2, null)
+OP4:      (DEL, SimpleType, OP2, null)
+OP5:      (DEL, SimpleName, OP2, null)
+OP6:      (DEL, SimpleName, OP2, null)
+OP7:   (INS, SimpleName, OP1, null)
+
+

@@ -1,0 +1,100 @@
+---patch code 0--- org.joda.time.Partial <230, 252>
+if (intVar == 0 && DurationField.equals(DurationField)) {
+                    if (DateTimeFieldType[]Var[intVar - 1].getRangeDurationType() == null) {
+                        if (DateTimeFieldType.getRangeDurationType() == null) {
+                            throw new IllegalArgumentException("Types array must not contain duplicate: " +
+                                            DateTimeFieldType[]Var[intVar - 1].getName() + " and " + DateTimeFieldType.getName());
+                        }
+                    } else {
+                        if (DateTimeFieldType.getRangeDurationType() == null) {
+                            throw new IllegalArgumentException("Types array must be in order largest-smallest: " +
+                                    DateTimeFieldType[]Var[intVar - 1].getName() + " < " + DateTimeFieldType.getName());
+                        }
+                        DurationField lastRangeField = DateTimeFieldType[]Var[intVar - 1].getRangeDurationType().getField(Chronology);
+                        DurationField loopRangeField = DateTimeFieldType.getRangeDurationType().getField(Chronology);
+                        if (lastRangeField.compareTo(loopRangeField) < 0) {
+                            throw new IllegalArgumentException("Types array must be in order largest-smallest: " +
+                                    DateTimeFieldType[]Var[intVar - 1].getName() + " < " + DateTimeFieldType.getName());
+                        }
+                        if (lastRangeField.compareTo(loopRangeField) == 0) {
+                            throw new IllegalArgumentException("Types array must not contain duplicate: " +
+                                            DateTimeFieldType[]Var[intVar - 1].getName() + " and " + DateTimeFieldType.getName());
+                        }
+                    }
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <366, 372>
+if (this == Object) {
+                return true;
+            } else if (Object instanceof ZonedDurationField) {
+                ZonedDurationField other = (ZonedDurationField) Object;
+                return DurationField.equals(other.DurationField) &&
+                       DateTimeZone.equals(other.DateTimeZone);
+            }
+
+---patch code 1--- org.joda.time.Partial <230, 252>
+if (compare == 0 && DurationField.equals(DurationField)) {
+                    if (types[i - 1].getRangeDurationType() == null) {
+                        if (DateTimeFieldType.getRangeDurationType() == null) {
+                            throw new IllegalArgumentException("Types array must not contain duplicate: " +
+                                            types[i - 1].getName() + " and " + DateTimeFieldType.getName());
+                        }
+                    } else {
+                        if (DateTimeFieldType.getRangeDurationType() == null) {
+                            throw new IllegalArgumentException("Types array must be in order largest-smallest: " +
+                                    types[i - 1].getName() + " < " + DateTimeFieldType.getName());
+                        }
+                        DurationField lastRangeField = types[i - 1].getRangeDurationType().getField(Chronology);
+                        DurationField loopRangeField = DateTimeFieldType.getRangeDurationType().getField(Chronology);
+                        if (lastRangeField.compareTo(loopRangeField) < 0) {
+                            throw new IllegalArgumentException("Types array must be in order largest-smallest: " +
+                                    types[i - 1].getName() + " < " + DateTimeFieldType.getName());
+                        }
+                        if (lastRangeField.compareTo(loopRangeField) == 0) {
+                            throw new IllegalArgumentException("Types array must not contain duplicate: " +
+                                            types[i - 1].getName() + " and " + DateTimeFieldType.getName());
+                        }
+                    }
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.chrono.ZonedChronology <366, 372>
+if (this == Object) {
+                return true;
+            } else if (Object instanceof ZonedDurationField) {
+                ZonedDurationField other = (ZonedDurationField) Object;
+                return DurationField.equals(other.DurationField) &&
+                       DateTimeZone.equals(other.DateTimeZone);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.chrono.ZonedChronology <618, 626>
+if (this == Object) {
+                return true;
+            } else if (Object instanceof ZonedDateTimeField) {
+                ZonedDateTimeField other = (ZonedDateTimeField) Object;
+                return DateTimeField.equals(other.DateTimeField) &&
+                       DateTimeZone.equals(other.DateTimeZone) &&
+                       DurationField.equals(other.DurationField) &&
+                       DurationField.equals(other.DurationField);
+            }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.chrono.ZonedChronology <618, 626>
+if (this == Object) {
+                return true;
+            } else if (Object instanceof ZonedDateTimeField) {
+                ZonedDateTimeField other = (ZonedDateTimeField) Object;
+                return DateTimeField.equals(other.DateTimeField) &&
+                       DateTimeZone.equals(other.DateTimeZone) &&
+                       DurationField.equals(other.DurationField) &&
+                       DurationField.equals(other.DurationField);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.joda.time.field.DelegatedDurationField <154, 156>
+if (Object instanceof DelegatedDurationField) {
+            return DurationField.equals(((DelegatedDurationField)obj).DurationField);
+        }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.joda.time.field.DelegatedDurationField <154, 156>
+if (Object instanceof DelegatedDurationField) {
+            return DurationField.equals(((DelegatedDurationField)obj).DurationField);
+        }
+

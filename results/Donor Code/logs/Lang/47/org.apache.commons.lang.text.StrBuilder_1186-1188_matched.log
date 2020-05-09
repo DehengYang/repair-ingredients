@@ -1,0 +1,274 @@
+---patch code ori--- org.apache.commons.lang.text.StrBuilder <1186, 1188>
+if (str == null) {
+                str = "";
+            }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.StringUtils <228, 230>
+if (str == null || (strLen = str.length()) == 0) {
+            return true;
+        }
+
+---patch code 0--- org.apache.commons.lang.text.StrBuilder <1186, 1188>
+if (StringVar == null) {
+                StringVar = "";
+            }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.StringUtils <228, 230>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return true;
+        }
+
+---patch code 1--- org.apache.commons.lang.text.StrBuilder <1186, 1188>
+if (str == null) {
+                str = "";
+            }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.StringUtils <228, 230>
+if (str == null || (strLen = str.length()) == 0) {
+            return true;
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.SystemUtils <1159, 1163>
+if (StringVar == null) {
+            return 0;
+        }
+String StringVar = JAVA_VERSION_TRIMMED.substring(0, 1);
+StringVar = StringVar + JAVA_VERSION_TRIMMED.substring(2, 3);
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.WordUtils <454, 456>
+if (str == null || (strLen = str.length()) == 0) {
+            return str;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.WordUtils <454, 456>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.WordUtils <454, 456>
+if (str == null || (strLen = str.length()) == 0) {
+            return str;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.StringUtils <508, 510>
+if (str == null || (strLen = str.length()) == 0) {
+            return str;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.StringUtils <508, 510>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.StringUtils <508, 510>
+if (str == null || (strLen = str.length()) == 0) {
+            return str;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.StringUtils <552, 554>
+if (str == null || (end = str.length()) == 0) {
+            return str;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.StringUtils <552, 554>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.StringUtils <552, 554>
+if (str == null || (end = str.length()) == 0) {
+            return str;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.StringUtils <4754, 4756>
+if (str == null || (strLen = str.length()) == 0) {
+            return str;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.StringUtils <4754, 4756>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.StringUtils <4754, 4756>
+if (str == null || (strLen = str.length()) == 0) {
+            return str;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.StringUtils <4798, 4800>
+if (str == null || (strLen = str.length()) == 0) {
+            return str;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.StringUtils <4798, 4800>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.StringUtils <4798, 4800>
+if (str == null || (strLen = str.length()) == 0) {
+            return str;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:ori--- org.apache.commons.lang.StringUtils <4849, 4851>
+if (str == null || (strLen = str.length()) == 0) {
+            return str;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.StringUtils <4849, 4851>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:1--- org.apache.commons.lang.StringUtils <4849, 4851>
+if (str == null || (strLen = str.length()) == 0) {
+            return str;
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:ori--- org.apache.commons.lang.StringUtils <415, 419>
+if (str == null) {
+            return null;
+        }
+str = strip(str, null);
+return str.length() == 0 ? null : str;
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <415, 419>
+if (StringVar == null) {
+            return null;
+        }
+StringVar = strip(StringVar, null);
+return StringVar.length() == 0 ? null : StringVar;
+
+---fix ingredient  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.StringUtils <415, 419>
+if (str == null) {
+            return null;
+        }
+str = strip(str, null);
+return str.length() == 0 ? null : str;
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:ori--- org.apache.commons.lang.text.StrBuilder <1287, 1290>
+if (str == null) {
+            str = nullText;
+        }
+int strLen = (str == null ? 0 : str.length());
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.text.StrBuilder <1287, 1290>
+if (StringVar == null) {
+            StringVar = StringVar;
+        }
+int intVar = (StringVar == null ? 0 : StringVar.length());
+
+---fix ingredient(SameFile)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang.text.StrBuilder <1287, 1290>
+if (str == null) {
+            str = nullText;
+        }
+int strLen = (str == null ? 0 : str.length());
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.WordUtils <167, 169>
+if (StringVar == null) {
+            StringVar = SystemUtils.LINE_SEPARATOR;
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1745, 1747>
+if (StringVar == null) {
+            StringVar = "";
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1771, 1773>
+if (StringVar == null) {
+            StringVar = "";
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1797, 1799>
+if (StringVar == null) {
+            StringVar = "";
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1823, 1825>
+if (StringVar == null) {
+            StringVar = "";
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1849, 1851>
+if (StringVar == null) {
+            StringVar = "";
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1875, 1877>
+if (StringVar == null) {
+            StringVar = "";
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1901, 1903>
+if (StringVar == null) {
+            StringVar = "";
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1975, 1977>
+if (StringVar == null) {
+            StringVar = "";
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <2007, 2009>
+if (StringVar == null) {
+            StringVar = "";
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <2039, 2041>
+if (StringVar == null) {
+            StringVar = "";
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <2071, 2073>
+if (StringVar == null) {
+            StringVar = "";
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <2103, 2105>
+if (StringVar == null) {
+            StringVar = "";
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <2977, 2979>
+if (StringVar == null) {
+            StringVar = StringVar;
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <3845, 3847>
+if (StringVar == null) {
+            StringVar = StringVar;
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <3938, 3940>
+if (StringVar == null) {
+            StringVar = StringVar;
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.enum.Enum <636, 639>
+if (StringVar == null) {
+            String shortName = ClassUtils.getShortClassName(getEnumClass());
+            StringVar = shortName + "[" + getName() + "]";
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.enums.Enum <682, 685>
+if (StringVar == null) {
+            String shortName = ClassUtils.getShortClassName(getEnumClass());
+            StringVar = shortName + "[" + getName() + "]";
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.enums.ValuedEnum <230, 233>
+if (StringVar == null) {
+            String shortName = ClassUtils.getShortClassName(getEnumClass());
+            StringVar = shortName + "[" + getName() + "=" + getValue() + "]";
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.text.StrTokenizer <672, 679>
+if (StringVar == null || StringVar.length() == 0) {
+            if (isIgnoreEmptyTokens()) {
+                return;
+            }
+            if (isEmptyTokenAsNull()) {
+                StringVar = null;
+            }
+        }
+

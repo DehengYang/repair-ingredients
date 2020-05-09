@@ -1,0 +1,29 @@
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (UPD, MethodInvocation, OP3, OP5)
+OP5:            (UPD, SimpleName, OP4, OP6)
+OP6:               (INS, SimpleName, OP5, null)
+
+
+OP1:(UPD, IfStatement, null, OP2 OP3)
+OP2:   (DEL, InfixExpression, OP1, null)
+OP3:   (INS, InfixExpression, OP1, OP4 OP7 OP8)
+OP4:      (INS, PrefixExpression, OP3, OP5 OP6)
+OP5:         (INS, Operator, OP4, null)
+OP6:         (INS, SimpleName, OP4, null)
+OP7:      (INS, Operator, OP3, null)
+OP8:      (INS, InfixExpression, OP3, OP9 OP10 OP11)
+OP9:         (MOV, SimpleName, OP8, null)
+OP10:         (MOV, Operator, OP8, null)
+OP11:         (MOV, SimpleName, OP8, null)
+
+
+OP1:(UPD, ReturnStatement, null, OP2 OP3)
+OP2:   (DEL, StringLiteral, OP1, null)
+OP3:   (INS, ConditionalExpression, OP1, OP4 OP5 OP6)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, StringLiteral, OP3, null)
+OP6:      (INS, StringLiteral, OP3, null)
+
+

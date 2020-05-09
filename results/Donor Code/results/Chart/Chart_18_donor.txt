@@ -1,0 +1,14 @@
+chunk1 : org.jfree.data.DefaultKeyedValues:333-334
+fix ingredient(SamePackage)  varMapType:ori : (1)
+fix ingredient(SamePackage)  varMapType:0 : (1)
+fix ingredient(SamePackage)  varMapType:1 : (1)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori : (1)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0 : (1)
+fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1 : (1)
+
+
+chunk2 : org.jfree.data.DefaultKeyedValues2D:464-465
+fix ingredient(SamePackage)  varMapType:ori : (1)
+fix ingredient(SameFile)  varMapType:ori : (1)
+
+

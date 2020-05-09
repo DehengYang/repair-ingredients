@@ -1,0 +1,11 @@
+chunk1 : org.apache.commons.lang3.reflect.TypeUtils:675-675
+fix ingredient(SameFile)  varMapType:ori : (1)
+fix ingredient(SameFile)  varMapType:0 : (2)
+fix ingredient(SameFile)  varMapType:1 : (2)
+fix ingredient  varMapType:0 : (1)
+fix ingredient  varMapType:1 : (1)
+fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:ori : (1)
+fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:0 : (1)
+fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:1 : (1)
+
+

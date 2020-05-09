@@ -1,0 +1,9 @@
+---patch code 0--- org.apache.commons.math.distribution.PoissonDistributionImpl <94, 94>
+throw new NotStrictlyPositiveException(LocalizedFormats.MEAN, doubleVar);
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.random.RandomDataImpl <359, 359>
+throw new NotStrictlyPositiveException(LocalizedFormats.MEAN, doubleVar);
+
+---fix ingredient  varMapType:0--- org.apache.commons.math.random.RandomDataImpl <484, 484>
+throw new NotStrictlyPositiveException(LocalizedFormats.MEAN, doubleVar);
+

@@ -1,0 +1,49 @@
+chunk1 : org.joda.time.MutableDateTime:708-708
+fix ingredient  varMapType:0 : (4)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (1)
+
+
+chunk2 : org.joda.time.MutableDateTime:797-797
+fix ingredient  varMapType:0 : (4)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (1)
+
+
+chunk3 : org.joda.time.MutableDateTime:662-662
+fix ingredient  varMapType:0 : (4)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (1)
+
+
+chunk4 : org.joda.time.MutableDateTime:863-863
+fix ingredient  varMapType:0 : (4)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (1)
+
+
+chunk5 : org.joda.time.MutableDateTime:731-731
+fix ingredient  varMapType:0 : (4)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (1)
+
+
+chunk6 : org.joda.time.MutableDateTime:639-639
+fix ingredient  varMapType:0 : (4)
+
+
+chunk7 : org.joda.time.MutableDateTime:685-685
+fix ingredient  varMapType:0 : (4)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (1)
+
+
+chunk8 : org.joda.time.MutableDateTime:774-774
+fix ingredient  varMapType:0 : (4)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (1)
+
+
+chunk9 : org.joda.time.MutableDateTime:830-830
+fix ingredient  varMapType:0 : (4)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (1)
+
+
+chunk10 : org.joda.time.MutableDateTime:898-898
+fix ingredient  varMapType:0 : (4)
+fix ingredient  <parseContainCheck2>  varMapType:0 : (1)
+
+

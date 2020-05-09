@@ -1,0 +1,55 @@
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (INS, SimpleName, OP3, null)
+
+
+OP1:(INS, FieldDeclaration, null, OP2 OP3 OP4)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, PrimitiveType, OP1, null)
+OP4:   (INS, VariableDeclarationFragment, OP1, OP5 OP6)
+OP5:      (INS, SimpleName, OP4, null)
+OP6:      (INS, BooleanLiteral, OP4, null)
+
+
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, null)
+
+
+OP1:(UPD, IfStatement, null, OP2 OP11 OP14)
+OP2:   (DEL, InfixExpression, OP1, OP3 OP4)
+OP3:      (DEL, MethodInvocation, OP2, null)
+OP4:      (DEL, MethodInvocation, OP2, OP5 OP6)
+OP5:         (DEL, SimpleName, OP4, null)
+OP6:         (DEL, SimpleName, OP4, OP7 OP10)
+OP7:            (DEL, MethodInvocation, OP6, OP8 OP9)
+OP8:               (DEL, SimpleName, OP7, null)
+OP9:               (DEL, SimpleName, OP7, null)
+OP10:            (DEL, BooleanLiteral, OP6, null)
+OP11:   (INS, MethodInvocation, OP1, OP12 OP13)
+OP12:      (MOV, SimpleName, OP11, null)
+OP13:      (MOV, SimpleName, OP11, null)
+OP14:   (INS, IfStatement, OP1, OP15 OP16 OP20)
+OP15:      (MOV, ExpressionStatement, OP14, null)
+OP16:      (INS, InfixExpression, OP14, OP17 OP18 OP19)
+OP17:         (MOV, Operator, OP16, null)
+OP18:         (INS, SimpleName, OP16, null)
+OP19:         (INS, NullLiteral, OP16, null)
+OP20:      (INS, ExpressionStatement, OP14, OP21)
+OP21:         (INS, Assignment, OP20, OP22 OP25 OP26)
+OP22:            (INS, QualifiedName, OP21, OP23 OP24)
+OP23:               (INS, SimpleName, OP22, null)
+OP24:               (INS, SimpleName, OP22, null)
+OP25:            (INS, Operator, OP21, null)
+OP26:            (INS, BooleanLiteral, OP21, null)
+
+
+OP1:(INS, IfStatement, null, OP2 OP5)
+OP2:   (INS, QualifiedName, OP1, OP3 OP4)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, SimpleName, OP2, null)
+OP5:   (INS, ReturnStatement, OP1, OP6)
+OP6:      (INS, BooleanLiteral, OP5, null)
+
+

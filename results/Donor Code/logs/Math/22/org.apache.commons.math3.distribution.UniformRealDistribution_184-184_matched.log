@@ -1,0 +1,72 @@
+---patch code ori--- org.apache.commons.math3.distribution.UniformRealDistribution <184, 184>
+return true;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.ArrayRealVector <290, 290>
+return new ArrayRealVector(this, true);
+
+---patch code 0--- org.apache.commons.math3.distribution.UniformRealDistribution <184, 184>
+return true;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayRealVector <290, 290>
+return new ArrayRealVector(this, true);
+
+---patch code 1--- org.apache.commons.math3.distribution.UniformRealDistribution <184, 184>
+return true;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.ArrayRealVector <290, 290>
+return new ArrayRealVector(this, true);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.ArrayFieldVector <397, 397>
+return new ArrayFieldVector<T>(this, true);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.ArrayFieldVector <397, 397>
+return new ArrayFieldVector<T>(this, true);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.ArrayFieldVector <397, 397>
+return new ArrayFieldVector<T>(this, true);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.stat.correlation.Covariance <182, 182>
+return computeCovarianceMatrix(matrix, true);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.correlation.Covariance <182, 182>
+return computeCovarianceMatrix(RealMatrix, true);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.stat.correlation.Covariance <182, 182>
+return computeCovarianceMatrix(RealMatrix, true);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.stat.correlation.Covariance <204, 204>
+return computeCovarianceMatrix(data, true);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.stat.correlation.Covariance <204, 204>
+return computeCovarianceMatrix(double[][]Var, true);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.stat.correlation.Covariance <204, 204>
+return computeCovarianceMatrix(data, true);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.distribution.KolmogorovSmirnovDistribution <129, 129>
+return this.cdf(d, true);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.distribution.KolmogorovSmirnovDistribution <129, 129>
+return KolmogorovSmirnovDistribution.cdf(doubleVar, true);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.distribution.KolmogorovSmirnovDistribution <129, 129>
+return KolmogorovSmirnovDistribution.cdf(d, true);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.fraction.Fraction <431, 431>
+return addSub(fraction, true /* add */);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.fraction.Fraction <431, 431>
+return addSub(Number, true /* add */);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.fraction.Fraction <431, 431>
+return addSub(null, true /* add */);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math3.linear.MatrixUtils <255, 255>
+return new ArrayRealVector(data, true);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math3.linear.MatrixUtils <255, 255>
+return new ArrayRealVector(double[]Var, true);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math3.linear.MatrixUtils <255, 255>
+return new ArrayRealVector(data, true);
+

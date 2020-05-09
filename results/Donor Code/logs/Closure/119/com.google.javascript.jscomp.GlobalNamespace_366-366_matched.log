@@ -1,0 +1,90 @@
+---patch code ori--- com.google.javascript.jscomp.GlobalNamespace <366, 366>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.TypedScopeCreator <546, 546>
+case Token.CATCH:
+
+---patch code 0--- com.google.javascript.jscomp.GlobalNamespace <366, 366>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.TypedScopeCreator <546, 546>
+case Token.CATCH:
+
+---patch code 1--- com.google.javascript.jscomp.GlobalNamespace <366, 366>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.TypedScopeCreator <546, 546>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.GatherCharacterEncodingBias <118, 118>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.GatherCharacterEncodingBias <118, 118>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.GatherCharacterEncodingBias <118, 118>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <143, 143>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <143, 143>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <143, 143>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <187, 187>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <187, 187>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.MakeDeclaredNamesUnique <187, 187>
+case Token.CATCH:
+
+---fix ingredient  varMapType:ori--- com.google.javascript.jscomp.jsonml.Writer <280, 280>
+case Token.CATCH:
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.jsonml.Writer <280, 280>
+case Token.CATCH:
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.jsonml.Writer <280, 280>
+case Token.CATCH:
+
+---fix ingredient  varMapType:ori--- com.google.javascript.jscomp.parsing.TypeSafeDispatcher <190, 190>
+case Token.CATCH:
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.parsing.TypeSafeDispatcher <190, 190>
+case Token.CATCH:
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.parsing.TypeSafeDispatcher <190, 190>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.UnreachableCodeElimination <227, 227>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.UnreachableCodeElimination <227, 227>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.UnreachableCodeElimination <227, 227>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ControlFlowAnalysis <266, 266>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ControlFlowAnalysis <266, 266>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ControlFlowAnalysis <266, 266>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.ControlFlowAnalysis <334, 334>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.ControlFlowAnalysis <334, 334>
+case Token.CATCH:
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.ControlFlowAnalysis <334, 334>
+case Token.CATCH:
+

@@ -1,0 +1,369 @@
+---patch code ori--- org.jfree.chart.plot.MultiplePiePlot <145, 145>
+setDataset(dataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.dial.DialPlot <152, 152>
+this.setDataset(dataset);
+
+---patch code 0--- org.jfree.chart.plot.MultiplePiePlot <145, 145>
+setDataset(CategoryDataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.dial.DialPlot <152, 152>
+Plot.setDataset(ValueDataset);
+
+---patch code 1--- org.jfree.chart.plot.MultiplePiePlot <145, 145>
+setDataset(CategoryDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.dial.DialPlot <152, 152>
+Plot.setDataset(ValueDataset);
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.chart.plot.MeterPlot <253, 253>
+setDataset(dataset);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.MeterPlot <253, 253>
+setDataset(ValueDataset);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.MeterPlot <253, 253>
+setDataset(ValueDataset);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.CategoryPlot <1193, 1193>
+setDataset(0, dataset);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.CategoryPlot <1193, 1193>
+setDataset(0, CategoryDataset);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.CategoryPlot <1193, 1193>
+setDataset(0, CategoryDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.dial.DialPlot <485, 485>
+setDataset(0, dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.dial.DialPlot <485, 485>
+setDataset(0, ValueDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.dial.DialPlot <485, 485>
+setDataset(0, ValueDataset);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.XYPlot <1290, 1290>
+setDataset(0, dataset);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.XYPlot <1290, 1290>
+setDataset(0, XYDataset);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.XYPlot <1290, 1290>
+setDataset(0, XYDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.XYDifferenceRenderer <1137, 1137>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYDifferenceRenderer <1137, 1137>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYDifferenceRenderer <1137, 1137>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.YIntervalRenderer <232, 232>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.YIntervalRenderer <232, 232>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.YIntervalRenderer <232, 232>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.XYBubbleRenderer <312, 312>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYBubbleRenderer <312, 312>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYBubbleRenderer <312, 312>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.XYBarRenderer <527, 527>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYBarRenderer <527, 527>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYBarRenderer <527, 527>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.StandardXYItemRenderer <608, 608>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.StandardXYItemRenderer <608, 608>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.StandardXYItemRenderer <608, 608>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.XYAreaRenderer <379, 379>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYAreaRenderer <379, 379>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYAreaRenderer <379, 379>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.XYAreaRenderer2 <248, 248>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYAreaRenderer2 <248, 248>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYAreaRenderer2 <248, 248>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <895, 895>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <895, 895>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.AbstractXYItemRenderer <895, 895>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.XYDotRenderer <311, 311>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYDotRenderer <311, 311>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYDotRenderer <311, 311>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.xy.XYLineAndShapeRenderer <1089, 1089>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.xy.XYLineAndShapeRenderer <1089, 1089>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.xy.XYLineAndShapeRenderer <1089, 1089>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.DefaultPolarItemRenderer <299, 299>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.DefaultPolarItemRenderer <299, 299>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.DefaultPolarItemRenderer <299, 299>
+LegendItem.setDataset(XYDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.BarRenderer <690, 690>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.BarRenderer <690, 690>
+LegendItem.setDataset(CategoryDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.BarRenderer <690, 690>
+LegendItem.setDataset(CategoryDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.ScatterRenderer <465, 465>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.ScatterRenderer <465, 465>
+LegendItem.setDataset(CategoryDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.ScatterRenderer <465, 465>
+LegendItem.setDataset(CategoryDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.AreaRenderer <184, 184>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.AreaRenderer <184, 184>
+LegendItem.setDataset(CategoryDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.AreaRenderer <184, 184>
+LegendItem.setDataset(CategoryDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.CategoryStepRenderer <196, 196>
+item.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.CategoryStepRenderer <196, 196>
+LegendItem.setDataset(CategoryDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.CategoryStepRenderer <196, 196>
+LegendItem.setDataset(CategoryDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.BoxAndWhiskerRenderer <300, 300>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.BoxAndWhiskerRenderer <300, 300>
+LegendItem.setDataset(CategoryDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.BoxAndWhiskerRenderer <300, 300>
+LegendItem.setDataset(CategoryDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.LineAndShapeRenderer <672, 672>
+result.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.LineAndShapeRenderer <672, 672>
+LegendItem.setDataset(CategoryDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.LineAndShapeRenderer <672, 672>
+LegendItem.setDataset(CategoryDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <1275, 1275>
+item.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <1275, 1275>
+LegendItem.setDataset(CategoryDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.renderer.category.AbstractCategoryItemRenderer <1275, 1275>
+LegendItem.setDataset(CategoryDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.ChartFactory <1381, 1381>
+plot.setDataset(dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.ChartFactory <1381, 1381>
+Plot.setDataset(XYDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.ChartFactory <1381, 1381>
+null.setDataset(XYDataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.title.LegendItemBlockContainer <191, 191>
+entity.setDataset(this.dataset);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.title.LegendItemBlockContainer <191, 191>
+ChartEntity.setDataset(BlockContainer.Dataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.title.LegendItemBlockContainer <191, 191>
+null.setDataset(BlockContainer.Dataset);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.ChartFactory <388, 388>
+plot.setDataset(series);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.ChartFactory <388, 388>
+Plot.setDataset(AbstractDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.ChartFactory <388, 388>
+null.setDataset(null);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.ChartFactory <514, 514>
+plot.setDataset(series);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.jfree.chart.ChartFactory <514, 514>
+Plot.setDataset(AbstractDataset);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.jfree.chart.ChartFactory <514, 514>
+null.setDataset(null);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.ThermometerPlot <443, 443>
+setDatasetGroup(dataset.getGroup());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.ThermometerPlot <443, 443>
+setDatasetGroup(ValueDataset.getGroup());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.ThermometerPlot <443, 443>
+setDatasetGroup(ValueDataset.getGroup());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.WaferMapPlot <196, 196>
+setDatasetGroup(dataset.getGroup());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.WaferMapPlot <196, 196>
+setDatasetGroup(AbstractDataset.getGroup());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.WaferMapPlot <196, 196>
+setDatasetGroup(null.getGroup());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.SpiderWebPlot <364, 364>
+setDatasetGroup(dataset.getGroup());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.SpiderWebPlot <364, 364>
+setDatasetGroup(CategoryDataset.getGroup());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.SpiderWebPlot <364, 364>
+setDatasetGroup(CategoryDataset.getGroup());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.PiePlot <584, 584>
+setDatasetGroup(dataset.getGroup());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PiePlot <584, 584>
+setDatasetGroup(PieDataset.getGroup());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.PiePlot <584, 584>
+setDatasetGroup(PieDataset.getGroup());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.MeterPlot <721, 721>
+setDatasetGroup(dataset.getGroup());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.MeterPlot <721, 721>
+setDatasetGroup(ValueDataset.getGroup());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.MeterPlot <721, 721>
+setDatasetGroup(ValueDataset.getGroup());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.PolarPlot <353, 353>
+setDatasetGroup(this.dataset.getGroup());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PolarPlot <353, 353>
+setDatasetGroup(Plot.XYDataset.getGroup());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.PolarPlot <353, 353>
+setDatasetGroup(Plot.XYDataset.getGroup());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.JThermometer <95, 95>
+this.plot.setDataset(this.data);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.JThermometer <95, 95>
+JPanel.Plot.setDataset(JPanel.AbstractDataset);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.JThermometer <95, 95>
+JPanel.Plot.setDataset(JPanel.AbstractDataset);
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.MultiplePiePlot <185, 185>
+setDatasetGroup(dataset.getGroup());
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.MultiplePiePlot <185, 185>
+setDatasetGroup(CategoryDataset.getGroup());
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.MultiplePiePlot <185, 185>
+setDatasetGroup(CategoryDataset.getGroup());
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.MultiplePiePlot <419, 419>
+piePlot.setDataset(piedataset);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.MultiplePiePlot <419, 419>
+Plot.setDataset(PieDataset);
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.MultiplePiePlot <419, 419>
+Plot.setDataset(PieDataset);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.SpiderWebPlot <1103, 1103>
+item.setDataset(getDataset());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.SpiderWebPlot <1103, 1103>
+LegendItem.setDataset(getDataset());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.SpiderWebPlot <1103, 1103>
+LegendItem.setDataset(getDataset());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.PiePlot <2711, 2711>
+item.setDataset(getDataset());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.PiePlot <2711, 2711>
+LegendItem.setDataset(getDataset());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.PiePlot <2711, 2711>
+LegendItem.setDataset(getDataset());
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.MeterPlot <787, 787>
+item.setDataset(getDataset());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.MeterPlot <787, 787>
+LegendItem.setDataset(getDataset());
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.MeterPlot <787, 787>
+LegendItem.setDataset(getDataset());
+
+---fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori--- org.jfree.chart.plot.MultiplePiePlot <535, 535>
+item.setDataset(getDataset());
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.jfree.chart.plot.MultiplePiePlot <535, 535>
+LegendItem.setDataset(getDataset());
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- org.jfree.chart.plot.MultiplePiePlot <535, 535>
+LegendItem.setDataset(getDataset());
+

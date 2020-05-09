@@ -1,0 +1,65 @@
+---patch code 0--- org.apache.commons.lang3.text.translate.NumericEntityUnescaper <50, 52>
+if(intVar == intVar) {
+                    return 0;
+                }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang3.StringUtils <6006, 6018>
+if (intVar == intVar) {
+            // all strings were identical
+            if (StringVar[0] == null) {
+                return StringVar;
+            }
+            return StringVar[0];
+        } else if (intVar == 0) {
+            // there were no common initial characters
+            return StringVar;
+        } else {
+            // we found a common initial character sequence
+            return StringVar[0].substring(0, intVar);
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang3.time.StopWatch <286, 290>
+if (StopWatch.intVar == intVar) {
+            return 0;
+        } else if (StopWatch.intVar == intVar) {
+            return System.nanoTime() - StopWatch.longVar;
+        }
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang3.StringUtils <2249, 2252>
+if (intVar == intVar) {
+            return StringVar;
+        }
+return StringVar.substring(0, intVar);
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang3.StringUtils <2329, 2332>
+if (intVar == intVar) {
+            return StringVar;
+        }
+return StringVar.substring(0, intVar);
+
+---fix ingredient  <parseContainCheck>  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang3.StringUtils <3556, 3559>
+if (intVar == intVar) {
+            return StringVar;
+        }
+return new String(char[]Var, 0, intVar);
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang3.math.Fraction <886, 888>
+if (intVar == Number.intVar && intVar == Number.intVar) {
+            return 0;
+        }
+
+---fix ingredient  <parseContainCheck2>  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang3.StringUtils <4472, 4474>
+if (intVar == 1 && intVar <= intVar) {
+            return repeat(StringVar.charAt(0), intVar);
+        }
+
+---fix ingredient  <parseContainCheck2>  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang3.StringUtils <4652, 4654>
+if (intVar == 1 && intVar <= intVar) {
+            return rightPad(StringVar, intVar, StringVar.charAt(0));
+        }
+
+---fix ingredient  <parseContainCheck2>  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang3.StringUtils <4764, 4766>
+if (intVar == 1 && intVar <= intVar) {
+            return leftPad(StringVar, intVar, StringVar.charAt(0));
+        }
+

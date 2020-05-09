@@ -1,0 +1,18 @@
+---patch code ori--- org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker <35, 35>
+mockInstance = instantiator.newInstance(mockedProxyType);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.mockito.internal.creation.cglib.ClassImposterizer <147, 147>
+proxy = instantiator.newInstance(proxyClass);
+
+---patch code 0--- org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker <35, 35>
+TVar = Instantiator.newInstance(Class);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.mockito.internal.creation.cglib.ClassImposterizer <147, 147>
+Factory = Instantiator.newInstance(Class);
+
+---patch code 1--- org.mockito.internal.creation.bytebuddy.ByteBuddyMockMaker <35, 35>
+mockInstance = Instantiator.newInstance(Class);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.mockito.internal.creation.cglib.ClassImposterizer <147, 147>
+Factory = Instantiator.newInstance(Class);
+

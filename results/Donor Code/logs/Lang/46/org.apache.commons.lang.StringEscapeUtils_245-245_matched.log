@@ -1,0 +1,481 @@
+---patch code 0--- org.apache.commons.lang.StringEscapeUtils <245, 247>
+if (booleanVar) {
+                            Writer.write('\\');
+                        }
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.StringEscapeUtils <230, 232>
+if (booleanVar) {
+                            Writer.write('\\');
+                        }
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.StringEscapeUtils <382, 386>
+if (booleanVar) {
+            // then we're in the weird case of a \ at the end of the
+            // string, let's output it anyway.
+            Writer.write('\\');
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1626, 1628>
+if (booleanVar) {
+                StringBuffer.append(':');
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1566, 1579>
+if (booleanVar) {
+                if (TimeZone.useDaylightTime() && Calendar.get(Calendar.DST_OFFSET) != 0) {
+                    StringBuffer.append(StringVar);
+                } else {
+                    StringBuffer.append(StringVar);
+                }
+            } else {
+                TimeZone timeZone = Calendar.getTimeZone();
+                if (timeZone.useDaylightTime() && Calendar.get(Calendar.DST_OFFSET) != 0) {
+                    StringBuffer.append(getTimeZoneDisplay(timeZone, true, intVar, Locale));
+                } else {
+                    StringBuffer.append(getTimeZoneDisplay(timeZone, false, intVar, Locale));
+                }
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <457, 470>
+if (Object == Object) {
+                    if (booleanVar) {
+                        intVar += 1000;
+                        String str = booleanVar
+                                ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0')
+                                : Integer.toString(intVar);
+                        StringBuffer.append(str.substring(1));
+                    } else {
+                        StringBuffer.append(booleanVar
+                                ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0')
+                                : Integer.toString(intVar));
+                    }
+                    booleanVar = false;
+                }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.exception.ExceptionUtils <962, 967>
+if (intVar != -1 && StringVar.substring(0, intVar).trim().length() == 0) {
+                booleanVar = true;
+                ListVar.add(StringVar);
+            } else if (booleanVar) {
+                break;
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <360, 367>
+if (Object != null) {
+            appendClassName(StringBuffer, Object);
+            appendIdentityHashCode(StringBuffer, Object);
+            appendContentStart(StringBuffer);
+            if (booleanVar) {
+                appendFieldSeparator(StringBuffer);
+            }
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.WordUtils <286, 294>
+if (isDelimiter(charVar, char[]Var)) {
+                StringBuffer.append(charVar);
+                booleanVar = true;
+            } else if (booleanVar) {
+                StringBuffer.append(Character.toTitleCase(charVar));
+                booleanVar = false;
+            } else {
+                StringBuffer.append(charVar);
+            }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.WordUtils <416, 424>
+if (isDelimiter(charVar, char[]Var)) {
+                StringBuffer.append(charVar);
+                booleanVar = true;
+            } else if (booleanVar) {
+                StringBuffer.append(Character.toLowerCase(charVar));
+                booleanVar = false;
+            } else {
+                StringBuffer.append(charVar);
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <344, 346>
+if (booleanVar) {
+                    removeLastFieldSeparator(StringBuffer);
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.exception.NestableDelegate <338, 340>
+if (booleanVar) {
+          trimStackFrames(ListVar);
+        }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.time.DateUtils <819, 839>
+if (int[][]Var[intVar][intVar] == intVar) {
+                    //This is our field... we stop looping
+                    if (booleanVar && booleanVar) {
+                        if (intVar == DateUtils.intVar) {
+                            //This is a special case that's hard to generalize
+                            //If the date is 1, we round up to 16, otherwise
+                            //  we subtract 15 days and add 1 month
+                            if (Calendar.get(Calendar.DATE) == 1) {
+                                Calendar.add(Calendar.DATE, 15);
+                            } else {
+                                Calendar.add(Calendar.DATE, -15);
+                                Calendar.add(Calendar.MONTH, 1);
+                            }
+                        } else {
+                            //We need at add one to this field since the
+                            //  last number causes us to round up
+                            Calendar.add(int[][]Var[intVar][0], 1);
+                        }
+                    }
+                    return;
+                }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1505, 1508>
+if (booleanVar && StringVar != null) {
+            StringBuffer.append(StringVar);
+            StringBuffer.append(StringVar);
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <2497, 2501>
+if (booleanVar || booleanVar) {
+                    ListVar.add(StringVar.substring(intVar, intVar));
+                    booleanVar = false;
+                    booleanVar = true;
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <533, 546>
+if (Object.getClass().isArray()) {
+                if (booleanVar) {
+                    appendDetail(StringBuffer, StringVar, (Object[]) Object);
+                } else {
+                    appendSummary(StringBuffer, StringVar, (Object[]) Object);
+                }
+    
+            } else {
+                    if (booleanVar) {
+                        appendDetail(StringBuffer, StringVar, Object);
+                    } else {
+                        appendSummary(StringBuffer, StringVar, Object);
+                    }
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <1435, 1442>
+if (booleanVar && Object != null) {
+            register(Object);
+            if (booleanVar) {
+                StringBuffer.append(getShortClassName(Object.getClass()));
+            } else {
+                StringBuffer.append(Object.getClass().getName());
+            }
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.lang.StringUtils <2383, 2391>
+if (booleanVar) {
+                        intVar += 1;
+                        if (intVar == intVar) {
+                            intVar = intVar;
+                            ArrayList.add(StringVar.substring(intVar));
+                        } else {
+                            ArrayList.add(StringVar);
+                        }
+                    }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1553, 1559>
+if (booleanVar) {
+                return Math.max(StringVar.length(), StringVar.length());
+            } else if (intVar == TimeZone.SHORT) {
+                return 4;
+            } else {
+                return 40;
+            }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.text.ExtendedMessageFormat <421, 423>
+if (booleanVar && char[]Var[intVar] == charVar) {
+            return StringBuffer == null ? null : StringBuffer.append(charVar);
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <2667, 2679>
+if (StringVar.indexOf(StringVar.charAt(intVar)) >= 0) {
+                    if (booleanVar || booleanVar) {
+                        booleanVar = true;
+                        if (intVar++ == intVar) {
+                            intVar = intVar;
+                            booleanVar = false;
+                        }
+                        ListVar.add(StringVar.substring(intVar, intVar));
+                        booleanVar = false;
+                    }
+                    intVar = ++intVar;
+                    continue;
+                }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <500, 503>
+if(booleanVar && charVar != '\'') {
+                StringBuffer.append(charVar);
+                continue;
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <464, 468>
+if (booleanVar) {
+                    appendDetail(StringBuffer, StringVar, (Collection) Object);
+                } else {
+                    appendSummarySize(StringBuffer, StringVar, ((Collection) Object).size());
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <471, 475>
+if (booleanVar) {
+                    appendDetail(StringBuffer, StringVar, (Map) Object);
+                } else {
+                    appendSummarySize(StringBuffer, StringVar, ((Map) Object).size());
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <869, 872>
+if (booleanVar) {
+            Calendar = (Calendar) Calendar.clone();
+            Calendar.setTimeZone(TimeZone);
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.text.ExtendedMessageFormat <296, 300>
+if (booleanVar) {
+            throw new IllegalArgumentException(
+                    "Invalid format argument index at position " + intVar + ": "
+                            + StringVar.substring(intVar, ParsePosition.getIndex()));
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.Validate <156, 158>
+if (booleanVar == false) {
+            throw new IllegalArgumentException(StringVar);
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <2626, 2638>
+if (Character.isWhitespace(StringVar.charAt(intVar))) {
+                    if (booleanVar || booleanVar) {
+                        booleanVar = true;
+                        if (intVar++ == intVar) {
+                            intVar = intVar;
+                            booleanVar = false;
+                        }
+                        ListVar.add(StringVar.substring(intVar, intVar));
+                        booleanVar = false;
+                    }
+                    intVar = ++intVar;
+                    continue;
+                }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.Validate <76, 78>
+if (booleanVar == false) {
+            throw new IllegalArgumentException(StringVar + Object);
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.Validate <102, 104>
+if (booleanVar == false) {
+            throw new IllegalArgumentException(StringVar + longVar);
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.Validate <129, 131>
+if (booleanVar == false) {
+            throw new IllegalArgumentException(StringVar + doubleVar);
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <478, 482>
+if (booleanVar) {
+                    appendDetail(StringBuffer, StringVar, (long[]) Object);
+                } else {
+                    appendSummary(StringBuffer, StringVar, (long[]) Object);
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <485, 489>
+if (booleanVar) {
+                    appendDetail(StringBuffer, StringVar, (int[]) Object);
+                } else {
+                    appendSummary(StringBuffer, StringVar, (int[]) Object);
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <492, 496>
+if (booleanVar) {
+                    appendDetail(StringBuffer, StringVar, (short[]) Object);
+                } else {
+                    appendSummary(StringBuffer, StringVar, (short[]) Object);
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <499, 503>
+if (booleanVar) {
+                    appendDetail(StringBuffer, StringVar, (byte[]) Object);
+                } else {
+                    appendSummary(StringBuffer, StringVar, (byte[]) Object);
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <506, 510>
+if (booleanVar) {
+                    appendDetail(StringBuffer, StringVar, (char[]) Object);
+                } else {
+                    appendSummary(StringBuffer, StringVar, (char[]) Object);
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <513, 517>
+if (booleanVar) {
+                    appendDetail(StringBuffer, StringVar, (double[]) Object);
+                } else {
+                    appendSummary(StringBuffer, StringVar, (double[]) Object);
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <520, 524>
+if (booleanVar) {
+                    appendDetail(StringBuffer, StringVar, (float[]) Object);
+                } else {
+                    appendSummary(StringBuffer, StringVar, (float[]) Object);
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.builder.ToStringStyle <527, 531>
+if (booleanVar) {
+                    appendDetail(StringBuffer, StringVar, (boolean[]) Object);
+                } else {
+                    appendSummary(StringBuffer, StringVar, (boolean[]) Object);
+                }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1540, 1546>
+if (booleanVar) {
+                StringVar = getTimeZoneDisplay(TimeZone, false, intVar, Locale);
+                StringVar = getTimeZoneDisplay(TimeZone, true, intVar, Locale);
+            } else {
+                StringVar = null;
+                StringVar = null;
+            }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <2648, 2656>
+if (booleanVar || booleanVar) {
+                        booleanVar = true;
+                        if (intVar++ == intVar) {
+                            intVar = intVar;
+                            booleanVar = false;
+                        }
+                        ListVar.add(StringVar.substring(intVar, intVar));
+                        booleanVar = false;
+                    }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.lang.WordUtils <465, 477>
+if (Character.isUpperCase(charVar)) {
+                charVar = Character.toLowerCase(charVar);
+            } else if (Character.isTitleCase(charVar)) {
+                charVar = Character.toLowerCase(charVar);
+            } else if (Character.isLowerCase(charVar)) {
+                if (booleanVar) {
+                    charVar = Character.toTitleCase(charVar);
+                } else {
+                    charVar = Character.toUpperCase(charVar);
+                }
+            } else {
+                charVar = charVar;
+            }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.WordUtils <552, 559>
+if (isDelimiter(charVar, char[]Var)) {
+                booleanVar = true;
+            } else if (booleanVar) {
+                char[]Var[intVar++] = charVar;
+                booleanVar = false;
+            } else {
+                // ignore ch
+            }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <508, 515>
+if(booleanVar) {
+                      StringBuffer = null;
+                      booleanVar = false;
+                  } else {
+                      StringBuffer = new StringBuffer();
+                      ArrayList.add(new Token(StringBuffer));
+                      booleanVar = true;
+                  }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <2772, 2781>
+if (booleanVar && intVar == Character.LOWERCASE_LETTER && intVar == Character.UPPERCASE_LETTER) {
+                int newTokenStart = intVar - 1;
+                if (newTokenStart != intVar) {
+                    ListVar.add(new String(char[]Var, intVar, newTokenStart - intVar));
+                    intVar = newTokenStart;
+                }
+            } else {
+                ListVar.add(new String(char[]Var, intVar, intVar - intVar));
+                intVar = intVar;
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.lang.StringUtils <3874, 3876>
+if (booleanVar) {
+            return StringBuffer.toString();
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <1656, 1658>
+if (booleanVar) {
+                intVar |= 0x80000000;
+            }
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.text.ExtendedMessageFormat <426, 432>
+if (booleanVar && StringVar.substring(intVar).startsWith(StringVar)) {
+                StringBuffer.append(char[]Var, intVar, ParsePosition.getIndex() - intVar).append(
+                        charVar);
+                ParsePosition.setIndex(intVar + ESCAPED_QUOTE.length());
+                intVar = ParsePosition.getIndex();
+                continue;
+            }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.lang.StringUtils <2365, 2381>
+if (intVar > intVar) {
+                    intVar += 1;
+
+                    if (intVar == intVar) {
+                        intVar = intVar;
+                        ArrayList.add(StringVar.substring(intVar));
+                    } else {
+                        // The following is OK, because String.substring( beg, end ) excludes
+                        // the character at the position 'end'.
+                        ArrayList.add(StringVar.substring(intVar, intVar));
+
+                        // Set the starting point for the next search.
+                        // The following is equivalent to beg = end + (separatorLength - 1) + 1,
+                        // which is the right calculation:
+                        intVar = intVar + intVar;
+                    }
+                } else {
+                    // We found a consecutive occurrence of the separator, so skip it.
+                    if (booleanVar) {
+                        intVar += 1;
+                        if (intVar == intVar) {
+                            intVar = intVar;
+                            ArrayList.add(StringVar.substring(intVar));
+                        } else {
+                            ArrayList.add(StringVar);
+                        }
+                    }
+                    intVar = intVar + intVar;
+                }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <2509, 2511>
+if (booleanVar || (booleanVar && booleanVar)) {
+            ListVar.add(StringVar.substring(intVar, intVar));
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.StringUtils <2685, 2687>
+if (booleanVar || (booleanVar && booleanVar)) {
+            ListVar.add(StringVar.substring(intVar, intVar));
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.text.StrSubstitutor <609, 611>
+if (booleanVar) {
+            return (booleanVar ? 1 : 0);
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.CharSetUtils <326, 328>
+if(CharSet.contains(char[]Var[intVar]) == booleanVar) {
+                StringBuffer.append(char[]Var[intVar]);
+            }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.NumberUtils <657, 661>
+if (booleanVar || booleanVar) {
+                    // two decimal points or dec in exponent   
+                    return false;
+                }
+booleanVar = true;
+
+---fix ingredient  <parseContainCheck>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <1426, 1430>
+if (booleanVar || booleanVar) {
+                    // two decimal points or dec in exponent   
+                    return false;
+                }
+booleanVar = true;
+

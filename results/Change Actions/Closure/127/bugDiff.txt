@@ -1,0 +1,28 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_127/src/com/google/javascript/jscomp/UnreachableCodeElimination.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_127/src/com/google/javascript/jscomp/UnreachableCodeElimination.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Closure/Closure_127/src/com/google/javascript/jscomp/UnreachableCodeElimination.java	2020-01-05 05:23:45.168219312 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Closure/Closure_127/src/com/google/javascript/jscomp/UnreachableCodeElimination.java	2020-01-05 05:23:48.136194524 -0800
+@@ -167,13 +167,22 @@
+                 outEdges.get(0).getValue() == Branch.UNCOND);
+             Node fallThrough = computeFollowing(n);
+             Node nextCfgNode = outEdges.get(0).getDestination().getValue();
+-            if (nextCfgNode == fallThrough) {
++            if (nextCfgNode == fallThrough && !inFinally(n.getParent(), n)) {
+               removeNode(n);
+             }
+           }
+       }
+     }
+ 
++    private boolean inFinally(Node parent, Node child) {
++      if (parent == null || parent.isFunction()) {
++        return false;
++      } else if (NodeUtil.isTryFinallyNode(parent, child)) {
++        return true;
++      } else {
++        return inFinally(parent.getParent(), parent);
++      }
++    }
+ 
+     private Node computeFollowing(Node n) {
+       Node next = ControlFlowAnalysis.computeFollowNode(n);

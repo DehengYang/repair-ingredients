@@ -1,0 +1,22 @@
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, MethodInvocation, OP1, OP3)
+OP3:      (DEL, SimpleName, OP2, OP4 OP9)
+OP4:         (DEL, MethodInvocation, OP3, OP5 OP6)
+OP5:            (DEL, SimpleName, OP4, null)
+OP6:            (DEL, SimpleName, OP4, OP7 OP8)
+OP7:               (DEL, StringLiteral, OP6, null)
+OP8:               (DEL, StringLiteral, OP6, null)
+OP9:         (DEL, SimpleName, OP3, null)
+
+
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, MethodInvocation, OP1, OP3)
+OP3:      (DEL, SimpleName, OP2, OP4 OP9)
+OP4:         (DEL, MethodInvocation, OP3, OP5 OP6)
+OP5:            (DEL, SimpleName, OP4, null)
+OP6:            (DEL, SimpleName, OP4, OP7 OP8)
+OP7:               (DEL, StringLiteral, OP6, null)
+OP8:               (DEL, StringLiteral, OP6, null)
+OP9:         (DEL, SimpleName, OP3, null)
+
+

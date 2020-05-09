@@ -1,0 +1,8 @@
+fixed code:/home/apr/CodeSearchAndMatch2/Defects4J/fixed_bugs_dir/Mockito/Mockito_23/src/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java-127-131
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Mockito/Mockito_23/src/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java-114-118
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Mockito/Mockito_23/src/org/mockito/internal/stubbing/InvocationContainerImpl.java-49-50
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Mockito/Mockito_23/src/org/mockito/internal/stubbing/OngoingStubbingImpl.java-37-38
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Mockito/Mockito_23/src/org/mockito/internal/stubbing/OngoingStubbingImpl.java-23-30
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Mockito/Mockito_23/src/org/mockito/internal/stubbing/InvocationContainerImpl.java-109-111
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Mockito/Mockito_23/src/org/mockito/internal/stubbing/InvocationContainerImpl.java-64-68
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Mockito/Mockito_23/src/org/mockito/internal/stubbing/defaultanswers/ReturnsDeepStubs.java-61-74

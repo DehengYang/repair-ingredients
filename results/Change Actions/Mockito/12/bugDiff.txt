@@ -1,0 +1,17 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_12/src/org/mockito/internal/util/reflection/GenericMaster.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_12/src/org/mockito/internal/util/reflection/GenericMaster.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_12/src/org/mockito/internal/util/reflection/GenericMaster.java	2020-01-05 22:33:01.928550597 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_12/src/org/mockito/internal/util/reflection/GenericMaster.java	2020-01-05 22:33:04.352550588 -0800
+@@ -17,8 +17,12 @@
+         Type generic = field.getGenericType();
+         if (generic != null && generic instanceof ParameterizedType) {
+             Type actual = ((ParameterizedType) generic).getActualTypeArguments()[0];
++            if (actual instanceof Class) {
+                 return (Class) actual;
++            } else if (actual instanceof ParameterizedType) {
+                 //in case of nested generics we don't go deep
++                return (Class) ((ParameterizedType) actual).getRawType();
++            }
+         }
+         
+         return Object.class;

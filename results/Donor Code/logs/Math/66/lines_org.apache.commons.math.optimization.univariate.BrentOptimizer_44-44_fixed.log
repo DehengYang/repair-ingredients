@@ -1,0 +1,12 @@
+fixed code:/home/apr/CodeSearchAndMatch2/Defects4J/fixed_bugs_dir/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-44-44
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/MultiStartDifferentiableMultivariateRealOptimizer.java-89-89
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/MultiStartUnivariateRealOptimizer.java-87-87
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/MultiStartDifferentiableMultivariateVectorialOptimizer.java-93-93
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/AbstractUnivariateRealOptimizer.java-75-75
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/univariate/BrentOptimizer.java-44-44
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/MultiStartMultivariateRealOptimizer.java-85-85
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/general/AbstractLeastSquaresOptimizer.java-119-119
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/optimization/direct/DirectSearchOptimizer.java-120-120
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/ode/jacobians/FirstOrderIntegratorWithJacobians.java-88-88
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/ode/jacobians/FirstOrderIntegratorWithJacobians.java-101-101
+similar code:/home/apr/CodeSearchAndMatch2/Defects4J/Math/Math_66/src/main/java/org/apache/commons/math/ode/AbstractIntegrator.java-71-71

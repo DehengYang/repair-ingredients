@@ -1,0 +1,106 @@
+---patch code ori--- com.google.javascript.jscomp.CollapseProperties <172, 185>
+if (!name.inExterns && name.globalSets == 1 && name.localSets == 0 &&
+          name.aliasingGets > 0) {
+        // {@code name} meets condition (b). Find all of its local aliases
+        // and try to inline them.
+        List<Ref> refs = Lists.newArrayList(name.getRefs());
+        for (Ref ref : refs) {
+          if (ref.type == Type.ALIASING_GET && ref.scope.isLocal()) {
+            // {@code name} meets condition (c). Try to inline it.
+            if (inlineAliasIfPossible(ref, namespace)) {
+              name.removeRef(ref);
+            }
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.CheckGlobalNames <92, 103>
+for (Name name : namespace.getNameForest()) {
+      // Skip extern names. Externs are often not runnable as real code,
+      // and will do things like:
+      // var x;
+      // x.method;
+      // which this check forbids.
+      if (name.inExterns) {
+        continue;
+      }
+
+      checkDescendantNames(name, name.globalSets + name.localSets > 0);
+    }
+
+---patch code 0--- com.google.javascript.jscomp.CollapseProperties <172, 185>
+if (!Name.inExterns && Name.globalSets == 1 && Name.localSets == 0 &&
+          Name.aliasingGets > 0) {
+        // {@code name} meets condition (b). Find all of its local aliases
+        // and try to inline them.
+        List<Ref> refs = Lists.newArrayList(Name.getRefs());
+        for (Ref ref : refs) {
+          if (ref.type == Type.ALIASING_GET && ref.scope.isLocal()) {
+            // {@code name} meets condition (c). Try to inline it.
+            if (inlineAliasIfPossible(ref, GlobalNamespace)) {
+              Name.removeRef(ref);
+            }
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CheckGlobalNames <92, 103>
+for (Name name : GlobalNamespace.getNameForest()) {
+      // Skip extern names. Externs are often not runnable as real code,
+      // and will do things like:
+      // var x;
+      // x.method;
+      // which this check forbids.
+      if (Name.inExterns) {
+        continue;
+      }
+
+      checkDescendantNames(Name, Name.globalSets + Name.localSets > 0);
+    }
+
+---patch code 1--- com.google.javascript.jscomp.CollapseProperties <172, 185>
+if (!Name.inExterns && Name.globalSets == 1 && Name.localSets == 0 &&
+          Name.aliasingGets > 0) {
+        // {@code name} meets condition (b). Find all of its local aliases
+        // and try to inline them.
+        List<Ref> refs = Lists.newArrayList(Name.getRefs());
+        for (Ref ref : refs) {
+          if (ref.type == Type.ALIASING_GET && ref.scope.isLocal()) {
+            // {@code name} meets condition (c). Try to inline it.
+            if (inlineAliasIfPossible(ref, GlobalNamespace)) {
+              Name.removeRef(ref);
+            }
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.CheckGlobalNames <92, 103>
+for (Name name : GlobalNamespace.getNameForest()) {
+      // Skip extern names. Externs are often not runnable as real code,
+      // and will do things like:
+      // var x;
+      // x.method;
+      // which this check forbids.
+      if (Name.inExterns) {
+        continue;
+      }
+
+      checkDescendantNames(Name, Name.globalSets + Name.localSets > 0);
+    }
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- com.google.javascript.jscomp.GlobalNamespace <895, 900>
+if (props == null) {
+        props = new ArrayList<Name>();
+      }
+Name node = new Name(name, this, inExterns);
+props.add(node);
+return node;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.GlobalNamespace <895, 900>
+if (props == null) {
+        props = new ArrayList<Name>();
+      }
+Name Name = new Name(name, this, inExterns);
+props.add(Name);
+return Name;
+

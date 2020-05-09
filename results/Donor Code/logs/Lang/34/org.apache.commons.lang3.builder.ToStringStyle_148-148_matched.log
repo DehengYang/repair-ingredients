@@ -1,0 +1,18 @@
+---patch code ori--- org.apache.commons.lang3.builder.ToStringStyle <148, 148>
+return REGISTRY.get();
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:ori--- org.apache.commons.lang3.builder.ToStringStyle <148, 148>
+return REGISTRY.get() != null ? REGISTRY.get() : Collections.<Object, Object>emptyMap();
+
+---patch code 0--- org.apache.commons.lang3.builder.ToStringStyle <148, 148>
+return REGISTRY.get();
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:0--- org.apache.commons.lang3.builder.ToStringStyle <148, 148>
+return REGISTRY.get() != null ? REGISTRY.get() : Collections.<Object, Object>emptyMap();
+
+---patch code 1--- org.apache.commons.lang3.builder.ToStringStyle <148, 148>
+return REGISTRY.get();
+
+---fix ingredient(SameMethod)  <parseContainCheck>  varMapType:1--- org.apache.commons.lang3.builder.ToStringStyle <148, 148>
+return REGISTRY.get() != null ? REGISTRY.get() : Collections.<Object, Object>emptyMap();
+

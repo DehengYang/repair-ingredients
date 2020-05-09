@@ -1,0 +1,63 @@
+---patch code 0--- org.apache.commons.lang.time.DateUtils <737, 739>
+if (intVar != 0) {
+                Calendar.set(int[][]Var[intVar][0], Calendar.get(int[][]Var[intVar][0]) - intVar);
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.ArrayUtils <3774, 3781>
+if (Object == null) {
+            if (intVar != 0) {
+                throw new IndexOutOfBoundsException("Index: " + intVar + ", Length: 0");
+            }
+            Object joinedArray = Array.newInstance(Class, 1);
+            Array.set(joinedArray, 0, Object);
+            return joinedArray;
+        }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.exception.ExceptionUtils <795, 798>
+if (intVar != 0) {
+                ListVar = getStackFrameList(Throwable[intVar - 1]);
+                removeCommonFrames(ListVar, ListVar);
+            }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.NumberUtils <301, 305>
+for (int intVar = StringVar.length() - 1; intVar >= 0; intVar--) {
+            if (StringVar.charAt(intVar) != '0') {
+                return false;
+            }
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.math.NumberUtils <559, 563>
+for (int intVar = StringVar.length() - 1; intVar >= 0; intVar--) {
+            if (StringVar.charAt(intVar) != '0') {
+                return false;
+            }
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.CharSetUtils <129, 138>
+for (int intVar = 0; intVar < intVar; intVar++) {
+            charVar = char[]Var[intVar];
+            if (CharSet.contains(charVar)) {
+                if ((charVar == charVar) && (intVar != 0)) {
+                    continue;
+                }
+            }
+            StringBuffer.append(charVar);
+            charVar = charVar;
+        }
+
+---fix ingredient  <parseContainCheck2>  varMapType:0--- org.apache.commons.lang.exception.ExceptionUtils <947, 952>
+if (intVar != -1 && StringVar.substring(0, intVar).trim().length() == 0) {
+                booleanVar = true;
+                ListVar.add(StringVar);
+            } else if (booleanVar) {
+                break;
+            }
+
+---fix ingredient  varMapType:0--- org.apache.commons.lang.BitField <48, 53>
+if (intVar != 0) {
+            while ((intVar & 1) == 0) {
+                intVar++;
+                intVar >>= 1;
+            }
+        }
+

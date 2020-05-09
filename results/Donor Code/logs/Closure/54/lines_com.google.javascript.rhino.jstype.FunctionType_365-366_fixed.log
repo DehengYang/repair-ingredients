@@ -1,0 +1,13 @@
+fixed code:/home/apr/CodeSearchAndMatch/Defects4J/fixed_bugs_dir/Closure/Closure_54/src/com/google/javascript/rhino/jstype/FunctionType.java-365-366
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_54/src/com/google/javascript/rhino/jstype/FunctionType.java-985-987
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_54/src/com/google/javascript/jscomp/NameReferenceGraphConstruction.java-550-553
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_54/src/com/google/javascript/rhino/jstype/ObjectType.java-470-472
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_54/src/com/google/javascript/rhino/jstype/FunctionType.java-555-557
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_54/src/com/google/javascript/rhino/jstype/FunctionType.java-368-370
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_54/src/com/google/javascript/jscomp/TightenTypes.java-1306-1309
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_54/src/com/google/javascript/jscomp/TightenTypes.java-1221-1223
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_54/src/com/google/javascript/jscomp/ConcreteType.java-515-522
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_54/src/com/google/javascript/rhino/jstype/FunctionType.java-291-297
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_54/src/com/google/javascript/jscomp/CheckAccessControls.java-406-415
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_54/src/com/google/javascript/rhino/jstype/FunctionType.java-306-314
+similar code:/home/apr/CodeSearchAndMatch/Defects4J/Closure/Closure_54/src/com/google/javascript/jscomp/DisambiguateProperties.java-883-889

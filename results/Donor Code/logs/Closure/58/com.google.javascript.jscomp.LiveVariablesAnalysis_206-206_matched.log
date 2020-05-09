@@ -1,0 +1,227 @@
+---patch code 0--- com.google.javascript.jscomp.LiveVariablesAnalysis <206, 211>
+if (NodeUtil.isName(Node)) {
+            addToSetIfLocal(Node, BitSet);
+            addToSetIfLocal(Node, BitSet);
+          } else {
+            computeGenKill(Node, BitSet, BitSet, booleanVar);
+          }
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:0--- com.google.javascript.jscomp.LiveVariablesAnalysis <246, 260>
+if (NodeUtil.isAssignmentOp(Node) && NodeUtil.isName(Node.getFirstChild())) {
+          Node lhs = Node.getFirstChild();
+          if (!booleanVar) {
+            addToSetIfLocal(lhs, BitSet);
+          }
+          if (!NodeUtil.isAssign(Node)) {
+            // assignments such as a += 1 reads a.
+            addToSetIfLocal(lhs, BitSet);
+          }
+          computeGenKill(lhs.getNext(), BitSet, BitSet, booleanVar);
+        } else {
+          for (Node Node = Node.getFirstChild(); Node != null; Node = Node.getNext()) {
+            computeGenKill(Node, BitSet, BitSet, booleanVar);
+          }
+        }
+
+---patch code 1--- com.google.javascript.jscomp.LiveVariablesAnalysis <206, 211>
+if (NodeUtil.isName(Node)) {
+            addToSetIfLocal(Node, BitSet);
+            addToSetIfLocal(Node, BitSet);
+          } else {
+            computeGenKill(Node, BitSet, BitSet, conditional);
+          }
+
+---fix ingredient(SameMethod)  <parseContainCheck2>  varMapType:1--- com.google.javascript.jscomp.LiveVariablesAnalysis <246, 260>
+if (NodeUtil.isAssignmentOp(Node) && NodeUtil.isName(Node.getFirstChild())) {
+          Node lhs = Node.getFirstChild();
+          if (!conditional) {
+            addToSetIfLocal(lhs, BitSet);
+          }
+          if (!NodeUtil.isAssign(Node)) {
+            // assignments such as a += 1 reads a.
+            addToSetIfLocal(lhs, BitSet);
+          }
+          computeGenKill(lhs.getNext(), BitSet, BitSet, conditional);
+        } else {
+          for (Node Node = Node.getFirstChild(); Node != null; Node = Node.getNext()) {
+            computeGenKill(Node, BitSet, BitSet, conditional);
+          }
+        }
+
+---patch code ori--- com.google.javascript.jscomp.LiveVariablesAnalysis <206, 211>
+if (NodeUtil.isName(lhs)) {
+            addToSetIfLocal(lhs, kill);
+            addToSetIfLocal(lhs, gen);
+          } else {
+            computeGenKill(lhs, gen, kill, conditional);
+          }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- com.google.javascript.jscomp.NameReferenceGraphConstruction <205, 214>
+if (NodeUtil.isName(lhs) ||
+              NodeUtil.isGetProp(lhs) ||
+              NodeUtil.isGetProp(rhs)) {
+            if (NodeUtil.isPrototypeProperty(lhs)) {
+              Name name = recordPrototypePropDefinition(
+                  t, lhs, getType(rhs), n, parent, parent.getParent());
+              name.setAliased(true);
+            }
+          }
+maybeAliasNamesOnAssign(lhs, rhs);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.NameReferenceGraphConstruction <205, 214>
+if (NodeUtil.isName(Node) ||
+              NodeUtil.isGetProp(Node) ||
+              NodeUtil.isGetProp(Node)) {
+            if (NodeUtil.isPrototypeProperty(Node)) {
+              Name name = recordPrototypePropDefinition(
+                  NodeTraversal, Node, getType(Node), Node, Node, Node.getParent());
+              name.setAliased(true);
+            }
+          }
+maybeAliasNamesOnAssign(Node, Node);
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.NameReferenceGraphConstruction <205, 214>
+if (NodeUtil.isName(Node) ||
+              NodeUtil.isGetProp(Node) ||
+              NodeUtil.isGetProp(Node)) {
+            if (NodeUtil.isPrototypeProperty(Node)) {
+              Name name = recordPrototypePropDefinition(
+                  NodeTraversal, Node, getType(Node), Node, Node, Node.getParent());
+              name.setAliased(true);
+            }
+          }
+maybeAliasNamesOnAssign(Node, Node);
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.MustBeReachingVariableDef <238, 251>
+if (!NodeUtil.isForIn(n)) {
+          computeMustDef(
+              NodeUtil.getConditionExpression(n), cfgNode, output, conditional);
+        } else {
+          // for(x in y) {...}
+          Node lhs = n.getFirstChild();
+          Node rhs = lhs.getNext();
+          if (NodeUtil.isVar(lhs)) {
+            lhs = lhs.getLastChild(); // for(var x in y) {...}
+          }
+          if (NodeUtil.isName(lhs)) {
+            addToDefIfLocal(lhs.getString(), cfgNode, rhs, output);
+          }
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- com.google.javascript.jscomp.MaybeReachingVariableUse <171, 185>
+if (!NodeUtil.isForIn(n)) {
+          computeMayUse(
+              NodeUtil.getConditionExpression(n), cfgNode, output, conditional);
+        } else {
+          // for(x in y) {...}
+          Node lhs = n.getFirstChild();
+          Node rhs = lhs.getNext();
+          if (NodeUtil.isVar(lhs)) {
+            lhs = lhs.getLastChild(); // for(var x in y) {...}
+          }
+          if (NodeUtil.isName(lhs) && !conditional) {
+            removeFromUseIfLocal(lhs.getString(), output);
+          }
+          computeMayUse(rhs, cfgNode, output, conditional);
+        }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.FunctionArgumentInjector <450, 453>
+if (NodeUtil.isName(Node)) {
+        String name = Node.getString();
+        return Set.contains(name);
+      }
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.FunctionArgumentInjector <450, 453>
+if (NodeUtil.isName(Node)) {
+        String name = Node.getString();
+        return Set.contains(name);
+      }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.NameReferenceGraphConstruction <232, 234>
+if (NodeUtil.isName(Node) || NodeUtil.isGetProp(Node)) {
+              safeAlias(Node);
+            }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.NameReferenceGraphConstruction <232, 234>
+if (NodeUtil.isName(Node) || NodeUtil.isGetProp(Node)) {
+              safeAlias(Node);
+            }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.OptimizeArgumentsArray <166, 168>
+if (NodeUtil.isName(Node) && ARGUMENTS.equals(Node.getString())) {
+      ListVar.add(Node);
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.OptimizeArgumentsArray <166, 168>
+if (NodeUtil.isName(Node) && ARGUMENTS.equals(Node.getString())) {
+      currentArgumentsAccess.add(Node);
+    }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- com.google.javascript.jscomp.NameReferenceGraphConstruction <255, 262>
+if (NodeUtil.isName(Node) || NodeUtil.isGetProp(Node)) {
+        String name = Node.getQualifiedName();
+        // getQualifiedName can return null in cases like bar[0].baz
+        if (name != null) {
+          defineAndAlias(name);
+          return;
+        }
+      }
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- com.google.javascript.jscomp.NameReferenceGraphConstruction <255, 262>
+if (NodeUtil.isName(Node) || NodeUtil.isGetProp(Node)) {
+        String name = Node.getQualifiedName();
+        // getQualifiedName can return null in cases like bar[0].baz
+        if (name != null) {
+          defineAndAlias(name);
+          return;
+        }
+      }
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:0--- com.google.javascript.jscomp.MaybeReachingVariableUse <213, 234>
+if (NodeUtil.isAssignmentOp(Node) && NodeUtil.isName(Node.getFirstChild())) {
+          Node name = Node.getFirstChild();
+          if (!booleanVar) {
+            removeFromUseIfLocal(name.getString(), ReachingUses);
+          }
+
+          // In case of a += "Hello". There is a read of a.
+          if (!NodeUtil.isAssign(Node)) {
+            addToUseIfLocal(name.getString(), Node, ReachingUses);
+          }
+
+          computeMayUse(name.getNext(), Node, ReachingUses, booleanVar);
+        } else {
+          /*
+           * We want to traverse in reverse order because we want the LAST
+           * definition in the sub-tree....
+           * But we have no better way to traverse in reverse other :'(
+           */
+          for (Node c = Node.getLastChild(); c != null; c = Node.getChildBefore(c)) {
+            computeMayUse(c, Node, ReachingUses, booleanVar);
+          }
+        }
+
+---fix ingredient(SamePackage)  <parseContainCheck2>  varMapType:1--- com.google.javascript.jscomp.MaybeReachingVariableUse <213, 234>
+if (NodeUtil.isAssignmentOp(Node) && NodeUtil.isName(Node.getFirstChild())) {
+          Node name = Node.getFirstChild();
+          if (!conditional) {
+            removeFromUseIfLocal(name.getString(), ReachingUses);
+          }
+
+          // In case of a += "Hello". There is a read of a.
+          if (!NodeUtil.isAssign(Node)) {
+            addToUseIfLocal(name.getString(), Node, ReachingUses);
+          }
+
+          computeMayUse(name.getNext(), Node, ReachingUses, conditional);
+        } else {
+          /*
+           * We want to traverse in reverse order because we want the LAST
+           * definition in the sub-tree....
+           * But we have no better way to traverse in reverse other :'(
+           */
+          for (Node c = Node.getLastChild(); c != null; c = Node.getChildBefore(c)) {
+            computeMayUse(c, Node, ReachingUses, conditional);
+          }
+        }
+

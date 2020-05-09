@@ -1,0 +1,6 @@
+chunk1 : org.jfree.data.category.DefaultIntervalCategoryDataset:338-338
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (2)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (2)
+
+

@@ -1,0 +1,9 @@
+---patch code ori--- org.apache.commons.lang3.builder.ToStringStyle <164, 164>
+return m != null && m.containsKey(value);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.reflect.MemberUtils <87, 87>
+return m != null && Modifier.isPublic(m.getModifiers()) && !m.isSynthetic();
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.StringUtils <2568, 2568>
+return splitWorker(str, null, max, preserveAllTokens);
+

@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_1/source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_1/source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_1/source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java	2020-01-04 01:53:13.932689742 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_1/source/org/jfree/chart/renderer/category/AbstractCategoryItemRenderer.java	2020-01-04 01:53:15.544642759 -0800
+@@ -1794,7 +1794,7 @@
+         }
+         int index = this.plot.getIndexOf(this);
+         CategoryDataset dataset = this.plot.getDataset(index);
+-        if (dataset != null) {
++        if (dataset == null) {
+             return result;
+         }
+         int seriesCount = dataset.getRowCount();

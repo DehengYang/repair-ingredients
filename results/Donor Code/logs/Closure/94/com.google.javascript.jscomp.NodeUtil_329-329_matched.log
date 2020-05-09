@@ -1,0 +1,108 @@
+---patch code ori--- com.google.javascript.jscomp.NodeUtil <329, 329>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.PeepholeFoldConstants <129, 129>
+case Token.ADD:
+
+---patch code 0--- com.google.javascript.jscomp.NodeUtil <329, 329>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.PeepholeFoldConstants <129, 129>
+case Token.ADD:
+
+---patch code 1--- com.google.javascript.jscomp.NodeUtil <329, 329>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.PeepholeFoldConstants <129, 129>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.PeepholeFoldConstants <340, 340>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.PeepholeFoldConstants <340, 340>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.PeepholeFoldConstants <340, 340>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.PeepholeFoldConstants <506, 506>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.PeepholeFoldConstants <506, 506>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.PeepholeFoldConstants <506, 506>
+case Token.ADD:
+
+---fix ingredient  varMapType:ori--- com.google.javascript.jscomp.jsonml.Writer <99, 99>
+case Token.ADD:
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.jsonml.Writer <99, 99>
+case Token.ADD:
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.jsonml.Writer <99, 99>
+case Token.ADD:
+
+---fix ingredient  varMapType:ori--- com.google.javascript.jscomp.parsing.TypeSafeDispatcher <120, 120>
+case Token.ADD:
+
+---fix ingredient  varMapType:0--- com.google.javascript.jscomp.parsing.TypeSafeDispatcher <120, 120>
+case Token.ADD:
+
+---fix ingredient  varMapType:1--- com.google.javascript.jscomp.parsing.TypeSafeDispatcher <120, 120>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.JsMessageVisitor <322, 322>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.JsMessageVisitor <322, 322>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.JsMessageVisitor <322, 322>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.JsMessageVisitor <459, 459>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.JsMessageVisitor <459, 459>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.JsMessageVisitor <459, 459>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:ori--- com.google.javascript.jscomp.JsMessageVisitor <565, 565>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.JsMessageVisitor <565, 565>
+case Token.ADD:
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.JsMessageVisitor <565, 565>
+case Token.ADD:
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.NodeUtil <378, 378>
+case Token.ADD:
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.NodeUtil <378, 378>
+case Token.ADD:
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.NodeUtil <378, 378>
+case Token.ADD:
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.NodeUtil <841, 841>
+case Token.ADD:
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.NodeUtil <841, 841>
+case Token.ADD:
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.NodeUtil <841, 841>
+case Token.ADD:
+
+---fix ingredient(SameFile)  varMapType:ori--- com.google.javascript.jscomp.NodeUtil <1543, 1543>
+case Token.ADD:
+
+---fix ingredient(SameFile)  varMapType:0--- com.google.javascript.jscomp.NodeUtil <1543, 1543>
+case Token.ADD:
+
+---fix ingredient(SameFile)  varMapType:1--- com.google.javascript.jscomp.NodeUtil <1543, 1543>
+case Token.ADD:
+

@@ -1,0 +1,36 @@
+---patch code ori--- org.jfree.data.DefaultKeyedValues <333, 334>
+throw new UnknownKeyException("The key (" + key 
+                    + ") is not recognised.");
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.data.KeyedObjects <171, 172>
+throw new UnknownKeyException("The key (" + key 
+                    + ") is not recognised.");
+
+---patch code 0--- org.jfree.data.DefaultKeyedValues <333, 334>
+throw new UnknownKeyException("The key (" + Comparable 
+                    + ") is not recognised.");
+
+---fix ingredient(SamePackage)  varMapType:0--- org.jfree.data.KeyedObjects <171, 172>
+throw new UnknownKeyException("The key (" + Comparable 
+                    + ") is not recognised.");
+
+---patch code 1--- org.jfree.data.DefaultKeyedValues <333, 334>
+throw new UnknownKeyException("The key (" + Comparable 
+                    + ") is not recognised.");
+
+---fix ingredient(SamePackage)  varMapType:1--- org.jfree.data.KeyedObjects <171, 172>
+throw new UnknownKeyException("The key (" + Comparable 
+                    + ") is not recognised.");
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:ori--- org.jfree.data.KeyedObjects <268, 269>
+throw new UnknownKeyException("The key (" + key.toString() 
+                    + ") is not recognised.");
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:0--- org.jfree.data.KeyedObjects <268, 269>
+throw new UnknownKeyException("The key (" + Comparable.toString() 
+                    + ") is not recognised.");
+
+---fix ingredient(SamePackage)  <parseContainCheck>  varMapType:1--- org.jfree.data.KeyedObjects <268, 269>
+throw new UnknownKeyException("The key (" + Comparable.toString() 
+                    + ") is not recognised.");
+

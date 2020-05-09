@@ -1,0 +1,15 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_50/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_50/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_50/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java	2020-01-05 06:36:14.835890443 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_50/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java	2020-01-05 06:36:18.355861044 -0800
+@@ -184,10 +184,6 @@
+                     break;
+                 case REGULA_FALSI:
+                     // Nothing.
+-                    if (x == x1) {
+-                        x0 = 0.5 * (x0 + x1 - FastMath.max(rtol * FastMath.abs(x1), atol));
+-                        f0 = computeObjectiveValue(x0);
+-                    }
+                     break;
+                 default:
+                     // Should never happen.

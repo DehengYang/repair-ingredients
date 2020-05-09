@@ -1,0 +1,5 @@
+chunk1 : org.joda.time.field.FieldUtils:138-140
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:ori : (1)
+fix ingredient(SameFile)  <parseContainCheck2>  varMapType:1 : (1)
+
+

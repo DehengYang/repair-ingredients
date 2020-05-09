@@ -1,0 +1,420 @@
+---patch code 0--- org.apache.commons.lang3.math.NumberUtils <479, 481>
+if (intVar < intVar || intVar > StringVar.length()) {
+                    throw new NumberFormatException(StringVar + " is not a valid number.");
+                }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <1239, 1241>
+if (intVar > (StringVar.length() - StringVar.length())) {
+            intVar = StringVar.length() - StringVar.length();
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <915, 919>
+if (StringVar.length() == 0) {
+            return booleanVar ? StringVar.length() : 0;
+        }
+int intVar = 0;
+int intVar = booleanVar ? StringVar.length() : intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <6254, 6258>
+if (StringVar.length() > StringVar.length()) {
+            return false;
+        }
+int intVar = StringVar.length() - StringVar.length();
+return StringVar.regionMatches(booleanVar, intVar, StringVar, 0, StringVar.length());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2274, 2276>
+if (intVar == intVar || intVar == (StringVar.length() - StringVar.length())) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <5722, 5724>
+if (intVar >= StringVar.length() || intVar < (StringVar.length()+2)) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.WordUtils <550, 552>
+if (intVar == -1 || intVar > StringVar.length()) {
+            intVar = StringVar.length();
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.WordUtils <545, 547>
+if (intVar > StringVar.length()) {
+            intVar = StringVar.length();    
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <1987, 1989>
+if (intVar > StringVar.length()) {
+            intVar = StringVar.length();
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <5669, 5671>
+if (intVar > StringVar.length()) {
+            intVar = StringVar.length();
+        }
+
+---patch code ori--- org.apache.commons.lang3.math.NumberUtils <479, 481>
+if (expPos < decPos || expPos > str.length()) {
+                    throw new NumberFormatException(str + " is not a valid number.");
+                }
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.math.NumberUtils <556, 560>
+if (expPos > -1 && expPos < str.length() - 1) {
+                exp = str.substring(expPos + 1, str.length());
+            } else {
+                exp = null;
+            }
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <556, 560>
+if (intVar > -1 && intVar < StringVar.length() - 1) {
+                StringVar = StringVar.substring(intVar + 1, StringVar.length());
+            } else {
+                StringVar = null;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <1337, 1341>
+if (StringVar == null || StringVar == null) {
+            return false;
+        }
+int intVar = StringVar.length();
+int intVar = StringVar.length() - intVar;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <5672, 5674>
+if ((StringVar.length() - intVar) < (intVar - 3)) {
+            intVar = StringVar.length() - (intVar - 3);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <1931, 1933>
+if (intVar > StringVar.length()) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2102, 2104>
+if (intVar < 0 || intVar > StringVar.length()) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.WordUtils <383, 385>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <491, 493>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <535, 537>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <5069, 5071>
+if (StringVar == null || (intVar = StringVar.length()) == 0) {
+            return StringVar;
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <1924, 1926>
+if (intVar < 0) {
+            intVar = StringVar.length() + intVar; // remember start is negative
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <1979, 1981>
+if (intVar < 0) {
+            intVar = StringVar.length() + intVar; // remember end is negative
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <1982, 1984>
+if (intVar < 0) {
+            intVar = StringVar.length() + intVar; // remember start is negative
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <613, 618>
+for (int intVar = StringVar.length() - 1; intVar >= 0; intVar--) {
+            if (StringVar.charAt(intVar) != '0') {
+                return false;
+            }
+        }
+return StringVar.length() > 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.CharSet <199, 204>
+if (StringVar == null) {
+            return;
+        }
+empty line
+int intVar = StringVar.length();
+int intVar = 0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <2342, 2345>
+if (StringVar == null || intVar < 0) {
+            return -1;
+        }
+int intVar = StringVar.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1272, 1275>
+if (StringVar == null) {
+                StringVar = "";
+            }
+int intVar = StringVar.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1319, 1322>
+if (StringVar == null) {
+                StringVar = "";
+            }
+int intVar = StringVar.length();
+
+---fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.lang3.math.NumberUtils <496, 503>
+if (expPos > -1 && expPos < str.length() - 1) {
+                exp = str.substring(expPos + 1, str.length() - 1);
+            } else {
+                exp = null;
+            }
+//Requesting a specific type..
+String numeric = str.substring(0, str.length() - 1);
+boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <496, 503>
+if (intVar > -1 && intVar < StringVar.length() - 1) {
+                StringVar = StringVar.substring(intVar + 1, StringVar.length() - 1);
+            } else {
+                StringVar = null;
+            }
+//Requesting a specific type..
+String StringVar = StringVar.substring(0, StringVar.length() - 1);
+boolean booleanVar = isAllZeros(StringVar) && isAllZeros(StringVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <503, 506>
+if (StringVar == null) {
+            return appendNull();
+        }
+int intVar = StringVar.length();
+
+---patch code 1--- org.apache.commons.lang3.math.NumberUtils <479, 481>
+if (expPos < decPos || expPos > str.length()) {
+                    throw new NumberFormatException(str + " is not a valid number.");
+                }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.text.StrBuilder <552, 555>
+if (StringBuffer == null) {
+            return appendNull();
+        }
+int strLen = StringBuffer.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <529, 531>
+if (intVar < 0 || intVar > StringVar.length()) {
+            throw new StringIndexOutOfBoundsException("startIndex must be valid");
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1380, 1383>
+if (StringVar == null) {
+            StringVar = StringVar;
+        }
+int intVar = (StringVar == null ? 0 : StringVar.length());
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <532, 534>
+if (intVar < 0 || (intVar + intVar) > StringVar.length()) {
+            throw new StringIndexOutOfBoundsException("length must be valid");
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <1360, 1363>
+if (isEmpty(StringVar)) {
+            return false;
+        }
+int intVar = StringVar.length();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <2341, 2343>
+if (intVar != intVar) {
+                return StringVar.substring(intVar + StringVar.length(), intVar);
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <1008, 1010>
+if (StringVar.regionMatches(true, intVar, StringVar, 0, StringVar.length())) {
+                return intVar;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <1250, 1252>
+if (StringVar.regionMatches(true, intVar, StringVar, 0, StringVar.length())) {
+                return intVar;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4037, 4049>
+for (int intVar = 0; intVar < String[]Var.length; intVar++) {
+            if (String[]Var[intVar] == null || String[]Var[intVar] == null) {
+                continue;
+            }
+            int greater = String[]Var[intVar].length() - String[]Var[intVar].length();
+            if (greater > 0) {
+                intVar += 3 * greater; // assume 3 matches
+            }
+        }
+// have upper-bound at 20% increase, then let Java take over
+intVar = Math.min(intVar, StringVar.length() / 5);
+empty line
+StringBuilder StringBuilder = new StringBuilder(StringVar.length() + intVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <1617, 1620>
+if (isEmpty(StringVar) || isEmpty(StringVar)) {
+            return intVar;
+        }
+int intVar = StringVar.length();
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.math.NumberUtils <1295, 1299>
+for (int intVar = 0; intVar < StringVar.length(); intVar++) {
+            if (!Character.isDigit(StringVar.charAt(intVar))) {
+                return false;
+            }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <5682, 5684>
+if ((intVar + (intVar - 3)) < StringVar.length()) {
+            return StringVar + abbreviate(StringVar.substring(intVar), intVar - 3);
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrBuilder <1876, 1880>
+if (StrMatcher == null || intVar == 0) {
+            return this;
+        }
+int intVar = (StringVar == null ? 0 : StringVar.length());
+char[] char[]Var = char[]Var;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.lang3.builder.ToStringStyle <397, 412>
+/**
+     * <p>Remove the last field separator from the buffer.</p>
+     *
+     * @param buffer  the <code>StringBuffer</code> to populate
+     * @since 2.0
+     */
+    protected void removeLastFieldSeparator(StringBuffer buffer) {
+        int len = StringBuffer.length();
+        int sepLen = fieldSeparator.length();
+        if (len > 0 && sepLen > 0 && len >= sepLen) {
+            boolean match = true;
+            for (int i = 0; i < sepLen; i++) {
+                if (StringBuffer.charAt(len - 1 - i) != fieldSeparator.charAt(sepLen - 1 - i)) {
+                    match = false;
+                    break;
+                }
+            }
+            if (match) {
+                StringBuffer.setLength(len - sepLen);
+            }
+        }
+    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4563, 4575>
+/**
+     * <p>Right pad a String with a specified character.</p>
+     *
+     * <p>The String is padded to the size of <code>size</code>.</p>
+     *
+     * <pre>
+     * StringUtils.rightPad(null, *, *)     = null
+     * StringUtils.rightPad("", 3, 'z')     = "zzz"
+     * StringUtils.rightPad("bat", 3, 'z')  = "bat"
+     * StringUtils.rightPad("bat", 5, 'z')  = "batzz"
+     * StringUtils.rightPad("bat", 1, 'z')  = "bat"
+     * StringUtils.rightPad("bat", -1, 'z') = "bat"
+     * </pre>
+     *
+     * @param str  the String to pad out, may be null
+     * @param size  the size to pad to
+     * @param padChar  the character to pad with
+     * @return right padded String or original String if no padding is necessary,
+     *  <code>null</code> if null String input
+     * @since 2.0
+     */
+    public static String rightPad(String str, int size, char padChar) {
+        if (StringVar == null) {
+            return null;
+        }
+        int pads = intVar - StringVar.length();
+        if (pads <= 0) {
+            return StringVar; // returns original String when possible
+        }
+        if (pads > intVar) {
+            return rightPad(StringVar, intVar, String.valueOf(charVar));
+        }
+        return StringVar.concat(padding(pads, charVar));
+    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4675, 4687>
+/**
+     * <p>Left pad a String with a specified character.</p>
+     *
+     * <p>Pad to a size of <code>size</code>.</p>
+     *
+     * <pre>
+     * StringUtils.leftPad(null, *, *)     = null
+     * StringUtils.leftPad("", 3, 'z')     = "zzz"
+     * StringUtils.leftPad("bat", 3, 'z')  = "bat"
+     * StringUtils.leftPad("bat", 5, 'z')  = "zzbat"
+     * StringUtils.leftPad("bat", 1, 'z')  = "bat"
+     * StringUtils.leftPad("bat", -1, 'z') = "bat"
+     * </pre>
+     *
+     * @param str  the String to pad out, may be null
+     * @param size  the size to pad to
+     * @param padChar  the character to pad with
+     * @return left padded String or original String if no padding is necessary,
+     *  <code>null</code> if null String input
+     * @since 2.0
+     */
+    public static String leftPad(String str, int size, char padChar) {
+        if (StringVar == null) {
+            return null;
+        }
+        int pads = intVar - StringVar.length();
+        if (pads <= 0) {
+            return StringVar; // returns original String when possible
+        }
+        if (pads > intVar) {
+            return leftPad(StringVar, intVar, String.valueOf(charVar));
+        }
+        return padding(pads, charVar).concat(StringVar);
+    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.exception.ExceptionUtils <665, 670>
+if (intVar != -1 && StringVar.substring(0, intVar).trim().length() == 0) {
+                booleanVar = true;
+                ListVar.add(StringVar);
+            } else if (booleanVar) {
+                break;
+            }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.WordUtils <560, 572>
+if (intVar == -1) {
+            StringBuilder.append(StringVar.substring(0, intVar));
+            // only if abbreviation has occured do we append the appendToEnd value
+            if (intVar != StringVar.length()) {
+                StringBuilder.append(StringUtils.defaultString(StringVar));
+            }
+        } else if (intVar > intVar) {
+            StringBuilder.append(StringVar.substring(0, intVar));
+            StringBuilder.append(StringUtils.defaultString(StringVar));
+        } else {
+            StringBuilder.append(StringVar.substring(0, intVar));
+            StringBuilder.append(StringUtils.defaultString(StringVar));
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.StringUtils <4243, 4252>
+if (intVar > intVar) {
+            int temp = intVar;
+            intVar = intVar;
+            intVar = temp;
+        }
+return new StringBuilder(intVar + intVar - intVar + StringVar.length() + 1)
+            .append(StringVar.substring(0, intVar))
+            .append(StringVar)
+            .append(StringVar.substring(intVar))
+            .toString();
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang3.text.StrTokenizer <505, 508>
+/**
+     * Checks whether there are any more tokens.
+     *
+     * @return true if there are more tokens
+     */
+    public boolean hasNext() {
+        checkTokenized();
+        return intVar < StringVar.length;
+    }
+

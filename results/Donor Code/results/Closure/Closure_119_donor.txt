@@ -1,0 +1,9 @@
+chunk1 : com.google.javascript.jscomp.GlobalNamespace:366-366
+fix ingredient(SamePackage)  varMapType:ori : (7)
+fix ingredient(SamePackage)  varMapType:0 : (7)
+fix ingredient(SamePackage)  varMapType:1 : (7)
+fix ingredient  varMapType:ori : (2)
+fix ingredient  varMapType:0 : (2)
+fix ingredient  varMapType:1 : (2)
+
+

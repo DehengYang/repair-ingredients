@@ -1,0 +1,65 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_21/source/org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_21/source/org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_21/source/org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java	2020-01-03 05:10:57.410475708 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_21/source/org/jfree/data/statistics/DefaultBoxAndWhiskerCategoryDataset.java	2020-01-03 05:11:00.806398835 -0800
+@@ -154,6 +154,7 @@
+                 && this.minimumRangeValueColumn == c))  {
+             updateBounds();
+         }
++        else {
+         
+             double minval = Double.NaN;
+             if (item.getMinOutlier() != null) {
+@@ -185,6 +186,7 @@
+                 this.minimumRangeValueRow = r;
+                 this.minimumRangeValueColumn = c;
+             }
++        }
+         
+         this.rangeBounds = new Range(this.minimumRangeValue,
+               this.maximumRangeValue);
+@@ -738,7 +740,44 @@
+      */
+     private void updateBounds() {
+         this.minimumRangeValue = Double.NaN;
++        this.minimumRangeValueRow = -1;
++        this.minimumRangeValueColumn = -1;
+         this.maximumRangeValue = Double.NaN;
++        this.maximumRangeValueRow = -1;
++        this.maximumRangeValueColumn = -1;
++        int rowCount = getRowCount();
++        int columnCount = getColumnCount();
++        for (int r = 0; r < rowCount; r++) {
++            for (int c = 0; c < columnCount; c++) {
++                BoxAndWhiskerItem item = getItem(r, c);
++                if (item != null) {
++                    Number min = item.getMinOutlier();
++                    if (min != null) {
++                        double minv = min.doubleValue();
++                        if (!Double.isNaN(minv)) {
++                            if (minv < this.minimumRangeValue || Double.isNaN(
++                                    this.minimumRangeValue)) {
++                                this.minimumRangeValue = minv;
++                                this.minimumRangeValueRow = r;
++                                this.minimumRangeValueColumn = c;
++                            }
++                        }
++                    }
++                    Number max = item.getMaxOutlier();
++                    if (max != null) {
++                        double maxv = max.doubleValue();
++                        if (!Double.isNaN(maxv)) {
++                            if (maxv > this.maximumRangeValue || Double.isNaN(
++                                    this.maximumRangeValue)) {
++                                this.maximumRangeValue = maxv;
++                                this.maximumRangeValueRow = r;
++                                this.maximumRangeValueColumn = c;
++                            }
++                        }
++                    }
++                }
++            }
++        }
+     }
+     
+     /**

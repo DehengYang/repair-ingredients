@@ -1,0 +1,135 @@
+---patch code ori--- org.apache.commons.math.distribution.FDistributionImpl <144, 144>
+double ret = 1.0;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.special.Gamma <236, 236>
+ret = 1.0;
+
+---patch code 0--- org.apache.commons.math.distribution.FDistributionImpl <144, 144>
+double doubleVar = 1.0;
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.special.Gamma <236, 236>
+doubleVar = 1.0;
+
+---patch code 1--- org.apache.commons.math.distribution.FDistributionImpl <144, 144>
+double ret = 1.0;
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.special.Gamma <236, 236>
+ret = 1.0;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.distribution.HypergeometricDistributionImpl <85, 85>
+ret = 1.0;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.distribution.HypergeometricDistributionImpl <85, 85>
+doubleVar = 1.0;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.distribution.HypergeometricDistributionImpl <85, 85>
+ret = 1.0;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.distribution.HypergeometricDistributionImpl <273, 273>
+ret = 1.0;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.distribution.HypergeometricDistributionImpl <273, 273>
+doubleVar = 1.0;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.distribution.HypergeometricDistributionImpl <273, 273>
+ret = 1.0;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.distribution.BinomialDistributionImpl <133, 133>
+ret = 1.0;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.distribution.BinomialDistributionImpl <133, 133>
+doubleVar = 1.0;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.distribution.BinomialDistributionImpl <133, 133>
+ret = 1.0;
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.special.Erf <56, 56>
+double ret = Gamma.regularizedGammaP(0.5, x * x, 1.0e-15, 10000);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.special.Erf <56, 56>
+double doubleVar = Gamma.regularizedGammaP(0.5, doubleVar * doubleVar, 1.0e-15, 10000);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.special.Erf <56, 56>
+double ret = Gamma.regularizedGammaP(0.5, x * x, 1.0e-15, 10000);
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.distribution.TDistributionImpl <88, 88>
+ret = 1.0 - 0.5 * t;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.distribution.TDistributionImpl <88, 88>
+doubleVar = 1.0 - 0.5 * doubleVar;
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.distribution.TDistributionImpl <88, 88>
+ret = 1.0 - 0.5 * t;
+
+---fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.distribution.BinomialDistributionImpl <135, 139>
+ret =
+                1.0 - Beta.regularizedBeta(
+                        getProbabilityOfSuccess(),
+                        x + 1.0,
+                        getNumberOfTrials() - x);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.math.distribution.BinomialDistributionImpl <135, 139>
+doubleVar =
+                1.0 - Beta.regularizedBeta(
+                        getProbabilityOfSuccess(),
+                        intVar + 1.0,
+                        getNumberOfTrials() - intVar);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- org.apache.commons.math.distribution.BinomialDistributionImpl <135, 139>
+ret =
+                1.0 - Beta.regularizedBeta(
+                        getProbabilityOfSuccess(),
+                        x + 1.0,
+                        getNumberOfTrials() - x);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.special.Gamma <165, 165>
+ret = 1.0 - regularizedGammaQ(a, x, epsilon, maxIterations);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.special.Gamma <165, 165>
+doubleVar = 1.0 - regularizedGammaQ(doubleVar, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.special.Gamma <165, 165>
+ret = 1.0 - regularizedGammaQ(a, x, epsilon, maxIterations);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.special.Gamma <240, 240>
+ret = 1.0 - regularizedGammaP(a, x, epsilon, maxIterations);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.special.Gamma <240, 240>
+doubleVar = 1.0 - regularizedGammaP(doubleVar, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.special.Gamma <240, 240>
+ret = 1.0 - regularizedGammaP(a, x, epsilon, maxIterations);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.special.Gamma <256, 256>
+ret = 1.0 / cf.evaluate(x, epsilon, maxIterations);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.special.Gamma <256, 256>
+doubleVar = 1.0 / ContinuedFraction.evaluate(doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.special.Gamma <256, 256>
+ret = 1.0 / ContinuedFraction.evaluate(x, epsilon, maxIterations);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.special.Beta <131, 131>
+ret = 1.0 - regularizedBeta(1.0 - x, b, a, epsilon, maxIterations);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.special.Beta <131, 131>
+doubleVar = 1.0 - regularizedBeta(1.0 - doubleVar, doubleVar, doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.special.Beta <131, 131>
+ret = 1.0 - regularizedBeta(1.0 - x, b, a, epsilon, maxIterations);
+
+---fix ingredient  <ori-fine-grained>  varMapType:ori--- org.apache.commons.math.special.Beta <156, 158>
+ret = Math.exp((a * Math.log(x)) + (b * Math.log(1.0 - x)) -
+                Math.log(a) - logBeta(a, b, epsilon, maxIterations)) *
+                1.0 / fraction.evaluate(x, epsilon, maxIterations);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.math.special.Beta <156, 158>
+doubleVar = Math.exp((doubleVar * Math.log(doubleVar)) + (doubleVar * Math.log(1.0 - doubleVar)) -
+                Math.log(doubleVar) - logBeta(doubleVar, doubleVar, doubleVar, intVar)) *
+                1.0 / ContinuedFraction.evaluate(doubleVar, doubleVar, intVar);
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- org.apache.commons.math.special.Beta <156, 158>
+ret = Math.exp((a * Math.log(x)) + (b * Math.log(1.0 - x)) -
+                Math.log(a) - logBeta(a, b, epsilon, maxIterations)) *
+                1.0 / ContinuedFraction.evaluate(x, epsilon, maxIterations);
+

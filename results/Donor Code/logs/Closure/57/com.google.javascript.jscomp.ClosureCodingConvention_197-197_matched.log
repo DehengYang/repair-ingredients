@@ -1,0 +1,32 @@
+---patch code 0--- com.google.javascript.jscomp.ClosureCodingConvention <197, 199>
+if (Node != null && Node.getType() == Token.STRING) {
+            StringVar = Node.getString();
+          }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.RenameProperties <430, 432>
+if (Node != null && Node.getType() == Token.STRING) {
+            quotedNames.add(Node.getString());
+          }
+
+---patch code 1--- com.google.javascript.jscomp.ClosureCodingConvention <197, 199>
+if (Node != null && Node.getType() == Token.STRING) {
+            className = Node.getString();
+          }
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.RenameProperties <430, 432>
+if (Node != null && Node.getType() == Token.STRING) {
+            quotedNames.add(Node.getString());
+          }
+
+---fix ingredient(SamePackage)  varMapType:0--- com.google.javascript.jscomp.NodeUtil <2024, 2027>
+if (Node != null && Node.getType() == Token.STRING) {
+          String propName = Node.getString();
+          return (propName.equals(StringVar));
+        }
+
+---fix ingredient(SamePackage)  varMapType:1--- com.google.javascript.jscomp.NodeUtil <2024, 2027>
+if (Node != null && Node.getType() == Token.STRING) {
+          String propName = Node.getString();
+          return (propName.equals(methodName));
+        }
+

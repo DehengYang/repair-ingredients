@@ -1,0 +1,51 @@
+---patch code ori--- org.apache.commons.lang.time.FastDateFormat <463, 464>
+if (locale == null) {
+            locale = Locale.getDefault();
+        }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang.time.FastDateFormat <293, 293>
+locale = Locale.getDefault();
+
+---patch code 0--- org.apache.commons.lang.time.FastDateFormat <463, 464>
+if (Locale == null) {
+            Locale = Locale.getDefault();
+        }
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <293, 293>
+Locale = Locale.getDefault();
+
+---patch code 1--- org.apache.commons.lang.time.FastDateFormat <463, 464>
+if (Locale == null) {
+            Locale = Locale.getDefault();
+        }
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang.time.FastDateFormat <293, 293>
+Locale = Locale.getDefault();
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang.time.FastDateFormat <378, 378>
+locale = Locale.getDefault();
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <378, 378>
+Locale = Locale.getDefault();
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang.time.FastDateFormat <378, 378>
+Locale = Locale.getDefault();
+
+---fix ingredient(SameMethod)  varMapType:ori--- org.apache.commons.lang.time.FastDateFormat <472, 472>
+locale = Locale.getDefault();
+
+---fix ingredient(SameMethod)  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <472, 472>
+Locale = Locale.getDefault();
+
+---fix ingredient(SameMethod)  varMapType:1--- org.apache.commons.lang.time.FastDateFormat <472, 472>
+Locale = Locale.getDefault();
+
+---fix ingredient(SameFile)  varMapType:ori--- org.apache.commons.lang.time.FastDateFormat <552, 552>
+locale = Locale.getDefault();
+
+---fix ingredient(SameFile)  varMapType:0--- org.apache.commons.lang.time.FastDateFormat <552, 552>
+Locale = Locale.getDefault();
+
+---fix ingredient(SameFile)  varMapType:1--- org.apache.commons.lang.time.FastDateFormat <552, 552>
+Locale = Locale.getDefault();
+

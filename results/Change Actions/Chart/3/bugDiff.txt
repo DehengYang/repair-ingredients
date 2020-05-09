@@ -1,0 +1,13 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_3/source/org/jfree/data/time/TimeSeries.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_3/source/org/jfree/data/time/TimeSeries.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Chart/Chart_3/source/org/jfree/data/time/TimeSeries.java	2020-01-04 01:53:19.188536550 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_3/source/org/jfree/data/time/TimeSeries.java	2020-01-04 01:53:20.548496911 -0800
+@@ -1054,6 +1054,8 @@
+             throw new IllegalArgumentException("Requires start <= end.");
+         }
+         TimeSeries copy = (TimeSeries) super.clone();
++        copy.minY = Double.NaN;
++        copy.maxY = Double.NaN;
+         copy.data = new java.util.ArrayList();
+         if (this.data.size() > 0) {
+             for (int index = start; index <= end; index++) {

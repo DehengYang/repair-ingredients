@@ -1,0 +1,84 @@
+---patch code ori--- org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator <300, 303>
+interpolator.storeTime(stepStart);
+System.arraycopy(y, 0, yTmp, 0, y0.length);
+hNew     = 0;
+stepSize = 0;
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.apache.commons.math.ode.nonstiff.AdamsMoultonIntegrator <291, 302>
+if (Math.abs(dt) <= Math.ulp(stepStart)) {
+                            // we cannot simply truncate the step, reject the current computation
+                            // and let the loop compute another state with the truncated step.
+                            // it is so small (much probably exactly 0 due to limited accuracy)
+                            // that the code above would fail handling it.
+                            // So we set up an artificial 0 size step by copying states
+                            interpolator.storeTime(stepStart);
+                            System.arraycopy(y, 0, yTmp, 0, y0.length);
+                            hNew     = 0;
+                            stepSize = 0;
+                            loop     = false;
+                        } else {
+                            // reject the step to match exactly the next switch time
+                            hNew = dt;
+                            interpolator.rescale(hNew);
+                        }
+
+---patch code 0--- org.apache.commons.math.ode.nonstiff.EmbeddedRungeKuttaIntegrator <300, 303>
+AbstractStepInterpolator.storeTime(doubleVar);
+System.arraycopy(double[]Var, 0, double[]Var, 0, double[]Var.length);
+doubleVar     = 0;
+doubleVar = 0;
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.ode.nonstiff.AdamsMoultonIntegrator <291, 302>
+if (Math.abs(doubleVar) <= Math.ulp(doubleVar)) {
+                            // we cannot simply truncate the step, reject the current computation
+                            // and let the loop compute another state with the truncated step.
+                            // it is so small (much probably exactly 0 due to limited accuracy)
+                            // that the code above would fail handling it.
+                            // So we set up an artificial 0 size step by copying states
+                            AbstractStepInterpolator.storeTime(doubleVar);
+                            System.arraycopy(double[]Var, 0, double[]Var, 0, double[]Var.length);
+                            doubleVar     = 0;
+                            doubleVar = 0;
+                            booleanVar     = false;
+                        } else {
+                            // reject the step to match exactly the next switch time
+                            doubleVar = doubleVar;
+                            AbstractStepInterpolator.rescale(doubleVar);
+                        }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.apache.commons.math.ode.nonstiff.AdamsBashforthIntegrator <273, 284>
+if (Math.abs(dt) <= Math.ulp(stepStart)) {
+                            // we cannot simply truncate the step, reject the current computation
+                            // and let the loop compute another state with the truncated step.
+                            // it is so small (much probably exactly 0 due to limited accuracy)
+                            // that the code above would fail handling it.
+                            // So we set up an artificial 0 size step by copying states
+                            interpolator.storeTime(stepStart);
+                            System.arraycopy(y, 0, yTmp, 0, y0.length);
+                            hNew     = 0;
+                            stepSize = 0;
+                            loop     = false;
+                        } else {
+                            // reject the step to match exactly the next switch time
+                            hNew = dt;
+                            interpolator.rescale(hNew);
+                        }
+
+---fix ingredient(SamePackage)  varMapType:0--- org.apache.commons.math.ode.nonstiff.AdamsBashforthIntegrator <273, 284>
+if (Math.abs(doubleVar) <= Math.ulp(doubleVar)) {
+                            // we cannot simply truncate the step, reject the current computation
+                            // and let the loop compute another state with the truncated step.
+                            // it is so small (much probably exactly 0 due to limited accuracy)
+                            // that the code above would fail handling it.
+                            // So we set up an artificial 0 size step by copying states
+                            AbstractStepInterpolator.storeTime(doubleVar);
+                            System.arraycopy(double[]Var, 0, double[]Var, 0, double[]Var.length);
+                            doubleVar     = 0;
+                            doubleVar = 0;
+                            booleanVar     = false;
+                        } else {
+                            // reject the step to match exactly the next switch time
+                            doubleVar = doubleVar;
+                            AbstractStepInterpolator.rescale(doubleVar);
+                        }
+

@@ -1,0 +1,19 @@
+
+diff -Naur /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_56/src/main/java/org/apache/commons/math/util/MultidimensionalCounter.java /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_56/src/main/java/org/apache/commons/math/util/MultidimensionalCounter.java
+--- /home/apr/ALL_APR_TOOLS/d4j-repo/Math/Math_56/src/main/java/org/apache/commons/math/util/MultidimensionalCounter.java	2020-01-05 06:36:48.243611418 -0800
++++ /home/apr/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_56/src/main/java/org/apache/commons/math/util/MultidimensionalCounter.java	2020-01-05 06:36:50.687591007 -0800
+@@ -234,13 +234,7 @@
+             indices[i] = idx;
+         }
+ 
+-        int idx = 1;
+-        while (count < index) {
+-            count += idx;
+-            ++idx;
+-        }
+-        --idx;
+-        indices[last] = idx;
++        indices[last] = index - count;
+ 
+         return indices;
+     }

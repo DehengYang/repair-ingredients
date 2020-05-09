@@ -1,0 +1,1325 @@
+---patch code 0--- com.google.javascript.jscomp.RemoveUnusedVars <745, 749>
+if ((booleanVar || booleanVar) && booleanVar) {
+            booleanVar = markReferencedVar(Var) || booleanVar;
+            ListVar.remove(intVar);
+            intVar--;
+          }
+
+---fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <741, 745>
+if (booleanVar && booleanVar) {
+            booleanVar = markReferencedVar(Var) || booleanVar;
+            ListVar.remove(intVar);
+            intVar--;
+          }
+
+---patch code 1--- com.google.javascript.jscomp.RemoveUnusedVars <745, 749>
+if ((assignedToUnknownValue || maybeEscaped) && hasPropertyAssign) {
+            changes = markReferencedVar(Var) || changes;
+            maybeUnreferenced.remove(current);
+            current--;
+          }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.InlineFunctions <669, 676>
+if (FunctionState.hasReferences()) {
+        // Only inline function if it decreases the code size.
+        boolean lowersCost = mimimizeCost(FunctionState);
+        if (!lowersCost) {
+          // It shouldn't be inlined; remove it from the list.
+          Iterator.remove();
+        }
+      } else if (!FunctionState.canRemove()) {
+        // Don't bother tracking functions without references that can't be
+        // removed.
+        Iterator.remove();
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.JsMessageVisitor <222, 227>
+if (booleanVar) {
+      Map.remove(Node);
+    } else if (Style != JsMessage.Style.LEGACY) {
+      AbstractCompiler.report(NodeTraversal.makeError(Node, null,
+          DiagnosticType));
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.OptimizeParameters <256, 260>
+if (Parameter.shouldRemove
+          && ((booleanVar && Parameter.canBeSideEffected())
+          || (booleanVar && Parameter.hasSideEffects()))) {
+        Parameter.shouldRemove = false;
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.Tracer <789, 801>
+for (int intVar = 0; intVar < ArrayList.size(); intVar++) {
+          Event e = ArrayList.get(intVar);
+          if (e.tracer == Tracer) {
+            Preconditions.checkState(e.isStart);
+            ArrayList.remove(intVar);
+            booleanVar = true;
+            break;
+          }
+        }
+empty line
+// Only assert if we didn't find the original and the events
+// weren't truncated.
+Preconditions.checkState(booleanVar || booleanVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FunctionArgumentInjector <76, 98>
+if (booleanVar && Node.isThis()) {
+      Node Node = Map.get(StringVar);
+      Preconditions.checkNotNull(Node);
+      if (!Node.isThis()) {
+        // The name may need to be replaced more than once,
+        // so we need to clone the node.
+        Node replacement = Node.cloneTree();
+        Node.replaceChild(Node, replacement);
+
+        // Remove the value.  This isn't required but it ensures that we won't
+        // inject side-effects multiple times as it will trigger the null
+        // check above if we do.
+        if (NodeUtil.mayHaveSideEffects(Node, AbstractCompiler)) {
+          Map.remove(StringVar);
+        }
+
+        return replacement;
+      }
+    } else if (Node.isFunction()) {
+      // Once we enter another scope the "this" value changes, don't try
+      // to replace it within an inner scope.
+      booleanVar = false;
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.SimpleDefinitionFinder <183, 209>
+if (booleanVar) {
+            // We need special handling of untyped externs stubs here:
+            //    the stub should be dropped if the name is provided elsewhere.
+
+            List<Definition> stubsToRemove = Lists.newArrayList();
+            String qualifiedName = Node.getQualifiedName();
+
+            // If there is no qualified name for this, then there will be
+            // no stubs to remove. This will happen if node is an object
+            // literal key.
+            if (qualifiedName != null) {
+              for (Definition prevDef : nameDefinitionMultimap.get(StringVar)) {
+                if (prevDef instanceof ExternalNameOnlyDefinition
+                    && !jsdocContainsDeclarations(Node)) {
+                  String prevName = prevDef.getLValue().getQualifiedName();
+                  if (qualifiedName.equals(prevName)) {
+                    // Drop this stub, there is a real definition.
+                    stubsToRemove.add(prevDef);
+                  }
+                }
+              }
+
+              for (Definition prevDef : stubsToRemove) {
+                nameDefinitionMultimap.remove(StringVar, prevDef);
+              }
+            }
+          }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypeInference <459, 461>
+if (!booleanVar || Var == null || Var.isTypeInferred()) {
+          redeclareSimpleVar(FlowScope, Node, JSType);
+        }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <463, 482>
+if (!Set.contains(Var)) {
+          Preconditions.checkNotNull(Var);
+
+          // Remove call parameter if we can generally change the signature
+          // or if it is the last parameter in the parameter list.
+          boolean modifyAllCallSites = booleanVar || !booleanVar;
+          if (modifyAllCallSites) {
+            modifyAllCallSites = canRemoveArgFromCallSites(
+                Node, intVar);
+          }
+
+          tryRemoveArgFromCallSites(Node, intVar, modifyAllCallSites);
+
+          // Remove an unused function parameter if all the call sites can
+          // be modified to remove it, or if it is the last parameter.
+          if (modifyAllCallSites || !booleanVar) {
+            ListVar.add(Node);
+            return booleanVar;
+          }
+        }
+
+---fix ingredient(SameFile)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.RemoveUnusedVars <463, 482>
+if (!Set.contains(Var)) {
+          Preconditions.checkNotNull(Var);
+
+          // Remove call parameter if we can generally change the signature
+          // or if it is the last parameter in the parameter list.
+          boolean modifyAllCallSites = canChangeSignature || !hasFollowing;
+          if (modifyAllCallSites) {
+            modifyAllCallSites = canRemoveArgFromCallSites(
+                Node, paramIndex);
+          }
+
+          tryRemoveArgFromCallSites(Node, paramIndex, modifyAllCallSites);
+
+          // Remove an unused function parameter if all the call sites can
+          // be modified to remove it, or if it is the last parameter.
+          if (modifyAllCallSites || !hasFollowing) {
+            toRemove.add(Node);
+            return hasFollowing;
+          }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypeInference <444, 458>
+case Token.NAME:
+String StringVar = Node.getString();
+Var Var = Scope.getVar(StringVar);
+empty line
+// When looking at VAR initializers for declared VARs, we trust
+// the declared type over the type it's being initialized to.
+// This has two purposes:
+// 1) We avoid re-declaring declared variables so that built-in
+//    types defined in externs are not redeclared.
+// 2) When there's a lexical closure like
+//    /** @type {?string} */ var x = null;
+//    function f() { x = 'xyz'; }
+//    the inference will ignore the lexical closure,
+//    which is just wrong. This bug needs to be fixed eventually.
+boolean booleanVar = Node.hasChildren();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.TypeInference <444, 458>
+case Token.NAME:
+String varName = Node.getString();
+Var Var = Scope.getVar(varName);
+empty line
+// When looking at VAR initializers for declared VARs, we trust
+// the declared type over the type it's being initialized to.
+// This has two purposes:
+// 1) We avoid re-declaring declared variables so that built-in
+//    types defined in externs are not redeclared.
+// 2) When there's a lexical closure like
+//    /** @type {?string} */ var x = null;
+//    function f() { x = 'xyz'; }
+//    the inference will ignore the lexical closure,
+//    which is just wrong. This bug needs to be fixed eventually.
+boolean isVarDeclaration = Node.hasChildren();
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.TypeInference <586, 610>
+if (StaticSlot != null) {
+        // There are two situations where we don't want to use type information
+        // from the scope, even if we have it.
+
+        // 1) The var is escaped in a weird way, e.g.,
+        // function f() { var x = 3; function g() { x = null } (x); }
+        boolean isInferred = StaticSlot.isTypeInferred();
+        boolean unflowable = isInferred &&
+            isUnflowable(Scope.getVar(varName));
+
+        // 2) We're reading type information from another scope for an
+        // inferred variable.
+        // var t = null; function f() { (t); }
+        boolean nonLocalInferredSlot =
+            isInferred &&
+            Scope.getParent() != null &&
+            StaticSlot == Scope.getParent().getSlot(varName);
+
+        if (!unflowable && !nonLocalInferredSlot) {
+          JSType = StaticSlot.getType();
+          if (JSType == null) {
+            JSType = getNativeType(UNKNOWN_TYPE);
+          }
+        }
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.AliasExternals <612, 619>
+if (booleanVar) {
+          String name = Node.getString();
+          Scope.Var var = NodeTraversal.getScope().getVar(name);
+
+          if (var != null && !var.isLocal()) {
+            globals.put(name, newSymbolForGlobalVar(Node));
+          }
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.StripCode <449, 454>
+/**
+     * Determines whether a NAME node represents a reference to a variable that
+     * has been removed.
+     *
+     * @param t The traversal
+     * @param n A NAME node
+     * @return Whether the variable was removed
+     */
+    boolean isReferenceToRemovedVar(NodeTraversal t, Node n) {
+      String name = Node.getString();
+      Scope scope = NodeTraversal.getScope();
+      Scope.Var var = scope.getVar(name);
+      return varsToRemove.contains(var);
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypeValidator <505, 515>
+if (Node.isGetProp() ||
+        NodeUtil.isObjectLitKey(Node, Node)) {
+      JSDocInfo info = Node.getJSDocInfo();
+      if (info == null) {
+        info = Node.getJSDocInfo();
+      }
+      booleanVar =
+          info != null && info.getSuppressions().contains("duplicate");
+    }
+empty line
+JSType JSType = Var.getType();
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypeValidator <549, 556>
+if (!(booleanVar ||
+              Var.getParentNode().isExprResult()) ||
+            !JSType.equals(JSType)) {
+          report(JSError.make(StringVar, Node, DiagnosticType,
+              StringVar, JSType.toString(), Var.getInputName(),
+              String.valueOf(Var.nameNode.getLineno()),
+              JSType.toString()));
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RenameVars <271, 281>
+if (booleanVar) {
+        // Local var: assign a new name
+        String tempName = LOCAL_VAR_PREFIX + getLocalVarIndex(Var);
+        incCount(tempName);
+        localNameNodes.add(Node);
+        Node.setString(tempName);
+      } else if (Var != null) { // Not an extern
+        // If it's global, increment global count
+        incCount(StringVar);
+        globalNameNodes.add(Node);
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.Normalize <182, 191>
+Var Var = NodeTraversal.getScope().getVar(Node.getString());
+if (Var != null) {
+          JSDocInfo = Var.getJSDocInfo();
+        }
+empty line
+boolean booleanVar =
+            (JSDocInfo != null && JSDocInfo.isConstant()) ||
+            NodeUtil.isConstantByConvention(
+                AbstractCompiler.getCodingConvention(), Node, Node);
+boolean booleanVar = Node.getBooleanProp(Node.IS_CONSTANT_NAME);
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.Normalize <182, 191>
+Var Var = NodeTraversal.getScope().getVar(Node.getString());
+if (Var != null) {
+          JSDocInfo = Var.getJSDocInfo();
+        }
+empty line
+boolean shouldBeConstant =
+            (JSDocInfo != null && JSDocInfo.isConstant()) ||
+            NodeUtil.isConstantByConvention(
+                AbstractCompiler.getCodingConvention(), Node, Node);
+boolean isMarkedConstant = Node.getBooleanProp(Node.IS_CONSTANT_NAME);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <374, 388>
+if (!booleanVar) {
+      // Strip unreferenced args off the end of the function declaration.
+      Node lastArg;
+      while ((lastArg = Node.getLastChild()) != null) {
+        Var var = Scope.getVar(lastArg.getString());
+        if (!Set.contains(var)) {
+          Node.removeChild(lastArg);
+          AbstractCompiler.reportCodeChange();
+        } else {
+          break;
+        }
+      }
+    } else {
+      CallSiteOptimizer.optimize(Scope, Set);
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.Scope <503, 513>
+Preconditions.checkState(Map.get(StringVar) == null);
+empty line
+// native variables do not have a name node.
+JSDocInfo JSDocInfo = Node == null
+        ? null : NodeUtil.getBestJSDocInfo(Node);
+empty line
+Var Var = new Var(booleanVar, StringVar, Node, JSType, this, Map.size(), CompilerInput,
+        JSDocInfo != null && JSDocInfo.isDefine(), JSDocInfo);
+empty line
+Map.put(StringVar, Var);
+return Var;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypeInference <696, 707>
+if (booleanVar && booleanVar) {
+        JSType = getNativeType(UNKNOWN_TYPE);
+      } else if ((!booleanVar && JSType.isString()) ||
+                 (!booleanVar && JSType.isString())) {
+        JSType = getNativeType(STRING_TYPE);
+      } else if (booleanVar || booleanVar) {
+        JSType = getNativeType(UNKNOWN_TYPE);
+      } else if (isAddedAsNumber(JSType) && isAddedAsNumber(JSType)) {
+        JSType = getNativeType(NUMBER_TYPE);
+      } else {
+        JSType = JSTypeRegistry.createUnionType(STRING_TYPE, NUMBER_TYPE);
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FunctionToBlockMutator <363, 365>
+if (booleanVar && !booleanVar && StringVar != null) {
+      addDummyAssignment(Node, StringVar);
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.Tracer <872, 874>
+if (booleanVar && !Event.isStart && !LinkedList.isEmpty()) {
+          LinkedList.pop();
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.UnionTypeBuilder <132, 135>
+if (booleanVar) {
+      booleanVar = booleanVar &&
+          JSType.isCheckedUnknownType();
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.NodeIterators <253, 261>
+} else {
+boolean booleanVar = (Node.isAssign()
+                    && Node == Node.getFirstChild());
+boolean booleanVar = (Node.isVar());
+empty line
+if (!booleanVar && !booleanVar) {
+              booleanVar = true;
+            }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.NodeIterators <253, 261>
+} else {
+boolean assignsName = (Node.isAssign()
+                    && Node == Node.getFirstChild());
+boolean isVarDeclaration = (Node.isVar());
+empty line
+if (!assignsName && !isVarDeclaration) {
+              blocked = true;
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.AliasExternals <672, 679>
+if ((NodeUtil.isAssignmentOp(Node) && booleanVar) ||
+              (Node.isNew() && booleanVar) ||
+              Node.isInc() ||
+              Node.isDec()) {
+            Symbol.recordMutator(NodeTraversal);
+          } else {
+            Symbol.recordAccessor(NodeTraversal);
+          }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.MarkNoSideEffectCalls <121, 123>
+if (!booleanVar && hasNoSideEffectsAnnotation(Node)) {
+        NodeTraversal.report(Node, INVALID_NO_SIDE_EFFECT_ANNOTATION);
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.JsMessageVisitor <250, 254>
+if (booleanVar
+        && !booleanVar
+        && !JsMessage.isExternal()) {
+      checkIfMessageDuplicated(NodeTraversal.getSourceName(), StringVar, Node);
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypedScopeCreator <1502, 1508>
+if ((!JSType.hasOwnProperty(StringVar) ||
+               JSType.isPropertyTypeInferred(StringVar)) &&
+              ((booleanVar && !JSType.isNativeObjectType()) ||
+               !JSType.isInstanceType())) {
+            // If the property is undeclared or inferred, declare it now.
+            JSType.defineDeclaredProperty(StringVar, JSType, Node);
+          }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CoalesceVariableNames <408, 410>
+if (!booleanVar && isAssignTo(Var, Node, Node)) {
+        booleanVar = true;
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ExpressionDecomposer <456, 465>
+if (booleanVar && NodeUtil.isGet(Node)) {
+      for (Node n : Node.children()) {
+        if (!n.isString() && !isConstantName(n, Set)) {
+          Node extractedNode = extractExpression(n, Node);
+          if (Node == null) {
+            Node = extractedNode;
+          }
+        }
+      }
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypedScopeCreator <1096, 1113>
+} else {
+if (!booleanVar) {
+          setDeferredType(Node, JSType);
+        }
+empty line
+Var =
+          Scope.declare(StringVar, Node, JSType, CompilerInput, booleanVar);
+empty line
+if (JSType instanceof EnumType) {
+          Node initialValue = Var.getInitialValue();
+          boolean isValidValue = initialValue != null &&
+              (initialValue.isObjectLit() ||
+               initialValue.isQualifiedName());
+          if (!isValidValue) {
+            compiler.report(JSError.make(StringVar, Node, ENUM_INITIALIZER));
+          }
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.TypedScopeCreator <1096, 1113>
+} else {
+if (!inferred) {
+          setDeferredType(Node, JSType);
+        }
+empty line
+Var =
+          Scope.declare(variableName, Node, JSType, CompilerInput, inferred);
+empty line
+if (JSType instanceof EnumType) {
+          Node initialValue = Var.getInitialValue();
+          boolean isValidValue = initialValue != null &&
+              (initialValue.isObjectLit() ||
+               initialValue.isQualifiedName());
+          if (!isValidValue) {
+            compiler.report(JSError.make(sourceName, Node, ENUM_INITIALIZER));
+          }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RenameProperties <238, 242>
+if (Property != null && Property.newName != null) {
+        Preconditions.checkState(StringVar.equals(Property.StringVar));
+        Node.setString(Property.newName);
+        booleanVar = booleanVar || !Property.newName.equals(StringVar);
+      }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ant.CompileTask <338, 350>
+if (booleanVar || booleanVar) {
+        CompilerOptions.setDefineToBooleanLiteral(StringVar, booleanVar);
+      } else {
+        try {
+          double dblTemp = Double.parseDouble((String) Object);
+          CompilerOptions.setDefineToDoubleLiteral(StringVar, dblTemp);
+        } catch (NumberFormatException nfe) {
+          // Not a number, assume string
+          options.setDefineToStringLiteral(key, (String) value);
+        }
+      }
+empty line
+booleanVar = true;
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeFoldConstants <1068, 1071>
+if (booleanVar && booleanVar) {
+          booleanVar = compareToUndefined(Node, intVar);
+          break;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeFoldConstants <1079, 1082>
+if (booleanVar && booleanVar && isEqualityOp(intVar)) {
+            booleanVar = compareToNull(Node, intVar);
+            break;
+          }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CheckRequiresForConstructors <166, 171>
+if (booleanVar && booleanVar
+            && !Set.contains(StringVar)) {
+          compiler.report(
+              NodeTraversal.makeError(Node, level, MISSING_REQUIRE_WARNING, StringVar));
+          Set.add(StringVar);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.InlineVariables <696, 707>
+Preconditions.checkNotNull(Node);
+empty line
+boolean booleanVar =
+            NodeUtil.isImmutableValue(Node) &&
+            (!Node.isString() ||
+                isStringWorthInlining(Var, ReferenceCollection.references));
+boolean booleanVar =
+            Node.isThis() &&
+            !ReferenceCollection.isEscaped();
+if (!booleanVar && !booleanVar) {
+          return false;
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.InlineVariables <696, 707>
+Preconditions.checkNotNull(Node);
+empty line
+boolean isImmutableValueWorthInlining =
+            NodeUtil.isImmutableValue(Node) &&
+            (!Node.isString() ||
+                isStringWorthInlining(Var, ReferenceCollection.references));
+boolean isInlinableThisAlias =
+            Node.isThis() &&
+            !ReferenceCollection.isEscaped();
+if (!isImmutableValueWorthInlining && !isInlinableThisAlias) {
+          return false;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ProcessDefines <131, 138>
+if (Node != DefineInfo.initialValue) {
+        DefineInfo.initialValueParent.replaceChild(
+            DefineInfo.initialValue, Node.cloneTree());
+        AbstractCompiler.addToDebugLog("Overriding @define variable " + StringVar);
+        booleanVar = booleanVar ||
+            Node.getType() != DefineInfo.initialValue.getType() ||
+            !Node.isEquivalentTo(DefineInfo.initialValue);
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.InlineFunctions <501, 508>
+if (!booleanVar &&
+          InliningMode == InliningMode.DIRECT && blockFunctionInliningEnabled) {
+        // This reference can not be directly inlined, see if
+        // block replacement inlining is possible.
+        InliningMode = InliningMode.BLOCK;
+        booleanVar = maybeAddReferenceUsingMode(
+            NodeTraversal, FunctionState, Node, JSModule, InliningMode);
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TightenTypes <155, 162>
+if (Assignment.slot.addConcreteType(Assignment.type)) {
+              booleanVar = true;
+              ConcreteScope varScope = Assignment.slot.getScope();
+              if ((varScope != ConcreteScope) && !Set.contains(varScope)) {
+                Set.add(varScope);
+                ListVar.add(varScope);
+              }
+            }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CollapseVariableDeclarations <175, 178>
+if (booleanVar && booleanVar) {
+        nodesToCollapse.add(Node);
+        collapses.add(new Collapse(Node, Node, Node));
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RenamePrototypes <255, 258>
+if (Property != null && Property.newName != null) {
+        Node.setString(Property.newName);
+        booleanVar = booleanVar || !Property.newName.equals(StringVar);
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ExternExportsPass <128, 150>
+if (!booleanVar) {
+           Node initializer;
+
+          /* Namespaces get initialized to {}, functions to
+           * externed versions of their value, and if we can't
+           * figure out where the value came from we initialize
+           * it to {}.
+           *
+           * Since externs are always exported in sorted order,
+           * we know that if we export a.b = function() {} and later
+           * a.b.c = function then a.b will always be in alreadyExportedPaths
+           * when we emit a.b.c and thus we will never overwrite the function
+           * exported for a.b with a namespace.
+           */
+
+          if (booleanVar && Node != null) {
+            initializer = createExternFunction(Node);
+          } else {
+            initializer = IR.objectlit();
+          }
+
+          appendPathDefinition(StringVar, initializer);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <778, 788>
+if (booleanVar && Name.canEliminate()) {
+      Node.removeChild(Ref.node);
+      if (!Node.hasChildren()) {
+        Node.removeChild(Node);
+      }
+      intVar++;
+
+      // Clear out the object reference, since we've eliminated it from the
+      // parse tree.
+      Ref.node = null;
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.SimpleDefinitionFinder <171, 179>
+if ((Node != null) &&
+              !NodeUtil.isImmutableValue(Node) &&
+              !Node.isFunction()) {
+
+            // Unhandled complex expression
+            Definition unknownDef =
+                new UnknownDefinition(Definition.getLValue(), booleanVar);
+            Definition = unknownDef;
+          }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RenameProperties <288, 296>
+if (!booleanVar && StringVar != null) {
+        // We can reuse prevName if it's not reserved.
+        if (Set.contains(StringVar)) {
+          continue;
+        }
+
+        Property.newName = StringVar;
+        Set.add(StringVar);
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.GlobalNamespace <373, 377>
+if (NodeUtil.isAssignmentOp(Node) &&
+                    Node.getFirstChild() == Node) {
+                  booleanVar = true;
+                  Type = Name.Type.OTHER;
+                }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.GlobalNamespace <401, 405>
+if (NodeUtil.isAssignmentOp(Node) &&
+                    Node.getFirstChild() == Node) {
+                  booleanVar = true;
+                  Type = Name.Type.OTHER;
+                }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.DefaultPassConfig <688, 695>
+if (CompilerOptions.PassFactory || CompilerOptions.removeUnusedLocalVars) {
+      if (CompilerOptions.deadAssignmentElimination) {
+        ListVar.add(PassFactory);
+      }
+      if (!booleanVar) {
+        ListVar.add(PassFactory);
+      }
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CallGraph <584, 594>
+if (!booleanVar
+        || (Node.isGetProp()
+        ||  Node.isName())) {
+
+      Collection<Definition> definitions =
+        DefinitionProvider.getDefinitionsReferencedAt(Node);
+
+      if (definitions != null && !definitions.isEmpty()) {
+        return definitions;
+      }
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.SemanticReverseAbstractInterpreter <299, 308>
+if (TypePair != null &&
+        ((booleanVar && TypePair.typeA != null) ||
+         (booleanVar && TypePair.typeB != null))) {
+      FlowScope informed = FlowScope.createChildFlowScope();
+      if (booleanVar && TypePair.typeA != null) {
+        declareNameInScope(informed, Node, TypePair.typeA);
+      }
+      if (booleanVar && TypePair.typeB != null) {
+        declareNameInScope(informed, Node, TypePair.typeB);
+      }
+      return informed;
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypeCheck <1051, 1062>
+Preconditions.checkNotNull(PrototypeObjectType);
+boolean booleanVar =
+            PrototypeObjectType.getPrototype().hasProperty(StringVar);
+booleanVar = booleanVar || booleanVar;
+if (null.isOn() && !booleanVar &&
+            booleanVar) {
+          // @override not present, but the property does override an interface
+          // property
+          AbstractCompiler.report(NodeTraversal.makeError(Node, null,
+              DiagnosticType, StringVar,
+              PrototypeObjectType.getTopMostDefiningType(StringVar).toString()));
+        }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.TypeCheck <1051, 1062>
+Preconditions.checkNotNull(null);
+boolean interfaceHasProperty =
+            null.getPrototype().hasProperty(propertyName);
+foundInterfaceProperty = foundInterfaceProperty || interfaceHasProperty;
+if (null.isOn() && !declaredOverride &&
+            interfaceHasProperty) {
+          // @override not present, but the property does override an interface
+          // property
+          AbstractCompiler.report(NodeTraversal.makeError(Node, null,
+              DiagnosticType, propertyName,
+              null.getTopMostDefiningType(propertyName).toString()));
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CheckGlobalNames <97, 102>
+if (booleanVar) {
+          // if the ancestor of a property is defined, then let's check that
+          // the property is also explicitly defined if it needs to be.
+          booleanVar = (!propertyMustBeInitializedByFullName(Name) ||
+              Name.globalSets + Name.localSets > 0);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <895, 908>
+if (booleanVar && Name != null) {
+        if (!booleanVar) {
+          Ref newAlias =
+              Name.getDeclaration().cloneAndReclassify(Ref.Type.ALIASING_GET);
+          newAlias.node = Node;
+          Name.addRef(newAlias);
+        }
+
+        Name.getDeclaration().node = Node;
+
+        if (Node.isFunction()) {
+          checkForHosedThisReferences(Node, Node.getJSDocInfo(), Name);
+        }
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeFoldConstants <946, 949>
+if (booleanVar && isEqualityOp(intVar)) {
+          booleanVar = compareToNull(Node, intVar);
+          break;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeFoldConstants <1019, 1022>
+if (booleanVar && isEqualityOp(intVar)) {
+          booleanVar = compareToNull(Node, intVar);
+          break;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeFoldConstants <1052, 1055>
+if (booleanVar && isEqualityOp(intVar)) {
+          booleanVar = compareToNull(Node, intVar);
+          break;
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeFoldConstants <1112, 1115>
+if (booleanVar && isEqualityOp(intVar)) {
+            booleanVar = compareToNull(Node, intVar);
+            break;
+          }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeFoldConstants <1129, 1132>
+if (booleanVar && isEqualityOp(intVar)) {
+            booleanVar = compareToNull(Node, intVar);
+            break;
+          }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypeCheck <1033, 1038>
+if (PrototypeObjectType.isInterface()) {
+      for (ObjectType interfaceType : PrototypeObjectType.getExtendedInterfaces()) {
+        booleanVar =
+          booleanVar || interfaceType.hasProperty(StringVar);
+      }
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.SpecializeModule <348, 359>
+if (booleanVar || booleanVar) {
+          OriginalFunctionInformation originalInfo =
+               Map.get(Node);
+
+           // Don't add unspecialized versions of anonymous functions
+           if (originalInfo.name != null) {
+             Node newDefinition =
+               originalInfo.generateFixupDefinition();
+
+             Node.addChildrenToFront(newDefinition);
+           }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.Tracer <883, 885>
+if (booleanVar && Event.isStart) {
+          LinkedList.push("|  ");
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypedScopeCreator <1623, 1632>
+if (JSType != null &&
+            (booleanVar || JSType.isFunctionPrototypeType())) {
+          // If this is a stub for a prototype, just declare it
+          // as an unknown type. These are seen often in externs.
+          JSType.defineInferredProperty(
+              StringVar, JSType, Node);
+        } else {
+          typeRegistry.registerPropertyOnType(
+              StringVar, JSType == null ? JSType : JSType);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RenameVars <234, 237>
+if (!booleanVar && localRenamingOnly) {
+        reservedNames.add(StringVar);
+        return;
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <444, 451>
+if (booleanVar) {
+      for (int i = 1; i < intVar && Node.hasChildren(); i++) {
+        Node = Node.getFirstChild();
+      }
+      if (Node.hasChildren()) {
+        flattenNameRef(StringVar, Node.getFirstChild(), Node, StringVar);
+      }
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.SemanticReverseAbstractInterpreter <352, 361>
+if ((JSType != null && booleanVar) ||
+          (JSType != null && booleanVar)) {
+        FlowScope informed = FlowScope.createChildFlowScope();
+        if (booleanVar && JSType != null) {
+          declareNameInScope(informed, Node, JSType);
+        }
+        if (booleanVar && JSType != null) {
+          declareNameInScope(informed, Node, JSType);
+        }
+        return informed;
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeRemoveDeadCode <671, 674>
+if (!booleanVar && Node == null) {
+        Node = IR.block().srcref(Node);
+        Node.addChildToBack(Node);
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.VariableReferenceCheck <134, 152>
+if (booleanVar && !booleanVar) {
+          // Look through all the declarations we've found so far, and
+          // check if any of them are before this block.
+          for (BasicBlock declaredBlock : blocksWithDeclarations) {
+            if (declaredBlock.provablyExecutesBefore(BasicBlock)) {
+              // TODO(johnlenz): Fix AST generating clients that so they would
+              // have property StaticSourceFile attached at each node. Or
+              // better yet, make sure the generated code never violates
+              // the requirement to pass aggressive var check!
+              String filename = NodeUtil.getSourceName(Reference.getNode());
+              compiler.report(
+                  JSError.make(filename,
+                      Reference.getNode(),
+                      checkLevel,
+                      REDECLARED_VARIABLE, Var.name));
+              break;
+            }
+          }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.jsonml.Reader <243, 246>
+if (booleanVar && JsonMLUtil.isExpression(JsonML)) {
+      transformExpr(JsonML, Node);
+      return;
+    }
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.RemoveUnusedVars <528, 543>
+if (Node != null) {
+            Node argParent = Node.getParent();
+            // Even if we can't change the signature in general we can always
+            // remove an unused value off the end of the parameter list.
+            if (booleanVar
+                || (Node.getNext() == null
+                    && !NodeUtil.mayHaveSideEffects(Node, AbstractCompiler))) {
+              ListVar.add(Node);
+            } else {
+              // replace the node in the arg with 0
+              if (!NodeUtil.mayHaveSideEffects(Node, AbstractCompiler)
+                  && (!Node.isNumber() || Node.getDouble() != 0)) {
+                ListVar.add(Node);
+              }
+            }
+          }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.VariableReferenceCheck <154, 167>
+if (booleanVar && !booleanVar && booleanVar) {
+          // Only allow an unhoisted named function to be used within the
+          // block it is declared.
+          for (BasicBlock declaredBlock : blocksWithDeclarations) {
+            if (!declaredBlock.provablyExecutesBefore(BasicBlock)) {
+              String filename = NodeUtil.getSourceName(Reference.getNode());
+              compiler.report(
+                  JSError.make(filename,
+                      Reference.getNode(),
+                      AMBIGUOUS_FUNCTION_DECL, Var.name));
+              break;
+            }
+          }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CheckRegExp <60, 69>
+if (StringVar.equals("RegExp") && NodeTraversal.getScope().getVar(StringVar) == null) {
+        int parentType = Node.getType();
+        boolean first = (Node == Node.getFirstChild());
+        if (!((parentType == Token.NEW && first)
+               || (parentType == Token.CALL && first)
+               || (parentType == Token.INSTANCEOF && !first))) {
+          NodeTraversal.report(Node, DiagnosticType);
+          booleanVar = true;
+        }
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.CheckRegExp <60, 69>
+if (name.equals("RegExp") && NodeTraversal.getScope().getVar(name) == null) {
+        int parentType = Node.getType();
+        boolean first = (Node == Node.getFirstChild());
+        if (!((parentType == Token.NEW && first)
+               || (parentType == Token.CALL && first)
+               || (parentType == Token.INSTANCEOF && !first))) {
+          NodeTraversal.report(Node, DiagnosticType);
+          globalRegExpPropertiesUsed = true;
+        }
+      }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.VarCheck <192, 213>
+if (JSModule != JSModule && JSModule != null && JSModule != null) {
+      if (JSModuleGraph.dependsOn(JSModule, JSModule)) {
+        // The module dependency was properly declared.
+      } else {
+        if (!booleanVar && Scope.isGlobal()) {
+          if (JSModuleGraph.dependsOn(JSModule, JSModule)) {
+            // The variable reference violates a declared module dependency.
+            NodeTraversal.report(Node, DiagnosticType,
+                     JSModule.getName(), JSModule.getName(), StringVar);
+          } else {
+            // The variable reference is between two modules that have no
+            // dependency relationship. This should probably be considered an
+            // error, but just issue a warning for now.
+            NodeTraversal.report(Node, DiagnosticType,
+                     JSModule.getName(), JSModule.getName(), StringVar);
+          }
+        } else {
+          NodeTraversal.report(Node, DiagnosticType,
+                   JSModule.getName(), JSModule.getName(), StringVar);
+        }
+      }
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.PeepholeFoldConstants <568, 582>
+if (null != TernaryValue.UNKNOWN) {
+      boolean lval = null.toBoolean(true);
+
+      // (TRUE || x) => TRUE (also, (3 || x) => 3)
+      // (FALSE && x) => FALSE
+      if (lval && type == Token.OR ||
+          !lval && type == Token.AND) {
+        Node = Node;
+
+      } else if (!mayHaveSideEffects(Node)) {
+        // (FALSE || x) => x
+        // (TRUE && x) => x
+        Node = Node;
+      }
+    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.FunctionType <622, 641>
+if (isOrdinaryFunction() && PrototypeObjectType.isOrdinaryFunction() &&
+        !PrototypeObjectType.JSType.hasUnknownParamsOrReturn() &&
+        !PrototypeObjectType.JSType.hasUnknownParamsOrReturn()) {
+
+      // Check for the degenerate case, but double check
+      // that there's not a cycle.
+      boolean isSubtypeOfThat = PrototypeObjectType.isSubtype(PrototypeObjectType);
+      boolean isSubtypeOfThis = PrototypeObjectType.isSubtype(this);
+      if (isSubtypeOfThat && !isSubtypeOfThis) {
+        return booleanVar ? PrototypeObjectType : this;
+      } else if (isSubtypeOfThis && !isSubtypeOfThat) {
+        return booleanVar ? this : PrototypeObjectType;
+      }
+
+      // Merge the two functions component-wise.
+      FunctionType merged = tryMergeFunctionPiecewise(PrototypeObjectType, booleanVar);
+      if (merged != null) {
+        return merged;
+      }
+    }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.rhino.jstype.FunctionType <622, 641>
+if (isOrdinaryFunction() && null.isOrdinaryFunction() &&
+        !PrototypeObjectType.JSType.hasUnknownParamsOrReturn() &&
+        !PrototypeObjectType.JSType.hasUnknownParamsOrReturn()) {
+
+      // Check for the degenerate case, but double check
+      // that there's not a cycle.
+      boolean isSubtypeOfThat = PrototypeObjectType.isSubtype(null);
+      boolean isSubtypeOfThis = null.isSubtype(this);
+      if (isSubtypeOfThat && !isSubtypeOfThis) {
+        return leastSuper ? null : this;
+      } else if (isSubtypeOfThis && !isSubtypeOfThat) {
+        return leastSuper ? this : null;
+      }
+
+      // Merge the two functions component-wise.
+      FunctionType merged = tryMergeFunctionPiecewise(null, leastSuper);
+      if (merged != null) {
+        return merged;
+      }
+    }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.regex.RegExpTree <1693, 1705>
+if (RegExpTree.equals(RegExpTree)
+              && !RegExpTree.hasCapturingGroup()) {
+            long lmin = ((long) intVar) + intVar;
+            long lmax = ((long) intVar) + intVar;
+            if (lmin < Integer.MAX_VALUE) {
+              int min = (int) lmin;
+              int max = lmax >= Integer.MAX_VALUE
+                  ? Integer.MAX_VALUE : (int) lmax;
+              return new Repetition(
+                  RegExpTree, min, max,
+                  booleanVar || booleanVar || min == max);
+            }
+          }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PeepholeReplaceKnownMethods <235, 255>
+if (Node.isNumber()) {
+      DoubleVar = NodeUtil.getNumberValue(Node);
+      if (!(intVar == 0 || intVar == 10) && booleanVar) {
+        //Convert a numeric first argument to a different base
+        StringVar = String.valueOf(DoubleVar.intValue());
+      } else {
+        // If parseFloat is called with a numeric argument,
+        // replace it with just the number.
+        // If parseInt is called with a numeric first argument and the radix
+        // is 10 or omitted, just replace it with the number
+        Node numericNode;
+        if (booleanVar) {
+          numericNode = IR.number(DoubleVar.intValue());
+        } else {
+          numericNode = IR.number(DoubleVar);
+        }
+        Node.getParent().replaceChild(Node, numericNode);
+        reportCodeChange();
+        return numericNode;
+      }
+    } else {
+      StringVar = NodeUtil.getStringValue(Node);
+      if (StringVar == null) {
+        return Node;
+      }
+
+      //Check that the string is in a format we can recognize
+      DoubleVar = NodeUtil.getStringNumberValue(StringVar);
+      if (DoubleVar == null) {
+        return Node;
+      }
+
+      StringVar = NodeUtil.trimJsWhiteSpace(StringVar);
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax <1217, 1237>
+if (NodeUtil.getPureBooleanValue(Node) != TernaryValue.UNKNOWN) {
+          int type = Node.getType();
+          Node replacement = null;
+          boolean rval = null.toBoolean(true);
+
+          // (x || FALSE) => x
+          // (x && TRUE) => x
+          if (type == Token.OR && !rval ||
+              type == Token.AND && rval) {
+            replacement = Node;
+          } else if (!mayHaveSideEffects(Node)) {
+            replacement = Node;
+          }
+
+          if (replacement != null) {
+            Node.detachChildren();
+            Node.replaceChild(Node, replacement);
+            reportCodeChange();
+            return replacement;
+          }
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.JsMessageVisitor <267, 272>
+if (booleanVar
+        && (StringVar == null || StringVar.trim().isEmpty())
+        && !JsMessage.isExternal()) {
+      AbstractCompiler.report(NodeTraversal.makeError(Node, DiagnosticType,
+          StringVar));
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.CollapseProperties <770, 774>
+if (booleanVar) {
+      intVar += declareVarsForObjLitValues(
+          Name, StringVar, Node, Node, Node.getChildBefore(Node),
+          Node);
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.PureFunctionIdentifier <500, 508>
+if (!booleanVar || FunctionInformation.blacklisted.contains(Var)) {
+          if (FunctionInformation.taintedLocals.contains(Var)) {
+            // If the function has global side-effects
+            // don't bother with the local side-effects.
+            FunctionInformation.setTaintsUnknown();
+            FunctionInformation.resetLocalVars();
+            break;
+          }
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.jsonml.Validator <355, 360>
+if (!booleanVar) {
+        validateChildType(JsonML,
+            new TagType[] {TagType.Case, TagType.DefaultCase}, intVar);
+      } else {
+        validateChildType(JsonML, TagType.Case, intVar);
+      }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.SideEffectsAnalysis <864, 875>
+if (storageNodeIsLValue(Node)) {
+        // Assume l-value is NOT an r-value
+        // unless it is a non-simple assign
+        // or an increment/decrement
+
+        boolean nonSimpleAssign =
+          NodeUtil.isAssignmentOp(Node) && !Node.isAssign();
+
+        return (nonSimpleAssign
+            || Node.isDec()
+            || Node.isInc());
+      }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.jsonml.Reader <536, 546>
+if (JsonML.getType() != TagType.BlockStmt) {
+      Node Node = IR.block();
+      Node.addChildToBack(Node);
+      boolean state = booleanVar;
+      booleanVar = true;
+      transformElement(JsonML, Node);
+      booleanVar = state;
+    } else {
+      intVar++;
+      transformBlock(JsonML, Node);
+    }
+
+---fix ingredient  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.jsonml.Reader <536, 546>
+if (JsonML.getType() != TagType.BlockStmt) {
+      Node Node = IR.block();
+      Node.addChildToBack(Node);
+      boolean state = insertExprResultState;
+      insertExprResultState = true;
+      transformElement(JsonML, Node);
+      insertExprResultState = state;
+    } else {
+      nodeIndex++;
+      transformBlock(JsonML, Node);
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ControlFlowAnalysis <165, 176>
+if (booleanVar) {
+      // If we're traversing inner functions, we need to rank the
+      // priority of them too.
+      for (DiGraphNode<Node, Branch> candidate : LinkedDirectedGraph<N.getDirectedGraphNodes()) {
+        Node value = candidate.getValue();
+        if (value != null && value.isFunction()) {
+          Preconditions.checkState(
+              !Map.containsKey(candidate) || candidate == DiGraphNode);
+          prioritizeFromEntryNode(candidate);
+        }
+      }
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.Scope <568, 570>
+if (Scope.Scope != null && booleanVar) {
+      return Scope.Scope.isDeclared(StringVar, booleanVar);
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypeInference <1139, 1165>
+if (JSType != null && JSType != null) {
+      JSType = JSType.getRestrictedTypeGivenToBooleanOutcome(!booleanVar);
+      if (BooleanOutcomePair.toBooleanOutcomes ==
+          BooleanLiteralSet.get(!booleanVar)) {
+        // Use the restricted left type, since the right side never gets
+        // evaluated.
+        JSType = JSType;
+        BooleanOutcomePair = BooleanOutcomePair;
+      } else {
+        // Use the join of the restricted left type knowing the outcome of the
+        // ToBoolean predicate and of the right type.
+        JSType = JSType.getLeastSupertype(JSType);
+        BooleanOutcomePair =
+            getBooleanOutcomePair(BooleanOutcomePair, BooleanOutcomePair, booleanVar);
+      }
+
+      // Exclude the boolean type if the literal set is empty because a boolean
+      // can never actually be returned.
+      if (BooleanOutcomePair.booleanValues == BooleanLiteralSet.EMPTY &&
+          getNativeType(BOOLEAN_TYPE).isSubtype(JSType)) {
+        // Exclusion only make sense for a union type.
+        if (JSType.isUnionType()) {
+          JSType = JSType.toMaybeUnionType().getRestrictedUnion(
+              getNativeType(BOOLEAN_TYPE));
+        }
+      }
+    } else {
+      JSType = null;
+      BooleanOutcomePair = new BooleanOutcomePair(
+          BooleanLiteralSet.BOTH, BooleanLiteralSet.BOTH,
+          BooleanOutcomePair.getJoinedFlowScope(),
+          BooleanOutcomePair.getJoinedFlowScope());
+    }
+
+---fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1--- com.google.javascript.jscomp.TypeInference <1139, 1165>
+if (JSType != null && JSType != null) {
+      JSType = JSType.getRestrictedTypeGivenToBooleanOutcome(!condition);
+      if (BooleanOutcomePair.toBooleanOutcomes ==
+          BooleanLiteralSet.get(!condition)) {
+        // Use the restricted left type, since the right side never gets
+        // evaluated.
+        JSType = JSType;
+        BooleanOutcomePair = BooleanOutcomePair;
+      } else {
+        // Use the join of the restricted left type knowing the outcome of the
+        // ToBoolean predicate and of the right type.
+        JSType = JSType.getLeastSupertype(JSType);
+        BooleanOutcomePair =
+            getBooleanOutcomePair(BooleanOutcomePair, BooleanOutcomePair, condition);
+      }
+
+      // Exclude the boolean type if the literal set is empty because a boolean
+      // can never actually be returned.
+      if (BooleanOutcomePair.booleanValues == BooleanLiteralSet.EMPTY &&
+          getNativeType(BOOLEAN_TYPE).isSubtype(JSType)) {
+        // Exclusion only make sense for a union type.
+        if (JSType.isUnionType()) {
+          JSType = JSType.toMaybeUnionType().getRestrictedUnion(
+              getNativeType(BOOLEAN_TYPE));
+        }
+      }
+    } else {
+      JSType = null;
+      BooleanOutcomePair = new BooleanOutcomePair(
+          BooleanLiteralSet.BOTH, BooleanLiteralSet.BOTH,
+          BooleanOutcomePair.getJoinedFlowScope(),
+          BooleanOutcomePair.getJoinedFlowScope());
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.TypeCheck <1317, 1323>
+if (!JSType.isEmptyType() &&
+        booleanVar && !isPropertyTest(Node)) {
+      if (!JSTypeRegistry.canPropertyBeDefined(JSType, StringVar)) {
+        report(NodeTraversal, Node, DiagnosticType, StringVar,
+            TypeValidator.getReadableJSTypeName(Node.getFirstChild(), true));
+      }
+    }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.ProcessTweaks <244, 257>
+if (TweakFunctionCall.tweakFunc.isGetterFunction()) {
+          Node newValue;
+          if (booleanVar) {
+            newValue = TweakInfo.getDefaultValueNode().cloneNode();
+          } else {
+            // When we find a getter of an unregistered tweak, there has
+            // already been a warning about it, so now just use a default
+            // value when stripping.
+            TweakFunction registerFunction =
+                TweakFunctionCall.tweakFunc.registerFunction;
+            newValue = registerFunction.createDefaultValueNode();
+          }
+          Node.replaceChild(Node, newValue);
+        } else {
+          Node voidZeroNode = IR.voidNode(IR.number(0).srcref(Node))
+              .srcref(Node);
+          Node.replaceChild(Node, voidZeroNode);
+        }
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- com.google.javascript.jscomp.FunctionInjector <751, 757>
+if (Reference.module != JSModule &&
+            !JSModuleGraph.dependsOn(Reference.module, JSModule)) {
+          // Calculate the cost as if the function were non-removable,
+          // if it still lowers the cost inline it.
+          booleanVar = false;
+          booleanVar = false;  // no need to check additional modules.
+        }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.javascript.rhino.jstype.JSTypeRegistry <1220, 1224>
+if (booleanVar && intVar == intVar) {
+        FunctionParamBuilder.addVarArgs(JSType[intVar]);
+      } else {
+        FunctionParamBuilder.addRequiredParams(JSType[intVar]);
+      }
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- com.google.debugging.sourcemap.SourceMapConsumerV3 <698, 708>
+if (booleanVar) {
+            FilePosition endPosition = new FilePosition(
+                intVar, Entry.getGeneratedColumn());
+            EntryVisitor.visit(
+                StringVar,
+                StringVar,
+                FilePosition,
+                FilePosition,
+                endPosition);
+            booleanVar = false;
+          }
+

@@ -1,0 +1,37 @@
+chunk1 : org.apache.commons.math.analysis.solvers.BrentSolver:127-127
+fix ingredient  <0-fine-grained>  varMapType:0 : (71)
+fix ingredient(SameFile)  varMapType:ori : (1)
+fix ingredient(SameFile)  varMapType:0 : (2)
+fix ingredient(SameFile)  varMapType:1 : (1)
+fix ingredient(SameMethod)  varMapType:0 : (3)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (70)
+fix ingredient  <1-fine-grained>  varMapType:1 : (32)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (55)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (6)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (4)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (44)
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (2)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient(SamePackage)  <1-fine-grained>  varMapType:1 : (2)
+
+
+chunk2 : org.apache.commons.math.analysis.solvers.BrentSolver:115-115
+fix ingredient(SameFile)  varMapType:ori : (1)
+fix ingredient(SameFile)  varMapType:0 : (2)
+fix ingredient(SameFile)  varMapType:1 : (1)
+fix ingredient(SameMethod)  varMapType:0 : (3)
+fix ingredient  <0-fine-grained>  varMapType:0 : (49)
+fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0 : (54)
+fix ingredient(SameFile)  <0-fine-grained>  varMapType:0 : (6)
+fix ingredient  <ori-fine-grained>  varMapType:ori : (50)
+fix ingredient  <1-fine-grained>  varMapType:1 : (22)
+fix ingredient(SameFile)  <ori-fine-grained>  varMapType:ori : (4)
+fix ingredient(SamePackage)  <ori-fine-grained>  varMapType:ori : (43)
+fix ingredient(SameMethod)  <ori-fine-grained>  varMapType:ori : (2)
+fix ingredient(SameMethod)  <0-fine-grained>  varMapType:0 : (2)
+fix ingredient(SameMethod)  <1-fine-grained>  varMapType:1 : (1)
+fix ingredient(SameFile)  <1-fine-grained>  varMapType:1 : (1)
+
+

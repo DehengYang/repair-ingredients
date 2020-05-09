@@ -1,0 +1,28 @@
+---patch code ori--- org.jfree.data.DefaultKeyedValues2D <464, 467>
+int index = rowData.getIndex(columnKey);
+if (index >= 0) {
+                rowData.removeValue(columnKey);
+            }
+
+---fix ingredient(SamePackage)  varMapType:ori--- org.jfree.data.KeyedObjects2D <114, 122>
+if (rowData != null) {
+            Comparable columnKey = (Comparable) this.columnKeys.get(column);
+            if (columnKey != null) {
+                int index = rowData.getIndex(columnKey);
+                if (index >= 0) {
+                    result = rowData.getObject(columnKey);
+                }
+            }
+        }
+
+---fix ingredient(SameFile)  varMapType:ori--- org.jfree.data.DefaultKeyedValues2D <145, 153>
+if (rowData != null) {
+            Comparable columnKey = (Comparable) this.columnKeys.get(column);
+            // the row may not have an entry for this key, in which case the 
+            // return value is null
+            int index = rowData.getIndex(columnKey);
+            if (index >= 0) {
+                result = rowData.getValue(index);
+            }
+        }
+

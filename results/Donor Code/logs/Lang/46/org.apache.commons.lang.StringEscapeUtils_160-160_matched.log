@@ -1,0 +1,20 @@
+---patch code 0--- org.apache.commons.lang.StringEscapeUtils <160, 160>
+escapeJavaStyleString(StringWriter, StringVar, booleanVar, booleanVar);
+
+---fix ingredient(SameFile)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringEscapeUtils <160, 160>
+escapeJavaStyleString(StringWriter, StringVar, booleanVar);
+
+---fix ingredient  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.time.DurationFormatUtils <460, 462>
+String StringVar = booleanVar
+                                ? StringUtils.leftPad(Integer.toString(intVar), intVar, '0')
+                                : Integer.toString(intVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <2352, 2352>
+return splitWorker(StringVar, null, intVar, booleanVar);
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <5962, 5962>
+return StringVar.regionMatches(booleanVar, intVar, StringVar, 0, StringVar.length());
+
+---fix ingredient(SamePackage)  <0-fine-grained>  varMapType:0--- org.apache.commons.lang.StringUtils <5886, 5886>
+return StringVar.regionMatches(booleanVar, 0, StringVar, 0, StringVar.length());
+
