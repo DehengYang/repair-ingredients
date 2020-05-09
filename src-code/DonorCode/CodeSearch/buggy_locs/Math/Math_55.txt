@@ -1,0 +1,3 @@
+org.apache.commons.math.geometry.Vector3D:465
+org.apache.commons.math.geometry.Vector3D:473
+org.apache.commons.math.geometry.Vector3D:457

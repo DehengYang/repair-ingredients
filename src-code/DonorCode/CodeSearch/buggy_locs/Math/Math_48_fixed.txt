@@ -1,0 +1,3 @@
+org.apache.commons.math.analysis.solvers.BaseSecantSolver:191
+org.apache.commons.math.analysis.solvers.BaseSecantSolver:189
+org.apache.commons.math.analysis.solvers.BaseSecantSolver:190

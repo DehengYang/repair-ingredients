@@ -1,0 +1,40 @@
+org.mockito.Matchers:122
+Any.ANY
+org.mockito.Matchers:137
+Any.ANY
+org.mockito.Matchers:152
+Any.ANY
+org.mockito.Matchers:167
+Any.ANY
+org.mockito.Matchers:182
+Any.ANY
+org.mockito.Matchers:197
+Any.ANY
+org.mockito.Matchers:212
+Any.ANY
+org.mockito.Matchers:227
+Any.ANY
+org.mockito.Matchers:244
+Any.ANY
+org.mockito.Matchers:292
+Any.ANY
+org.mockito.Matchers:309
+anyObject
+org.mockito.Matchers:324
+Any.ANY
+org.mockito.Matchers:339
+Any.ANY
+org.mockito.Matchers:358
+(List) reportMatcher(Any.ANY)returnList
+org.mockito.Matchers:373
+Any.ANY
+org.mockito.Matchers:392
+(Set) reportMatcher(Any.ANY)returnSet
+org.mockito.Matchers:407
+Any.ANY
+org.mockito.Matchers:427
+reportMatcher(Any.ANY)returnMap
+org.mockito.Matchers:442
+Any.ANY
+org.mockito.Matchers:461
+(Collection) reportMatcher(Any.ANY)returnList

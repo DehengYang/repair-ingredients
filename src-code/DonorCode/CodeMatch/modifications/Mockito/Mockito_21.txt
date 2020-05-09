@@ -1,0 +1,4 @@
+org.mockito.internal.creation.instance.ConstructorInstantiator:17
+withParams, outerClassInstance
+org.mockito.internal.creation.instance.ConstructorInstantiator:20
+static withParams, Object... params

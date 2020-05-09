@@ -1,0 +1,2 @@
+com.google.javascript.jscomp.CodeGenerator:745
+ && s.charAt(0) != '0'

@@ -1,0 +1,2 @@
+org.apache.commons.math.stat.regression.SimpleRegression:264
+Math.max(0d, )

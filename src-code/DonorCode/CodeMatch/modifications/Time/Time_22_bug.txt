@@ -1,0 +1,2 @@
+org.joda.time.base.BasePeriod:222
+this(duration, null, null

@@ -1,0 +1,4 @@
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:77
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:76
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:78
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:74

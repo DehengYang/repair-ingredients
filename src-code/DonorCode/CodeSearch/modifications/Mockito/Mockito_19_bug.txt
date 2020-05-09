@@ -1,0 +1,2 @@
+org.mockito.internal.configuration.injection.filter.MockCandidateFilter:15
+fieldInstance

@@ -1,0 +1,4 @@
+org.mockito.internal.creation.instance.ConstructorInstantiator:17
+withOuterClass
+org.mockito.internal.creation.instance.ConstructorInstantiator:20
+withOuterClass

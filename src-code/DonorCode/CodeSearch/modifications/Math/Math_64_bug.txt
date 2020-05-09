@@ -1,0 +1,6 @@
+org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:278
+residuals
+org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:316
+residuals
+org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:346
+oldRes

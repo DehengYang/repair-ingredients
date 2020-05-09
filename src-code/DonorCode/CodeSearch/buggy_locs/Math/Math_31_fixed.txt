@@ -1,0 +1,13 @@
+org.apache.commons.math3.util.ContinuedFraction:146
+org.apache.commons.math3.util.ContinuedFraction:150
+org.apache.commons.math3.util.ContinuedFraction:144
+org.apache.commons.math3.util.ContinuedFraction:147
+org.apache.commons.math3.util.ContinuedFraction:143
+org.apache.commons.math3.util.ContinuedFraction:141
+org.apache.commons.math3.util.ContinuedFraction:142
+org.apache.commons.math3.util.ContinuedFraction:168
+org.apache.commons.math3.util.ContinuedFraction:145
+org.apache.commons.math3.util.ContinuedFraction:152
+org.apache.commons.math3.util.ContinuedFraction:169
+org.apache.commons.math3.util.ContinuedFraction:151
+org.apache.commons.math3.util.ContinuedFraction:167

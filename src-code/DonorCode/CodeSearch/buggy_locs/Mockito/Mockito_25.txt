@@ -1,0 +1,10 @@
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:53
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:82
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:83
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:5
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:17
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:56
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:81
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:38
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:7
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:68

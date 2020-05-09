@@ -1,0 +1,2 @@
+org.apache.commons.lang3.math.NumberUtils:458
+ || str.startsWith("0X) -0X)

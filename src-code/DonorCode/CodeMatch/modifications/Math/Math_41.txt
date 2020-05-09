@@ -1,0 +1,2 @@
+org.apache.commons.math.stat.descriptive.moment.Variance:520
+beginbegin +

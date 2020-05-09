@@ -1,0 +1,4 @@
+org.apache.commons.math3.genetics.ElitisticListPopulation:51
+this. = elitismRate
+org.apache.commons.math3.genetics.ElitisticListPopulation:65
+this. = elitismRate

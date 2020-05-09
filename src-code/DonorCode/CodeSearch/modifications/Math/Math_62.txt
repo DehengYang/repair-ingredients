@@ -1,0 +1,2 @@
+org.apache.commons.math.optimization.univariate.MultiStartUnivariateRealOptimizer:146
+min + 0.5* (max - min)

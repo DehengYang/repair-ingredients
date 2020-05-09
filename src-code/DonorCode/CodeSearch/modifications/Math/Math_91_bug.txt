@@ -1,0 +1,4 @@
+org.apache.commons.math.fraction.Fraction:259
+doubledoubleValue()
+org.apache.commons.math.fraction.Fraction:260
+doubleobject.doubleValue()

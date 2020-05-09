@@ -1,0 +1,6 @@
+org.apache.commons.math.stat.descriptive.SummaryStatistics:158
+!(instanceof Mean)
+org.apache.commons.math.stat.descriptive.SummaryStatistics:161
+!(instanceof Variance)
+org.apache.commons.math.stat.descriptive.SummaryStatistics:164
+!(instanceof GeometricMean)

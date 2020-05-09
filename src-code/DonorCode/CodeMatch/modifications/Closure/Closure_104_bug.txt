@@ -1,0 +1,2 @@
+com.google.javascript.rhino.jstype.UnionType:291
+result != null

@@ -1,0 +1,4 @@
+com.google.javascript.jscomp.InlineObjectLiterals:332
+com.google.javascript.jscomp.InlineObjectLiterals:333
+com.google.javascript.jscomp.InlineObjectLiterals:353
+com.google.javascript.jscomp.InlineObjectLiterals:331

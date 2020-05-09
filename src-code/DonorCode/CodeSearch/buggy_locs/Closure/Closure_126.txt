@@ -1,0 +1,4 @@
+com.google.javascript.jscomp.MinimizeExitPoints:142
+com.google.javascript.jscomp.MinimizeExitPoints:143
+com.google.javascript.jscomp.MinimizeExitPoints:144
+com.google.javascript.jscomp.MinimizeExitPoints:141

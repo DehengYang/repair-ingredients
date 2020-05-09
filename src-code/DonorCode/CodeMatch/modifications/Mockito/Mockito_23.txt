@@ -1,0 +1,6 @@
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:44
+transient 
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:45
+transient 
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:127
+SerializableAnswer

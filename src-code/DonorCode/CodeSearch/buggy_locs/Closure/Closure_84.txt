@@ -1,0 +1,4 @@
+com.google.javascript.jscomp.parsing.IRFactory:798
+com.google.javascript.jscomp.parsing.IRFactory:340
+com.google.javascript.jscomp.parsing.IRFactory:807
+com.google.javascript.jscomp.parsing.IRFactory:341

@@ -1,0 +1,6 @@
+com.google.javascript.rhino.IR:227
+isBlock
+com.google.javascript.rhino.IR:228
+isBlock
+com.google.javascript.rhino.IR:236
+blockUnchecked

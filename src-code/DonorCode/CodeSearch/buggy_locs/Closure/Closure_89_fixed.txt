@@ -1,0 +1,4 @@
+com.google.javascript.jscomp.CollapseProperties:485
+com.google.javascript.jscomp.CollapseProperties:486
+com.google.javascript.jscomp.CollapseProperties:484
+com.google.javascript.jscomp.GlobalNamespace:920

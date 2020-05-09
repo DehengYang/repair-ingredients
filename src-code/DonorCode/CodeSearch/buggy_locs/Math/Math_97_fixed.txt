@@ -1,0 +1,16 @@
+org.apache.commons.math.analysis.BrentSolver:146
+org.apache.commons.math.analysis.BrentSolver:138
+org.apache.commons.math.analysis.BrentSolver:156
+org.apache.commons.math.analysis.BrentSolver:159
+org.apache.commons.math.analysis.BrentSolver:160
+org.apache.commons.math.analysis.BrentSolver:153
+org.apache.commons.math.analysis.BrentSolver:162
+org.apache.commons.math.analysis.BrentSolver:140
+org.apache.commons.math.analysis.BrentSolver:144
+org.apache.commons.math.analysis.BrentSolver:142
+org.apache.commons.math.analysis.BrentSolver:158
+org.apache.commons.math.analysis.BrentSolver:145
+org.apache.commons.math.analysis.BrentSolver:141
+org.apache.commons.math.analysis.BrentSolver:152
+org.apache.commons.math.analysis.BrentSolver:161
+org.apache.commons.math.analysis.BrentSolver:143

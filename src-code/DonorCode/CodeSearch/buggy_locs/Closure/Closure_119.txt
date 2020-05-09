@@ -1,0 +1,2 @@
+com.google.javascript.jscomp.GlobalNamespace:365
+com.google.javascript.jscomp.GlobalNamespace:366

@@ -1,0 +1,4 @@
+org.apache.commons.math.analysis.solvers.BrentSolver:115
+min
+org.apache.commons.math.analysis.solvers.BrentSolver:127
+max

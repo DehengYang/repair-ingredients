@@ -1,0 +1,3 @@
+com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax:783
+com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax:782
+com.google.javascript.jscomp.PeepholeSubstituteAlternateSyntax:784

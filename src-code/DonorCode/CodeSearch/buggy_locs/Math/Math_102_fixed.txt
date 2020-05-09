@@ -1,0 +1,17 @@
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:83
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:95
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:85
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:90
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:89
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:79
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:84
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:82
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:74
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:77
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:76
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:78
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:80
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:92
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:75
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:91
+org.apache.commons.math.stat.inference.ChiSquareTestImpl:81

@@ -1,0 +1,8 @@
+org.mockito.internal.MockitoCore:23
+org.mockito.internal.MockHandler:76
+org.mockito.internal.MockHandler:19
+org.mockito.internal.MockHandler:73
+org.mockito.internal.MockitoCore:22
+org.mockito.internal.MockHandler:78
+org.mockito.internal.MockitoCore:73
+org.mockito.internal.MockHandler:20

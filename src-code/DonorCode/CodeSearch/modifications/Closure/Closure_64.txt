@@ -1,0 +1,8 @@
+com.google.javascript.jscomp.Compiler:1432
+, inputSeqNum == 0
+com.google.javascript.jscomp.Compiler:1461
+, true
+com.google.javascript.jscomp.Compiler:1467
+, boolean firstOutput
+com.google.javascript.jscomp.Compiler:1473
+firstOutput &&

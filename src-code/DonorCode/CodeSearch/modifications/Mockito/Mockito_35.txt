@@ -1,0 +1,6 @@
+org.mockito.Matchers:362
+returnFor(clazz
+org.mockito.Matchers:479
+(T) returnFor((Class) value.getClass()
+org.mockito.Matchers:516
+(T) returnFor((Class) value.getClass()

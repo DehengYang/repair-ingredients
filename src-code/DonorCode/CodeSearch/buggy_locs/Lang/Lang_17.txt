@@ -1,0 +1,10 @@
+org.apache.commons.lang3.text.translate.CharSequenceTranslator:90
+org.apache.commons.lang3.text.translate.CharSequenceTranslator:88
+org.apache.commons.lang3.text.translate.CharSequenceTranslator:96
+org.apache.commons.lang3.text.translate.CharSequenceTranslator:94
+org.apache.commons.lang3.text.translate.CharSequenceTranslator:83
+org.apache.commons.lang3.text.translate.CharSequenceTranslator:97
+org.apache.commons.lang3.text.translate.CharSequenceTranslator:102
+org.apache.commons.lang3.text.translate.CharSequenceTranslator:99
+org.apache.commons.lang3.text.translate.CharSequenceTranslator:98
+org.apache.commons.lang3.text.translate.CharSequenceTranslator:100

@@ -1,0 +1,2 @@
+org.jfree.chart.imagemap.StandardToolTipTagFragmentGenerator:65
+ImageMapUtilities.htmlEscape()

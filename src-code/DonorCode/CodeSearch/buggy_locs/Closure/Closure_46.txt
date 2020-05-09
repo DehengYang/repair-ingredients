@@ -1,0 +1,16 @@
+com.google.javascript.rhino.jstype.RecordType:145
+com.google.javascript.rhino.jstype.RecordType:152
+com.google.javascript.rhino.jstype.RecordType:153
+com.google.javascript.rhino.jstype.RecordType:143
+com.google.javascript.rhino.jstype.RecordType:148
+com.google.javascript.rhino.jstype.RecordType:144
+com.google.javascript.rhino.jstype.RecordType:142
+com.google.javascript.rhino.jstype.RecordType:150
+com.google.javascript.rhino.jstype.RecordType:146
+com.google.javascript.rhino.jstype.RecordType:155
+com.google.javascript.rhino.jstype.RecordType:149
+com.google.javascript.rhino.jstype.RecordType:151
+com.google.javascript.rhino.jstype.RecordType:154
+com.google.javascript.rhino.jstype.RecordType:140
+com.google.javascript.rhino.jstype.RecordType:141
+com.google.javascript.rhino.jstype.RecordType:147

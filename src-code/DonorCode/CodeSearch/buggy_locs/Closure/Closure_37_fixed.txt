@@ -1,0 +1,5 @@
+com.google.javascript.jscomp.parsing.IRFactory:671
+com.google.javascript.jscomp.parsing.IRFactory:667
+com.google.javascript.jscomp.parsing.IRFactory:672
+com.google.javascript.jscomp.NodeTraversal:541
+com.google.javascript.jscomp.parsing.IRFactory:673

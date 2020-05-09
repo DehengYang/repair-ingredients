@@ -1,0 +1,4 @@
+com.google.javascript.jscomp.GlobalNamespace:910
+com.google.javascript.jscomp.GlobalNamespace:907
+com.google.javascript.jscomp.GlobalNamespace:908
+com.google.javascript.jscomp.GlobalNamespace:909

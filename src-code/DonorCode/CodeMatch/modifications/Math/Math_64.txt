@@ -1,0 +1,6 @@
+org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:283
+qtf
+org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:321
+qtf
+org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:356
+qtf

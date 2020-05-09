@@ -1,0 +1,16 @@
+org.apache.commons.math.optimization.univariate.BrentOptimizer:44
+1000
+org.apache.commons.math.optimization.univariate.BrentOptimizer:46
+1e-11
+org.apache.commons.math.optimization.univariate.BrentOptimizer:47
+1e-9
+org.apache.commons.math.optimization.univariate.BrentOptimizer:58
+getMin(), getStartValue(), getMax()
+org.apache.commons.math.optimization.univariate.BrentOptimizer:111
+!isMinim
+org.apache.commons.math.optimization.univariate.BrentOptimizer:191
+!isMinim
+org.apache.commons.math.optimization.univariate.BrentOptimizer:228
+setFunctionValue(isMinim ? -fx
+org.apache.commons.math.optimization.univariate.BrentOptimizer:231
+incrementIterationsCounter()

@@ -1,0 +1,6 @@
+org.apache.commons.math.stat.descriptive.SummaryStatistics:158
+!= mean
+org.apache.commons.math.stat.descriptive.SummaryStatistics:161
+!= variance
+org.apache.commons.math.stat.descriptive.SummaryStatistics:164
+!= geoMean

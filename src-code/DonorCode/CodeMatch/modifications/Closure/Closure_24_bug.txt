@@ -1,0 +1,4 @@
+com.google.javascript.jscomp.ScopedAliases:278
+) {
+com.google.javascript.jscomp.ScopedAliases:279
+if (

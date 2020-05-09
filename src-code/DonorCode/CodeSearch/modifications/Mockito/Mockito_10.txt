@@ -1,0 +1,8 @@
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:72
+, invocation.getMock()
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:92
+, parentMockSettings
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:96
+, MockCreationSettings parentMockSettings
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:101
+propagateSerializationSettings(mockSettings, parentMockSettings

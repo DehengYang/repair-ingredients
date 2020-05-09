@@ -1,0 +1,2 @@
+org.apache.commons.math.util.MathUtils:417
+(Double.isNaN(x) && isNaN(y)) || x == y

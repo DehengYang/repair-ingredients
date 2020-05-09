@@ -1,0 +1,4 @@
+org.apache.commons.lang3.StringUtils:3298
+(array[startIndex] == null?16: array[startIndex].toString()length()) +1
+org.apache.commons.lang3.StringUtils:3383
+(array[startIndex] == null?16: array[startIndex].toString()length()) + separatorlength()

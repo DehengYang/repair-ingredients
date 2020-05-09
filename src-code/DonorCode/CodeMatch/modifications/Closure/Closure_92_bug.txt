@@ -1,0 +1,2 @@
+com.google.javascript.jscomp.ProcessClosurePrimitives:789
+indexOf

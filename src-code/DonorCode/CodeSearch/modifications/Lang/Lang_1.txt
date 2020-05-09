@@ -1,0 +1,4 @@
+org.apache.commons.lang3.math.NumberUtils:477
+ || (hexDigits == 16&& firstSigDigit >'7)
+org.apache.commons.lang3.math.NumberUtils:480
+ || (hexDigits == 8&& firstSigDigit >'7)

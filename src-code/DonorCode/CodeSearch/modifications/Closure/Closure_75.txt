@@ -1,0 +1,2 @@
+com.google.javascript.jscomp.NodeUtil:378
+UNKNOWN;  // IE says "no", EcmaScript says "yes"

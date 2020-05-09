@@ -1,0 +1,20 @@
+org.apache.commons.math.optimization.univariate.BrentOptimizer:44
+Integer.MAX_VALUE
+org.apache.commons.math.optimization.univariate.BrentOptimizer:46
+1E-10
+org.apache.commons.math.optimization.univariate.BrentOptimizer:47
+1.0e-14
+org.apache.commons.math.optimization.univariate.BrentOptimizer:62
+f, goalType, min, startValue, max
+org.apache.commons.math.optimization.univariate.BrentOptimizer:119
+f, 
+org.apache.commons.math.optimization.univariate.BrentOptimizer:120
+goalType == GoalType.MAXIMIZE
+org.apache.commons.math.optimization.univariate.BrentOptimizer:200
+f, 
+org.apache.commons.math.optimization.univariate.BrentOptimizer:201
+goalType == GoalType.MAXIMIZE
+org.apache.commons.math.optimization.univariate.BrentOptimizer:238
+setResult(x, (goalType == GoalType.MAXIMIZE) ?-fx, count
+org.apache.commons.math.optimization.univariate.BrentOptimizer:241
+++count

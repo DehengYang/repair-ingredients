@@ -1,0 +1,2 @@
+org.mockito.internal.creation.MockSettingsImpl:74
+extraInterfaces != null&&java.util.ArraysasList(extraInterfaces)contains(java.ioSerializableclass)

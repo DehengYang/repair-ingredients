@@ -1,0 +1,11 @@
+org.jfree.data.DefaultKeyedValues2D:460
+org.jfree.data.DefaultKeyedValues2D:457
+org.jfree.data.DefaultKeyedValues2D:464
+org.jfree.data.DefaultKeyedValues:333
+org.jfree.data.DefaultKeyedValues2D:455
+org.jfree.data.DefaultKeyedValues2D:458
+org.jfree.data.DefaultKeyedValues:334
+org.jfree.data.DefaultKeyedValues2D:456
+org.jfree.data.DefaultKeyedValues2D:465
+org.jfree.data.DefaultKeyedValues2D:467
+org.jfree.data.DefaultKeyedValues2D:459

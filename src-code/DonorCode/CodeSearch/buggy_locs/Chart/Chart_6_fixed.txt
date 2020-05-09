@@ -1,0 +1,8 @@
+org.jfree.chart.util.ShapeList:117
+org.jfree.chart.util.ShapeList:113
+org.jfree.chart.util.ShapeList:116
+org.jfree.chart.util.ShapeList:118
+org.jfree.chart.util.ShapeList:115
+org.jfree.chart.util.ShapeList:111
+org.jfree.chart.util.ShapeList:112
+org.jfree.chart.util.ShapeList:114

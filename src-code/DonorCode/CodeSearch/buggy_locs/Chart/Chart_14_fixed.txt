@@ -1,0 +1,12 @@
+org.jfree.chart.plot.CategoryPlot:2451
+org.jfree.chart.plot.CategoryPlot:2166
+org.jfree.chart.plot.CategoryPlot:2168
+org.jfree.chart.plot.XYPlot:2533
+org.jfree.chart.plot.XYPlot:2293
+org.jfree.chart.plot.XYPlot:2532
+org.jfree.chart.plot.CategoryPlot:2452
+org.jfree.chart.plot.XYPlot:2294
+org.jfree.chart.plot.XYPlot:2295
+org.jfree.chart.plot.CategoryPlot:2167
+org.jfree.chart.plot.XYPlot:2534
+org.jfree.chart.plot.CategoryPlot:2453

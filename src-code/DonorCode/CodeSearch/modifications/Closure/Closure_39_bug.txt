@@ -1,0 +1,2 @@
+com.google.javascript.rhino.jstype.PrototypeObjectType:380
+toString(

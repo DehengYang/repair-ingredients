@@ -1,0 +1,4 @@
+/src
+/build/target/classes
+/test
+/build/target/test-classes

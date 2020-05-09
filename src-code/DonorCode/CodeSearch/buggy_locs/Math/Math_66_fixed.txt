@@ -1,0 +1,11 @@
+org.apache.commons.math.optimization.univariate.BrentOptimizer:190
+org.apache.commons.math.optimization.univariate.BrentOptimizer:58
+org.apache.commons.math.optimization.univariate.BrentOptimizer:231
+org.apache.commons.math.optimization.univariate.BrentOptimizer:46
+org.apache.commons.math.optimization.univariate.BrentOptimizer:111
+org.apache.commons.math.optimization.univariate.BrentOptimizer:110
+org.apache.commons.math.optimization.univariate.BrentOptimizer:47
+org.apache.commons.math.optimization.univariate.BrentOptimizer:228
+org.apache.commons.math.optimization.univariate.BrentOptimizer:44
+org.apache.commons.math.optimization.univariate.BrentOptimizer:117
+org.apache.commons.math.optimization.univariate.BrentOptimizer:191

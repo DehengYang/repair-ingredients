@@ -1,0 +1,3 @@
+org.mockito.internal.matchers.Equality:14
+org.mockito.internal.matchers.Equality:15
+org.mockito.internal.matchers.Equality:13

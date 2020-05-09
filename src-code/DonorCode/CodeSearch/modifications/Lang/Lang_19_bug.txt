@@ -1,0 +1,4 @@
+org.apache.commons.lang3.text.translate.NumericEntityUnescaper:40
+1
+org.apache.commons.lang3.text.translate.NumericEntityUnescaper:80
+1

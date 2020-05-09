@@ -1,0 +1,8 @@
+org.apache.commons.math.fraction.ProperFractionFormat:169
+org.apache.commons.math.fraction.ProperFractionFormat:167
+org.apache.commons.math.fraction.ProperFractionFormat:204
+org.apache.commons.math.fraction.ProperFractionFormat:165
+org.apache.commons.math.fraction.ProperFractionFormat:206
+org.apache.commons.math.fraction.ProperFractionFormat:208
+org.apache.commons.math.fraction.ProperFractionFormat:207
+org.apache.commons.math.fraction.ProperFractionFormat:168

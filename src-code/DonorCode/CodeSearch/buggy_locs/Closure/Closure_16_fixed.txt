@@ -1,0 +1,9 @@
+com.google.javascript.jscomp.ScopedAliases:170
+com.google.javascript.jscomp.ScopedAliases:186
+com.google.javascript.jscomp.ScopedAliases:184
+com.google.javascript.jscomp.ScopedAliases:173
+com.google.javascript.jscomp.ScopedAliases:474
+com.google.javascript.jscomp.ScopedAliases:182
+com.google.javascript.jscomp.ScopedAliases:176
+com.google.javascript.jscomp.ScopedAliases:183
+com.google.javascript.jscomp.ScopedAliases:185

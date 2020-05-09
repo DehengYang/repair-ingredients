@@ -1,0 +1,4 @@
+org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer:92
+optimizer.getFunctionValue()
+org.apache.commons.math.optimization.MultiStartUnivariateRealOptimizer:97
+optimizer.getResult()

@@ -1,0 +1,16 @@
+org.joda.time.tz.DefaultNameProvider:79
+org.joda.time.tz.DefaultNameProvider:69
+org.joda.time.tz.DefaultNameProvider:66
+org.joda.time.tz.DefaultNameProvider:81
+org.joda.time.tz.DefaultNameProvider:91
+org.joda.time.tz.DefaultNameProvider:80
+org.joda.time.tz.DefaultNameProvider:71
+org.joda.time.tz.DefaultNameProvider:68
+org.joda.time.tz.DefaultNameProvider:83
+org.joda.time.tz.DefaultNameProvider:73
+org.joda.time.tz.DefaultNameProvider:88
+org.joda.time.tz.DefaultNameProvider:72
+org.joda.time.tz.DefaultNameProvider:67
+org.joda.time.tz.DefaultNameProvider:89
+org.joda.time.tz.DefaultNameProvider:70
+org.joda.time.tz.DefaultNameProvider:84

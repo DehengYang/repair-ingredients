@@ -1,0 +1,6 @@
+org.jfree.data.category.DefaultIntervalCategoryDataset:207
+null
+org.jfree.data.category.DefaultIntervalCategoryDataset:208
+null
+org.jfree.data.category.DefaultIntervalCategoryDataset:338
+this.startData[0]length

@@ -1,0 +1,8 @@
+com.google.javascript.jscomp.CheckGlobalThis:102
+com.google.javascript.jscomp.CheckGlobalThis:99
+com.google.javascript.jscomp.CheckGlobalThis:105
+com.google.javascript.jscomp.CheckGlobalThis:100
+com.google.javascript.jscomp.CheckGlobalThis:104
+com.google.javascript.jscomp.CheckGlobalThis:101
+com.google.javascript.jscomp.CheckGlobalThis:103
+com.google.javascript.jscomp.CheckGlobalThis:153

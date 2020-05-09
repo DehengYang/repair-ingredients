@@ -1,0 +1,4 @@
+com.google.javascript.jscomp.FlowSensitiveInlineVariables:155
+t.getScope()
+com.google.javascript.jscomp.FlowSensitiveInlineVariables:280
+final Scopescope

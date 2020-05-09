@@ -1,0 +1,4 @@
+org.apache.commons.lang3.ArrayUtils:3295
+type = Object.class;
+org.apache.commons.lang3.ArrayUtils:3574
+return (T[]) new Object[] { null };

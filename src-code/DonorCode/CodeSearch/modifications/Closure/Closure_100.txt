@@ -1,0 +1,2 @@
+com.google.javascript.jscomp.CheckGlobalThis:153
+parent != null&&NodeUtil.isGet(parent)

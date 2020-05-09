@@ -1,0 +1,6 @@
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:56
+, returnTypeGenericMetadata
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:59
+, GenericMetadataSupport returnTypeGenericMetadata
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:71
+createNewDeepStubMock(returnTypeGenericMetadata)

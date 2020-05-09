@@ -1,0 +1,2 @@
+com.google.javascript.jscomp.NameAnalyzer:578
+if (!(parent.isCall() && parentgetFirstChild() == n))

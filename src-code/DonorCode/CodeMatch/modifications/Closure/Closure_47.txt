@@ -1,0 +1,6 @@
+com.google.debugging.sourcemap.SourceMapConsumerV3:489
+ + 1
+com.google.debugging.sourcemap.SourceMapConsumerV3:490
+ + 1
+com.google.javascript.jscomp.SourceMap:146
+ - lineBaseOffset

@@ -1,0 +1,4 @@
+com.google.javascript.jscomp.PeepholeFoldConstants:907
+left.getType(
+com.google.javascript.jscomp.PeepholeFoldConstants:908
+right.getType(

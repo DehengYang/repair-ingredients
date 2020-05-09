@@ -1,0 +1,4 @@
+com.google.javascript.jscomp.FlowSensitiveInlineVariables:157
+traverse(
+com.google.javascript.jscomp.MustBeReachingVariableDef:396
+ && jsScope.isDeclared(ngetString(), true)

@@ -1,0 +1,4 @@
+org.apache.commons.math3.optimization.univariate.BrentOptimizer:230
+best(, previous, isMinim)
+org.apache.commons.math3.optimization.univariate.BrentOptimizer:267
+best(, previous, isMinim)

@@ -1,0 +1,4 @@
+org.apache.commons.math.util.MathUtils:1624
+double
+org.apache.commons.math.util.MathUtils:1626
+double

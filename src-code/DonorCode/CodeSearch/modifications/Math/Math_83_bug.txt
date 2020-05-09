@@ -1,0 +1,4 @@
+org.apache.commons.math.optimization.linear.SimplexTableau:341
+getBasicRow
+org.apache.commons.math.optimization.linear.SimplexTableau:345
+getBasicRow

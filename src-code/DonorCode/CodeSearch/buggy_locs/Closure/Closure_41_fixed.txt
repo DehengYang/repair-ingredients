@@ -1,0 +1,9 @@
+com.google.javascript.jscomp.FunctionTypeBuilder:292
+com.google.javascript.jscomp.FunctionTypeBuilder:489
+com.google.javascript.jscomp.FunctionTypeBuilder:490
+com.google.javascript.jscomp.FunctionTypeBuilder:488
+com.google.javascript.jscomp.FunctionTypeBuilder:487
+com.google.javascript.jscomp.FunctionTypeBuilder:293
+com.google.javascript.jscomp.FunctionTypeBuilder:294
+com.google.javascript.jscomp.FunctionTypeBuilder:486
+com.google.javascript.jscomp.FunctionTypeBuilder:491

@@ -1,0 +1,2 @@
+org.jfree.chart.block.BorderArrangement:455
+Math.max(, 0.0)

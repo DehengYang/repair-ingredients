@@ -1,0 +1,2 @@
+org.apache.commons.math.optimization.fitting.GaussianFitter:121
+new Gaussian.Parametric(),

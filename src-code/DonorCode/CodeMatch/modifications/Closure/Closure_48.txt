@@ -1,0 +1,2 @@
+com.google.javascript.jscomp.TypedScopeCreator:1521
+ && rhsValue != null rhsValue.isFunction()

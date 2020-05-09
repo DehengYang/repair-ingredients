@@ -1,0 +1,4 @@
+com.google.javascript.jscomp.PeepholeFoldConstants:907
+getNormalizedNodeType(left
+com.google.javascript.jscomp.PeepholeFoldConstants:908
+getNormalizedNodeType(right

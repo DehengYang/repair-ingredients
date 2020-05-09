@@ -1,0 +1,2 @@
+org.mockito.internal.stubbing.defaultanswers.ReturnsEmptyValues:76
+invocation.getMock() == invocationgetArguments()[0] ? :

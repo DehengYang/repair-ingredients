@@ -1,0 +1,4 @@
+org.apache.commons.math.complex.Complex:260
+isZero ?  : INF
+org.apache.commons.math.complex.Complex:297
+isZero ?  : INF

@@ -1,0 +1,6 @@
+org.apache.commons.math.optimization.linear.SimplexTableau:292
+ignoreObjectiveRows ?  : 0
+org.apache.commons.math.optimization.linear.SimplexTableau:341
+getBasicRowForSolution
+org.apache.commons.math.optimization.linear.SimplexTableau:345
+getBasicRowForSolution

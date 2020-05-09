@@ -1,0 +1,6 @@
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:44
+ = newMockitoCore()
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:45
+ = newReturnsEmptyValues()
+org.mockito.internal.stubbing.defaultanswers.ReturnsDeepStubs:114
+Answer<Object>

@@ -1,0 +1,4 @@
+com.google.javascript.jscomp.ScopedAliases:370
+v.getInitialValue() != null
+com.google.javascript.jscomp.ScopedAliases:373
+null

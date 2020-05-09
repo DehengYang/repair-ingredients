@@ -1,0 +1,14 @@
+org.jfree.chart.renderer.category.StatisticalBarRenderer:498
+org.jfree.chart.renderer.category.StatisticalBarRenderer:320
+org.jfree.chart.renderer.category.StatisticalBarRenderer:468
+org.jfree.chart.renderer.category.StatisticalBarRenderer:410
+org.jfree.chart.renderer.category.StatisticalBarRenderer:411
+org.jfree.chart.renderer.category.StatisticalBarRenderer:470
+org.jfree.chart.renderer.category.StatisticalBarRenderer:318
+org.jfree.chart.renderer.category.StatisticalBarRenderer:469
+org.jfree.chart.renderer.category.StatisticalBarRenderer:261
+org.jfree.chart.renderer.category.StatisticalBarRenderer:349
+org.jfree.chart.renderer.category.StatisticalBarRenderer:409
+org.jfree.chart.renderer.category.StatisticalBarRenderer:259
+org.jfree.chart.renderer.category.StatisticalBarRenderer:260
+org.jfree.chart.renderer.category.StatisticalBarRenderer:319

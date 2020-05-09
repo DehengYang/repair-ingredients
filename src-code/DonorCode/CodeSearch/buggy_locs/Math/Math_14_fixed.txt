@@ -1,0 +1,10 @@
+org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer:269
+org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer:270
+org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer:271
+org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer:272
+org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer:274
+org.apache.commons.math3.optim.nonlinear.vector.Weight:43
+org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer:267
+org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer:268
+org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer:277
+org.apache.commons.math3.optim.nonlinear.vector.jacobian.AbstractLeastSquaresOptimizer:273

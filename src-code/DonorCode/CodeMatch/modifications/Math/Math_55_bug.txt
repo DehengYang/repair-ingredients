@@ -1,0 +1,2 @@
+org.apache.commons.math.geometry.Vector3D:473
+v1.yv2zy, v1xz, v1

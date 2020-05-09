@@ -1,0 +1,4 @@
+org.apache.commons.math.fraction.Fraction:259
+long((long) numerator) * object.denominator
+org.apache.commons.math.fraction.Fraction:260
+long((long) denominator) * objectnumerator

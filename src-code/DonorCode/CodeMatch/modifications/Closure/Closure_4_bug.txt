@@ -1,0 +1,4 @@
+com.google.javascript.rhino.jstype.NamedType:190
+detectImplicitPrototypeCycle
+com.google.javascript.rhino.jstype.NamedType:202
+detectImplicitPrototypeCycle

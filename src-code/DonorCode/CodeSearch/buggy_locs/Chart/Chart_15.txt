@@ -1,0 +1,6 @@
+org.jfree.chart.plot.PiePlot:1377
+org.jfree.chart.plot.PiePlot:2050
+org.jfree.chart.plot.PiePlot:2051
+org.jfree.chart.plot.PiePlot:2053
+org.jfree.chart.plot.PiePlot:1378
+org.jfree.chart.plot.PiePlot:2052

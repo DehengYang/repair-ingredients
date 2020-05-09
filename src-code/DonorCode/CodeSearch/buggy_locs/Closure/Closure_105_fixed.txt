@@ -1,0 +1,7 @@
+com.google.javascript.jscomp.FoldConstants:1484
+com.google.javascript.jscomp.FoldConstants:1485
+com.google.javascript.jscomp.FoldConstants:1494
+com.google.javascript.jscomp.FoldConstants:1490
+com.google.javascript.jscomp.FoldConstants:1477
+com.google.javascript.jscomp.FoldConstants:1502
+com.google.javascript.jscomp.FoldConstants:1483

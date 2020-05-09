@@ -1,0 +1,4 @@
+org.apache.commons.math.geometry.euclidean.threed.Rotation:354
+<= inPlaneThreshold * k.getNorm()  u2PrimegetNorm()
+org.apache.commons.math.geometry.euclidean.threed.Rotation:360
+<

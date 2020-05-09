@@ -1,0 +1,2 @@
+org.apache.commons.math.complex.Complex:256
+getReal() == 0.0&& divisor.getImaginary() 0.0

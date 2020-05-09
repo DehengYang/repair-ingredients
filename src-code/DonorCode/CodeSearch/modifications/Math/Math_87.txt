@@ -1,0 +1,2 @@
+org.apache.commons.math.optimization.linear.SimplexTableau:277
+} else if (!MathUtils.equals(getEntry(i, col), 0.0, epsilon))

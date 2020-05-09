@@ -1,0 +1,2 @@
+org.jfree.chart.plot.ValueMarker:95
+outlinePaint, outlineStroke

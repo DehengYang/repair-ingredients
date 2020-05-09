@@ -1,0 +1,7 @@
+org.apache.commons.lang3.math.Fraction:587
+org.apache.commons.lang3.math.Fraction:585
+org.apache.commons.lang3.math.Fraction:586
+org.apache.commons.lang3.math.Fraction:584
+org.apache.commons.lang3.math.Fraction:588
+org.apache.commons.lang3.math.Fraction:590
+org.apache.commons.lang3.math.Fraction:583

@@ -1,0 +1,6 @@
+org.jfree.chart.plot.CategoryPlot:700
+org.jfree.chart.plot.CategoryPlot:699
+org.jfree.chart.plot.CategoryPlot:698
+org.jfree.chart.plot.CategoryPlot:977
+org.jfree.chart.plot.CategoryPlot:978
+org.jfree.chart.plot.CategoryPlot:976

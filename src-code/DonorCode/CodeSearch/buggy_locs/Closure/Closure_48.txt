@@ -1,0 +1,4 @@
+com.google.javascript.jscomp.TypedScopeCreator:1523
+com.google.javascript.jscomp.TypedScopeCreator:1521
+com.google.javascript.jscomp.TypedScopeCreator:1525
+com.google.javascript.jscomp.TypedScopeCreator:1524

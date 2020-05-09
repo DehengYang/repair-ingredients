@@ -1,0 +1,2 @@
+org.joda.time.base.BaseSingleFieldPeriod:105
+START_1972

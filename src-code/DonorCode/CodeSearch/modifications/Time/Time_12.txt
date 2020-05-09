@@ -1,0 +1,4 @@
+org.joda.time.LocalDate:213
+(era == GregorianCalendar.AD?  :1- yearOfEra)
+org.joda.time.LocalDateTime:202
+(era == GregorianCalendar.AD?  :1- yearOfEra)

@@ -1,0 +1,12 @@
+com.google.javascript.jscomp.FunctionInjector:705
+com.google.javascript.jscomp.FunctionInjector:698
+com.google.javascript.jscomp.FunctionInjector:732
+com.google.javascript.jscomp.FunctionInjector:702
+com.google.javascript.jscomp.FunctionInjector:734
+com.google.javascript.jscomp.FunctionInjector:701
+com.google.javascript.jscomp.FunctionInjector:697
+com.google.javascript.jscomp.FunctionInjector:699
+com.google.javascript.jscomp.FunctionInjector:704
+com.google.javascript.jscomp.FunctionInjector:700
+com.google.javascript.jscomp.FunctionInjector:703
+com.google.javascript.jscomp.FunctionInjector:733

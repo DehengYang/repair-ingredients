@@ -1,0 +1,40 @@
+org.mockito.Matchers:122
+new InstanceOf(Booleanclass)
+org.mockito.Matchers:137
+new InstanceOf(Byteclass)
+org.mockito.Matchers:152
+new InstanceOf(Characterclass)
+org.mockito.Matchers:167
+new InstanceOf(Integerclass)
+org.mockito.Matchers:182
+new InstanceOf(Longclass)
+org.mockito.Matchers:197
+new InstanceOf(Floatclass)
+org.mockito.Matchers:212
+new InstanceOf(Doubleclass)
+org.mockito.Matchers:227
+new InstanceOf(Shortclass)
+org.mockito.Matchers:244
+new InstanceOf(Objectclass)
+org.mockito.Matchers:292
+new InstanceOf(clazz)
+org.mockito.Matchers:309
+reportMatcher(Any.ANY)returnNull
+org.mockito.Matchers:324
+new InstanceOf(Stringclass)
+org.mockito.Matchers:339
+new InstanceOf(Listclass)
+org.mockito.Matchers:358
+anyList
+org.mockito.Matchers:373
+new InstanceOf(Setclass)
+org.mockito.Matchers:392
+anySet
+org.mockito.Matchers:407
+new InstanceOf(Mapclass)
+org.mockito.Matchers:427
+anyMap
+org.mockito.Matchers:442
+new InstanceOf(Collectionclass)
+org.mockito.Matchers:461
+anyCollection

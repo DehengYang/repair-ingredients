@@ -1,0 +1,12 @@
+org.joda.time.Period:1628
+org.joda.time.Period:1640
+org.joda.time.Period:1637
+org.joda.time.Period:1630
+org.joda.time.Period:1629
+org.joda.time.Period:1639
+org.joda.time.Period:1631
+org.joda.time.Period:1638
+org.joda.time.Period:1636
+org.joda.time.Period:1632
+org.joda.time.Period:1635
+org.joda.time.Period:1634

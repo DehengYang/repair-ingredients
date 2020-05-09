@@ -1,0 +1,12 @@
+org.apache.commons.math.fraction.BigFraction:686
+org.apache.commons.math.fraction.BigFraction:745
+org.apache.commons.math.fraction.BigFraction:690
+org.apache.commons.math.fraction.BigFraction:742
+org.apache.commons.math.fraction.BigFraction:744
+org.apache.commons.math.fraction.BigFraction:693
+org.apache.commons.math.fraction.BigFraction:689
+org.apache.commons.math.fraction.BigFraction:739
+org.apache.commons.math.fraction.BigFraction:691
+org.apache.commons.math.fraction.BigFraction:743
+org.apache.commons.math.fraction.BigFraction:746
+org.apache.commons.math.fraction.BigFraction:692

@@ -1,0 +1,7 @@
+org.apache.commons.math.dfp.Dfp:2325
+org.apache.commons.math.dfp.Dfp:274
+org.apache.commons.math.dfp.Dfp:273
+org.apache.commons.math.dfp.Dfp:2324
+org.apache.commons.math.dfp.Dfp:2322
+org.apache.commons.math.dfp.Dfp:2323
+org.apache.commons.math.dfp.Dfp:275

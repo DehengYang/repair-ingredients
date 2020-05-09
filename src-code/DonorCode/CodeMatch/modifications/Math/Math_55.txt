@@ -1,0 +1,2 @@
+org.apache.commons.math.geometry.Vector3D:490
+y3z2z3y2, z3x2x3z2, x3y2

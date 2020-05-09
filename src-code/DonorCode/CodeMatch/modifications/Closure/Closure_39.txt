@@ -1,0 +1,6 @@
+com.google.javascript.rhino.jstype.PrototypeObjectType:380
+toStringHelper(forAnnotations
+com.google.javascript.rhino.jstype.PrototypeObjectType:383
+!forAnnotations && 
+com.google.javascript.rhino.jstype.PrototypeObjectType:394
+forAnnotations ? "?:

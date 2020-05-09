@@ -1,0 +1,9 @@
+org.apache.commons.math.optimization.direct.MultiDirectional:100
+org.apache.commons.math.optimization.direct.MultiDirectional:94
+org.apache.commons.math.optimization.direct.MultiDirectional:101
+org.apache.commons.math.optimization.direct.MultiDirectional:102
+org.apache.commons.math.optimization.direct.MultiDirectional:99
+org.apache.commons.math.optimization.direct.MultiDirectional:97
+org.apache.commons.math.optimization.direct.MultiDirectional:98
+org.apache.commons.math.optimization.direct.MultiDirectional:64
+org.apache.commons.math.optimization.direct.MultiDirectional:93

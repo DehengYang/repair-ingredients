@@ -1,0 +1,6 @@
+com.google.javascript.jscomp.ScopedAliases:368
+n.hasChildren()
+com.google.javascript.jscomp.ScopedAliases:369
+.detachFromParent()
+com.google.javascript.jscomp.ScopedAliases:371
+parent

@@ -1,0 +1,4 @@
+org.apache.commons.math3.fraction.BigFraction:303
+org.apache.commons.math3.fraction.Fraction:215
+org.apache.commons.math3.fraction.Fraction:212
+org.apache.commons.math3.fraction.BigFraction:306

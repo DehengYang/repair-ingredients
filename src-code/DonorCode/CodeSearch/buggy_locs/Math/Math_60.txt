@@ -1,0 +1,10 @@
+org.apache.commons.math.distribution.NormalDistributionImpl:135
+org.apache.commons.math.distribution.NormalDistributionImpl:133
+org.apache.commons.math.distribution.NormalDistributionImpl:137
+org.apache.commons.math.distribution.NormalDistributionImpl:126
+org.apache.commons.math.distribution.NormalDistributionImpl:131
+org.apache.commons.math.distribution.NormalDistributionImpl:130
+org.apache.commons.math.distribution.NormalDistributionImpl:136
+org.apache.commons.math.distribution.NormalDistributionImpl:132
+org.apache.commons.math.distribution.NormalDistributionImpl:134
+org.apache.commons.math.distribution.NormalDistributionImpl:129

@@ -1,0 +1,4 @@
+org.mockito.internal.configuration.injection.FinalMockCandidateFilter:4
+org.mockito.internal.configuration.injection.FinalMockCandidateFilter:3
+org.mockito.internal.configuration.injection.FinalMockCandidateFilter:24
+org.mockito.internal.configuration.injection.FinalMockCandidateFilter:25

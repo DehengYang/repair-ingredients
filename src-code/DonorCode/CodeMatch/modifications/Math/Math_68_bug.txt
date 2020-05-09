@@ -1,0 +1,4 @@
+org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:303
+new VectorialPointValuePair(point, objective)
+org.apache.commons.math.optimization.general.LevenbergMarquardtOptimizer:419
+new VectorialPointValuePair(point, objective)

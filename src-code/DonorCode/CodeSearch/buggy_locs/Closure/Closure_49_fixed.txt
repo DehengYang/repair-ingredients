@@ -1,0 +1,14 @@
+com.google.javascript.jscomp.MakeDeclaredNamesUnique:181
+com.google.javascript.jscomp.MakeDeclaredNamesUnique:124
+com.google.javascript.jscomp.MakeDeclaredNamesUnique:130
+com.google.javascript.jscomp.MakeDeclaredNamesUnique:122
+com.google.javascript.jscomp.MakeDeclaredNamesUnique:131
+com.google.javascript.jscomp.MakeDeclaredNamesUnique:176
+com.google.javascript.jscomp.MakeDeclaredNamesUnique:123
+com.google.javascript.jscomp.MakeDeclaredNamesUnique:136
+com.google.javascript.jscomp.MakeDeclaredNamesUnique:133
+com.google.javascript.jscomp.MakeDeclaredNamesUnique:185
+com.google.javascript.jscomp.MakeDeclaredNamesUnique:126
+com.google.javascript.jscomp.MakeDeclaredNamesUnique:127
+com.google.javascript.jscomp.MakeDeclaredNamesUnique:132
+com.google.javascript.jscomp.MakeDeclaredNamesUnique:137

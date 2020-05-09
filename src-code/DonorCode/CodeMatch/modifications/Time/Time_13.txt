@@ -1,0 +1,2 @@
+org.joda.time.format.PeriodFormatterBuilder:1098
+(valueLong < 0? 5) :Math.max(sum, 4)

@@ -1,0 +1,8 @@
+com.google.javascript.jscomp.FoldConstants:1477
+new StringBuilder()
+com.google.javascript.jscomp.FoldConstants:1488
+.length() > 0
+com.google.javascript.jscomp.FoldConstants:1492
+new StringBuilder()
+com.google.javascript.jscomp.FoldConstants:1500
+.length() > 0

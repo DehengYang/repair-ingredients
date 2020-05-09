@@ -1,0 +1,6 @@
+org.apache.commons.lang3.text.translate.NumericEntityUnescaper:64
+org.apache.commons.lang3.text.translate.NumericEntityUnescaper:63
+org.apache.commons.lang3.text.translate.NumericEntityUnescaper:66
+org.apache.commons.lang3.text.translate.NumericEntityUnescaper:67
+org.apache.commons.lang3.text.translate.NumericEntityUnescaper:65
+org.apache.commons.lang3.text.translate.NumericEntityUnescaper:69
