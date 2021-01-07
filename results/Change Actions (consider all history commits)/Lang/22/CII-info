@@ -1,0 +1,183 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:(u == 0) || (v == 0) @TO@ MethodDeclaration@@private, static, @@int, MethodName:greatestCommonDivisor, @@Argus:int+u+int+v+ @AT@ 20880 @LENGTH@ 241
+---INS InfixExpression@@(u == 0) || (v == 0) @TO@ IfStatement@@InfixExpression:(u == 0) || (v == 0) @AT@ 20884 @LENGTH@ 20
+------INS ParenthesizedExpression@@(u == 0) @TO@ InfixExpression@@(u == 0) || (v == 0) @AT@ 20884 @LENGTH@ 8
+---------INS InfixExpression@@u == 0 @TO@ ParenthesizedExpression@@(u == 0) @AT@ 20885 @LENGTH@ 6
+------------INS SimpleName@@u @TO@ InfixExpression@@u == 0 @AT@ 20885 @LENGTH@ 1
+------------INS Operator@@== @TO@ InfixExpression@@u == 0 @AT@ 20886 @LENGTH@ 2
+------------INS NumberLiteral@@0 @TO@ InfixExpression@@u == 0 @AT@ 20890 @LENGTH@ 1
+------INS Operator@@|| @TO@ InfixExpression@@(u == 0) || (v == 0) @AT@ 20892 @LENGTH@ 2
+------INS ParenthesizedExpression@@(v == 0) @TO@ InfixExpression@@(u == 0) || (v == 0) @AT@ 20896 @LENGTH@ 8
+---------INS InfixExpression@@v == 0 @TO@ ParenthesizedExpression@@(v == 0) @AT@ 20897 @LENGTH@ 6
+------------INS SimpleName@@v @TO@ InfixExpression@@v == 0 @AT@ 20897 @LENGTH@ 1
+------------INS Operator@@== @TO@ InfixExpression@@v == 0 @AT@ 20898 @LENGTH@ 2
+------------INS NumberLiteral@@0 @TO@ InfixExpression@@v == 0 @AT@ 20902 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:(u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE) @TO@ IfStatement@@InfixExpression:(u == 0) || (v == 0) @AT@ 20920 @LENGTH@ 145
+------INS InfixExpression@@(u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE) @TO@ IfStatement@@InfixExpression:(u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE) @AT@ 20924 @LENGTH@ 52
+---------INS ParenthesizedExpression@@(u == Integer.MIN_VALUE) @TO@ InfixExpression@@(u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE) @AT@ 20924 @LENGTH@ 24
+------------INS InfixExpression@@u == Integer.MIN_VALUE @TO@ ParenthesizedExpression@@(u == Integer.MIN_VALUE) @AT@ 20925 @LENGTH@ 22
+---------------INS SimpleName@@u @TO@ InfixExpression@@u == Integer.MIN_VALUE @AT@ 20925 @LENGTH@ 1
+---------------INS Operator@@== @TO@ InfixExpression@@u == Integer.MIN_VALUE @AT@ 20926 @LENGTH@ 2
+---------------INS QualifiedName@@Integer.MIN_VALUE @TO@ InfixExpression@@u == Integer.MIN_VALUE @AT@ 20930 @LENGTH@ 17
+------------------INS SimpleName@@Integer @TO@ QualifiedName@@Integer.MIN_VALUE @AT@ 20930 @LENGTH@ 7
+------------------INS SimpleName@@MIN_VALUE @TO@ QualifiedName@@Integer.MIN_VALUE @AT@ 20938 @LENGTH@ 9
+---------INS Operator@@|| @TO@ InfixExpression@@(u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE) @AT@ 20948 @LENGTH@ 2
+---------INS ParenthesizedExpression@@(v == Integer.MIN_VALUE) @TO@ InfixExpression@@(u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE) @AT@ 20952 @LENGTH@ 24
+------------INS InfixExpression@@v == Integer.MIN_VALUE @TO@ ParenthesizedExpression@@(v == Integer.MIN_VALUE) @AT@ 20953 @LENGTH@ 22
+---------------INS SimpleName@@v @TO@ InfixExpression@@v == Integer.MIN_VALUE @AT@ 20953 @LENGTH@ 1
+---------------INS Operator@@== @TO@ InfixExpression@@v == Integer.MIN_VALUE @AT@ 20954 @LENGTH@ 2
+---------------INS QualifiedName@@Integer.MIN_VALUE @TO@ InfixExpression@@v == Integer.MIN_VALUE @AT@ 20958 @LENGTH@ 17
+------------------INS SimpleName@@Integer @TO@ QualifiedName@@Integer.MIN_VALUE @AT@ 20958 @LENGTH@ 7
+------------------INS SimpleName@@MIN_VALUE @TO@ QualifiedName@@Integer.MIN_VALUE @AT@ 20966 @LENGTH@ 9
+------INS ThrowStatement@@ClassInstanceCreation:new ArithmeticException("overflow: gcd is 2^31") @TO@ IfStatement@@InfixExpression:(u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE) @AT@ 20996 @LENGTH@ 55
+---------INS ClassInstanceCreation@@ArithmeticException["overflow: gcd is 2^31"] @TO@ ThrowStatement@@ClassInstanceCreation:new ArithmeticException("overflow: gcd is 2^31") @AT@ 21002 @LENGTH@ 48
+------------INS New@@new @TO@ ClassInstanceCreation@@ArithmeticException["overflow: gcd is 2^31"] @AT@ 21002 @LENGTH@ 3
+------------INS SimpleType@@ArithmeticException @TO@ ClassInstanceCreation@@ArithmeticException["overflow: gcd is 2^31"] @AT@ 21006 @LENGTH@ 19
+------------INS StringLiteral@@"overflow: gcd is 2^31" @TO@ ClassInstanceCreation@@ArithmeticException["overflow: gcd is 2^31"] @AT@ 21026 @LENGTH@ 23
+---INS ReturnStatement@@InfixExpression:Math.abs(u) + Math.abs(v) @TO@ IfStatement@@InfixExpression:(u == 0) || (v == 0) @AT@ 21078 @LENGTH@ 33
+------MOV InfixExpression@@Math.abs(u) <= 1 @TO@ ReturnStatement@@InfixExpression:Math.abs(u) + Math.abs(v) @AT@ 20932 @LENGTH@ 16
+, UPD IfStatement@@InfixExpression:Math.abs(u) <= 1 || Math.abs(v) <= 1 @TO@ InfixExpression:Math.abs(u) == 1 || Math.abs(v) == 1 @AT@ 20928 @LENGTH@ 75
+---UPD InfixExpression@@Math.abs(u) <= 1 || Math.abs(v) <= 1 @TO@ Math.abs(u) == 1 || Math.abs(v) == 1 @AT@ 20932 @LENGTH@ 36
+------UPD InfixExpression@@Math.abs(u) <= 1 @TO@ Math.abs(u) + Math.abs(v) @AT@ 20932 @LENGTH@ 16
+---------UPD Operator@@<= @TO@ + @AT@ 20943 @LENGTH@ 2
+---------DEL NumberLiteral@@1 @AT@ 20947 @LENGTH@ 1
+---------INS MethodInvocation@@Math.abs(v) @TO@ InfixExpression@@Math.abs(u) <= 1 @AT@ 21099 @LENGTH@ 11
+------------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(v) @AT@ 21099 @LENGTH@ 4
+------------INS SimpleName@@MethodName:abs:[v] @TO@ MethodInvocation@@Math.abs(v) @AT@ 21104 @LENGTH@ 6
+---------------INS SimpleName@@v @TO@ SimpleName@@MethodName:abs:[v] @AT@ 21108 @LENGTH@ 1
+------UPD InfixExpression@@Math.abs(v) <= 1 @TO@ Math.abs(v) == 1 @AT@ 20952 @LENGTH@ 16
+---------UPD Operator@@<= @TO@ == @AT@ 20963 @LENGTH@ 2
+------INS InfixExpression@@Math.abs(u) == 1 @TO@ InfixExpression@@Math.abs(u) <= 1 || Math.abs(v) <= 1 @AT@ 21182 @LENGTH@ 16
+---------INS MethodInvocation@@Math.abs(u) @TO@ InfixExpression@@Math.abs(u) == 1 @AT@ 21182 @LENGTH@ 11
+------------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(u) @AT@ 21182 @LENGTH@ 4
+------------INS SimpleName@@MethodName:abs:[u] @TO@ MethodInvocation@@Math.abs(u) @AT@ 21187 @LENGTH@ 6
+---------------INS SimpleName@@u @TO@ SimpleName@@MethodName:abs:[u] @AT@ 21191 @LENGTH@ 1
+---------INS Operator@@== @TO@ InfixExpression@@Math.abs(u) == 1 @AT@ 21193 @LENGTH@ 2
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@Math.abs(u) == 1 @AT@ 21197 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP14 OP36)
+OP2:   (INS, InfixExpression, OP1, OP3 OP8 OP9)
+OP3:      (INS, ParenthesizedExpression, OP2, OP4)
+OP4:         (INS, InfixExpression, OP3, OP5 OP6 OP7)
+OP5:            (INS, SimpleName, OP4, null)
+OP6:            (INS, Operator, OP4, null)
+OP7:            (INS, NumberLiteral, OP4, null)
+OP8:      (INS, Operator, OP2, null)
+OP9:      (INS, ParenthesizedExpression, OP2, OP10)
+OP10:         (INS, InfixExpression, OP9, OP11 OP12 OP13)
+OP11:            (INS, SimpleName, OP10, null)
+OP12:            (INS, Operator, OP10, null)
+OP13:            (INS, NumberLiteral, OP10, null)
+OP14:   (INS, IfStatement, OP1, OP15 OP31)
+OP15:      (INS, InfixExpression, OP14, OP16 OP23 OP24)
+OP16:         (INS, ParenthesizedExpression, OP15, OP17)
+OP17:            (INS, InfixExpression, OP16, OP18 OP19 OP20)
+OP18:               (INS, SimpleName, OP17, null)
+OP19:               (INS, Operator, OP17, null)
+OP20:               (INS, QualifiedName, OP17, OP21 OP22)
+OP21:                  (INS, SimpleName, OP20, null)
+OP22:                  (INS, SimpleName, OP20, null)
+OP23:         (INS, Operator, OP15, null)
+OP24:         (INS, ParenthesizedExpression, OP15, OP25)
+OP25:            (INS, InfixExpression, OP24, OP26 OP27 OP28)
+OP26:               (INS, SimpleName, OP25, null)
+OP27:               (INS, Operator, OP25, null)
+OP28:               (INS, QualifiedName, OP25, OP29 OP30)
+OP29:                  (INS, SimpleName, OP28, null)
+OP30:                  (INS, SimpleName, OP28, null)
+OP31:      (INS, ThrowStatement, OP14, OP32)
+OP32:         (INS, ClassInstanceCreation, OP31, OP33 OP34 OP35)
+OP33:            (INS, New, OP32, null)
+OP34:            (INS, SimpleType, OP32, null)
+OP35:            (INS, StringLiteral, OP32, null)
+OP36:   (INS, ReturnStatement, OP1, OP37)
+OP37:      (MOV, InfixExpression, OP36, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:(u == 0) || (v == 0) @TO@ MethodDeclaration@@private, static, @@int, MethodName:greatestCommonDivisor, @@Argus:int+u+int+v+ @AT@ 20880 @LENGTH@ 241
+---INS InfixExpression@@(u == 0) || (v == 0) @TO@ IfStatement@@InfixExpression:(u == 0) || (v == 0) @AT@ 20884 @LENGTH@ 20
+------INS ParenthesizedExpression@@(u == 0) @TO@ InfixExpression@@(u == 0) || (v == 0) @AT@ 20884 @LENGTH@ 8
+---------INS InfixExpression@@u == 0 @TO@ ParenthesizedExpression@@(u == 0) @AT@ 20885 @LENGTH@ 6
+------------INS SimpleName@@u @TO@ InfixExpression@@u == 0 @AT@ 20885 @LENGTH@ 1
+------------INS Operator@@== @TO@ InfixExpression@@u == 0 @AT@ 20886 @LENGTH@ 2
+------------INS NumberLiteral@@0 @TO@ InfixExpression@@u == 0 @AT@ 20890 @LENGTH@ 1
+------INS Operator@@|| @TO@ InfixExpression@@(u == 0) || (v == 0) @AT@ 20892 @LENGTH@ 2
+------INS ParenthesizedExpression@@(v == 0) @TO@ InfixExpression@@(u == 0) || (v == 0) @AT@ 20896 @LENGTH@ 8
+---------INS InfixExpression@@v == 0 @TO@ ParenthesizedExpression@@(v == 0) @AT@ 20897 @LENGTH@ 6
+------------INS SimpleName@@v @TO@ InfixExpression@@v == 0 @AT@ 20897 @LENGTH@ 1
+------------INS Operator@@== @TO@ InfixExpression@@v == 0 @AT@ 20898 @LENGTH@ 2
+------------INS NumberLiteral@@0 @TO@ InfixExpression@@v == 0 @AT@ 20902 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:(u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE) @TO@ IfStatement@@InfixExpression:(u == 0) || (v == 0) @AT@ 20920 @LENGTH@ 145
+------INS InfixExpression@@(u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE) @TO@ IfStatement@@InfixExpression:(u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE) @AT@ 20924 @LENGTH@ 52
+---------INS ParenthesizedExpression@@(u == Integer.MIN_VALUE) @TO@ InfixExpression@@(u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE) @AT@ 20924 @LENGTH@ 24
+------------INS InfixExpression@@u == Integer.MIN_VALUE @TO@ ParenthesizedExpression@@(u == Integer.MIN_VALUE) @AT@ 20925 @LENGTH@ 22
+---------------INS SimpleName@@u @TO@ InfixExpression@@u == Integer.MIN_VALUE @AT@ 20925 @LENGTH@ 1
+---------------INS Operator@@== @TO@ InfixExpression@@u == Integer.MIN_VALUE @AT@ 20926 @LENGTH@ 2
+---------------INS QualifiedName@@Integer.MIN_VALUE @TO@ InfixExpression@@u == Integer.MIN_VALUE @AT@ 20930 @LENGTH@ 17
+------------------INS SimpleName@@Integer @TO@ QualifiedName@@Integer.MIN_VALUE @AT@ 20930 @LENGTH@ 7
+------------------INS SimpleName@@MIN_VALUE @TO@ QualifiedName@@Integer.MIN_VALUE @AT@ 20938 @LENGTH@ 9
+---------INS Operator@@|| @TO@ InfixExpression@@(u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE) @AT@ 20948 @LENGTH@ 2
+---------INS ParenthesizedExpression@@(v == Integer.MIN_VALUE) @TO@ InfixExpression@@(u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE) @AT@ 20952 @LENGTH@ 24
+------------INS InfixExpression@@v == Integer.MIN_VALUE @TO@ ParenthesizedExpression@@(v == Integer.MIN_VALUE) @AT@ 20953 @LENGTH@ 22
+---------------INS SimpleName@@v @TO@ InfixExpression@@v == Integer.MIN_VALUE @AT@ 20953 @LENGTH@ 1
+---------------INS Operator@@== @TO@ InfixExpression@@v == Integer.MIN_VALUE @AT@ 20954 @LENGTH@ 2
+---------------INS QualifiedName@@Integer.MIN_VALUE @TO@ InfixExpression@@v == Integer.MIN_VALUE @AT@ 20958 @LENGTH@ 17
+------------------INS SimpleName@@Integer @TO@ QualifiedName@@Integer.MIN_VALUE @AT@ 20958 @LENGTH@ 7
+------------------INS SimpleName@@MIN_VALUE @TO@ QualifiedName@@Integer.MIN_VALUE @AT@ 20966 @LENGTH@ 9
+------INS ThrowStatement@@ClassInstanceCreation:new ArithmeticException("overflow: gcd is 2^31") @TO@ IfStatement@@InfixExpression:(u == Integer.MIN_VALUE) || (v == Integer.MIN_VALUE) @AT@ 20996 @LENGTH@ 55
+---------INS ClassInstanceCreation@@ArithmeticException["overflow: gcd is 2^31"] @TO@ ThrowStatement@@ClassInstanceCreation:new ArithmeticException("overflow: gcd is 2^31") @AT@ 21002 @LENGTH@ 48
+------------INS New@@new @TO@ ClassInstanceCreation@@ArithmeticException["overflow: gcd is 2^31"] @AT@ 21002 @LENGTH@ 3
+------------INS SimpleType@@ArithmeticException @TO@ ClassInstanceCreation@@ArithmeticException["overflow: gcd is 2^31"] @AT@ 21006 @LENGTH@ 19
+------------INS StringLiteral@@"overflow: gcd is 2^31" @TO@ ClassInstanceCreation@@ArithmeticException["overflow: gcd is 2^31"] @AT@ 21026 @LENGTH@ 23
+---INS ReturnStatement@@InfixExpression:Math.abs(u) + Math.abs(v) @TO@ IfStatement@@InfixExpression:(u == 0) || (v == 0) @AT@ 21078 @LENGTH@ 33
+------MOV InfixExpression@@Math.abs(u) <= 1 @TO@ ReturnStatement@@InfixExpression:Math.abs(u) + Math.abs(v) @AT@ 20932 @LENGTH@ 16
+, UPD IfStatement@@InfixExpression:Math.abs(u) <= 1 || Math.abs(v) <= 1 @TO@ InfixExpression:Math.abs(u) == 1 || Math.abs(v) == 1 @AT@ 20928 @LENGTH@ 75
+---UPD InfixExpression@@Math.abs(u) <= 1 || Math.abs(v) <= 1 @TO@ Math.abs(u) == 1 || Math.abs(v) == 1 @AT@ 20932 @LENGTH@ 36
+------UPD InfixExpression@@Math.abs(u) <= 1 @TO@ Math.abs(u) + Math.abs(v) @AT@ 20932 @LENGTH@ 16
+---------UPD Operator@@<= @TO@ + @AT@ 20943 @LENGTH@ 2
+---------DEL NumberLiteral@@1 @AT@ 20947 @LENGTH@ 1
+---------INS MethodInvocation@@Math.abs(v) @TO@ InfixExpression@@Math.abs(u) <= 1 @AT@ 21099 @LENGTH@ 11
+------------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(v) @AT@ 21099 @LENGTH@ 4
+------------INS SimpleName@@MethodName:abs:[v] @TO@ MethodInvocation@@Math.abs(v) @AT@ 21104 @LENGTH@ 6
+---------------INS SimpleName@@v @TO@ SimpleName@@MethodName:abs:[v] @AT@ 21108 @LENGTH@ 1
+------UPD InfixExpression@@Math.abs(v) <= 1 @TO@ Math.abs(v) == 1 @AT@ 20952 @LENGTH@ 16
+---------UPD Operator@@<= @TO@ == @AT@ 20963 @LENGTH@ 2
+------INS InfixExpression@@Math.abs(u) == 1 @TO@ InfixExpression@@Math.abs(u) <= 1 || Math.abs(v) <= 1 @AT@ 21182 @LENGTH@ 16
+---------INS MethodInvocation@@Math.abs(u) @TO@ InfixExpression@@Math.abs(u) == 1 @AT@ 21182 @LENGTH@ 11
+------------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(u) @AT@ 21182 @LENGTH@ 4
+------------INS SimpleName@@MethodName:abs:[u] @TO@ MethodInvocation@@Math.abs(u) @AT@ 21187 @LENGTH@ 6
+---------------INS SimpleName@@u @TO@ SimpleName@@MethodName:abs:[u] @AT@ 21191 @LENGTH@ 1
+---------INS Operator@@== @TO@ InfixExpression@@Math.abs(u) == 1 @AT@ 21193 @LENGTH@ 2
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@Math.abs(u) == 1 @AT@ 21197 @LENGTH@ 1
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (UPD, InfixExpression, OP1, OP3 OP10 OP12)
+OP3:      (UPD, InfixExpression, OP2, OP4 OP5 OP6)
+OP4:         (UPD, Operator, OP3, null)
+OP5:         (DEL, NumberLiteral, OP3, null)
+OP6:         (INS, MethodInvocation, OP3, OP7 OP8)
+OP7:            (INS, SimpleName, OP6, null)
+OP8:            (INS, SimpleName, OP6, OP9)
+OP9:               (INS, SimpleName, OP8, null)
+OP10:      (UPD, InfixExpression, OP2, OP11)
+OP11:         (UPD, Operator, OP10, null)
+OP12:      (INS, InfixExpression, OP2, OP13 OP17 OP18)
+OP13:         (INS, MethodInvocation, OP12, OP14 OP15)
+OP14:            (INS, SimpleName, OP13, null)
+OP15:            (INS, SimpleName, OP13, OP16)
+OP16:               (INS, SimpleName, OP15, null)
+OP17:         (INS, Operator, OP12, null)
+OP18:         (INS, NumberLiteral, OP12, null)
+
+
+

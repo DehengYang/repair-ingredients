@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_104/src/com/google/javascript/rhino/jstype/UnionType.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_104/src/com/google/javascript/rhino/jstype/UnionType.java
+--- ../d4j-repo/Closure/Closure_104/src/com/google/javascript/rhino/jstype/UnionType.java	2021-01-06 03:47:13.175065609 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_104/src/com/google/javascript/rhino/jstype/UnionType.java	2021-01-06 03:47:16.163167387 -0800
+@@ -288,7 +288,7 @@
+       builder.addAlternate(that);
+     }
+     JSType result = builder.build();
+-    if (result != null) {
++    if (!result.isNoType()) {
+       return result;
+     } else if (this.isObject() && that.isObject()) {
+       return getNativeType(JSTypeNative.NO_OBJECT_TYPE);

@@ -1,0 +1,369 @@
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final double[] scale; @TO@ final double[] scale=new double[y0.length]; @AT@ 9068 @LENGTH@ 21
+---UPD VariableDeclarationFragment@@scale @TO@ scale=new double[y0.length] @AT@ 9083 @LENGTH@ 5
+------MOV ArrayCreation@@new double[y0.length] @TO@ VariableDeclarationFragment@@scale @AT@ 9158 @LENGTH@ 21
+, DEL ExpressionStatement@@Assignment:scale=new double[y0.length] @AT@ 9150 @LENGTH@ 30
+, INS ForStatement@@[int i=0];i < scale.length; [++i] @TO@ IfStatement@@InfixExpression:vecAbsoluteTolerance == null @AT@ 9174 @LENGTH@ 147
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9179 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9179 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9183 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 9183 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 9187 @LENGTH@ 1
+---INS InfixExpression@@i < scale.length @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9190 @LENGTH@ 16
+------INS SimpleName@@i @TO@ InfixExpression@@i < scale.length @AT@ 9190 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < scale.length @AT@ 9191 @LENGTH@ 1
+------INS QualifiedName@@scale.length @TO@ InfixExpression@@i < scale.length @AT@ 9194 @LENGTH@ 12
+---------INS SimpleName@@scale @TO@ QualifiedName@@scale.length @AT@ 9194 @LENGTH@ 5
+---------INS SimpleName@@length @TO@ QualifiedName@@scale.length @AT@ 9200 @LENGTH@ 6
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9208 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9208 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9210 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:scale[i]=scalAbsoluteTolerance + scalRelativeTolerance * Math.abs(y[i]) @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9231 @LENGTH@ 74
+------MOV Assignment@@scale=new double[y0.length] @TO@ ExpressionStatement@@Assignment:scale[i]=scalAbsoluteTolerance + scalRelativeTolerance * Math.abs(y[i]) @AT@ 9150 @LENGTH@ 29
+, DEL ExpressionStatement@@MethodInvocation:java.util.Arrays.fill(scale,scalAbsoluteTolerance) @AT@ 9195 @LENGTH@ 52
+---DEL MethodInvocation@@java.util.Arrays.fill(scale,scalAbsoluteTolerance) @AT@ 9195 @LENGTH@ 51
+------DEL QualifiedName@@Name:java.util.Arrays @AT@ 9195 @LENGTH@ 16
+------DEL SimpleName@@MethodName:fill:[scale, scalAbsoluteTolerance] @AT@ 9212 @LENGTH@ 34
+---------DEL SimpleName@@scale @AT@ 9217 @LENGTH@ 5
+---------DEL SimpleName@@scalAbsoluteTolerance @AT@ 9224 @LENGTH@ 21
+, DEL ExpressionStatement@@Assignment:scale=vecAbsoluteTolerance @AT@ 9283 @LENGTH@ 29
+, INS ForStatement@@[int i=0];i < scale.length; [++i] @TO@ IfStatement@@InfixExpression:vecAbsoluteTolerance == null @AT@ 9357 @LENGTH@ 151
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9362 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9362 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9366 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 9366 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 9370 @LENGTH@ 1
+---INS InfixExpression@@i < scale.length @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9373 @LENGTH@ 16
+------INS SimpleName@@i @TO@ InfixExpression@@i < scale.length @AT@ 9373 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < scale.length @AT@ 9374 @LENGTH@ 1
+------INS QualifiedName@@scale.length @TO@ InfixExpression@@i < scale.length @AT@ 9377 @LENGTH@ 12
+---------INS SimpleName@@scale @TO@ QualifiedName@@scale.length @AT@ 9377 @LENGTH@ 5
+---------INS SimpleName@@length @TO@ QualifiedName@@scale.length @AT@ 9383 @LENGTH@ 6
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9391 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9391 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9393 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:scale[i]=vecAbsoluteTolerance[i] + vecRelativeTolerance[i] * Math.abs(y[i]) @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9414 @LENGTH@ 78
+------MOV Assignment@@scale=vecAbsoluteTolerance @TO@ ExpressionStatement@@Assignment:scale[i]=vecAbsoluteTolerance[i] + vecRelativeTolerance[i] * Math.abs(y[i]) @AT@ 9283 @LENGTH@ 28
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (MOV, ArrayCreation, OP2, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final double[] scale; @TO@ final double[] scale=new double[y0.length]; @AT@ 9068 @LENGTH@ 21
+---UPD VariableDeclarationFragment@@scale @TO@ scale=new double[y0.length] @AT@ 9083 @LENGTH@ 5
+------MOV ArrayCreation@@new double[y0.length] @TO@ VariableDeclarationFragment@@scale @AT@ 9158 @LENGTH@ 21
+, DEL ExpressionStatement@@Assignment:scale=new double[y0.length] @AT@ 9150 @LENGTH@ 30
+, INS ForStatement@@[int i=0];i < scale.length; [++i] @TO@ IfStatement@@InfixExpression:vecAbsoluteTolerance == null @AT@ 9174 @LENGTH@ 147
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9179 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9179 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9183 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 9183 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 9187 @LENGTH@ 1
+---INS InfixExpression@@i < scale.length @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9190 @LENGTH@ 16
+------INS SimpleName@@i @TO@ InfixExpression@@i < scale.length @AT@ 9190 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < scale.length @AT@ 9191 @LENGTH@ 1
+------INS QualifiedName@@scale.length @TO@ InfixExpression@@i < scale.length @AT@ 9194 @LENGTH@ 12
+---------INS SimpleName@@scale @TO@ QualifiedName@@scale.length @AT@ 9194 @LENGTH@ 5
+---------INS SimpleName@@length @TO@ QualifiedName@@scale.length @AT@ 9200 @LENGTH@ 6
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9208 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9208 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9210 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:scale[i]=scalAbsoluteTolerance + scalRelativeTolerance * Math.abs(y[i]) @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9231 @LENGTH@ 74
+------MOV Assignment@@scale=new double[y0.length] @TO@ ExpressionStatement@@Assignment:scale[i]=scalAbsoluteTolerance + scalRelativeTolerance * Math.abs(y[i]) @AT@ 9150 @LENGTH@ 29
+, DEL ExpressionStatement@@MethodInvocation:java.util.Arrays.fill(scale,scalAbsoluteTolerance) @AT@ 9195 @LENGTH@ 52
+---DEL MethodInvocation@@java.util.Arrays.fill(scale,scalAbsoluteTolerance) @AT@ 9195 @LENGTH@ 51
+------DEL QualifiedName@@Name:java.util.Arrays @AT@ 9195 @LENGTH@ 16
+------DEL SimpleName@@MethodName:fill:[scale, scalAbsoluteTolerance] @AT@ 9212 @LENGTH@ 34
+---------DEL SimpleName@@scale @AT@ 9217 @LENGTH@ 5
+---------DEL SimpleName@@scalAbsoluteTolerance @AT@ 9224 @LENGTH@ 21
+, DEL ExpressionStatement@@Assignment:scale=vecAbsoluteTolerance @AT@ 9283 @LENGTH@ 29
+, INS ForStatement@@[int i=0];i < scale.length; [++i] @TO@ IfStatement@@InfixExpression:vecAbsoluteTolerance == null @AT@ 9357 @LENGTH@ 151
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9362 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9362 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9366 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 9366 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 9370 @LENGTH@ 1
+---INS InfixExpression@@i < scale.length @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9373 @LENGTH@ 16
+------INS SimpleName@@i @TO@ InfixExpression@@i < scale.length @AT@ 9373 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < scale.length @AT@ 9374 @LENGTH@ 1
+------INS QualifiedName@@scale.length @TO@ InfixExpression@@i < scale.length @AT@ 9377 @LENGTH@ 12
+---------INS SimpleName@@scale @TO@ QualifiedName@@scale.length @AT@ 9377 @LENGTH@ 5
+---------INS SimpleName@@length @TO@ QualifiedName@@scale.length @AT@ 9383 @LENGTH@ 6
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9391 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9391 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9393 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:scale[i]=vecAbsoluteTolerance[i] + vecRelativeTolerance[i] * Math.abs(y[i]) @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9414 @LENGTH@ 78
+------MOV Assignment@@scale=vecAbsoluteTolerance @TO@ ExpressionStatement@@Assignment:scale[i]=vecAbsoluteTolerance[i] + vecRelativeTolerance[i] * Math.abs(y[i]) @AT@ 9283 @LENGTH@ 28
+]
+
+CII:
+OP1:(DEL, ExpressionStatement, null, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final double[] scale; @TO@ final double[] scale=new double[y0.length]; @AT@ 9068 @LENGTH@ 21
+---UPD VariableDeclarationFragment@@scale @TO@ scale=new double[y0.length] @AT@ 9083 @LENGTH@ 5
+------MOV ArrayCreation@@new double[y0.length] @TO@ VariableDeclarationFragment@@scale @AT@ 9158 @LENGTH@ 21
+, DEL ExpressionStatement@@Assignment:scale=new double[y0.length] @AT@ 9150 @LENGTH@ 30
+, INS ForStatement@@[int i=0];i < scale.length; [++i] @TO@ IfStatement@@InfixExpression:vecAbsoluteTolerance == null @AT@ 9174 @LENGTH@ 147
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9179 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9179 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9183 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 9183 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 9187 @LENGTH@ 1
+---INS InfixExpression@@i < scale.length @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9190 @LENGTH@ 16
+------INS SimpleName@@i @TO@ InfixExpression@@i < scale.length @AT@ 9190 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < scale.length @AT@ 9191 @LENGTH@ 1
+------INS QualifiedName@@scale.length @TO@ InfixExpression@@i < scale.length @AT@ 9194 @LENGTH@ 12
+---------INS SimpleName@@scale @TO@ QualifiedName@@scale.length @AT@ 9194 @LENGTH@ 5
+---------INS SimpleName@@length @TO@ QualifiedName@@scale.length @AT@ 9200 @LENGTH@ 6
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9208 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9208 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9210 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:scale[i]=scalAbsoluteTolerance + scalRelativeTolerance * Math.abs(y[i]) @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9231 @LENGTH@ 74
+------MOV Assignment@@scale=new double[y0.length] @TO@ ExpressionStatement@@Assignment:scale[i]=scalAbsoluteTolerance + scalRelativeTolerance * Math.abs(y[i]) @AT@ 9150 @LENGTH@ 29
+, DEL ExpressionStatement@@MethodInvocation:java.util.Arrays.fill(scale,scalAbsoluteTolerance) @AT@ 9195 @LENGTH@ 52
+---DEL MethodInvocation@@java.util.Arrays.fill(scale,scalAbsoluteTolerance) @AT@ 9195 @LENGTH@ 51
+------DEL QualifiedName@@Name:java.util.Arrays @AT@ 9195 @LENGTH@ 16
+------DEL SimpleName@@MethodName:fill:[scale, scalAbsoluteTolerance] @AT@ 9212 @LENGTH@ 34
+---------DEL SimpleName@@scale @AT@ 9217 @LENGTH@ 5
+---------DEL SimpleName@@scalAbsoluteTolerance @AT@ 9224 @LENGTH@ 21
+, DEL ExpressionStatement@@Assignment:scale=vecAbsoluteTolerance @AT@ 9283 @LENGTH@ 29
+, INS ForStatement@@[int i=0];i < scale.length; [++i] @TO@ IfStatement@@InfixExpression:vecAbsoluteTolerance == null @AT@ 9357 @LENGTH@ 151
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9362 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9362 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9366 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 9366 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 9370 @LENGTH@ 1
+---INS InfixExpression@@i < scale.length @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9373 @LENGTH@ 16
+------INS SimpleName@@i @TO@ InfixExpression@@i < scale.length @AT@ 9373 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < scale.length @AT@ 9374 @LENGTH@ 1
+------INS QualifiedName@@scale.length @TO@ InfixExpression@@i < scale.length @AT@ 9377 @LENGTH@ 12
+---------INS SimpleName@@scale @TO@ QualifiedName@@scale.length @AT@ 9377 @LENGTH@ 5
+---------INS SimpleName@@length @TO@ QualifiedName@@scale.length @AT@ 9383 @LENGTH@ 6
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9391 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9391 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9393 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:scale[i]=vecAbsoluteTolerance[i] + vecRelativeTolerance[i] * Math.abs(y[i]) @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9414 @LENGTH@ 78
+------MOV Assignment@@scale=vecAbsoluteTolerance @TO@ ExpressionStatement@@Assignment:scale[i]=vecAbsoluteTolerance[i] + vecRelativeTolerance[i] * Math.abs(y[i]) @AT@ 9283 @LENGTH@ 28
+]
+
+CII:
+OP1:(INS, ForStatement, null, OP2 OP7 OP13 OP16)
+OP2:   (INS, VariableDeclarationExpression, OP1, OP3 OP4)
+OP3:      (INS, PrimitiveType, OP2, null)
+OP4:      (INS, VariableDeclarationFragment, OP2, OP5 OP6)
+OP5:         (INS, SimpleName, OP4, null)
+OP6:         (INS, NumberLiteral, OP4, null)
+OP7:   (INS, InfixExpression, OP1, OP8 OP9 OP10)
+OP8:      (INS, SimpleName, OP7, null)
+OP9:      (INS, Operator, OP7, null)
+OP10:      (INS, QualifiedName, OP7, OP11 OP12)
+OP11:         (INS, SimpleName, OP10, null)
+OP12:         (INS, SimpleName, OP10, null)
+OP13:   (INS, PrefixExpression, OP1, OP14 OP15)
+OP14:      (INS, Operator, OP13, null)
+OP15:      (INS, SimpleName, OP13, null)
+OP16:   (INS, ExpressionStatement, OP1, OP17)
+OP17:      (MOV, Assignment, OP16, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final double[] scale; @TO@ final double[] scale=new double[y0.length]; @AT@ 9068 @LENGTH@ 21
+---UPD VariableDeclarationFragment@@scale @TO@ scale=new double[y0.length] @AT@ 9083 @LENGTH@ 5
+------MOV ArrayCreation@@new double[y0.length] @TO@ VariableDeclarationFragment@@scale @AT@ 9158 @LENGTH@ 21
+, DEL ExpressionStatement@@Assignment:scale=new double[y0.length] @AT@ 9150 @LENGTH@ 30
+, INS ForStatement@@[int i=0];i < scale.length; [++i] @TO@ IfStatement@@InfixExpression:vecAbsoluteTolerance == null @AT@ 9174 @LENGTH@ 147
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9179 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9179 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9183 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 9183 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 9187 @LENGTH@ 1
+---INS InfixExpression@@i < scale.length @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9190 @LENGTH@ 16
+------INS SimpleName@@i @TO@ InfixExpression@@i < scale.length @AT@ 9190 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < scale.length @AT@ 9191 @LENGTH@ 1
+------INS QualifiedName@@scale.length @TO@ InfixExpression@@i < scale.length @AT@ 9194 @LENGTH@ 12
+---------INS SimpleName@@scale @TO@ QualifiedName@@scale.length @AT@ 9194 @LENGTH@ 5
+---------INS SimpleName@@length @TO@ QualifiedName@@scale.length @AT@ 9200 @LENGTH@ 6
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9208 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9208 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9210 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:scale[i]=scalAbsoluteTolerance + scalRelativeTolerance * Math.abs(y[i]) @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9231 @LENGTH@ 74
+------MOV Assignment@@scale=new double[y0.length] @TO@ ExpressionStatement@@Assignment:scale[i]=scalAbsoluteTolerance + scalRelativeTolerance * Math.abs(y[i]) @AT@ 9150 @LENGTH@ 29
+, DEL ExpressionStatement@@MethodInvocation:java.util.Arrays.fill(scale,scalAbsoluteTolerance) @AT@ 9195 @LENGTH@ 52
+---DEL MethodInvocation@@java.util.Arrays.fill(scale,scalAbsoluteTolerance) @AT@ 9195 @LENGTH@ 51
+------DEL QualifiedName@@Name:java.util.Arrays @AT@ 9195 @LENGTH@ 16
+------DEL SimpleName@@MethodName:fill:[scale, scalAbsoluteTolerance] @AT@ 9212 @LENGTH@ 34
+---------DEL SimpleName@@scale @AT@ 9217 @LENGTH@ 5
+---------DEL SimpleName@@scalAbsoluteTolerance @AT@ 9224 @LENGTH@ 21
+, DEL ExpressionStatement@@Assignment:scale=vecAbsoluteTolerance @AT@ 9283 @LENGTH@ 29
+, INS ForStatement@@[int i=0];i < scale.length; [++i] @TO@ IfStatement@@InfixExpression:vecAbsoluteTolerance == null @AT@ 9357 @LENGTH@ 151
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9362 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9362 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9366 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 9366 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 9370 @LENGTH@ 1
+---INS InfixExpression@@i < scale.length @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9373 @LENGTH@ 16
+------INS SimpleName@@i @TO@ InfixExpression@@i < scale.length @AT@ 9373 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < scale.length @AT@ 9374 @LENGTH@ 1
+------INS QualifiedName@@scale.length @TO@ InfixExpression@@i < scale.length @AT@ 9377 @LENGTH@ 12
+---------INS SimpleName@@scale @TO@ QualifiedName@@scale.length @AT@ 9377 @LENGTH@ 5
+---------INS SimpleName@@length @TO@ QualifiedName@@scale.length @AT@ 9383 @LENGTH@ 6
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9391 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9391 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9393 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:scale[i]=vecAbsoluteTolerance[i] + vecRelativeTolerance[i] * Math.abs(y[i]) @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9414 @LENGTH@ 78
+------MOV Assignment@@scale=vecAbsoluteTolerance @TO@ ExpressionStatement@@Assignment:scale[i]=vecAbsoluteTolerance[i] + vecRelativeTolerance[i] * Math.abs(y[i]) @AT@ 9283 @LENGTH@ 28
+]
+
+CII:
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, MethodInvocation, OP1, OP3 OP4)
+OP3:      (DEL, QualifiedName, OP2, null)
+OP4:      (DEL, SimpleName, OP2, OP5 OP6)
+OP5:         (DEL, SimpleName, OP4, null)
+OP6:         (DEL, SimpleName, OP4, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final double[] scale; @TO@ final double[] scale=new double[y0.length]; @AT@ 9068 @LENGTH@ 21
+---UPD VariableDeclarationFragment@@scale @TO@ scale=new double[y0.length] @AT@ 9083 @LENGTH@ 5
+------MOV ArrayCreation@@new double[y0.length] @TO@ VariableDeclarationFragment@@scale @AT@ 9158 @LENGTH@ 21
+, DEL ExpressionStatement@@Assignment:scale=new double[y0.length] @AT@ 9150 @LENGTH@ 30
+, INS ForStatement@@[int i=0];i < scale.length; [++i] @TO@ IfStatement@@InfixExpression:vecAbsoluteTolerance == null @AT@ 9174 @LENGTH@ 147
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9179 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9179 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9183 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 9183 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 9187 @LENGTH@ 1
+---INS InfixExpression@@i < scale.length @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9190 @LENGTH@ 16
+------INS SimpleName@@i @TO@ InfixExpression@@i < scale.length @AT@ 9190 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < scale.length @AT@ 9191 @LENGTH@ 1
+------INS QualifiedName@@scale.length @TO@ InfixExpression@@i < scale.length @AT@ 9194 @LENGTH@ 12
+---------INS SimpleName@@scale @TO@ QualifiedName@@scale.length @AT@ 9194 @LENGTH@ 5
+---------INS SimpleName@@length @TO@ QualifiedName@@scale.length @AT@ 9200 @LENGTH@ 6
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9208 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9208 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9210 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:scale[i]=scalAbsoluteTolerance + scalRelativeTolerance * Math.abs(y[i]) @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9231 @LENGTH@ 74
+------MOV Assignment@@scale=new double[y0.length] @TO@ ExpressionStatement@@Assignment:scale[i]=scalAbsoluteTolerance + scalRelativeTolerance * Math.abs(y[i]) @AT@ 9150 @LENGTH@ 29
+, DEL ExpressionStatement@@MethodInvocation:java.util.Arrays.fill(scale,scalAbsoluteTolerance) @AT@ 9195 @LENGTH@ 52
+---DEL MethodInvocation@@java.util.Arrays.fill(scale,scalAbsoluteTolerance) @AT@ 9195 @LENGTH@ 51
+------DEL QualifiedName@@Name:java.util.Arrays @AT@ 9195 @LENGTH@ 16
+------DEL SimpleName@@MethodName:fill:[scale, scalAbsoluteTolerance] @AT@ 9212 @LENGTH@ 34
+---------DEL SimpleName@@scale @AT@ 9217 @LENGTH@ 5
+---------DEL SimpleName@@scalAbsoluteTolerance @AT@ 9224 @LENGTH@ 21
+, DEL ExpressionStatement@@Assignment:scale=vecAbsoluteTolerance @AT@ 9283 @LENGTH@ 29
+, INS ForStatement@@[int i=0];i < scale.length; [++i] @TO@ IfStatement@@InfixExpression:vecAbsoluteTolerance == null @AT@ 9357 @LENGTH@ 151
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9362 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9362 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9366 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 9366 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 9370 @LENGTH@ 1
+---INS InfixExpression@@i < scale.length @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9373 @LENGTH@ 16
+------INS SimpleName@@i @TO@ InfixExpression@@i < scale.length @AT@ 9373 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < scale.length @AT@ 9374 @LENGTH@ 1
+------INS QualifiedName@@scale.length @TO@ InfixExpression@@i < scale.length @AT@ 9377 @LENGTH@ 12
+---------INS SimpleName@@scale @TO@ QualifiedName@@scale.length @AT@ 9377 @LENGTH@ 5
+---------INS SimpleName@@length @TO@ QualifiedName@@scale.length @AT@ 9383 @LENGTH@ 6
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9391 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9391 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9393 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:scale[i]=vecAbsoluteTolerance[i] + vecRelativeTolerance[i] * Math.abs(y[i]) @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9414 @LENGTH@ 78
+------MOV Assignment@@scale=vecAbsoluteTolerance @TO@ ExpressionStatement@@Assignment:scale[i]=vecAbsoluteTolerance[i] + vecRelativeTolerance[i] * Math.abs(y[i]) @AT@ 9283 @LENGTH@ 28
+]
+
+CII:
+OP1:(DEL, ExpressionStatement, null, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final double[] scale; @TO@ final double[] scale=new double[y0.length]; @AT@ 9068 @LENGTH@ 21
+---UPD VariableDeclarationFragment@@scale @TO@ scale=new double[y0.length] @AT@ 9083 @LENGTH@ 5
+------MOV ArrayCreation@@new double[y0.length] @TO@ VariableDeclarationFragment@@scale @AT@ 9158 @LENGTH@ 21
+, DEL ExpressionStatement@@Assignment:scale=new double[y0.length] @AT@ 9150 @LENGTH@ 30
+, INS ForStatement@@[int i=0];i < scale.length; [++i] @TO@ IfStatement@@InfixExpression:vecAbsoluteTolerance == null @AT@ 9174 @LENGTH@ 147
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9179 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9179 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9183 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 9183 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 9187 @LENGTH@ 1
+---INS InfixExpression@@i < scale.length @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9190 @LENGTH@ 16
+------INS SimpleName@@i @TO@ InfixExpression@@i < scale.length @AT@ 9190 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < scale.length @AT@ 9191 @LENGTH@ 1
+------INS QualifiedName@@scale.length @TO@ InfixExpression@@i < scale.length @AT@ 9194 @LENGTH@ 12
+---------INS SimpleName@@scale @TO@ QualifiedName@@scale.length @AT@ 9194 @LENGTH@ 5
+---------INS SimpleName@@length @TO@ QualifiedName@@scale.length @AT@ 9200 @LENGTH@ 6
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9208 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9208 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9210 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:scale[i]=scalAbsoluteTolerance + scalRelativeTolerance * Math.abs(y[i]) @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9231 @LENGTH@ 74
+------MOV Assignment@@scale=new double[y0.length] @TO@ ExpressionStatement@@Assignment:scale[i]=scalAbsoluteTolerance + scalRelativeTolerance * Math.abs(y[i]) @AT@ 9150 @LENGTH@ 29
+, DEL ExpressionStatement@@MethodInvocation:java.util.Arrays.fill(scale,scalAbsoluteTolerance) @AT@ 9195 @LENGTH@ 52
+---DEL MethodInvocation@@java.util.Arrays.fill(scale,scalAbsoluteTolerance) @AT@ 9195 @LENGTH@ 51
+------DEL QualifiedName@@Name:java.util.Arrays @AT@ 9195 @LENGTH@ 16
+------DEL SimpleName@@MethodName:fill:[scale, scalAbsoluteTolerance] @AT@ 9212 @LENGTH@ 34
+---------DEL SimpleName@@scale @AT@ 9217 @LENGTH@ 5
+---------DEL SimpleName@@scalAbsoluteTolerance @AT@ 9224 @LENGTH@ 21
+, DEL ExpressionStatement@@Assignment:scale=vecAbsoluteTolerance @AT@ 9283 @LENGTH@ 29
+, INS ForStatement@@[int i=0];i < scale.length; [++i] @TO@ IfStatement@@InfixExpression:vecAbsoluteTolerance == null @AT@ 9357 @LENGTH@ 151
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9362 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9362 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 9366 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 9366 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 9370 @LENGTH@ 1
+---INS InfixExpression@@i < scale.length @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9373 @LENGTH@ 16
+------INS SimpleName@@i @TO@ InfixExpression@@i < scale.length @AT@ 9373 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < scale.length @AT@ 9374 @LENGTH@ 1
+------INS QualifiedName@@scale.length @TO@ InfixExpression@@i < scale.length @AT@ 9377 @LENGTH@ 12
+---------INS SimpleName@@scale @TO@ QualifiedName@@scale.length @AT@ 9377 @LENGTH@ 5
+---------INS SimpleName@@length @TO@ QualifiedName@@scale.length @AT@ 9383 @LENGTH@ 6
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9391 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9391 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9393 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:scale[i]=vecAbsoluteTolerance[i] + vecRelativeTolerance[i] * Math.abs(y[i]) @TO@ ForStatement@@[int i=0];i < scale.length; [++i] @AT@ 9414 @LENGTH@ 78
+------MOV Assignment@@scale=vecAbsoluteTolerance @TO@ ExpressionStatement@@Assignment:scale[i]=vecAbsoluteTolerance[i] + vecRelativeTolerance[i] * Math.abs(y[i]) @AT@ 9283 @LENGTH@ 28
+]
+
+CII:
+OP1:(INS, ForStatement, null, OP2 OP7 OP13 OP16)
+OP2:   (INS, VariableDeclarationExpression, OP1, OP3 OP4)
+OP3:      (INS, PrimitiveType, OP2, null)
+OP4:      (INS, VariableDeclarationFragment, OP2, OP5 OP6)
+OP5:         (INS, SimpleName, OP4, null)
+OP6:         (INS, NumberLiteral, OP4, null)
+OP7:   (INS, InfixExpression, OP1, OP8 OP9 OP10)
+OP8:      (INS, SimpleName, OP7, null)
+OP9:      (INS, Operator, OP7, null)
+OP10:      (INS, QualifiedName, OP7, OP11 OP12)
+OP11:         (INS, SimpleName, OP10, null)
+OP12:         (INS, SimpleName, OP10, null)
+OP13:   (INS, PrefixExpression, OP1, OP14 OP15)
+OP14:      (INS, Operator, OP13, null)
+OP15:      (INS, SimpleName, OP13, null)
+OP16:   (INS, ExpressionStatement, OP1, OP17)
+OP17:      (MOV, Assignment, OP16, null)
+
+
+

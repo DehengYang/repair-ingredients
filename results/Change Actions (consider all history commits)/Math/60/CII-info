@@ -1,0 +1,155 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:FastMath.abs(dev) > 40 * standardDeviation @TO@ MethodDeclaration@@public, @@double, MethodName:cumulativeProbability, @@Argus:double+x+MathException,  @AT@ 4427 @LENGTH@ 102
+---INS ReturnStatement@@ConditionalExpression:dev < 0 ? 0.0d : 1.0d @TO@ IfStatement@@InfixExpression:FastMath.abs(dev) > 40 * standardDeviation @AT@ 4490 @LENGTH@ 29
+------INS ConditionalExpression@@dev < 0 ? 0.0d : 1.0d @TO@ ReturnStatement@@ConditionalExpression:dev < 0 ? 0.0d : 1.0d @AT@ 4497 @LENGTH@ 21
+---------INS InfixExpression@@dev < 0 @TO@ ConditionalExpression@@dev < 0 ? 0.0d : 1.0d @AT@ 4497 @LENGTH@ 7
+------------MOV SimpleName@@mean @TO@ InfixExpression@@dev < 0 @AT@ 4727 @LENGTH@ 4
+------------MOV Operator@@+ @TO@ InfixExpression@@dev < 0 @AT@ 4731 @LENGTH@ 1
+------------MOV NumberLiteral@@20 @TO@ InfixExpression@@dev < 0 @AT@ 4734 @LENGTH@ 2
+---------INS NumberLiteral@@0.0d @TO@ ConditionalExpression@@dev < 0 ? 0.0d : 1.0d @AT@ 4507 @LENGTH@ 4
+---------INS NumberLiteral@@1.0d @TO@ ConditionalExpression@@dev < 0 ? 0.0d : 1.0d @AT@ 4514 @LENGTH@ 4
+---MOV InfixExpression@@x < (mean - 20 * standardDeviation) @TO@ IfStatement@@InfixExpression:FastMath.abs(dev) > 40 * standardDeviation @AT@ 4611 @LENGTH@ 35
+, DEL TryStatement@@try:[] @AT@ 4427 @LENGTH@ 430
+---DEL CatchClause@@MaxIterationsExceededException ex @AT@ 4551 @LENGTH@ 306
+------DEL SingleVariableDeclaration@@MaxIterationsExceededException ex @AT@ 4558 @LENGTH@ 33
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 4558 @LENGTH@ 30
+---------DEL SimpleName@@ex @AT@ 4589 @LENGTH@ 2
+------DEL IfStatement@@InfixExpression:x < (mean - 20 * standardDeviation) @AT@ 4607 @LENGTH@ 240
+---------DEL ReturnStatement@@NumberLiteral:0 @AT@ 4689 @LENGTH@ 9
+------------DEL NumberLiteral@@0 @AT@ 4696 @LENGTH@ 1
+---------DEL IfStatement@@InfixExpression:x > (mean + 20 * standardDeviation) @AT@ 4718 @LENGTH@ 129
+------------DEL InfixExpression@@x > (mean + 20 * standardDeviation) @AT@ 4722 @LENGTH@ 35
+---------------DEL SimpleName@@x @AT@ 4722 @LENGTH@ 1
+---------------DEL Operator@@> @AT@ 4723 @LENGTH@ 1
+---------------DEL ParenthesizedExpression@@(mean + 20 * standardDeviation) @AT@ 4726 @LENGTH@ 31
+------------------DEL InfixExpression@@mean + 20 * standardDeviation @AT@ 4727 @LENGTH@ 29
+---------------------DEL InfixExpression@@20 * standardDeviation @AT@ 4734 @LENGTH@ 22
+------------------------DEL Operator@@* @AT@ 4736 @LENGTH@ 1
+------------------------DEL SimpleName@@standardDeviation @AT@ 4739 @LENGTH@ 17
+------------DEL ReturnStatement@@NumberLiteral:1 @AT@ 4777 @LENGTH@ 9
+---------------DEL NumberLiteral@@1 @AT@ 4784 @LENGTH@ 1
+------------DEL ThrowStatement@@SimpleName:ex @AT@ 4824 @LENGTH@ 9
+---------------DEL SimpleName@@ex @AT@ 4830 @LENGTH@ 2
+, MOV ReturnStatement@@InfixExpression:0.5 * (1.0 + Erf.erf((dev) / (standardDeviation * FastMath.sqrt(2.0)))) @TO@ MethodDeclaration@@public, @@double, MethodName:cumulativeProbability, @@Argus:double+x+MathException,  @AT@ 4441 @LENGTH@ 99
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP10)
+OP2:   (INS, ReturnStatement, OP1, OP3)
+OP3:      (INS, ConditionalExpression, OP2, OP4 OP8 OP9)
+OP4:         (INS, InfixExpression, OP3, OP5 OP6 OP7)
+OP5:            (MOV, SimpleName, OP4, null)
+OP6:            (MOV, Operator, OP4, null)
+OP7:            (MOV, NumberLiteral, OP4, null)
+OP8:         (INS, NumberLiteral, OP3, null)
+OP9:         (INS, NumberLiteral, OP3, null)
+OP10:   (MOV, InfixExpression, OP1, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:FastMath.abs(dev) > 40 * standardDeviation @TO@ MethodDeclaration@@public, @@double, MethodName:cumulativeProbability, @@Argus:double+x+MathException,  @AT@ 4427 @LENGTH@ 102
+---INS ReturnStatement@@ConditionalExpression:dev < 0 ? 0.0d : 1.0d @TO@ IfStatement@@InfixExpression:FastMath.abs(dev) > 40 * standardDeviation @AT@ 4490 @LENGTH@ 29
+------INS ConditionalExpression@@dev < 0 ? 0.0d : 1.0d @TO@ ReturnStatement@@ConditionalExpression:dev < 0 ? 0.0d : 1.0d @AT@ 4497 @LENGTH@ 21
+---------INS InfixExpression@@dev < 0 @TO@ ConditionalExpression@@dev < 0 ? 0.0d : 1.0d @AT@ 4497 @LENGTH@ 7
+------------MOV SimpleName@@mean @TO@ InfixExpression@@dev < 0 @AT@ 4727 @LENGTH@ 4
+------------MOV Operator@@+ @TO@ InfixExpression@@dev < 0 @AT@ 4731 @LENGTH@ 1
+------------MOV NumberLiteral@@20 @TO@ InfixExpression@@dev < 0 @AT@ 4734 @LENGTH@ 2
+---------INS NumberLiteral@@0.0d @TO@ ConditionalExpression@@dev < 0 ? 0.0d : 1.0d @AT@ 4507 @LENGTH@ 4
+---------INS NumberLiteral@@1.0d @TO@ ConditionalExpression@@dev < 0 ? 0.0d : 1.0d @AT@ 4514 @LENGTH@ 4
+---MOV InfixExpression@@x < (mean - 20 * standardDeviation) @TO@ IfStatement@@InfixExpression:FastMath.abs(dev) > 40 * standardDeviation @AT@ 4611 @LENGTH@ 35
+, DEL TryStatement@@try:[] @AT@ 4427 @LENGTH@ 430
+---DEL CatchClause@@MaxIterationsExceededException ex @AT@ 4551 @LENGTH@ 306
+------DEL SingleVariableDeclaration@@MaxIterationsExceededException ex @AT@ 4558 @LENGTH@ 33
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 4558 @LENGTH@ 30
+---------DEL SimpleName@@ex @AT@ 4589 @LENGTH@ 2
+------DEL IfStatement@@InfixExpression:x < (mean - 20 * standardDeviation) @AT@ 4607 @LENGTH@ 240
+---------DEL ReturnStatement@@NumberLiteral:0 @AT@ 4689 @LENGTH@ 9
+------------DEL NumberLiteral@@0 @AT@ 4696 @LENGTH@ 1
+---------DEL IfStatement@@InfixExpression:x > (mean + 20 * standardDeviation) @AT@ 4718 @LENGTH@ 129
+------------DEL InfixExpression@@x > (mean + 20 * standardDeviation) @AT@ 4722 @LENGTH@ 35
+---------------DEL SimpleName@@x @AT@ 4722 @LENGTH@ 1
+---------------DEL Operator@@> @AT@ 4723 @LENGTH@ 1
+---------------DEL ParenthesizedExpression@@(mean + 20 * standardDeviation) @AT@ 4726 @LENGTH@ 31
+------------------DEL InfixExpression@@mean + 20 * standardDeviation @AT@ 4727 @LENGTH@ 29
+---------------------DEL InfixExpression@@20 * standardDeviation @AT@ 4734 @LENGTH@ 22
+------------------------DEL Operator@@* @AT@ 4736 @LENGTH@ 1
+------------------------DEL SimpleName@@standardDeviation @AT@ 4739 @LENGTH@ 17
+------------DEL ReturnStatement@@NumberLiteral:1 @AT@ 4777 @LENGTH@ 9
+---------------DEL NumberLiteral@@1 @AT@ 4784 @LENGTH@ 1
+------------DEL ThrowStatement@@SimpleName:ex @AT@ 4824 @LENGTH@ 9
+---------------DEL SimpleName@@ex @AT@ 4830 @LENGTH@ 2
+, MOV ReturnStatement@@InfixExpression:0.5 * (1.0 + Erf.erf((dev) / (standardDeviation * FastMath.sqrt(2.0)))) @TO@ MethodDeclaration@@public, @@double, MethodName:cumulativeProbability, @@Argus:double+x+MathException,  @AT@ 4441 @LENGTH@ 99
+]
+
+CII:
+OP1:(DEL, TryStatement, null, OP2)
+OP2:   (DEL, CatchClause, OP1, OP3 OP6)
+OP3:      (DEL, SingleVariableDeclaration, OP2, OP4 OP5)
+OP4:         (DEL, SimpleType, OP3, null)
+OP5:         (DEL, SimpleName, OP3, null)
+OP6:      (DEL, IfStatement, OP2, OP7 OP9)
+OP7:         (DEL, ReturnStatement, OP6, OP8)
+OP8:            (DEL, NumberLiteral, OP7, null)
+OP9:         (DEL, IfStatement, OP6, OP10 OP18 OP20)
+OP10:            (DEL, InfixExpression, OP9, OP11 OP12 OP13)
+OP11:               (DEL, SimpleName, OP10, null)
+OP12:               (DEL, Operator, OP10, null)
+OP13:               (DEL, ParenthesizedExpression, OP10, OP14)
+OP14:                  (DEL, InfixExpression, OP13, OP15)
+OP15:                     (DEL, InfixExpression, OP14, OP16 OP17)
+OP16:                        (DEL, Operator, OP15, null)
+OP17:                        (DEL, SimpleName, OP15, null)
+OP18:            (DEL, ReturnStatement, OP9, OP19)
+OP19:               (DEL, NumberLiteral, OP18, null)
+OP20:            (DEL, ThrowStatement, OP9, OP21)
+OP21:               (DEL, SimpleName, OP20, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:FastMath.abs(dev) > 40 * standardDeviation @TO@ MethodDeclaration@@public, @@double, MethodName:cumulativeProbability, @@Argus:double+x+MathException,  @AT@ 4427 @LENGTH@ 102
+---INS ReturnStatement@@ConditionalExpression:dev < 0 ? 0.0d : 1.0d @TO@ IfStatement@@InfixExpression:FastMath.abs(dev) > 40 * standardDeviation @AT@ 4490 @LENGTH@ 29
+------INS ConditionalExpression@@dev < 0 ? 0.0d : 1.0d @TO@ ReturnStatement@@ConditionalExpression:dev < 0 ? 0.0d : 1.0d @AT@ 4497 @LENGTH@ 21
+---------INS InfixExpression@@dev < 0 @TO@ ConditionalExpression@@dev < 0 ? 0.0d : 1.0d @AT@ 4497 @LENGTH@ 7
+------------MOV SimpleName@@mean @TO@ InfixExpression@@dev < 0 @AT@ 4727 @LENGTH@ 4
+------------MOV Operator@@+ @TO@ InfixExpression@@dev < 0 @AT@ 4731 @LENGTH@ 1
+------------MOV NumberLiteral@@20 @TO@ InfixExpression@@dev < 0 @AT@ 4734 @LENGTH@ 2
+---------INS NumberLiteral@@0.0d @TO@ ConditionalExpression@@dev < 0 ? 0.0d : 1.0d @AT@ 4507 @LENGTH@ 4
+---------INS NumberLiteral@@1.0d @TO@ ConditionalExpression@@dev < 0 ? 0.0d : 1.0d @AT@ 4514 @LENGTH@ 4
+---MOV InfixExpression@@x < (mean - 20 * standardDeviation) @TO@ IfStatement@@InfixExpression:FastMath.abs(dev) > 40 * standardDeviation @AT@ 4611 @LENGTH@ 35
+, DEL TryStatement@@try:[] @AT@ 4427 @LENGTH@ 430
+---DEL CatchClause@@MaxIterationsExceededException ex @AT@ 4551 @LENGTH@ 306
+------DEL SingleVariableDeclaration@@MaxIterationsExceededException ex @AT@ 4558 @LENGTH@ 33
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 4558 @LENGTH@ 30
+---------DEL SimpleName@@ex @AT@ 4589 @LENGTH@ 2
+------DEL IfStatement@@InfixExpression:x < (mean - 20 * standardDeviation) @AT@ 4607 @LENGTH@ 240
+---------DEL ReturnStatement@@NumberLiteral:0 @AT@ 4689 @LENGTH@ 9
+------------DEL NumberLiteral@@0 @AT@ 4696 @LENGTH@ 1
+---------DEL IfStatement@@InfixExpression:x > (mean + 20 * standardDeviation) @AT@ 4718 @LENGTH@ 129
+------------DEL InfixExpression@@x > (mean + 20 * standardDeviation) @AT@ 4722 @LENGTH@ 35
+---------------DEL SimpleName@@x @AT@ 4722 @LENGTH@ 1
+---------------DEL Operator@@> @AT@ 4723 @LENGTH@ 1
+---------------DEL ParenthesizedExpression@@(mean + 20 * standardDeviation) @AT@ 4726 @LENGTH@ 31
+------------------DEL InfixExpression@@mean + 20 * standardDeviation @AT@ 4727 @LENGTH@ 29
+---------------------DEL InfixExpression@@20 * standardDeviation @AT@ 4734 @LENGTH@ 22
+------------------------DEL Operator@@* @AT@ 4736 @LENGTH@ 1
+------------------------DEL SimpleName@@standardDeviation @AT@ 4739 @LENGTH@ 17
+------------DEL ReturnStatement@@NumberLiteral:1 @AT@ 4777 @LENGTH@ 9
+---------------DEL NumberLiteral@@1 @AT@ 4784 @LENGTH@ 1
+------------DEL ThrowStatement@@SimpleName:ex @AT@ 4824 @LENGTH@ 9
+---------------DEL SimpleName@@ex @AT@ 4830 @LENGTH@ 2
+, MOV ReturnStatement@@InfixExpression:0.5 * (1.0 + Erf.erf((dev) / (standardDeviation * FastMath.sqrt(2.0)))) @TO@ MethodDeclaration@@public, @@double, MethodName:cumulativeProbability, @@Argus:double+x+MathException,  @AT@ 4441 @LENGTH@ 99
+]
+
+CII:
+OP1:(MOV, ReturnStatement, null, null)
+
+
+

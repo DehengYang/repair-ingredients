@@ -1,0 +1,1230 @@
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1); @TO@ final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1); @AT@ 5999 @LENGTH@ 100
+---UPD VariableDeclarationFragment@@e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ e=eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1) @AT@ 6016 @LENGTH@ 82
+------UPD MethodInvocation@@eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1) @AT@ 6040 @LENGTH@ 58
+---------UPD SimpleName@@MethodName:getSubMatrix:[0, p - 1, 0, p - 1] @TO@ MethodName:getSubMatrix:[0, n - 1, 0, p - 1] @AT@ 6066 @LENGTH@ 32
+------------UPD InfixExpression@@p - 1 @TO@ n - 1 @AT@ 6082 @LENGTH@ 5
+---------------UPD SimpleName@@p @TO@ n @AT@ 6082 @LENGTH@ 1
+, UPD ForStatement@@[int i=0];i < p - 1; [++i] @TO@ [int i=0];i < p; [++i] @AT@ 6270 @LENGTH@ 561
+---INS InfixExpression@@i < p @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6286 @LENGTH@ 5
+------INS SimpleName@@i @TO@ InfixExpression@@i < p @AT@ 6286 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < p @AT@ 6287 @LENGTH@ 1
+------INS SimpleName@@p @TO@ InfixExpression@@i < p @AT@ 6290 @LENGTH@ 1
+---DEL InfixExpression@@i < p - 1 @AT@ 6286 @LENGTH@ 9
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6293 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 6293 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 6295 @LENGTH@ 1
+---UPD PrefixExpression@@++i @TO@ ++j @AT@ 6297 @LENGTH@ 3
+------UPD SimpleName@@i @TO@ j @AT@ 6299 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:i < n - 1 @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6555 @LENGTH@ 491
+------INS InfixExpression@@i < n - 1 @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6559 @LENGTH@ 9
+---------MOV SimpleName@@i @TO@ InfixExpression@@i < n - 1 @AT@ 6286 @LENGTH@ 1
+---------MOV Operator@@< @TO@ InfixExpression@@i < n - 1 @AT@ 6287 @LENGTH@ 1
+---------MOV InfixExpression@@p - 1 @TO@ InfixExpression@@i < n - 1 @AT@ 6290 @LENGTH@ 5
+------MOV ExpressionStatement@@Assignment:ei1=eData[i + 1] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6563 @LENGTH@ 19
+------MOV VariableDeclarationStatement@@final double si=secondaryBidiagonal[i]; @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6607 @LENGTH@ 41
+------MOV ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6673 @LENGTH@ 140
+------INS ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6900 @LENGTH@ 124
+---------MOV PrefixExpression@@++i @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6297 @LENGTH@ 3
+---------MOV VariableDeclarationExpression@@int j=0 @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6861 @LENGTH@ 9
+---------INS InfixExpression@@j < p @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6916 @LENGTH@ 5
+------------INS SimpleName@@j @TO@ InfixExpression@@j < p @AT@ 6916 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@j < p @AT@ 6917 @LENGTH@ 1
+------------INS SimpleName@@p @TO@ InfixExpression@@j < p @AT@ 6920 @LENGTH@ 1
+---------INS ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6958 @LENGTH@ 40
+------------INS Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @TO@ ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6958 @LENGTH@ 39
+---------------INS ArrayAccess@@wi[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6958 @LENGTH@ 5
+------------------INS SimpleName@@wi @TO@ ArrayAccess@@wi[j] @AT@ 6958 @LENGTH@ 2
+------------------INS SimpleName@@j @TO@ ArrayAccess@@wi[j] @AT@ 6961 @LENGTH@ 1
+---------------INS Operator@@= @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6963 @LENGTH@ 1
+---------------INS InfixExpression@@mi * ei0[j] / singularValues[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6966 @LENGTH@ 31
+------------------INS InfixExpression@@mi * ei0[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6966 @LENGTH@ 11
+---------------------INS SimpleName@@mi @TO@ InfixExpression@@mi * ei0[j] @AT@ 6966 @LENGTH@ 2
+---------------------INS Operator@@* @TO@ InfixExpression@@mi * ei0[j] @AT@ 6968 @LENGTH@ 1
+---------------------INS ArrayAccess@@ei0[j] @TO@ InfixExpression@@mi * ei0[j] @AT@ 6971 @LENGTH@ 6
+------------------------INS SimpleName@@ei0 @TO@ ArrayAccess@@ei0[j] @AT@ 6971 @LENGTH@ 3
+------------------------INS SimpleName@@j @TO@ ArrayAccess@@ei0[j] @AT@ 6975 @LENGTH@ 1
+------------------INS Operator@@/ @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6977 @LENGTH@ 1
+------------------INS ArrayAccess@@singularValues[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6980 @LENGTH@ 17
+---------------------INS SimpleName@@singularValues @TO@ ArrayAccess@@singularValues[j] @AT@ 6980 @LENGTH@ 14
+---------------------INS SimpleName@@j @TO@ ArrayAccess@@singularValues[j] @AT@ 6995 @LENGTH@ 1
+, DEL ForStatement@@[int j=0];j < p; [++j] @AT@ 6856 @LENGTH@ 153
+---DEL InfixExpression@@j < p @AT@ 6872 @LENGTH@ 5
+------DEL SimpleName@@j @AT@ 6872 @LENGTH@ 1
+------DEL Operator@@< @AT@ 6873 @LENGTH@ 1
+------DEL SimpleName@@p @AT@ 6876 @LENGTH@ 1
+---DEL PrefixExpression@@++j @AT@ 6879 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 6879 @LENGTH@ 2
+------DEL SimpleName@@j @AT@ 6881 @LENGTH@ 1
+---DEL ExpressionStatement@@Assignment:wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6914 @LENGTH@ 69
+------DEL Assignment@@wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6914 @LENGTH@ 68
+---------DEL ArrayAccess@@wData[p - 1][j] @AT@ 6914 @LENGTH@ 15
+------------DEL ArrayAccess@@wData[p - 1] @AT@ 6914 @LENGTH@ 12
+---------------DEL SimpleName@@wData @AT@ 6914 @LENGTH@ 5
+---------------DEL InfixExpression@@p - 1 @AT@ 6920 @LENGTH@ 5
+------------------DEL SimpleName@@p @AT@ 6920 @LENGTH@ 1
+------------------DEL Operator@@- @AT@ 6921 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 6924 @LENGTH@ 1
+------------DEL SimpleName@@j @AT@ 6927 @LENGTH@ 1
+---------DEL Operator@@= @AT@ 6929 @LENGTH@ 1
+---------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6932 @LENGTH@ 50
+------------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] @AT@ 6932 @LENGTH@ 30
+---------------DEL ArrayAccess@@ei1[j] @AT@ 6932 @LENGTH@ 6
+------------------DEL SimpleName@@ei1 @AT@ 6932 @LENGTH@ 3
+------------------DEL SimpleName@@j @AT@ 6936 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 6938 @LENGTH@ 1
+---------------DEL ArrayAccess@@mainBidiagonal[p - 1] @AT@ 6941 @LENGTH@ 21
+------------------DEL SimpleName@@mainBidiagonal @AT@ 6941 @LENGTH@ 14
+------------------DEL InfixExpression@@p - 1 @AT@ 6956 @LENGTH@ 5
+---------------------DEL SimpleName@@p @AT@ 6956 @LENGTH@ 1
+---------------------DEL Operator@@- @AT@ 6957 @LENGTH@ 1
+---------------------DEL NumberLiteral@@1 @AT@ 6960 @LENGTH@ 1
+------------DEL Operator@@/ @AT@ 6962 @LENGTH@ 1
+------------DEL ArrayAccess@@singularValues[j] @AT@ 6965 @LENGTH@ 17
+---------------DEL SimpleName@@singularValues @AT@ 6965 @LENGTH@ 14
+---------------DEL SimpleName@@j @AT@ 6980 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1); @TO@ final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1); @AT@ 8952 @LENGTH@ 100
+---UPD VariableDeclarationFragment@@e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ e=eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1) @AT@ 8969 @LENGTH@ 82
+------UPD MethodInvocation@@eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1) @AT@ 8993 @LENGTH@ 58
+---------UPD SimpleName@@MethodName:getSubMatrix:[0, p - 1, 0, p - 1] @TO@ MethodName:getSubMatrix:[0, m - 1, 0, p - 1] @AT@ 9019 @LENGTH@ 32
+------------UPD InfixExpression@@p - 1 @TO@ m - 1 @AT@ 9035 @LENGTH@ 5
+---------------UPD SimpleName@@p @TO@ m @AT@ 9035 @LENGTH@ 1
+, UPD ForStatement@@[int i=0];i < p - 1; [++i] @TO@ [int i=0];i < p; [++i] @AT@ 9223 @LENGTH@ 480
+---DEL InfixExpression@@i < p - 1 @AT@ 9239 @LENGTH@ 9
+---UPD PrefixExpression@@++i @TO@ ++j @AT@ 9250 @LENGTH@ 3
+------UPD SimpleName@@i @TO@ j @AT@ 9252 @LENGTH@ 1
+---INS InfixExpression@@i < p @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9294 @LENGTH@ 5
+------INS SimpleName@@i @TO@ InfixExpression@@i < p @AT@ 9294 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < p @AT@ 9295 @LENGTH@ 1
+------INS SimpleName@@p @TO@ InfixExpression@@i < p @AT@ 9298 @LENGTH@ 1
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9301 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9301 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9303 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:i < m - 1 @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9482 @LENGTH@ 491
+------MOV ExpressionStatement@@Assignment:ei1=eData[i + 1] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9435 @LENGTH@ 19
+------MOV VariableDeclarationStatement@@final double si=secondaryBidiagonal[i]; @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9479 @LENGTH@ 41
+------INS InfixExpression@@i < m - 1 @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9486 @LENGTH@ 9
+---------MOV SimpleName@@i @TO@ InfixExpression@@i < m - 1 @AT@ 9239 @LENGTH@ 1
+---------MOV Operator@@< @TO@ InfixExpression@@i < m - 1 @AT@ 9240 @LENGTH@ 1
+---------MOV InfixExpression@@p - 1 @TO@ InfixExpression@@i < m - 1 @AT@ 9243 @LENGTH@ 5
+------MOV ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9545 @LENGTH@ 140
+------INS ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9827 @LENGTH@ 124
+---------MOV PrefixExpression@@++i @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9250 @LENGTH@ 3
+---------MOV VariableDeclarationExpression@@int j=0 @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9733 @LENGTH@ 9
+---------INS InfixExpression@@j < p @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9843 @LENGTH@ 5
+------------INS SimpleName@@j @TO@ InfixExpression@@j < p @AT@ 9843 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@j < p @AT@ 9844 @LENGTH@ 1
+------------INS SimpleName@@p @TO@ InfixExpression@@j < p @AT@ 9847 @LENGTH@ 1
+---------INS ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9885 @LENGTH@ 40
+------------INS Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @TO@ ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9885 @LENGTH@ 39
+---------------INS ArrayAccess@@wi[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9885 @LENGTH@ 5
+------------------INS SimpleName@@wi @TO@ ArrayAccess@@wi[j] @AT@ 9885 @LENGTH@ 2
+------------------INS SimpleName@@j @TO@ ArrayAccess@@wi[j] @AT@ 9888 @LENGTH@ 1
+---------------INS Operator@@= @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9890 @LENGTH@ 1
+---------------INS InfixExpression@@mi * ei0[j] / singularValues[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9893 @LENGTH@ 31
+------------------INS InfixExpression@@mi * ei0[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9893 @LENGTH@ 11
+---------------------INS SimpleName@@mi @TO@ InfixExpression@@mi * ei0[j] @AT@ 9893 @LENGTH@ 2
+---------------------INS Operator@@* @TO@ InfixExpression@@mi * ei0[j] @AT@ 9895 @LENGTH@ 1
+---------------------INS ArrayAccess@@ei0[j] @TO@ InfixExpression@@mi * ei0[j] @AT@ 9898 @LENGTH@ 6
+------------------------INS SimpleName@@ei0 @TO@ ArrayAccess@@ei0[j] @AT@ 9898 @LENGTH@ 3
+------------------------INS SimpleName@@j @TO@ ArrayAccess@@ei0[j] @AT@ 9902 @LENGTH@ 1
+------------------INS Operator@@/ @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9904 @LENGTH@ 1
+------------------INS ArrayAccess@@singularValues[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9907 @LENGTH@ 17
+---------------------INS SimpleName@@singularValues @TO@ ArrayAccess@@singularValues[j] @AT@ 9907 @LENGTH@ 14
+---------------------INS SimpleName@@j @TO@ ArrayAccess@@singularValues[j] @AT@ 9922 @LENGTH@ 1
+, DEL ForStatement@@[int j=0];j < p; [++j] @AT@ 9728 @LENGTH@ 153
+---DEL InfixExpression@@j < p @AT@ 9744 @LENGTH@ 5
+------DEL SimpleName@@j @AT@ 9744 @LENGTH@ 1
+------DEL Operator@@< @AT@ 9745 @LENGTH@ 1
+------DEL SimpleName@@p @AT@ 9748 @LENGTH@ 1
+---DEL PrefixExpression@@++j @AT@ 9751 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 9751 @LENGTH@ 2
+------DEL SimpleName@@j @AT@ 9753 @LENGTH@ 1
+---DEL ExpressionStatement@@Assignment:wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9786 @LENGTH@ 69
+------DEL Assignment@@wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9786 @LENGTH@ 68
+---------DEL ArrayAccess@@wData[p - 1][j] @AT@ 9786 @LENGTH@ 15
+------------DEL ArrayAccess@@wData[p - 1] @AT@ 9786 @LENGTH@ 12
+---------------DEL SimpleName@@wData @AT@ 9786 @LENGTH@ 5
+---------------DEL InfixExpression@@p - 1 @AT@ 9792 @LENGTH@ 5
+------------------DEL SimpleName@@p @AT@ 9792 @LENGTH@ 1
+------------------DEL Operator@@- @AT@ 9793 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 9796 @LENGTH@ 1
+------------DEL SimpleName@@j @AT@ 9799 @LENGTH@ 1
+---------DEL Operator@@= @AT@ 9801 @LENGTH@ 1
+---------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9804 @LENGTH@ 50
+------------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] @AT@ 9804 @LENGTH@ 30
+---------------DEL ArrayAccess@@ei1[j] @AT@ 9804 @LENGTH@ 6
+------------------DEL SimpleName@@ei1 @AT@ 9804 @LENGTH@ 3
+------------------DEL SimpleName@@j @AT@ 9808 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 9810 @LENGTH@ 1
+---------------DEL ArrayAccess@@mainBidiagonal[p - 1] @AT@ 9813 @LENGTH@ 21
+------------------DEL SimpleName@@mainBidiagonal @AT@ 9813 @LENGTH@ 14
+------------------DEL InfixExpression@@p - 1 @AT@ 9828 @LENGTH@ 5
+---------------------DEL SimpleName@@p @AT@ 9828 @LENGTH@ 1
+---------------------DEL Operator@@- @AT@ 9829 @LENGTH@ 1
+---------------------DEL NumberLiteral@@1 @AT@ 9832 @LENGTH@ 1
+------------DEL Operator@@/ @AT@ 9834 @LENGTH@ 1
+------------DEL ArrayAccess@@singularValues[j] @AT@ 9837 @LENGTH@ 17
+---------------DEL SimpleName@@singularValues @AT@ 9837 @LENGTH@ 14
+---------------DEL SimpleName@@j @AT@ 9852 @LENGTH@ 1
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, MethodInvocation, OP2, OP4)
+OP4:         (UPD, SimpleName, OP3, OP5)
+OP5:            (UPD, InfixExpression, OP4, OP6)
+OP6:               (UPD, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1); @TO@ final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1); @AT@ 5999 @LENGTH@ 100
+---UPD VariableDeclarationFragment@@e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ e=eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1) @AT@ 6016 @LENGTH@ 82
+------UPD MethodInvocation@@eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1) @AT@ 6040 @LENGTH@ 58
+---------UPD SimpleName@@MethodName:getSubMatrix:[0, p - 1, 0, p - 1] @TO@ MethodName:getSubMatrix:[0, n - 1, 0, p - 1] @AT@ 6066 @LENGTH@ 32
+------------UPD InfixExpression@@p - 1 @TO@ n - 1 @AT@ 6082 @LENGTH@ 5
+---------------UPD SimpleName@@p @TO@ n @AT@ 6082 @LENGTH@ 1
+, UPD ForStatement@@[int i=0];i < p - 1; [++i] @TO@ [int i=0];i < p; [++i] @AT@ 6270 @LENGTH@ 561
+---INS InfixExpression@@i < p @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6286 @LENGTH@ 5
+------INS SimpleName@@i @TO@ InfixExpression@@i < p @AT@ 6286 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < p @AT@ 6287 @LENGTH@ 1
+------INS SimpleName@@p @TO@ InfixExpression@@i < p @AT@ 6290 @LENGTH@ 1
+---DEL InfixExpression@@i < p - 1 @AT@ 6286 @LENGTH@ 9
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6293 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 6293 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 6295 @LENGTH@ 1
+---UPD PrefixExpression@@++i @TO@ ++j @AT@ 6297 @LENGTH@ 3
+------UPD SimpleName@@i @TO@ j @AT@ 6299 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:i < n - 1 @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6555 @LENGTH@ 491
+------INS InfixExpression@@i < n - 1 @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6559 @LENGTH@ 9
+---------MOV SimpleName@@i @TO@ InfixExpression@@i < n - 1 @AT@ 6286 @LENGTH@ 1
+---------MOV Operator@@< @TO@ InfixExpression@@i < n - 1 @AT@ 6287 @LENGTH@ 1
+---------MOV InfixExpression@@p - 1 @TO@ InfixExpression@@i < n - 1 @AT@ 6290 @LENGTH@ 5
+------MOV ExpressionStatement@@Assignment:ei1=eData[i + 1] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6563 @LENGTH@ 19
+------MOV VariableDeclarationStatement@@final double si=secondaryBidiagonal[i]; @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6607 @LENGTH@ 41
+------MOV ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6673 @LENGTH@ 140
+------INS ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6900 @LENGTH@ 124
+---------MOV PrefixExpression@@++i @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6297 @LENGTH@ 3
+---------MOV VariableDeclarationExpression@@int j=0 @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6861 @LENGTH@ 9
+---------INS InfixExpression@@j < p @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6916 @LENGTH@ 5
+------------INS SimpleName@@j @TO@ InfixExpression@@j < p @AT@ 6916 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@j < p @AT@ 6917 @LENGTH@ 1
+------------INS SimpleName@@p @TO@ InfixExpression@@j < p @AT@ 6920 @LENGTH@ 1
+---------INS ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6958 @LENGTH@ 40
+------------INS Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @TO@ ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6958 @LENGTH@ 39
+---------------INS ArrayAccess@@wi[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6958 @LENGTH@ 5
+------------------INS SimpleName@@wi @TO@ ArrayAccess@@wi[j] @AT@ 6958 @LENGTH@ 2
+------------------INS SimpleName@@j @TO@ ArrayAccess@@wi[j] @AT@ 6961 @LENGTH@ 1
+---------------INS Operator@@= @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6963 @LENGTH@ 1
+---------------INS InfixExpression@@mi * ei0[j] / singularValues[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6966 @LENGTH@ 31
+------------------INS InfixExpression@@mi * ei0[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6966 @LENGTH@ 11
+---------------------INS SimpleName@@mi @TO@ InfixExpression@@mi * ei0[j] @AT@ 6966 @LENGTH@ 2
+---------------------INS Operator@@* @TO@ InfixExpression@@mi * ei0[j] @AT@ 6968 @LENGTH@ 1
+---------------------INS ArrayAccess@@ei0[j] @TO@ InfixExpression@@mi * ei0[j] @AT@ 6971 @LENGTH@ 6
+------------------------INS SimpleName@@ei0 @TO@ ArrayAccess@@ei0[j] @AT@ 6971 @LENGTH@ 3
+------------------------INS SimpleName@@j @TO@ ArrayAccess@@ei0[j] @AT@ 6975 @LENGTH@ 1
+------------------INS Operator@@/ @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6977 @LENGTH@ 1
+------------------INS ArrayAccess@@singularValues[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6980 @LENGTH@ 17
+---------------------INS SimpleName@@singularValues @TO@ ArrayAccess@@singularValues[j] @AT@ 6980 @LENGTH@ 14
+---------------------INS SimpleName@@j @TO@ ArrayAccess@@singularValues[j] @AT@ 6995 @LENGTH@ 1
+, DEL ForStatement@@[int j=0];j < p; [++j] @AT@ 6856 @LENGTH@ 153
+---DEL InfixExpression@@j < p @AT@ 6872 @LENGTH@ 5
+------DEL SimpleName@@j @AT@ 6872 @LENGTH@ 1
+------DEL Operator@@< @AT@ 6873 @LENGTH@ 1
+------DEL SimpleName@@p @AT@ 6876 @LENGTH@ 1
+---DEL PrefixExpression@@++j @AT@ 6879 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 6879 @LENGTH@ 2
+------DEL SimpleName@@j @AT@ 6881 @LENGTH@ 1
+---DEL ExpressionStatement@@Assignment:wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6914 @LENGTH@ 69
+------DEL Assignment@@wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6914 @LENGTH@ 68
+---------DEL ArrayAccess@@wData[p - 1][j] @AT@ 6914 @LENGTH@ 15
+------------DEL ArrayAccess@@wData[p - 1] @AT@ 6914 @LENGTH@ 12
+---------------DEL SimpleName@@wData @AT@ 6914 @LENGTH@ 5
+---------------DEL InfixExpression@@p - 1 @AT@ 6920 @LENGTH@ 5
+------------------DEL SimpleName@@p @AT@ 6920 @LENGTH@ 1
+------------------DEL Operator@@- @AT@ 6921 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 6924 @LENGTH@ 1
+------------DEL SimpleName@@j @AT@ 6927 @LENGTH@ 1
+---------DEL Operator@@= @AT@ 6929 @LENGTH@ 1
+---------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6932 @LENGTH@ 50
+------------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] @AT@ 6932 @LENGTH@ 30
+---------------DEL ArrayAccess@@ei1[j] @AT@ 6932 @LENGTH@ 6
+------------------DEL SimpleName@@ei1 @AT@ 6932 @LENGTH@ 3
+------------------DEL SimpleName@@j @AT@ 6936 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 6938 @LENGTH@ 1
+---------------DEL ArrayAccess@@mainBidiagonal[p - 1] @AT@ 6941 @LENGTH@ 21
+------------------DEL SimpleName@@mainBidiagonal @AT@ 6941 @LENGTH@ 14
+------------------DEL InfixExpression@@p - 1 @AT@ 6956 @LENGTH@ 5
+---------------------DEL SimpleName@@p @AT@ 6956 @LENGTH@ 1
+---------------------DEL Operator@@- @AT@ 6957 @LENGTH@ 1
+---------------------DEL NumberLiteral@@1 @AT@ 6960 @LENGTH@ 1
+------------DEL Operator@@/ @AT@ 6962 @LENGTH@ 1
+------------DEL ArrayAccess@@singularValues[j] @AT@ 6965 @LENGTH@ 17
+---------------DEL SimpleName@@singularValues @AT@ 6965 @LENGTH@ 14
+---------------DEL SimpleName@@j @AT@ 6980 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1); @TO@ final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1); @AT@ 8952 @LENGTH@ 100
+---UPD VariableDeclarationFragment@@e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ e=eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1) @AT@ 8969 @LENGTH@ 82
+------UPD MethodInvocation@@eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1) @AT@ 8993 @LENGTH@ 58
+---------UPD SimpleName@@MethodName:getSubMatrix:[0, p - 1, 0, p - 1] @TO@ MethodName:getSubMatrix:[0, m - 1, 0, p - 1] @AT@ 9019 @LENGTH@ 32
+------------UPD InfixExpression@@p - 1 @TO@ m - 1 @AT@ 9035 @LENGTH@ 5
+---------------UPD SimpleName@@p @TO@ m @AT@ 9035 @LENGTH@ 1
+, UPD ForStatement@@[int i=0];i < p - 1; [++i] @TO@ [int i=0];i < p; [++i] @AT@ 9223 @LENGTH@ 480
+---DEL InfixExpression@@i < p - 1 @AT@ 9239 @LENGTH@ 9
+---UPD PrefixExpression@@++i @TO@ ++j @AT@ 9250 @LENGTH@ 3
+------UPD SimpleName@@i @TO@ j @AT@ 9252 @LENGTH@ 1
+---INS InfixExpression@@i < p @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9294 @LENGTH@ 5
+------INS SimpleName@@i @TO@ InfixExpression@@i < p @AT@ 9294 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < p @AT@ 9295 @LENGTH@ 1
+------INS SimpleName@@p @TO@ InfixExpression@@i < p @AT@ 9298 @LENGTH@ 1
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9301 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9301 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9303 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:i < m - 1 @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9482 @LENGTH@ 491
+------MOV ExpressionStatement@@Assignment:ei1=eData[i + 1] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9435 @LENGTH@ 19
+------MOV VariableDeclarationStatement@@final double si=secondaryBidiagonal[i]; @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9479 @LENGTH@ 41
+------INS InfixExpression@@i < m - 1 @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9486 @LENGTH@ 9
+---------MOV SimpleName@@i @TO@ InfixExpression@@i < m - 1 @AT@ 9239 @LENGTH@ 1
+---------MOV Operator@@< @TO@ InfixExpression@@i < m - 1 @AT@ 9240 @LENGTH@ 1
+---------MOV InfixExpression@@p - 1 @TO@ InfixExpression@@i < m - 1 @AT@ 9243 @LENGTH@ 5
+------MOV ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9545 @LENGTH@ 140
+------INS ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9827 @LENGTH@ 124
+---------MOV PrefixExpression@@++i @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9250 @LENGTH@ 3
+---------MOV VariableDeclarationExpression@@int j=0 @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9733 @LENGTH@ 9
+---------INS InfixExpression@@j < p @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9843 @LENGTH@ 5
+------------INS SimpleName@@j @TO@ InfixExpression@@j < p @AT@ 9843 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@j < p @AT@ 9844 @LENGTH@ 1
+------------INS SimpleName@@p @TO@ InfixExpression@@j < p @AT@ 9847 @LENGTH@ 1
+---------INS ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9885 @LENGTH@ 40
+------------INS Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @TO@ ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9885 @LENGTH@ 39
+---------------INS ArrayAccess@@wi[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9885 @LENGTH@ 5
+------------------INS SimpleName@@wi @TO@ ArrayAccess@@wi[j] @AT@ 9885 @LENGTH@ 2
+------------------INS SimpleName@@j @TO@ ArrayAccess@@wi[j] @AT@ 9888 @LENGTH@ 1
+---------------INS Operator@@= @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9890 @LENGTH@ 1
+---------------INS InfixExpression@@mi * ei0[j] / singularValues[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9893 @LENGTH@ 31
+------------------INS InfixExpression@@mi * ei0[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9893 @LENGTH@ 11
+---------------------INS SimpleName@@mi @TO@ InfixExpression@@mi * ei0[j] @AT@ 9893 @LENGTH@ 2
+---------------------INS Operator@@* @TO@ InfixExpression@@mi * ei0[j] @AT@ 9895 @LENGTH@ 1
+---------------------INS ArrayAccess@@ei0[j] @TO@ InfixExpression@@mi * ei0[j] @AT@ 9898 @LENGTH@ 6
+------------------------INS SimpleName@@ei0 @TO@ ArrayAccess@@ei0[j] @AT@ 9898 @LENGTH@ 3
+------------------------INS SimpleName@@j @TO@ ArrayAccess@@ei0[j] @AT@ 9902 @LENGTH@ 1
+------------------INS Operator@@/ @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9904 @LENGTH@ 1
+------------------INS ArrayAccess@@singularValues[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9907 @LENGTH@ 17
+---------------------INS SimpleName@@singularValues @TO@ ArrayAccess@@singularValues[j] @AT@ 9907 @LENGTH@ 14
+---------------------INS SimpleName@@j @TO@ ArrayAccess@@singularValues[j] @AT@ 9922 @LENGTH@ 1
+, DEL ForStatement@@[int j=0];j < p; [++j] @AT@ 9728 @LENGTH@ 153
+---DEL InfixExpression@@j < p @AT@ 9744 @LENGTH@ 5
+------DEL SimpleName@@j @AT@ 9744 @LENGTH@ 1
+------DEL Operator@@< @AT@ 9745 @LENGTH@ 1
+------DEL SimpleName@@p @AT@ 9748 @LENGTH@ 1
+---DEL PrefixExpression@@++j @AT@ 9751 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 9751 @LENGTH@ 2
+------DEL SimpleName@@j @AT@ 9753 @LENGTH@ 1
+---DEL ExpressionStatement@@Assignment:wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9786 @LENGTH@ 69
+------DEL Assignment@@wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9786 @LENGTH@ 68
+---------DEL ArrayAccess@@wData[p - 1][j] @AT@ 9786 @LENGTH@ 15
+------------DEL ArrayAccess@@wData[p - 1] @AT@ 9786 @LENGTH@ 12
+---------------DEL SimpleName@@wData @AT@ 9786 @LENGTH@ 5
+---------------DEL InfixExpression@@p - 1 @AT@ 9792 @LENGTH@ 5
+------------------DEL SimpleName@@p @AT@ 9792 @LENGTH@ 1
+------------------DEL Operator@@- @AT@ 9793 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 9796 @LENGTH@ 1
+------------DEL SimpleName@@j @AT@ 9799 @LENGTH@ 1
+---------DEL Operator@@= @AT@ 9801 @LENGTH@ 1
+---------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9804 @LENGTH@ 50
+------------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] @AT@ 9804 @LENGTH@ 30
+---------------DEL ArrayAccess@@ei1[j] @AT@ 9804 @LENGTH@ 6
+------------------DEL SimpleName@@ei1 @AT@ 9804 @LENGTH@ 3
+------------------DEL SimpleName@@j @AT@ 9808 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 9810 @LENGTH@ 1
+---------------DEL ArrayAccess@@mainBidiagonal[p - 1] @AT@ 9813 @LENGTH@ 21
+------------------DEL SimpleName@@mainBidiagonal @AT@ 9813 @LENGTH@ 14
+------------------DEL InfixExpression@@p - 1 @AT@ 9828 @LENGTH@ 5
+---------------------DEL SimpleName@@p @AT@ 9828 @LENGTH@ 1
+---------------------DEL Operator@@- @AT@ 9829 @LENGTH@ 1
+---------------------DEL NumberLiteral@@1 @AT@ 9832 @LENGTH@ 1
+------------DEL Operator@@/ @AT@ 9834 @LENGTH@ 1
+------------DEL ArrayAccess@@singularValues[j] @AT@ 9837 @LENGTH@ 17
+---------------DEL SimpleName@@singularValues @AT@ 9837 @LENGTH@ 14
+---------------DEL SimpleName@@j @AT@ 9852 @LENGTH@ 1
+]
+
+CII:
+OP1:(UPD, ForStatement, null, OP2 OP6 OP7 OP10 OP12)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, SimpleName, OP2, null)
+OP6:   (DEL, InfixExpression, OP1, null)
+OP7:   (INS, PrefixExpression, OP1, OP8 OP9)
+OP8:      (INS, Operator, OP7, null)
+OP9:      (INS, SimpleName, OP7, null)
+OP10:   (UPD, PrefixExpression, OP1, OP11)
+OP11:      (UPD, SimpleName, OP10, null)
+OP12:   (INS, IfStatement, OP1, OP13 OP17 OP18 OP19 OP20)
+OP13:      (INS, InfixExpression, OP12, OP14 OP15 OP16)
+OP14:         (MOV, SimpleName, OP13, null)
+OP15:         (MOV, Operator, OP13, null)
+OP16:         (MOV, InfixExpression, OP13, null)
+OP17:      (MOV, ExpressionStatement, OP12, null)
+OP18:      (MOV, VariableDeclarationStatement, OP12, null)
+OP19:      (MOV, ForStatement, OP12, null)
+OP20:      (INS, ForStatement, OP12, OP21 OP22 OP23 OP27)
+OP21:         (MOV, PrefixExpression, OP20, null)
+OP22:         (MOV, VariableDeclarationExpression, OP20, null)
+OP23:         (INS, InfixExpression, OP20, OP24 OP25 OP26)
+OP24:            (INS, SimpleName, OP23, null)
+OP25:            (INS, Operator, OP23, null)
+OP26:            (INS, SimpleName, OP23, null)
+OP27:         (INS, ExpressionStatement, OP20, OP28)
+OP28:            (INS, Assignment, OP27, OP29 OP32 OP33)
+OP29:               (INS, ArrayAccess, OP28, OP30 OP31)
+OP30:                  (INS, SimpleName, OP29, null)
+OP31:                  (INS, SimpleName, OP29, null)
+OP32:               (INS, Operator, OP28, null)
+OP33:               (INS, InfixExpression, OP28, OP34 OP40 OP41)
+OP34:                  (INS, InfixExpression, OP33, OP35 OP36 OP37)
+OP35:                     (INS, SimpleName, OP34, null)
+OP36:                     (INS, Operator, OP34, null)
+OP37:                     (INS, ArrayAccess, OP34, OP38 OP39)
+OP38:                        (INS, SimpleName, OP37, null)
+OP39:                        (INS, SimpleName, OP37, null)
+OP40:                  (INS, Operator, OP33, null)
+OP41:                  (INS, ArrayAccess, OP33, OP42 OP43)
+OP42:                     (INS, SimpleName, OP41, null)
+OP43:                     (INS, SimpleName, OP41, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1); @TO@ final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1); @AT@ 5999 @LENGTH@ 100
+---UPD VariableDeclarationFragment@@e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ e=eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1) @AT@ 6016 @LENGTH@ 82
+------UPD MethodInvocation@@eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1) @AT@ 6040 @LENGTH@ 58
+---------UPD SimpleName@@MethodName:getSubMatrix:[0, p - 1, 0, p - 1] @TO@ MethodName:getSubMatrix:[0, n - 1, 0, p - 1] @AT@ 6066 @LENGTH@ 32
+------------UPD InfixExpression@@p - 1 @TO@ n - 1 @AT@ 6082 @LENGTH@ 5
+---------------UPD SimpleName@@p @TO@ n @AT@ 6082 @LENGTH@ 1
+, UPD ForStatement@@[int i=0];i < p - 1; [++i] @TO@ [int i=0];i < p; [++i] @AT@ 6270 @LENGTH@ 561
+---INS InfixExpression@@i < p @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6286 @LENGTH@ 5
+------INS SimpleName@@i @TO@ InfixExpression@@i < p @AT@ 6286 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < p @AT@ 6287 @LENGTH@ 1
+------INS SimpleName@@p @TO@ InfixExpression@@i < p @AT@ 6290 @LENGTH@ 1
+---DEL InfixExpression@@i < p - 1 @AT@ 6286 @LENGTH@ 9
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6293 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 6293 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 6295 @LENGTH@ 1
+---UPD PrefixExpression@@++i @TO@ ++j @AT@ 6297 @LENGTH@ 3
+------UPD SimpleName@@i @TO@ j @AT@ 6299 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:i < n - 1 @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6555 @LENGTH@ 491
+------INS InfixExpression@@i < n - 1 @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6559 @LENGTH@ 9
+---------MOV SimpleName@@i @TO@ InfixExpression@@i < n - 1 @AT@ 6286 @LENGTH@ 1
+---------MOV Operator@@< @TO@ InfixExpression@@i < n - 1 @AT@ 6287 @LENGTH@ 1
+---------MOV InfixExpression@@p - 1 @TO@ InfixExpression@@i < n - 1 @AT@ 6290 @LENGTH@ 5
+------MOV ExpressionStatement@@Assignment:ei1=eData[i + 1] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6563 @LENGTH@ 19
+------MOV VariableDeclarationStatement@@final double si=secondaryBidiagonal[i]; @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6607 @LENGTH@ 41
+------MOV ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6673 @LENGTH@ 140
+------INS ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6900 @LENGTH@ 124
+---------MOV PrefixExpression@@++i @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6297 @LENGTH@ 3
+---------MOV VariableDeclarationExpression@@int j=0 @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6861 @LENGTH@ 9
+---------INS InfixExpression@@j < p @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6916 @LENGTH@ 5
+------------INS SimpleName@@j @TO@ InfixExpression@@j < p @AT@ 6916 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@j < p @AT@ 6917 @LENGTH@ 1
+------------INS SimpleName@@p @TO@ InfixExpression@@j < p @AT@ 6920 @LENGTH@ 1
+---------INS ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6958 @LENGTH@ 40
+------------INS Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @TO@ ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6958 @LENGTH@ 39
+---------------INS ArrayAccess@@wi[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6958 @LENGTH@ 5
+------------------INS SimpleName@@wi @TO@ ArrayAccess@@wi[j] @AT@ 6958 @LENGTH@ 2
+------------------INS SimpleName@@j @TO@ ArrayAccess@@wi[j] @AT@ 6961 @LENGTH@ 1
+---------------INS Operator@@= @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6963 @LENGTH@ 1
+---------------INS InfixExpression@@mi * ei0[j] / singularValues[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6966 @LENGTH@ 31
+------------------INS InfixExpression@@mi * ei0[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6966 @LENGTH@ 11
+---------------------INS SimpleName@@mi @TO@ InfixExpression@@mi * ei0[j] @AT@ 6966 @LENGTH@ 2
+---------------------INS Operator@@* @TO@ InfixExpression@@mi * ei0[j] @AT@ 6968 @LENGTH@ 1
+---------------------INS ArrayAccess@@ei0[j] @TO@ InfixExpression@@mi * ei0[j] @AT@ 6971 @LENGTH@ 6
+------------------------INS SimpleName@@ei0 @TO@ ArrayAccess@@ei0[j] @AT@ 6971 @LENGTH@ 3
+------------------------INS SimpleName@@j @TO@ ArrayAccess@@ei0[j] @AT@ 6975 @LENGTH@ 1
+------------------INS Operator@@/ @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6977 @LENGTH@ 1
+------------------INS ArrayAccess@@singularValues[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6980 @LENGTH@ 17
+---------------------INS SimpleName@@singularValues @TO@ ArrayAccess@@singularValues[j] @AT@ 6980 @LENGTH@ 14
+---------------------INS SimpleName@@j @TO@ ArrayAccess@@singularValues[j] @AT@ 6995 @LENGTH@ 1
+, DEL ForStatement@@[int j=0];j < p; [++j] @AT@ 6856 @LENGTH@ 153
+---DEL InfixExpression@@j < p @AT@ 6872 @LENGTH@ 5
+------DEL SimpleName@@j @AT@ 6872 @LENGTH@ 1
+------DEL Operator@@< @AT@ 6873 @LENGTH@ 1
+------DEL SimpleName@@p @AT@ 6876 @LENGTH@ 1
+---DEL PrefixExpression@@++j @AT@ 6879 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 6879 @LENGTH@ 2
+------DEL SimpleName@@j @AT@ 6881 @LENGTH@ 1
+---DEL ExpressionStatement@@Assignment:wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6914 @LENGTH@ 69
+------DEL Assignment@@wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6914 @LENGTH@ 68
+---------DEL ArrayAccess@@wData[p - 1][j] @AT@ 6914 @LENGTH@ 15
+------------DEL ArrayAccess@@wData[p - 1] @AT@ 6914 @LENGTH@ 12
+---------------DEL SimpleName@@wData @AT@ 6914 @LENGTH@ 5
+---------------DEL InfixExpression@@p - 1 @AT@ 6920 @LENGTH@ 5
+------------------DEL SimpleName@@p @AT@ 6920 @LENGTH@ 1
+------------------DEL Operator@@- @AT@ 6921 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 6924 @LENGTH@ 1
+------------DEL SimpleName@@j @AT@ 6927 @LENGTH@ 1
+---------DEL Operator@@= @AT@ 6929 @LENGTH@ 1
+---------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6932 @LENGTH@ 50
+------------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] @AT@ 6932 @LENGTH@ 30
+---------------DEL ArrayAccess@@ei1[j] @AT@ 6932 @LENGTH@ 6
+------------------DEL SimpleName@@ei1 @AT@ 6932 @LENGTH@ 3
+------------------DEL SimpleName@@j @AT@ 6936 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 6938 @LENGTH@ 1
+---------------DEL ArrayAccess@@mainBidiagonal[p - 1] @AT@ 6941 @LENGTH@ 21
+------------------DEL SimpleName@@mainBidiagonal @AT@ 6941 @LENGTH@ 14
+------------------DEL InfixExpression@@p - 1 @AT@ 6956 @LENGTH@ 5
+---------------------DEL SimpleName@@p @AT@ 6956 @LENGTH@ 1
+---------------------DEL Operator@@- @AT@ 6957 @LENGTH@ 1
+---------------------DEL NumberLiteral@@1 @AT@ 6960 @LENGTH@ 1
+------------DEL Operator@@/ @AT@ 6962 @LENGTH@ 1
+------------DEL ArrayAccess@@singularValues[j] @AT@ 6965 @LENGTH@ 17
+---------------DEL SimpleName@@singularValues @AT@ 6965 @LENGTH@ 14
+---------------DEL SimpleName@@j @AT@ 6980 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1); @TO@ final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1); @AT@ 8952 @LENGTH@ 100
+---UPD VariableDeclarationFragment@@e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ e=eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1) @AT@ 8969 @LENGTH@ 82
+------UPD MethodInvocation@@eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1) @AT@ 8993 @LENGTH@ 58
+---------UPD SimpleName@@MethodName:getSubMatrix:[0, p - 1, 0, p - 1] @TO@ MethodName:getSubMatrix:[0, m - 1, 0, p - 1] @AT@ 9019 @LENGTH@ 32
+------------UPD InfixExpression@@p - 1 @TO@ m - 1 @AT@ 9035 @LENGTH@ 5
+---------------UPD SimpleName@@p @TO@ m @AT@ 9035 @LENGTH@ 1
+, UPD ForStatement@@[int i=0];i < p - 1; [++i] @TO@ [int i=0];i < p; [++i] @AT@ 9223 @LENGTH@ 480
+---DEL InfixExpression@@i < p - 1 @AT@ 9239 @LENGTH@ 9
+---UPD PrefixExpression@@++i @TO@ ++j @AT@ 9250 @LENGTH@ 3
+------UPD SimpleName@@i @TO@ j @AT@ 9252 @LENGTH@ 1
+---INS InfixExpression@@i < p @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9294 @LENGTH@ 5
+------INS SimpleName@@i @TO@ InfixExpression@@i < p @AT@ 9294 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < p @AT@ 9295 @LENGTH@ 1
+------INS SimpleName@@p @TO@ InfixExpression@@i < p @AT@ 9298 @LENGTH@ 1
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9301 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9301 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9303 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:i < m - 1 @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9482 @LENGTH@ 491
+------MOV ExpressionStatement@@Assignment:ei1=eData[i + 1] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9435 @LENGTH@ 19
+------MOV VariableDeclarationStatement@@final double si=secondaryBidiagonal[i]; @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9479 @LENGTH@ 41
+------INS InfixExpression@@i < m - 1 @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9486 @LENGTH@ 9
+---------MOV SimpleName@@i @TO@ InfixExpression@@i < m - 1 @AT@ 9239 @LENGTH@ 1
+---------MOV Operator@@< @TO@ InfixExpression@@i < m - 1 @AT@ 9240 @LENGTH@ 1
+---------MOV InfixExpression@@p - 1 @TO@ InfixExpression@@i < m - 1 @AT@ 9243 @LENGTH@ 5
+------MOV ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9545 @LENGTH@ 140
+------INS ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9827 @LENGTH@ 124
+---------MOV PrefixExpression@@++i @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9250 @LENGTH@ 3
+---------MOV VariableDeclarationExpression@@int j=0 @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9733 @LENGTH@ 9
+---------INS InfixExpression@@j < p @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9843 @LENGTH@ 5
+------------INS SimpleName@@j @TO@ InfixExpression@@j < p @AT@ 9843 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@j < p @AT@ 9844 @LENGTH@ 1
+------------INS SimpleName@@p @TO@ InfixExpression@@j < p @AT@ 9847 @LENGTH@ 1
+---------INS ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9885 @LENGTH@ 40
+------------INS Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @TO@ ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9885 @LENGTH@ 39
+---------------INS ArrayAccess@@wi[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9885 @LENGTH@ 5
+------------------INS SimpleName@@wi @TO@ ArrayAccess@@wi[j] @AT@ 9885 @LENGTH@ 2
+------------------INS SimpleName@@j @TO@ ArrayAccess@@wi[j] @AT@ 9888 @LENGTH@ 1
+---------------INS Operator@@= @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9890 @LENGTH@ 1
+---------------INS InfixExpression@@mi * ei0[j] / singularValues[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9893 @LENGTH@ 31
+------------------INS InfixExpression@@mi * ei0[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9893 @LENGTH@ 11
+---------------------INS SimpleName@@mi @TO@ InfixExpression@@mi * ei0[j] @AT@ 9893 @LENGTH@ 2
+---------------------INS Operator@@* @TO@ InfixExpression@@mi * ei0[j] @AT@ 9895 @LENGTH@ 1
+---------------------INS ArrayAccess@@ei0[j] @TO@ InfixExpression@@mi * ei0[j] @AT@ 9898 @LENGTH@ 6
+------------------------INS SimpleName@@ei0 @TO@ ArrayAccess@@ei0[j] @AT@ 9898 @LENGTH@ 3
+------------------------INS SimpleName@@j @TO@ ArrayAccess@@ei0[j] @AT@ 9902 @LENGTH@ 1
+------------------INS Operator@@/ @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9904 @LENGTH@ 1
+------------------INS ArrayAccess@@singularValues[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9907 @LENGTH@ 17
+---------------------INS SimpleName@@singularValues @TO@ ArrayAccess@@singularValues[j] @AT@ 9907 @LENGTH@ 14
+---------------------INS SimpleName@@j @TO@ ArrayAccess@@singularValues[j] @AT@ 9922 @LENGTH@ 1
+, DEL ForStatement@@[int j=0];j < p; [++j] @AT@ 9728 @LENGTH@ 153
+---DEL InfixExpression@@j < p @AT@ 9744 @LENGTH@ 5
+------DEL SimpleName@@j @AT@ 9744 @LENGTH@ 1
+------DEL Operator@@< @AT@ 9745 @LENGTH@ 1
+------DEL SimpleName@@p @AT@ 9748 @LENGTH@ 1
+---DEL PrefixExpression@@++j @AT@ 9751 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 9751 @LENGTH@ 2
+------DEL SimpleName@@j @AT@ 9753 @LENGTH@ 1
+---DEL ExpressionStatement@@Assignment:wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9786 @LENGTH@ 69
+------DEL Assignment@@wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9786 @LENGTH@ 68
+---------DEL ArrayAccess@@wData[p - 1][j] @AT@ 9786 @LENGTH@ 15
+------------DEL ArrayAccess@@wData[p - 1] @AT@ 9786 @LENGTH@ 12
+---------------DEL SimpleName@@wData @AT@ 9786 @LENGTH@ 5
+---------------DEL InfixExpression@@p - 1 @AT@ 9792 @LENGTH@ 5
+------------------DEL SimpleName@@p @AT@ 9792 @LENGTH@ 1
+------------------DEL Operator@@- @AT@ 9793 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 9796 @LENGTH@ 1
+------------DEL SimpleName@@j @AT@ 9799 @LENGTH@ 1
+---------DEL Operator@@= @AT@ 9801 @LENGTH@ 1
+---------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9804 @LENGTH@ 50
+------------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] @AT@ 9804 @LENGTH@ 30
+---------------DEL ArrayAccess@@ei1[j] @AT@ 9804 @LENGTH@ 6
+------------------DEL SimpleName@@ei1 @AT@ 9804 @LENGTH@ 3
+------------------DEL SimpleName@@j @AT@ 9808 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 9810 @LENGTH@ 1
+---------------DEL ArrayAccess@@mainBidiagonal[p - 1] @AT@ 9813 @LENGTH@ 21
+------------------DEL SimpleName@@mainBidiagonal @AT@ 9813 @LENGTH@ 14
+------------------DEL InfixExpression@@p - 1 @AT@ 9828 @LENGTH@ 5
+---------------------DEL SimpleName@@p @AT@ 9828 @LENGTH@ 1
+---------------------DEL Operator@@- @AT@ 9829 @LENGTH@ 1
+---------------------DEL NumberLiteral@@1 @AT@ 9832 @LENGTH@ 1
+------------DEL Operator@@/ @AT@ 9834 @LENGTH@ 1
+------------DEL ArrayAccess@@singularValues[j] @AT@ 9837 @LENGTH@ 17
+---------------DEL SimpleName@@singularValues @AT@ 9837 @LENGTH@ 14
+---------------DEL SimpleName@@j @AT@ 9852 @LENGTH@ 1
+]
+
+CII:
+OP1:(DEL, ForStatement, null, OP2 OP6 OP9)
+OP2:   (DEL, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, SimpleName, OP2, null)
+OP6:   (DEL, PrefixExpression, OP1, OP7 OP8)
+OP7:      (DEL, Operator, OP6, null)
+OP8:      (DEL, SimpleName, OP6, null)
+OP9:   (DEL, ExpressionStatement, OP1, OP10)
+OP10:      (DEL, Assignment, OP9, OP11 OP19 OP20)
+OP11:         (DEL, ArrayAccess, OP10, OP12 OP18)
+OP12:            (DEL, ArrayAccess, OP11, OP13 OP14)
+OP13:               (DEL, SimpleName, OP12, null)
+OP14:               (DEL, InfixExpression, OP12, OP15 OP16 OP17)
+OP15:                  (DEL, SimpleName, OP14, null)
+OP16:                  (DEL, Operator, OP14, null)
+OP17:                  (DEL, NumberLiteral, OP14, null)
+OP18:            (DEL, SimpleName, OP11, null)
+OP19:         (DEL, Operator, OP10, null)
+OP20:         (DEL, InfixExpression, OP10, OP21 OP32 OP33)
+OP21:            (DEL, InfixExpression, OP20, OP22 OP25 OP26)
+OP22:               (DEL, ArrayAccess, OP21, OP23 OP24)
+OP23:                  (DEL, SimpleName, OP22, null)
+OP24:                  (DEL, SimpleName, OP22, null)
+OP25:               (DEL, Operator, OP21, null)
+OP26:               (DEL, ArrayAccess, OP21, OP27 OP28)
+OP27:                  (DEL, SimpleName, OP26, null)
+OP28:                  (DEL, InfixExpression, OP26, OP29 OP30 OP31)
+OP29:                     (DEL, SimpleName, OP28, null)
+OP30:                     (DEL, Operator, OP28, null)
+OP31:                     (DEL, NumberLiteral, OP28, null)
+OP32:            (DEL, Operator, OP20, null)
+OP33:            (DEL, ArrayAccess, OP20, OP34 OP35)
+OP34:               (DEL, SimpleName, OP33, null)
+OP35:               (DEL, SimpleName, OP33, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1); @TO@ final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1); @AT@ 5999 @LENGTH@ 100
+---UPD VariableDeclarationFragment@@e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ e=eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1) @AT@ 6016 @LENGTH@ 82
+------UPD MethodInvocation@@eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1) @AT@ 6040 @LENGTH@ 58
+---------UPD SimpleName@@MethodName:getSubMatrix:[0, p - 1, 0, p - 1] @TO@ MethodName:getSubMatrix:[0, n - 1, 0, p - 1] @AT@ 6066 @LENGTH@ 32
+------------UPD InfixExpression@@p - 1 @TO@ n - 1 @AT@ 6082 @LENGTH@ 5
+---------------UPD SimpleName@@p @TO@ n @AT@ 6082 @LENGTH@ 1
+, UPD ForStatement@@[int i=0];i < p - 1; [++i] @TO@ [int i=0];i < p; [++i] @AT@ 6270 @LENGTH@ 561
+---INS InfixExpression@@i < p @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6286 @LENGTH@ 5
+------INS SimpleName@@i @TO@ InfixExpression@@i < p @AT@ 6286 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < p @AT@ 6287 @LENGTH@ 1
+------INS SimpleName@@p @TO@ InfixExpression@@i < p @AT@ 6290 @LENGTH@ 1
+---DEL InfixExpression@@i < p - 1 @AT@ 6286 @LENGTH@ 9
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6293 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 6293 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 6295 @LENGTH@ 1
+---UPD PrefixExpression@@++i @TO@ ++j @AT@ 6297 @LENGTH@ 3
+------UPD SimpleName@@i @TO@ j @AT@ 6299 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:i < n - 1 @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6555 @LENGTH@ 491
+------INS InfixExpression@@i < n - 1 @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6559 @LENGTH@ 9
+---------MOV SimpleName@@i @TO@ InfixExpression@@i < n - 1 @AT@ 6286 @LENGTH@ 1
+---------MOV Operator@@< @TO@ InfixExpression@@i < n - 1 @AT@ 6287 @LENGTH@ 1
+---------MOV InfixExpression@@p - 1 @TO@ InfixExpression@@i < n - 1 @AT@ 6290 @LENGTH@ 5
+------MOV ExpressionStatement@@Assignment:ei1=eData[i + 1] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6563 @LENGTH@ 19
+------MOV VariableDeclarationStatement@@final double si=secondaryBidiagonal[i]; @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6607 @LENGTH@ 41
+------MOV ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6673 @LENGTH@ 140
+------INS ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6900 @LENGTH@ 124
+---------MOV PrefixExpression@@++i @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6297 @LENGTH@ 3
+---------MOV VariableDeclarationExpression@@int j=0 @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6861 @LENGTH@ 9
+---------INS InfixExpression@@j < p @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6916 @LENGTH@ 5
+------------INS SimpleName@@j @TO@ InfixExpression@@j < p @AT@ 6916 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@j < p @AT@ 6917 @LENGTH@ 1
+------------INS SimpleName@@p @TO@ InfixExpression@@j < p @AT@ 6920 @LENGTH@ 1
+---------INS ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6958 @LENGTH@ 40
+------------INS Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @TO@ ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6958 @LENGTH@ 39
+---------------INS ArrayAccess@@wi[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6958 @LENGTH@ 5
+------------------INS SimpleName@@wi @TO@ ArrayAccess@@wi[j] @AT@ 6958 @LENGTH@ 2
+------------------INS SimpleName@@j @TO@ ArrayAccess@@wi[j] @AT@ 6961 @LENGTH@ 1
+---------------INS Operator@@= @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6963 @LENGTH@ 1
+---------------INS InfixExpression@@mi * ei0[j] / singularValues[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6966 @LENGTH@ 31
+------------------INS InfixExpression@@mi * ei0[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6966 @LENGTH@ 11
+---------------------INS SimpleName@@mi @TO@ InfixExpression@@mi * ei0[j] @AT@ 6966 @LENGTH@ 2
+---------------------INS Operator@@* @TO@ InfixExpression@@mi * ei0[j] @AT@ 6968 @LENGTH@ 1
+---------------------INS ArrayAccess@@ei0[j] @TO@ InfixExpression@@mi * ei0[j] @AT@ 6971 @LENGTH@ 6
+------------------------INS SimpleName@@ei0 @TO@ ArrayAccess@@ei0[j] @AT@ 6971 @LENGTH@ 3
+------------------------INS SimpleName@@j @TO@ ArrayAccess@@ei0[j] @AT@ 6975 @LENGTH@ 1
+------------------INS Operator@@/ @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6977 @LENGTH@ 1
+------------------INS ArrayAccess@@singularValues[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6980 @LENGTH@ 17
+---------------------INS SimpleName@@singularValues @TO@ ArrayAccess@@singularValues[j] @AT@ 6980 @LENGTH@ 14
+---------------------INS SimpleName@@j @TO@ ArrayAccess@@singularValues[j] @AT@ 6995 @LENGTH@ 1
+, DEL ForStatement@@[int j=0];j < p; [++j] @AT@ 6856 @LENGTH@ 153
+---DEL InfixExpression@@j < p @AT@ 6872 @LENGTH@ 5
+------DEL SimpleName@@j @AT@ 6872 @LENGTH@ 1
+------DEL Operator@@< @AT@ 6873 @LENGTH@ 1
+------DEL SimpleName@@p @AT@ 6876 @LENGTH@ 1
+---DEL PrefixExpression@@++j @AT@ 6879 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 6879 @LENGTH@ 2
+------DEL SimpleName@@j @AT@ 6881 @LENGTH@ 1
+---DEL ExpressionStatement@@Assignment:wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6914 @LENGTH@ 69
+------DEL Assignment@@wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6914 @LENGTH@ 68
+---------DEL ArrayAccess@@wData[p - 1][j] @AT@ 6914 @LENGTH@ 15
+------------DEL ArrayAccess@@wData[p - 1] @AT@ 6914 @LENGTH@ 12
+---------------DEL SimpleName@@wData @AT@ 6914 @LENGTH@ 5
+---------------DEL InfixExpression@@p - 1 @AT@ 6920 @LENGTH@ 5
+------------------DEL SimpleName@@p @AT@ 6920 @LENGTH@ 1
+------------------DEL Operator@@- @AT@ 6921 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 6924 @LENGTH@ 1
+------------DEL SimpleName@@j @AT@ 6927 @LENGTH@ 1
+---------DEL Operator@@= @AT@ 6929 @LENGTH@ 1
+---------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6932 @LENGTH@ 50
+------------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] @AT@ 6932 @LENGTH@ 30
+---------------DEL ArrayAccess@@ei1[j] @AT@ 6932 @LENGTH@ 6
+------------------DEL SimpleName@@ei1 @AT@ 6932 @LENGTH@ 3
+------------------DEL SimpleName@@j @AT@ 6936 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 6938 @LENGTH@ 1
+---------------DEL ArrayAccess@@mainBidiagonal[p - 1] @AT@ 6941 @LENGTH@ 21
+------------------DEL SimpleName@@mainBidiagonal @AT@ 6941 @LENGTH@ 14
+------------------DEL InfixExpression@@p - 1 @AT@ 6956 @LENGTH@ 5
+---------------------DEL SimpleName@@p @AT@ 6956 @LENGTH@ 1
+---------------------DEL Operator@@- @AT@ 6957 @LENGTH@ 1
+---------------------DEL NumberLiteral@@1 @AT@ 6960 @LENGTH@ 1
+------------DEL Operator@@/ @AT@ 6962 @LENGTH@ 1
+------------DEL ArrayAccess@@singularValues[j] @AT@ 6965 @LENGTH@ 17
+---------------DEL SimpleName@@singularValues @AT@ 6965 @LENGTH@ 14
+---------------DEL SimpleName@@j @AT@ 6980 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1); @TO@ final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1); @AT@ 8952 @LENGTH@ 100
+---UPD VariableDeclarationFragment@@e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ e=eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1) @AT@ 8969 @LENGTH@ 82
+------UPD MethodInvocation@@eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1) @AT@ 8993 @LENGTH@ 58
+---------UPD SimpleName@@MethodName:getSubMatrix:[0, p - 1, 0, p - 1] @TO@ MethodName:getSubMatrix:[0, m - 1, 0, p - 1] @AT@ 9019 @LENGTH@ 32
+------------UPD InfixExpression@@p - 1 @TO@ m - 1 @AT@ 9035 @LENGTH@ 5
+---------------UPD SimpleName@@p @TO@ m @AT@ 9035 @LENGTH@ 1
+, UPD ForStatement@@[int i=0];i < p - 1; [++i] @TO@ [int i=0];i < p; [++i] @AT@ 9223 @LENGTH@ 480
+---DEL InfixExpression@@i < p - 1 @AT@ 9239 @LENGTH@ 9
+---UPD PrefixExpression@@++i @TO@ ++j @AT@ 9250 @LENGTH@ 3
+------UPD SimpleName@@i @TO@ j @AT@ 9252 @LENGTH@ 1
+---INS InfixExpression@@i < p @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9294 @LENGTH@ 5
+------INS SimpleName@@i @TO@ InfixExpression@@i < p @AT@ 9294 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < p @AT@ 9295 @LENGTH@ 1
+------INS SimpleName@@p @TO@ InfixExpression@@i < p @AT@ 9298 @LENGTH@ 1
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9301 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9301 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9303 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:i < m - 1 @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9482 @LENGTH@ 491
+------MOV ExpressionStatement@@Assignment:ei1=eData[i + 1] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9435 @LENGTH@ 19
+------MOV VariableDeclarationStatement@@final double si=secondaryBidiagonal[i]; @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9479 @LENGTH@ 41
+------INS InfixExpression@@i < m - 1 @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9486 @LENGTH@ 9
+---------MOV SimpleName@@i @TO@ InfixExpression@@i < m - 1 @AT@ 9239 @LENGTH@ 1
+---------MOV Operator@@< @TO@ InfixExpression@@i < m - 1 @AT@ 9240 @LENGTH@ 1
+---------MOV InfixExpression@@p - 1 @TO@ InfixExpression@@i < m - 1 @AT@ 9243 @LENGTH@ 5
+------MOV ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9545 @LENGTH@ 140
+------INS ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9827 @LENGTH@ 124
+---------MOV PrefixExpression@@++i @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9250 @LENGTH@ 3
+---------MOV VariableDeclarationExpression@@int j=0 @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9733 @LENGTH@ 9
+---------INS InfixExpression@@j < p @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9843 @LENGTH@ 5
+------------INS SimpleName@@j @TO@ InfixExpression@@j < p @AT@ 9843 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@j < p @AT@ 9844 @LENGTH@ 1
+------------INS SimpleName@@p @TO@ InfixExpression@@j < p @AT@ 9847 @LENGTH@ 1
+---------INS ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9885 @LENGTH@ 40
+------------INS Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @TO@ ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9885 @LENGTH@ 39
+---------------INS ArrayAccess@@wi[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9885 @LENGTH@ 5
+------------------INS SimpleName@@wi @TO@ ArrayAccess@@wi[j] @AT@ 9885 @LENGTH@ 2
+------------------INS SimpleName@@j @TO@ ArrayAccess@@wi[j] @AT@ 9888 @LENGTH@ 1
+---------------INS Operator@@= @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9890 @LENGTH@ 1
+---------------INS InfixExpression@@mi * ei0[j] / singularValues[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9893 @LENGTH@ 31
+------------------INS InfixExpression@@mi * ei0[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9893 @LENGTH@ 11
+---------------------INS SimpleName@@mi @TO@ InfixExpression@@mi * ei0[j] @AT@ 9893 @LENGTH@ 2
+---------------------INS Operator@@* @TO@ InfixExpression@@mi * ei0[j] @AT@ 9895 @LENGTH@ 1
+---------------------INS ArrayAccess@@ei0[j] @TO@ InfixExpression@@mi * ei0[j] @AT@ 9898 @LENGTH@ 6
+------------------------INS SimpleName@@ei0 @TO@ ArrayAccess@@ei0[j] @AT@ 9898 @LENGTH@ 3
+------------------------INS SimpleName@@j @TO@ ArrayAccess@@ei0[j] @AT@ 9902 @LENGTH@ 1
+------------------INS Operator@@/ @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9904 @LENGTH@ 1
+------------------INS ArrayAccess@@singularValues[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9907 @LENGTH@ 17
+---------------------INS SimpleName@@singularValues @TO@ ArrayAccess@@singularValues[j] @AT@ 9907 @LENGTH@ 14
+---------------------INS SimpleName@@j @TO@ ArrayAccess@@singularValues[j] @AT@ 9922 @LENGTH@ 1
+, DEL ForStatement@@[int j=0];j < p; [++j] @AT@ 9728 @LENGTH@ 153
+---DEL InfixExpression@@j < p @AT@ 9744 @LENGTH@ 5
+------DEL SimpleName@@j @AT@ 9744 @LENGTH@ 1
+------DEL Operator@@< @AT@ 9745 @LENGTH@ 1
+------DEL SimpleName@@p @AT@ 9748 @LENGTH@ 1
+---DEL PrefixExpression@@++j @AT@ 9751 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 9751 @LENGTH@ 2
+------DEL SimpleName@@j @AT@ 9753 @LENGTH@ 1
+---DEL ExpressionStatement@@Assignment:wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9786 @LENGTH@ 69
+------DEL Assignment@@wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9786 @LENGTH@ 68
+---------DEL ArrayAccess@@wData[p - 1][j] @AT@ 9786 @LENGTH@ 15
+------------DEL ArrayAccess@@wData[p - 1] @AT@ 9786 @LENGTH@ 12
+---------------DEL SimpleName@@wData @AT@ 9786 @LENGTH@ 5
+---------------DEL InfixExpression@@p - 1 @AT@ 9792 @LENGTH@ 5
+------------------DEL SimpleName@@p @AT@ 9792 @LENGTH@ 1
+------------------DEL Operator@@- @AT@ 9793 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 9796 @LENGTH@ 1
+------------DEL SimpleName@@j @AT@ 9799 @LENGTH@ 1
+---------DEL Operator@@= @AT@ 9801 @LENGTH@ 1
+---------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9804 @LENGTH@ 50
+------------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] @AT@ 9804 @LENGTH@ 30
+---------------DEL ArrayAccess@@ei1[j] @AT@ 9804 @LENGTH@ 6
+------------------DEL SimpleName@@ei1 @AT@ 9804 @LENGTH@ 3
+------------------DEL SimpleName@@j @AT@ 9808 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 9810 @LENGTH@ 1
+---------------DEL ArrayAccess@@mainBidiagonal[p - 1] @AT@ 9813 @LENGTH@ 21
+------------------DEL SimpleName@@mainBidiagonal @AT@ 9813 @LENGTH@ 14
+------------------DEL InfixExpression@@p - 1 @AT@ 9828 @LENGTH@ 5
+---------------------DEL SimpleName@@p @AT@ 9828 @LENGTH@ 1
+---------------------DEL Operator@@- @AT@ 9829 @LENGTH@ 1
+---------------------DEL NumberLiteral@@1 @AT@ 9832 @LENGTH@ 1
+------------DEL Operator@@/ @AT@ 9834 @LENGTH@ 1
+------------DEL ArrayAccess@@singularValues[j] @AT@ 9837 @LENGTH@ 17
+---------------DEL SimpleName@@singularValues @AT@ 9837 @LENGTH@ 14
+---------------DEL SimpleName@@j @AT@ 9852 @LENGTH@ 1
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, MethodInvocation, OP2, OP4)
+OP4:         (UPD, SimpleName, OP3, OP5)
+OP5:            (UPD, InfixExpression, OP4, OP6)
+OP6:               (UPD, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1); @TO@ final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1); @AT@ 5999 @LENGTH@ 100
+---UPD VariableDeclarationFragment@@e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ e=eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1) @AT@ 6016 @LENGTH@ 82
+------UPD MethodInvocation@@eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1) @AT@ 6040 @LENGTH@ 58
+---------UPD SimpleName@@MethodName:getSubMatrix:[0, p - 1, 0, p - 1] @TO@ MethodName:getSubMatrix:[0, n - 1, 0, p - 1] @AT@ 6066 @LENGTH@ 32
+------------UPD InfixExpression@@p - 1 @TO@ n - 1 @AT@ 6082 @LENGTH@ 5
+---------------UPD SimpleName@@p @TO@ n @AT@ 6082 @LENGTH@ 1
+, UPD ForStatement@@[int i=0];i < p - 1; [++i] @TO@ [int i=0];i < p; [++i] @AT@ 6270 @LENGTH@ 561
+---INS InfixExpression@@i < p @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6286 @LENGTH@ 5
+------INS SimpleName@@i @TO@ InfixExpression@@i < p @AT@ 6286 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < p @AT@ 6287 @LENGTH@ 1
+------INS SimpleName@@p @TO@ InfixExpression@@i < p @AT@ 6290 @LENGTH@ 1
+---DEL InfixExpression@@i < p - 1 @AT@ 6286 @LENGTH@ 9
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6293 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 6293 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 6295 @LENGTH@ 1
+---UPD PrefixExpression@@++i @TO@ ++j @AT@ 6297 @LENGTH@ 3
+------UPD SimpleName@@i @TO@ j @AT@ 6299 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:i < n - 1 @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6555 @LENGTH@ 491
+------INS InfixExpression@@i < n - 1 @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6559 @LENGTH@ 9
+---------MOV SimpleName@@i @TO@ InfixExpression@@i < n - 1 @AT@ 6286 @LENGTH@ 1
+---------MOV Operator@@< @TO@ InfixExpression@@i < n - 1 @AT@ 6287 @LENGTH@ 1
+---------MOV InfixExpression@@p - 1 @TO@ InfixExpression@@i < n - 1 @AT@ 6290 @LENGTH@ 5
+------MOV ExpressionStatement@@Assignment:ei1=eData[i + 1] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6563 @LENGTH@ 19
+------MOV VariableDeclarationStatement@@final double si=secondaryBidiagonal[i]; @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6607 @LENGTH@ 41
+------MOV ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6673 @LENGTH@ 140
+------INS ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6900 @LENGTH@ 124
+---------MOV PrefixExpression@@++i @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6297 @LENGTH@ 3
+---------MOV VariableDeclarationExpression@@int j=0 @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6861 @LENGTH@ 9
+---------INS InfixExpression@@j < p @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6916 @LENGTH@ 5
+------------INS SimpleName@@j @TO@ InfixExpression@@j < p @AT@ 6916 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@j < p @AT@ 6917 @LENGTH@ 1
+------------INS SimpleName@@p @TO@ InfixExpression@@j < p @AT@ 6920 @LENGTH@ 1
+---------INS ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6958 @LENGTH@ 40
+------------INS Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @TO@ ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6958 @LENGTH@ 39
+---------------INS ArrayAccess@@wi[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6958 @LENGTH@ 5
+------------------INS SimpleName@@wi @TO@ ArrayAccess@@wi[j] @AT@ 6958 @LENGTH@ 2
+------------------INS SimpleName@@j @TO@ ArrayAccess@@wi[j] @AT@ 6961 @LENGTH@ 1
+---------------INS Operator@@= @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6963 @LENGTH@ 1
+---------------INS InfixExpression@@mi * ei0[j] / singularValues[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6966 @LENGTH@ 31
+------------------INS InfixExpression@@mi * ei0[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6966 @LENGTH@ 11
+---------------------INS SimpleName@@mi @TO@ InfixExpression@@mi * ei0[j] @AT@ 6966 @LENGTH@ 2
+---------------------INS Operator@@* @TO@ InfixExpression@@mi * ei0[j] @AT@ 6968 @LENGTH@ 1
+---------------------INS ArrayAccess@@ei0[j] @TO@ InfixExpression@@mi * ei0[j] @AT@ 6971 @LENGTH@ 6
+------------------------INS SimpleName@@ei0 @TO@ ArrayAccess@@ei0[j] @AT@ 6971 @LENGTH@ 3
+------------------------INS SimpleName@@j @TO@ ArrayAccess@@ei0[j] @AT@ 6975 @LENGTH@ 1
+------------------INS Operator@@/ @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6977 @LENGTH@ 1
+------------------INS ArrayAccess@@singularValues[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6980 @LENGTH@ 17
+---------------------INS SimpleName@@singularValues @TO@ ArrayAccess@@singularValues[j] @AT@ 6980 @LENGTH@ 14
+---------------------INS SimpleName@@j @TO@ ArrayAccess@@singularValues[j] @AT@ 6995 @LENGTH@ 1
+, DEL ForStatement@@[int j=0];j < p; [++j] @AT@ 6856 @LENGTH@ 153
+---DEL InfixExpression@@j < p @AT@ 6872 @LENGTH@ 5
+------DEL SimpleName@@j @AT@ 6872 @LENGTH@ 1
+------DEL Operator@@< @AT@ 6873 @LENGTH@ 1
+------DEL SimpleName@@p @AT@ 6876 @LENGTH@ 1
+---DEL PrefixExpression@@++j @AT@ 6879 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 6879 @LENGTH@ 2
+------DEL SimpleName@@j @AT@ 6881 @LENGTH@ 1
+---DEL ExpressionStatement@@Assignment:wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6914 @LENGTH@ 69
+------DEL Assignment@@wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6914 @LENGTH@ 68
+---------DEL ArrayAccess@@wData[p - 1][j] @AT@ 6914 @LENGTH@ 15
+------------DEL ArrayAccess@@wData[p - 1] @AT@ 6914 @LENGTH@ 12
+---------------DEL SimpleName@@wData @AT@ 6914 @LENGTH@ 5
+---------------DEL InfixExpression@@p - 1 @AT@ 6920 @LENGTH@ 5
+------------------DEL SimpleName@@p @AT@ 6920 @LENGTH@ 1
+------------------DEL Operator@@- @AT@ 6921 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 6924 @LENGTH@ 1
+------------DEL SimpleName@@j @AT@ 6927 @LENGTH@ 1
+---------DEL Operator@@= @AT@ 6929 @LENGTH@ 1
+---------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6932 @LENGTH@ 50
+------------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] @AT@ 6932 @LENGTH@ 30
+---------------DEL ArrayAccess@@ei1[j] @AT@ 6932 @LENGTH@ 6
+------------------DEL SimpleName@@ei1 @AT@ 6932 @LENGTH@ 3
+------------------DEL SimpleName@@j @AT@ 6936 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 6938 @LENGTH@ 1
+---------------DEL ArrayAccess@@mainBidiagonal[p - 1] @AT@ 6941 @LENGTH@ 21
+------------------DEL SimpleName@@mainBidiagonal @AT@ 6941 @LENGTH@ 14
+------------------DEL InfixExpression@@p - 1 @AT@ 6956 @LENGTH@ 5
+---------------------DEL SimpleName@@p @AT@ 6956 @LENGTH@ 1
+---------------------DEL Operator@@- @AT@ 6957 @LENGTH@ 1
+---------------------DEL NumberLiteral@@1 @AT@ 6960 @LENGTH@ 1
+------------DEL Operator@@/ @AT@ 6962 @LENGTH@ 1
+------------DEL ArrayAccess@@singularValues[j] @AT@ 6965 @LENGTH@ 17
+---------------DEL SimpleName@@singularValues @AT@ 6965 @LENGTH@ 14
+---------------DEL SimpleName@@j @AT@ 6980 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1); @TO@ final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1); @AT@ 8952 @LENGTH@ 100
+---UPD VariableDeclarationFragment@@e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ e=eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1) @AT@ 8969 @LENGTH@ 82
+------UPD MethodInvocation@@eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1) @AT@ 8993 @LENGTH@ 58
+---------UPD SimpleName@@MethodName:getSubMatrix:[0, p - 1, 0, p - 1] @TO@ MethodName:getSubMatrix:[0, m - 1, 0, p - 1] @AT@ 9019 @LENGTH@ 32
+------------UPD InfixExpression@@p - 1 @TO@ m - 1 @AT@ 9035 @LENGTH@ 5
+---------------UPD SimpleName@@p @TO@ m @AT@ 9035 @LENGTH@ 1
+, UPD ForStatement@@[int i=0];i < p - 1; [++i] @TO@ [int i=0];i < p; [++i] @AT@ 9223 @LENGTH@ 480
+---DEL InfixExpression@@i < p - 1 @AT@ 9239 @LENGTH@ 9
+---UPD PrefixExpression@@++i @TO@ ++j @AT@ 9250 @LENGTH@ 3
+------UPD SimpleName@@i @TO@ j @AT@ 9252 @LENGTH@ 1
+---INS InfixExpression@@i < p @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9294 @LENGTH@ 5
+------INS SimpleName@@i @TO@ InfixExpression@@i < p @AT@ 9294 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < p @AT@ 9295 @LENGTH@ 1
+------INS SimpleName@@p @TO@ InfixExpression@@i < p @AT@ 9298 @LENGTH@ 1
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9301 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9301 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9303 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:i < m - 1 @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9482 @LENGTH@ 491
+------MOV ExpressionStatement@@Assignment:ei1=eData[i + 1] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9435 @LENGTH@ 19
+------MOV VariableDeclarationStatement@@final double si=secondaryBidiagonal[i]; @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9479 @LENGTH@ 41
+------INS InfixExpression@@i < m - 1 @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9486 @LENGTH@ 9
+---------MOV SimpleName@@i @TO@ InfixExpression@@i < m - 1 @AT@ 9239 @LENGTH@ 1
+---------MOV Operator@@< @TO@ InfixExpression@@i < m - 1 @AT@ 9240 @LENGTH@ 1
+---------MOV InfixExpression@@p - 1 @TO@ InfixExpression@@i < m - 1 @AT@ 9243 @LENGTH@ 5
+------MOV ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9545 @LENGTH@ 140
+------INS ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9827 @LENGTH@ 124
+---------MOV PrefixExpression@@++i @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9250 @LENGTH@ 3
+---------MOV VariableDeclarationExpression@@int j=0 @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9733 @LENGTH@ 9
+---------INS InfixExpression@@j < p @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9843 @LENGTH@ 5
+------------INS SimpleName@@j @TO@ InfixExpression@@j < p @AT@ 9843 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@j < p @AT@ 9844 @LENGTH@ 1
+------------INS SimpleName@@p @TO@ InfixExpression@@j < p @AT@ 9847 @LENGTH@ 1
+---------INS ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9885 @LENGTH@ 40
+------------INS Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @TO@ ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9885 @LENGTH@ 39
+---------------INS ArrayAccess@@wi[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9885 @LENGTH@ 5
+------------------INS SimpleName@@wi @TO@ ArrayAccess@@wi[j] @AT@ 9885 @LENGTH@ 2
+------------------INS SimpleName@@j @TO@ ArrayAccess@@wi[j] @AT@ 9888 @LENGTH@ 1
+---------------INS Operator@@= @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9890 @LENGTH@ 1
+---------------INS InfixExpression@@mi * ei0[j] / singularValues[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9893 @LENGTH@ 31
+------------------INS InfixExpression@@mi * ei0[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9893 @LENGTH@ 11
+---------------------INS SimpleName@@mi @TO@ InfixExpression@@mi * ei0[j] @AT@ 9893 @LENGTH@ 2
+---------------------INS Operator@@* @TO@ InfixExpression@@mi * ei0[j] @AT@ 9895 @LENGTH@ 1
+---------------------INS ArrayAccess@@ei0[j] @TO@ InfixExpression@@mi * ei0[j] @AT@ 9898 @LENGTH@ 6
+------------------------INS SimpleName@@ei0 @TO@ ArrayAccess@@ei0[j] @AT@ 9898 @LENGTH@ 3
+------------------------INS SimpleName@@j @TO@ ArrayAccess@@ei0[j] @AT@ 9902 @LENGTH@ 1
+------------------INS Operator@@/ @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9904 @LENGTH@ 1
+------------------INS ArrayAccess@@singularValues[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9907 @LENGTH@ 17
+---------------------INS SimpleName@@singularValues @TO@ ArrayAccess@@singularValues[j] @AT@ 9907 @LENGTH@ 14
+---------------------INS SimpleName@@j @TO@ ArrayAccess@@singularValues[j] @AT@ 9922 @LENGTH@ 1
+, DEL ForStatement@@[int j=0];j < p; [++j] @AT@ 9728 @LENGTH@ 153
+---DEL InfixExpression@@j < p @AT@ 9744 @LENGTH@ 5
+------DEL SimpleName@@j @AT@ 9744 @LENGTH@ 1
+------DEL Operator@@< @AT@ 9745 @LENGTH@ 1
+------DEL SimpleName@@p @AT@ 9748 @LENGTH@ 1
+---DEL PrefixExpression@@++j @AT@ 9751 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 9751 @LENGTH@ 2
+------DEL SimpleName@@j @AT@ 9753 @LENGTH@ 1
+---DEL ExpressionStatement@@Assignment:wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9786 @LENGTH@ 69
+------DEL Assignment@@wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9786 @LENGTH@ 68
+---------DEL ArrayAccess@@wData[p - 1][j] @AT@ 9786 @LENGTH@ 15
+------------DEL ArrayAccess@@wData[p - 1] @AT@ 9786 @LENGTH@ 12
+---------------DEL SimpleName@@wData @AT@ 9786 @LENGTH@ 5
+---------------DEL InfixExpression@@p - 1 @AT@ 9792 @LENGTH@ 5
+------------------DEL SimpleName@@p @AT@ 9792 @LENGTH@ 1
+------------------DEL Operator@@- @AT@ 9793 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 9796 @LENGTH@ 1
+------------DEL SimpleName@@j @AT@ 9799 @LENGTH@ 1
+---------DEL Operator@@= @AT@ 9801 @LENGTH@ 1
+---------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9804 @LENGTH@ 50
+------------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] @AT@ 9804 @LENGTH@ 30
+---------------DEL ArrayAccess@@ei1[j] @AT@ 9804 @LENGTH@ 6
+------------------DEL SimpleName@@ei1 @AT@ 9804 @LENGTH@ 3
+------------------DEL SimpleName@@j @AT@ 9808 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 9810 @LENGTH@ 1
+---------------DEL ArrayAccess@@mainBidiagonal[p - 1] @AT@ 9813 @LENGTH@ 21
+------------------DEL SimpleName@@mainBidiagonal @AT@ 9813 @LENGTH@ 14
+------------------DEL InfixExpression@@p - 1 @AT@ 9828 @LENGTH@ 5
+---------------------DEL SimpleName@@p @AT@ 9828 @LENGTH@ 1
+---------------------DEL Operator@@- @AT@ 9829 @LENGTH@ 1
+---------------------DEL NumberLiteral@@1 @AT@ 9832 @LENGTH@ 1
+------------DEL Operator@@/ @AT@ 9834 @LENGTH@ 1
+------------DEL ArrayAccess@@singularValues[j] @AT@ 9837 @LENGTH@ 17
+---------------DEL SimpleName@@singularValues @AT@ 9837 @LENGTH@ 14
+---------------DEL SimpleName@@j @AT@ 9852 @LENGTH@ 1
+]
+
+CII:
+OP1:(UPD, ForStatement, null, OP2 OP3 OP5 OP9 OP12)
+OP2:   (DEL, InfixExpression, OP1, null)
+OP3:   (UPD, PrefixExpression, OP1, OP4)
+OP4:      (UPD, SimpleName, OP3, null)
+OP5:   (INS, InfixExpression, OP1, OP6 OP7 OP8)
+OP6:      (INS, SimpleName, OP5, null)
+OP7:      (INS, Operator, OP5, null)
+OP8:      (INS, SimpleName, OP5, null)
+OP9:   (INS, PrefixExpression, OP1, OP10 OP11)
+OP10:      (INS, Operator, OP9, null)
+OP11:      (INS, SimpleName, OP9, null)
+OP12:   (INS, IfStatement, OP1, OP13 OP14 OP15 OP19 OP20)
+OP13:      (MOV, ExpressionStatement, OP12, null)
+OP14:      (MOV, VariableDeclarationStatement, OP12, null)
+OP15:      (INS, InfixExpression, OP12, OP16 OP17 OP18)
+OP16:         (MOV, SimpleName, OP15, null)
+OP17:         (MOV, Operator, OP15, null)
+OP18:         (MOV, InfixExpression, OP15, null)
+OP19:      (MOV, ForStatement, OP12, null)
+OP20:      (INS, ForStatement, OP12, OP21 OP22 OP23 OP27)
+OP21:         (MOV, PrefixExpression, OP20, null)
+OP22:         (MOV, VariableDeclarationExpression, OP20, null)
+OP23:         (INS, InfixExpression, OP20, OP24 OP25 OP26)
+OP24:            (INS, SimpleName, OP23, null)
+OP25:            (INS, Operator, OP23, null)
+OP26:            (INS, SimpleName, OP23, null)
+OP27:         (INS, ExpressionStatement, OP20, OP28)
+OP28:            (INS, Assignment, OP27, OP29 OP32 OP33)
+OP29:               (INS, ArrayAccess, OP28, OP30 OP31)
+OP30:                  (INS, SimpleName, OP29, null)
+OP31:                  (INS, SimpleName, OP29, null)
+OP32:               (INS, Operator, OP28, null)
+OP33:               (INS, InfixExpression, OP28, OP34 OP40 OP41)
+OP34:                  (INS, InfixExpression, OP33, OP35 OP36 OP37)
+OP35:                     (INS, SimpleName, OP34, null)
+OP36:                     (INS, Operator, OP34, null)
+OP37:                     (INS, ArrayAccess, OP34, OP38 OP39)
+OP38:                        (INS, SimpleName, OP37, null)
+OP39:                        (INS, SimpleName, OP37, null)
+OP40:                  (INS, Operator, OP33, null)
+OP41:                  (INS, ArrayAccess, OP33, OP42 OP43)
+OP42:                     (INS, SimpleName, OP41, null)
+OP43:                     (INS, SimpleName, OP41, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1); @TO@ final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1); @AT@ 5999 @LENGTH@ 100
+---UPD VariableDeclarationFragment@@e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ e=eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1) @AT@ 6016 @LENGTH@ 82
+------UPD MethodInvocation@@eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ eigenDecomposition.getV().getSubMatrix(0,n - 1,0,p - 1) @AT@ 6040 @LENGTH@ 58
+---------UPD SimpleName@@MethodName:getSubMatrix:[0, p - 1, 0, p - 1] @TO@ MethodName:getSubMatrix:[0, n - 1, 0, p - 1] @AT@ 6066 @LENGTH@ 32
+------------UPD InfixExpression@@p - 1 @TO@ n - 1 @AT@ 6082 @LENGTH@ 5
+---------------UPD SimpleName@@p @TO@ n @AT@ 6082 @LENGTH@ 1
+, UPD ForStatement@@[int i=0];i < p - 1; [++i] @TO@ [int i=0];i < p; [++i] @AT@ 6270 @LENGTH@ 561
+---INS InfixExpression@@i < p @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6286 @LENGTH@ 5
+------INS SimpleName@@i @TO@ InfixExpression@@i < p @AT@ 6286 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < p @AT@ 6287 @LENGTH@ 1
+------INS SimpleName@@p @TO@ InfixExpression@@i < p @AT@ 6290 @LENGTH@ 1
+---DEL InfixExpression@@i < p - 1 @AT@ 6286 @LENGTH@ 9
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6293 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 6293 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 6295 @LENGTH@ 1
+---UPD PrefixExpression@@++i @TO@ ++j @AT@ 6297 @LENGTH@ 3
+------UPD SimpleName@@i @TO@ j @AT@ 6299 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:i < n - 1 @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 6555 @LENGTH@ 491
+------INS InfixExpression@@i < n - 1 @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6559 @LENGTH@ 9
+---------MOV SimpleName@@i @TO@ InfixExpression@@i < n - 1 @AT@ 6286 @LENGTH@ 1
+---------MOV Operator@@< @TO@ InfixExpression@@i < n - 1 @AT@ 6287 @LENGTH@ 1
+---------MOV InfixExpression@@p - 1 @TO@ InfixExpression@@i < n - 1 @AT@ 6290 @LENGTH@ 5
+------MOV ExpressionStatement@@Assignment:ei1=eData[i + 1] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6563 @LENGTH@ 19
+------MOV VariableDeclarationStatement@@final double si=secondaryBidiagonal[i]; @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6607 @LENGTH@ 41
+------MOV ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6673 @LENGTH@ 140
+------INS ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < n - 1 @AT@ 6900 @LENGTH@ 124
+---------MOV PrefixExpression@@++i @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6297 @LENGTH@ 3
+---------MOV VariableDeclarationExpression@@int j=0 @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6861 @LENGTH@ 9
+---------INS InfixExpression@@j < p @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6916 @LENGTH@ 5
+------------INS SimpleName@@j @TO@ InfixExpression@@j < p @AT@ 6916 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@j < p @AT@ 6917 @LENGTH@ 1
+------------INS SimpleName@@p @TO@ InfixExpression@@j < p @AT@ 6920 @LENGTH@ 1
+---------INS ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 6958 @LENGTH@ 40
+------------INS Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @TO@ ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6958 @LENGTH@ 39
+---------------INS ArrayAccess@@wi[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6958 @LENGTH@ 5
+------------------INS SimpleName@@wi @TO@ ArrayAccess@@wi[j] @AT@ 6958 @LENGTH@ 2
+------------------INS SimpleName@@j @TO@ ArrayAccess@@wi[j] @AT@ 6961 @LENGTH@ 1
+---------------INS Operator@@= @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6963 @LENGTH@ 1
+---------------INS InfixExpression@@mi * ei0[j] / singularValues[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 6966 @LENGTH@ 31
+------------------INS InfixExpression@@mi * ei0[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6966 @LENGTH@ 11
+---------------------INS SimpleName@@mi @TO@ InfixExpression@@mi * ei0[j] @AT@ 6966 @LENGTH@ 2
+---------------------INS Operator@@* @TO@ InfixExpression@@mi * ei0[j] @AT@ 6968 @LENGTH@ 1
+---------------------INS ArrayAccess@@ei0[j] @TO@ InfixExpression@@mi * ei0[j] @AT@ 6971 @LENGTH@ 6
+------------------------INS SimpleName@@ei0 @TO@ ArrayAccess@@ei0[j] @AT@ 6971 @LENGTH@ 3
+------------------------INS SimpleName@@j @TO@ ArrayAccess@@ei0[j] @AT@ 6975 @LENGTH@ 1
+------------------INS Operator@@/ @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6977 @LENGTH@ 1
+------------------INS ArrayAccess@@singularValues[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 6980 @LENGTH@ 17
+---------------------INS SimpleName@@singularValues @TO@ ArrayAccess@@singularValues[j] @AT@ 6980 @LENGTH@ 14
+---------------------INS SimpleName@@j @TO@ ArrayAccess@@singularValues[j] @AT@ 6995 @LENGTH@ 1
+, DEL ForStatement@@[int j=0];j < p; [++j] @AT@ 6856 @LENGTH@ 153
+---DEL InfixExpression@@j < p @AT@ 6872 @LENGTH@ 5
+------DEL SimpleName@@j @AT@ 6872 @LENGTH@ 1
+------DEL Operator@@< @AT@ 6873 @LENGTH@ 1
+------DEL SimpleName@@p @AT@ 6876 @LENGTH@ 1
+---DEL PrefixExpression@@++j @AT@ 6879 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 6879 @LENGTH@ 2
+------DEL SimpleName@@j @AT@ 6881 @LENGTH@ 1
+---DEL ExpressionStatement@@Assignment:wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6914 @LENGTH@ 69
+------DEL Assignment@@wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6914 @LENGTH@ 68
+---------DEL ArrayAccess@@wData[p - 1][j] @AT@ 6914 @LENGTH@ 15
+------------DEL ArrayAccess@@wData[p - 1] @AT@ 6914 @LENGTH@ 12
+---------------DEL SimpleName@@wData @AT@ 6914 @LENGTH@ 5
+---------------DEL InfixExpression@@p - 1 @AT@ 6920 @LENGTH@ 5
+------------------DEL SimpleName@@p @AT@ 6920 @LENGTH@ 1
+------------------DEL Operator@@- @AT@ 6921 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 6924 @LENGTH@ 1
+------------DEL SimpleName@@j @AT@ 6927 @LENGTH@ 1
+---------DEL Operator@@= @AT@ 6929 @LENGTH@ 1
+---------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 6932 @LENGTH@ 50
+------------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] @AT@ 6932 @LENGTH@ 30
+---------------DEL ArrayAccess@@ei1[j] @AT@ 6932 @LENGTH@ 6
+------------------DEL SimpleName@@ei1 @AT@ 6932 @LENGTH@ 3
+------------------DEL SimpleName@@j @AT@ 6936 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 6938 @LENGTH@ 1
+---------------DEL ArrayAccess@@mainBidiagonal[p - 1] @AT@ 6941 @LENGTH@ 21
+------------------DEL SimpleName@@mainBidiagonal @AT@ 6941 @LENGTH@ 14
+------------------DEL InfixExpression@@p - 1 @AT@ 6956 @LENGTH@ 5
+---------------------DEL SimpleName@@p @AT@ 6956 @LENGTH@ 1
+---------------------DEL Operator@@- @AT@ 6957 @LENGTH@ 1
+---------------------DEL NumberLiteral@@1 @AT@ 6960 @LENGTH@ 1
+------------DEL Operator@@/ @AT@ 6962 @LENGTH@ 1
+------------DEL ArrayAccess@@singularValues[j] @AT@ 6965 @LENGTH@ 17
+---------------DEL SimpleName@@singularValues @AT@ 6965 @LENGTH@ 14
+---------------DEL SimpleName@@j @AT@ 6980 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1); @TO@ final RealMatrix e=eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1); @AT@ 8952 @LENGTH@ 100
+---UPD VariableDeclarationFragment@@e=eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ e=eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1) @AT@ 8969 @LENGTH@ 82
+------UPD MethodInvocation@@eigenDecomposition.getV().getSubMatrix(0,p - 1,0,p - 1) @TO@ eigenDecomposition.getV().getSubMatrix(0,m - 1,0,p - 1) @AT@ 8993 @LENGTH@ 58
+---------UPD SimpleName@@MethodName:getSubMatrix:[0, p - 1, 0, p - 1] @TO@ MethodName:getSubMatrix:[0, m - 1, 0, p - 1] @AT@ 9019 @LENGTH@ 32
+------------UPD InfixExpression@@p - 1 @TO@ m - 1 @AT@ 9035 @LENGTH@ 5
+---------------UPD SimpleName@@p @TO@ m @AT@ 9035 @LENGTH@ 1
+, UPD ForStatement@@[int i=0];i < p - 1; [++i] @TO@ [int i=0];i < p; [++i] @AT@ 9223 @LENGTH@ 480
+---DEL InfixExpression@@i < p - 1 @AT@ 9239 @LENGTH@ 9
+---UPD PrefixExpression@@++i @TO@ ++j @AT@ 9250 @LENGTH@ 3
+------UPD SimpleName@@i @TO@ j @AT@ 9252 @LENGTH@ 1
+---INS InfixExpression@@i < p @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9294 @LENGTH@ 5
+------INS SimpleName@@i @TO@ InfixExpression@@i < p @AT@ 9294 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < p @AT@ 9295 @LENGTH@ 1
+------INS SimpleName@@p @TO@ InfixExpression@@i < p @AT@ 9298 @LENGTH@ 1
+---INS PrefixExpression@@++i @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9301 @LENGTH@ 3
+------INS Operator@@++ @TO@ PrefixExpression@@++i @AT@ 9301 @LENGTH@ 2
+------INS SimpleName@@i @TO@ PrefixExpression@@++i @AT@ 9303 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:i < m - 1 @TO@ ForStatement@@[int i=0];i < p - 1; [++i] @AT@ 9482 @LENGTH@ 491
+------MOV ExpressionStatement@@Assignment:ei1=eData[i + 1] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9435 @LENGTH@ 19
+------MOV VariableDeclarationStatement@@final double si=secondaryBidiagonal[i]; @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9479 @LENGTH@ 41
+------INS InfixExpression@@i < m - 1 @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9486 @LENGTH@ 9
+---------MOV SimpleName@@i @TO@ InfixExpression@@i < m - 1 @AT@ 9239 @LENGTH@ 1
+---------MOV Operator@@< @TO@ InfixExpression@@i < m - 1 @AT@ 9240 @LENGTH@ 1
+---------MOV InfixExpression@@p - 1 @TO@ InfixExpression@@i < m - 1 @AT@ 9243 @LENGTH@ 5
+------MOV ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9545 @LENGTH@ 140
+------INS ForStatement@@[int j=0];j < p; [++j] @TO@ IfStatement@@InfixExpression:i < m - 1 @AT@ 9827 @LENGTH@ 124
+---------MOV PrefixExpression@@++i @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9250 @LENGTH@ 3
+---------MOV VariableDeclarationExpression@@int j=0 @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9733 @LENGTH@ 9
+---------INS InfixExpression@@j < p @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9843 @LENGTH@ 5
+------------INS SimpleName@@j @TO@ InfixExpression@@j < p @AT@ 9843 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@j < p @AT@ 9844 @LENGTH@ 1
+------------INS SimpleName@@p @TO@ InfixExpression@@j < p @AT@ 9847 @LENGTH@ 1
+---------INS ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @TO@ ForStatement@@[int j=0];j < p; [++j] @AT@ 9885 @LENGTH@ 40
+------------INS Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @TO@ ExpressionStatement@@Assignment:wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9885 @LENGTH@ 39
+---------------INS ArrayAccess@@wi[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9885 @LENGTH@ 5
+------------------INS SimpleName@@wi @TO@ ArrayAccess@@wi[j] @AT@ 9885 @LENGTH@ 2
+------------------INS SimpleName@@j @TO@ ArrayAccess@@wi[j] @AT@ 9888 @LENGTH@ 1
+---------------INS Operator@@= @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9890 @LENGTH@ 1
+---------------INS InfixExpression@@mi * ei0[j] / singularValues[j] @TO@ Assignment@@wi[j]=mi * ei0[j] / singularValues[j] @AT@ 9893 @LENGTH@ 31
+------------------INS InfixExpression@@mi * ei0[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9893 @LENGTH@ 11
+---------------------INS SimpleName@@mi @TO@ InfixExpression@@mi * ei0[j] @AT@ 9893 @LENGTH@ 2
+---------------------INS Operator@@* @TO@ InfixExpression@@mi * ei0[j] @AT@ 9895 @LENGTH@ 1
+---------------------INS ArrayAccess@@ei0[j] @TO@ InfixExpression@@mi * ei0[j] @AT@ 9898 @LENGTH@ 6
+------------------------INS SimpleName@@ei0 @TO@ ArrayAccess@@ei0[j] @AT@ 9898 @LENGTH@ 3
+------------------------INS SimpleName@@j @TO@ ArrayAccess@@ei0[j] @AT@ 9902 @LENGTH@ 1
+------------------INS Operator@@/ @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9904 @LENGTH@ 1
+------------------INS ArrayAccess@@singularValues[j] @TO@ InfixExpression@@mi * ei0[j] / singularValues[j] @AT@ 9907 @LENGTH@ 17
+---------------------INS SimpleName@@singularValues @TO@ ArrayAccess@@singularValues[j] @AT@ 9907 @LENGTH@ 14
+---------------------INS SimpleName@@j @TO@ ArrayAccess@@singularValues[j] @AT@ 9922 @LENGTH@ 1
+, DEL ForStatement@@[int j=0];j < p; [++j] @AT@ 9728 @LENGTH@ 153
+---DEL InfixExpression@@j < p @AT@ 9744 @LENGTH@ 5
+------DEL SimpleName@@j @AT@ 9744 @LENGTH@ 1
+------DEL Operator@@< @AT@ 9745 @LENGTH@ 1
+------DEL SimpleName@@p @AT@ 9748 @LENGTH@ 1
+---DEL PrefixExpression@@++j @AT@ 9751 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 9751 @LENGTH@ 2
+------DEL SimpleName@@j @AT@ 9753 @LENGTH@ 1
+---DEL ExpressionStatement@@Assignment:wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9786 @LENGTH@ 69
+------DEL Assignment@@wData[p - 1][j]=ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9786 @LENGTH@ 68
+---------DEL ArrayAccess@@wData[p - 1][j] @AT@ 9786 @LENGTH@ 15
+------------DEL ArrayAccess@@wData[p - 1] @AT@ 9786 @LENGTH@ 12
+---------------DEL SimpleName@@wData @AT@ 9786 @LENGTH@ 5
+---------------DEL InfixExpression@@p - 1 @AT@ 9792 @LENGTH@ 5
+------------------DEL SimpleName@@p @AT@ 9792 @LENGTH@ 1
+------------------DEL Operator@@- @AT@ 9793 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 9796 @LENGTH@ 1
+------------DEL SimpleName@@j @AT@ 9799 @LENGTH@ 1
+---------DEL Operator@@= @AT@ 9801 @LENGTH@ 1
+---------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] / singularValues[j] @AT@ 9804 @LENGTH@ 50
+------------DEL InfixExpression@@ei1[j] * mainBidiagonal[p - 1] @AT@ 9804 @LENGTH@ 30
+---------------DEL ArrayAccess@@ei1[j] @AT@ 9804 @LENGTH@ 6
+------------------DEL SimpleName@@ei1 @AT@ 9804 @LENGTH@ 3
+------------------DEL SimpleName@@j @AT@ 9808 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 9810 @LENGTH@ 1
+---------------DEL ArrayAccess@@mainBidiagonal[p - 1] @AT@ 9813 @LENGTH@ 21
+------------------DEL SimpleName@@mainBidiagonal @AT@ 9813 @LENGTH@ 14
+------------------DEL InfixExpression@@p - 1 @AT@ 9828 @LENGTH@ 5
+---------------------DEL SimpleName@@p @AT@ 9828 @LENGTH@ 1
+---------------------DEL Operator@@- @AT@ 9829 @LENGTH@ 1
+---------------------DEL NumberLiteral@@1 @AT@ 9832 @LENGTH@ 1
+------------DEL Operator@@/ @AT@ 9834 @LENGTH@ 1
+------------DEL ArrayAccess@@singularValues[j] @AT@ 9837 @LENGTH@ 17
+---------------DEL SimpleName@@singularValues @AT@ 9837 @LENGTH@ 14
+---------------DEL SimpleName@@j @AT@ 9852 @LENGTH@ 1
+]
+
+CII:
+OP1:(DEL, ForStatement, null, OP2 OP6 OP9)
+OP2:   (DEL, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, SimpleName, OP2, null)
+OP6:   (DEL, PrefixExpression, OP1, OP7 OP8)
+OP7:      (DEL, Operator, OP6, null)
+OP8:      (DEL, SimpleName, OP6, null)
+OP9:   (DEL, ExpressionStatement, OP1, OP10)
+OP10:      (DEL, Assignment, OP9, OP11 OP19 OP20)
+OP11:         (DEL, ArrayAccess, OP10, OP12 OP18)
+OP12:            (DEL, ArrayAccess, OP11, OP13 OP14)
+OP13:               (DEL, SimpleName, OP12, null)
+OP14:               (DEL, InfixExpression, OP12, OP15 OP16 OP17)
+OP15:                  (DEL, SimpleName, OP14, null)
+OP16:                  (DEL, Operator, OP14, null)
+OP17:                  (DEL, NumberLiteral, OP14, null)
+OP18:            (DEL, SimpleName, OP11, null)
+OP19:         (DEL, Operator, OP10, null)
+OP20:         (DEL, InfixExpression, OP10, OP21 OP32 OP33)
+OP21:            (DEL, InfixExpression, OP20, OP22 OP25 OP26)
+OP22:               (DEL, ArrayAccess, OP21, OP23 OP24)
+OP23:                  (DEL, SimpleName, OP22, null)
+OP24:                  (DEL, SimpleName, OP22, null)
+OP25:               (DEL, Operator, OP21, null)
+OP26:               (DEL, ArrayAccess, OP21, OP27 OP28)
+OP27:                  (DEL, SimpleName, OP26, null)
+OP28:                  (DEL, InfixExpression, OP26, OP29 OP30 OP31)
+OP29:                     (DEL, SimpleName, OP28, null)
+OP30:                     (DEL, Operator, OP28, null)
+OP31:                     (DEL, NumberLiteral, OP28, null)
+OP32:            (DEL, Operator, OP20, null)
+OP33:            (DEL, ArrayAccess, OP20, OP34 OP35)
+OP34:               (DEL, SimpleName, OP33, null)
+OP35:               (DEL, SimpleName, OP33, null)
+
+
+

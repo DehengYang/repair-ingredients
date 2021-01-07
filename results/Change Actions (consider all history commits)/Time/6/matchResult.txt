@@ -1,0 +1,30 @@
+No.2 CCI matched.
+freq: 5
+CommitIds: ad8e643d 9316fce1 9316fce1 9316fce1 9316fce1 
+FreqRank:42
+
+No.3 CCI matched.
+freq: 5
+CommitIds: ad8e643d 9316fce1 9316fce1 9316fce1 9316fce1 
+FreqRank:42
+
+No.4 CCI matched.
+freq: 6
+CommitIds: cf0112ca c954b53a c954b53a bffc316f 6c6142b2 6c6142b2 
+FreqRank:41
+
+No.6 CCI matched.
+freq: 5
+CommitIds: ad8e643d 9316fce1 9316fce1 9316fce1 9316fce1 
+FreqRank:42
+
+No.7 CCI matched.
+freq: 5
+CommitIds: ad8e643d 9316fce1 9316fce1 9316fce1 9316fce1 
+FreqRank:42
+
+No.8 CCI matched.
+freq: 6
+CommitIds: cf0112ca c954b53a c954b53a bffc316f 6c6142b2 6c6142b2 
+FreqRank:41
+

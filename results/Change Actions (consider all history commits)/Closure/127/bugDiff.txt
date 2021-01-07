@@ -1,0 +1,28 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_127/src/com/google/javascript/jscomp/UnreachableCodeElimination.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_127/src/com/google/javascript/jscomp/UnreachableCodeElimination.java
+--- ../d4j-repo/Closure/Closure_127/src/com/google/javascript/jscomp/UnreachableCodeElimination.java	2021-01-06 03:49:31.143765196 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_127/src/com/google/javascript/jscomp/UnreachableCodeElimination.java	2021-01-06 03:49:34.167868209 -0800
+@@ -167,13 +167,22 @@
+                 outEdges.get(0).getValue() == Branch.UNCOND);
+             Node fallThrough = computeFollowing(n);
+             Node nextCfgNode = outEdges.get(0).getDestination().getValue();
+-            if (nextCfgNode == fallThrough) {
++            if (nextCfgNode == fallThrough && !inFinally(n.getParent(), n)) {
+               removeNode(n);
+             }
+           }
+       }
+     }
+ 
++    private boolean inFinally(Node parent, Node child) {
++      if (parent == null || parent.isFunction()) {
++        return false;
++      } else if (NodeUtil.isTryFinallyNode(parent, child)) {
++        return true;
++      } else {
++        return inFinally(parent.getParent(), parent);
++      }
++    }
+ 
+     private Node computeFollowing(Node n) {
+       Node next = ControlFlowAnalysis.computeFollowNode(n);

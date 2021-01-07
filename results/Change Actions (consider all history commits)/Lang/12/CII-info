@@ -1,0 +1,111 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:chars != null && chars.length == 0 @TO@ MethodDeclaration@@public, static, @@String, MethodName:random, @@Argus:int+count+int+start+int+end+boolean+letters+boolean+numbers+char[]+chars+Random+random+ @AT@ 8986 @LENGTH@ 136
+---INS InfixExpression@@chars != null && chars.length == 0 @TO@ IfStatement@@InfixExpression:chars != null && chars.length == 0 @AT@ 8990 @LENGTH@ 34
+------INS InfixExpression@@chars != null @TO@ InfixExpression@@chars != null && chars.length == 0 @AT@ 8990 @LENGTH@ 13
+---------INS SimpleName@@chars @TO@ InfixExpression@@chars != null @AT@ 8990 @LENGTH@ 5
+---------INS Operator@@!= @TO@ InfixExpression@@chars != null @AT@ 8995 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@chars != null @AT@ 8999 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@chars != null && chars.length == 0 @AT@ 9003 @LENGTH@ 2
+------INS InfixExpression@@chars.length == 0 @TO@ InfixExpression@@chars != null && chars.length == 0 @AT@ 9007 @LENGTH@ 17
+---------INS QualifiedName@@chars.length @TO@ InfixExpression@@chars.length == 0 @AT@ 9007 @LENGTH@ 12
+------------INS SimpleName@@chars @TO@ QualifiedName@@chars.length @AT@ 9007 @LENGTH@ 5
+------------INS SimpleName@@length @TO@ QualifiedName@@chars.length @AT@ 9013 @LENGTH@ 6
+---------INS Operator@@== @TO@ InfixExpression@@chars.length == 0 @AT@ 9019 @LENGTH@ 2
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@chars.length == 0 @AT@ 9023 @LENGTH@ 1
+---INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("The chars array must not be empty") @TO@ IfStatement@@InfixExpression:chars != null && chars.length == 0 @AT@ 9040 @LENGTH@ 72
+------INS ClassInstanceCreation@@IllegalArgumentException["The chars array must not be empty"] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("The chars array must not be empty") @AT@ 9046 @LENGTH@ 65
+---------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["The chars array must not be empty"] @AT@ 9046 @LENGTH@ 3
+---------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["The chars array must not be empty"] @AT@ 9050 @LENGTH@ 24
+---------INS StringLiteral@@"The chars array must not be empty" @TO@ ClassInstanceCreation@@IllegalArgumentException["The chars array must not be empty"] @AT@ 9075 @LENGTH@ 35
+, INS IfStatement@@InfixExpression:chars != null @TO@ IfStatement@@InfixExpression:start == 0 && end == 0 @AT@ 9174 @LENGTH@ 307
+---MOV IfStatement@@InfixExpression:!letters && !numbers @TO@ IfStatement@@InfixExpression:chars != null @AT@ 9033 @LENGTH@ 199
+---INS InfixExpression@@chars != null @TO@ IfStatement@@InfixExpression:chars != null @AT@ 9178 @LENGTH@ 13
+------INS SimpleName@@chars @TO@ InfixExpression@@chars != null @AT@ 9178 @LENGTH@ 5
+------INS Operator@@!= @TO@ InfixExpression@@chars != null @AT@ 9183 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@chars != null @AT@ 9187 @LENGTH@ 4
+---INS ExpressionStatement@@Assignment:end=chars.length @TO@ IfStatement@@InfixExpression:chars != null @AT@ 9211 @LENGTH@ 19
+------INS Assignment@@end=chars.length @TO@ ExpressionStatement@@Assignment:end=chars.length @AT@ 9211 @LENGTH@ 18
+---------INS SimpleName@@end @TO@ Assignment@@end=chars.length @AT@ 9211 @LENGTH@ 3
+---------INS Operator@@= @TO@ Assignment@@end=chars.length @AT@ 9214 @LENGTH@ 1
+---------INS QualifiedName@@chars.length @TO@ Assignment@@end=chars.length @AT@ 9217 @LENGTH@ 12
+------------INS SimpleName@@chars @TO@ QualifiedName@@chars.length @AT@ 9217 @LENGTH@ 5
+------------INS SimpleName@@length @TO@ QualifiedName@@chars.length @AT@ 9223 @LENGTH@ 6
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP14)
+OP2:   (INS, InfixExpression, OP1, OP3 OP7 OP8)
+OP3:      (INS, InfixExpression, OP2, OP4 OP5 OP6)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, Operator, OP3, null)
+OP6:         (INS, NullLiteral, OP3, null)
+OP7:      (INS, Operator, OP2, null)
+OP8:      (INS, InfixExpression, OP2, OP9 OP12 OP13)
+OP9:         (INS, QualifiedName, OP8, OP10 OP11)
+OP10:            (INS, SimpleName, OP9, null)
+OP11:            (INS, SimpleName, OP9, null)
+OP12:         (INS, Operator, OP8, null)
+OP13:         (INS, NumberLiteral, OP8, null)
+OP14:   (INS, ThrowStatement, OP1, OP15)
+OP15:      (INS, ClassInstanceCreation, OP14, OP16 OP17 OP18)
+OP16:         (INS, New, OP15, null)
+OP17:         (INS, SimpleType, OP15, null)
+OP18:         (INS, StringLiteral, OP15, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:chars != null && chars.length == 0 @TO@ MethodDeclaration@@public, static, @@String, MethodName:random, @@Argus:int+count+int+start+int+end+boolean+letters+boolean+numbers+char[]+chars+Random+random+ @AT@ 8986 @LENGTH@ 136
+---INS InfixExpression@@chars != null && chars.length == 0 @TO@ IfStatement@@InfixExpression:chars != null && chars.length == 0 @AT@ 8990 @LENGTH@ 34
+------INS InfixExpression@@chars != null @TO@ InfixExpression@@chars != null && chars.length == 0 @AT@ 8990 @LENGTH@ 13
+---------INS SimpleName@@chars @TO@ InfixExpression@@chars != null @AT@ 8990 @LENGTH@ 5
+---------INS Operator@@!= @TO@ InfixExpression@@chars != null @AT@ 8995 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@chars != null @AT@ 8999 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@chars != null && chars.length == 0 @AT@ 9003 @LENGTH@ 2
+------INS InfixExpression@@chars.length == 0 @TO@ InfixExpression@@chars != null && chars.length == 0 @AT@ 9007 @LENGTH@ 17
+---------INS QualifiedName@@chars.length @TO@ InfixExpression@@chars.length == 0 @AT@ 9007 @LENGTH@ 12
+------------INS SimpleName@@chars @TO@ QualifiedName@@chars.length @AT@ 9007 @LENGTH@ 5
+------------INS SimpleName@@length @TO@ QualifiedName@@chars.length @AT@ 9013 @LENGTH@ 6
+---------INS Operator@@== @TO@ InfixExpression@@chars.length == 0 @AT@ 9019 @LENGTH@ 2
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@chars.length == 0 @AT@ 9023 @LENGTH@ 1
+---INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("The chars array must not be empty") @TO@ IfStatement@@InfixExpression:chars != null && chars.length == 0 @AT@ 9040 @LENGTH@ 72
+------INS ClassInstanceCreation@@IllegalArgumentException["The chars array must not be empty"] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("The chars array must not be empty") @AT@ 9046 @LENGTH@ 65
+---------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["The chars array must not be empty"] @AT@ 9046 @LENGTH@ 3
+---------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["The chars array must not be empty"] @AT@ 9050 @LENGTH@ 24
+---------INS StringLiteral@@"The chars array must not be empty" @TO@ ClassInstanceCreation@@IllegalArgumentException["The chars array must not be empty"] @AT@ 9075 @LENGTH@ 35
+, INS IfStatement@@InfixExpression:chars != null @TO@ IfStatement@@InfixExpression:start == 0 && end == 0 @AT@ 9174 @LENGTH@ 307
+---MOV IfStatement@@InfixExpression:!letters && !numbers @TO@ IfStatement@@InfixExpression:chars != null @AT@ 9033 @LENGTH@ 199
+---INS InfixExpression@@chars != null @TO@ IfStatement@@InfixExpression:chars != null @AT@ 9178 @LENGTH@ 13
+------INS SimpleName@@chars @TO@ InfixExpression@@chars != null @AT@ 9178 @LENGTH@ 5
+------INS Operator@@!= @TO@ InfixExpression@@chars != null @AT@ 9183 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@chars != null @AT@ 9187 @LENGTH@ 4
+---INS ExpressionStatement@@Assignment:end=chars.length @TO@ IfStatement@@InfixExpression:chars != null @AT@ 9211 @LENGTH@ 19
+------INS Assignment@@end=chars.length @TO@ ExpressionStatement@@Assignment:end=chars.length @AT@ 9211 @LENGTH@ 18
+---------INS SimpleName@@end @TO@ Assignment@@end=chars.length @AT@ 9211 @LENGTH@ 3
+---------INS Operator@@= @TO@ Assignment@@end=chars.length @AT@ 9214 @LENGTH@ 1
+---------INS QualifiedName@@chars.length @TO@ Assignment@@end=chars.length @AT@ 9217 @LENGTH@ 12
+------------INS SimpleName@@chars @TO@ QualifiedName@@chars.length @AT@ 9217 @LENGTH@ 5
+------------INS SimpleName@@length @TO@ QualifiedName@@chars.length @AT@ 9223 @LENGTH@ 6
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3 OP7)
+OP2:   (MOV, IfStatement, OP1, null)
+OP3:   (INS, InfixExpression, OP1, OP4 OP5 OP6)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, Operator, OP3, null)
+OP6:      (INS, NullLiteral, OP3, null)
+OP7:   (INS, ExpressionStatement, OP1, OP8)
+OP8:      (INS, Assignment, OP7, OP9 OP10 OP11)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, Operator, OP8, null)
+OP11:         (INS, QualifiedName, OP8, OP12 OP13)
+OP12:            (INS, SimpleName, OP11, null)
+OP13:            (INS, SimpleName, OP11, null)
+
+
+

@@ -1,0 +1,22 @@
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, FieldAccess, OP2, OP4)
+OP4:         (UPD, MethodInvocation, OP3, OP5)
+OP5:            (UPD, SimpleName, OP4, null)
+
+
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, FieldAccess, OP2, OP4)
+OP4:         (UPD, MethodInvocation, OP3, OP5)
+OP5:            (UPD, SimpleName, OP4, null)
+
+
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, ArrayCreation, OP2, OP4)
+OP4:         (UPD, FieldAccess, OP3, OP5)
+OP5:            (UPD, MethodInvocation, OP4, OP6)
+OP6:               (UPD, SimpleName, OP5, null)
+
+

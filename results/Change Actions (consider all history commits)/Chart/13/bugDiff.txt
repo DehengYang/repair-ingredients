@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Chart/Chart_13/source/org/jfree/chart/block/BorderArrangement.java ../d4j-repo/fixed_bugs_dir/Chart/Chart_13/source/org/jfree/chart/block/BorderArrangement.java
+--- ../d4j-repo/Chart/Chart_13/source/org/jfree/chart/block/BorderArrangement.java	2021-01-03 07:20:31.857695126 -0800
++++ ../d4j-repo/fixed_bugs_dir/Chart/Chart_13/source/org/jfree/chart/block/BorderArrangement.java	2021-01-03 07:20:33.805766859 -0800
+@@ -452,7 +452,7 @@
+         h[3] = h[2];
+         if (this.rightBlock != null) {
+             RectangleConstraint c4 = new RectangleConstraint(0.0,
+-                    new Range(0.0, constraint.getWidth() - w[2]),
++                    new Range(0.0, Math.max(constraint.getWidth() - w[2], 0.0)),
+                     LengthConstraintType.RANGE, h[2], null,
+                     LengthConstraintType.FIXED);
+             Size2D size = this.rightBlock.arrange(g2, c4);

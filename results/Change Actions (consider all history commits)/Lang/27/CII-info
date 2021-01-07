@@ -1,0 +1,105 @@
+
+
+hASList: 
+[UPD IfStatement@@InfixExpression:expPos < decPos @TO@ InfixExpression:expPos < decPos || expPos > str.length() @AT@ 16918 @LENGTH@ 126
+---INS InfixExpression@@expPos < decPos || expPos > str.length() @TO@ IfStatement@@InfixExpression:expPos < decPos @AT@ 16922 @LENGTH@ 40
+------INS InfixExpression@@expPos < decPos @TO@ InfixExpression@@expPos < decPos || expPos > str.length() @AT@ 16922 @LENGTH@ 15
+---------MOV SimpleName@@expPos @TO@ InfixExpression@@expPos < decPos @AT@ 16922 @LENGTH@ 6
+---------MOV Operator@@< @TO@ InfixExpression@@expPos < decPos @AT@ 16928 @LENGTH@ 1
+---------MOV SimpleName@@decPos @TO@ InfixExpression@@expPos < decPos @AT@ 16931 @LENGTH@ 6
+------INS Operator@@|| @TO@ InfixExpression@@expPos < decPos || expPos > str.length() @AT@ 16937 @LENGTH@ 2
+------INS InfixExpression@@expPos > str.length() @TO@ InfixExpression@@expPos < decPos || expPos > str.length() @AT@ 16941 @LENGTH@ 21
+---------INS SimpleName@@expPos @TO@ InfixExpression@@expPos > str.length() @AT@ 16941 @LENGTH@ 6
+---------INS Operator@@> @TO@ InfixExpression@@expPos > str.length() @AT@ 16947 @LENGTH@ 1
+---------INS MethodInvocation@@str.length() @TO@ InfixExpression@@expPos > str.length() @AT@ 16950 @LENGTH@ 12
+------------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.length() @AT@ 16950 @LENGTH@ 3
+------------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@str.length() @AT@ 16954 @LENGTH@ 8
+---DEL InfixExpression@@expPos < decPos @AT@ 16922 @LENGTH@ 15
+, INS IfStatement@@InfixExpression:expPos > str.length() @TO@ IfStatement@@InfixExpression:expPos > -1 @AT@ 17320 @LENGTH@ 132
+---INS InfixExpression@@expPos > str.length() @TO@ IfStatement@@InfixExpression:expPos > str.length() @AT@ 17324 @LENGTH@ 21
+------INS SimpleName@@expPos @TO@ InfixExpression@@expPos > str.length() @AT@ 17324 @LENGTH@ 6
+------INS Operator@@> @TO@ InfixExpression@@expPos > str.length() @AT@ 17330 @LENGTH@ 1
+------INS MethodInvocation@@str.length() @TO@ InfixExpression@@expPos > str.length() @AT@ 17333 @LENGTH@ 12
+---------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.length() @AT@ 17333 @LENGTH@ 3
+---------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@str.length() @AT@ 17337 @LENGTH@ 8
+---INS ThrowStatement@@ClassInstanceCreation:new NumberFormatException(str + " is not a valid number.") @TO@ IfStatement@@InfixExpression:expPos > str.length() @AT@ 17369 @LENGTH@ 65
+------INS ClassInstanceCreation@@NumberFormatException[str + " is not a valid number."] @TO@ ThrowStatement@@ClassInstanceCreation:new NumberFormatException(str + " is not a valid number.") @AT@ 17375 @LENGTH@ 58
+---------INS New@@new @TO@ ClassInstanceCreation@@NumberFormatException[str + " is not a valid number."] @AT@ 17375 @LENGTH@ 3
+---------INS SimpleType@@NumberFormatException @TO@ ClassInstanceCreation@@NumberFormatException[str + " is not a valid number."] @AT@ 17379 @LENGTH@ 21
+---------INS InfixExpression@@str + " is not a valid number." @TO@ ClassInstanceCreation@@NumberFormatException[str + " is not a valid number."] @AT@ 17401 @LENGTH@ 31
+------------INS SimpleName@@str @TO@ InfixExpression@@str + " is not a valid number." @AT@ 17401 @LENGTH@ 3
+------------INS Operator@@+ @TO@ InfixExpression@@str + " is not a valid number." @AT@ 17404 @LENGTH@ 1
+------------INS StringLiteral@@" is not a valid number." @TO@ InfixExpression@@str + " is not a valid number." @AT@ 17407 @LENGTH@ 25
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2 OP14)
+OP2:   (INS, InfixExpression, OP1, OP3 OP7 OP8)
+OP3:      (INS, InfixExpression, OP2, OP4 OP5 OP6)
+OP4:         (MOV, SimpleName, OP3, null)
+OP5:         (MOV, Operator, OP3, null)
+OP6:         (MOV, SimpleName, OP3, null)
+OP7:      (INS, Operator, OP2, null)
+OP8:      (INS, InfixExpression, OP2, OP9 OP10 OP11)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, Operator, OP8, null)
+OP11:         (INS, MethodInvocation, OP8, OP12 OP13)
+OP12:            (INS, SimpleName, OP11, null)
+OP13:            (INS, SimpleName, OP11, null)
+OP14:   (DEL, InfixExpression, OP1, null)
+
+
+
+
+
+hASList: 
+[UPD IfStatement@@InfixExpression:expPos < decPos @TO@ InfixExpression:expPos < decPos || expPos > str.length() @AT@ 16918 @LENGTH@ 126
+---INS InfixExpression@@expPos < decPos || expPos > str.length() @TO@ IfStatement@@InfixExpression:expPos < decPos @AT@ 16922 @LENGTH@ 40
+------INS InfixExpression@@expPos < decPos @TO@ InfixExpression@@expPos < decPos || expPos > str.length() @AT@ 16922 @LENGTH@ 15
+---------MOV SimpleName@@expPos @TO@ InfixExpression@@expPos < decPos @AT@ 16922 @LENGTH@ 6
+---------MOV Operator@@< @TO@ InfixExpression@@expPos < decPos @AT@ 16928 @LENGTH@ 1
+---------MOV SimpleName@@decPos @TO@ InfixExpression@@expPos < decPos @AT@ 16931 @LENGTH@ 6
+------INS Operator@@|| @TO@ InfixExpression@@expPos < decPos || expPos > str.length() @AT@ 16937 @LENGTH@ 2
+------INS InfixExpression@@expPos > str.length() @TO@ InfixExpression@@expPos < decPos || expPos > str.length() @AT@ 16941 @LENGTH@ 21
+---------INS SimpleName@@expPos @TO@ InfixExpression@@expPos > str.length() @AT@ 16941 @LENGTH@ 6
+---------INS Operator@@> @TO@ InfixExpression@@expPos > str.length() @AT@ 16947 @LENGTH@ 1
+---------INS MethodInvocation@@str.length() @TO@ InfixExpression@@expPos > str.length() @AT@ 16950 @LENGTH@ 12
+------------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.length() @AT@ 16950 @LENGTH@ 3
+------------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@str.length() @AT@ 16954 @LENGTH@ 8
+---DEL InfixExpression@@expPos < decPos @AT@ 16922 @LENGTH@ 15
+, INS IfStatement@@InfixExpression:expPos > str.length() @TO@ IfStatement@@InfixExpression:expPos > -1 @AT@ 17320 @LENGTH@ 132
+---INS InfixExpression@@expPos > str.length() @TO@ IfStatement@@InfixExpression:expPos > str.length() @AT@ 17324 @LENGTH@ 21
+------INS SimpleName@@expPos @TO@ InfixExpression@@expPos > str.length() @AT@ 17324 @LENGTH@ 6
+------INS Operator@@> @TO@ InfixExpression@@expPos > str.length() @AT@ 17330 @LENGTH@ 1
+------INS MethodInvocation@@str.length() @TO@ InfixExpression@@expPos > str.length() @AT@ 17333 @LENGTH@ 12
+---------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.length() @AT@ 17333 @LENGTH@ 3
+---------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@str.length() @AT@ 17337 @LENGTH@ 8
+---INS ThrowStatement@@ClassInstanceCreation:new NumberFormatException(str + " is not a valid number.") @TO@ IfStatement@@InfixExpression:expPos > str.length() @AT@ 17369 @LENGTH@ 65
+------INS ClassInstanceCreation@@NumberFormatException[str + " is not a valid number."] @TO@ ThrowStatement@@ClassInstanceCreation:new NumberFormatException(str + " is not a valid number.") @AT@ 17375 @LENGTH@ 58
+---------INS New@@new @TO@ ClassInstanceCreation@@NumberFormatException[str + " is not a valid number."] @AT@ 17375 @LENGTH@ 3
+---------INS SimpleType@@NumberFormatException @TO@ ClassInstanceCreation@@NumberFormatException[str + " is not a valid number."] @AT@ 17379 @LENGTH@ 21
+---------INS InfixExpression@@str + " is not a valid number." @TO@ ClassInstanceCreation@@NumberFormatException[str + " is not a valid number."] @AT@ 17401 @LENGTH@ 31
+------------INS SimpleName@@str @TO@ InfixExpression@@str + " is not a valid number." @AT@ 17401 @LENGTH@ 3
+------------INS Operator@@+ @TO@ InfixExpression@@str + " is not a valid number." @AT@ 17404 @LENGTH@ 1
+------------INS StringLiteral@@" is not a valid number." @TO@ InfixExpression@@str + " is not a valid number." @AT@ 17407 @LENGTH@ 25
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP8)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, MethodInvocation, OP2, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, null)
+OP8:   (INS, ThrowStatement, OP1, OP9)
+OP9:      (INS, ClassInstanceCreation, OP8, OP10 OP11 OP12)
+OP10:         (INS, New, OP9, null)
+OP11:         (INS, SimpleType, OP9, null)
+OP12:         (INS, InfixExpression, OP9, OP13 OP14 OP15)
+OP13:            (INS, SimpleName, OP12, null)
+OP14:            (INS, Operator, OP12, null)
+OP15:            (INS, StringLiteral, OP12, null)
+
+
+

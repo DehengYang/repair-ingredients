@@ -1,0 +1,15 @@
+No.0 CCI matched.
+freq: 20
+CommitIds: 8c5eb247 58786c3f 58786c3f bbf3ed85 222eafd3 68544325 68544325 e7ce7f71 68544325 d3812122 8451502c 52ecbc65 30994e27 2f5cb162 1c5d6203 7cc74859 9a185e0c 9a185e0c 9a185e0c 9a185e0c 
+FreqRank:25
+
+No.3 CCI matched.
+freq: 3
+CommitIds: 8c5eb247 222eafd3 f01925cb 
+FreqRank:42
+
+No.4 CCI matched.
+freq: 3
+CommitIds: 8c5eb247 222eafd3 f01925cb 
+FreqRank:42
+

@@ -1,0 +1,22 @@
+
+diff -Naur ../d4j-repo/Math/Math_26/src/main/java/org/apache/commons/math3/fraction/Fraction.java ../d4j-repo/fixed_bugs_dir/Math/Math_26/src/main/java/org/apache/commons/math3/fraction/Fraction.java
+--- ../d4j-repo/Math/Math_26/src/main/java/org/apache/commons/math3/fraction/Fraction.java	2021-01-04 22:59:37.785383054 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_26/src/main/java/org/apache/commons/math3/fraction/Fraction.java	2021-01-04 22:59:41.421519378 -0800
+@@ -178,7 +178,7 @@
+         long overflow = Integer.MAX_VALUE;
+         double r0 = value;
+         long a0 = (long)FastMath.floor(r0);
+-        if (a0 > overflow) {
++        if (FastMath.abs(a0) > overflow) {
+             throw new FractionConversionException(value, a0, 1l);
+         }
+ 
+@@ -206,7 +206,7 @@
+             long a1 = (long)FastMath.floor(r1);
+             p2 = (a1 * p1) + p0;
+             q2 = (a1 * q1) + q0;
+-            if ((p2 > overflow) || (q2 > overflow)) {
++            if ((FastMath.abs(p2) > overflow) || (FastMath.abs(q2) > overflow)) {
+                 throw new FractionConversionException(value, p2, q2);
+             }
+ 

@@ -1,0 +1,10 @@
+OP1:(INS, IfStatement, null, OP2 OP6 OP7 OP8)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, NullLiteral, OP2, null)
+OP6:   (MOV, VariableDeclarationStatement, OP1, null)
+OP7:   (MOV, VariableDeclarationStatement, OP1, null)
+OP8:   (MOV, WhileStatement, OP1, null)
+
+

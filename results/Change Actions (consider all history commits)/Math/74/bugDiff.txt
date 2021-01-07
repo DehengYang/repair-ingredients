@@ -1,0 +1,24 @@
+
+diff -Naur ../d4j-repo/Math/Math_74/src/main/java/org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java ../d4j-repo/fixed_bugs_dir/Math/Math_74/src/main/java/org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java
+--- ../d4j-repo/Math/Math_74/src/main/java/org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java	2021-01-04 23:05:02.289542979 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_74/src/main/java/org/apache/commons/math/ode/nonstiff/EmbeddedRungeKuttaIntegrator.java	2021-01-04 23:05:05.077647439 -0800
+@@ -242,12 +242,15 @@
+         }
+ 
+         if (firstTime) {
+-          final double[] scale;
++          final double[] scale = new double[y0.length];
+           if (vecAbsoluteTolerance == null) {
+-              scale = new double[y0.length];
+-              java.util.Arrays.fill(scale, scalAbsoluteTolerance);
++              for (int i = 0; i < scale.length; ++i) {
++                scale[i] = scalAbsoluteTolerance + scalRelativeTolerance * Math.abs(y[i]);
++              }
+             } else {
+-              scale = vecAbsoluteTolerance;
++              for (int i = 0; i < scale.length; ++i) {
++                scale[i] = vecAbsoluteTolerance[i] + vecRelativeTolerance[i] * Math.abs(y[i]);
++              }
+             }
+           hNew = initializeStep(equations, forward, getOrder(), scale,
+                                 stepStart, y, yDotK[0], yTmp, yDotK[1]);

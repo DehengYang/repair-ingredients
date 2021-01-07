@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Chart/Chart_12/source/org/jfree/chart/plot/MultiplePiePlot.java ../d4j-repo/fixed_bugs_dir/Chart/Chart_12/source/org/jfree/chart/plot/MultiplePiePlot.java
+--- ../d4j-repo/Chart/Chart_12/source/org/jfree/chart/plot/MultiplePiePlot.java	2021-01-03 07:20:25.421458133 -0800
++++ ../d4j-repo/fixed_bugs_dir/Chart/Chart_12/source/org/jfree/chart/plot/MultiplePiePlot.java	2021-01-03 07:20:27.953551368 -0800
+@@ -142,7 +142,7 @@
+      */
+     public MultiplePiePlot(CategoryDataset dataset) {
+         super();
+-        this.dataset = dataset;
++        setDataset(dataset);
+         PiePlot piePlot = new PiePlot(null);
+         this.pieChart = new JFreeChart(piePlot);
+         this.pieChart.removeLegend();

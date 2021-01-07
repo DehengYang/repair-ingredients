@@ -1,0 +1,10 @@
+No.0 CCI matched.
+freq: 19
+CommitIds: f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f434e7ba 4e070edf 4e070edf 4c1e760d 4c1e760d 4c1e760d 35b8cc4c 35b8cc4c 
+FreqRank:11
+
+No.1 CCI matched.
+freq: 19
+CommitIds: f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f434e7ba 4e070edf 4e070edf 4c1e760d 4c1e760d 4c1e760d 35b8cc4c 35b8cc4c 
+FreqRank:11
+

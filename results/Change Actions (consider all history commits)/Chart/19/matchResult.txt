@@ -1,0 +1,10 @@
+No.0 CCI matched.
+freq: 17
+CommitIds: 8a8e376f 8a8e376f 36a11276 fbd16ec8 d87b84c2 d87b84c2 fbd16ec8 86d2436c c09948b9 c09948b9 c210aaf8 86d2436c 86d2436c 60e2af21 24d08393 24d08393 e8afa0e8 
+FreqRank:9
+
+No.1 CCI matched.
+freq: 17
+CommitIds: 8a8e376f 8a8e376f 36a11276 fbd16ec8 d87b84c2 d87b84c2 fbd16ec8 86d2436c c09948b9 c09948b9 c210aaf8 86d2436c 86d2436c 60e2af21 24d08393 24d08393 e8afa0e8 
+FreqRank:9
+

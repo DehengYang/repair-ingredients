@@ -1,0 +1,14 @@
+
+diff -Naur ../d4j-repo/Mockito/Mockito_28/src/org/mockito/internal/configuration/DefaultInjectionEngine.java ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_28/src/org/mockito/internal/configuration/DefaultInjectionEngine.java
+--- ../d4j-repo/Mockito/Mockito_28/src/org/mockito/internal/configuration/DefaultInjectionEngine.java	2021-01-06 03:36:37.429415551 -0800
++++ ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_28/src/org/mockito/internal/configuration/DefaultInjectionEngine.java	2021-01-06 03:36:39.981502443 -0800
+@@ -90,7 +90,8 @@
+ 
+     private void injectMockCandidate(Class<?> awaitingInjectionClazz, Set<Object> mocks, Object fieldInstance) {
+         for(Field field : orderedInstanceFieldsFrom(awaitingInjectionClazz)) {
+-            mockCandidateFilter.filterCandidate(mocks, field, fieldInstance).thenInject();
++            Object injected = mockCandidateFilter.filterCandidate(mocks, field, fieldInstance).thenInject();
++            mocks.remove(injected);
+         }
+     }
+ 

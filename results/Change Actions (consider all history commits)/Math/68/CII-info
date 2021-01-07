@@ -1,0 +1,511 @@
+
+
+hASList: 
+[INS ExpressionStatement@@MethodInvocation:setConvergenceChecker(null) @TO@ MethodDeclaration@@public, @@=CONSTRUCTOR=, MethodName:LevenbergMarquardtOptimizer, @@Argus:null @AT@ 7604 @LENGTH@ 28
+---INS MethodInvocation@@setConvergenceChecker(null) @TO@ ExpressionStatement@@MethodInvocation:setConvergenceChecker(null) @AT@ 7604 @LENGTH@ 27
+------INS SimpleName@@MethodName:setConvergenceChecker:[null] @TO@ MethodInvocation@@setConvergenceChecker(null) @AT@ 7604 @LENGTH@ 27
+---------INS NullLiteral@@null @TO@ SimpleName@@MethodName:setConvergenceChecker:[null] @AT@ 7626 @LENGTH@ 4
+, INS VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @TO@ MethodDeclaration@@protected, @@VectorialPointValuePair, MethodName:doOptimize, @@Argus:nullFunctionEvaluationException, OptimizationException, IllegalArgumentException,  @AT@ 10798 @LENGTH@ 80
+---INS SimpleType@@VectorialPointValuePair @TO@ VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @AT@ 10798 @LENGTH@ 23
+---INS VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @TO@ VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @AT@ 10822 @LENGTH@ 55
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @AT@ 10822 @LENGTH@ 7
+------INS ClassInstanceCreation@@VectorialPointValuePair[point, objective] @TO@ VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @AT@ 10832 @LENGTH@ 45
+---------INS New@@new @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10832 @LENGTH@ 3
+---------INS SimpleType@@VectorialPointValuePair @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10836 @LENGTH@ 23
+---------INS SimpleName@@point @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10860 @LENGTH@ 5
+---------INS SimpleName@@objective @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10867 @LENGTH@ 9
+, INS VariableDeclarationStatement@@VectorialPointValuePair previous=current; @TO@ WhileStatement@@BooleanLiteral:true @AT@ 11027 @LENGTH@ 43
+---INS SimpleType@@VectorialPointValuePair @TO@ VariableDeclarationStatement@@VectorialPointValuePair previous=current; @AT@ 11027 @LENGTH@ 23
+---INS VariableDeclarationFragment@@previous=current @TO@ VariableDeclarationStatement@@VectorialPointValuePair previous=current; @AT@ 11051 @LENGTH@ 18
+------INS SimpleName@@previous @TO@ VariableDeclarationFragment@@previous=current @AT@ 11051 @LENGTH@ 8
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@previous=current @AT@ 11062 @LENGTH@ 7
+, UPD ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @TO@ SimpleName:current @AT@ 12756 @LENGTH@ 53
+---DEL ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 12763 @LENGTH@ 45
+------DEL New@@new @AT@ 12763 @LENGTH@ 3
+------DEL SimpleType@@VectorialPointValuePair @AT@ 12767 @LENGTH@ 23
+------DEL SimpleName@@point @AT@ 12791 @LENGTH@ 5
+------DEL SimpleName@@objective @AT@ 12798 @LENGTH@ 9
+---INS SimpleName@@current @TO@ ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @AT@ 12945 @LENGTH@ 7
+, INS ExpressionStatement@@Assignment:current=new VectorialPointValuePair(point,objective) @TO@ ForStatement@@[double ratio=0];ratio < 1.0e-4; [] @AT@ 14486 @LENGTH@ 56
+---INS Assignment@@current=new VectorialPointValuePair(point,objective) @TO@ ExpressionStatement@@Assignment:current=new VectorialPointValuePair(point,objective) @AT@ 14486 @LENGTH@ 55
+------INS SimpleName@@current @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14486 @LENGTH@ 7
+------INS Operator@@= @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14493 @LENGTH@ 1
+------INS ClassInstanceCreation@@VectorialPointValuePair[point, objective] @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14496 @LENGTH@ 45
+---------INS New@@new @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14496 @LENGTH@ 3
+---------INS SimpleType@@VectorialPointValuePair @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14500 @LENGTH@ 23
+---------INS SimpleName@@point @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14524 @LENGTH@ 5
+---------INS SimpleName@@objective @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14531 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:checker != null @TO@ ForStatement@@[double ratio=0];ratio < 1.0e-4; [] @AT@ 17356 @LENGTH@ 689
+---MOV IfStatement@@InfixExpression:((Math.abs(actRed) <= costRelativeTolerance) && (preRed <= costRelativeTolerance) && (ratio <= 2.0)) || (delta <= parRelativeTolerance * xNorm) @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17293 @LENGTH@ 324
+---INS InfixExpression@@checker != null @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17360 @LENGTH@ 15
+------INS SimpleName@@checker @TO@ InfixExpression@@checker != null @AT@ 17360 @LENGTH@ 7
+------INS Operator@@!= @TO@ InfixExpression@@checker != null @AT@ 17367 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@checker != null @AT@ 17371 @LENGTH@ 4
+---INS IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17463 @LENGTH@ 146
+------INS MethodInvocation@@checker.converged(getIterations(),previous,current) @TO@ IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @AT@ 17467 @LENGTH@ 53
+---------INS SimpleName@@Name:checker @TO@ MethodInvocation@@checker.converged(getIterations(),previous,current) @AT@ 17467 @LENGTH@ 7
+---------INS SimpleName@@MethodName:converged:[getIterations(), previous, current] @TO@ MethodInvocation@@checker.converged(getIterations(),previous,current) @AT@ 17475 @LENGTH@ 45
+------------INS MethodInvocation@@MethodName:getIterations:[] @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17485 @LENGTH@ 15
+------------INS SimpleName@@previous @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17502 @LENGTH@ 8
+------------INS SimpleName@@current @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17512 @LENGTH@ 7
+------INS ReturnStatement@@SimpleName:current @TO@ IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @AT@ 17548 @LENGTH@ 15
+---------INS SimpleName@@current @TO@ ReturnStatement@@SimpleName:current @AT@ 17555 @LENGTH@ 7
+, UPD ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @TO@ SimpleName:current @AT@ 17542 @LENGTH@ 53
+---DEL ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 17549 @LENGTH@ 45
+------DEL New@@new @AT@ 17549 @LENGTH@ 3
+------DEL SimpleType@@VectorialPointValuePair @AT@ 17553 @LENGTH@ 23
+------DEL SimpleName@@point @AT@ 17577 @LENGTH@ 5
+------DEL SimpleName@@objective @AT@ 17584 @LENGTH@ 9
+---INS SimpleName@@current @TO@ ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @AT@ 17997 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, OP3)
+OP3:      (INS, SimpleName, OP2, OP4)
+OP4:         (INS, NullLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[INS ExpressionStatement@@MethodInvocation:setConvergenceChecker(null) @TO@ MethodDeclaration@@public, @@=CONSTRUCTOR=, MethodName:LevenbergMarquardtOptimizer, @@Argus:null @AT@ 7604 @LENGTH@ 28
+---INS MethodInvocation@@setConvergenceChecker(null) @TO@ ExpressionStatement@@MethodInvocation:setConvergenceChecker(null) @AT@ 7604 @LENGTH@ 27
+------INS SimpleName@@MethodName:setConvergenceChecker:[null] @TO@ MethodInvocation@@setConvergenceChecker(null) @AT@ 7604 @LENGTH@ 27
+---------INS NullLiteral@@null @TO@ SimpleName@@MethodName:setConvergenceChecker:[null] @AT@ 7626 @LENGTH@ 4
+, INS VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @TO@ MethodDeclaration@@protected, @@VectorialPointValuePair, MethodName:doOptimize, @@Argus:nullFunctionEvaluationException, OptimizationException, IllegalArgumentException,  @AT@ 10798 @LENGTH@ 80
+---INS SimpleType@@VectorialPointValuePair @TO@ VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @AT@ 10798 @LENGTH@ 23
+---INS VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @TO@ VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @AT@ 10822 @LENGTH@ 55
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @AT@ 10822 @LENGTH@ 7
+------INS ClassInstanceCreation@@VectorialPointValuePair[point, objective] @TO@ VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @AT@ 10832 @LENGTH@ 45
+---------INS New@@new @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10832 @LENGTH@ 3
+---------INS SimpleType@@VectorialPointValuePair @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10836 @LENGTH@ 23
+---------INS SimpleName@@point @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10860 @LENGTH@ 5
+---------INS SimpleName@@objective @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10867 @LENGTH@ 9
+, INS VariableDeclarationStatement@@VectorialPointValuePair previous=current; @TO@ WhileStatement@@BooleanLiteral:true @AT@ 11027 @LENGTH@ 43
+---INS SimpleType@@VectorialPointValuePair @TO@ VariableDeclarationStatement@@VectorialPointValuePair previous=current; @AT@ 11027 @LENGTH@ 23
+---INS VariableDeclarationFragment@@previous=current @TO@ VariableDeclarationStatement@@VectorialPointValuePair previous=current; @AT@ 11051 @LENGTH@ 18
+------INS SimpleName@@previous @TO@ VariableDeclarationFragment@@previous=current @AT@ 11051 @LENGTH@ 8
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@previous=current @AT@ 11062 @LENGTH@ 7
+, UPD ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @TO@ SimpleName:current @AT@ 12756 @LENGTH@ 53
+---DEL ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 12763 @LENGTH@ 45
+------DEL New@@new @AT@ 12763 @LENGTH@ 3
+------DEL SimpleType@@VectorialPointValuePair @AT@ 12767 @LENGTH@ 23
+------DEL SimpleName@@point @AT@ 12791 @LENGTH@ 5
+------DEL SimpleName@@objective @AT@ 12798 @LENGTH@ 9
+---INS SimpleName@@current @TO@ ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @AT@ 12945 @LENGTH@ 7
+, INS ExpressionStatement@@Assignment:current=new VectorialPointValuePair(point,objective) @TO@ ForStatement@@[double ratio=0];ratio < 1.0e-4; [] @AT@ 14486 @LENGTH@ 56
+---INS Assignment@@current=new VectorialPointValuePair(point,objective) @TO@ ExpressionStatement@@Assignment:current=new VectorialPointValuePair(point,objective) @AT@ 14486 @LENGTH@ 55
+------INS SimpleName@@current @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14486 @LENGTH@ 7
+------INS Operator@@= @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14493 @LENGTH@ 1
+------INS ClassInstanceCreation@@VectorialPointValuePair[point, objective] @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14496 @LENGTH@ 45
+---------INS New@@new @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14496 @LENGTH@ 3
+---------INS SimpleType@@VectorialPointValuePair @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14500 @LENGTH@ 23
+---------INS SimpleName@@point @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14524 @LENGTH@ 5
+---------INS SimpleName@@objective @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14531 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:checker != null @TO@ ForStatement@@[double ratio=0];ratio < 1.0e-4; [] @AT@ 17356 @LENGTH@ 689
+---MOV IfStatement@@InfixExpression:((Math.abs(actRed) <= costRelativeTolerance) && (preRed <= costRelativeTolerance) && (ratio <= 2.0)) || (delta <= parRelativeTolerance * xNorm) @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17293 @LENGTH@ 324
+---INS InfixExpression@@checker != null @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17360 @LENGTH@ 15
+------INS SimpleName@@checker @TO@ InfixExpression@@checker != null @AT@ 17360 @LENGTH@ 7
+------INS Operator@@!= @TO@ InfixExpression@@checker != null @AT@ 17367 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@checker != null @AT@ 17371 @LENGTH@ 4
+---INS IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17463 @LENGTH@ 146
+------INS MethodInvocation@@checker.converged(getIterations(),previous,current) @TO@ IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @AT@ 17467 @LENGTH@ 53
+---------INS SimpleName@@Name:checker @TO@ MethodInvocation@@checker.converged(getIterations(),previous,current) @AT@ 17467 @LENGTH@ 7
+---------INS SimpleName@@MethodName:converged:[getIterations(), previous, current] @TO@ MethodInvocation@@checker.converged(getIterations(),previous,current) @AT@ 17475 @LENGTH@ 45
+------------INS MethodInvocation@@MethodName:getIterations:[] @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17485 @LENGTH@ 15
+------------INS SimpleName@@previous @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17502 @LENGTH@ 8
+------------INS SimpleName@@current @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17512 @LENGTH@ 7
+------INS ReturnStatement@@SimpleName:current @TO@ IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @AT@ 17548 @LENGTH@ 15
+---------INS SimpleName@@current @TO@ ReturnStatement@@SimpleName:current @AT@ 17555 @LENGTH@ 7
+, UPD ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @TO@ SimpleName:current @AT@ 17542 @LENGTH@ 53
+---DEL ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 17549 @LENGTH@ 45
+------DEL New@@new @AT@ 17549 @LENGTH@ 3
+------DEL SimpleType@@VectorialPointValuePair @AT@ 17553 @LENGTH@ 23
+------DEL SimpleName@@point @AT@ 17577 @LENGTH@ 5
+------DEL SimpleName@@objective @AT@ 17584 @LENGTH@ 9
+---INS SimpleName@@current @TO@ ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @AT@ 17997 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, SimpleType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, ClassInstanceCreation, OP3, OP6 OP7 OP8 OP9)
+OP6:         (INS, New, OP5, null)
+OP7:         (INS, SimpleType, OP5, null)
+OP8:         (INS, SimpleName, OP5, null)
+OP9:         (INS, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[INS ExpressionStatement@@MethodInvocation:setConvergenceChecker(null) @TO@ MethodDeclaration@@public, @@=CONSTRUCTOR=, MethodName:LevenbergMarquardtOptimizer, @@Argus:null @AT@ 7604 @LENGTH@ 28
+---INS MethodInvocation@@setConvergenceChecker(null) @TO@ ExpressionStatement@@MethodInvocation:setConvergenceChecker(null) @AT@ 7604 @LENGTH@ 27
+------INS SimpleName@@MethodName:setConvergenceChecker:[null] @TO@ MethodInvocation@@setConvergenceChecker(null) @AT@ 7604 @LENGTH@ 27
+---------INS NullLiteral@@null @TO@ SimpleName@@MethodName:setConvergenceChecker:[null] @AT@ 7626 @LENGTH@ 4
+, INS VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @TO@ MethodDeclaration@@protected, @@VectorialPointValuePair, MethodName:doOptimize, @@Argus:nullFunctionEvaluationException, OptimizationException, IllegalArgumentException,  @AT@ 10798 @LENGTH@ 80
+---INS SimpleType@@VectorialPointValuePair @TO@ VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @AT@ 10798 @LENGTH@ 23
+---INS VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @TO@ VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @AT@ 10822 @LENGTH@ 55
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @AT@ 10822 @LENGTH@ 7
+------INS ClassInstanceCreation@@VectorialPointValuePair[point, objective] @TO@ VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @AT@ 10832 @LENGTH@ 45
+---------INS New@@new @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10832 @LENGTH@ 3
+---------INS SimpleType@@VectorialPointValuePair @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10836 @LENGTH@ 23
+---------INS SimpleName@@point @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10860 @LENGTH@ 5
+---------INS SimpleName@@objective @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10867 @LENGTH@ 9
+, INS VariableDeclarationStatement@@VectorialPointValuePair previous=current; @TO@ WhileStatement@@BooleanLiteral:true @AT@ 11027 @LENGTH@ 43
+---INS SimpleType@@VectorialPointValuePair @TO@ VariableDeclarationStatement@@VectorialPointValuePair previous=current; @AT@ 11027 @LENGTH@ 23
+---INS VariableDeclarationFragment@@previous=current @TO@ VariableDeclarationStatement@@VectorialPointValuePair previous=current; @AT@ 11051 @LENGTH@ 18
+------INS SimpleName@@previous @TO@ VariableDeclarationFragment@@previous=current @AT@ 11051 @LENGTH@ 8
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@previous=current @AT@ 11062 @LENGTH@ 7
+, UPD ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @TO@ SimpleName:current @AT@ 12756 @LENGTH@ 53
+---DEL ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 12763 @LENGTH@ 45
+------DEL New@@new @AT@ 12763 @LENGTH@ 3
+------DEL SimpleType@@VectorialPointValuePair @AT@ 12767 @LENGTH@ 23
+------DEL SimpleName@@point @AT@ 12791 @LENGTH@ 5
+------DEL SimpleName@@objective @AT@ 12798 @LENGTH@ 9
+---INS SimpleName@@current @TO@ ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @AT@ 12945 @LENGTH@ 7
+, INS ExpressionStatement@@Assignment:current=new VectorialPointValuePair(point,objective) @TO@ ForStatement@@[double ratio=0];ratio < 1.0e-4; [] @AT@ 14486 @LENGTH@ 56
+---INS Assignment@@current=new VectorialPointValuePair(point,objective) @TO@ ExpressionStatement@@Assignment:current=new VectorialPointValuePair(point,objective) @AT@ 14486 @LENGTH@ 55
+------INS SimpleName@@current @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14486 @LENGTH@ 7
+------INS Operator@@= @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14493 @LENGTH@ 1
+------INS ClassInstanceCreation@@VectorialPointValuePair[point, objective] @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14496 @LENGTH@ 45
+---------INS New@@new @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14496 @LENGTH@ 3
+---------INS SimpleType@@VectorialPointValuePair @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14500 @LENGTH@ 23
+---------INS SimpleName@@point @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14524 @LENGTH@ 5
+---------INS SimpleName@@objective @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14531 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:checker != null @TO@ ForStatement@@[double ratio=0];ratio < 1.0e-4; [] @AT@ 17356 @LENGTH@ 689
+---MOV IfStatement@@InfixExpression:((Math.abs(actRed) <= costRelativeTolerance) && (preRed <= costRelativeTolerance) && (ratio <= 2.0)) || (delta <= parRelativeTolerance * xNorm) @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17293 @LENGTH@ 324
+---INS InfixExpression@@checker != null @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17360 @LENGTH@ 15
+------INS SimpleName@@checker @TO@ InfixExpression@@checker != null @AT@ 17360 @LENGTH@ 7
+------INS Operator@@!= @TO@ InfixExpression@@checker != null @AT@ 17367 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@checker != null @AT@ 17371 @LENGTH@ 4
+---INS IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17463 @LENGTH@ 146
+------INS MethodInvocation@@checker.converged(getIterations(),previous,current) @TO@ IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @AT@ 17467 @LENGTH@ 53
+---------INS SimpleName@@Name:checker @TO@ MethodInvocation@@checker.converged(getIterations(),previous,current) @AT@ 17467 @LENGTH@ 7
+---------INS SimpleName@@MethodName:converged:[getIterations(), previous, current] @TO@ MethodInvocation@@checker.converged(getIterations(),previous,current) @AT@ 17475 @LENGTH@ 45
+------------INS MethodInvocation@@MethodName:getIterations:[] @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17485 @LENGTH@ 15
+------------INS SimpleName@@previous @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17502 @LENGTH@ 8
+------------INS SimpleName@@current @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17512 @LENGTH@ 7
+------INS ReturnStatement@@SimpleName:current @TO@ IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @AT@ 17548 @LENGTH@ 15
+---------INS SimpleName@@current @TO@ ReturnStatement@@SimpleName:current @AT@ 17555 @LENGTH@ 7
+, UPD ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @TO@ SimpleName:current @AT@ 17542 @LENGTH@ 53
+---DEL ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 17549 @LENGTH@ 45
+------DEL New@@new @AT@ 17549 @LENGTH@ 3
+------DEL SimpleType@@VectorialPointValuePair @AT@ 17553 @LENGTH@ 23
+------DEL SimpleName@@point @AT@ 17577 @LENGTH@ 5
+------DEL SimpleName@@objective @AT@ 17584 @LENGTH@ 9
+---INS SimpleName@@current @TO@ ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @AT@ 17997 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, SimpleType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, SimpleName, OP3, null)
+
+
+
+
+
+hASList: 
+[INS ExpressionStatement@@MethodInvocation:setConvergenceChecker(null) @TO@ MethodDeclaration@@public, @@=CONSTRUCTOR=, MethodName:LevenbergMarquardtOptimizer, @@Argus:null @AT@ 7604 @LENGTH@ 28
+---INS MethodInvocation@@setConvergenceChecker(null) @TO@ ExpressionStatement@@MethodInvocation:setConvergenceChecker(null) @AT@ 7604 @LENGTH@ 27
+------INS SimpleName@@MethodName:setConvergenceChecker:[null] @TO@ MethodInvocation@@setConvergenceChecker(null) @AT@ 7604 @LENGTH@ 27
+---------INS NullLiteral@@null @TO@ SimpleName@@MethodName:setConvergenceChecker:[null] @AT@ 7626 @LENGTH@ 4
+, INS VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @TO@ MethodDeclaration@@protected, @@VectorialPointValuePair, MethodName:doOptimize, @@Argus:nullFunctionEvaluationException, OptimizationException, IllegalArgumentException,  @AT@ 10798 @LENGTH@ 80
+---INS SimpleType@@VectorialPointValuePair @TO@ VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @AT@ 10798 @LENGTH@ 23
+---INS VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @TO@ VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @AT@ 10822 @LENGTH@ 55
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @AT@ 10822 @LENGTH@ 7
+------INS ClassInstanceCreation@@VectorialPointValuePair[point, objective] @TO@ VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @AT@ 10832 @LENGTH@ 45
+---------INS New@@new @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10832 @LENGTH@ 3
+---------INS SimpleType@@VectorialPointValuePair @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10836 @LENGTH@ 23
+---------INS SimpleName@@point @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10860 @LENGTH@ 5
+---------INS SimpleName@@objective @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10867 @LENGTH@ 9
+, INS VariableDeclarationStatement@@VectorialPointValuePair previous=current; @TO@ WhileStatement@@BooleanLiteral:true @AT@ 11027 @LENGTH@ 43
+---INS SimpleType@@VectorialPointValuePair @TO@ VariableDeclarationStatement@@VectorialPointValuePair previous=current; @AT@ 11027 @LENGTH@ 23
+---INS VariableDeclarationFragment@@previous=current @TO@ VariableDeclarationStatement@@VectorialPointValuePair previous=current; @AT@ 11051 @LENGTH@ 18
+------INS SimpleName@@previous @TO@ VariableDeclarationFragment@@previous=current @AT@ 11051 @LENGTH@ 8
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@previous=current @AT@ 11062 @LENGTH@ 7
+, UPD ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @TO@ SimpleName:current @AT@ 12756 @LENGTH@ 53
+---DEL ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 12763 @LENGTH@ 45
+------DEL New@@new @AT@ 12763 @LENGTH@ 3
+------DEL SimpleType@@VectorialPointValuePair @AT@ 12767 @LENGTH@ 23
+------DEL SimpleName@@point @AT@ 12791 @LENGTH@ 5
+------DEL SimpleName@@objective @AT@ 12798 @LENGTH@ 9
+---INS SimpleName@@current @TO@ ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @AT@ 12945 @LENGTH@ 7
+, INS ExpressionStatement@@Assignment:current=new VectorialPointValuePair(point,objective) @TO@ ForStatement@@[double ratio=0];ratio < 1.0e-4; [] @AT@ 14486 @LENGTH@ 56
+---INS Assignment@@current=new VectorialPointValuePair(point,objective) @TO@ ExpressionStatement@@Assignment:current=new VectorialPointValuePair(point,objective) @AT@ 14486 @LENGTH@ 55
+------INS SimpleName@@current @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14486 @LENGTH@ 7
+------INS Operator@@= @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14493 @LENGTH@ 1
+------INS ClassInstanceCreation@@VectorialPointValuePair[point, objective] @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14496 @LENGTH@ 45
+---------INS New@@new @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14496 @LENGTH@ 3
+---------INS SimpleType@@VectorialPointValuePair @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14500 @LENGTH@ 23
+---------INS SimpleName@@point @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14524 @LENGTH@ 5
+---------INS SimpleName@@objective @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14531 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:checker != null @TO@ ForStatement@@[double ratio=0];ratio < 1.0e-4; [] @AT@ 17356 @LENGTH@ 689
+---MOV IfStatement@@InfixExpression:((Math.abs(actRed) <= costRelativeTolerance) && (preRed <= costRelativeTolerance) && (ratio <= 2.0)) || (delta <= parRelativeTolerance * xNorm) @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17293 @LENGTH@ 324
+---INS InfixExpression@@checker != null @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17360 @LENGTH@ 15
+------INS SimpleName@@checker @TO@ InfixExpression@@checker != null @AT@ 17360 @LENGTH@ 7
+------INS Operator@@!= @TO@ InfixExpression@@checker != null @AT@ 17367 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@checker != null @AT@ 17371 @LENGTH@ 4
+---INS IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17463 @LENGTH@ 146
+------INS MethodInvocation@@checker.converged(getIterations(),previous,current) @TO@ IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @AT@ 17467 @LENGTH@ 53
+---------INS SimpleName@@Name:checker @TO@ MethodInvocation@@checker.converged(getIterations(),previous,current) @AT@ 17467 @LENGTH@ 7
+---------INS SimpleName@@MethodName:converged:[getIterations(), previous, current] @TO@ MethodInvocation@@checker.converged(getIterations(),previous,current) @AT@ 17475 @LENGTH@ 45
+------------INS MethodInvocation@@MethodName:getIterations:[] @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17485 @LENGTH@ 15
+------------INS SimpleName@@previous @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17502 @LENGTH@ 8
+------------INS SimpleName@@current @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17512 @LENGTH@ 7
+------INS ReturnStatement@@SimpleName:current @TO@ IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @AT@ 17548 @LENGTH@ 15
+---------INS SimpleName@@current @TO@ ReturnStatement@@SimpleName:current @AT@ 17555 @LENGTH@ 7
+, UPD ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @TO@ SimpleName:current @AT@ 17542 @LENGTH@ 53
+---DEL ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 17549 @LENGTH@ 45
+------DEL New@@new @AT@ 17549 @LENGTH@ 3
+------DEL SimpleType@@VectorialPointValuePair @AT@ 17553 @LENGTH@ 23
+------DEL SimpleName@@point @AT@ 17577 @LENGTH@ 5
+------DEL SimpleName@@objective @AT@ 17584 @LENGTH@ 9
+---INS SimpleName@@current @TO@ ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @AT@ 17997 @LENGTH@ 7
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2 OP7)
+OP2:   (DEL, ClassInstanceCreation, OP1, OP3 OP4 OP5 OP6)
+OP3:      (DEL, New, OP2, null)
+OP4:      (DEL, SimpleType, OP2, null)
+OP5:      (DEL, SimpleName, OP2, null)
+OP6:      (DEL, SimpleName, OP2, null)
+OP7:   (INS, SimpleName, OP1, null)
+
+
+
+
+
+hASList: 
+[INS ExpressionStatement@@MethodInvocation:setConvergenceChecker(null) @TO@ MethodDeclaration@@public, @@=CONSTRUCTOR=, MethodName:LevenbergMarquardtOptimizer, @@Argus:null @AT@ 7604 @LENGTH@ 28
+---INS MethodInvocation@@setConvergenceChecker(null) @TO@ ExpressionStatement@@MethodInvocation:setConvergenceChecker(null) @AT@ 7604 @LENGTH@ 27
+------INS SimpleName@@MethodName:setConvergenceChecker:[null] @TO@ MethodInvocation@@setConvergenceChecker(null) @AT@ 7604 @LENGTH@ 27
+---------INS NullLiteral@@null @TO@ SimpleName@@MethodName:setConvergenceChecker:[null] @AT@ 7626 @LENGTH@ 4
+, INS VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @TO@ MethodDeclaration@@protected, @@VectorialPointValuePair, MethodName:doOptimize, @@Argus:nullFunctionEvaluationException, OptimizationException, IllegalArgumentException,  @AT@ 10798 @LENGTH@ 80
+---INS SimpleType@@VectorialPointValuePair @TO@ VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @AT@ 10798 @LENGTH@ 23
+---INS VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @TO@ VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @AT@ 10822 @LENGTH@ 55
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @AT@ 10822 @LENGTH@ 7
+------INS ClassInstanceCreation@@VectorialPointValuePair[point, objective] @TO@ VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @AT@ 10832 @LENGTH@ 45
+---------INS New@@new @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10832 @LENGTH@ 3
+---------INS SimpleType@@VectorialPointValuePair @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10836 @LENGTH@ 23
+---------INS SimpleName@@point @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10860 @LENGTH@ 5
+---------INS SimpleName@@objective @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10867 @LENGTH@ 9
+, INS VariableDeclarationStatement@@VectorialPointValuePair previous=current; @TO@ WhileStatement@@BooleanLiteral:true @AT@ 11027 @LENGTH@ 43
+---INS SimpleType@@VectorialPointValuePair @TO@ VariableDeclarationStatement@@VectorialPointValuePair previous=current; @AT@ 11027 @LENGTH@ 23
+---INS VariableDeclarationFragment@@previous=current @TO@ VariableDeclarationStatement@@VectorialPointValuePair previous=current; @AT@ 11051 @LENGTH@ 18
+------INS SimpleName@@previous @TO@ VariableDeclarationFragment@@previous=current @AT@ 11051 @LENGTH@ 8
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@previous=current @AT@ 11062 @LENGTH@ 7
+, UPD ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @TO@ SimpleName:current @AT@ 12756 @LENGTH@ 53
+---DEL ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 12763 @LENGTH@ 45
+------DEL New@@new @AT@ 12763 @LENGTH@ 3
+------DEL SimpleType@@VectorialPointValuePair @AT@ 12767 @LENGTH@ 23
+------DEL SimpleName@@point @AT@ 12791 @LENGTH@ 5
+------DEL SimpleName@@objective @AT@ 12798 @LENGTH@ 9
+---INS SimpleName@@current @TO@ ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @AT@ 12945 @LENGTH@ 7
+, INS ExpressionStatement@@Assignment:current=new VectorialPointValuePair(point,objective) @TO@ ForStatement@@[double ratio=0];ratio < 1.0e-4; [] @AT@ 14486 @LENGTH@ 56
+---INS Assignment@@current=new VectorialPointValuePair(point,objective) @TO@ ExpressionStatement@@Assignment:current=new VectorialPointValuePair(point,objective) @AT@ 14486 @LENGTH@ 55
+------INS SimpleName@@current @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14486 @LENGTH@ 7
+------INS Operator@@= @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14493 @LENGTH@ 1
+------INS ClassInstanceCreation@@VectorialPointValuePair[point, objective] @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14496 @LENGTH@ 45
+---------INS New@@new @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14496 @LENGTH@ 3
+---------INS SimpleType@@VectorialPointValuePair @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14500 @LENGTH@ 23
+---------INS SimpleName@@point @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14524 @LENGTH@ 5
+---------INS SimpleName@@objective @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14531 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:checker != null @TO@ ForStatement@@[double ratio=0];ratio < 1.0e-4; [] @AT@ 17356 @LENGTH@ 689
+---MOV IfStatement@@InfixExpression:((Math.abs(actRed) <= costRelativeTolerance) && (preRed <= costRelativeTolerance) && (ratio <= 2.0)) || (delta <= parRelativeTolerance * xNorm) @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17293 @LENGTH@ 324
+---INS InfixExpression@@checker != null @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17360 @LENGTH@ 15
+------INS SimpleName@@checker @TO@ InfixExpression@@checker != null @AT@ 17360 @LENGTH@ 7
+------INS Operator@@!= @TO@ InfixExpression@@checker != null @AT@ 17367 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@checker != null @AT@ 17371 @LENGTH@ 4
+---INS IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17463 @LENGTH@ 146
+------INS MethodInvocation@@checker.converged(getIterations(),previous,current) @TO@ IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @AT@ 17467 @LENGTH@ 53
+---------INS SimpleName@@Name:checker @TO@ MethodInvocation@@checker.converged(getIterations(),previous,current) @AT@ 17467 @LENGTH@ 7
+---------INS SimpleName@@MethodName:converged:[getIterations(), previous, current] @TO@ MethodInvocation@@checker.converged(getIterations(),previous,current) @AT@ 17475 @LENGTH@ 45
+------------INS MethodInvocation@@MethodName:getIterations:[] @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17485 @LENGTH@ 15
+------------INS SimpleName@@previous @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17502 @LENGTH@ 8
+------------INS SimpleName@@current @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17512 @LENGTH@ 7
+------INS ReturnStatement@@SimpleName:current @TO@ IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @AT@ 17548 @LENGTH@ 15
+---------INS SimpleName@@current @TO@ ReturnStatement@@SimpleName:current @AT@ 17555 @LENGTH@ 7
+, UPD ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @TO@ SimpleName:current @AT@ 17542 @LENGTH@ 53
+---DEL ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 17549 @LENGTH@ 45
+------DEL New@@new @AT@ 17549 @LENGTH@ 3
+------DEL SimpleType@@VectorialPointValuePair @AT@ 17553 @LENGTH@ 23
+------DEL SimpleName@@point @AT@ 17577 @LENGTH@ 5
+------DEL SimpleName@@objective @AT@ 17584 @LENGTH@ 9
+---INS SimpleName@@current @TO@ ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @AT@ 17997 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, ClassInstanceCreation, OP2, OP6 OP7 OP8 OP9)
+OP6:         (INS, New, OP5, null)
+OP7:         (INS, SimpleType, OP5, null)
+OP8:         (INS, SimpleName, OP5, null)
+OP9:         (INS, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[INS ExpressionStatement@@MethodInvocation:setConvergenceChecker(null) @TO@ MethodDeclaration@@public, @@=CONSTRUCTOR=, MethodName:LevenbergMarquardtOptimizer, @@Argus:null @AT@ 7604 @LENGTH@ 28
+---INS MethodInvocation@@setConvergenceChecker(null) @TO@ ExpressionStatement@@MethodInvocation:setConvergenceChecker(null) @AT@ 7604 @LENGTH@ 27
+------INS SimpleName@@MethodName:setConvergenceChecker:[null] @TO@ MethodInvocation@@setConvergenceChecker(null) @AT@ 7604 @LENGTH@ 27
+---------INS NullLiteral@@null @TO@ SimpleName@@MethodName:setConvergenceChecker:[null] @AT@ 7626 @LENGTH@ 4
+, INS VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @TO@ MethodDeclaration@@protected, @@VectorialPointValuePair, MethodName:doOptimize, @@Argus:nullFunctionEvaluationException, OptimizationException, IllegalArgumentException,  @AT@ 10798 @LENGTH@ 80
+---INS SimpleType@@VectorialPointValuePair @TO@ VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @AT@ 10798 @LENGTH@ 23
+---INS VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @TO@ VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @AT@ 10822 @LENGTH@ 55
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @AT@ 10822 @LENGTH@ 7
+------INS ClassInstanceCreation@@VectorialPointValuePair[point, objective] @TO@ VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @AT@ 10832 @LENGTH@ 45
+---------INS New@@new @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10832 @LENGTH@ 3
+---------INS SimpleType@@VectorialPointValuePair @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10836 @LENGTH@ 23
+---------INS SimpleName@@point @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10860 @LENGTH@ 5
+---------INS SimpleName@@objective @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10867 @LENGTH@ 9
+, INS VariableDeclarationStatement@@VectorialPointValuePair previous=current; @TO@ WhileStatement@@BooleanLiteral:true @AT@ 11027 @LENGTH@ 43
+---INS SimpleType@@VectorialPointValuePair @TO@ VariableDeclarationStatement@@VectorialPointValuePair previous=current; @AT@ 11027 @LENGTH@ 23
+---INS VariableDeclarationFragment@@previous=current @TO@ VariableDeclarationStatement@@VectorialPointValuePair previous=current; @AT@ 11051 @LENGTH@ 18
+------INS SimpleName@@previous @TO@ VariableDeclarationFragment@@previous=current @AT@ 11051 @LENGTH@ 8
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@previous=current @AT@ 11062 @LENGTH@ 7
+, UPD ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @TO@ SimpleName:current @AT@ 12756 @LENGTH@ 53
+---DEL ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 12763 @LENGTH@ 45
+------DEL New@@new @AT@ 12763 @LENGTH@ 3
+------DEL SimpleType@@VectorialPointValuePair @AT@ 12767 @LENGTH@ 23
+------DEL SimpleName@@point @AT@ 12791 @LENGTH@ 5
+------DEL SimpleName@@objective @AT@ 12798 @LENGTH@ 9
+---INS SimpleName@@current @TO@ ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @AT@ 12945 @LENGTH@ 7
+, INS ExpressionStatement@@Assignment:current=new VectorialPointValuePair(point,objective) @TO@ ForStatement@@[double ratio=0];ratio < 1.0e-4; [] @AT@ 14486 @LENGTH@ 56
+---INS Assignment@@current=new VectorialPointValuePair(point,objective) @TO@ ExpressionStatement@@Assignment:current=new VectorialPointValuePair(point,objective) @AT@ 14486 @LENGTH@ 55
+------INS SimpleName@@current @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14486 @LENGTH@ 7
+------INS Operator@@= @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14493 @LENGTH@ 1
+------INS ClassInstanceCreation@@VectorialPointValuePair[point, objective] @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14496 @LENGTH@ 45
+---------INS New@@new @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14496 @LENGTH@ 3
+---------INS SimpleType@@VectorialPointValuePair @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14500 @LENGTH@ 23
+---------INS SimpleName@@point @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14524 @LENGTH@ 5
+---------INS SimpleName@@objective @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14531 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:checker != null @TO@ ForStatement@@[double ratio=0];ratio < 1.0e-4; [] @AT@ 17356 @LENGTH@ 689
+---MOV IfStatement@@InfixExpression:((Math.abs(actRed) <= costRelativeTolerance) && (preRed <= costRelativeTolerance) && (ratio <= 2.0)) || (delta <= parRelativeTolerance * xNorm) @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17293 @LENGTH@ 324
+---INS InfixExpression@@checker != null @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17360 @LENGTH@ 15
+------INS SimpleName@@checker @TO@ InfixExpression@@checker != null @AT@ 17360 @LENGTH@ 7
+------INS Operator@@!= @TO@ InfixExpression@@checker != null @AT@ 17367 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@checker != null @AT@ 17371 @LENGTH@ 4
+---INS IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17463 @LENGTH@ 146
+------INS MethodInvocation@@checker.converged(getIterations(),previous,current) @TO@ IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @AT@ 17467 @LENGTH@ 53
+---------INS SimpleName@@Name:checker @TO@ MethodInvocation@@checker.converged(getIterations(),previous,current) @AT@ 17467 @LENGTH@ 7
+---------INS SimpleName@@MethodName:converged:[getIterations(), previous, current] @TO@ MethodInvocation@@checker.converged(getIterations(),previous,current) @AT@ 17475 @LENGTH@ 45
+------------INS MethodInvocation@@MethodName:getIterations:[] @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17485 @LENGTH@ 15
+------------INS SimpleName@@previous @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17502 @LENGTH@ 8
+------------INS SimpleName@@current @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17512 @LENGTH@ 7
+------INS ReturnStatement@@SimpleName:current @TO@ IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @AT@ 17548 @LENGTH@ 15
+---------INS SimpleName@@current @TO@ ReturnStatement@@SimpleName:current @AT@ 17555 @LENGTH@ 7
+, UPD ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @TO@ SimpleName:current @AT@ 17542 @LENGTH@ 53
+---DEL ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 17549 @LENGTH@ 45
+------DEL New@@new @AT@ 17549 @LENGTH@ 3
+------DEL SimpleType@@VectorialPointValuePair @AT@ 17553 @LENGTH@ 23
+------DEL SimpleName@@point @AT@ 17577 @LENGTH@ 5
+------DEL SimpleName@@objective @AT@ 17584 @LENGTH@ 9
+---INS SimpleName@@current @TO@ ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @AT@ 17997 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3 OP7)
+OP2:   (MOV, IfStatement, OP1, null)
+OP3:   (INS, InfixExpression, OP1, OP4 OP5 OP6)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, Operator, OP3, null)
+OP6:      (INS, NullLiteral, OP3, null)
+OP7:   (INS, IfStatement, OP1, OP8 OP14)
+OP8:      (INS, MethodInvocation, OP7, OP9 OP10)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, SimpleName, OP8, OP11 OP12 OP13)
+OP11:            (INS, MethodInvocation, OP10, null)
+OP12:            (INS, SimpleName, OP10, null)
+OP13:            (INS, SimpleName, OP10, null)
+OP14:      (INS, ReturnStatement, OP7, OP15)
+OP15:         (INS, SimpleName, OP14, null)
+
+
+
+
+
+hASList: 
+[INS ExpressionStatement@@MethodInvocation:setConvergenceChecker(null) @TO@ MethodDeclaration@@public, @@=CONSTRUCTOR=, MethodName:LevenbergMarquardtOptimizer, @@Argus:null @AT@ 7604 @LENGTH@ 28
+---INS MethodInvocation@@setConvergenceChecker(null) @TO@ ExpressionStatement@@MethodInvocation:setConvergenceChecker(null) @AT@ 7604 @LENGTH@ 27
+------INS SimpleName@@MethodName:setConvergenceChecker:[null] @TO@ MethodInvocation@@setConvergenceChecker(null) @AT@ 7604 @LENGTH@ 27
+---------INS NullLiteral@@null @TO@ SimpleName@@MethodName:setConvergenceChecker:[null] @AT@ 7626 @LENGTH@ 4
+, INS VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @TO@ MethodDeclaration@@protected, @@VectorialPointValuePair, MethodName:doOptimize, @@Argus:nullFunctionEvaluationException, OptimizationException, IllegalArgumentException,  @AT@ 10798 @LENGTH@ 80
+---INS SimpleType@@VectorialPointValuePair @TO@ VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @AT@ 10798 @LENGTH@ 23
+---INS VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @TO@ VariableDeclarationStatement@@VectorialPointValuePair current=new VectorialPointValuePair(point,objective); @AT@ 10822 @LENGTH@ 55
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @AT@ 10822 @LENGTH@ 7
+------INS ClassInstanceCreation@@VectorialPointValuePair[point, objective] @TO@ VariableDeclarationFragment@@current=new VectorialPointValuePair(point,objective) @AT@ 10832 @LENGTH@ 45
+---------INS New@@new @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10832 @LENGTH@ 3
+---------INS SimpleType@@VectorialPointValuePair @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10836 @LENGTH@ 23
+---------INS SimpleName@@point @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10860 @LENGTH@ 5
+---------INS SimpleName@@objective @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 10867 @LENGTH@ 9
+, INS VariableDeclarationStatement@@VectorialPointValuePair previous=current; @TO@ WhileStatement@@BooleanLiteral:true @AT@ 11027 @LENGTH@ 43
+---INS SimpleType@@VectorialPointValuePair @TO@ VariableDeclarationStatement@@VectorialPointValuePair previous=current; @AT@ 11027 @LENGTH@ 23
+---INS VariableDeclarationFragment@@previous=current @TO@ VariableDeclarationStatement@@VectorialPointValuePair previous=current; @AT@ 11051 @LENGTH@ 18
+------INS SimpleName@@previous @TO@ VariableDeclarationFragment@@previous=current @AT@ 11051 @LENGTH@ 8
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@previous=current @AT@ 11062 @LENGTH@ 7
+, UPD ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @TO@ SimpleName:current @AT@ 12756 @LENGTH@ 53
+---DEL ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 12763 @LENGTH@ 45
+------DEL New@@new @AT@ 12763 @LENGTH@ 3
+------DEL SimpleType@@VectorialPointValuePair @AT@ 12767 @LENGTH@ 23
+------DEL SimpleName@@point @AT@ 12791 @LENGTH@ 5
+------DEL SimpleName@@objective @AT@ 12798 @LENGTH@ 9
+---INS SimpleName@@current @TO@ ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @AT@ 12945 @LENGTH@ 7
+, INS ExpressionStatement@@Assignment:current=new VectorialPointValuePair(point,objective) @TO@ ForStatement@@[double ratio=0];ratio < 1.0e-4; [] @AT@ 14486 @LENGTH@ 56
+---INS Assignment@@current=new VectorialPointValuePair(point,objective) @TO@ ExpressionStatement@@Assignment:current=new VectorialPointValuePair(point,objective) @AT@ 14486 @LENGTH@ 55
+------INS SimpleName@@current @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14486 @LENGTH@ 7
+------INS Operator@@= @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14493 @LENGTH@ 1
+------INS ClassInstanceCreation@@VectorialPointValuePair[point, objective] @TO@ Assignment@@current=new VectorialPointValuePair(point,objective) @AT@ 14496 @LENGTH@ 45
+---------INS New@@new @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14496 @LENGTH@ 3
+---------INS SimpleType@@VectorialPointValuePair @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14500 @LENGTH@ 23
+---------INS SimpleName@@point @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14524 @LENGTH@ 5
+---------INS SimpleName@@objective @TO@ ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 14531 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:checker != null @TO@ ForStatement@@[double ratio=0];ratio < 1.0e-4; [] @AT@ 17356 @LENGTH@ 689
+---MOV IfStatement@@InfixExpression:((Math.abs(actRed) <= costRelativeTolerance) && (preRed <= costRelativeTolerance) && (ratio <= 2.0)) || (delta <= parRelativeTolerance * xNorm) @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17293 @LENGTH@ 324
+---INS InfixExpression@@checker != null @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17360 @LENGTH@ 15
+------INS SimpleName@@checker @TO@ InfixExpression@@checker != null @AT@ 17360 @LENGTH@ 7
+------INS Operator@@!= @TO@ InfixExpression@@checker != null @AT@ 17367 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@checker != null @AT@ 17371 @LENGTH@ 4
+---INS IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @TO@ IfStatement@@InfixExpression:checker != null @AT@ 17463 @LENGTH@ 146
+------INS MethodInvocation@@checker.converged(getIterations(),previous,current) @TO@ IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @AT@ 17467 @LENGTH@ 53
+---------INS SimpleName@@Name:checker @TO@ MethodInvocation@@checker.converged(getIterations(),previous,current) @AT@ 17467 @LENGTH@ 7
+---------INS SimpleName@@MethodName:converged:[getIterations(), previous, current] @TO@ MethodInvocation@@checker.converged(getIterations(),previous,current) @AT@ 17475 @LENGTH@ 45
+------------INS MethodInvocation@@MethodName:getIterations:[] @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17485 @LENGTH@ 15
+------------INS SimpleName@@previous @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17502 @LENGTH@ 8
+------------INS SimpleName@@current @TO@ SimpleName@@MethodName:converged:[getIterations(), previous, current] @AT@ 17512 @LENGTH@ 7
+------INS ReturnStatement@@SimpleName:current @TO@ IfStatement@@MethodInvocation:checker.converged(getIterations(),previous,current) @AT@ 17548 @LENGTH@ 15
+---------INS SimpleName@@current @TO@ ReturnStatement@@SimpleName:current @AT@ 17555 @LENGTH@ 7
+, UPD ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @TO@ SimpleName:current @AT@ 17542 @LENGTH@ 53
+---DEL ClassInstanceCreation@@VectorialPointValuePair[point, objective] @AT@ 17549 @LENGTH@ 45
+------DEL New@@new @AT@ 17549 @LENGTH@ 3
+------DEL SimpleType@@VectorialPointValuePair @AT@ 17553 @LENGTH@ 23
+------DEL SimpleName@@point @AT@ 17577 @LENGTH@ 5
+------DEL SimpleName@@objective @AT@ 17584 @LENGTH@ 9
+---INS SimpleName@@current @TO@ ReturnStatement@@ClassInstanceCreation:new VectorialPointValuePair(point,objective) @AT@ 17997 @LENGTH@ 7
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2 OP7)
+OP2:   (DEL, ClassInstanceCreation, OP1, OP3 OP4 OP5 OP6)
+OP3:      (DEL, New, OP2, null)
+OP4:      (DEL, SimpleType, OP2, null)
+OP5:      (DEL, SimpleName, OP2, null)
+OP6:      (DEL, SimpleName, OP2, null)
+OP7:   (INS, SimpleName, OP1, null)
+
+
+

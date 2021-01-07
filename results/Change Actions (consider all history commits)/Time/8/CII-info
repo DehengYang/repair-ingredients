@@ -1,0 +1,163 @@
+
+
+hASList: 
+[UPD IfStatement@@InfixExpression:minutesOffset < 0 || minutesOffset > 59 @TO@ InfixExpression:minutesOffset < -59 || minutesOffset > 59 @AT@ 11391 @LENGTH@ 146
+---UPD InfixExpression@@minutesOffset < 0 || minutesOffset > 59 @TO@ minutesOffset < -59 || minutesOffset > 59 @AT@ 11395 @LENGTH@ 39
+------UPD InfixExpression@@minutesOffset < 0 @TO@ minutesOffset < -59 @AT@ 11395 @LENGTH@ 17
+---------INS PrefixExpression@@-59 @TO@ InfixExpression@@minutesOffset < 0 @AT@ 11411 @LENGTH@ 3
+------------INS Operator@@- @TO@ PrefixExpression@@-59 @AT@ 11411 @LENGTH@ 1
+------------INS NumberLiteral@@59 @TO@ PrefixExpression@@-59 @AT@ 11412 @LENGTH@ 2
+---------DEL NumberLiteral@@0 @AT@ 11411 @LENGTH@ 1
+, INS IfStatement@@InfixExpression:hoursOffset > 0 && minutesOffset < 0 @TO@ MethodDeclaration@@public, static, @@DateTimeZone, MethodName:forOffsetHoursMinutes, @@Argus:int+hoursOffset+int+minutesOffset+IllegalArgumentException,  @AT@ 11548 @LENGTH@ 168
+---INS InfixExpression@@hoursOffset > 0 && minutesOffset < 0 @TO@ IfStatement@@InfixExpression:hoursOffset > 0 && minutesOffset < 0 @AT@ 11552 @LENGTH@ 36
+------INS InfixExpression@@hoursOffset > 0 @TO@ InfixExpression@@hoursOffset > 0 && minutesOffset < 0 @AT@ 11552 @LENGTH@ 15
+---------INS SimpleName@@hoursOffset @TO@ InfixExpression@@hoursOffset > 0 @AT@ 11552 @LENGTH@ 11
+---------INS Operator@@> @TO@ InfixExpression@@hoursOffset > 0 @AT@ 11563 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@hoursOffset > 0 @AT@ 11566 @LENGTH@ 1
+------INS Operator@@&& @TO@ InfixExpression@@hoursOffset > 0 && minutesOffset < 0 @AT@ 11567 @LENGTH@ 2
+------INS InfixExpression@@minutesOffset < 0 @TO@ InfixExpression@@hoursOffset > 0 && minutesOffset < 0 @AT@ 11571 @LENGTH@ 17
+---------INS SimpleName@@minutesOffset @TO@ InfixExpression@@minutesOffset < 0 @AT@ 11571 @LENGTH@ 13
+---------INS Operator@@< @TO@ InfixExpression@@minutesOffset < 0 @AT@ 11584 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@minutesOffset < 0 @AT@ 11587 @LENGTH@ 1
+---INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Positive hours must not have negative minutes: " + minutesOffset) @TO@ IfStatement@@InfixExpression:hoursOffset > 0 && minutesOffset < 0 @AT@ 11604 @LENGTH@ 102
+------INS ClassInstanceCreation@@IllegalArgumentException["Positive hours must not have negative minutes: " + minutesOffset] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Positive hours must not have negative minutes: " + minutesOffset) @AT@ 11610 @LENGTH@ 95
+---------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Positive hours must not have negative minutes: " + minutesOffset] @AT@ 11610 @LENGTH@ 3
+---------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Positive hours must not have negative minutes: " + minutesOffset] @AT@ 11614 @LENGTH@ 24
+---------INS InfixExpression@@"Positive hours must not have negative minutes: " + minutesOffset @TO@ ClassInstanceCreation@@IllegalArgumentException["Positive hours must not have negative minutes: " + minutesOffset] @AT@ 11639 @LENGTH@ 65
+------------INS StringLiteral@@"Positive hours must not have negative minutes: " @TO@ InfixExpression@@"Positive hours must not have negative minutes: " + minutesOffset @AT@ 11639 @LENGTH@ 49
+------------INS Operator@@+ @TO@ InfixExpression@@"Positive hours must not have negative minutes: " + minutesOffset @AT@ 11688 @LENGTH@ 1
+------------INS SimpleName@@minutesOffset @TO@ InfixExpression@@"Positive hours must not have negative minutes: " + minutesOffset @AT@ 11691 @LENGTH@ 13
+, UPD ExpressionStatement@@Assignment:minutesOffset=hoursInMinutes - minutesOffset @TO@ Assignment:minutesOffset=hoursInMinutes - Math.abs(minutesOffset) @AT@ 11681 @LENGTH@ 47
+---UPD Assignment@@minutesOffset=hoursInMinutes - minutesOffset @TO@ minutesOffset=hoursInMinutes - Math.abs(minutesOffset) @AT@ 11681 @LENGTH@ 46
+------UPD InfixExpression@@hoursInMinutes - minutesOffset @TO@ hoursInMinutes - Math.abs(minutesOffset) @AT@ 11697 @LENGTH@ 30
+---------DEL SimpleName@@minutesOffset @AT@ 11714 @LENGTH@ 13
+---------INS MethodInvocation@@Math.abs(minutesOffset) @TO@ InfixExpression@@hoursInMinutes - minutesOffset @AT@ 11893 @LENGTH@ 23
+------------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(minutesOffset) @AT@ 11893 @LENGTH@ 4
+------------INS SimpleName@@MethodName:abs:[minutesOffset] @TO@ MethodInvocation@@Math.abs(minutesOffset) @AT@ 11898 @LENGTH@ 18
+---------------INS SimpleName@@minutesOffset @TO@ SimpleName@@MethodName:abs:[minutesOffset] @AT@ 11902 @LENGTH@ 13
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (UPD, InfixExpression, OP1, OP3)
+OP3:      (UPD, InfixExpression, OP2, OP4 OP7)
+OP4:         (INS, PrefixExpression, OP3, OP5 OP6)
+OP5:            (INS, Operator, OP4, null)
+OP6:            (INS, NumberLiteral, OP4, null)
+OP7:         (DEL, NumberLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[UPD IfStatement@@InfixExpression:minutesOffset < 0 || minutesOffset > 59 @TO@ InfixExpression:minutesOffset < -59 || minutesOffset > 59 @AT@ 11391 @LENGTH@ 146
+---UPD InfixExpression@@minutesOffset < 0 || minutesOffset > 59 @TO@ minutesOffset < -59 || minutesOffset > 59 @AT@ 11395 @LENGTH@ 39
+------UPD InfixExpression@@minutesOffset < 0 @TO@ minutesOffset < -59 @AT@ 11395 @LENGTH@ 17
+---------INS PrefixExpression@@-59 @TO@ InfixExpression@@minutesOffset < 0 @AT@ 11411 @LENGTH@ 3
+------------INS Operator@@- @TO@ PrefixExpression@@-59 @AT@ 11411 @LENGTH@ 1
+------------INS NumberLiteral@@59 @TO@ PrefixExpression@@-59 @AT@ 11412 @LENGTH@ 2
+---------DEL NumberLiteral@@0 @AT@ 11411 @LENGTH@ 1
+, INS IfStatement@@InfixExpression:hoursOffset > 0 && minutesOffset < 0 @TO@ MethodDeclaration@@public, static, @@DateTimeZone, MethodName:forOffsetHoursMinutes, @@Argus:int+hoursOffset+int+minutesOffset+IllegalArgumentException,  @AT@ 11548 @LENGTH@ 168
+---INS InfixExpression@@hoursOffset > 0 && minutesOffset < 0 @TO@ IfStatement@@InfixExpression:hoursOffset > 0 && minutesOffset < 0 @AT@ 11552 @LENGTH@ 36
+------INS InfixExpression@@hoursOffset > 0 @TO@ InfixExpression@@hoursOffset > 0 && minutesOffset < 0 @AT@ 11552 @LENGTH@ 15
+---------INS SimpleName@@hoursOffset @TO@ InfixExpression@@hoursOffset > 0 @AT@ 11552 @LENGTH@ 11
+---------INS Operator@@> @TO@ InfixExpression@@hoursOffset > 0 @AT@ 11563 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@hoursOffset > 0 @AT@ 11566 @LENGTH@ 1
+------INS Operator@@&& @TO@ InfixExpression@@hoursOffset > 0 && minutesOffset < 0 @AT@ 11567 @LENGTH@ 2
+------INS InfixExpression@@minutesOffset < 0 @TO@ InfixExpression@@hoursOffset > 0 && minutesOffset < 0 @AT@ 11571 @LENGTH@ 17
+---------INS SimpleName@@minutesOffset @TO@ InfixExpression@@minutesOffset < 0 @AT@ 11571 @LENGTH@ 13
+---------INS Operator@@< @TO@ InfixExpression@@minutesOffset < 0 @AT@ 11584 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@minutesOffset < 0 @AT@ 11587 @LENGTH@ 1
+---INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Positive hours must not have negative minutes: " + minutesOffset) @TO@ IfStatement@@InfixExpression:hoursOffset > 0 && minutesOffset < 0 @AT@ 11604 @LENGTH@ 102
+------INS ClassInstanceCreation@@IllegalArgumentException["Positive hours must not have negative minutes: " + minutesOffset] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Positive hours must not have negative minutes: " + minutesOffset) @AT@ 11610 @LENGTH@ 95
+---------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Positive hours must not have negative minutes: " + minutesOffset] @AT@ 11610 @LENGTH@ 3
+---------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Positive hours must not have negative minutes: " + minutesOffset] @AT@ 11614 @LENGTH@ 24
+---------INS InfixExpression@@"Positive hours must not have negative minutes: " + minutesOffset @TO@ ClassInstanceCreation@@IllegalArgumentException["Positive hours must not have negative minutes: " + minutesOffset] @AT@ 11639 @LENGTH@ 65
+------------INS StringLiteral@@"Positive hours must not have negative minutes: " @TO@ InfixExpression@@"Positive hours must not have negative minutes: " + minutesOffset @AT@ 11639 @LENGTH@ 49
+------------INS Operator@@+ @TO@ InfixExpression@@"Positive hours must not have negative minutes: " + minutesOffset @AT@ 11688 @LENGTH@ 1
+------------INS SimpleName@@minutesOffset @TO@ InfixExpression@@"Positive hours must not have negative minutes: " + minutesOffset @AT@ 11691 @LENGTH@ 13
+, UPD ExpressionStatement@@Assignment:minutesOffset=hoursInMinutes - minutesOffset @TO@ Assignment:minutesOffset=hoursInMinutes - Math.abs(minutesOffset) @AT@ 11681 @LENGTH@ 47
+---UPD Assignment@@minutesOffset=hoursInMinutes - minutesOffset @TO@ minutesOffset=hoursInMinutes - Math.abs(minutesOffset) @AT@ 11681 @LENGTH@ 46
+------UPD InfixExpression@@hoursInMinutes - minutesOffset @TO@ hoursInMinutes - Math.abs(minutesOffset) @AT@ 11697 @LENGTH@ 30
+---------DEL SimpleName@@minutesOffset @AT@ 11714 @LENGTH@ 13
+---------INS MethodInvocation@@Math.abs(minutesOffset) @TO@ InfixExpression@@hoursInMinutes - minutesOffset @AT@ 11893 @LENGTH@ 23
+------------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(minutesOffset) @AT@ 11893 @LENGTH@ 4
+------------INS SimpleName@@MethodName:abs:[minutesOffset] @TO@ MethodInvocation@@Math.abs(minutesOffset) @AT@ 11898 @LENGTH@ 18
+---------------INS SimpleName@@minutesOffset @TO@ SimpleName@@MethodName:abs:[minutesOffset] @AT@ 11902 @LENGTH@ 13
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP12)
+OP2:   (INS, InfixExpression, OP1, OP3 OP7 OP8)
+OP3:      (INS, InfixExpression, OP2, OP4 OP5 OP6)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, Operator, OP3, null)
+OP6:         (INS, NumberLiteral, OP3, null)
+OP7:      (INS, Operator, OP2, null)
+OP8:      (INS, InfixExpression, OP2, OP9 OP10 OP11)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, Operator, OP8, null)
+OP11:         (INS, NumberLiteral, OP8, null)
+OP12:   (INS, ThrowStatement, OP1, OP13)
+OP13:      (INS, ClassInstanceCreation, OP12, OP14 OP15 OP16)
+OP14:         (INS, New, OP13, null)
+OP15:         (INS, SimpleType, OP13, null)
+OP16:         (INS, InfixExpression, OP13, OP17 OP18 OP19)
+OP17:            (INS, StringLiteral, OP16, null)
+OP18:            (INS, Operator, OP16, null)
+OP19:            (INS, SimpleName, OP16, null)
+
+
+
+
+
+hASList: 
+[UPD IfStatement@@InfixExpression:minutesOffset < 0 || minutesOffset > 59 @TO@ InfixExpression:minutesOffset < -59 || minutesOffset > 59 @AT@ 11391 @LENGTH@ 146
+---UPD InfixExpression@@minutesOffset < 0 || minutesOffset > 59 @TO@ minutesOffset < -59 || minutesOffset > 59 @AT@ 11395 @LENGTH@ 39
+------UPD InfixExpression@@minutesOffset < 0 @TO@ minutesOffset < -59 @AT@ 11395 @LENGTH@ 17
+---------INS PrefixExpression@@-59 @TO@ InfixExpression@@minutesOffset < 0 @AT@ 11411 @LENGTH@ 3
+------------INS Operator@@- @TO@ PrefixExpression@@-59 @AT@ 11411 @LENGTH@ 1
+------------INS NumberLiteral@@59 @TO@ PrefixExpression@@-59 @AT@ 11412 @LENGTH@ 2
+---------DEL NumberLiteral@@0 @AT@ 11411 @LENGTH@ 1
+, INS IfStatement@@InfixExpression:hoursOffset > 0 && minutesOffset < 0 @TO@ MethodDeclaration@@public, static, @@DateTimeZone, MethodName:forOffsetHoursMinutes, @@Argus:int+hoursOffset+int+minutesOffset+IllegalArgumentException,  @AT@ 11548 @LENGTH@ 168
+---INS InfixExpression@@hoursOffset > 0 && minutesOffset < 0 @TO@ IfStatement@@InfixExpression:hoursOffset > 0 && minutesOffset < 0 @AT@ 11552 @LENGTH@ 36
+------INS InfixExpression@@hoursOffset > 0 @TO@ InfixExpression@@hoursOffset > 0 && minutesOffset < 0 @AT@ 11552 @LENGTH@ 15
+---------INS SimpleName@@hoursOffset @TO@ InfixExpression@@hoursOffset > 0 @AT@ 11552 @LENGTH@ 11
+---------INS Operator@@> @TO@ InfixExpression@@hoursOffset > 0 @AT@ 11563 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@hoursOffset > 0 @AT@ 11566 @LENGTH@ 1
+------INS Operator@@&& @TO@ InfixExpression@@hoursOffset > 0 && minutesOffset < 0 @AT@ 11567 @LENGTH@ 2
+------INS InfixExpression@@minutesOffset < 0 @TO@ InfixExpression@@hoursOffset > 0 && minutesOffset < 0 @AT@ 11571 @LENGTH@ 17
+---------INS SimpleName@@minutesOffset @TO@ InfixExpression@@minutesOffset < 0 @AT@ 11571 @LENGTH@ 13
+---------INS Operator@@< @TO@ InfixExpression@@minutesOffset < 0 @AT@ 11584 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@minutesOffset < 0 @AT@ 11587 @LENGTH@ 1
+---INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Positive hours must not have negative minutes: " + minutesOffset) @TO@ IfStatement@@InfixExpression:hoursOffset > 0 && minutesOffset < 0 @AT@ 11604 @LENGTH@ 102
+------INS ClassInstanceCreation@@IllegalArgumentException["Positive hours must not have negative minutes: " + minutesOffset] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Positive hours must not have negative minutes: " + minutesOffset) @AT@ 11610 @LENGTH@ 95
+---------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Positive hours must not have negative minutes: " + minutesOffset] @AT@ 11610 @LENGTH@ 3
+---------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Positive hours must not have negative minutes: " + minutesOffset] @AT@ 11614 @LENGTH@ 24
+---------INS InfixExpression@@"Positive hours must not have negative minutes: " + minutesOffset @TO@ ClassInstanceCreation@@IllegalArgumentException["Positive hours must not have negative minutes: " + minutesOffset] @AT@ 11639 @LENGTH@ 65
+------------INS StringLiteral@@"Positive hours must not have negative minutes: " @TO@ InfixExpression@@"Positive hours must not have negative minutes: " + minutesOffset @AT@ 11639 @LENGTH@ 49
+------------INS Operator@@+ @TO@ InfixExpression@@"Positive hours must not have negative minutes: " + minutesOffset @AT@ 11688 @LENGTH@ 1
+------------INS SimpleName@@minutesOffset @TO@ InfixExpression@@"Positive hours must not have negative minutes: " + minutesOffset @AT@ 11691 @LENGTH@ 13
+, UPD ExpressionStatement@@Assignment:minutesOffset=hoursInMinutes - minutesOffset @TO@ Assignment:minutesOffset=hoursInMinutes - Math.abs(minutesOffset) @AT@ 11681 @LENGTH@ 47
+---UPD Assignment@@minutesOffset=hoursInMinutes - minutesOffset @TO@ minutesOffset=hoursInMinutes - Math.abs(minutesOffset) @AT@ 11681 @LENGTH@ 46
+------UPD InfixExpression@@hoursInMinutes - minutesOffset @TO@ hoursInMinutes - Math.abs(minutesOffset) @AT@ 11697 @LENGTH@ 30
+---------DEL SimpleName@@minutesOffset @AT@ 11714 @LENGTH@ 13
+---------INS MethodInvocation@@Math.abs(minutesOffset) @TO@ InfixExpression@@hoursInMinutes - minutesOffset @AT@ 11893 @LENGTH@ 23
+------------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(minutesOffset) @AT@ 11893 @LENGTH@ 4
+------------INS SimpleName@@MethodName:abs:[minutesOffset] @TO@ MethodInvocation@@Math.abs(minutesOffset) @AT@ 11898 @LENGTH@ 18
+---------------INS SimpleName@@minutesOffset @TO@ SimpleName@@MethodName:abs:[minutesOffset] @AT@ 11902 @LENGTH@ 13
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, Assignment, OP1, OP3)
+OP3:      (UPD, InfixExpression, OP2, OP4 OP5)
+OP4:         (DEL, SimpleName, OP3, null)
+OP5:         (INS, MethodInvocation, OP3, OP6 OP7)
+OP6:            (INS, SimpleName, OP5, null)
+OP7:            (INS, SimpleName, OP5, OP8)
+OP8:               (INS, SimpleName, OP7, null)
+
+
+

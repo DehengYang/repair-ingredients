@@ -1,0 +1,898 @@
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:getMock(invocation) @TO@ MethodInvocation:getMock(invocation,returnTypeGenericMetadata) @AT@ 2097 @LENGTH@ 27
+---UPD MethodInvocation@@getMock(invocation) @TO@ getMock(invocation,returnTypeGenericMetadata) @AT@ 2104 @LENGTH@ 19
+------UPD SimpleName@@MethodName:getMock:[invocation] @TO@ MethodName:getMock:[invocation, returnTypeGenericMetadata] @AT@ 2104 @LENGTH@ 19
+---------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:getMock:[invocation] @AT@ 2248 @LENGTH@ 25
+, UPD MethodDeclaration@@private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+Throwable,  @TO@ private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+GenericMetadataSupport+returnTypeGenericMetadata+Throwable,  @AT@ 2139 @LENGTH@ 686
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2342 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 2342 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 2365 @LENGTH@ 25
+---UPD ReturnStatement@@MethodInvocation:recordDeepStubMock(invocation,container) @TO@ MethodInvocation:recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata),container) @AT@ 2769 @LENGTH@ 49
+------UPD MethodInvocation@@recordDeepStubMock(invocation,container) @TO@ recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata),container) @AT@ 2776 @LENGTH@ 41
+---------UPD SimpleName@@MethodName:recordDeepStubMock:[invocation, container] @TO@ MethodName:recordDeepStubMock:[createNewDeepStubMock(returnTypeGenericMetadata), container] @AT@ 2776 @LENGTH@ 41
+------------UPD SimpleName@@invocation @TO@ returnTypeGenericMetadata @AT@ 2795 @LENGTH@ 10
+------------INS MethodInvocation@@createNewDeepStubMock(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:recordDeepStubMock:[invocation, container] @AT@ 2996 @LENGTH@ 48
+---------------INS SimpleName@@MethodName:createNewDeepStubMock:[returnTypeGenericMetadata] @TO@ MethodInvocation@@createNewDeepStubMock(returnTypeGenericMetadata) @AT@ 2996 @LENGTH@ 48
+------------------MOV SimpleName@@invocation @TO@ SimpleName@@MethodName:createNewDeepStubMock:[returnTypeGenericMetadata] @AT@ 2795 @LENGTH@ 10
+, UPD MethodDeclaration@@private, @@Object, MethodName:recordDeepStubMock, @@Argus:InvocationOnMock+invocation+InvocationContainerImpl+container+ @TO@ private, @@Object, MethodName:recordDeepStubMock, @@Argus:Object+mock+InvocationContainerImpl+container+Throwable,  @AT@ 2833 @LENGTH@ 657
+---UPD SingleVariableDeclaration@@InvocationOnMock invocation @TO@ final Object mock @AT@ 3063 @LENGTH@ 27
+------UPD SimpleType@@InvocationOnMock @TO@ Object @AT@ 3063 @LENGTH@ 16
+------UPD SimpleName@@invocation @TO@ mock @AT@ 3080 @LENGTH@ 10
+------INS Modifier@@final @TO@ SingleVariableDeclaration@@InvocationOnMock invocation @AT@ 4369 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@Class<?> clz=invocation.getMethod().getReturnType(); @AT@ 3138 @LENGTH@ 54
+------DEL ParameterizedType@@Class<?> @AT@ 3138 @LENGTH@ 8
+---------DEL SimpleType@@Class @AT@ 3138 @LENGTH@ 5
+---------DEL WildcardType@@? @AT@ 3144 @LENGTH@ 1
+------DEL VariableDeclarationFragment@@clz=invocation.getMethod().getReturnType() @AT@ 3147 @LENGTH@ 44
+---------DEL SimpleName@@clz @AT@ 3147 @LENGTH@ 3
+---------DEL MethodInvocation@@invocation.getMethod().getReturnType() @AT@ 3153 @LENGTH@ 38
+------------DEL SimpleName@@Name:invocation @AT@ 3153 @LENGTH@ 10
+------------DEL MethodInvocation@@MethodName:getMethod:[] @AT@ 3153 @LENGTH@ 22
+------------DEL SimpleName@@MethodName:getReturnType:[] @AT@ 3176 @LENGTH@ 15
+---DEL VariableDeclarationStatement@@final Object mock=org.mockito.Mockito.mock(clz,this); @AT@ 3202 @LENGTH@ 56
+------DEL Modifier@@final @AT@ 3202 @LENGTH@ 5
+------DEL SimpleType@@Object @AT@ 3208 @LENGTH@ 6
+------DEL VariableDeclarationFragment@@mock=org.mockito.Mockito.mock(clz,this) @AT@ 3215 @LENGTH@ 42
+---------DEL SimpleName@@mock @AT@ 3215 @LENGTH@ 4
+---------DEL MethodInvocation@@org.mockito.Mockito.mock(clz,this) @AT@ 3222 @LENGTH@ 35
+------------DEL QualifiedName@@Name:org.mockito.Mockito @AT@ 3222 @LENGTH@ 19
+------------DEL SimpleName@@MethodName:mock:[clz, this] @AT@ 3242 @LENGTH@ 15
+---------------DEL SimpleName@@clz @AT@ 3247 @LENGTH@ 3
+---------------DEL ThisExpression@@this @AT@ 3252 @LENGTH@ 4
+, INS MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3072 @LENGTH@ 433
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3260 @LENGTH@ 7
+---INS SimpleType@@Object @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3268 @LENGTH@ 6
+---INS SimpleName@@MethodName:createNewDeepStubMock @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3275 @LENGTH@ 21
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3297 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3297 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3320 @LENGTH@ 25
+---INS ReturnStatement@@MethodInvocation:mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3358 @LENGTH@ 140
+------INS MethodInvocation@@mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ ReturnStatement@@MethodInvocation:mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @AT@ 3365 @LENGTH@ 132
+---------INS SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @TO@ MethodInvocation@@mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @AT@ 3365 @LENGTH@ 132
+------------INS MethodInvocation@@returnTypeGenericMetadata.rawType() @TO@ SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @AT@ 3388 @LENGTH@ 35
+---------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawType() @AT@ 3388 @LENGTH@ 25
+---------------INS SimpleName@@MethodName:rawType:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawType() @AT@ 3414 @LENGTH@ 9
+------------INS MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @AT@ 3442 @LENGTH@ 44
+---------------INS SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @TO@ MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @AT@ 3442 @LENGTH@ 44
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @AT@ 3460 @LENGTH@ 25
+, INS MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3513 @LENGTH@ 462
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3513 @LENGTH@ 7
+---INS SimpleType@@MockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3521 @LENGTH@ 12
+---INS SimpleName@@MethodName:withSettingsUsing @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3534 @LENGTH@ 17
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3552 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3552 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3575 @LENGTH@ 25
+---INS VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3613 @LENGTH@ 235
+------INS SimpleType@@MockSettings @TO@ VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @AT@ 3613 @LENGTH@ 12
+------INS VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @TO@ VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @AT@ 3626 @LENGTH@ 221
+---------INS SimpleName@@mockSettings @TO@ VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3626 @LENGTH@ 12
+---------INS ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @TO@ VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3658 @LENGTH@ 189
+------------INS InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3658 @LENGTH@ 57
+---------------INS FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3658 @LENGTH@ 53
+------------------INS MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @TO@ FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @AT@ 3658 @LENGTH@ 46
+---------------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3658 @LENGTH@ 25
+---------------------INS SimpleName@@MethodName:rawExtraInterfaces:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3684 @LENGTH@ 20
+------------------INS SimpleName@@length @TO@ FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @AT@ 3705 @LENGTH@ 6
+---------------INS Operator@@> @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3711 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3714 @LENGTH@ 1
+------------INS MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3735 @LENGTH@ 78
+---------------INS MethodInvocation@@MethodName:withSettings:[] @TO@ MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @AT@ 3735 @LENGTH@ 14
+---------------INS SimpleName@@MethodName:extraInterfaces:[returnTypeGenericMetadata.rawExtraInterfaces()] @TO@ MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @AT@ 3750 @LENGTH@ 63
+------------------INS MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @TO@ SimpleName@@MethodName:extraInterfaces:[returnTypeGenericMetadata.rawExtraInterfaces()] @AT@ 3766 @LENGTH@ 46
+---------------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3766 @LENGTH@ 25
+---------------------INS SimpleName@@MethodName:rawExtraInterfaces:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3792 @LENGTH@ 20
+------------INS MethodInvocation@@MethodName:withSettings:[] @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3833 @LENGTH@ 14
+---INS ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3860 @LENGTH@ 108
+------INS MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3867 @LENGTH@ 100
+---------INS SimpleName@@Name:mockSettings @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3867 @LENGTH@ 12
+---------INS SimpleName@@MethodName:defaultAnswer:[returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3898 @LENGTH@ 69
+------------INS MethodInvocation@@returnsDeepStubsAnswerUsing(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:defaultAnswer:[returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)] @AT@ 3912 @LENGTH@ 54
+---------------INS SimpleName@@MethodName:returnsDeepStubsAnswerUsing:[returnTypeGenericMetadata] @TO@ MethodInvocation@@returnsDeepStubsAnswerUsing(returnTypeGenericMetadata) @AT@ 3912 @LENGTH@ 54
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:returnsDeepStubsAnswerUsing:[returnTypeGenericMetadata] @AT@ 3940 @LENGTH@ 25
+, INS MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3983 @LENGTH@ 344
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3983 @LENGTH@ 7
+---INS SimpleType@@ReturnsDeepStubs @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3991 @LENGTH@ 16
+---INS SimpleName@@MethodName:returnsDeepStubsAnswerUsing @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4008 @LENGTH@ 27
+---INS SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4036 @LENGTH@ 54
+------INS Modifier@@final @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4036 @LENGTH@ 5
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4042 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4065 @LENGTH@ 25
+---INS ReturnStatement@@ClassInstanceCreation:new ReturnsDeepStubs(){
+  @Override protected GenericMetadataSupport actualParameterizedType(  Object mock){
+    return returnTypeGenericMetadata;
+  }
+}
+ @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4103 @LENGTH@ 217
+------INS ClassInstanceCreation@@ReturnsDeepStubs[] @TO@ ReturnStatement@@ClassInstanceCreation:new ReturnsDeepStubs(){
+  @Override protected GenericMetadataSupport actualParameterizedType(  Object mock){
+    return returnTypeGenericMetadata;
+  }
+}
+ @AT@ 4110 @LENGTH@ 209
+---------INS New@@new @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4110 @LENGTH@ 3
+---------INS SimpleType@@ReturnsDeepStubs @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4114 @LENGTH@ 16
+---------INS AnonymousClassDeclaration@@AnonymousClass @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4133 @LENGTH@ 186
+------------INS MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @TO@ AnonymousClassDeclaration@@AnonymousClass @AT@ 4148 @LENGTH@ 160
+---------------INS Modifier@@protected @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4171 @LENGTH@ 9
+---------------INS SimpleType@@GenericMetadataSupport @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4181 @LENGTH@ 22
+---------------INS SimpleName@@MethodName:actualParameterizedType @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4204 @LENGTH@ 23
+---------------INS SingleVariableDeclaration@@Object mock @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4228 @LENGTH@ 11
+------------------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object mock @AT@ 4228 @LENGTH@ 6
+------------------INS SimpleName@@mock @TO@ SingleVariableDeclaration@@Object mock @AT@ 4235 @LENGTH@ 4
+---------------INS ReturnStatement@@SimpleName:returnTypeGenericMetadata @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4260 @LENGTH@ 33
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ ReturnStatement@@SimpleName:returnTypeGenericMetadata @AT@ 4267 @LENGTH@ 25
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (INS, SimpleName, OP3, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:getMock(invocation) @TO@ MethodInvocation:getMock(invocation,returnTypeGenericMetadata) @AT@ 2097 @LENGTH@ 27
+---UPD MethodInvocation@@getMock(invocation) @TO@ getMock(invocation,returnTypeGenericMetadata) @AT@ 2104 @LENGTH@ 19
+------UPD SimpleName@@MethodName:getMock:[invocation] @TO@ MethodName:getMock:[invocation, returnTypeGenericMetadata] @AT@ 2104 @LENGTH@ 19
+---------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:getMock:[invocation] @AT@ 2248 @LENGTH@ 25
+, UPD MethodDeclaration@@private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+Throwable,  @TO@ private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+GenericMetadataSupport+returnTypeGenericMetadata+Throwable,  @AT@ 2139 @LENGTH@ 686
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2342 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 2342 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 2365 @LENGTH@ 25
+---UPD ReturnStatement@@MethodInvocation:recordDeepStubMock(invocation,container) @TO@ MethodInvocation:recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata),container) @AT@ 2769 @LENGTH@ 49
+------UPD MethodInvocation@@recordDeepStubMock(invocation,container) @TO@ recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata),container) @AT@ 2776 @LENGTH@ 41
+---------UPD SimpleName@@MethodName:recordDeepStubMock:[invocation, container] @TO@ MethodName:recordDeepStubMock:[createNewDeepStubMock(returnTypeGenericMetadata), container] @AT@ 2776 @LENGTH@ 41
+------------UPD SimpleName@@invocation @TO@ returnTypeGenericMetadata @AT@ 2795 @LENGTH@ 10
+------------INS MethodInvocation@@createNewDeepStubMock(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:recordDeepStubMock:[invocation, container] @AT@ 2996 @LENGTH@ 48
+---------------INS SimpleName@@MethodName:createNewDeepStubMock:[returnTypeGenericMetadata] @TO@ MethodInvocation@@createNewDeepStubMock(returnTypeGenericMetadata) @AT@ 2996 @LENGTH@ 48
+------------------MOV SimpleName@@invocation @TO@ SimpleName@@MethodName:createNewDeepStubMock:[returnTypeGenericMetadata] @AT@ 2795 @LENGTH@ 10
+, UPD MethodDeclaration@@private, @@Object, MethodName:recordDeepStubMock, @@Argus:InvocationOnMock+invocation+InvocationContainerImpl+container+ @TO@ private, @@Object, MethodName:recordDeepStubMock, @@Argus:Object+mock+InvocationContainerImpl+container+Throwable,  @AT@ 2833 @LENGTH@ 657
+---UPD SingleVariableDeclaration@@InvocationOnMock invocation @TO@ final Object mock @AT@ 3063 @LENGTH@ 27
+------UPD SimpleType@@InvocationOnMock @TO@ Object @AT@ 3063 @LENGTH@ 16
+------UPD SimpleName@@invocation @TO@ mock @AT@ 3080 @LENGTH@ 10
+------INS Modifier@@final @TO@ SingleVariableDeclaration@@InvocationOnMock invocation @AT@ 4369 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@Class<?> clz=invocation.getMethod().getReturnType(); @AT@ 3138 @LENGTH@ 54
+------DEL ParameterizedType@@Class<?> @AT@ 3138 @LENGTH@ 8
+---------DEL SimpleType@@Class @AT@ 3138 @LENGTH@ 5
+---------DEL WildcardType@@? @AT@ 3144 @LENGTH@ 1
+------DEL VariableDeclarationFragment@@clz=invocation.getMethod().getReturnType() @AT@ 3147 @LENGTH@ 44
+---------DEL SimpleName@@clz @AT@ 3147 @LENGTH@ 3
+---------DEL MethodInvocation@@invocation.getMethod().getReturnType() @AT@ 3153 @LENGTH@ 38
+------------DEL SimpleName@@Name:invocation @AT@ 3153 @LENGTH@ 10
+------------DEL MethodInvocation@@MethodName:getMethod:[] @AT@ 3153 @LENGTH@ 22
+------------DEL SimpleName@@MethodName:getReturnType:[] @AT@ 3176 @LENGTH@ 15
+---DEL VariableDeclarationStatement@@final Object mock=org.mockito.Mockito.mock(clz,this); @AT@ 3202 @LENGTH@ 56
+------DEL Modifier@@final @AT@ 3202 @LENGTH@ 5
+------DEL SimpleType@@Object @AT@ 3208 @LENGTH@ 6
+------DEL VariableDeclarationFragment@@mock=org.mockito.Mockito.mock(clz,this) @AT@ 3215 @LENGTH@ 42
+---------DEL SimpleName@@mock @AT@ 3215 @LENGTH@ 4
+---------DEL MethodInvocation@@org.mockito.Mockito.mock(clz,this) @AT@ 3222 @LENGTH@ 35
+------------DEL QualifiedName@@Name:org.mockito.Mockito @AT@ 3222 @LENGTH@ 19
+------------DEL SimpleName@@MethodName:mock:[clz, this] @AT@ 3242 @LENGTH@ 15
+---------------DEL SimpleName@@clz @AT@ 3247 @LENGTH@ 3
+---------------DEL ThisExpression@@this @AT@ 3252 @LENGTH@ 4
+, INS MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3072 @LENGTH@ 433
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3260 @LENGTH@ 7
+---INS SimpleType@@Object @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3268 @LENGTH@ 6
+---INS SimpleName@@MethodName:createNewDeepStubMock @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3275 @LENGTH@ 21
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3297 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3297 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3320 @LENGTH@ 25
+---INS ReturnStatement@@MethodInvocation:mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3358 @LENGTH@ 140
+------INS MethodInvocation@@mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ ReturnStatement@@MethodInvocation:mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @AT@ 3365 @LENGTH@ 132
+---------INS SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @TO@ MethodInvocation@@mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @AT@ 3365 @LENGTH@ 132
+------------INS MethodInvocation@@returnTypeGenericMetadata.rawType() @TO@ SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @AT@ 3388 @LENGTH@ 35
+---------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawType() @AT@ 3388 @LENGTH@ 25
+---------------INS SimpleName@@MethodName:rawType:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawType() @AT@ 3414 @LENGTH@ 9
+------------INS MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @AT@ 3442 @LENGTH@ 44
+---------------INS SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @TO@ MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @AT@ 3442 @LENGTH@ 44
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @AT@ 3460 @LENGTH@ 25
+, INS MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3513 @LENGTH@ 462
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3513 @LENGTH@ 7
+---INS SimpleType@@MockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3521 @LENGTH@ 12
+---INS SimpleName@@MethodName:withSettingsUsing @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3534 @LENGTH@ 17
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3552 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3552 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3575 @LENGTH@ 25
+---INS VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3613 @LENGTH@ 235
+------INS SimpleType@@MockSettings @TO@ VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @AT@ 3613 @LENGTH@ 12
+------INS VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @TO@ VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @AT@ 3626 @LENGTH@ 221
+---------INS SimpleName@@mockSettings @TO@ VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3626 @LENGTH@ 12
+---------INS ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @TO@ VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3658 @LENGTH@ 189
+------------INS InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3658 @LENGTH@ 57
+---------------INS FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3658 @LENGTH@ 53
+------------------INS MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @TO@ FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @AT@ 3658 @LENGTH@ 46
+---------------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3658 @LENGTH@ 25
+---------------------INS SimpleName@@MethodName:rawExtraInterfaces:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3684 @LENGTH@ 20
+------------------INS SimpleName@@length @TO@ FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @AT@ 3705 @LENGTH@ 6
+---------------INS Operator@@> @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3711 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3714 @LENGTH@ 1
+------------INS MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3735 @LENGTH@ 78
+---------------INS MethodInvocation@@MethodName:withSettings:[] @TO@ MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @AT@ 3735 @LENGTH@ 14
+---------------INS SimpleName@@MethodName:extraInterfaces:[returnTypeGenericMetadata.rawExtraInterfaces()] @TO@ MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @AT@ 3750 @LENGTH@ 63
+------------------INS MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @TO@ SimpleName@@MethodName:extraInterfaces:[returnTypeGenericMetadata.rawExtraInterfaces()] @AT@ 3766 @LENGTH@ 46
+---------------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3766 @LENGTH@ 25
+---------------------INS SimpleName@@MethodName:rawExtraInterfaces:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3792 @LENGTH@ 20
+------------INS MethodInvocation@@MethodName:withSettings:[] @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3833 @LENGTH@ 14
+---INS ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3860 @LENGTH@ 108
+------INS MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3867 @LENGTH@ 100
+---------INS SimpleName@@Name:mockSettings @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3867 @LENGTH@ 12
+---------INS SimpleName@@MethodName:defaultAnswer:[returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3898 @LENGTH@ 69
+------------INS MethodInvocation@@returnsDeepStubsAnswerUsing(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:defaultAnswer:[returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)] @AT@ 3912 @LENGTH@ 54
+---------------INS SimpleName@@MethodName:returnsDeepStubsAnswerUsing:[returnTypeGenericMetadata] @TO@ MethodInvocation@@returnsDeepStubsAnswerUsing(returnTypeGenericMetadata) @AT@ 3912 @LENGTH@ 54
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:returnsDeepStubsAnswerUsing:[returnTypeGenericMetadata] @AT@ 3940 @LENGTH@ 25
+, INS MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3983 @LENGTH@ 344
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3983 @LENGTH@ 7
+---INS SimpleType@@ReturnsDeepStubs @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3991 @LENGTH@ 16
+---INS SimpleName@@MethodName:returnsDeepStubsAnswerUsing @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4008 @LENGTH@ 27
+---INS SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4036 @LENGTH@ 54
+------INS Modifier@@final @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4036 @LENGTH@ 5
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4042 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4065 @LENGTH@ 25
+---INS ReturnStatement@@ClassInstanceCreation:new ReturnsDeepStubs(){
+  @Override protected GenericMetadataSupport actualParameterizedType(  Object mock){
+    return returnTypeGenericMetadata;
+  }
+}
+ @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4103 @LENGTH@ 217
+------INS ClassInstanceCreation@@ReturnsDeepStubs[] @TO@ ReturnStatement@@ClassInstanceCreation:new ReturnsDeepStubs(){
+  @Override protected GenericMetadataSupport actualParameterizedType(  Object mock){
+    return returnTypeGenericMetadata;
+  }
+}
+ @AT@ 4110 @LENGTH@ 209
+---------INS New@@new @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4110 @LENGTH@ 3
+---------INS SimpleType@@ReturnsDeepStubs @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4114 @LENGTH@ 16
+---------INS AnonymousClassDeclaration@@AnonymousClass @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4133 @LENGTH@ 186
+------------INS MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @TO@ AnonymousClassDeclaration@@AnonymousClass @AT@ 4148 @LENGTH@ 160
+---------------INS Modifier@@protected @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4171 @LENGTH@ 9
+---------------INS SimpleType@@GenericMetadataSupport @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4181 @LENGTH@ 22
+---------------INS SimpleName@@MethodName:actualParameterizedType @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4204 @LENGTH@ 23
+---------------INS SingleVariableDeclaration@@Object mock @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4228 @LENGTH@ 11
+------------------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object mock @AT@ 4228 @LENGTH@ 6
+------------------INS SimpleName@@mock @TO@ SingleVariableDeclaration@@Object mock @AT@ 4235 @LENGTH@ 4
+---------------INS ReturnStatement@@SimpleName:returnTypeGenericMetadata @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4260 @LENGTH@ 33
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ ReturnStatement@@SimpleName:returnTypeGenericMetadata @AT@ 4267 @LENGTH@ 25
+]
+
+CII:
+OP1:(UPD, MethodDeclaration, null, OP2 OP5)
+OP2:   (INS, SingleVariableDeclaration, OP1, OP3 OP4)
+OP3:      (INS, SimpleType, OP2, null)
+OP4:      (INS, SimpleName, OP2, null)
+OP5:   (UPD, ReturnStatement, OP1, OP6)
+OP6:      (UPD, MethodInvocation, OP5, OP7)
+OP7:         (UPD, SimpleName, OP6, OP8 OP9)
+OP8:            (UPD, SimpleName, OP7, null)
+OP9:            (INS, MethodInvocation, OP7, OP10)
+OP10:               (INS, SimpleName, OP9, OP11)
+OP11:                  (MOV, SimpleName, OP10, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:getMock(invocation) @TO@ MethodInvocation:getMock(invocation,returnTypeGenericMetadata) @AT@ 2097 @LENGTH@ 27
+---UPD MethodInvocation@@getMock(invocation) @TO@ getMock(invocation,returnTypeGenericMetadata) @AT@ 2104 @LENGTH@ 19
+------UPD SimpleName@@MethodName:getMock:[invocation] @TO@ MethodName:getMock:[invocation, returnTypeGenericMetadata] @AT@ 2104 @LENGTH@ 19
+---------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:getMock:[invocation] @AT@ 2248 @LENGTH@ 25
+, UPD MethodDeclaration@@private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+Throwable,  @TO@ private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+GenericMetadataSupport+returnTypeGenericMetadata+Throwable,  @AT@ 2139 @LENGTH@ 686
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2342 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 2342 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 2365 @LENGTH@ 25
+---UPD ReturnStatement@@MethodInvocation:recordDeepStubMock(invocation,container) @TO@ MethodInvocation:recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata),container) @AT@ 2769 @LENGTH@ 49
+------UPD MethodInvocation@@recordDeepStubMock(invocation,container) @TO@ recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata),container) @AT@ 2776 @LENGTH@ 41
+---------UPD SimpleName@@MethodName:recordDeepStubMock:[invocation, container] @TO@ MethodName:recordDeepStubMock:[createNewDeepStubMock(returnTypeGenericMetadata), container] @AT@ 2776 @LENGTH@ 41
+------------UPD SimpleName@@invocation @TO@ returnTypeGenericMetadata @AT@ 2795 @LENGTH@ 10
+------------INS MethodInvocation@@createNewDeepStubMock(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:recordDeepStubMock:[invocation, container] @AT@ 2996 @LENGTH@ 48
+---------------INS SimpleName@@MethodName:createNewDeepStubMock:[returnTypeGenericMetadata] @TO@ MethodInvocation@@createNewDeepStubMock(returnTypeGenericMetadata) @AT@ 2996 @LENGTH@ 48
+------------------MOV SimpleName@@invocation @TO@ SimpleName@@MethodName:createNewDeepStubMock:[returnTypeGenericMetadata] @AT@ 2795 @LENGTH@ 10
+, UPD MethodDeclaration@@private, @@Object, MethodName:recordDeepStubMock, @@Argus:InvocationOnMock+invocation+InvocationContainerImpl+container+ @TO@ private, @@Object, MethodName:recordDeepStubMock, @@Argus:Object+mock+InvocationContainerImpl+container+Throwable,  @AT@ 2833 @LENGTH@ 657
+---UPD SingleVariableDeclaration@@InvocationOnMock invocation @TO@ final Object mock @AT@ 3063 @LENGTH@ 27
+------UPD SimpleType@@InvocationOnMock @TO@ Object @AT@ 3063 @LENGTH@ 16
+------UPD SimpleName@@invocation @TO@ mock @AT@ 3080 @LENGTH@ 10
+------INS Modifier@@final @TO@ SingleVariableDeclaration@@InvocationOnMock invocation @AT@ 4369 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@Class<?> clz=invocation.getMethod().getReturnType(); @AT@ 3138 @LENGTH@ 54
+------DEL ParameterizedType@@Class<?> @AT@ 3138 @LENGTH@ 8
+---------DEL SimpleType@@Class @AT@ 3138 @LENGTH@ 5
+---------DEL WildcardType@@? @AT@ 3144 @LENGTH@ 1
+------DEL VariableDeclarationFragment@@clz=invocation.getMethod().getReturnType() @AT@ 3147 @LENGTH@ 44
+---------DEL SimpleName@@clz @AT@ 3147 @LENGTH@ 3
+---------DEL MethodInvocation@@invocation.getMethod().getReturnType() @AT@ 3153 @LENGTH@ 38
+------------DEL SimpleName@@Name:invocation @AT@ 3153 @LENGTH@ 10
+------------DEL MethodInvocation@@MethodName:getMethod:[] @AT@ 3153 @LENGTH@ 22
+------------DEL SimpleName@@MethodName:getReturnType:[] @AT@ 3176 @LENGTH@ 15
+---DEL VariableDeclarationStatement@@final Object mock=org.mockito.Mockito.mock(clz,this); @AT@ 3202 @LENGTH@ 56
+------DEL Modifier@@final @AT@ 3202 @LENGTH@ 5
+------DEL SimpleType@@Object @AT@ 3208 @LENGTH@ 6
+------DEL VariableDeclarationFragment@@mock=org.mockito.Mockito.mock(clz,this) @AT@ 3215 @LENGTH@ 42
+---------DEL SimpleName@@mock @AT@ 3215 @LENGTH@ 4
+---------DEL MethodInvocation@@org.mockito.Mockito.mock(clz,this) @AT@ 3222 @LENGTH@ 35
+------------DEL QualifiedName@@Name:org.mockito.Mockito @AT@ 3222 @LENGTH@ 19
+------------DEL SimpleName@@MethodName:mock:[clz, this] @AT@ 3242 @LENGTH@ 15
+---------------DEL SimpleName@@clz @AT@ 3247 @LENGTH@ 3
+---------------DEL ThisExpression@@this @AT@ 3252 @LENGTH@ 4
+, INS MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3072 @LENGTH@ 433
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3260 @LENGTH@ 7
+---INS SimpleType@@Object @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3268 @LENGTH@ 6
+---INS SimpleName@@MethodName:createNewDeepStubMock @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3275 @LENGTH@ 21
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3297 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3297 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3320 @LENGTH@ 25
+---INS ReturnStatement@@MethodInvocation:mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3358 @LENGTH@ 140
+------INS MethodInvocation@@mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ ReturnStatement@@MethodInvocation:mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @AT@ 3365 @LENGTH@ 132
+---------INS SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @TO@ MethodInvocation@@mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @AT@ 3365 @LENGTH@ 132
+------------INS MethodInvocation@@returnTypeGenericMetadata.rawType() @TO@ SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @AT@ 3388 @LENGTH@ 35
+---------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawType() @AT@ 3388 @LENGTH@ 25
+---------------INS SimpleName@@MethodName:rawType:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawType() @AT@ 3414 @LENGTH@ 9
+------------INS MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @AT@ 3442 @LENGTH@ 44
+---------------INS SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @TO@ MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @AT@ 3442 @LENGTH@ 44
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @AT@ 3460 @LENGTH@ 25
+, INS MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3513 @LENGTH@ 462
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3513 @LENGTH@ 7
+---INS SimpleType@@MockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3521 @LENGTH@ 12
+---INS SimpleName@@MethodName:withSettingsUsing @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3534 @LENGTH@ 17
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3552 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3552 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3575 @LENGTH@ 25
+---INS VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3613 @LENGTH@ 235
+------INS SimpleType@@MockSettings @TO@ VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @AT@ 3613 @LENGTH@ 12
+------INS VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @TO@ VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @AT@ 3626 @LENGTH@ 221
+---------INS SimpleName@@mockSettings @TO@ VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3626 @LENGTH@ 12
+---------INS ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @TO@ VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3658 @LENGTH@ 189
+------------INS InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3658 @LENGTH@ 57
+---------------INS FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3658 @LENGTH@ 53
+------------------INS MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @TO@ FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @AT@ 3658 @LENGTH@ 46
+---------------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3658 @LENGTH@ 25
+---------------------INS SimpleName@@MethodName:rawExtraInterfaces:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3684 @LENGTH@ 20
+------------------INS SimpleName@@length @TO@ FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @AT@ 3705 @LENGTH@ 6
+---------------INS Operator@@> @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3711 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3714 @LENGTH@ 1
+------------INS MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3735 @LENGTH@ 78
+---------------INS MethodInvocation@@MethodName:withSettings:[] @TO@ MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @AT@ 3735 @LENGTH@ 14
+---------------INS SimpleName@@MethodName:extraInterfaces:[returnTypeGenericMetadata.rawExtraInterfaces()] @TO@ MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @AT@ 3750 @LENGTH@ 63
+------------------INS MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @TO@ SimpleName@@MethodName:extraInterfaces:[returnTypeGenericMetadata.rawExtraInterfaces()] @AT@ 3766 @LENGTH@ 46
+---------------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3766 @LENGTH@ 25
+---------------------INS SimpleName@@MethodName:rawExtraInterfaces:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3792 @LENGTH@ 20
+------------INS MethodInvocation@@MethodName:withSettings:[] @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3833 @LENGTH@ 14
+---INS ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3860 @LENGTH@ 108
+------INS MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3867 @LENGTH@ 100
+---------INS SimpleName@@Name:mockSettings @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3867 @LENGTH@ 12
+---------INS SimpleName@@MethodName:defaultAnswer:[returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3898 @LENGTH@ 69
+------------INS MethodInvocation@@returnsDeepStubsAnswerUsing(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:defaultAnswer:[returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)] @AT@ 3912 @LENGTH@ 54
+---------------INS SimpleName@@MethodName:returnsDeepStubsAnswerUsing:[returnTypeGenericMetadata] @TO@ MethodInvocation@@returnsDeepStubsAnswerUsing(returnTypeGenericMetadata) @AT@ 3912 @LENGTH@ 54
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:returnsDeepStubsAnswerUsing:[returnTypeGenericMetadata] @AT@ 3940 @LENGTH@ 25
+, INS MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3983 @LENGTH@ 344
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3983 @LENGTH@ 7
+---INS SimpleType@@ReturnsDeepStubs @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3991 @LENGTH@ 16
+---INS SimpleName@@MethodName:returnsDeepStubsAnswerUsing @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4008 @LENGTH@ 27
+---INS SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4036 @LENGTH@ 54
+------INS Modifier@@final @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4036 @LENGTH@ 5
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4042 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4065 @LENGTH@ 25
+---INS ReturnStatement@@ClassInstanceCreation:new ReturnsDeepStubs(){
+  @Override protected GenericMetadataSupport actualParameterizedType(  Object mock){
+    return returnTypeGenericMetadata;
+  }
+}
+ @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4103 @LENGTH@ 217
+------INS ClassInstanceCreation@@ReturnsDeepStubs[] @TO@ ReturnStatement@@ClassInstanceCreation:new ReturnsDeepStubs(){
+  @Override protected GenericMetadataSupport actualParameterizedType(  Object mock){
+    return returnTypeGenericMetadata;
+  }
+}
+ @AT@ 4110 @LENGTH@ 209
+---------INS New@@new @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4110 @LENGTH@ 3
+---------INS SimpleType@@ReturnsDeepStubs @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4114 @LENGTH@ 16
+---------INS AnonymousClassDeclaration@@AnonymousClass @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4133 @LENGTH@ 186
+------------INS MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @TO@ AnonymousClassDeclaration@@AnonymousClass @AT@ 4148 @LENGTH@ 160
+---------------INS Modifier@@protected @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4171 @LENGTH@ 9
+---------------INS SimpleType@@GenericMetadataSupport @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4181 @LENGTH@ 22
+---------------INS SimpleName@@MethodName:actualParameterizedType @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4204 @LENGTH@ 23
+---------------INS SingleVariableDeclaration@@Object mock @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4228 @LENGTH@ 11
+------------------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object mock @AT@ 4228 @LENGTH@ 6
+------------------INS SimpleName@@mock @TO@ SingleVariableDeclaration@@Object mock @AT@ 4235 @LENGTH@ 4
+---------------INS ReturnStatement@@SimpleName:returnTypeGenericMetadata @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4260 @LENGTH@ 33
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ ReturnStatement@@SimpleName:returnTypeGenericMetadata @AT@ 4267 @LENGTH@ 25
+]
+
+CII:
+OP1:(UPD, MethodDeclaration, null, OP2 OP6 OP16)
+OP2:   (UPD, SingleVariableDeclaration, OP1, OP3 OP4 OP5)
+OP3:      (UPD, SimpleType, OP2, null)
+OP4:      (UPD, SimpleName, OP2, null)
+OP5:      (INS, Modifier, OP2, null)
+OP6:   (DEL, VariableDeclarationStatement, OP1, OP7 OP10)
+OP7:      (DEL, ParameterizedType, OP6, OP8 OP9)
+OP8:         (DEL, SimpleType, OP7, null)
+OP9:         (DEL, WildcardType, OP7, null)
+OP10:      (DEL, VariableDeclarationFragment, OP6, OP11 OP12)
+OP11:         (DEL, SimpleName, OP10, null)
+OP12:         (DEL, MethodInvocation, OP10, OP13 OP14 OP15)
+OP13:            (DEL, SimpleName, OP12, null)
+OP14:            (DEL, MethodInvocation, OP12, null)
+OP15:            (DEL, SimpleName, OP12, null)
+OP16:   (DEL, VariableDeclarationStatement, OP1, OP17 OP18 OP19)
+OP17:      (DEL, Modifier, OP16, null)
+OP18:      (DEL, SimpleType, OP16, null)
+OP19:      (DEL, VariableDeclarationFragment, OP16, OP20 OP21)
+OP20:         (DEL, SimpleName, OP19, null)
+OP21:         (DEL, MethodInvocation, OP19, OP22 OP23)
+OP22:            (DEL, QualifiedName, OP21, null)
+OP23:            (DEL, SimpleName, OP21, OP24 OP25)
+OP24:               (DEL, SimpleName, OP23, null)
+OP25:               (DEL, ThisExpression, OP23, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:getMock(invocation) @TO@ MethodInvocation:getMock(invocation,returnTypeGenericMetadata) @AT@ 2097 @LENGTH@ 27
+---UPD MethodInvocation@@getMock(invocation) @TO@ getMock(invocation,returnTypeGenericMetadata) @AT@ 2104 @LENGTH@ 19
+------UPD SimpleName@@MethodName:getMock:[invocation] @TO@ MethodName:getMock:[invocation, returnTypeGenericMetadata] @AT@ 2104 @LENGTH@ 19
+---------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:getMock:[invocation] @AT@ 2248 @LENGTH@ 25
+, UPD MethodDeclaration@@private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+Throwable,  @TO@ private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+GenericMetadataSupport+returnTypeGenericMetadata+Throwable,  @AT@ 2139 @LENGTH@ 686
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2342 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 2342 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 2365 @LENGTH@ 25
+---UPD ReturnStatement@@MethodInvocation:recordDeepStubMock(invocation,container) @TO@ MethodInvocation:recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata),container) @AT@ 2769 @LENGTH@ 49
+------UPD MethodInvocation@@recordDeepStubMock(invocation,container) @TO@ recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata),container) @AT@ 2776 @LENGTH@ 41
+---------UPD SimpleName@@MethodName:recordDeepStubMock:[invocation, container] @TO@ MethodName:recordDeepStubMock:[createNewDeepStubMock(returnTypeGenericMetadata), container] @AT@ 2776 @LENGTH@ 41
+------------UPD SimpleName@@invocation @TO@ returnTypeGenericMetadata @AT@ 2795 @LENGTH@ 10
+------------INS MethodInvocation@@createNewDeepStubMock(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:recordDeepStubMock:[invocation, container] @AT@ 2996 @LENGTH@ 48
+---------------INS SimpleName@@MethodName:createNewDeepStubMock:[returnTypeGenericMetadata] @TO@ MethodInvocation@@createNewDeepStubMock(returnTypeGenericMetadata) @AT@ 2996 @LENGTH@ 48
+------------------MOV SimpleName@@invocation @TO@ SimpleName@@MethodName:createNewDeepStubMock:[returnTypeGenericMetadata] @AT@ 2795 @LENGTH@ 10
+, UPD MethodDeclaration@@private, @@Object, MethodName:recordDeepStubMock, @@Argus:InvocationOnMock+invocation+InvocationContainerImpl+container+ @TO@ private, @@Object, MethodName:recordDeepStubMock, @@Argus:Object+mock+InvocationContainerImpl+container+Throwable,  @AT@ 2833 @LENGTH@ 657
+---UPD SingleVariableDeclaration@@InvocationOnMock invocation @TO@ final Object mock @AT@ 3063 @LENGTH@ 27
+------UPD SimpleType@@InvocationOnMock @TO@ Object @AT@ 3063 @LENGTH@ 16
+------UPD SimpleName@@invocation @TO@ mock @AT@ 3080 @LENGTH@ 10
+------INS Modifier@@final @TO@ SingleVariableDeclaration@@InvocationOnMock invocation @AT@ 4369 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@Class<?> clz=invocation.getMethod().getReturnType(); @AT@ 3138 @LENGTH@ 54
+------DEL ParameterizedType@@Class<?> @AT@ 3138 @LENGTH@ 8
+---------DEL SimpleType@@Class @AT@ 3138 @LENGTH@ 5
+---------DEL WildcardType@@? @AT@ 3144 @LENGTH@ 1
+------DEL VariableDeclarationFragment@@clz=invocation.getMethod().getReturnType() @AT@ 3147 @LENGTH@ 44
+---------DEL SimpleName@@clz @AT@ 3147 @LENGTH@ 3
+---------DEL MethodInvocation@@invocation.getMethod().getReturnType() @AT@ 3153 @LENGTH@ 38
+------------DEL SimpleName@@Name:invocation @AT@ 3153 @LENGTH@ 10
+------------DEL MethodInvocation@@MethodName:getMethod:[] @AT@ 3153 @LENGTH@ 22
+------------DEL SimpleName@@MethodName:getReturnType:[] @AT@ 3176 @LENGTH@ 15
+---DEL VariableDeclarationStatement@@final Object mock=org.mockito.Mockito.mock(clz,this); @AT@ 3202 @LENGTH@ 56
+------DEL Modifier@@final @AT@ 3202 @LENGTH@ 5
+------DEL SimpleType@@Object @AT@ 3208 @LENGTH@ 6
+------DEL VariableDeclarationFragment@@mock=org.mockito.Mockito.mock(clz,this) @AT@ 3215 @LENGTH@ 42
+---------DEL SimpleName@@mock @AT@ 3215 @LENGTH@ 4
+---------DEL MethodInvocation@@org.mockito.Mockito.mock(clz,this) @AT@ 3222 @LENGTH@ 35
+------------DEL QualifiedName@@Name:org.mockito.Mockito @AT@ 3222 @LENGTH@ 19
+------------DEL SimpleName@@MethodName:mock:[clz, this] @AT@ 3242 @LENGTH@ 15
+---------------DEL SimpleName@@clz @AT@ 3247 @LENGTH@ 3
+---------------DEL ThisExpression@@this @AT@ 3252 @LENGTH@ 4
+, INS MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3072 @LENGTH@ 433
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3260 @LENGTH@ 7
+---INS SimpleType@@Object @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3268 @LENGTH@ 6
+---INS SimpleName@@MethodName:createNewDeepStubMock @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3275 @LENGTH@ 21
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3297 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3297 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3320 @LENGTH@ 25
+---INS ReturnStatement@@MethodInvocation:mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3358 @LENGTH@ 140
+------INS MethodInvocation@@mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ ReturnStatement@@MethodInvocation:mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @AT@ 3365 @LENGTH@ 132
+---------INS SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @TO@ MethodInvocation@@mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @AT@ 3365 @LENGTH@ 132
+------------INS MethodInvocation@@returnTypeGenericMetadata.rawType() @TO@ SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @AT@ 3388 @LENGTH@ 35
+---------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawType() @AT@ 3388 @LENGTH@ 25
+---------------INS SimpleName@@MethodName:rawType:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawType() @AT@ 3414 @LENGTH@ 9
+------------INS MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @AT@ 3442 @LENGTH@ 44
+---------------INS SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @TO@ MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @AT@ 3442 @LENGTH@ 44
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @AT@ 3460 @LENGTH@ 25
+, INS MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3513 @LENGTH@ 462
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3513 @LENGTH@ 7
+---INS SimpleType@@MockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3521 @LENGTH@ 12
+---INS SimpleName@@MethodName:withSettingsUsing @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3534 @LENGTH@ 17
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3552 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3552 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3575 @LENGTH@ 25
+---INS VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3613 @LENGTH@ 235
+------INS SimpleType@@MockSettings @TO@ VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @AT@ 3613 @LENGTH@ 12
+------INS VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @TO@ VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @AT@ 3626 @LENGTH@ 221
+---------INS SimpleName@@mockSettings @TO@ VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3626 @LENGTH@ 12
+---------INS ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @TO@ VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3658 @LENGTH@ 189
+------------INS InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3658 @LENGTH@ 57
+---------------INS FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3658 @LENGTH@ 53
+------------------INS MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @TO@ FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @AT@ 3658 @LENGTH@ 46
+---------------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3658 @LENGTH@ 25
+---------------------INS SimpleName@@MethodName:rawExtraInterfaces:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3684 @LENGTH@ 20
+------------------INS SimpleName@@length @TO@ FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @AT@ 3705 @LENGTH@ 6
+---------------INS Operator@@> @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3711 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3714 @LENGTH@ 1
+------------INS MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3735 @LENGTH@ 78
+---------------INS MethodInvocation@@MethodName:withSettings:[] @TO@ MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @AT@ 3735 @LENGTH@ 14
+---------------INS SimpleName@@MethodName:extraInterfaces:[returnTypeGenericMetadata.rawExtraInterfaces()] @TO@ MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @AT@ 3750 @LENGTH@ 63
+------------------INS MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @TO@ SimpleName@@MethodName:extraInterfaces:[returnTypeGenericMetadata.rawExtraInterfaces()] @AT@ 3766 @LENGTH@ 46
+---------------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3766 @LENGTH@ 25
+---------------------INS SimpleName@@MethodName:rawExtraInterfaces:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3792 @LENGTH@ 20
+------------INS MethodInvocation@@MethodName:withSettings:[] @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3833 @LENGTH@ 14
+---INS ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3860 @LENGTH@ 108
+------INS MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3867 @LENGTH@ 100
+---------INS SimpleName@@Name:mockSettings @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3867 @LENGTH@ 12
+---------INS SimpleName@@MethodName:defaultAnswer:[returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3898 @LENGTH@ 69
+------------INS MethodInvocation@@returnsDeepStubsAnswerUsing(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:defaultAnswer:[returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)] @AT@ 3912 @LENGTH@ 54
+---------------INS SimpleName@@MethodName:returnsDeepStubsAnswerUsing:[returnTypeGenericMetadata] @TO@ MethodInvocation@@returnsDeepStubsAnswerUsing(returnTypeGenericMetadata) @AT@ 3912 @LENGTH@ 54
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:returnsDeepStubsAnswerUsing:[returnTypeGenericMetadata] @AT@ 3940 @LENGTH@ 25
+, INS MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3983 @LENGTH@ 344
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3983 @LENGTH@ 7
+---INS SimpleType@@ReturnsDeepStubs @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3991 @LENGTH@ 16
+---INS SimpleName@@MethodName:returnsDeepStubsAnswerUsing @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4008 @LENGTH@ 27
+---INS SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4036 @LENGTH@ 54
+------INS Modifier@@final @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4036 @LENGTH@ 5
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4042 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4065 @LENGTH@ 25
+---INS ReturnStatement@@ClassInstanceCreation:new ReturnsDeepStubs(){
+  @Override protected GenericMetadataSupport actualParameterizedType(  Object mock){
+    return returnTypeGenericMetadata;
+  }
+}
+ @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4103 @LENGTH@ 217
+------INS ClassInstanceCreation@@ReturnsDeepStubs[] @TO@ ReturnStatement@@ClassInstanceCreation:new ReturnsDeepStubs(){
+  @Override protected GenericMetadataSupport actualParameterizedType(  Object mock){
+    return returnTypeGenericMetadata;
+  }
+}
+ @AT@ 4110 @LENGTH@ 209
+---------INS New@@new @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4110 @LENGTH@ 3
+---------INS SimpleType@@ReturnsDeepStubs @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4114 @LENGTH@ 16
+---------INS AnonymousClassDeclaration@@AnonymousClass @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4133 @LENGTH@ 186
+------------INS MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @TO@ AnonymousClassDeclaration@@AnonymousClass @AT@ 4148 @LENGTH@ 160
+---------------INS Modifier@@protected @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4171 @LENGTH@ 9
+---------------INS SimpleType@@GenericMetadataSupport @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4181 @LENGTH@ 22
+---------------INS SimpleName@@MethodName:actualParameterizedType @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4204 @LENGTH@ 23
+---------------INS SingleVariableDeclaration@@Object mock @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4228 @LENGTH@ 11
+------------------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object mock @AT@ 4228 @LENGTH@ 6
+------------------INS SimpleName@@mock @TO@ SingleVariableDeclaration@@Object mock @AT@ 4235 @LENGTH@ 4
+---------------INS ReturnStatement@@SimpleName:returnTypeGenericMetadata @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4260 @LENGTH@ 33
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ ReturnStatement@@SimpleName:returnTypeGenericMetadata @AT@ 4267 @LENGTH@ 25
+]
+
+CII:
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP8)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, SimpleType, OP1, null)
+OP4:   (INS, SimpleName, OP1, null)
+OP5:   (INS, SingleVariableDeclaration, OP1, OP6 OP7)
+OP6:      (INS, SimpleType, OP5, null)
+OP7:      (INS, SimpleName, OP5, null)
+OP8:   (INS, ReturnStatement, OP1, OP9)
+OP9:      (INS, MethodInvocation, OP8, OP10)
+OP10:         (INS, SimpleName, OP9, OP11 OP14)
+OP11:            (INS, MethodInvocation, OP10, OP12 OP13)
+OP12:               (INS, SimpleName, OP11, null)
+OP13:               (INS, SimpleName, OP11, null)
+OP14:            (INS, MethodInvocation, OP10, OP15)
+OP15:               (INS, SimpleName, OP14, OP16)
+OP16:                  (INS, SimpleName, OP15, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:getMock(invocation) @TO@ MethodInvocation:getMock(invocation,returnTypeGenericMetadata) @AT@ 2097 @LENGTH@ 27
+---UPD MethodInvocation@@getMock(invocation) @TO@ getMock(invocation,returnTypeGenericMetadata) @AT@ 2104 @LENGTH@ 19
+------UPD SimpleName@@MethodName:getMock:[invocation] @TO@ MethodName:getMock:[invocation, returnTypeGenericMetadata] @AT@ 2104 @LENGTH@ 19
+---------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:getMock:[invocation] @AT@ 2248 @LENGTH@ 25
+, UPD MethodDeclaration@@private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+Throwable,  @TO@ private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+GenericMetadataSupport+returnTypeGenericMetadata+Throwable,  @AT@ 2139 @LENGTH@ 686
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2342 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 2342 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 2365 @LENGTH@ 25
+---UPD ReturnStatement@@MethodInvocation:recordDeepStubMock(invocation,container) @TO@ MethodInvocation:recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata),container) @AT@ 2769 @LENGTH@ 49
+------UPD MethodInvocation@@recordDeepStubMock(invocation,container) @TO@ recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata),container) @AT@ 2776 @LENGTH@ 41
+---------UPD SimpleName@@MethodName:recordDeepStubMock:[invocation, container] @TO@ MethodName:recordDeepStubMock:[createNewDeepStubMock(returnTypeGenericMetadata), container] @AT@ 2776 @LENGTH@ 41
+------------UPD SimpleName@@invocation @TO@ returnTypeGenericMetadata @AT@ 2795 @LENGTH@ 10
+------------INS MethodInvocation@@createNewDeepStubMock(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:recordDeepStubMock:[invocation, container] @AT@ 2996 @LENGTH@ 48
+---------------INS SimpleName@@MethodName:createNewDeepStubMock:[returnTypeGenericMetadata] @TO@ MethodInvocation@@createNewDeepStubMock(returnTypeGenericMetadata) @AT@ 2996 @LENGTH@ 48
+------------------MOV SimpleName@@invocation @TO@ SimpleName@@MethodName:createNewDeepStubMock:[returnTypeGenericMetadata] @AT@ 2795 @LENGTH@ 10
+, UPD MethodDeclaration@@private, @@Object, MethodName:recordDeepStubMock, @@Argus:InvocationOnMock+invocation+InvocationContainerImpl+container+ @TO@ private, @@Object, MethodName:recordDeepStubMock, @@Argus:Object+mock+InvocationContainerImpl+container+Throwable,  @AT@ 2833 @LENGTH@ 657
+---UPD SingleVariableDeclaration@@InvocationOnMock invocation @TO@ final Object mock @AT@ 3063 @LENGTH@ 27
+------UPD SimpleType@@InvocationOnMock @TO@ Object @AT@ 3063 @LENGTH@ 16
+------UPD SimpleName@@invocation @TO@ mock @AT@ 3080 @LENGTH@ 10
+------INS Modifier@@final @TO@ SingleVariableDeclaration@@InvocationOnMock invocation @AT@ 4369 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@Class<?> clz=invocation.getMethod().getReturnType(); @AT@ 3138 @LENGTH@ 54
+------DEL ParameterizedType@@Class<?> @AT@ 3138 @LENGTH@ 8
+---------DEL SimpleType@@Class @AT@ 3138 @LENGTH@ 5
+---------DEL WildcardType@@? @AT@ 3144 @LENGTH@ 1
+------DEL VariableDeclarationFragment@@clz=invocation.getMethod().getReturnType() @AT@ 3147 @LENGTH@ 44
+---------DEL SimpleName@@clz @AT@ 3147 @LENGTH@ 3
+---------DEL MethodInvocation@@invocation.getMethod().getReturnType() @AT@ 3153 @LENGTH@ 38
+------------DEL SimpleName@@Name:invocation @AT@ 3153 @LENGTH@ 10
+------------DEL MethodInvocation@@MethodName:getMethod:[] @AT@ 3153 @LENGTH@ 22
+------------DEL SimpleName@@MethodName:getReturnType:[] @AT@ 3176 @LENGTH@ 15
+---DEL VariableDeclarationStatement@@final Object mock=org.mockito.Mockito.mock(clz,this); @AT@ 3202 @LENGTH@ 56
+------DEL Modifier@@final @AT@ 3202 @LENGTH@ 5
+------DEL SimpleType@@Object @AT@ 3208 @LENGTH@ 6
+------DEL VariableDeclarationFragment@@mock=org.mockito.Mockito.mock(clz,this) @AT@ 3215 @LENGTH@ 42
+---------DEL SimpleName@@mock @AT@ 3215 @LENGTH@ 4
+---------DEL MethodInvocation@@org.mockito.Mockito.mock(clz,this) @AT@ 3222 @LENGTH@ 35
+------------DEL QualifiedName@@Name:org.mockito.Mockito @AT@ 3222 @LENGTH@ 19
+------------DEL SimpleName@@MethodName:mock:[clz, this] @AT@ 3242 @LENGTH@ 15
+---------------DEL SimpleName@@clz @AT@ 3247 @LENGTH@ 3
+---------------DEL ThisExpression@@this @AT@ 3252 @LENGTH@ 4
+, INS MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3072 @LENGTH@ 433
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3260 @LENGTH@ 7
+---INS SimpleType@@Object @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3268 @LENGTH@ 6
+---INS SimpleName@@MethodName:createNewDeepStubMock @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3275 @LENGTH@ 21
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3297 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3297 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3320 @LENGTH@ 25
+---INS ReturnStatement@@MethodInvocation:mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3358 @LENGTH@ 140
+------INS MethodInvocation@@mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ ReturnStatement@@MethodInvocation:mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @AT@ 3365 @LENGTH@ 132
+---------INS SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @TO@ MethodInvocation@@mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @AT@ 3365 @LENGTH@ 132
+------------INS MethodInvocation@@returnTypeGenericMetadata.rawType() @TO@ SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @AT@ 3388 @LENGTH@ 35
+---------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawType() @AT@ 3388 @LENGTH@ 25
+---------------INS SimpleName@@MethodName:rawType:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawType() @AT@ 3414 @LENGTH@ 9
+------------INS MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @AT@ 3442 @LENGTH@ 44
+---------------INS SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @TO@ MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @AT@ 3442 @LENGTH@ 44
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @AT@ 3460 @LENGTH@ 25
+, INS MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3513 @LENGTH@ 462
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3513 @LENGTH@ 7
+---INS SimpleType@@MockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3521 @LENGTH@ 12
+---INS SimpleName@@MethodName:withSettingsUsing @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3534 @LENGTH@ 17
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3552 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3552 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3575 @LENGTH@ 25
+---INS VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3613 @LENGTH@ 235
+------INS SimpleType@@MockSettings @TO@ VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @AT@ 3613 @LENGTH@ 12
+------INS VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @TO@ VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @AT@ 3626 @LENGTH@ 221
+---------INS SimpleName@@mockSettings @TO@ VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3626 @LENGTH@ 12
+---------INS ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @TO@ VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3658 @LENGTH@ 189
+------------INS InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3658 @LENGTH@ 57
+---------------INS FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3658 @LENGTH@ 53
+------------------INS MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @TO@ FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @AT@ 3658 @LENGTH@ 46
+---------------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3658 @LENGTH@ 25
+---------------------INS SimpleName@@MethodName:rawExtraInterfaces:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3684 @LENGTH@ 20
+------------------INS SimpleName@@length @TO@ FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @AT@ 3705 @LENGTH@ 6
+---------------INS Operator@@> @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3711 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3714 @LENGTH@ 1
+------------INS MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3735 @LENGTH@ 78
+---------------INS MethodInvocation@@MethodName:withSettings:[] @TO@ MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @AT@ 3735 @LENGTH@ 14
+---------------INS SimpleName@@MethodName:extraInterfaces:[returnTypeGenericMetadata.rawExtraInterfaces()] @TO@ MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @AT@ 3750 @LENGTH@ 63
+------------------INS MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @TO@ SimpleName@@MethodName:extraInterfaces:[returnTypeGenericMetadata.rawExtraInterfaces()] @AT@ 3766 @LENGTH@ 46
+---------------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3766 @LENGTH@ 25
+---------------------INS SimpleName@@MethodName:rawExtraInterfaces:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3792 @LENGTH@ 20
+------------INS MethodInvocation@@MethodName:withSettings:[] @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3833 @LENGTH@ 14
+---INS ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3860 @LENGTH@ 108
+------INS MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3867 @LENGTH@ 100
+---------INS SimpleName@@Name:mockSettings @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3867 @LENGTH@ 12
+---------INS SimpleName@@MethodName:defaultAnswer:[returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3898 @LENGTH@ 69
+------------INS MethodInvocation@@returnsDeepStubsAnswerUsing(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:defaultAnswer:[returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)] @AT@ 3912 @LENGTH@ 54
+---------------INS SimpleName@@MethodName:returnsDeepStubsAnswerUsing:[returnTypeGenericMetadata] @TO@ MethodInvocation@@returnsDeepStubsAnswerUsing(returnTypeGenericMetadata) @AT@ 3912 @LENGTH@ 54
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:returnsDeepStubsAnswerUsing:[returnTypeGenericMetadata] @AT@ 3940 @LENGTH@ 25
+, INS MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3983 @LENGTH@ 344
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3983 @LENGTH@ 7
+---INS SimpleType@@ReturnsDeepStubs @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3991 @LENGTH@ 16
+---INS SimpleName@@MethodName:returnsDeepStubsAnswerUsing @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4008 @LENGTH@ 27
+---INS SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4036 @LENGTH@ 54
+------INS Modifier@@final @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4036 @LENGTH@ 5
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4042 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4065 @LENGTH@ 25
+---INS ReturnStatement@@ClassInstanceCreation:new ReturnsDeepStubs(){
+  @Override protected GenericMetadataSupport actualParameterizedType(  Object mock){
+    return returnTypeGenericMetadata;
+  }
+}
+ @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4103 @LENGTH@ 217
+------INS ClassInstanceCreation@@ReturnsDeepStubs[] @TO@ ReturnStatement@@ClassInstanceCreation:new ReturnsDeepStubs(){
+  @Override protected GenericMetadataSupport actualParameterizedType(  Object mock){
+    return returnTypeGenericMetadata;
+  }
+}
+ @AT@ 4110 @LENGTH@ 209
+---------INS New@@new @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4110 @LENGTH@ 3
+---------INS SimpleType@@ReturnsDeepStubs @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4114 @LENGTH@ 16
+---------INS AnonymousClassDeclaration@@AnonymousClass @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4133 @LENGTH@ 186
+------------INS MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @TO@ AnonymousClassDeclaration@@AnonymousClass @AT@ 4148 @LENGTH@ 160
+---------------INS Modifier@@protected @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4171 @LENGTH@ 9
+---------------INS SimpleType@@GenericMetadataSupport @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4181 @LENGTH@ 22
+---------------INS SimpleName@@MethodName:actualParameterizedType @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4204 @LENGTH@ 23
+---------------INS SingleVariableDeclaration@@Object mock @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4228 @LENGTH@ 11
+------------------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object mock @AT@ 4228 @LENGTH@ 6
+------------------INS SimpleName@@mock @TO@ SingleVariableDeclaration@@Object mock @AT@ 4235 @LENGTH@ 4
+---------------INS ReturnStatement@@SimpleName:returnTypeGenericMetadata @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4260 @LENGTH@ 33
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ ReturnStatement@@SimpleName:returnTypeGenericMetadata @AT@ 4267 @LENGTH@ 25
+]
+
+CII:
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP8 OP28)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, SimpleType, OP1, null)
+OP4:   (INS, SimpleName, OP1, null)
+OP5:   (INS, SingleVariableDeclaration, OP1, OP6 OP7)
+OP6:      (INS, SimpleType, OP5, null)
+OP7:      (INS, SimpleName, OP5, null)
+OP8:   (INS, VariableDeclarationStatement, OP1, OP9 OP10)
+OP9:      (INS, SimpleType, OP8, null)
+OP10:      (INS, VariableDeclarationFragment, OP8, OP11 OP12)
+OP11:         (INS, SimpleName, OP10, null)
+OP12:         (INS, ConditionalExpression, OP10, OP13 OP21 OP27)
+OP13:            (INS, InfixExpression, OP12, OP14 OP19 OP20)
+OP14:               (INS, FieldAccess, OP13, OP15 OP18)
+OP15:                  (INS, MethodInvocation, OP14, OP16 OP17)
+OP16:                     (INS, SimpleName, OP15, null)
+OP17:                     (INS, SimpleName, OP15, null)
+OP18:                  (INS, SimpleName, OP14, null)
+OP19:               (INS, Operator, OP13, null)
+OP20:               (INS, NumberLiteral, OP13, null)
+OP21:            (INS, MethodInvocation, OP12, OP22 OP23)
+OP22:               (INS, MethodInvocation, OP21, null)
+OP23:               (INS, SimpleName, OP21, OP24)
+OP24:                  (INS, MethodInvocation, OP23, OP25 OP26)
+OP25:                     (INS, SimpleName, OP24, null)
+OP26:                     (INS, SimpleName, OP24, null)
+OP27:            (INS, MethodInvocation, OP12, null)
+OP28:   (INS, ReturnStatement, OP1, OP29)
+OP29:      (INS, MethodInvocation, OP28, OP30 OP31)
+OP30:         (INS, SimpleName, OP29, null)
+OP31:         (INS, SimpleName, OP29, OP32)
+OP32:            (INS, MethodInvocation, OP31, OP33)
+OP33:               (INS, SimpleName, OP32, OP34)
+OP34:                  (INS, SimpleName, OP33, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:getMock(invocation) @TO@ MethodInvocation:getMock(invocation,returnTypeGenericMetadata) @AT@ 2097 @LENGTH@ 27
+---UPD MethodInvocation@@getMock(invocation) @TO@ getMock(invocation,returnTypeGenericMetadata) @AT@ 2104 @LENGTH@ 19
+------UPD SimpleName@@MethodName:getMock:[invocation] @TO@ MethodName:getMock:[invocation, returnTypeGenericMetadata] @AT@ 2104 @LENGTH@ 19
+---------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:getMock:[invocation] @AT@ 2248 @LENGTH@ 25
+, UPD MethodDeclaration@@private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+Throwable,  @TO@ private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+GenericMetadataSupport+returnTypeGenericMetadata+Throwable,  @AT@ 2139 @LENGTH@ 686
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@Object, MethodName:getMock, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2342 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 2342 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 2365 @LENGTH@ 25
+---UPD ReturnStatement@@MethodInvocation:recordDeepStubMock(invocation,container) @TO@ MethodInvocation:recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata),container) @AT@ 2769 @LENGTH@ 49
+------UPD MethodInvocation@@recordDeepStubMock(invocation,container) @TO@ recordDeepStubMock(createNewDeepStubMock(returnTypeGenericMetadata),container) @AT@ 2776 @LENGTH@ 41
+---------UPD SimpleName@@MethodName:recordDeepStubMock:[invocation, container] @TO@ MethodName:recordDeepStubMock:[createNewDeepStubMock(returnTypeGenericMetadata), container] @AT@ 2776 @LENGTH@ 41
+------------UPD SimpleName@@invocation @TO@ returnTypeGenericMetadata @AT@ 2795 @LENGTH@ 10
+------------INS MethodInvocation@@createNewDeepStubMock(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:recordDeepStubMock:[invocation, container] @AT@ 2996 @LENGTH@ 48
+---------------INS SimpleName@@MethodName:createNewDeepStubMock:[returnTypeGenericMetadata] @TO@ MethodInvocation@@createNewDeepStubMock(returnTypeGenericMetadata) @AT@ 2996 @LENGTH@ 48
+------------------MOV SimpleName@@invocation @TO@ SimpleName@@MethodName:createNewDeepStubMock:[returnTypeGenericMetadata] @AT@ 2795 @LENGTH@ 10
+, UPD MethodDeclaration@@private, @@Object, MethodName:recordDeepStubMock, @@Argus:InvocationOnMock+invocation+InvocationContainerImpl+container+ @TO@ private, @@Object, MethodName:recordDeepStubMock, @@Argus:Object+mock+InvocationContainerImpl+container+Throwable,  @AT@ 2833 @LENGTH@ 657
+---UPD SingleVariableDeclaration@@InvocationOnMock invocation @TO@ final Object mock @AT@ 3063 @LENGTH@ 27
+------UPD SimpleType@@InvocationOnMock @TO@ Object @AT@ 3063 @LENGTH@ 16
+------UPD SimpleName@@invocation @TO@ mock @AT@ 3080 @LENGTH@ 10
+------INS Modifier@@final @TO@ SingleVariableDeclaration@@InvocationOnMock invocation @AT@ 4369 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@Class<?> clz=invocation.getMethod().getReturnType(); @AT@ 3138 @LENGTH@ 54
+------DEL ParameterizedType@@Class<?> @AT@ 3138 @LENGTH@ 8
+---------DEL SimpleType@@Class @AT@ 3138 @LENGTH@ 5
+---------DEL WildcardType@@? @AT@ 3144 @LENGTH@ 1
+------DEL VariableDeclarationFragment@@clz=invocation.getMethod().getReturnType() @AT@ 3147 @LENGTH@ 44
+---------DEL SimpleName@@clz @AT@ 3147 @LENGTH@ 3
+---------DEL MethodInvocation@@invocation.getMethod().getReturnType() @AT@ 3153 @LENGTH@ 38
+------------DEL SimpleName@@Name:invocation @AT@ 3153 @LENGTH@ 10
+------------DEL MethodInvocation@@MethodName:getMethod:[] @AT@ 3153 @LENGTH@ 22
+------------DEL SimpleName@@MethodName:getReturnType:[] @AT@ 3176 @LENGTH@ 15
+---DEL VariableDeclarationStatement@@final Object mock=org.mockito.Mockito.mock(clz,this); @AT@ 3202 @LENGTH@ 56
+------DEL Modifier@@final @AT@ 3202 @LENGTH@ 5
+------DEL SimpleType@@Object @AT@ 3208 @LENGTH@ 6
+------DEL VariableDeclarationFragment@@mock=org.mockito.Mockito.mock(clz,this) @AT@ 3215 @LENGTH@ 42
+---------DEL SimpleName@@mock @AT@ 3215 @LENGTH@ 4
+---------DEL MethodInvocation@@org.mockito.Mockito.mock(clz,this) @AT@ 3222 @LENGTH@ 35
+------------DEL QualifiedName@@Name:org.mockito.Mockito @AT@ 3222 @LENGTH@ 19
+------------DEL SimpleName@@MethodName:mock:[clz, this] @AT@ 3242 @LENGTH@ 15
+---------------DEL SimpleName@@clz @AT@ 3247 @LENGTH@ 3
+---------------DEL ThisExpression@@this @AT@ 3252 @LENGTH@ 4
+, INS MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3072 @LENGTH@ 433
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3260 @LENGTH@ 7
+---INS SimpleType@@Object @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3268 @LENGTH@ 6
+---INS SimpleName@@MethodName:createNewDeepStubMock @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3275 @LENGTH@ 21
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3297 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3297 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3320 @LENGTH@ 25
+---INS ReturnStatement@@MethodInvocation:mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ MethodDeclaration@@private, @@Object, MethodName:createNewDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3358 @LENGTH@ 140
+------INS MethodInvocation@@mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ ReturnStatement@@MethodInvocation:mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @AT@ 3365 @LENGTH@ 132
+---------INS SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @TO@ MethodInvocation@@mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @AT@ 3365 @LENGTH@ 132
+------------INS MethodInvocation@@returnTypeGenericMetadata.rawType() @TO@ SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @AT@ 3388 @LENGTH@ 35
+---------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawType() @AT@ 3388 @LENGTH@ 25
+---------------INS SimpleName@@MethodName:rawType:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawType() @AT@ 3414 @LENGTH@ 9
+------------INS MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @AT@ 3442 @LENGTH@ 44
+---------------INS SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @TO@ MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @AT@ 3442 @LENGTH@ 44
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @AT@ 3460 @LENGTH@ 25
+, INS MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3513 @LENGTH@ 462
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3513 @LENGTH@ 7
+---INS SimpleType@@MockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3521 @LENGTH@ 12
+---INS SimpleName@@MethodName:withSettingsUsing @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3534 @LENGTH@ 17
+---INS SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3552 @LENGTH@ 48
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3552 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@GenericMetadataSupport returnTypeGenericMetadata @AT@ 3575 @LENGTH@ 25
+---INS VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3613 @LENGTH@ 235
+------INS SimpleType@@MockSettings @TO@ VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @AT@ 3613 @LENGTH@ 12
+------INS VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @TO@ VariableDeclarationStatement@@MockSettings mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings(); @AT@ 3626 @LENGTH@ 221
+---------INS SimpleName@@mockSettings @TO@ VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3626 @LENGTH@ 12
+---------INS ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @TO@ VariableDeclarationFragment@@mockSettings=returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3658 @LENGTH@ 189
+------------INS InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3658 @LENGTH@ 57
+---------------INS FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3658 @LENGTH@ 53
+------------------INS MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @TO@ FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @AT@ 3658 @LENGTH@ 46
+---------------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3658 @LENGTH@ 25
+---------------------INS SimpleName@@MethodName:rawExtraInterfaces:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3684 @LENGTH@ 20
+------------------INS SimpleName@@length @TO@ FieldAccess@@returnTypeGenericMetadata.rawExtraInterfaces().length @AT@ 3705 @LENGTH@ 6
+---------------INS Operator@@> @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3711 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ InfixExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 @AT@ 3714 @LENGTH@ 1
+------------INS MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3735 @LENGTH@ 78
+---------------INS MethodInvocation@@MethodName:withSettings:[] @TO@ MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @AT@ 3735 @LENGTH@ 14
+---------------INS SimpleName@@MethodName:extraInterfaces:[returnTypeGenericMetadata.rawExtraInterfaces()] @TO@ MethodInvocation@@withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) @AT@ 3750 @LENGTH@ 63
+------------------INS MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @TO@ SimpleName@@MethodName:extraInterfaces:[returnTypeGenericMetadata.rawExtraInterfaces()] @AT@ 3766 @LENGTH@ 46
+---------------------INS SimpleName@@Name:returnTypeGenericMetadata @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3766 @LENGTH@ 25
+---------------------INS SimpleName@@MethodName:rawExtraInterfaces:[] @TO@ MethodInvocation@@returnTypeGenericMetadata.rawExtraInterfaces() @AT@ 3792 @LENGTH@ 20
+------------INS MethodInvocation@@MethodName:withSettings:[] @TO@ ConditionalExpression@@returnTypeGenericMetadata.rawExtraInterfaces().length > 0 ? withSettings().extraInterfaces(returnTypeGenericMetadata.rawExtraInterfaces()) : withSettings() @AT@ 3833 @LENGTH@ 14
+---INS ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3860 @LENGTH@ 108
+------INS MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3867 @LENGTH@ 100
+---------INS SimpleName@@Name:mockSettings @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3867 @LENGTH@ 12
+---------INS SimpleName@@MethodName:defaultAnswer:[returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 3898 @LENGTH@ 69
+------------INS MethodInvocation@@returnsDeepStubsAnswerUsing(returnTypeGenericMetadata) @TO@ SimpleName@@MethodName:defaultAnswer:[returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)] @AT@ 3912 @LENGTH@ 54
+---------------INS SimpleName@@MethodName:returnsDeepStubsAnswerUsing:[returnTypeGenericMetadata] @TO@ MethodInvocation@@returnsDeepStubsAnswerUsing(returnTypeGenericMetadata) @AT@ 3912 @LENGTH@ 54
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ SimpleName@@MethodName:returnsDeepStubsAnswerUsing:[returnTypeGenericMetadata] @AT@ 3940 @LENGTH@ 25
+, INS MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 3983 @LENGTH@ 344
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3983 @LENGTH@ 7
+---INS SimpleType@@ReturnsDeepStubs @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3991 @LENGTH@ 16
+---INS SimpleName@@MethodName:returnsDeepStubsAnswerUsing @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4008 @LENGTH@ 27
+---INS SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4036 @LENGTH@ 54
+------INS Modifier@@final @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4036 @LENGTH@ 5
+------INS SimpleType@@GenericMetadataSupport @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4042 @LENGTH@ 22
+------INS SimpleName@@returnTypeGenericMetadata @TO@ SingleVariableDeclaration@@final GenericMetadataSupport returnTypeGenericMetadata @AT@ 4065 @LENGTH@ 25
+---INS ReturnStatement@@ClassInstanceCreation:new ReturnsDeepStubs(){
+  @Override protected GenericMetadataSupport actualParameterizedType(  Object mock){
+    return returnTypeGenericMetadata;
+  }
+}
+ @TO@ MethodDeclaration@@private, @@ReturnsDeepStubs, MethodName:returnsDeepStubsAnswerUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4103 @LENGTH@ 217
+------INS ClassInstanceCreation@@ReturnsDeepStubs[] @TO@ ReturnStatement@@ClassInstanceCreation:new ReturnsDeepStubs(){
+  @Override protected GenericMetadataSupport actualParameterizedType(  Object mock){
+    return returnTypeGenericMetadata;
+  }
+}
+ @AT@ 4110 @LENGTH@ 209
+---------INS New@@new @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4110 @LENGTH@ 3
+---------INS SimpleType@@ReturnsDeepStubs @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4114 @LENGTH@ 16
+---------INS AnonymousClassDeclaration@@AnonymousClass @TO@ ClassInstanceCreation@@ReturnsDeepStubs[] @AT@ 4133 @LENGTH@ 186
+------------INS MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @TO@ AnonymousClassDeclaration@@AnonymousClass @AT@ 4148 @LENGTH@ 160
+---------------INS Modifier@@protected @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4171 @LENGTH@ 9
+---------------INS SimpleType@@GenericMetadataSupport @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4181 @LENGTH@ 22
+---------------INS SimpleName@@MethodName:actualParameterizedType @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4204 @LENGTH@ 23
+---------------INS SingleVariableDeclaration@@Object mock @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4228 @LENGTH@ 11
+------------------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object mock @AT@ 4228 @LENGTH@ 6
+------------------INS SimpleName@@mock @TO@ SingleVariableDeclaration@@Object mock @AT@ 4235 @LENGTH@ 4
+---------------INS ReturnStatement@@SimpleName:returnTypeGenericMetadata @TO@ MethodDeclaration@@protected, @@GenericMetadataSupport, MethodName:actualParameterizedType, @@Argus:Object+mock+ @AT@ 4260 @LENGTH@ 33
+------------------INS SimpleName@@returnTypeGenericMetadata @TO@ ReturnStatement@@SimpleName:returnTypeGenericMetadata @AT@ 4267 @LENGTH@ 25
+]
+
+CII:
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP9)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, SimpleType, OP1, null)
+OP4:   (INS, SimpleName, OP1, null)
+OP5:   (INS, SingleVariableDeclaration, OP1, OP6 OP7 OP8)
+OP6:      (INS, Modifier, OP5, null)
+OP7:      (INS, SimpleType, OP5, null)
+OP8:      (INS, SimpleName, OP5, null)
+OP9:   (INS, ReturnStatement, OP1, OP10)
+OP10:      (INS, ClassInstanceCreation, OP9, OP11 OP12 OP13)
+OP11:         (INS, New, OP10, null)
+OP12:         (INS, SimpleType, OP10, null)
+OP13:         (INS, AnonymousClassDeclaration, OP10, OP14)
+OP14:            (INS, MethodDeclaration, OP13, OP15 OP16 OP17 OP18 OP21)
+OP15:               (INS, Modifier, OP14, null)
+OP16:               (INS, SimpleType, OP14, null)
+OP17:               (INS, SimpleName, OP14, null)
+OP18:               (INS, SingleVariableDeclaration, OP14, OP19 OP20)
+OP19:                  (INS, SimpleType, OP18, null)
+OP20:                  (INS, SimpleName, OP18, null)
+OP21:               (INS, ReturnStatement, OP14, OP22)
+OP22:                  (INS, SimpleName, OP21, null)
+
+
+

@@ -1,0 +1,316 @@
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata),container) @TO@ MethodInvocation:recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()),container) @AT@ 2935 @LENGTH@ 128
+---UPD MethodInvocation@@recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata),container) @TO@ recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()),container) @AT@ 2942 @LENGTH@ 120
+------UPD SimpleName@@MethodName:recordDeepStubAnswer:[newDeepStubMock(returnTypeGenericMetadata), container] @TO@ MethodName:recordDeepStubAnswer:[newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()), container] @AT@ 2942 @LENGTH@ 120
+---------UPD MethodInvocation@@newDeepStubMock(returnTypeGenericMetadata) @TO@ newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()) @AT@ 2981 @LENGTH@ 42
+------------UPD SimpleName@@MethodName:newDeepStubMock:[returnTypeGenericMetadata] @TO@ MethodName:newDeepStubMock:[returnTypeGenericMetadata, invocation.getMock()] @AT@ 2981 @LENGTH@ 42
+---------------INS MethodInvocation@@invocation.getMock() @TO@ SimpleName@@MethodName:newDeepStubMock:[returnTypeGenericMetadata] @AT@ 3071 @LENGTH@ 20
+------------------INS SimpleName@@Name:invocation @TO@ MethodInvocation@@invocation.getMock() @AT@ 3071 @LENGTH@ 10
+------------------INS SimpleName@@MethodName:getMock:[] @TO@ MethodInvocation@@invocation.getMock() @AT@ 3082 @LENGTH@ 9
+, UPD MethodDeclaration@@private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+Object+parentMock+ @AT@ 3078 @LENGTH@ 850
+---UPD ReturnStatement@@MethodInvocation:mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata,parentMockSettings)) @AT@ 3767 @LENGTH@ 154
+------UPD MethodInvocation@@mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata,parentMockSettings)) @AT@ 3774 @LENGTH@ 146
+---------UPD SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @TO@ MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata,parentMockSettings)] @AT@ 3788 @LENGTH@ 132
+------------UPD MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @TO@ withSettingsUsing(returnTypeGenericMetadata,parentMockSettings) @AT@ 3865 @LENGTH@ 44
+---------------UPD SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @TO@ MethodName:withSettingsUsing:[returnTypeGenericMetadata, parentMockSettings] @AT@ 3865 @LENGTH@ 44
+------------------INS SimpleName@@parentMockSettings @TO@ SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @AT@ 4093 @LENGTH@ 18
+---INS SingleVariableDeclaration@@Object parentMock @TO@ MethodDeclaration@@private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3825 @LENGTH@ 17
+------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object parentMock @AT@ 3825 @LENGTH@ 6
+------INS SimpleName@@parentMock @TO@ SingleVariableDeclaration@@Object parentMock @AT@ 3832 @LENGTH@ 10
+---INS VariableDeclarationStatement@@MockCreationSettings parentMockSettings=new MockUtil().getMockSettings(parentMock); @TO@ MethodDeclaration@@private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3855 @LENGTH@ 85
+------INS SimpleType@@MockCreationSettings @TO@ VariableDeclarationStatement@@MockCreationSettings parentMockSettings=new MockUtil().getMockSettings(parentMock); @AT@ 3855 @LENGTH@ 20
+------INS VariableDeclarationFragment@@parentMockSettings=new MockUtil().getMockSettings(parentMock) @TO@ VariableDeclarationStatement@@MockCreationSettings parentMockSettings=new MockUtil().getMockSettings(parentMock); @AT@ 3876 @LENGTH@ 63
+---------INS SimpleName@@parentMockSettings @TO@ VariableDeclarationFragment@@parentMockSettings=new MockUtil().getMockSettings(parentMock) @AT@ 3876 @LENGTH@ 18
+---------INS MethodInvocation@@new MockUtil().getMockSettings(parentMock) @TO@ VariableDeclarationFragment@@parentMockSettings=new MockUtil().getMockSettings(parentMock) @AT@ 3897 @LENGTH@ 42
+------------INS ClassInstanceCreation@@MockUtil[] @TO@ MethodInvocation@@new MockUtil().getMockSettings(parentMock) @AT@ 3897 @LENGTH@ 14
+---------------INS New@@new @TO@ ClassInstanceCreation@@MockUtil[] @AT@ 3897 @LENGTH@ 3
+---------------INS SimpleType@@MockUtil @TO@ ClassInstanceCreation@@MockUtil[] @AT@ 3901 @LENGTH@ 8
+------------INS SimpleName@@MethodName:getMockSettings:[parentMock] @TO@ MethodInvocation@@new MockUtil().getMockSettings(parentMock) @AT@ 3912 @LENGTH@ 27
+---------------INS SimpleName@@parentMock @TO@ SimpleName@@MethodName:getMockSettings:[parentMock] @AT@ 3928 @LENGTH@ 10
+, UPD MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+MockCreationSettings+parentMockSettings+ @AT@ 3936 @LENGTH@ 452
+---INS SingleVariableDeclaration@@MockCreationSettings parentMockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4228 @LENGTH@ 39
+------INS SimpleType@@MockCreationSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4228 @LENGTH@ 20
+------INS SimpleName@@parentMockSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4249 @LENGTH@ 18
+---UPD ReturnStatement@@MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:propagateSerializationSettings(mockSettings,parentMockSettings).defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4258 @LENGTH@ 123
+------UPD MethodInvocation@@mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ propagateSerializationSettings(mockSettings,parentMockSettings).defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4265 @LENGTH@ 115
+---------UPD SimpleName@@Name:mockSettings @TO@ mockSettings @AT@ 4265 @LENGTH@ 12
+---------DEL MethodInvocation@@MethodName:serializable:[] @AT@ 4265 @LENGTH@ 27
+---------INS MethodInvocation@@MethodName:propagateSerializationSettings:[mockSettings, parentMockSettings] @TO@ MethodInvocation@@mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4509 @LENGTH@ 64
+------------MOV SimpleName@@Name:mockSettings @TO@ MethodInvocation@@MethodName:propagateSerializationSettings:[mockSettings, parentMockSettings] @AT@ 4265 @LENGTH@ 12
+------------INS SimpleName@@parentMockSettings @TO@ MethodInvocation@@MethodName:propagateSerializationSettings:[mockSettings, parentMockSettings] @AT@ 4554 @LENGTH@ 18
+, INS MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 4677 @LENGTH@ 213
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4677 @LENGTH@ 7
+---INS SimpleType@@MockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4685 @LENGTH@ 12
+---INS SimpleName@@MethodName:propagateSerializationSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4698 @LENGTH@ 30
+---INS SingleVariableDeclaration@@MockSettings mockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4729 @LENGTH@ 25
+------INS SimpleType@@MockSettings @TO@ SingleVariableDeclaration@@MockSettings mockSettings @AT@ 4729 @LENGTH@ 12
+------INS SimpleName@@mockSettings @TO@ SingleVariableDeclaration@@MockSettings mockSettings @AT@ 4742 @LENGTH@ 12
+---INS SingleVariableDeclaration@@MockCreationSettings parentMockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4756 @LENGTH@ 39
+------INS SimpleType@@MockCreationSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4756 @LENGTH@ 20
+------INS SimpleName@@parentMockSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4777 @LENGTH@ 18
+---INS ReturnStatement@@MethodInvocation:mockSettings.serializable(parentMockSettings.getSerializableMode()) @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4808 @LENGTH@ 75
+------INS MethodInvocation@@mockSettings.serializable(parentMockSettings.getSerializableMode()) @TO@ ReturnStatement@@MethodInvocation:mockSettings.serializable(parentMockSettings.getSerializableMode()) @AT@ 4815 @LENGTH@ 67
+---------INS SimpleName@@Name:mockSettings @TO@ MethodInvocation@@mockSettings.serializable(parentMockSettings.getSerializableMode()) @AT@ 4815 @LENGTH@ 12
+---------INS SimpleName@@MethodName:serializable:[parentMockSettings.getSerializableMode()] @TO@ MethodInvocation@@mockSettings.serializable(parentMockSettings.getSerializableMode()) @AT@ 4828 @LENGTH@ 54
+------------INS MethodInvocation@@parentMockSettings.getSerializableMode() @TO@ SimpleName@@MethodName:serializable:[parentMockSettings.getSerializableMode()] @AT@ 4841 @LENGTH@ 40
+---------------INS SimpleName@@Name:parentMockSettings @TO@ MethodInvocation@@parentMockSettings.getSerializableMode() @AT@ 4841 @LENGTH@ 18
+---------------INS SimpleName@@MethodName:getSerializableMode:[] @TO@ MethodInvocation@@parentMockSettings.getSerializableMode() @AT@ 4860 @LENGTH@ 21
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (UPD, MethodInvocation, OP3, OP5)
+OP5:            (UPD, SimpleName, OP4, OP6)
+OP6:               (INS, MethodInvocation, OP5, OP7 OP8)
+OP7:                  (INS, SimpleName, OP6, null)
+OP8:                  (INS, SimpleName, OP6, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata),container) @TO@ MethodInvocation:recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()),container) @AT@ 2935 @LENGTH@ 128
+---UPD MethodInvocation@@recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata),container) @TO@ recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()),container) @AT@ 2942 @LENGTH@ 120
+------UPD SimpleName@@MethodName:recordDeepStubAnswer:[newDeepStubMock(returnTypeGenericMetadata), container] @TO@ MethodName:recordDeepStubAnswer:[newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()), container] @AT@ 2942 @LENGTH@ 120
+---------UPD MethodInvocation@@newDeepStubMock(returnTypeGenericMetadata) @TO@ newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()) @AT@ 2981 @LENGTH@ 42
+------------UPD SimpleName@@MethodName:newDeepStubMock:[returnTypeGenericMetadata] @TO@ MethodName:newDeepStubMock:[returnTypeGenericMetadata, invocation.getMock()] @AT@ 2981 @LENGTH@ 42
+---------------INS MethodInvocation@@invocation.getMock() @TO@ SimpleName@@MethodName:newDeepStubMock:[returnTypeGenericMetadata] @AT@ 3071 @LENGTH@ 20
+------------------INS SimpleName@@Name:invocation @TO@ MethodInvocation@@invocation.getMock() @AT@ 3071 @LENGTH@ 10
+------------------INS SimpleName@@MethodName:getMock:[] @TO@ MethodInvocation@@invocation.getMock() @AT@ 3082 @LENGTH@ 9
+, UPD MethodDeclaration@@private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+Object+parentMock+ @AT@ 3078 @LENGTH@ 850
+---UPD ReturnStatement@@MethodInvocation:mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata,parentMockSettings)) @AT@ 3767 @LENGTH@ 154
+------UPD MethodInvocation@@mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata,parentMockSettings)) @AT@ 3774 @LENGTH@ 146
+---------UPD SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @TO@ MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata,parentMockSettings)] @AT@ 3788 @LENGTH@ 132
+------------UPD MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @TO@ withSettingsUsing(returnTypeGenericMetadata,parentMockSettings) @AT@ 3865 @LENGTH@ 44
+---------------UPD SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @TO@ MethodName:withSettingsUsing:[returnTypeGenericMetadata, parentMockSettings] @AT@ 3865 @LENGTH@ 44
+------------------INS SimpleName@@parentMockSettings @TO@ SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @AT@ 4093 @LENGTH@ 18
+---INS SingleVariableDeclaration@@Object parentMock @TO@ MethodDeclaration@@private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3825 @LENGTH@ 17
+------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object parentMock @AT@ 3825 @LENGTH@ 6
+------INS SimpleName@@parentMock @TO@ SingleVariableDeclaration@@Object parentMock @AT@ 3832 @LENGTH@ 10
+---INS VariableDeclarationStatement@@MockCreationSettings parentMockSettings=new MockUtil().getMockSettings(parentMock); @TO@ MethodDeclaration@@private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3855 @LENGTH@ 85
+------INS SimpleType@@MockCreationSettings @TO@ VariableDeclarationStatement@@MockCreationSettings parentMockSettings=new MockUtil().getMockSettings(parentMock); @AT@ 3855 @LENGTH@ 20
+------INS VariableDeclarationFragment@@parentMockSettings=new MockUtil().getMockSettings(parentMock) @TO@ VariableDeclarationStatement@@MockCreationSettings parentMockSettings=new MockUtil().getMockSettings(parentMock); @AT@ 3876 @LENGTH@ 63
+---------INS SimpleName@@parentMockSettings @TO@ VariableDeclarationFragment@@parentMockSettings=new MockUtil().getMockSettings(parentMock) @AT@ 3876 @LENGTH@ 18
+---------INS MethodInvocation@@new MockUtil().getMockSettings(parentMock) @TO@ VariableDeclarationFragment@@parentMockSettings=new MockUtil().getMockSettings(parentMock) @AT@ 3897 @LENGTH@ 42
+------------INS ClassInstanceCreation@@MockUtil[] @TO@ MethodInvocation@@new MockUtil().getMockSettings(parentMock) @AT@ 3897 @LENGTH@ 14
+---------------INS New@@new @TO@ ClassInstanceCreation@@MockUtil[] @AT@ 3897 @LENGTH@ 3
+---------------INS SimpleType@@MockUtil @TO@ ClassInstanceCreation@@MockUtil[] @AT@ 3901 @LENGTH@ 8
+------------INS SimpleName@@MethodName:getMockSettings:[parentMock] @TO@ MethodInvocation@@new MockUtil().getMockSettings(parentMock) @AT@ 3912 @LENGTH@ 27
+---------------INS SimpleName@@parentMock @TO@ SimpleName@@MethodName:getMockSettings:[parentMock] @AT@ 3928 @LENGTH@ 10
+, UPD MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+MockCreationSettings+parentMockSettings+ @AT@ 3936 @LENGTH@ 452
+---INS SingleVariableDeclaration@@MockCreationSettings parentMockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4228 @LENGTH@ 39
+------INS SimpleType@@MockCreationSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4228 @LENGTH@ 20
+------INS SimpleName@@parentMockSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4249 @LENGTH@ 18
+---UPD ReturnStatement@@MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:propagateSerializationSettings(mockSettings,parentMockSettings).defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4258 @LENGTH@ 123
+------UPD MethodInvocation@@mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ propagateSerializationSettings(mockSettings,parentMockSettings).defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4265 @LENGTH@ 115
+---------UPD SimpleName@@Name:mockSettings @TO@ mockSettings @AT@ 4265 @LENGTH@ 12
+---------DEL MethodInvocation@@MethodName:serializable:[] @AT@ 4265 @LENGTH@ 27
+---------INS MethodInvocation@@MethodName:propagateSerializationSettings:[mockSettings, parentMockSettings] @TO@ MethodInvocation@@mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4509 @LENGTH@ 64
+------------MOV SimpleName@@Name:mockSettings @TO@ MethodInvocation@@MethodName:propagateSerializationSettings:[mockSettings, parentMockSettings] @AT@ 4265 @LENGTH@ 12
+------------INS SimpleName@@parentMockSettings @TO@ MethodInvocation@@MethodName:propagateSerializationSettings:[mockSettings, parentMockSettings] @AT@ 4554 @LENGTH@ 18
+, INS MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 4677 @LENGTH@ 213
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4677 @LENGTH@ 7
+---INS SimpleType@@MockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4685 @LENGTH@ 12
+---INS SimpleName@@MethodName:propagateSerializationSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4698 @LENGTH@ 30
+---INS SingleVariableDeclaration@@MockSettings mockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4729 @LENGTH@ 25
+------INS SimpleType@@MockSettings @TO@ SingleVariableDeclaration@@MockSettings mockSettings @AT@ 4729 @LENGTH@ 12
+------INS SimpleName@@mockSettings @TO@ SingleVariableDeclaration@@MockSettings mockSettings @AT@ 4742 @LENGTH@ 12
+---INS SingleVariableDeclaration@@MockCreationSettings parentMockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4756 @LENGTH@ 39
+------INS SimpleType@@MockCreationSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4756 @LENGTH@ 20
+------INS SimpleName@@parentMockSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4777 @LENGTH@ 18
+---INS ReturnStatement@@MethodInvocation:mockSettings.serializable(parentMockSettings.getSerializableMode()) @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4808 @LENGTH@ 75
+------INS MethodInvocation@@mockSettings.serializable(parentMockSettings.getSerializableMode()) @TO@ ReturnStatement@@MethodInvocation:mockSettings.serializable(parentMockSettings.getSerializableMode()) @AT@ 4815 @LENGTH@ 67
+---------INS SimpleName@@Name:mockSettings @TO@ MethodInvocation@@mockSettings.serializable(parentMockSettings.getSerializableMode()) @AT@ 4815 @LENGTH@ 12
+---------INS SimpleName@@MethodName:serializable:[parentMockSettings.getSerializableMode()] @TO@ MethodInvocation@@mockSettings.serializable(parentMockSettings.getSerializableMode()) @AT@ 4828 @LENGTH@ 54
+------------INS MethodInvocation@@parentMockSettings.getSerializableMode() @TO@ SimpleName@@MethodName:serializable:[parentMockSettings.getSerializableMode()] @AT@ 4841 @LENGTH@ 40
+---------------INS SimpleName@@Name:parentMockSettings @TO@ MethodInvocation@@parentMockSettings.getSerializableMode() @AT@ 4841 @LENGTH@ 18
+---------------INS SimpleName@@MethodName:getSerializableMode:[] @TO@ MethodInvocation@@parentMockSettings.getSerializableMode() @AT@ 4860 @LENGTH@ 21
+]
+
+CII:
+OP1:(UPD, MethodDeclaration, null, OP2 OP8 OP11)
+OP2:   (UPD, ReturnStatement, OP1, OP3)
+OP3:      (UPD, MethodInvocation, OP2, OP4)
+OP4:         (UPD, SimpleName, OP3, OP5)
+OP5:            (UPD, MethodInvocation, OP4, OP6)
+OP6:               (UPD, SimpleName, OP5, OP7)
+OP7:                  (INS, SimpleName, OP6, null)
+OP8:   (INS, SingleVariableDeclaration, OP1, OP9 OP10)
+OP9:      (INS, SimpleType, OP8, null)
+OP10:      (INS, SimpleName, OP8, null)
+OP11:   (INS, VariableDeclarationStatement, OP1, OP12 OP13)
+OP12:      (INS, SimpleType, OP11, null)
+OP13:      (INS, VariableDeclarationFragment, OP11, OP14 OP15)
+OP14:         (INS, SimpleName, OP13, null)
+OP15:         (INS, MethodInvocation, OP13, OP16 OP19)
+OP16:            (INS, ClassInstanceCreation, OP15, OP17 OP18)
+OP17:               (INS, New, OP16, null)
+OP18:               (INS, SimpleType, OP16, null)
+OP19:            (INS, SimpleName, OP15, OP20)
+OP20:               (INS, SimpleName, OP19, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata),container) @TO@ MethodInvocation:recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()),container) @AT@ 2935 @LENGTH@ 128
+---UPD MethodInvocation@@recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata),container) @TO@ recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()),container) @AT@ 2942 @LENGTH@ 120
+------UPD SimpleName@@MethodName:recordDeepStubAnswer:[newDeepStubMock(returnTypeGenericMetadata), container] @TO@ MethodName:recordDeepStubAnswer:[newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()), container] @AT@ 2942 @LENGTH@ 120
+---------UPD MethodInvocation@@newDeepStubMock(returnTypeGenericMetadata) @TO@ newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()) @AT@ 2981 @LENGTH@ 42
+------------UPD SimpleName@@MethodName:newDeepStubMock:[returnTypeGenericMetadata] @TO@ MethodName:newDeepStubMock:[returnTypeGenericMetadata, invocation.getMock()] @AT@ 2981 @LENGTH@ 42
+---------------INS MethodInvocation@@invocation.getMock() @TO@ SimpleName@@MethodName:newDeepStubMock:[returnTypeGenericMetadata] @AT@ 3071 @LENGTH@ 20
+------------------INS SimpleName@@Name:invocation @TO@ MethodInvocation@@invocation.getMock() @AT@ 3071 @LENGTH@ 10
+------------------INS SimpleName@@MethodName:getMock:[] @TO@ MethodInvocation@@invocation.getMock() @AT@ 3082 @LENGTH@ 9
+, UPD MethodDeclaration@@private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+Object+parentMock+ @AT@ 3078 @LENGTH@ 850
+---UPD ReturnStatement@@MethodInvocation:mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata,parentMockSettings)) @AT@ 3767 @LENGTH@ 154
+------UPD MethodInvocation@@mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata,parentMockSettings)) @AT@ 3774 @LENGTH@ 146
+---------UPD SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @TO@ MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata,parentMockSettings)] @AT@ 3788 @LENGTH@ 132
+------------UPD MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @TO@ withSettingsUsing(returnTypeGenericMetadata,parentMockSettings) @AT@ 3865 @LENGTH@ 44
+---------------UPD SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @TO@ MethodName:withSettingsUsing:[returnTypeGenericMetadata, parentMockSettings] @AT@ 3865 @LENGTH@ 44
+------------------INS SimpleName@@parentMockSettings @TO@ SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @AT@ 4093 @LENGTH@ 18
+---INS SingleVariableDeclaration@@Object parentMock @TO@ MethodDeclaration@@private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3825 @LENGTH@ 17
+------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object parentMock @AT@ 3825 @LENGTH@ 6
+------INS SimpleName@@parentMock @TO@ SingleVariableDeclaration@@Object parentMock @AT@ 3832 @LENGTH@ 10
+---INS VariableDeclarationStatement@@MockCreationSettings parentMockSettings=new MockUtil().getMockSettings(parentMock); @TO@ MethodDeclaration@@private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3855 @LENGTH@ 85
+------INS SimpleType@@MockCreationSettings @TO@ VariableDeclarationStatement@@MockCreationSettings parentMockSettings=new MockUtil().getMockSettings(parentMock); @AT@ 3855 @LENGTH@ 20
+------INS VariableDeclarationFragment@@parentMockSettings=new MockUtil().getMockSettings(parentMock) @TO@ VariableDeclarationStatement@@MockCreationSettings parentMockSettings=new MockUtil().getMockSettings(parentMock); @AT@ 3876 @LENGTH@ 63
+---------INS SimpleName@@parentMockSettings @TO@ VariableDeclarationFragment@@parentMockSettings=new MockUtil().getMockSettings(parentMock) @AT@ 3876 @LENGTH@ 18
+---------INS MethodInvocation@@new MockUtil().getMockSettings(parentMock) @TO@ VariableDeclarationFragment@@parentMockSettings=new MockUtil().getMockSettings(parentMock) @AT@ 3897 @LENGTH@ 42
+------------INS ClassInstanceCreation@@MockUtil[] @TO@ MethodInvocation@@new MockUtil().getMockSettings(parentMock) @AT@ 3897 @LENGTH@ 14
+---------------INS New@@new @TO@ ClassInstanceCreation@@MockUtil[] @AT@ 3897 @LENGTH@ 3
+---------------INS SimpleType@@MockUtil @TO@ ClassInstanceCreation@@MockUtil[] @AT@ 3901 @LENGTH@ 8
+------------INS SimpleName@@MethodName:getMockSettings:[parentMock] @TO@ MethodInvocation@@new MockUtil().getMockSettings(parentMock) @AT@ 3912 @LENGTH@ 27
+---------------INS SimpleName@@parentMock @TO@ SimpleName@@MethodName:getMockSettings:[parentMock] @AT@ 3928 @LENGTH@ 10
+, UPD MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+MockCreationSettings+parentMockSettings+ @AT@ 3936 @LENGTH@ 452
+---INS SingleVariableDeclaration@@MockCreationSettings parentMockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4228 @LENGTH@ 39
+------INS SimpleType@@MockCreationSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4228 @LENGTH@ 20
+------INS SimpleName@@parentMockSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4249 @LENGTH@ 18
+---UPD ReturnStatement@@MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:propagateSerializationSettings(mockSettings,parentMockSettings).defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4258 @LENGTH@ 123
+------UPD MethodInvocation@@mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ propagateSerializationSettings(mockSettings,parentMockSettings).defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4265 @LENGTH@ 115
+---------UPD SimpleName@@Name:mockSettings @TO@ mockSettings @AT@ 4265 @LENGTH@ 12
+---------DEL MethodInvocation@@MethodName:serializable:[] @AT@ 4265 @LENGTH@ 27
+---------INS MethodInvocation@@MethodName:propagateSerializationSettings:[mockSettings, parentMockSettings] @TO@ MethodInvocation@@mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4509 @LENGTH@ 64
+------------MOV SimpleName@@Name:mockSettings @TO@ MethodInvocation@@MethodName:propagateSerializationSettings:[mockSettings, parentMockSettings] @AT@ 4265 @LENGTH@ 12
+------------INS SimpleName@@parentMockSettings @TO@ MethodInvocation@@MethodName:propagateSerializationSettings:[mockSettings, parentMockSettings] @AT@ 4554 @LENGTH@ 18
+, INS MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 4677 @LENGTH@ 213
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4677 @LENGTH@ 7
+---INS SimpleType@@MockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4685 @LENGTH@ 12
+---INS SimpleName@@MethodName:propagateSerializationSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4698 @LENGTH@ 30
+---INS SingleVariableDeclaration@@MockSettings mockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4729 @LENGTH@ 25
+------INS SimpleType@@MockSettings @TO@ SingleVariableDeclaration@@MockSettings mockSettings @AT@ 4729 @LENGTH@ 12
+------INS SimpleName@@mockSettings @TO@ SingleVariableDeclaration@@MockSettings mockSettings @AT@ 4742 @LENGTH@ 12
+---INS SingleVariableDeclaration@@MockCreationSettings parentMockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4756 @LENGTH@ 39
+------INS SimpleType@@MockCreationSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4756 @LENGTH@ 20
+------INS SimpleName@@parentMockSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4777 @LENGTH@ 18
+---INS ReturnStatement@@MethodInvocation:mockSettings.serializable(parentMockSettings.getSerializableMode()) @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4808 @LENGTH@ 75
+------INS MethodInvocation@@mockSettings.serializable(parentMockSettings.getSerializableMode()) @TO@ ReturnStatement@@MethodInvocation:mockSettings.serializable(parentMockSettings.getSerializableMode()) @AT@ 4815 @LENGTH@ 67
+---------INS SimpleName@@Name:mockSettings @TO@ MethodInvocation@@mockSettings.serializable(parentMockSettings.getSerializableMode()) @AT@ 4815 @LENGTH@ 12
+---------INS SimpleName@@MethodName:serializable:[parentMockSettings.getSerializableMode()] @TO@ MethodInvocation@@mockSettings.serializable(parentMockSettings.getSerializableMode()) @AT@ 4828 @LENGTH@ 54
+------------INS MethodInvocation@@parentMockSettings.getSerializableMode() @TO@ SimpleName@@MethodName:serializable:[parentMockSettings.getSerializableMode()] @AT@ 4841 @LENGTH@ 40
+---------------INS SimpleName@@Name:parentMockSettings @TO@ MethodInvocation@@parentMockSettings.getSerializableMode() @AT@ 4841 @LENGTH@ 18
+---------------INS SimpleName@@MethodName:getSerializableMode:[] @TO@ MethodInvocation@@parentMockSettings.getSerializableMode() @AT@ 4860 @LENGTH@ 21
+]
+
+CII:
+OP1:(UPD, MethodDeclaration, null, OP2 OP5)
+OP2:   (INS, SingleVariableDeclaration, OP1, OP3 OP4)
+OP3:      (INS, SimpleType, OP2, null)
+OP4:      (INS, SimpleName, OP2, null)
+OP5:   (UPD, ReturnStatement, OP1, OP6)
+OP6:      (UPD, MethodInvocation, OP5, OP7 OP8 OP9)
+OP7:         (UPD, SimpleName, OP6, null)
+OP8:         (DEL, MethodInvocation, OP6, null)
+OP9:         (INS, MethodInvocation, OP6, OP10 OP11)
+OP10:            (MOV, SimpleName, OP9, null)
+OP11:            (INS, SimpleName, OP9, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata),container) @TO@ MethodInvocation:recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()),container) @AT@ 2935 @LENGTH@ 128
+---UPD MethodInvocation@@recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata),container) @TO@ recordDeepStubAnswer(newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()),container) @AT@ 2942 @LENGTH@ 120
+------UPD SimpleName@@MethodName:recordDeepStubAnswer:[newDeepStubMock(returnTypeGenericMetadata), container] @TO@ MethodName:recordDeepStubAnswer:[newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()), container] @AT@ 2942 @LENGTH@ 120
+---------UPD MethodInvocation@@newDeepStubMock(returnTypeGenericMetadata) @TO@ newDeepStubMock(returnTypeGenericMetadata,invocation.getMock()) @AT@ 2981 @LENGTH@ 42
+------------UPD SimpleName@@MethodName:newDeepStubMock:[returnTypeGenericMetadata] @TO@ MethodName:newDeepStubMock:[returnTypeGenericMetadata, invocation.getMock()] @AT@ 2981 @LENGTH@ 42
+---------------INS MethodInvocation@@invocation.getMock() @TO@ SimpleName@@MethodName:newDeepStubMock:[returnTypeGenericMetadata] @AT@ 3071 @LENGTH@ 20
+------------------INS SimpleName@@Name:invocation @TO@ MethodInvocation@@invocation.getMock() @AT@ 3071 @LENGTH@ 10
+------------------INS SimpleName@@MethodName:getMock:[] @TO@ MethodInvocation@@invocation.getMock() @AT@ 3082 @LENGTH@ 9
+, UPD MethodDeclaration@@private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+Object+parentMock+ @AT@ 3078 @LENGTH@ 850
+---UPD ReturnStatement@@MethodInvocation:mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata,parentMockSettings)) @AT@ 3767 @LENGTH@ 154
+------UPD MethodInvocation@@mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata)) @TO@ mockitoCore().mock(returnTypeGenericMetadata.rawType(),withSettingsUsing(returnTypeGenericMetadata,parentMockSettings)) @AT@ 3774 @LENGTH@ 146
+---------UPD SimpleName@@MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata)] @TO@ MethodName:mock:[returnTypeGenericMetadata.rawType(), withSettingsUsing(returnTypeGenericMetadata,parentMockSettings)] @AT@ 3788 @LENGTH@ 132
+------------UPD MethodInvocation@@withSettingsUsing(returnTypeGenericMetadata) @TO@ withSettingsUsing(returnTypeGenericMetadata,parentMockSettings) @AT@ 3865 @LENGTH@ 44
+---------------UPD SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @TO@ MethodName:withSettingsUsing:[returnTypeGenericMetadata, parentMockSettings] @AT@ 3865 @LENGTH@ 44
+------------------INS SimpleName@@parentMockSettings @TO@ SimpleName@@MethodName:withSettingsUsing:[returnTypeGenericMetadata] @AT@ 4093 @LENGTH@ 18
+---INS SingleVariableDeclaration@@Object parentMock @TO@ MethodDeclaration@@private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3825 @LENGTH@ 17
+------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object parentMock @AT@ 3825 @LENGTH@ 6
+------INS SimpleName@@parentMock @TO@ SingleVariableDeclaration@@Object parentMock @AT@ 3832 @LENGTH@ 10
+---INS VariableDeclarationStatement@@MockCreationSettings parentMockSettings=new MockUtil().getMockSettings(parentMock); @TO@ MethodDeclaration@@private, @@Object, MethodName:newDeepStubMock, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 3855 @LENGTH@ 85
+------INS SimpleType@@MockCreationSettings @TO@ VariableDeclarationStatement@@MockCreationSettings parentMockSettings=new MockUtil().getMockSettings(parentMock); @AT@ 3855 @LENGTH@ 20
+------INS VariableDeclarationFragment@@parentMockSettings=new MockUtil().getMockSettings(parentMock) @TO@ VariableDeclarationStatement@@MockCreationSettings parentMockSettings=new MockUtil().getMockSettings(parentMock); @AT@ 3876 @LENGTH@ 63
+---------INS SimpleName@@parentMockSettings @TO@ VariableDeclarationFragment@@parentMockSettings=new MockUtil().getMockSettings(parentMock) @AT@ 3876 @LENGTH@ 18
+---------INS MethodInvocation@@new MockUtil().getMockSettings(parentMock) @TO@ VariableDeclarationFragment@@parentMockSettings=new MockUtil().getMockSettings(parentMock) @AT@ 3897 @LENGTH@ 42
+------------INS ClassInstanceCreation@@MockUtil[] @TO@ MethodInvocation@@new MockUtil().getMockSettings(parentMock) @AT@ 3897 @LENGTH@ 14
+---------------INS New@@new @TO@ ClassInstanceCreation@@MockUtil[] @AT@ 3897 @LENGTH@ 3
+---------------INS SimpleType@@MockUtil @TO@ ClassInstanceCreation@@MockUtil[] @AT@ 3901 @LENGTH@ 8
+------------INS SimpleName@@MethodName:getMockSettings:[parentMock] @TO@ MethodInvocation@@new MockUtil().getMockSettings(parentMock) @AT@ 3912 @LENGTH@ 27
+---------------INS SimpleName@@parentMock @TO@ SimpleName@@MethodName:getMockSettings:[parentMock] @AT@ 3928 @LENGTH@ 10
+, UPD MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @TO@ private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+MockCreationSettings+parentMockSettings+ @AT@ 3936 @LENGTH@ 452
+---INS SingleVariableDeclaration@@MockCreationSettings parentMockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:withSettingsUsing, @@Argus:GenericMetadataSupport+returnTypeGenericMetadata+ @AT@ 4228 @LENGTH@ 39
+------INS SimpleType@@MockCreationSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4228 @LENGTH@ 20
+------INS SimpleName@@parentMockSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4249 @LENGTH@ 18
+---UPD ReturnStatement@@MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:propagateSerializationSettings(mockSettings,parentMockSettings).defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4258 @LENGTH@ 123
+------UPD MethodInvocation@@mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ propagateSerializationSettings(mockSettings,parentMockSettings).defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4265 @LENGTH@ 115
+---------UPD SimpleName@@Name:mockSettings @TO@ mockSettings @AT@ 4265 @LENGTH@ 12
+---------DEL MethodInvocation@@MethodName:serializable:[] @AT@ 4265 @LENGTH@ 27
+---------INS MethodInvocation@@MethodName:propagateSerializationSettings:[mockSettings, parentMockSettings] @TO@ MethodInvocation@@mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4509 @LENGTH@ 64
+------------MOV SimpleName@@Name:mockSettings @TO@ MethodInvocation@@MethodName:propagateSerializationSettings:[mockSettings, parentMockSettings] @AT@ 4265 @LENGTH@ 12
+------------INS SimpleName@@parentMockSettings @TO@ MethodInvocation@@MethodName:propagateSerializationSettings:[mockSettings, parentMockSettings] @AT@ 4554 @LENGTH@ 18
+, INS MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 4677 @LENGTH@ 213
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4677 @LENGTH@ 7
+---INS SimpleType@@MockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4685 @LENGTH@ 12
+---INS SimpleName@@MethodName:propagateSerializationSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4698 @LENGTH@ 30
+---INS SingleVariableDeclaration@@MockSettings mockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4729 @LENGTH@ 25
+------INS SimpleType@@MockSettings @TO@ SingleVariableDeclaration@@MockSettings mockSettings @AT@ 4729 @LENGTH@ 12
+------INS SimpleName@@mockSettings @TO@ SingleVariableDeclaration@@MockSettings mockSettings @AT@ 4742 @LENGTH@ 12
+---INS SingleVariableDeclaration@@MockCreationSettings parentMockSettings @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4756 @LENGTH@ 39
+------INS SimpleType@@MockCreationSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4756 @LENGTH@ 20
+------INS SimpleName@@parentMockSettings @TO@ SingleVariableDeclaration@@MockCreationSettings parentMockSettings @AT@ 4777 @LENGTH@ 18
+---INS ReturnStatement@@MethodInvocation:mockSettings.serializable(parentMockSettings.getSerializableMode()) @TO@ MethodDeclaration@@private, @@MockSettings, MethodName:propagateSerializationSettings, @@Argus:MockSettings+mockSettings+MockCreationSettings+parentMockSettings+ @AT@ 4808 @LENGTH@ 75
+------INS MethodInvocation@@mockSettings.serializable(parentMockSettings.getSerializableMode()) @TO@ ReturnStatement@@MethodInvocation:mockSettings.serializable(parentMockSettings.getSerializableMode()) @AT@ 4815 @LENGTH@ 67
+---------INS SimpleName@@Name:mockSettings @TO@ MethodInvocation@@mockSettings.serializable(parentMockSettings.getSerializableMode()) @AT@ 4815 @LENGTH@ 12
+---------INS SimpleName@@MethodName:serializable:[parentMockSettings.getSerializableMode()] @TO@ MethodInvocation@@mockSettings.serializable(parentMockSettings.getSerializableMode()) @AT@ 4828 @LENGTH@ 54
+------------INS MethodInvocation@@parentMockSettings.getSerializableMode() @TO@ SimpleName@@MethodName:serializable:[parentMockSettings.getSerializableMode()] @AT@ 4841 @LENGTH@ 40
+---------------INS SimpleName@@Name:parentMockSettings @TO@ MethodInvocation@@parentMockSettings.getSerializableMode() @AT@ 4841 @LENGTH@ 18
+---------------INS SimpleName@@MethodName:getSerializableMode:[] @TO@ MethodInvocation@@parentMockSettings.getSerializableMode() @AT@ 4860 @LENGTH@ 21
+]
+
+CII:
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP8 OP11)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, SimpleType, OP1, null)
+OP4:   (INS, SimpleName, OP1, null)
+OP5:   (INS, SingleVariableDeclaration, OP1, OP6 OP7)
+OP6:      (INS, SimpleType, OP5, null)
+OP7:      (INS, SimpleName, OP5, null)
+OP8:   (INS, SingleVariableDeclaration, OP1, OP9 OP10)
+OP9:      (INS, SimpleType, OP8, null)
+OP10:      (INS, SimpleName, OP8, null)
+OP11:   (INS, ReturnStatement, OP1, OP12)
+OP12:      (INS, MethodInvocation, OP11, OP13 OP14)
+OP13:         (INS, SimpleName, OP12, null)
+OP14:         (INS, SimpleName, OP12, OP15)
+OP15:            (INS, MethodInvocation, OP14, OP16 OP17)
+OP16:               (INS, SimpleName, OP15, null)
+OP17:               (INS, SimpleName, OP15, null)
+
+
+

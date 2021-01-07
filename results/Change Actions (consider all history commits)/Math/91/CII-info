@@ -1,0 +1,102 @@
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@double nOd=doubleValue(); @TO@ long nOd=((long)numerator) * object.denominator; @AT@ 8894 @LENGTH@ 27
+---UPD PrimitiveType@@double @TO@ long @AT@ 8894 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@nOd=doubleValue() @TO@ nOd=((long)numerator) * object.denominator @AT@ 8901 @LENGTH@ 19
+------INS InfixExpression@@((long)numerator) * object.denominator @TO@ VariableDeclarationFragment@@nOd=doubleValue() @AT@ 8905 @LENGTH@ 39
+---------INS ParenthesizedExpression@@((long)numerator) @TO@ InfixExpression@@((long)numerator) * object.denominator @AT@ 8905 @LENGTH@ 18
+------------INS CastExpression@@(long)numerator @TO@ ParenthesizedExpression@@((long)numerator) @AT@ 8906 @LENGTH@ 16
+---------------INS PrimitiveType@@long @TO@ CastExpression@@(long)numerator @AT@ 8907 @LENGTH@ 4
+---------------INS SimpleName@@numerator @TO@ CastExpression@@(long)numerator @AT@ 8913 @LENGTH@ 9
+---------INS Operator@@* @TO@ InfixExpression@@((long)numerator) * object.denominator @AT@ 8923 @LENGTH@ 1
+---------INS QualifiedName@@object.denominator @TO@ InfixExpression@@((long)numerator) * object.denominator @AT@ 8926 @LENGTH@ 18
+------------INS SimpleName@@object @TO@ QualifiedName@@object.denominator @AT@ 8926 @LENGTH@ 6
+------------INS SimpleName@@denominator @TO@ QualifiedName@@object.denominator @AT@ 8933 @LENGTH@ 11
+------DEL MethodInvocation@@MethodName:doubleValue:[] @AT@ 8907 @LENGTH@ 13
+, UPD VariableDeclarationStatement@@double dOn=object.doubleValue(); @TO@ long dOn=((long)denominator) * object.numerator; @AT@ 8930 @LENGTH@ 34
+---UPD PrimitiveType@@double @TO@ long @AT@ 8930 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@dOn=object.doubleValue() @TO@ dOn=((long)denominator) * object.numerator @AT@ 8937 @LENGTH@ 26
+------DEL MethodInvocation@@object.doubleValue() @AT@ 8943 @LENGTH@ 20
+---------DEL SimpleName@@Name:object @AT@ 8943 @LENGTH@ 6
+---------DEL SimpleName@@MethodName:doubleValue:[] @AT@ 8950 @LENGTH@ 13
+------INS InfixExpression@@((long)denominator) * object.numerator @TO@ VariableDeclarationFragment@@dOn=object.doubleValue() @AT@ 8965 @LENGTH@ 39
+---------INS ParenthesizedExpression@@((long)denominator) @TO@ InfixExpression@@((long)denominator) * object.numerator @AT@ 8965 @LENGTH@ 20
+------------INS CastExpression@@(long)denominator @TO@ ParenthesizedExpression@@((long)denominator) @AT@ 8966 @LENGTH@ 18
+---------------INS PrimitiveType@@long @TO@ CastExpression@@(long)denominator @AT@ 8967 @LENGTH@ 4
+---------------INS SimpleName@@denominator @TO@ CastExpression@@(long)denominator @AT@ 8973 @LENGTH@ 11
+---------INS Operator@@* @TO@ InfixExpression@@((long)denominator) * object.numerator @AT@ 8985 @LENGTH@ 1
+---------INS QualifiedName@@object.numerator @TO@ InfixExpression@@((long)denominator) * object.numerator @AT@ 8988 @LENGTH@ 16
+------------INS SimpleName@@object @TO@ QualifiedName@@object.numerator @AT@ 8988 @LENGTH@ 6
+------------INS SimpleName@@numerator @TO@ QualifiedName@@object.numerator @AT@ 8995 @LENGTH@ 9
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (UPD, PrimitiveType, OP1, null)
+OP3:   (UPD, VariableDeclarationFragment, OP1, OP4 OP13)
+OP4:      (INS, InfixExpression, OP3, OP5 OP9 OP10)
+OP5:         (INS, ParenthesizedExpression, OP4, OP6)
+OP6:            (INS, CastExpression, OP5, OP7 OP8)
+OP7:               (INS, PrimitiveType, OP6, null)
+OP8:               (INS, SimpleName, OP6, null)
+OP9:         (INS, Operator, OP4, null)
+OP10:         (INS, QualifiedName, OP4, OP11 OP12)
+OP11:            (INS, SimpleName, OP10, null)
+OP12:            (INS, SimpleName, OP10, null)
+OP13:      (DEL, MethodInvocation, OP3, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@double nOd=doubleValue(); @TO@ long nOd=((long)numerator) * object.denominator; @AT@ 8894 @LENGTH@ 27
+---UPD PrimitiveType@@double @TO@ long @AT@ 8894 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@nOd=doubleValue() @TO@ nOd=((long)numerator) * object.denominator @AT@ 8901 @LENGTH@ 19
+------INS InfixExpression@@((long)numerator) * object.denominator @TO@ VariableDeclarationFragment@@nOd=doubleValue() @AT@ 8905 @LENGTH@ 39
+---------INS ParenthesizedExpression@@((long)numerator) @TO@ InfixExpression@@((long)numerator) * object.denominator @AT@ 8905 @LENGTH@ 18
+------------INS CastExpression@@(long)numerator @TO@ ParenthesizedExpression@@((long)numerator) @AT@ 8906 @LENGTH@ 16
+---------------INS PrimitiveType@@long @TO@ CastExpression@@(long)numerator @AT@ 8907 @LENGTH@ 4
+---------------INS SimpleName@@numerator @TO@ CastExpression@@(long)numerator @AT@ 8913 @LENGTH@ 9
+---------INS Operator@@* @TO@ InfixExpression@@((long)numerator) * object.denominator @AT@ 8923 @LENGTH@ 1
+---------INS QualifiedName@@object.denominator @TO@ InfixExpression@@((long)numerator) * object.denominator @AT@ 8926 @LENGTH@ 18
+------------INS SimpleName@@object @TO@ QualifiedName@@object.denominator @AT@ 8926 @LENGTH@ 6
+------------INS SimpleName@@denominator @TO@ QualifiedName@@object.denominator @AT@ 8933 @LENGTH@ 11
+------DEL MethodInvocation@@MethodName:doubleValue:[] @AT@ 8907 @LENGTH@ 13
+, UPD VariableDeclarationStatement@@double dOn=object.doubleValue(); @TO@ long dOn=((long)denominator) * object.numerator; @AT@ 8930 @LENGTH@ 34
+---UPD PrimitiveType@@double @TO@ long @AT@ 8930 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@dOn=object.doubleValue() @TO@ dOn=((long)denominator) * object.numerator @AT@ 8937 @LENGTH@ 26
+------DEL MethodInvocation@@object.doubleValue() @AT@ 8943 @LENGTH@ 20
+---------DEL SimpleName@@Name:object @AT@ 8943 @LENGTH@ 6
+---------DEL SimpleName@@MethodName:doubleValue:[] @AT@ 8950 @LENGTH@ 13
+------INS InfixExpression@@((long)denominator) * object.numerator @TO@ VariableDeclarationFragment@@dOn=object.doubleValue() @AT@ 8965 @LENGTH@ 39
+---------INS ParenthesizedExpression@@((long)denominator) @TO@ InfixExpression@@((long)denominator) * object.numerator @AT@ 8965 @LENGTH@ 20
+------------INS CastExpression@@(long)denominator @TO@ ParenthesizedExpression@@((long)denominator) @AT@ 8966 @LENGTH@ 18
+---------------INS PrimitiveType@@long @TO@ CastExpression@@(long)denominator @AT@ 8967 @LENGTH@ 4
+---------------INS SimpleName@@denominator @TO@ CastExpression@@(long)denominator @AT@ 8973 @LENGTH@ 11
+---------INS Operator@@* @TO@ InfixExpression@@((long)denominator) * object.numerator @AT@ 8985 @LENGTH@ 1
+---------INS QualifiedName@@object.numerator @TO@ InfixExpression@@((long)denominator) * object.numerator @AT@ 8988 @LENGTH@ 16
+------------INS SimpleName@@object @TO@ QualifiedName@@object.numerator @AT@ 8988 @LENGTH@ 6
+------------INS SimpleName@@numerator @TO@ QualifiedName@@object.numerator @AT@ 8995 @LENGTH@ 9
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (UPD, PrimitiveType, OP1, null)
+OP3:   (UPD, VariableDeclarationFragment, OP1, OP4 OP7)
+OP4:      (DEL, MethodInvocation, OP3, OP5 OP6)
+OP5:         (DEL, SimpleName, OP4, null)
+OP6:         (DEL, SimpleName, OP4, null)
+OP7:      (INS, InfixExpression, OP3, OP8 OP12 OP13)
+OP8:         (INS, ParenthesizedExpression, OP7, OP9)
+OP9:            (INS, CastExpression, OP8, OP10 OP11)
+OP10:               (INS, PrimitiveType, OP9, null)
+OP11:               (INS, SimpleName, OP9, null)
+OP12:         (INS, Operator, OP7, null)
+OP13:         (INS, QualifiedName, OP7, OP14 OP15)
+OP14:            (INS, SimpleName, OP13, null)
+OP15:            (INS, SimpleName, OP13, null)
+
+
+

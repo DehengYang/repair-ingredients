@@ -1,0 +1,28 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_35/src/com/google/javascript/jscomp/TypeInference.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_35/src/com/google/javascript/jscomp/TypeInference.java
+--- ../d4j-repo/Closure/Closure_35/src/com/google/javascript/jscomp/TypeInference.java	2021-01-06 03:42:24.185223090 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_35/src/com/google/javascript/jscomp/TypeInference.java	2021-01-06 03:42:26.237292974 -0800
+@@ -1118,21 +1118,8 @@
+ 
+     ObjectType constraintObj =
+         ObjectType.cast(constraint.restrictByNotNullOrUndefined());
+-    if (constraintObj != null && constraintObj.isRecordType()) {
+-      ObjectType objType = ObjectType.cast(type.restrictByNotNullOrUndefined());
+-      if (objType != null) {
+-        for (String prop : constraintObj.getOwnPropertyNames()) {
+-          JSType propType = constraintObj.getPropertyType(prop);
+-          if (!objType.isPropertyTypeDeclared(prop)) {
+-            JSType typeToInfer = propType;
+-            if (!objType.hasProperty(prop)) {
+-              typeToInfer =
+-                  getNativeType(VOID_TYPE).getLeastSupertype(propType);
+-            }
+-            objType.defineInferredProperty(prop, typeToInfer, null);
+-          }
+-        }
+-      }
++    if (constraintObj != null) {
++      type.matchConstraint(constraintObj);
+     }
+   }
+ 

@@ -1,0 +1,13 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_32/src/main/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_32/src/main/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_32/src/main/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet.java	2020-01-05 06:34:07.708952220 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_32/src/main/java/org/apache/commons/math3/geometry/euclidean/twod/PolygonsSet.java	2020-01-05 06:34:11.180923222 -0800
+@@ -133,7 +133,7 @@
+ 
+         if (v.length == 0) {
+             final BSPTree<Euclidean2D> tree = getTree(false);
+-            if ((Boolean) tree.getAttribute()) {
++            if (tree.getCut() == null && (Boolean) tree.getAttribute()) {
+                 // the instance covers the whole space
+                 setSize(Double.POSITIVE_INFINITY);
+                 setBarycenter(Vector2D.NaN);

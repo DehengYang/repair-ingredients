@@ -1,0 +1,24 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_60/src/com/google/javascript/jscomp/NodeUtil.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_60/src/com/google/javascript/jscomp/NodeUtil.java
+--- ../d4j-repo/Closure/Closure_60/src/com/google/javascript/jscomp/NodeUtil.java	2021-01-06 03:44:04.240630615 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_60/src/com/google/javascript/jscomp/NodeUtil.java	2021-01-06 03:44:06.168696279 -0800
+@@ -105,6 +105,8 @@
+         // ignoring side-effects
+         return TernaryValue.TRUE;
+ 
++      case Token.VOID:
++        return TernaryValue.FALSE;
+ 
+       default:
+         return getPureBooleanValue(n);
+@@ -133,7 +135,10 @@
+         return TernaryValue.FALSE;
+ 
+       case Token.VOID:
++        if (!mayHaveSideEffects(n.getFirstChild())) {
+           return TernaryValue.FALSE;
++        }
++        break;
+ 
+       case Token.NAME:
+         String name = n.getString();

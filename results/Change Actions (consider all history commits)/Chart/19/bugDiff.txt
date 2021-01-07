@@ -1,0 +1,24 @@
+
+diff -Naur ../d4j-repo/Chart/Chart_19/source/org/jfree/chart/plot/CategoryPlot.java ../d4j-repo/fixed_bugs_dir/Chart/Chart_19/source/org/jfree/chart/plot/CategoryPlot.java
+--- ../d4j-repo/Chart/Chart_19/source/org/jfree/chart/plot/CategoryPlot.java	2021-01-03 07:21:00.178738013 -0800
++++ ../d4j-repo/fixed_bugs_dir/Chart/Chart_19/source/org/jfree/chart/plot/CategoryPlot.java	2021-01-03 07:21:02.078807984 -0800
+@@ -695,6 +695,9 @@
+      * @since 1.0.3
+      */
+     public int getDomainAxisIndex(CategoryAxis axis) {
++        if (axis == null) {
++            throw new IllegalArgumentException("Null 'axis' argument.");
++        }
+         return this.domainAxes.indexOf(axis);
+     }
+     
+@@ -970,6 +973,9 @@
+      * @since 1.0.7
+      */
+     public int getRangeAxisIndex(ValueAxis axis) {
++        if (axis == null) {
++            throw new IllegalArgumentException("Null 'axis' argument.");
++        }
+         int result = this.rangeAxes.indexOf(axis);
+         if (result < 0) { // try the parent plot
+             Plot parent = getParent();

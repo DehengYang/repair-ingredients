@@ -1,0 +1,17 @@
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (INS, ConditionalExpression, OP1, OP3 OP10 OP11)
+OP3:      (INS, InfixExpression, OP2, OP4 OP8 OP9)
+OP4:         (INS, InfixExpression, OP3, OP5 OP6 OP7)
+OP5:            (INS, SimpleName, OP4, null)
+OP6:            (INS, Operator, OP4, null)
+OP7:            (INS, NullLiteral, OP4, null)
+OP8:         (INS, Operator, OP3, null)
+OP9:         (INS, SimpleName, OP3, null)
+OP10:      (MOV, MethodInvocation, OP2, null)
+OP11:      (INS, MethodInvocation, OP2, OP12)
+OP12:         (INS, SimpleName, OP11, OP13)
+OP13:            (INS, MethodInvocation, OP12, OP14)
+OP14:               (INS, SimpleName, OP13, OP15)
+OP15:                  (INS, SimpleName, OP14, null)
+
+

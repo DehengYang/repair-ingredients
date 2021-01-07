@@ -1,0 +1,93 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @TO@ ForStatement@@[int i=getNumObjectiveFunctions()];i < getHeight(); [i++] @AT@ 11119 @LENGTH@ 216
+---MOV IfStatement@@PrefixExpression:!MathUtils.equals(getEntry(i,col),0.0,epsilon) @TO@ IfStatement@@InfixExpression:MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @AT@ 11119 @LENGTH@ 202
+------MOV ReturnStatement@@NullLiteral:null @TO@ IfStatement@@PrefixExpression:!MathUtils.equals(getEntry(i,col),0.0,epsilon) @AT@ 11277 @LENGTH@ 12
+---INS InfixExpression@@MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @TO@ IfStatement@@InfixExpression:MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @AT@ 11123 @LENGTH@ 65
+------INS MethodInvocation@@MathUtils.equals(getEntry(i,col),1.0,epsilon) @TO@ InfixExpression@@MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @AT@ 11123 @LENGTH@ 48
+---------INS SimpleName@@Name:MathUtils @TO@ MethodInvocation@@MathUtils.equals(getEntry(i,col),1.0,epsilon) @AT@ 11123 @LENGTH@ 9
+---------INS SimpleName@@MethodName:equals:[getEntry(i,col), 1.0, epsilon] @TO@ MethodInvocation@@MathUtils.equals(getEntry(i,col),1.0,epsilon) @AT@ 11133 @LENGTH@ 38
+------------INS MethodInvocation@@getEntry(i,col) @TO@ SimpleName@@MethodName:equals:[getEntry(i,col), 1.0, epsilon] @AT@ 11140 @LENGTH@ 16
+---------------INS SimpleName@@MethodName:getEntry:[i, col] @TO@ MethodInvocation@@getEntry(i,col) @AT@ 11140 @LENGTH@ 16
+------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:getEntry:[i, col] @AT@ 11149 @LENGTH@ 1
+------------------INS SimpleName@@col @TO@ SimpleName@@MethodName:getEntry:[i, col] @AT@ 11152 @LENGTH@ 3
+------------INS NumberLiteral@@1.0 @TO@ SimpleName@@MethodName:equals:[getEntry(i,col), 1.0, epsilon] @AT@ 11158 @LENGTH@ 3
+------------INS SimpleName@@epsilon @TO@ SimpleName@@MethodName:equals:[getEntry(i,col), 1.0, epsilon] @AT@ 11163 @LENGTH@ 7
+------INS Operator@@&& @TO@ InfixExpression@@MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @AT@ 11171 @LENGTH@ 2
+------INS ParenthesizedExpression@@(row == null) @TO@ InfixExpression@@MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @AT@ 11175 @LENGTH@ 13
+---------INS InfixExpression@@row == null @TO@ ParenthesizedExpression@@(row == null) @AT@ 11176 @LENGTH@ 11
+------------INS SimpleName@@row @TO@ InfixExpression@@row == null @AT@ 11176 @LENGTH@ 3
+------------INS Operator@@== @TO@ InfixExpression@@row == null @AT@ 11179 @LENGTH@ 2
+------------INS NullLiteral@@null @TO@ InfixExpression@@row == null @AT@ 11183 @LENGTH@ 4
+---MOV ExpressionStatement@@Assignment:row=i @TO@ IfStatement@@InfixExpression:MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @AT@ 11227 @LENGTH@ 8
+, DEL IfStatement@@InfixExpression:row == null @AT@ 11192 @LENGTH@ 115
+---DEL InfixExpression@@row == null @AT@ 11196 @LENGTH@ 11
+------DEL SimpleName@@row @AT@ 11196 @LENGTH@ 3
+------DEL Operator@@== @AT@ 11199 @LENGTH@ 2
+------DEL NullLiteral@@null @AT@ 11203 @LENGTH@ 4
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP4 OP20)
+OP2:   (MOV, IfStatement, OP1, OP3)
+OP3:      (MOV, ReturnStatement, OP2, null)
+OP4:   (INS, InfixExpression, OP1, OP5 OP14 OP15)
+OP5:      (INS, MethodInvocation, OP4, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, OP8 OP12 OP13)
+OP8:            (INS, MethodInvocation, OP7, OP9)
+OP9:               (INS, SimpleName, OP8, OP10 OP11)
+OP10:                  (INS, SimpleName, OP9, null)
+OP11:                  (INS, SimpleName, OP9, null)
+OP12:            (INS, NumberLiteral, OP7, null)
+OP13:            (INS, SimpleName, OP7, null)
+OP14:      (INS, Operator, OP4, null)
+OP15:      (INS, ParenthesizedExpression, OP4, OP16)
+OP16:         (INS, InfixExpression, OP15, OP17 OP18 OP19)
+OP17:            (INS, SimpleName, OP16, null)
+OP18:            (INS, Operator, OP16, null)
+OP19:            (INS, NullLiteral, OP16, null)
+OP20:   (MOV, ExpressionStatement, OP1, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @TO@ ForStatement@@[int i=getNumObjectiveFunctions()];i < getHeight(); [i++] @AT@ 11119 @LENGTH@ 216
+---MOV IfStatement@@PrefixExpression:!MathUtils.equals(getEntry(i,col),0.0,epsilon) @TO@ IfStatement@@InfixExpression:MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @AT@ 11119 @LENGTH@ 202
+------MOV ReturnStatement@@NullLiteral:null @TO@ IfStatement@@PrefixExpression:!MathUtils.equals(getEntry(i,col),0.0,epsilon) @AT@ 11277 @LENGTH@ 12
+---INS InfixExpression@@MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @TO@ IfStatement@@InfixExpression:MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @AT@ 11123 @LENGTH@ 65
+------INS MethodInvocation@@MathUtils.equals(getEntry(i,col),1.0,epsilon) @TO@ InfixExpression@@MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @AT@ 11123 @LENGTH@ 48
+---------INS SimpleName@@Name:MathUtils @TO@ MethodInvocation@@MathUtils.equals(getEntry(i,col),1.0,epsilon) @AT@ 11123 @LENGTH@ 9
+---------INS SimpleName@@MethodName:equals:[getEntry(i,col), 1.0, epsilon] @TO@ MethodInvocation@@MathUtils.equals(getEntry(i,col),1.0,epsilon) @AT@ 11133 @LENGTH@ 38
+------------INS MethodInvocation@@getEntry(i,col) @TO@ SimpleName@@MethodName:equals:[getEntry(i,col), 1.0, epsilon] @AT@ 11140 @LENGTH@ 16
+---------------INS SimpleName@@MethodName:getEntry:[i, col] @TO@ MethodInvocation@@getEntry(i,col) @AT@ 11140 @LENGTH@ 16
+------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:getEntry:[i, col] @AT@ 11149 @LENGTH@ 1
+------------------INS SimpleName@@col @TO@ SimpleName@@MethodName:getEntry:[i, col] @AT@ 11152 @LENGTH@ 3
+------------INS NumberLiteral@@1.0 @TO@ SimpleName@@MethodName:equals:[getEntry(i,col), 1.0, epsilon] @AT@ 11158 @LENGTH@ 3
+------------INS SimpleName@@epsilon @TO@ SimpleName@@MethodName:equals:[getEntry(i,col), 1.0, epsilon] @AT@ 11163 @LENGTH@ 7
+------INS Operator@@&& @TO@ InfixExpression@@MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @AT@ 11171 @LENGTH@ 2
+------INS ParenthesizedExpression@@(row == null) @TO@ InfixExpression@@MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @AT@ 11175 @LENGTH@ 13
+---------INS InfixExpression@@row == null @TO@ ParenthesizedExpression@@(row == null) @AT@ 11176 @LENGTH@ 11
+------------INS SimpleName@@row @TO@ InfixExpression@@row == null @AT@ 11176 @LENGTH@ 3
+------------INS Operator@@== @TO@ InfixExpression@@row == null @AT@ 11179 @LENGTH@ 2
+------------INS NullLiteral@@null @TO@ InfixExpression@@row == null @AT@ 11183 @LENGTH@ 4
+---MOV ExpressionStatement@@Assignment:row=i @TO@ IfStatement@@InfixExpression:MathUtils.equals(getEntry(i,col),1.0,epsilon) && (row == null) @AT@ 11227 @LENGTH@ 8
+, DEL IfStatement@@InfixExpression:row == null @AT@ 11192 @LENGTH@ 115
+---DEL InfixExpression@@row == null @AT@ 11196 @LENGTH@ 11
+------DEL SimpleName@@row @AT@ 11196 @LENGTH@ 3
+------DEL Operator@@== @AT@ 11199 @LENGTH@ 2
+------DEL NullLiteral@@null @AT@ 11203 @LENGTH@ 4
+]
+
+CII:
+OP1:(DEL, IfStatement, null, OP2)
+OP2:   (DEL, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, NullLiteral, OP2, null)
+
+
+

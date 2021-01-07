@@ -1,0 +1,12 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_133/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_133/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java
+--- ../d4j-repo/Closure/Closure_133/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java	2021-01-06 03:50:07.216994009 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_133/src/com/google/javascript/jscomp/parsing/JsDocInfoParser.java	2021-01-06 03:50:10.157094163 -0800
+@@ -2398,6 +2398,7 @@
+    */
+   private String getRemainingJSDocLine() {
+     String result = stream.getRemainingJSDocLine();
++    unreadToken = NO_UNREAD_TOKEN;
+     return result;
+   }
+ 

@@ -1,0 +1,9 @@
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, Assignment, OP1, OP3)
+OP3:      (UPD, MethodInvocation, OP2, OP4)
+OP4:         (UPD, SimpleName, OP3, OP5)
+OP5:            (UPD, MethodInvocation, OP4, OP6)
+OP6:               (UPD, SimpleName, OP5, OP7)
+OP7:                  (UPD, SimpleName, OP6, null)
+
+

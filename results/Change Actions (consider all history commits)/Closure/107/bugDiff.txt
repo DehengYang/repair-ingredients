@@ -1,0 +1,12 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_107/src/com/google/javascript/jscomp/CommandLineRunner.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_107/src/com/google/javascript/jscomp/CommandLineRunner.java
+--- ../d4j-repo/Closure/Closure_107/src/com/google/javascript/jscomp/CommandLineRunner.java	2021-01-06 03:47:31.147677782 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_107/src/com/google/javascript/jscomp/CommandLineRunner.java	2021-01-06 03:47:34.179781061 -0800
+@@ -859,6 +859,7 @@
+       // so we might as well inline it. But shut off the i18n warnings,
+       // because the user didn't really ask for i18n.
+       options.messageBundle = new EmptyMessageBundle();
++      options.setWarningLevel(JsMessageVisitor.MSG_CONVENTIONS, CheckLevel.OFF);
+     }
+ 
+     return options;

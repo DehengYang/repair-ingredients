@@ -1,0 +1,903 @@
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(MOV, ExpressionStatement, null, null)
+
+
+
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4 OP5)
+OP4:         (UPD, StringLiteral, OP3, null)
+OP5:         (UPD, StringLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(MOV, ExpressionStatement, null, null)
+
+
+
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4 OP5)
+OP4:         (UPD, StringLiteral, OP3, null)
+OP5:         (UPD, StringLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(MOV, ExpressionStatement, null, null)
+
+
+
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4 OP5)
+OP4:         (UPD, StringLiteral, OP3, null)
+OP5:         (UPD, StringLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(MOV, ExpressionStatement, null, null)
+
+
+
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (UPD, StringLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, OP3 OP4)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, SimpleName, OP2, OP5 OP6)
+OP5:         (INS, StringLiteral, OP4, null)
+OP6:         (INS, StringLiteral, OP4, null)
+
+
+
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(MOV, ExpressionStatement, null, null)
+
+
+
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (UPD, StringLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(MOV, ExpressionStatement, null, null)
+
+
+
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4 OP5)
+OP4:         (UPD, StringLiteral, OP3, null)
+OP5:         (UPD, StringLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (UPD, StringLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[MOV ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21741 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("IET","America/Indianapolis") @TO@ MethodInvocation:map.put("WET","WET") @AT@ 21741 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("IET","America/Indianapolis") @TO@ map.put("WET","WET") @AT@ 21741 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["IET", "America/Indianapolis"] @TO@ MethodName:put:["WET", "WET"] @AT@ 21745 @LENGTH@ 34
+---------UPD StringLiteral@@"IET" @TO@ "WET" @AT@ 21749 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Indianapolis" @TO@ "WET" @AT@ 21756 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21892 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:map.put("AGT","America/Buenos_Aires") @TO@ MethodInvocation:map.put("CET","CET") @AT@ 21892 @LENGTH@ 39
+---UPD MethodInvocation@@map.put("AGT","America/Buenos_Aires") @TO@ map.put("CET","CET") @AT@ 21892 @LENGTH@ 38
+------UPD SimpleName@@MethodName:put:["AGT", "America/Buenos_Aires"] @TO@ MethodName:put:["CET", "CET"] @AT@ 21896 @LENGTH@ 34
+---------UPD StringLiteral@@"AGT" @TO@ "CET" @AT@ 21900 @LENGTH@ 5
+---------UPD StringLiteral@@"America/Buenos_Aires" @TO@ "CET" @AT@ 21907 @LENGTH@ 22
+, MOV ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ IfStatement@@InfixExpression:map == null @AT@ 21993 @LENGTH@ 32
+, UPD ExpressionStatement@@MethodInvocation:map.put("WET","Europe/London") @TO@ MethodInvocation:map.put("MET","CET") @AT@ 21993 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("WET","Europe/London") @TO@ map.put("MET","CET") @AT@ 21993 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["WET", "Europe/London"] @TO@ MethodName:put:["MET", "CET"] @AT@ 21997 @LENGTH@ 27
+---------UPD StringLiteral@@"WET" @TO@ "MET" @AT@ 22001 @LENGTH@ 5
+---------UPD StringLiteral@@"Europe/London" @TO@ "CET" @AT@ 22008 @LENGTH@ 15
+, MOV ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22038 @LENGTH@ 31
+, UPD ExpressionStatement@@MethodInvocation:map.put("ECT","Europe/Paris") @TO@ MethodInvocation:map.put("ECT","CET") @AT@ 22038 @LENGTH@ 31
+---UPD MethodInvocation@@map.put("ECT","Europe/Paris") @TO@ map.put("ECT","CET") @AT@ 22038 @LENGTH@ 30
+------UPD SimpleName@@MethodName:put:["ECT", "Europe/Paris"] @TO@ MethodName:put:["ECT", "CET"] @AT@ 22042 @LENGTH@ 26
+---------UPD StringLiteral@@"Europe/Paris" @TO@ "CET" @AT@ 22053 @LENGTH@ 14
+, INS ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22075 @LENGTH@ 49
+---INS MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @TO@ ExpressionStatement@@MethodInvocation:map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 48
+------INS SimpleName@@Name:map @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22075 @LENGTH@ 3
+------INS SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @TO@ MethodInvocation@@map.put("AGT","America/Argentina/Buenos_Aires") @AT@ 22079 @LENGTH@ 44
+---------INS StringLiteral@@"AGT" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22083 @LENGTH@ 5
+---------INS StringLiteral@@"America/Argentina/Buenos_Aires" @TO@ SimpleName@@MethodName:put:["AGT", "America/Argentina/Buenos_Aires"] @AT@ 22090 @LENGTH@ 32
+, MOV ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22171 @LENGTH@ 35
+, UPD ExpressionStatement@@MethodInvocation:map.put("EET","Europe/Bucharest") @TO@ MethodInvocation:map.put("EET","EET") @AT@ 22171 @LENGTH@ 35
+---UPD MethodInvocation@@map.put("EET","Europe/Bucharest") @TO@ map.put("EET","EET") @AT@ 22171 @LENGTH@ 34
+------UPD SimpleName@@MethodName:put:["EET", "Europe/Bucharest"] @TO@ MethodName:put:["EET", "EET"] @AT@ 22175 @LENGTH@ 30
+---------UPD StringLiteral@@"Europe/Bucharest" @TO@ "EET" @AT@ 22186 @LENGTH@ 18
+, MOV ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ IfStatement@@InfixExpression:map == null @AT@ 22269 @LENGTH@ 30
+, UPD ExpressionStatement@@MethodInvocation:map.put("MET","Asia/Tehran") @TO@ MethodInvocation:map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("MET","Asia/Tehran") @TO@ map.put("IET","America/Indiana/Indianapolis") @AT@ 22269 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["MET", "Asia/Tehran"] @TO@ MethodName:put:["IET", "America/Indiana/Indianapolis"] @AT@ 22273 @LENGTH@ 25
+---------UPD StringLiteral@@"MET" @TO@ "IET" @AT@ 22277 @LENGTH@ 5
+---------UPD StringLiteral@@"Asia/Tehran" @TO@ "America/Indiana/Indianapolis" @AT@ 22284 @LENGTH@ 13
+, UPD ExpressionStatement@@MethodInvocation:map.put("IST","Asia/Calcutta") @TO@ MethodInvocation:map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 32
+---UPD MethodInvocation@@map.put("IST","Asia/Calcutta") @TO@ map.put("IST","Asia/Kolkata") @AT@ 22400 @LENGTH@ 31
+------UPD SimpleName@@MethodName:put:["IST", "Asia/Calcutta"] @TO@ MethodName:put:["IST", "Asia/Kolkata"] @AT@ 22404 @LENGTH@ 27
+---------UPD StringLiteral@@"Asia/Calcutta" @TO@ "Asia/Kolkata" @AT@ 22415 @LENGTH@ 15
+, UPD ExpressionStatement@@MethodInvocation:map.put("VST","Asia/Saigon") @TO@ MethodInvocation:map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 30
+---UPD MethodInvocation@@map.put("VST","Asia/Saigon") @TO@ map.put("VST","Asia/Ho_Chi_Minh") @AT@ 22487 @LENGTH@ 29
+------UPD SimpleName@@MethodName:put:["VST", "Asia/Saigon"] @TO@ MethodName:put:["VST", "Asia/Ho_Chi_Minh"] @AT@ 22491 @LENGTH@ 25
+---------UPD StringLiteral@@"Asia/Saigon" @TO@ "Asia/Ho_Chi_Minh" @AT@ 22502 @LENGTH@ 13
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (UPD, StringLiteral, OP3, null)
+
+
+

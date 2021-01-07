@@ -1,0 +1,37 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:lower > str.length() @TO@ MethodDeclaration@@public, static, @@String, MethodName:abbreviate, @@Argus:String+str+int+lower+int+upper+String+appendToEnd+ @AT@ 24348 @LENGTH@ 75
+---INS InfixExpression@@lower > str.length() @TO@ IfStatement@@InfixExpression:lower > str.length() @AT@ 24352 @LENGTH@ 20
+------INS SimpleName@@lower @TO@ InfixExpression@@lower > str.length() @AT@ 24352 @LENGTH@ 5
+------INS Operator@@> @TO@ InfixExpression@@lower > str.length() @AT@ 24357 @LENGTH@ 1
+------INS MethodInvocation@@str.length() @TO@ InfixExpression@@lower > str.length() @AT@ 24360 @LENGTH@ 12
+---------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.length() @AT@ 24360 @LENGTH@ 3
+---------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@str.length() @AT@ 24364 @LENGTH@ 8
+---INS ExpressionStatement@@Assignment:lower=str.length() @TO@ IfStatement@@InfixExpression:lower > str.length() @AT@ 24388 @LENGTH@ 21
+------INS Assignment@@lower=str.length() @TO@ ExpressionStatement@@Assignment:lower=str.length() @AT@ 24388 @LENGTH@ 20
+---------INS SimpleName@@lower @TO@ Assignment@@lower=str.length() @AT@ 24388 @LENGTH@ 5
+---------INS Operator@@= @TO@ Assignment@@lower=str.length() @AT@ 24393 @LENGTH@ 1
+---------INS MethodInvocation@@str.length() @TO@ Assignment@@lower=str.length() @AT@ 24396 @LENGTH@ 12
+------------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.length() @AT@ 24396 @LENGTH@ 3
+------------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@str.length() @AT@ 24400 @LENGTH@ 8
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP8)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, MethodInvocation, OP2, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, null)
+OP8:   (INS, ExpressionStatement, OP1, OP9)
+OP9:      (INS, Assignment, OP8, OP10 OP11 OP12)
+OP10:         (INS, SimpleName, OP9, null)
+OP11:         (INS, Operator, OP9, null)
+OP12:         (INS, MethodInvocation, OP9, OP13 OP14)
+OP13:            (INS, SimpleName, OP12, null)
+OP14:            (INS, SimpleName, OP12, null)
+
+
+

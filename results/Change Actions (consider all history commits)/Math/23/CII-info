@@ -1,0 +1,146 @@
+
+
+hASList: 
+[INS VariableDeclarationStatement@@UnivariatePointValuePair best=current; @TO@ MethodDeclaration@@protected, @@UnivariatePointValuePair, MethodName:doOptimize, @@Argus:null @AT@ 5509 @LENGTH@ 40
+---INS SimpleType@@UnivariatePointValuePair @TO@ VariableDeclarationStatement@@UnivariatePointValuePair best=current; @AT@ 5509 @LENGTH@ 24
+---INS VariableDeclarationFragment@@best=current @TO@ VariableDeclarationStatement@@UnivariatePointValuePair best=current; @AT@ 5534 @LENGTH@ 14
+------INS SimpleName@@best @TO@ VariableDeclarationFragment@@best=current @AT@ 5534 @LENGTH@ 4
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@best=current @AT@ 5541 @LENGTH@ 7
+, INS ExpressionStatement@@Assignment:best=best(best,best(current,previous,isMinim),isMinim) @TO@ IfStatement@@PrefixExpression:!stop @AT@ 8376 @LENGTH@ 183
+---INS Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @TO@ ExpressionStatement@@Assignment:best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8376 @LENGTH@ 182
+------INS SimpleName@@best @TO@ Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8376 @LENGTH@ 4
+------INS Operator@@= @TO@ Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8380 @LENGTH@ 1
+------INS MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @TO@ Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8383 @LENGTH@ 175
+---------INS SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @TO@ MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @AT@ 8383 @LENGTH@ 175
+------------INS SimpleName@@best @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 8388 @LENGTH@ 4
+------------MOV MethodInvocation@@best(current,previous,isMinim) @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 8452 @LENGTH@ 32
+------------INS SimpleName@@isMinim @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 8550 @LENGTH@ 7
+, UPD ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @TO@ SimpleName:best @AT@ 8445 @LENGTH@ 40
+---INS SimpleName@@best @TO@ ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @AT@ 8701 @LENGTH@ 4
+, UPD ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @TO@ MethodInvocation:best(best,best(current,previous,isMinim),isMinim) @AT@ 9644 @LENGTH@ 129
+---INS MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @TO@ ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @AT@ 9872 @LENGTH@ 175
+------INS SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @TO@ MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @AT@ 9872 @LENGTH@ 175
+---------MOV MethodInvocation@@best(current,previous,isMinim) @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 9679 @LENGTH@ 93
+---------INS SimpleName@@best @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 9877 @LENGTH@ 4
+---------INS SimpleName@@isMinim @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 10039 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, SimpleType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, SimpleName, OP3, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@UnivariatePointValuePair best=current; @TO@ MethodDeclaration@@protected, @@UnivariatePointValuePair, MethodName:doOptimize, @@Argus:null @AT@ 5509 @LENGTH@ 40
+---INS SimpleType@@UnivariatePointValuePair @TO@ VariableDeclarationStatement@@UnivariatePointValuePair best=current; @AT@ 5509 @LENGTH@ 24
+---INS VariableDeclarationFragment@@best=current @TO@ VariableDeclarationStatement@@UnivariatePointValuePair best=current; @AT@ 5534 @LENGTH@ 14
+------INS SimpleName@@best @TO@ VariableDeclarationFragment@@best=current @AT@ 5534 @LENGTH@ 4
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@best=current @AT@ 5541 @LENGTH@ 7
+, INS ExpressionStatement@@Assignment:best=best(best,best(current,previous,isMinim),isMinim) @TO@ IfStatement@@PrefixExpression:!stop @AT@ 8376 @LENGTH@ 183
+---INS Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @TO@ ExpressionStatement@@Assignment:best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8376 @LENGTH@ 182
+------INS SimpleName@@best @TO@ Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8376 @LENGTH@ 4
+------INS Operator@@= @TO@ Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8380 @LENGTH@ 1
+------INS MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @TO@ Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8383 @LENGTH@ 175
+---------INS SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @TO@ MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @AT@ 8383 @LENGTH@ 175
+------------INS SimpleName@@best @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 8388 @LENGTH@ 4
+------------MOV MethodInvocation@@best(current,previous,isMinim) @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 8452 @LENGTH@ 32
+------------INS SimpleName@@isMinim @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 8550 @LENGTH@ 7
+, UPD ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @TO@ SimpleName:best @AT@ 8445 @LENGTH@ 40
+---INS SimpleName@@best @TO@ ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @AT@ 8701 @LENGTH@ 4
+, UPD ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @TO@ MethodInvocation:best(best,best(current,previous,isMinim),isMinim) @AT@ 9644 @LENGTH@ 129
+---INS MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @TO@ ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @AT@ 9872 @LENGTH@ 175
+------INS SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @TO@ MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @AT@ 9872 @LENGTH@ 175
+---------MOV MethodInvocation@@best(current,previous,isMinim) @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 9679 @LENGTH@ 93
+---------INS SimpleName@@best @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 9877 @LENGTH@ 4
+---------INS SimpleName@@isMinim @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 10039 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, MethodInvocation, OP2, OP6)
+OP6:         (INS, SimpleName, OP5, OP7 OP8 OP9)
+OP7:            (INS, SimpleName, OP6, null)
+OP8:            (MOV, MethodInvocation, OP6, null)
+OP9:            (INS, SimpleName, OP6, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@UnivariatePointValuePair best=current; @TO@ MethodDeclaration@@protected, @@UnivariatePointValuePair, MethodName:doOptimize, @@Argus:null @AT@ 5509 @LENGTH@ 40
+---INS SimpleType@@UnivariatePointValuePair @TO@ VariableDeclarationStatement@@UnivariatePointValuePair best=current; @AT@ 5509 @LENGTH@ 24
+---INS VariableDeclarationFragment@@best=current @TO@ VariableDeclarationStatement@@UnivariatePointValuePair best=current; @AT@ 5534 @LENGTH@ 14
+------INS SimpleName@@best @TO@ VariableDeclarationFragment@@best=current @AT@ 5534 @LENGTH@ 4
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@best=current @AT@ 5541 @LENGTH@ 7
+, INS ExpressionStatement@@Assignment:best=best(best,best(current,previous,isMinim),isMinim) @TO@ IfStatement@@PrefixExpression:!stop @AT@ 8376 @LENGTH@ 183
+---INS Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @TO@ ExpressionStatement@@Assignment:best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8376 @LENGTH@ 182
+------INS SimpleName@@best @TO@ Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8376 @LENGTH@ 4
+------INS Operator@@= @TO@ Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8380 @LENGTH@ 1
+------INS MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @TO@ Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8383 @LENGTH@ 175
+---------INS SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @TO@ MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @AT@ 8383 @LENGTH@ 175
+------------INS SimpleName@@best @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 8388 @LENGTH@ 4
+------------MOV MethodInvocation@@best(current,previous,isMinim) @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 8452 @LENGTH@ 32
+------------INS SimpleName@@isMinim @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 8550 @LENGTH@ 7
+, UPD ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @TO@ SimpleName:best @AT@ 8445 @LENGTH@ 40
+---INS SimpleName@@best @TO@ ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @AT@ 8701 @LENGTH@ 4
+, UPD ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @TO@ MethodInvocation:best(best,best(current,previous,isMinim),isMinim) @AT@ 9644 @LENGTH@ 129
+---INS MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @TO@ ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @AT@ 9872 @LENGTH@ 175
+------INS SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @TO@ MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @AT@ 9872 @LENGTH@ 175
+---------MOV MethodInvocation@@best(current,previous,isMinim) @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 9679 @LENGTH@ 93
+---------INS SimpleName@@best @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 9877 @LENGTH@ 4
+---------INS SimpleName@@isMinim @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 10039 @LENGTH@ 7
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (INS, SimpleName, OP1, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@UnivariatePointValuePair best=current; @TO@ MethodDeclaration@@protected, @@UnivariatePointValuePair, MethodName:doOptimize, @@Argus:null @AT@ 5509 @LENGTH@ 40
+---INS SimpleType@@UnivariatePointValuePair @TO@ VariableDeclarationStatement@@UnivariatePointValuePair best=current; @AT@ 5509 @LENGTH@ 24
+---INS VariableDeclarationFragment@@best=current @TO@ VariableDeclarationStatement@@UnivariatePointValuePair best=current; @AT@ 5534 @LENGTH@ 14
+------INS SimpleName@@best @TO@ VariableDeclarationFragment@@best=current @AT@ 5534 @LENGTH@ 4
+------INS SimpleName@@current @TO@ VariableDeclarationFragment@@best=current @AT@ 5541 @LENGTH@ 7
+, INS ExpressionStatement@@Assignment:best=best(best,best(current,previous,isMinim),isMinim) @TO@ IfStatement@@PrefixExpression:!stop @AT@ 8376 @LENGTH@ 183
+---INS Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @TO@ ExpressionStatement@@Assignment:best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8376 @LENGTH@ 182
+------INS SimpleName@@best @TO@ Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8376 @LENGTH@ 4
+------INS Operator@@= @TO@ Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8380 @LENGTH@ 1
+------INS MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @TO@ Assignment@@best=best(best,best(current,previous,isMinim),isMinim) @AT@ 8383 @LENGTH@ 175
+---------INS SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @TO@ MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @AT@ 8383 @LENGTH@ 175
+------------INS SimpleName@@best @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 8388 @LENGTH@ 4
+------------MOV MethodInvocation@@best(current,previous,isMinim) @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 8452 @LENGTH@ 32
+------------INS SimpleName@@isMinim @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 8550 @LENGTH@ 7
+, UPD ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @TO@ SimpleName:best @AT@ 8445 @LENGTH@ 40
+---INS SimpleName@@best @TO@ ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @AT@ 8701 @LENGTH@ 4
+, UPD ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @TO@ MethodInvocation:best(best,best(current,previous,isMinim),isMinim) @AT@ 9644 @LENGTH@ 129
+---INS MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @TO@ ReturnStatement@@MethodInvocation:best(current,previous,isMinim) @AT@ 9872 @LENGTH@ 175
+------INS SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @TO@ MethodInvocation@@best(best,best(current,previous,isMinim),isMinim) @AT@ 9872 @LENGTH@ 175
+---------MOV MethodInvocation@@best(current,previous,isMinim) @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 9679 @LENGTH@ 93
+---------INS SimpleName@@best @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 9877 @LENGTH@ 4
+---------INS SimpleName@@isMinim @TO@ SimpleName@@MethodName:best:[best, best(current,previous,isMinim), isMinim] @AT@ 10039 @LENGTH@ 7
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, OP3)
+OP3:      (INS, SimpleName, OP2, OP4 OP5 OP6)
+OP4:         (MOV, MethodInvocation, OP3, null)
+OP5:         (INS, SimpleName, OP3, null)
+OP6:         (INS, SimpleName, OP3, null)
+
+
+

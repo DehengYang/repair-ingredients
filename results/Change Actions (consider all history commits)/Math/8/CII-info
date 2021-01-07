@@ -1,0 +1,53 @@
+
+
+hASList: 
+[UPD MethodDeclaration@@public, @@T[], MethodName:sample, @@Argus:int+sampleSize+NotStrictlyPositiveException,  @TO@ public, @@Object[], MethodName:sample, @@Argus:int+sampleSize+NotStrictlyPositiveException,  @AT@ 6443 @LENGTH@ 748
+---UPD ArrayType@@T[] @TO@ Object[] @AT@ 6740 @LENGTH@ 3
+------UPD SimpleType@@T @TO@ Object @AT@ 6740 @LENGTH@ 1
+---UPD VariableDeclarationStatement@@final T[] out=(T[])java.lang.reflect.Array.newInstance(singletons.get(0).getClass(),sampleSize); @TO@ final Object[] out=new Object[sampleSize]; @AT@ 6975 @LENGTH@ 99
+------UPD ArrayType@@T[] @TO@ Object[] @AT@ 6981 @LENGTH@ 3
+---------UPD SimpleType@@T @TO@ Object @AT@ 6981 @LENGTH@ 1
+------UPD VariableDeclarationFragment@@out=(T[])java.lang.reflect.Array.newInstance(singletons.get(0).getClass(),sampleSize) @TO@ out=new Object[sampleSize] @AT@ 6984 @LENGTH@ 89
+---------DEL CastExpression@@(T[])java.lang.reflect.Array.newInstance(singletons.get(0).getClass(),sampleSize) @AT@ 6990 @LENGTH@ 83
+------------DEL ArrayType@@T[] @AT@ 6991 @LENGTH@ 3
+------------DEL MethodInvocation@@java.lang.reflect.Array.newInstance(singletons.get(0).getClass(),sampleSize) @AT@ 6996 @LENGTH@ 77
+---------------DEL QualifiedName@@Name:java.lang.reflect.Array @AT@ 6996 @LENGTH@ 23
+---------------DEL SimpleName@@MethodName:newInstance:[singletons.get(0).getClass(), sampleSize] @AT@ 7020 @LENGTH@ 53
+------------------DEL MethodInvocation@@singletons.get(0).getClass() @AT@ 7032 @LENGTH@ 28
+---------------------DEL SimpleName@@Name:singletons @AT@ 7032 @LENGTH@ 10
+---------------------DEL MethodInvocation@@MethodName:get:[0] @AT@ 7032 @LENGTH@ 17
+------------------------DEL NumberLiteral@@0 @AT@ 7047 @LENGTH@ 1
+---------------------DEL SimpleName@@MethodName:getClass:[] @AT@ 7050 @LENGTH@ 10
+------------------DEL SimpleName@@sampleSize @AT@ 7062 @LENGTH@ 10
+---------INS ArrayCreation@@new Object[sampleSize] @TO@ VariableDeclarationFragment@@out=(T[])java.lang.reflect.Array.newInstance(singletons.get(0).getClass(),sampleSize) @AT@ 7001 @LENGTH@ 22
+------------INS ArrayType@@Object[] @TO@ ArrayCreation@@new Object[sampleSize] @AT@ 7005 @LENGTH@ 18
+---------------MOV SimpleType@@T @TO@ ArrayType@@Object[] @AT@ 6991 @LENGTH@ 1
+------------INS SimpleName@@sampleSize @TO@ ArrayCreation@@new Object[sampleSize] @AT@ 7012 @LENGTH@ 10
+]
+
+CII:
+OP1:(UPD, MethodDeclaration, null, OP2 OP4)
+OP2:   (UPD, ArrayType, OP1, OP3)
+OP3:      (UPD, SimpleType, OP2, null)
+OP4:   (UPD, VariableDeclarationStatement, OP1, OP5 OP7)
+OP5:      (UPD, ArrayType, OP4, OP6)
+OP6:         (UPD, SimpleType, OP5, null)
+OP7:      (UPD, VariableDeclarationFragment, OP4, OP8 OP19)
+OP8:         (DEL, CastExpression, OP7, OP9 OP10)
+OP9:            (DEL, ArrayType, OP8, null)
+OP10:            (DEL, MethodInvocation, OP8, OP11 OP12)
+OP11:               (DEL, QualifiedName, OP10, null)
+OP12:               (DEL, SimpleName, OP10, OP13 OP18)
+OP13:                  (DEL, MethodInvocation, OP12, OP14 OP15 OP17)
+OP14:                     (DEL, SimpleName, OP13, null)
+OP15:                     (DEL, MethodInvocation, OP13, OP16)
+OP16:                        (DEL, NumberLiteral, OP15, null)
+OP17:                     (DEL, SimpleName, OP13, null)
+OP18:                  (DEL, SimpleName, OP12, null)
+OP19:         (INS, ArrayCreation, OP7, OP20 OP22)
+OP20:            (INS, ArrayType, OP19, OP21)
+OP21:               (MOV, SimpleType, OP20, null)
+OP22:            (INS, SimpleName, OP19, null)
+
+
+

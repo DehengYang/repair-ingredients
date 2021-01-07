@@ -1,0 +1,20 @@
+No.1 CCI matched.
+freq: 1
+CommitIds: abbe3f0e 
+FreqRank:27
+
+No.2 CCI matched.
+freq: 21
+CommitIds: f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab 050fe8e9 050fe8e9 f434e7ba 4c1e760d 4c1e760d 4c1e760d 4e070edf 4e070edf 35b8cc4c 35b8cc4c 
+FreqRank:9
+
+No.4 CCI matched.
+freq: 1
+CommitIds: abbe3f0e 
+FreqRank:27
+
+No.5 CCI matched.
+freq: 21
+CommitIds: f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab f2cb58ab 050fe8e9 050fe8e9 f434e7ba 4c1e760d 4c1e760d 4c1e760d 4e070edf 4e070edf 35b8cc4c 35b8cc4c 
+FreqRank:9
+

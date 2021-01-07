@@ -1,0 +1,14 @@
+
+diff -Naur ../d4j-repo/Math/Math_20/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java ../d4j-repo/fixed_bugs_dir/Math/Math_20/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java
+--- ../d4j-repo/Math/Math_20/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java	2021-01-04 22:58:52.195673805 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_20/src/main/java/org/apache/commons/math3/optimization/direct/CMAESOptimizer.java	2021-01-04 22:58:56.227824981 -0800
+@@ -918,7 +918,8 @@
+          * @return the original objective variables, possibly repaired.
+          */
+         public double[] repairAndDecode(final double[] x) {
+-            return
++            return boundaries != null && isRepairMode ?
++                decode(repair(x)) :
+                 decode(x);
+         }
+ 

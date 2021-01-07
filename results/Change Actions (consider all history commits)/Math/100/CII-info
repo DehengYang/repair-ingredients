@@ -1,0 +1,91 @@
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final int cols=problem.getAllParameters().length; @TO@ final int cols=problem.getUnboundParameters().length; @AT@ 5487 @LENGTH@ 51
+---UPD VariableDeclarationFragment@@cols=problem.getAllParameters().length @TO@ cols=problem.getUnboundParameters().length @AT@ 5497 @LENGTH@ 40
+------UPD FieldAccess@@problem.getAllParameters().length @TO@ problem.getUnboundParameters().length @AT@ 5504 @LENGTH@ 33
+---------UPD MethodInvocation@@problem.getAllParameters() @TO@ problem.getUnboundParameters() @AT@ 5504 @LENGTH@ 26
+------------UPD SimpleName@@MethodName:getAllParameters:[] @TO@ MethodName:getUnboundParameters:[] @AT@ 5512 @LENGTH@ 18
+, UPD VariableDeclarationStatement@@int p=problem.getAllParameters().length; @TO@ int p=problem.getUnboundParameters().length; @AT@ 6929 @LENGTH@ 42
+---UPD VariableDeclarationFragment@@p=problem.getAllParameters().length @TO@ p=problem.getUnboundParameters().length @AT@ 6933 @LENGTH@ 37
+------UPD FieldAccess@@problem.getAllParameters().length @TO@ problem.getUnboundParameters().length @AT@ 6937 @LENGTH@ 33
+---------UPD MethodInvocation@@problem.getAllParameters() @TO@ problem.getUnboundParameters() @AT@ 6937 @LENGTH@ 26
+------------UPD SimpleName@@MethodName:getAllParameters:[] @TO@ MethodName:getUnboundParameters:[] @AT@ 6945 @LENGTH@ 18
+, UPD VariableDeclarationStatement@@double[] errors=new double[problem.getAllParameters().length]; @TO@ double[] errors=new double[problem.getUnboundParameters().length]; @AT@ 7205 @LENGTH@ 64
+---UPD VariableDeclarationFragment@@errors=new double[problem.getAllParameters().length] @TO@ errors=new double[problem.getUnboundParameters().length] @AT@ 7214 @LENGTH@ 54
+------UPD ArrayCreation@@new double[problem.getAllParameters().length] @TO@ new double[problem.getUnboundParameters().length] @AT@ 7223 @LENGTH@ 45
+---------UPD FieldAccess@@problem.getAllParameters().length @TO@ problem.getUnboundParameters().length @AT@ 7234 @LENGTH@ 33
+------------UPD MethodInvocation@@problem.getAllParameters() @TO@ problem.getUnboundParameters() @AT@ 7234 @LENGTH@ 26
+---------------UPD SimpleName@@MethodName:getAllParameters:[] @TO@ MethodName:getUnboundParameters:[] @AT@ 7242 @LENGTH@ 18
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, FieldAccess, OP2, OP4)
+OP4:         (UPD, MethodInvocation, OP3, OP5)
+OP5:            (UPD, SimpleName, OP4, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final int cols=problem.getAllParameters().length; @TO@ final int cols=problem.getUnboundParameters().length; @AT@ 5487 @LENGTH@ 51
+---UPD VariableDeclarationFragment@@cols=problem.getAllParameters().length @TO@ cols=problem.getUnboundParameters().length @AT@ 5497 @LENGTH@ 40
+------UPD FieldAccess@@problem.getAllParameters().length @TO@ problem.getUnboundParameters().length @AT@ 5504 @LENGTH@ 33
+---------UPD MethodInvocation@@problem.getAllParameters() @TO@ problem.getUnboundParameters() @AT@ 5504 @LENGTH@ 26
+------------UPD SimpleName@@MethodName:getAllParameters:[] @TO@ MethodName:getUnboundParameters:[] @AT@ 5512 @LENGTH@ 18
+, UPD VariableDeclarationStatement@@int p=problem.getAllParameters().length; @TO@ int p=problem.getUnboundParameters().length; @AT@ 6929 @LENGTH@ 42
+---UPD VariableDeclarationFragment@@p=problem.getAllParameters().length @TO@ p=problem.getUnboundParameters().length @AT@ 6933 @LENGTH@ 37
+------UPD FieldAccess@@problem.getAllParameters().length @TO@ problem.getUnboundParameters().length @AT@ 6937 @LENGTH@ 33
+---------UPD MethodInvocation@@problem.getAllParameters() @TO@ problem.getUnboundParameters() @AT@ 6937 @LENGTH@ 26
+------------UPD SimpleName@@MethodName:getAllParameters:[] @TO@ MethodName:getUnboundParameters:[] @AT@ 6945 @LENGTH@ 18
+, UPD VariableDeclarationStatement@@double[] errors=new double[problem.getAllParameters().length]; @TO@ double[] errors=new double[problem.getUnboundParameters().length]; @AT@ 7205 @LENGTH@ 64
+---UPD VariableDeclarationFragment@@errors=new double[problem.getAllParameters().length] @TO@ errors=new double[problem.getUnboundParameters().length] @AT@ 7214 @LENGTH@ 54
+------UPD ArrayCreation@@new double[problem.getAllParameters().length] @TO@ new double[problem.getUnboundParameters().length] @AT@ 7223 @LENGTH@ 45
+---------UPD FieldAccess@@problem.getAllParameters().length @TO@ problem.getUnboundParameters().length @AT@ 7234 @LENGTH@ 33
+------------UPD MethodInvocation@@problem.getAllParameters() @TO@ problem.getUnboundParameters() @AT@ 7234 @LENGTH@ 26
+---------------UPD SimpleName@@MethodName:getAllParameters:[] @TO@ MethodName:getUnboundParameters:[] @AT@ 7242 @LENGTH@ 18
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, FieldAccess, OP2, OP4)
+OP4:         (UPD, MethodInvocation, OP3, OP5)
+OP5:            (UPD, SimpleName, OP4, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final int cols=problem.getAllParameters().length; @TO@ final int cols=problem.getUnboundParameters().length; @AT@ 5487 @LENGTH@ 51
+---UPD VariableDeclarationFragment@@cols=problem.getAllParameters().length @TO@ cols=problem.getUnboundParameters().length @AT@ 5497 @LENGTH@ 40
+------UPD FieldAccess@@problem.getAllParameters().length @TO@ problem.getUnboundParameters().length @AT@ 5504 @LENGTH@ 33
+---------UPD MethodInvocation@@problem.getAllParameters() @TO@ problem.getUnboundParameters() @AT@ 5504 @LENGTH@ 26
+------------UPD SimpleName@@MethodName:getAllParameters:[] @TO@ MethodName:getUnboundParameters:[] @AT@ 5512 @LENGTH@ 18
+, UPD VariableDeclarationStatement@@int p=problem.getAllParameters().length; @TO@ int p=problem.getUnboundParameters().length; @AT@ 6929 @LENGTH@ 42
+---UPD VariableDeclarationFragment@@p=problem.getAllParameters().length @TO@ p=problem.getUnboundParameters().length @AT@ 6933 @LENGTH@ 37
+------UPD FieldAccess@@problem.getAllParameters().length @TO@ problem.getUnboundParameters().length @AT@ 6937 @LENGTH@ 33
+---------UPD MethodInvocation@@problem.getAllParameters() @TO@ problem.getUnboundParameters() @AT@ 6937 @LENGTH@ 26
+------------UPD SimpleName@@MethodName:getAllParameters:[] @TO@ MethodName:getUnboundParameters:[] @AT@ 6945 @LENGTH@ 18
+, UPD VariableDeclarationStatement@@double[] errors=new double[problem.getAllParameters().length]; @TO@ double[] errors=new double[problem.getUnboundParameters().length]; @AT@ 7205 @LENGTH@ 64
+---UPD VariableDeclarationFragment@@errors=new double[problem.getAllParameters().length] @TO@ errors=new double[problem.getUnboundParameters().length] @AT@ 7214 @LENGTH@ 54
+------UPD ArrayCreation@@new double[problem.getAllParameters().length] @TO@ new double[problem.getUnboundParameters().length] @AT@ 7223 @LENGTH@ 45
+---------UPD FieldAccess@@problem.getAllParameters().length @TO@ problem.getUnboundParameters().length @AT@ 7234 @LENGTH@ 33
+------------UPD MethodInvocation@@problem.getAllParameters() @TO@ problem.getUnboundParameters() @AT@ 7234 @LENGTH@ 26
+---------------UPD SimpleName@@MethodName:getAllParameters:[] @TO@ MethodName:getUnboundParameters:[] @AT@ 7242 @LENGTH@ 18
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, ArrayCreation, OP2, OP4)
+OP4:         (UPD, FieldAccess, OP3, OP5)
+OP5:            (UPD, MethodInvocation, OP4, OP6)
+OP6:               (UPD, SimpleName, OP5, null)
+
+
+

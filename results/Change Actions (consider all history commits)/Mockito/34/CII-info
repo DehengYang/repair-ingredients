@@ -1,0 +1,41 @@
+
+
+hASList: 
+[UPD IfStatement@@InstanceofExpression:m instanceof CapturesArguments @TO@ InfixExpression:m instanceof CapturesArguments && i.getArguments().length > k @AT@ 3498 @LENGTH@ 125
+---INS InfixExpression@@m instanceof CapturesArguments && i.getArguments().length > k @TO@ IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 3502 @LENGTH@ 61
+------INS InstanceofExpression@@m instanceof CapturesArguments @TO@ InfixExpression@@m instanceof CapturesArguments && i.getArguments().length > k @AT@ 3502 @LENGTH@ 30
+---------MOV SimpleName@@m @TO@ InstanceofExpression@@m instanceof CapturesArguments @AT@ 3502 @LENGTH@ 1
+---------MOV Instanceof@@instanceof @TO@ InstanceofExpression@@m instanceof CapturesArguments @AT@ 3504 @LENGTH@ 10
+---------MOV SimpleType@@CapturesArguments @TO@ InstanceofExpression@@m instanceof CapturesArguments @AT@ 3515 @LENGTH@ 17
+------INS Operator@@&& @TO@ InfixExpression@@m instanceof CapturesArguments && i.getArguments().length > k @AT@ 3532 @LENGTH@ 2
+------INS InfixExpression@@i.getArguments().length > k @TO@ InfixExpression@@m instanceof CapturesArguments && i.getArguments().length > k @AT@ 3536 @LENGTH@ 27
+---------INS FieldAccess@@i.getArguments().length @TO@ InfixExpression@@i.getArguments().length > k @AT@ 3536 @LENGTH@ 23
+------------INS MethodInvocation@@i.getArguments() @TO@ FieldAccess@@i.getArguments().length @AT@ 3536 @LENGTH@ 16
+---------------INS SimpleName@@Name:i @TO@ MethodInvocation@@i.getArguments() @AT@ 3536 @LENGTH@ 1
+---------------INS SimpleName@@MethodName:getArguments:[] @TO@ MethodInvocation@@i.getArguments() @AT@ 3538 @LENGTH@ 14
+------------INS SimpleName@@length @TO@ FieldAccess@@i.getArguments().length @AT@ 3553 @LENGTH@ 6
+---------INS Operator@@> @TO@ InfixExpression@@i.getArguments().length > k @AT@ 3559 @LENGTH@ 1
+---------INS SimpleName@@k @TO@ InfixExpression@@i.getArguments().length > k @AT@ 3562 @LENGTH@ 1
+---DEL InstanceofExpression@@m instanceof CapturesArguments @AT@ 3502 @LENGTH@ 30
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2 OP16)
+OP2:   (INS, InfixExpression, OP1, OP3 OP7 OP8)
+OP3:      (INS, InstanceofExpression, OP2, OP4 OP5 OP6)
+OP4:         (MOV, SimpleName, OP3, null)
+OP5:         (MOV, Instanceof, OP3, null)
+OP6:         (MOV, SimpleType, OP3, null)
+OP7:      (INS, Operator, OP2, null)
+OP8:      (INS, InfixExpression, OP2, OP9 OP14 OP15)
+OP9:         (INS, FieldAccess, OP8, OP10 OP13)
+OP10:            (INS, MethodInvocation, OP9, OP11 OP12)
+OP11:               (INS, SimpleName, OP10, null)
+OP12:               (INS, SimpleName, OP10, null)
+OP13:            (INS, SimpleName, OP9, null)
+OP14:         (INS, Operator, OP8, null)
+OP15:         (INS, SimpleName, OP8, null)
+OP16:   (DEL, InstanceofExpression, OP1, null)
+
+
+

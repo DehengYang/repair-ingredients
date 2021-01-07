@@ -1,0 +1,14 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_59/src/com/google/javascript/jscomp/Compiler.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_59/src/com/google/javascript/jscomp/Compiler.java
+--- ../d4j-repo/Closure/Closure_59/src/com/google/javascript/jscomp/Compiler.java	2021-01-06 03:44:00.188492609 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_59/src/com/google/javascript/jscomp/Compiler.java	2021-01-06 03:44:02.208561407 -0800
+@@ -252,7 +252,8 @@
+           CheckLevel.OFF);
+     }
+ 
+-    if (options.checkGlobalThisLevel.isOn()) {
++    if (options.checkGlobalThisLevel.isOn() &&
++        !options.disables(DiagnosticGroups.GLOBAL_THIS)) {
+       options.setWarningLevel(
+           DiagnosticGroups.GLOBAL_THIS,
+           options.checkGlobalThisLevel);

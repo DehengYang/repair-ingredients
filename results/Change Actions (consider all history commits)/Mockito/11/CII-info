@@ -1,0 +1,155 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:this == o @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+o+ @AT@ 1441 @LENGTH@ 51
+---INS InfixExpression@@this == o @TO@ IfStatement@@InfixExpression:this == o @AT@ 1445 @LENGTH@ 9
+------INS ThisExpression@@this @TO@ InfixExpression@@this == o @AT@ 1445 @LENGTH@ 4
+------INS Operator@@== @TO@ InfixExpression@@this == o @AT@ 1449 @LENGTH@ 2
+------INS SimpleName@@o @TO@ InfixExpression@@this == o @AT@ 1453 @LENGTH@ 1
+---INS ReturnStatement@@BooleanLiteral:true @TO@ IfStatement@@InfixExpression:this == o @AT@ 1470 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 1477 @LENGTH@ 4
+, INS IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+o+ @AT@ 1501 @LENGTH@ 205
+---MOV ReturnStatement@@MethodInvocation:method.equals(o) @TO@ IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @AT@ 1445 @LENGTH@ 24
+---INS InstanceofExpression@@o instanceof DelegatingMethod @TO@ IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @AT@ 1505 @LENGTH@ 29
+------INS SimpleName@@o @TO@ InstanceofExpression@@o instanceof DelegatingMethod @AT@ 1505 @LENGTH@ 1
+------INS Instanceof@@instanceof @TO@ InstanceofExpression@@o instanceof DelegatingMethod @AT@ 1507 @LENGTH@ 10
+------INS SimpleType@@DelegatingMethod @TO@ InstanceofExpression@@o instanceof DelegatingMethod @AT@ 1518 @LENGTH@ 16
+---INS VariableDeclarationStatement@@DelegatingMethod that=(DelegatingMethod)o; @TO@ IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @AT@ 1550 @LENGTH@ 45
+------INS SimpleType@@DelegatingMethod @TO@ VariableDeclarationStatement@@DelegatingMethod that=(DelegatingMethod)o; @AT@ 1550 @LENGTH@ 16
+------INS VariableDeclarationFragment@@that=(DelegatingMethod)o @TO@ VariableDeclarationStatement@@DelegatingMethod that=(DelegatingMethod)o; @AT@ 1567 @LENGTH@ 27
+---------INS SimpleName@@that @TO@ VariableDeclarationFragment@@that=(DelegatingMethod)o @AT@ 1567 @LENGTH@ 4
+---------INS CastExpression@@(DelegatingMethod)o @TO@ VariableDeclarationFragment@@that=(DelegatingMethod)o @AT@ 1574 @LENGTH@ 20
+------------INS SimpleType@@DelegatingMethod @TO@ CastExpression@@(DelegatingMethod)o @AT@ 1575 @LENGTH@ 16
+------------INS SimpleName@@o @TO@ CastExpression@@(DelegatingMethod)o @AT@ 1593 @LENGTH@ 1
+---INS ReturnStatement@@MethodInvocation:method.equals(that.method) @TO@ IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @AT@ 1608 @LENGTH@ 34
+------INS MethodInvocation@@method.equals(that.method) @TO@ ReturnStatement@@MethodInvocation:method.equals(that.method) @AT@ 1615 @LENGTH@ 26
+---------INS SimpleName@@Name:method @TO@ MethodInvocation@@method.equals(that.method) @AT@ 1615 @LENGTH@ 6
+---------INS SimpleName@@MethodName:equals:[that.method] @TO@ MethodInvocation@@method.equals(that.method) @AT@ 1622 @LENGTH@ 19
+------------INS QualifiedName@@that.method @TO@ SimpleName@@MethodName:equals:[that.method] @AT@ 1629 @LENGTH@ 11
+---------------INS SimpleName@@that @TO@ QualifiedName@@that.method @AT@ 1629 @LENGTH@ 4
+---------------INS SimpleName@@method @TO@ QualifiedName@@that.method @AT@ 1634 @LENGTH@ 6
+, UPD ReturnStatement@@NumberLiteral:1 @TO@ MethodInvocation:method.hashCode() @AT@ 1527 @LENGTH@ 9
+---DEL NumberLiteral@@1 @AT@ 1534 @LENGTH@ 1
+---INS MethodInvocation@@method.hashCode() @TO@ ReturnStatement@@NumberLiteral:1 @AT@ 1771 @LENGTH@ 17
+------INS SimpleName@@Name:method @TO@ MethodInvocation@@method.hashCode() @AT@ 1771 @LENGTH@ 6
+------INS SimpleName@@MethodName:hashCode:[] @TO@ MethodInvocation@@method.hashCode() @AT@ 1778 @LENGTH@ 10
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, ThisExpression, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, SimpleName, OP2, null)
+OP6:   (INS, ReturnStatement, OP1, OP7)
+OP7:      (INS, BooleanLiteral, OP6, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:this == o @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+o+ @AT@ 1441 @LENGTH@ 51
+---INS InfixExpression@@this == o @TO@ IfStatement@@InfixExpression:this == o @AT@ 1445 @LENGTH@ 9
+------INS ThisExpression@@this @TO@ InfixExpression@@this == o @AT@ 1445 @LENGTH@ 4
+------INS Operator@@== @TO@ InfixExpression@@this == o @AT@ 1449 @LENGTH@ 2
+------INS SimpleName@@o @TO@ InfixExpression@@this == o @AT@ 1453 @LENGTH@ 1
+---INS ReturnStatement@@BooleanLiteral:true @TO@ IfStatement@@InfixExpression:this == o @AT@ 1470 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 1477 @LENGTH@ 4
+, INS IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+o+ @AT@ 1501 @LENGTH@ 205
+---MOV ReturnStatement@@MethodInvocation:method.equals(o) @TO@ IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @AT@ 1445 @LENGTH@ 24
+---INS InstanceofExpression@@o instanceof DelegatingMethod @TO@ IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @AT@ 1505 @LENGTH@ 29
+------INS SimpleName@@o @TO@ InstanceofExpression@@o instanceof DelegatingMethod @AT@ 1505 @LENGTH@ 1
+------INS Instanceof@@instanceof @TO@ InstanceofExpression@@o instanceof DelegatingMethod @AT@ 1507 @LENGTH@ 10
+------INS SimpleType@@DelegatingMethod @TO@ InstanceofExpression@@o instanceof DelegatingMethod @AT@ 1518 @LENGTH@ 16
+---INS VariableDeclarationStatement@@DelegatingMethod that=(DelegatingMethod)o; @TO@ IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @AT@ 1550 @LENGTH@ 45
+------INS SimpleType@@DelegatingMethod @TO@ VariableDeclarationStatement@@DelegatingMethod that=(DelegatingMethod)o; @AT@ 1550 @LENGTH@ 16
+------INS VariableDeclarationFragment@@that=(DelegatingMethod)o @TO@ VariableDeclarationStatement@@DelegatingMethod that=(DelegatingMethod)o; @AT@ 1567 @LENGTH@ 27
+---------INS SimpleName@@that @TO@ VariableDeclarationFragment@@that=(DelegatingMethod)o @AT@ 1567 @LENGTH@ 4
+---------INS CastExpression@@(DelegatingMethod)o @TO@ VariableDeclarationFragment@@that=(DelegatingMethod)o @AT@ 1574 @LENGTH@ 20
+------------INS SimpleType@@DelegatingMethod @TO@ CastExpression@@(DelegatingMethod)o @AT@ 1575 @LENGTH@ 16
+------------INS SimpleName@@o @TO@ CastExpression@@(DelegatingMethod)o @AT@ 1593 @LENGTH@ 1
+---INS ReturnStatement@@MethodInvocation:method.equals(that.method) @TO@ IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @AT@ 1608 @LENGTH@ 34
+------INS MethodInvocation@@method.equals(that.method) @TO@ ReturnStatement@@MethodInvocation:method.equals(that.method) @AT@ 1615 @LENGTH@ 26
+---------INS SimpleName@@Name:method @TO@ MethodInvocation@@method.equals(that.method) @AT@ 1615 @LENGTH@ 6
+---------INS SimpleName@@MethodName:equals:[that.method] @TO@ MethodInvocation@@method.equals(that.method) @AT@ 1622 @LENGTH@ 19
+------------INS QualifiedName@@that.method @TO@ SimpleName@@MethodName:equals:[that.method] @AT@ 1629 @LENGTH@ 11
+---------------INS SimpleName@@that @TO@ QualifiedName@@that.method @AT@ 1629 @LENGTH@ 4
+---------------INS SimpleName@@method @TO@ QualifiedName@@that.method @AT@ 1634 @LENGTH@ 6
+, UPD ReturnStatement@@NumberLiteral:1 @TO@ MethodInvocation:method.hashCode() @AT@ 1527 @LENGTH@ 9
+---DEL NumberLiteral@@1 @AT@ 1534 @LENGTH@ 1
+---INS MethodInvocation@@method.hashCode() @TO@ ReturnStatement@@NumberLiteral:1 @AT@ 1771 @LENGTH@ 17
+------INS SimpleName@@Name:method @TO@ MethodInvocation@@method.hashCode() @AT@ 1771 @LENGTH@ 6
+------INS SimpleName@@MethodName:hashCode:[] @TO@ MethodInvocation@@method.hashCode() @AT@ 1778 @LENGTH@ 10
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3 OP7 OP14)
+OP2:   (MOV, ReturnStatement, OP1, null)
+OP3:   (INS, InstanceofExpression, OP1, OP4 OP5 OP6)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, Instanceof, OP3, null)
+OP6:      (INS, SimpleType, OP3, null)
+OP7:   (INS, VariableDeclarationStatement, OP1, OP8 OP9)
+OP8:      (INS, SimpleType, OP7, null)
+OP9:      (INS, VariableDeclarationFragment, OP7, OP10 OP11)
+OP10:         (INS, SimpleName, OP9, null)
+OP11:         (INS, CastExpression, OP9, OP12 OP13)
+OP12:            (INS, SimpleType, OP11, null)
+OP13:            (INS, SimpleName, OP11, null)
+OP14:   (INS, ReturnStatement, OP1, OP15)
+OP15:      (INS, MethodInvocation, OP14, OP16 OP17)
+OP16:         (INS, SimpleName, OP15, null)
+OP17:         (INS, SimpleName, OP15, OP18)
+OP18:            (INS, QualifiedName, OP17, OP19 OP20)
+OP19:               (INS, SimpleName, OP18, null)
+OP20:               (INS, SimpleName, OP18, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:this == o @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+o+ @AT@ 1441 @LENGTH@ 51
+---INS InfixExpression@@this == o @TO@ IfStatement@@InfixExpression:this == o @AT@ 1445 @LENGTH@ 9
+------INS ThisExpression@@this @TO@ InfixExpression@@this == o @AT@ 1445 @LENGTH@ 4
+------INS Operator@@== @TO@ InfixExpression@@this == o @AT@ 1449 @LENGTH@ 2
+------INS SimpleName@@o @TO@ InfixExpression@@this == o @AT@ 1453 @LENGTH@ 1
+---INS ReturnStatement@@BooleanLiteral:true @TO@ IfStatement@@InfixExpression:this == o @AT@ 1470 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 1477 @LENGTH@ 4
+, INS IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+o+ @AT@ 1501 @LENGTH@ 205
+---MOV ReturnStatement@@MethodInvocation:method.equals(o) @TO@ IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @AT@ 1445 @LENGTH@ 24
+---INS InstanceofExpression@@o instanceof DelegatingMethod @TO@ IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @AT@ 1505 @LENGTH@ 29
+------INS SimpleName@@o @TO@ InstanceofExpression@@o instanceof DelegatingMethod @AT@ 1505 @LENGTH@ 1
+------INS Instanceof@@instanceof @TO@ InstanceofExpression@@o instanceof DelegatingMethod @AT@ 1507 @LENGTH@ 10
+------INS SimpleType@@DelegatingMethod @TO@ InstanceofExpression@@o instanceof DelegatingMethod @AT@ 1518 @LENGTH@ 16
+---INS VariableDeclarationStatement@@DelegatingMethod that=(DelegatingMethod)o; @TO@ IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @AT@ 1550 @LENGTH@ 45
+------INS SimpleType@@DelegatingMethod @TO@ VariableDeclarationStatement@@DelegatingMethod that=(DelegatingMethod)o; @AT@ 1550 @LENGTH@ 16
+------INS VariableDeclarationFragment@@that=(DelegatingMethod)o @TO@ VariableDeclarationStatement@@DelegatingMethod that=(DelegatingMethod)o; @AT@ 1567 @LENGTH@ 27
+---------INS SimpleName@@that @TO@ VariableDeclarationFragment@@that=(DelegatingMethod)o @AT@ 1567 @LENGTH@ 4
+---------INS CastExpression@@(DelegatingMethod)o @TO@ VariableDeclarationFragment@@that=(DelegatingMethod)o @AT@ 1574 @LENGTH@ 20
+------------INS SimpleType@@DelegatingMethod @TO@ CastExpression@@(DelegatingMethod)o @AT@ 1575 @LENGTH@ 16
+------------INS SimpleName@@o @TO@ CastExpression@@(DelegatingMethod)o @AT@ 1593 @LENGTH@ 1
+---INS ReturnStatement@@MethodInvocation:method.equals(that.method) @TO@ IfStatement@@InstanceofExpression:o instanceof DelegatingMethod @AT@ 1608 @LENGTH@ 34
+------INS MethodInvocation@@method.equals(that.method) @TO@ ReturnStatement@@MethodInvocation:method.equals(that.method) @AT@ 1615 @LENGTH@ 26
+---------INS SimpleName@@Name:method @TO@ MethodInvocation@@method.equals(that.method) @AT@ 1615 @LENGTH@ 6
+---------INS SimpleName@@MethodName:equals:[that.method] @TO@ MethodInvocation@@method.equals(that.method) @AT@ 1622 @LENGTH@ 19
+------------INS QualifiedName@@that.method @TO@ SimpleName@@MethodName:equals:[that.method] @AT@ 1629 @LENGTH@ 11
+---------------INS SimpleName@@that @TO@ QualifiedName@@that.method @AT@ 1629 @LENGTH@ 4
+---------------INS SimpleName@@method @TO@ QualifiedName@@that.method @AT@ 1634 @LENGTH@ 6
+, UPD ReturnStatement@@NumberLiteral:1 @TO@ MethodInvocation:method.hashCode() @AT@ 1527 @LENGTH@ 9
+---DEL NumberLiteral@@1 @AT@ 1534 @LENGTH@ 1
+---INS MethodInvocation@@method.hashCode() @TO@ ReturnStatement@@NumberLiteral:1 @AT@ 1771 @LENGTH@ 17
+------INS SimpleName@@Name:method @TO@ MethodInvocation@@method.hashCode() @AT@ 1771 @LENGTH@ 6
+------INS SimpleName@@MethodName:hashCode:[] @TO@ MethodInvocation@@method.hashCode() @AT@ 1778 @LENGTH@ 10
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2 OP3)
+OP2:   (DEL, NumberLiteral, OP1, null)
+OP3:   (INS, MethodInvocation, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, SimpleName, OP3, null)
+
+
+

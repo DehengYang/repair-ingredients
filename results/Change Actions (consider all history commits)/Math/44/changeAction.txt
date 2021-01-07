@@ -1,0 +1,35 @@
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, BooleanLiteral, OP2, null)
+
+
+OP1:(INS, EnhancedForStatement, null, OP2 OP6 OP7)
+OP2:   (INS, SingleVariableDeclaration, OP1, OP3 OP4 OP5)
+OP3:      (INS, Modifier, OP2, null)
+OP4:      (INS, SimpleType, OP2, null)
+OP5:      (INS, SimpleName, OP2, null)
+OP6:   (INS, SimpleName, OP1, null)
+OP7:   (INS, ExpressionStatement, OP1, OP8)
+OP8:      (INS, MethodInvocation, OP7, OP9 OP10)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, SimpleName, OP8, OP11 OP12)
+OP11:            (INS, SimpleName, OP10, null)
+OP12:            (INS, SimpleName, OP10, null)
+
+
+OP1:(INS, EnhancedForStatement, null, OP2 OP6 OP7)
+OP2:   (INS, SingleVariableDeclaration, OP1, OP3 OP4 OP5)
+OP3:      (INS, Modifier, OP2, null)
+OP4:      (INS, SimpleType, OP2, null)
+OP5:      (INS, SimpleName, OP2, null)
+OP6:   (INS, SimpleName, OP1, null)
+OP7:   (INS, ExpressionStatement, OP1, OP8)
+OP8:      (INS, MethodInvocation, OP7, OP9 OP10)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, SimpleName, OP8, OP11 OP12)
+OP11:            (INS, SimpleName, OP10, null)
+OP12:            (INS, SimpleName, OP10, null)
+
+

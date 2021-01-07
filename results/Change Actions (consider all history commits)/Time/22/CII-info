@@ -1,0 +1,376 @@
+
+
+hASList: 
+[DEL ConstructorInvocation@@this(duration,null,null); @AT@ 9862 @LENGTH@ 27
+---DEL SimpleName@@duration @AT@ 9867 @LENGTH@ 8
+---DEL NullLiteral@@null @AT@ 9877 @LENGTH@ 4
+---DEL NullLiteral@@null @AT@ 9883 @LENGTH@ 4
+, INS ExpressionStatement@@Assignment:iType=PeriodType.time() @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 9904 @LENGTH@ 26
+---INS Assignment@@iType=PeriodType.time() @TO@ ExpressionStatement@@Assignment:iType=PeriodType.time() @AT@ 9904 @LENGTH@ 25
+------INS SimpleName@@iType @TO@ Assignment@@iType=PeriodType.time() @AT@ 9904 @LENGTH@ 5
+------INS Operator@@= @TO@ Assignment@@iType=PeriodType.time() @AT@ 9909 @LENGTH@ 1
+------INS MethodInvocation@@PeriodType.time() @TO@ Assignment@@iType=PeriodType.time() @AT@ 9912 @LENGTH@ 17
+---------INS SimpleName@@Name:PeriodType @TO@ MethodInvocation@@PeriodType.time() @AT@ 9912 @LENGTH@ 10
+---------INS SimpleName@@MethodName:time:[] @TO@ MethodInvocation@@PeriodType.time() @AT@ 9923 @LENGTH@ 6
+, INS VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 9939 @LENGTH@ 66
+---INS ArrayType@@int[] @TO@ VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @AT@ 9939 @LENGTH@ 5
+------INS PrimitiveType@@int @TO@ ArrayType@@int[] @AT@ 9939 @LENGTH@ 3
+---INS VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @TO@ VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @AT@ 9945 @LENGTH@ 59
+------INS SimpleName@@values @TO@ VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9945 @LENGTH@ 6
+------INS MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @TO@ VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 50
+---------INS SimpleName@@Name:ISOChronology @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 13
+---------INS MethodInvocation@@MethodName:getInstanceUTC:[] @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 30
+---------INS SimpleName@@MethodName:get:[this, duration] @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9985 @LENGTH@ 19
+------------INS ThisExpression@@this @TO@ SimpleName@@MethodName:get:[this, duration] @AT@ 9989 @LENGTH@ 4
+------------INS SimpleName@@duration @TO@ SimpleName@@MethodName:get:[this, duration] @AT@ 9995 @LENGTH@ 8
+, INS ExpressionStatement@@Assignment:iType=PeriodType.standard() @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10014 @LENGTH@ 30
+---INS Assignment@@iType=PeriodType.standard() @TO@ ExpressionStatement@@Assignment:iType=PeriodType.standard() @AT@ 10014 @LENGTH@ 29
+------INS SimpleName@@iType @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10014 @LENGTH@ 5
+------INS Operator@@= @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10019 @LENGTH@ 1
+------INS MethodInvocation@@PeriodType.standard() @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10022 @LENGTH@ 21
+---------INS SimpleName@@Name:PeriodType @TO@ MethodInvocation@@PeriodType.standard() @AT@ 10022 @LENGTH@ 10
+---------INS SimpleName@@MethodName:standard:[] @TO@ MethodInvocation@@PeriodType.standard() @AT@ 10033 @LENGTH@ 10
+, INS ExpressionStatement@@Assignment:iValues=new int[8] @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10053 @LENGTH@ 21
+---INS Assignment@@iValues=new int[8] @TO@ ExpressionStatement@@Assignment:iValues=new int[8] @AT@ 10053 @LENGTH@ 20
+------INS SimpleName@@iValues @TO@ Assignment@@iValues=new int[8] @AT@ 10053 @LENGTH@ 7
+------INS Operator@@= @TO@ Assignment@@iValues=new int[8] @AT@ 10060 @LENGTH@ 1
+------INS ArrayCreation@@new int[8] @TO@ Assignment@@iValues=new int[8] @AT@ 10063 @LENGTH@ 10
+---------INS ArrayType@@int[] @TO@ ArrayCreation@@new int[8] @AT@ 10067 @LENGTH@ 6
+------------INS PrimitiveType@@int @TO@ ArrayType@@int[] @AT@ 10067 @LENGTH@ 3
+---------INS NumberLiteral@@8 @TO@ ArrayCreation@@new int[8] @AT@ 10071 @LENGTH@ 1
+, INS ExpressionStatement@@MethodInvocation:System.arraycopy(values,0,iValues,4,4) @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10083 @LENGTH@ 43
+---INS MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @TO@ ExpressionStatement@@MethodInvocation:System.arraycopy(values,0,iValues,4,4) @AT@ 10083 @LENGTH@ 42
+------INS SimpleName@@Name:System @TO@ MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @AT@ 10083 @LENGTH@ 6
+------INS SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @TO@ MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @AT@ 10090 @LENGTH@ 35
+---------INS SimpleName@@values @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10100 @LENGTH@ 6
+---------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10108 @LENGTH@ 1
+---------INS SimpleName@@iValues @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10111 @LENGTH@ 7
+---------INS NumberLiteral@@4 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10120 @LENGTH@ 1
+---------INS NumberLiteral@@4 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10123 @LENGTH@ 1
+]
+
+CII:
+OP1:(DEL, ConstructorInvocation, null, OP2 OP3 OP4)
+OP2:   (DEL, SimpleName, OP1, null)
+OP3:   (DEL, NullLiteral, OP1, null)
+OP4:   (DEL, NullLiteral, OP1, null)
+
+
+
+
+
+hASList: 
+[DEL ConstructorInvocation@@this(duration,null,null); @AT@ 9862 @LENGTH@ 27
+---DEL SimpleName@@duration @AT@ 9867 @LENGTH@ 8
+---DEL NullLiteral@@null @AT@ 9877 @LENGTH@ 4
+---DEL NullLiteral@@null @AT@ 9883 @LENGTH@ 4
+, INS ExpressionStatement@@Assignment:iType=PeriodType.time() @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 9904 @LENGTH@ 26
+---INS Assignment@@iType=PeriodType.time() @TO@ ExpressionStatement@@Assignment:iType=PeriodType.time() @AT@ 9904 @LENGTH@ 25
+------INS SimpleName@@iType @TO@ Assignment@@iType=PeriodType.time() @AT@ 9904 @LENGTH@ 5
+------INS Operator@@= @TO@ Assignment@@iType=PeriodType.time() @AT@ 9909 @LENGTH@ 1
+------INS MethodInvocation@@PeriodType.time() @TO@ Assignment@@iType=PeriodType.time() @AT@ 9912 @LENGTH@ 17
+---------INS SimpleName@@Name:PeriodType @TO@ MethodInvocation@@PeriodType.time() @AT@ 9912 @LENGTH@ 10
+---------INS SimpleName@@MethodName:time:[] @TO@ MethodInvocation@@PeriodType.time() @AT@ 9923 @LENGTH@ 6
+, INS VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 9939 @LENGTH@ 66
+---INS ArrayType@@int[] @TO@ VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @AT@ 9939 @LENGTH@ 5
+------INS PrimitiveType@@int @TO@ ArrayType@@int[] @AT@ 9939 @LENGTH@ 3
+---INS VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @TO@ VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @AT@ 9945 @LENGTH@ 59
+------INS SimpleName@@values @TO@ VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9945 @LENGTH@ 6
+------INS MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @TO@ VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 50
+---------INS SimpleName@@Name:ISOChronology @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 13
+---------INS MethodInvocation@@MethodName:getInstanceUTC:[] @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 30
+---------INS SimpleName@@MethodName:get:[this, duration] @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9985 @LENGTH@ 19
+------------INS ThisExpression@@this @TO@ SimpleName@@MethodName:get:[this, duration] @AT@ 9989 @LENGTH@ 4
+------------INS SimpleName@@duration @TO@ SimpleName@@MethodName:get:[this, duration] @AT@ 9995 @LENGTH@ 8
+, INS ExpressionStatement@@Assignment:iType=PeriodType.standard() @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10014 @LENGTH@ 30
+---INS Assignment@@iType=PeriodType.standard() @TO@ ExpressionStatement@@Assignment:iType=PeriodType.standard() @AT@ 10014 @LENGTH@ 29
+------INS SimpleName@@iType @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10014 @LENGTH@ 5
+------INS Operator@@= @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10019 @LENGTH@ 1
+------INS MethodInvocation@@PeriodType.standard() @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10022 @LENGTH@ 21
+---------INS SimpleName@@Name:PeriodType @TO@ MethodInvocation@@PeriodType.standard() @AT@ 10022 @LENGTH@ 10
+---------INS SimpleName@@MethodName:standard:[] @TO@ MethodInvocation@@PeriodType.standard() @AT@ 10033 @LENGTH@ 10
+, INS ExpressionStatement@@Assignment:iValues=new int[8] @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10053 @LENGTH@ 21
+---INS Assignment@@iValues=new int[8] @TO@ ExpressionStatement@@Assignment:iValues=new int[8] @AT@ 10053 @LENGTH@ 20
+------INS SimpleName@@iValues @TO@ Assignment@@iValues=new int[8] @AT@ 10053 @LENGTH@ 7
+------INS Operator@@= @TO@ Assignment@@iValues=new int[8] @AT@ 10060 @LENGTH@ 1
+------INS ArrayCreation@@new int[8] @TO@ Assignment@@iValues=new int[8] @AT@ 10063 @LENGTH@ 10
+---------INS ArrayType@@int[] @TO@ ArrayCreation@@new int[8] @AT@ 10067 @LENGTH@ 6
+------------INS PrimitiveType@@int @TO@ ArrayType@@int[] @AT@ 10067 @LENGTH@ 3
+---------INS NumberLiteral@@8 @TO@ ArrayCreation@@new int[8] @AT@ 10071 @LENGTH@ 1
+, INS ExpressionStatement@@MethodInvocation:System.arraycopy(values,0,iValues,4,4) @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10083 @LENGTH@ 43
+---INS MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @TO@ ExpressionStatement@@MethodInvocation:System.arraycopy(values,0,iValues,4,4) @AT@ 10083 @LENGTH@ 42
+------INS SimpleName@@Name:System @TO@ MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @AT@ 10083 @LENGTH@ 6
+------INS SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @TO@ MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @AT@ 10090 @LENGTH@ 35
+---------INS SimpleName@@values @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10100 @LENGTH@ 6
+---------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10108 @LENGTH@ 1
+---------INS SimpleName@@iValues @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10111 @LENGTH@ 7
+---------INS NumberLiteral@@4 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10120 @LENGTH@ 1
+---------INS NumberLiteral@@4 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10123 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, MethodInvocation, OP2, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[DEL ConstructorInvocation@@this(duration,null,null); @AT@ 9862 @LENGTH@ 27
+---DEL SimpleName@@duration @AT@ 9867 @LENGTH@ 8
+---DEL NullLiteral@@null @AT@ 9877 @LENGTH@ 4
+---DEL NullLiteral@@null @AT@ 9883 @LENGTH@ 4
+, INS ExpressionStatement@@Assignment:iType=PeriodType.time() @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 9904 @LENGTH@ 26
+---INS Assignment@@iType=PeriodType.time() @TO@ ExpressionStatement@@Assignment:iType=PeriodType.time() @AT@ 9904 @LENGTH@ 25
+------INS SimpleName@@iType @TO@ Assignment@@iType=PeriodType.time() @AT@ 9904 @LENGTH@ 5
+------INS Operator@@= @TO@ Assignment@@iType=PeriodType.time() @AT@ 9909 @LENGTH@ 1
+------INS MethodInvocation@@PeriodType.time() @TO@ Assignment@@iType=PeriodType.time() @AT@ 9912 @LENGTH@ 17
+---------INS SimpleName@@Name:PeriodType @TO@ MethodInvocation@@PeriodType.time() @AT@ 9912 @LENGTH@ 10
+---------INS SimpleName@@MethodName:time:[] @TO@ MethodInvocation@@PeriodType.time() @AT@ 9923 @LENGTH@ 6
+, INS VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 9939 @LENGTH@ 66
+---INS ArrayType@@int[] @TO@ VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @AT@ 9939 @LENGTH@ 5
+------INS PrimitiveType@@int @TO@ ArrayType@@int[] @AT@ 9939 @LENGTH@ 3
+---INS VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @TO@ VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @AT@ 9945 @LENGTH@ 59
+------INS SimpleName@@values @TO@ VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9945 @LENGTH@ 6
+------INS MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @TO@ VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 50
+---------INS SimpleName@@Name:ISOChronology @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 13
+---------INS MethodInvocation@@MethodName:getInstanceUTC:[] @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 30
+---------INS SimpleName@@MethodName:get:[this, duration] @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9985 @LENGTH@ 19
+------------INS ThisExpression@@this @TO@ SimpleName@@MethodName:get:[this, duration] @AT@ 9989 @LENGTH@ 4
+------------INS SimpleName@@duration @TO@ SimpleName@@MethodName:get:[this, duration] @AT@ 9995 @LENGTH@ 8
+, INS ExpressionStatement@@Assignment:iType=PeriodType.standard() @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10014 @LENGTH@ 30
+---INS Assignment@@iType=PeriodType.standard() @TO@ ExpressionStatement@@Assignment:iType=PeriodType.standard() @AT@ 10014 @LENGTH@ 29
+------INS SimpleName@@iType @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10014 @LENGTH@ 5
+------INS Operator@@= @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10019 @LENGTH@ 1
+------INS MethodInvocation@@PeriodType.standard() @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10022 @LENGTH@ 21
+---------INS SimpleName@@Name:PeriodType @TO@ MethodInvocation@@PeriodType.standard() @AT@ 10022 @LENGTH@ 10
+---------INS SimpleName@@MethodName:standard:[] @TO@ MethodInvocation@@PeriodType.standard() @AT@ 10033 @LENGTH@ 10
+, INS ExpressionStatement@@Assignment:iValues=new int[8] @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10053 @LENGTH@ 21
+---INS Assignment@@iValues=new int[8] @TO@ ExpressionStatement@@Assignment:iValues=new int[8] @AT@ 10053 @LENGTH@ 20
+------INS SimpleName@@iValues @TO@ Assignment@@iValues=new int[8] @AT@ 10053 @LENGTH@ 7
+------INS Operator@@= @TO@ Assignment@@iValues=new int[8] @AT@ 10060 @LENGTH@ 1
+------INS ArrayCreation@@new int[8] @TO@ Assignment@@iValues=new int[8] @AT@ 10063 @LENGTH@ 10
+---------INS ArrayType@@int[] @TO@ ArrayCreation@@new int[8] @AT@ 10067 @LENGTH@ 6
+------------INS PrimitiveType@@int @TO@ ArrayType@@int[] @AT@ 10067 @LENGTH@ 3
+---------INS NumberLiteral@@8 @TO@ ArrayCreation@@new int[8] @AT@ 10071 @LENGTH@ 1
+, INS ExpressionStatement@@MethodInvocation:System.arraycopy(values,0,iValues,4,4) @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10083 @LENGTH@ 43
+---INS MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @TO@ ExpressionStatement@@MethodInvocation:System.arraycopy(values,0,iValues,4,4) @AT@ 10083 @LENGTH@ 42
+------INS SimpleName@@Name:System @TO@ MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @AT@ 10083 @LENGTH@ 6
+------INS SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @TO@ MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @AT@ 10090 @LENGTH@ 35
+---------INS SimpleName@@values @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10100 @LENGTH@ 6
+---------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10108 @LENGTH@ 1
+---------INS SimpleName@@iValues @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10111 @LENGTH@ 7
+---------INS NumberLiteral@@4 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10120 @LENGTH@ 1
+---------INS NumberLiteral@@4 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10123 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP4)
+OP2:   (INS, ArrayType, OP1, OP3)
+OP3:      (INS, PrimitiveType, OP2, null)
+OP4:   (INS, VariableDeclarationFragment, OP1, OP5 OP6)
+OP5:      (INS, SimpleName, OP4, null)
+OP6:      (INS, MethodInvocation, OP4, OP7 OP8 OP9)
+OP7:         (INS, SimpleName, OP6, null)
+OP8:         (INS, MethodInvocation, OP6, null)
+OP9:         (INS, SimpleName, OP6, OP10 OP11)
+OP10:            (INS, ThisExpression, OP9, null)
+OP11:            (INS, SimpleName, OP9, null)
+
+
+
+
+
+hASList: 
+[DEL ConstructorInvocation@@this(duration,null,null); @AT@ 9862 @LENGTH@ 27
+---DEL SimpleName@@duration @AT@ 9867 @LENGTH@ 8
+---DEL NullLiteral@@null @AT@ 9877 @LENGTH@ 4
+---DEL NullLiteral@@null @AT@ 9883 @LENGTH@ 4
+, INS ExpressionStatement@@Assignment:iType=PeriodType.time() @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 9904 @LENGTH@ 26
+---INS Assignment@@iType=PeriodType.time() @TO@ ExpressionStatement@@Assignment:iType=PeriodType.time() @AT@ 9904 @LENGTH@ 25
+------INS SimpleName@@iType @TO@ Assignment@@iType=PeriodType.time() @AT@ 9904 @LENGTH@ 5
+------INS Operator@@= @TO@ Assignment@@iType=PeriodType.time() @AT@ 9909 @LENGTH@ 1
+------INS MethodInvocation@@PeriodType.time() @TO@ Assignment@@iType=PeriodType.time() @AT@ 9912 @LENGTH@ 17
+---------INS SimpleName@@Name:PeriodType @TO@ MethodInvocation@@PeriodType.time() @AT@ 9912 @LENGTH@ 10
+---------INS SimpleName@@MethodName:time:[] @TO@ MethodInvocation@@PeriodType.time() @AT@ 9923 @LENGTH@ 6
+, INS VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 9939 @LENGTH@ 66
+---INS ArrayType@@int[] @TO@ VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @AT@ 9939 @LENGTH@ 5
+------INS PrimitiveType@@int @TO@ ArrayType@@int[] @AT@ 9939 @LENGTH@ 3
+---INS VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @TO@ VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @AT@ 9945 @LENGTH@ 59
+------INS SimpleName@@values @TO@ VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9945 @LENGTH@ 6
+------INS MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @TO@ VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 50
+---------INS SimpleName@@Name:ISOChronology @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 13
+---------INS MethodInvocation@@MethodName:getInstanceUTC:[] @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 30
+---------INS SimpleName@@MethodName:get:[this, duration] @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9985 @LENGTH@ 19
+------------INS ThisExpression@@this @TO@ SimpleName@@MethodName:get:[this, duration] @AT@ 9989 @LENGTH@ 4
+------------INS SimpleName@@duration @TO@ SimpleName@@MethodName:get:[this, duration] @AT@ 9995 @LENGTH@ 8
+, INS ExpressionStatement@@Assignment:iType=PeriodType.standard() @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10014 @LENGTH@ 30
+---INS Assignment@@iType=PeriodType.standard() @TO@ ExpressionStatement@@Assignment:iType=PeriodType.standard() @AT@ 10014 @LENGTH@ 29
+------INS SimpleName@@iType @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10014 @LENGTH@ 5
+------INS Operator@@= @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10019 @LENGTH@ 1
+------INS MethodInvocation@@PeriodType.standard() @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10022 @LENGTH@ 21
+---------INS SimpleName@@Name:PeriodType @TO@ MethodInvocation@@PeriodType.standard() @AT@ 10022 @LENGTH@ 10
+---------INS SimpleName@@MethodName:standard:[] @TO@ MethodInvocation@@PeriodType.standard() @AT@ 10033 @LENGTH@ 10
+, INS ExpressionStatement@@Assignment:iValues=new int[8] @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10053 @LENGTH@ 21
+---INS Assignment@@iValues=new int[8] @TO@ ExpressionStatement@@Assignment:iValues=new int[8] @AT@ 10053 @LENGTH@ 20
+------INS SimpleName@@iValues @TO@ Assignment@@iValues=new int[8] @AT@ 10053 @LENGTH@ 7
+------INS Operator@@= @TO@ Assignment@@iValues=new int[8] @AT@ 10060 @LENGTH@ 1
+------INS ArrayCreation@@new int[8] @TO@ Assignment@@iValues=new int[8] @AT@ 10063 @LENGTH@ 10
+---------INS ArrayType@@int[] @TO@ ArrayCreation@@new int[8] @AT@ 10067 @LENGTH@ 6
+------------INS PrimitiveType@@int @TO@ ArrayType@@int[] @AT@ 10067 @LENGTH@ 3
+---------INS NumberLiteral@@8 @TO@ ArrayCreation@@new int[8] @AT@ 10071 @LENGTH@ 1
+, INS ExpressionStatement@@MethodInvocation:System.arraycopy(values,0,iValues,4,4) @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10083 @LENGTH@ 43
+---INS MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @TO@ ExpressionStatement@@MethodInvocation:System.arraycopy(values,0,iValues,4,4) @AT@ 10083 @LENGTH@ 42
+------INS SimpleName@@Name:System @TO@ MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @AT@ 10083 @LENGTH@ 6
+------INS SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @TO@ MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @AT@ 10090 @LENGTH@ 35
+---------INS SimpleName@@values @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10100 @LENGTH@ 6
+---------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10108 @LENGTH@ 1
+---------INS SimpleName@@iValues @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10111 @LENGTH@ 7
+---------INS NumberLiteral@@4 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10120 @LENGTH@ 1
+---------INS NumberLiteral@@4 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10123 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, MethodInvocation, OP2, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[DEL ConstructorInvocation@@this(duration,null,null); @AT@ 9862 @LENGTH@ 27
+---DEL SimpleName@@duration @AT@ 9867 @LENGTH@ 8
+---DEL NullLiteral@@null @AT@ 9877 @LENGTH@ 4
+---DEL NullLiteral@@null @AT@ 9883 @LENGTH@ 4
+, INS ExpressionStatement@@Assignment:iType=PeriodType.time() @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 9904 @LENGTH@ 26
+---INS Assignment@@iType=PeriodType.time() @TO@ ExpressionStatement@@Assignment:iType=PeriodType.time() @AT@ 9904 @LENGTH@ 25
+------INS SimpleName@@iType @TO@ Assignment@@iType=PeriodType.time() @AT@ 9904 @LENGTH@ 5
+------INS Operator@@= @TO@ Assignment@@iType=PeriodType.time() @AT@ 9909 @LENGTH@ 1
+------INS MethodInvocation@@PeriodType.time() @TO@ Assignment@@iType=PeriodType.time() @AT@ 9912 @LENGTH@ 17
+---------INS SimpleName@@Name:PeriodType @TO@ MethodInvocation@@PeriodType.time() @AT@ 9912 @LENGTH@ 10
+---------INS SimpleName@@MethodName:time:[] @TO@ MethodInvocation@@PeriodType.time() @AT@ 9923 @LENGTH@ 6
+, INS VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 9939 @LENGTH@ 66
+---INS ArrayType@@int[] @TO@ VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @AT@ 9939 @LENGTH@ 5
+------INS PrimitiveType@@int @TO@ ArrayType@@int[] @AT@ 9939 @LENGTH@ 3
+---INS VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @TO@ VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @AT@ 9945 @LENGTH@ 59
+------INS SimpleName@@values @TO@ VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9945 @LENGTH@ 6
+------INS MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @TO@ VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 50
+---------INS SimpleName@@Name:ISOChronology @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 13
+---------INS MethodInvocation@@MethodName:getInstanceUTC:[] @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 30
+---------INS SimpleName@@MethodName:get:[this, duration] @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9985 @LENGTH@ 19
+------------INS ThisExpression@@this @TO@ SimpleName@@MethodName:get:[this, duration] @AT@ 9989 @LENGTH@ 4
+------------INS SimpleName@@duration @TO@ SimpleName@@MethodName:get:[this, duration] @AT@ 9995 @LENGTH@ 8
+, INS ExpressionStatement@@Assignment:iType=PeriodType.standard() @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10014 @LENGTH@ 30
+---INS Assignment@@iType=PeriodType.standard() @TO@ ExpressionStatement@@Assignment:iType=PeriodType.standard() @AT@ 10014 @LENGTH@ 29
+------INS SimpleName@@iType @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10014 @LENGTH@ 5
+------INS Operator@@= @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10019 @LENGTH@ 1
+------INS MethodInvocation@@PeriodType.standard() @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10022 @LENGTH@ 21
+---------INS SimpleName@@Name:PeriodType @TO@ MethodInvocation@@PeriodType.standard() @AT@ 10022 @LENGTH@ 10
+---------INS SimpleName@@MethodName:standard:[] @TO@ MethodInvocation@@PeriodType.standard() @AT@ 10033 @LENGTH@ 10
+, INS ExpressionStatement@@Assignment:iValues=new int[8] @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10053 @LENGTH@ 21
+---INS Assignment@@iValues=new int[8] @TO@ ExpressionStatement@@Assignment:iValues=new int[8] @AT@ 10053 @LENGTH@ 20
+------INS SimpleName@@iValues @TO@ Assignment@@iValues=new int[8] @AT@ 10053 @LENGTH@ 7
+------INS Operator@@= @TO@ Assignment@@iValues=new int[8] @AT@ 10060 @LENGTH@ 1
+------INS ArrayCreation@@new int[8] @TO@ Assignment@@iValues=new int[8] @AT@ 10063 @LENGTH@ 10
+---------INS ArrayType@@int[] @TO@ ArrayCreation@@new int[8] @AT@ 10067 @LENGTH@ 6
+------------INS PrimitiveType@@int @TO@ ArrayType@@int[] @AT@ 10067 @LENGTH@ 3
+---------INS NumberLiteral@@8 @TO@ ArrayCreation@@new int[8] @AT@ 10071 @LENGTH@ 1
+, INS ExpressionStatement@@MethodInvocation:System.arraycopy(values,0,iValues,4,4) @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10083 @LENGTH@ 43
+---INS MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @TO@ ExpressionStatement@@MethodInvocation:System.arraycopy(values,0,iValues,4,4) @AT@ 10083 @LENGTH@ 42
+------INS SimpleName@@Name:System @TO@ MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @AT@ 10083 @LENGTH@ 6
+------INS SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @TO@ MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @AT@ 10090 @LENGTH@ 35
+---------INS SimpleName@@values @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10100 @LENGTH@ 6
+---------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10108 @LENGTH@ 1
+---------INS SimpleName@@iValues @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10111 @LENGTH@ 7
+---------INS NumberLiteral@@4 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10120 @LENGTH@ 1
+---------INS NumberLiteral@@4 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10123 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, ArrayCreation, OP2, OP6 OP8)
+OP6:         (INS, ArrayType, OP5, OP7)
+OP7:            (INS, PrimitiveType, OP6, null)
+OP8:         (INS, NumberLiteral, OP5, null)
+
+
+
+
+
+hASList: 
+[DEL ConstructorInvocation@@this(duration,null,null); @AT@ 9862 @LENGTH@ 27
+---DEL SimpleName@@duration @AT@ 9867 @LENGTH@ 8
+---DEL NullLiteral@@null @AT@ 9877 @LENGTH@ 4
+---DEL NullLiteral@@null @AT@ 9883 @LENGTH@ 4
+, INS ExpressionStatement@@Assignment:iType=PeriodType.time() @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 9904 @LENGTH@ 26
+---INS Assignment@@iType=PeriodType.time() @TO@ ExpressionStatement@@Assignment:iType=PeriodType.time() @AT@ 9904 @LENGTH@ 25
+------INS SimpleName@@iType @TO@ Assignment@@iType=PeriodType.time() @AT@ 9904 @LENGTH@ 5
+------INS Operator@@= @TO@ Assignment@@iType=PeriodType.time() @AT@ 9909 @LENGTH@ 1
+------INS MethodInvocation@@PeriodType.time() @TO@ Assignment@@iType=PeriodType.time() @AT@ 9912 @LENGTH@ 17
+---------INS SimpleName@@Name:PeriodType @TO@ MethodInvocation@@PeriodType.time() @AT@ 9912 @LENGTH@ 10
+---------INS SimpleName@@MethodName:time:[] @TO@ MethodInvocation@@PeriodType.time() @AT@ 9923 @LENGTH@ 6
+, INS VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 9939 @LENGTH@ 66
+---INS ArrayType@@int[] @TO@ VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @AT@ 9939 @LENGTH@ 5
+------INS PrimitiveType@@int @TO@ ArrayType@@int[] @AT@ 9939 @LENGTH@ 3
+---INS VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @TO@ VariableDeclarationStatement@@int[] values=ISOChronology.getInstanceUTC().get(this,duration); @AT@ 9945 @LENGTH@ 59
+------INS SimpleName@@values @TO@ VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9945 @LENGTH@ 6
+------INS MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @TO@ VariableDeclarationFragment@@values=ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 50
+---------INS SimpleName@@Name:ISOChronology @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 13
+---------INS MethodInvocation@@MethodName:getInstanceUTC:[] @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9954 @LENGTH@ 30
+---------INS SimpleName@@MethodName:get:[this, duration] @TO@ MethodInvocation@@ISOChronology.getInstanceUTC().get(this,duration) @AT@ 9985 @LENGTH@ 19
+------------INS ThisExpression@@this @TO@ SimpleName@@MethodName:get:[this, duration] @AT@ 9989 @LENGTH@ 4
+------------INS SimpleName@@duration @TO@ SimpleName@@MethodName:get:[this, duration] @AT@ 9995 @LENGTH@ 8
+, INS ExpressionStatement@@Assignment:iType=PeriodType.standard() @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10014 @LENGTH@ 30
+---INS Assignment@@iType=PeriodType.standard() @TO@ ExpressionStatement@@Assignment:iType=PeriodType.standard() @AT@ 10014 @LENGTH@ 29
+------INS SimpleName@@iType @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10014 @LENGTH@ 5
+------INS Operator@@= @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10019 @LENGTH@ 1
+------INS MethodInvocation@@PeriodType.standard() @TO@ Assignment@@iType=PeriodType.standard() @AT@ 10022 @LENGTH@ 21
+---------INS SimpleName@@Name:PeriodType @TO@ MethodInvocation@@PeriodType.standard() @AT@ 10022 @LENGTH@ 10
+---------INS SimpleName@@MethodName:standard:[] @TO@ MethodInvocation@@PeriodType.standard() @AT@ 10033 @LENGTH@ 10
+, INS ExpressionStatement@@Assignment:iValues=new int[8] @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10053 @LENGTH@ 21
+---INS Assignment@@iValues=new int[8] @TO@ ExpressionStatement@@Assignment:iValues=new int[8] @AT@ 10053 @LENGTH@ 20
+------INS SimpleName@@iValues @TO@ Assignment@@iValues=new int[8] @AT@ 10053 @LENGTH@ 7
+------INS Operator@@= @TO@ Assignment@@iValues=new int[8] @AT@ 10060 @LENGTH@ 1
+------INS ArrayCreation@@new int[8] @TO@ Assignment@@iValues=new int[8] @AT@ 10063 @LENGTH@ 10
+---------INS ArrayType@@int[] @TO@ ArrayCreation@@new int[8] @AT@ 10067 @LENGTH@ 6
+------------INS PrimitiveType@@int @TO@ ArrayType@@int[] @AT@ 10067 @LENGTH@ 3
+---------INS NumberLiteral@@8 @TO@ ArrayCreation@@new int[8] @AT@ 10071 @LENGTH@ 1
+, INS ExpressionStatement@@MethodInvocation:System.arraycopy(values,0,iValues,4,4) @TO@ MethodDeclaration@@protected, @@=CONSTRUCTOR=, MethodName:BasePeriod, @@Argus:long+duration+ @AT@ 10083 @LENGTH@ 43
+---INS MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @TO@ ExpressionStatement@@MethodInvocation:System.arraycopy(values,0,iValues,4,4) @AT@ 10083 @LENGTH@ 42
+------INS SimpleName@@Name:System @TO@ MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @AT@ 10083 @LENGTH@ 6
+------INS SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @TO@ MethodInvocation@@System.arraycopy(values,0,iValues,4,4) @AT@ 10090 @LENGTH@ 35
+---------INS SimpleName@@values @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10100 @LENGTH@ 6
+---------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10108 @LENGTH@ 1
+---------INS SimpleName@@iValues @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10111 @LENGTH@ 7
+---------INS NumberLiteral@@4 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10120 @LENGTH@ 1
+---------INS NumberLiteral@@4 @TO@ SimpleName@@MethodName:arraycopy:[values, 0, iValues, 4, 4] @AT@ 10123 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, OP3 OP4)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, SimpleName, OP2, OP5 OP6 OP7 OP8 OP9)
+OP5:         (INS, SimpleName, OP4, null)
+OP6:         (INS, NumberLiteral, OP4, null)
+OP7:         (INS, SimpleName, OP4, null)
+OP8:         (INS, NumberLiteral, OP4, null)
+OP9:         (INS, NumberLiteral, OP4, null)
+
+
+

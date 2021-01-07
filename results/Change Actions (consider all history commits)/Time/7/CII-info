@@ -1,0 +1,48 @@
+
+
+hASList: 
+[MOV VariableDeclarationStatement@@int defaultYear=chrono.year().get(instantLocal); @TO@ MethodDeclaration@@public, @@int, MethodName:parseInto, @@Argus:ReadWritableInstant+instant+String+text+int+position+ @AT@ 27005 @LENGTH@ 50
+, UPD VariableDeclarationStatement@@int defaultYear=chrono.year().get(instantLocal); @TO@ int defaultYear=DateTimeUtils.getChronology(chrono).year().get(instantMillis); @AT@ 27005 @LENGTH@ 50
+---UPD VariableDeclarationFragment@@defaultYear=chrono.year().get(instantLocal) @TO@ defaultYear=DateTimeUtils.getChronology(chrono).year().get(instantMillis) @AT@ 27009 @LENGTH@ 45
+------UPD MethodInvocation@@chrono.year().get(instantLocal) @TO@ DateTimeUtils.getChronology(chrono).year().get(instantMillis) @AT@ 27023 @LENGTH@ 31
+---------INS SimpleName@@Name:DateTimeUtils @TO@ MethodInvocation@@chrono.year().get(instantLocal) @AT@ 26893 @LENGTH@ 13
+---------INS MethodInvocation@@MethodName:getChronology:[chrono] @TO@ MethodInvocation@@chrono.year().get(instantLocal) @AT@ 26893 @LENGTH@ 35
+------------MOV SimpleName@@Name:chrono @TO@ MethodInvocation@@MethodName:getChronology:[chrono] @AT@ 27023 @LENGTH@ 6
+---------UPD SimpleName@@Name:chrono @TO@ chrono @AT@ 27023 @LENGTH@ 6
+---------UPD SimpleName@@MethodName:get:[instantLocal] @TO@ MethodName:get:[instantMillis] @AT@ 27037 @LENGTH@ 17
+------------UPD SimpleName@@instantLocal @TO@ instantMillis @AT@ 27041 @LENGTH@ 12
+]
+
+CII:
+OP1:(MOV, VariableDeclarationStatement, null, null)
+
+
+
+
+
+hASList: 
+[MOV VariableDeclarationStatement@@int defaultYear=chrono.year().get(instantLocal); @TO@ MethodDeclaration@@public, @@int, MethodName:parseInto, @@Argus:ReadWritableInstant+instant+String+text+int+position+ @AT@ 27005 @LENGTH@ 50
+, UPD VariableDeclarationStatement@@int defaultYear=chrono.year().get(instantLocal); @TO@ int defaultYear=DateTimeUtils.getChronology(chrono).year().get(instantMillis); @AT@ 27005 @LENGTH@ 50
+---UPD VariableDeclarationFragment@@defaultYear=chrono.year().get(instantLocal) @TO@ defaultYear=DateTimeUtils.getChronology(chrono).year().get(instantMillis) @AT@ 27009 @LENGTH@ 45
+------UPD MethodInvocation@@chrono.year().get(instantLocal) @TO@ DateTimeUtils.getChronology(chrono).year().get(instantMillis) @AT@ 27023 @LENGTH@ 31
+---------INS SimpleName@@Name:DateTimeUtils @TO@ MethodInvocation@@chrono.year().get(instantLocal) @AT@ 26893 @LENGTH@ 13
+---------INS MethodInvocation@@MethodName:getChronology:[chrono] @TO@ MethodInvocation@@chrono.year().get(instantLocal) @AT@ 26893 @LENGTH@ 35
+------------MOV SimpleName@@Name:chrono @TO@ MethodInvocation@@MethodName:getChronology:[chrono] @AT@ 27023 @LENGTH@ 6
+---------UPD SimpleName@@Name:chrono @TO@ chrono @AT@ 27023 @LENGTH@ 6
+---------UPD SimpleName@@MethodName:get:[instantLocal] @TO@ MethodName:get:[instantMillis] @AT@ 27037 @LENGTH@ 17
+------------UPD SimpleName@@instantLocal @TO@ instantMillis @AT@ 27041 @LENGTH@ 12
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, MethodInvocation, OP2, OP4 OP5 OP7 OP8)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, MethodInvocation, OP3, OP6)
+OP6:            (MOV, SimpleName, OP5, null)
+OP7:         (UPD, SimpleName, OP3, null)
+OP8:         (UPD, SimpleName, OP3, OP9)
+OP9:            (UPD, SimpleName, OP8, null)
+
+
+

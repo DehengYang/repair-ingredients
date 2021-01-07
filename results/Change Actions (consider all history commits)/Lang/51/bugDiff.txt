@@ -1,0 +1,12 @@
+
+diff -Naur ../d4j-repo/Lang/Lang_51/src/java/org/apache/commons/lang/BooleanUtils.java ../d4j-repo/fixed_bugs_dir/Lang/Lang_51/src/java/org/apache/commons/lang/BooleanUtils.java
+--- ../d4j-repo/Lang/Lang_51/src/java/org/apache/commons/lang/BooleanUtils.java	2021-01-04 13:18:04.262020047 -0800
++++ ../d4j-repo/fixed_bugs_dir/Lang/Lang_51/src/java/org/apache/commons/lang/BooleanUtils.java	2021-01-04 13:18:07.810153274 -0800
+@@ -679,6 +679,7 @@
+                         (str.charAt(1) == 'E' || str.charAt(1) == 'e') &&
+                         (str.charAt(2) == 'S' || str.charAt(2) == 's');
+                 }
++                return false;
+             }
+             case 4: {
+                 char ch = str.charAt(0);

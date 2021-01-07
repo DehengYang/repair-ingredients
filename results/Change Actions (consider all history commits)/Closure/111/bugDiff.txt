@@ -1,0 +1,14 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_111/src/com/google/javascript/jscomp/type/ClosureReverseAbstractInterpreter.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_111/src/com/google/javascript/jscomp/type/ClosureReverseAbstractInterpreter.java
+--- ../d4j-repo/Closure/Closure_111/src/com/google/javascript/jscomp/type/ClosureReverseAbstractInterpreter.java	2021-01-06 03:47:55.172496115 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_111/src/com/google/javascript/jscomp/type/ClosureReverseAbstractInterpreter.java	2021-01-06 03:47:58.192598986 -0800
+@@ -51,7 +51,8 @@
+       new RestrictByTrueTypeOfResultVisitor() {
+         @Override
+         protected JSType caseTopType(JSType topType) {
+-          return topType;
++          return topType.isAllType() ?
++              getNativeType(ARRAY_TYPE) : topType;
+         }
+ 
+         @Override

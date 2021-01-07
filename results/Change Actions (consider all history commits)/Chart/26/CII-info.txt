@@ -1,0 +1,23 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:owner != null @TO@ IfStatement@@InfixExpression:plotState != null && hotspot != null @AT@ 41018 @LENGTH@ 304
+---INS InfixExpression@@owner != null @TO@ IfStatement@@InfixExpression:owner != null @AT@ 41022 @LENGTH@ 13
+------INS SimpleName@@owner @TO@ InfixExpression@@owner != null @AT@ 41022 @LENGTH@ 5
+------INS Operator@@!= @TO@ InfixExpression@@owner != null @AT@ 41027 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@owner != null @AT@ 41031 @LENGTH@ 4
+---MOV VariableDeclarationStatement@@EntityCollection entities=owner.getEntityCollection(); @TO@ IfStatement@@InfixExpression:owner != null @AT@ 41022 @LENGTH@ 56
+---MOV IfStatement@@InfixExpression:entities != null @TO@ IfStatement@@InfixExpression:owner != null @AT@ 41096 @LENGTH@ 177
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6 OP7)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, NullLiteral, OP2, null)
+OP6:   (MOV, VariableDeclarationStatement, OP1, null)
+OP7:   (MOV, IfStatement, OP1, null)
+
+
+

@@ -1,0 +1,28 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_36/src/java/org/apache/commons/lang3/math/NumberUtils.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_36/src/java/org/apache/commons/lang3/math/NumberUtils.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_36/src/java/org/apache/commons/lang3/math/NumberUtils.java	2020-01-05 05:28:45.353712133 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_36/src/java/org/apache/commons/lang3/math/NumberUtils.java	2020-01-05 05:28:48.793683402 -0800
+@@ -488,7 +488,7 @@
+             }
+             dec = null;
+         }
+-        if (!Character.isDigit(lastChar)) {
++        if (!Character.isDigit(lastChar) && lastChar != '.') {
+             if (expPos > -1 && expPos < str.length() - 1) {
+                 exp = str.substring(expPos + 1, str.length() - 1);
+             } else {
+@@ -1385,6 +1385,14 @@
+                 // can't have an E at the last byte
+                 return false;
+             }
++            if (chars[i] == '.') {
++                if (hasDecPoint || hasExp) {
++                    // two decimal points or dec in exponent
++                    return false;
++                }
++                // single trailing decimal point after non-exponent is ok
++                return foundDigit;
++            }
+             if (!allowSigns
+                 && (chars[i] == 'd'
+                     || chars[i] == 'D'

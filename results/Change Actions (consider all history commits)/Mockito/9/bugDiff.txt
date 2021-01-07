@@ -1,0 +1,25 @@
+
+diff -Naur ../d4j-repo/Mockito/Mockito_9/src/org/mockito/internal/stubbing/answers/CallsRealMethods.java ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_9/src/org/mockito/internal/stubbing/answers/CallsRealMethods.java
+--- ../d4j-repo/Mockito/Mockito_9/src/org/mockito/internal/stubbing/answers/CallsRealMethods.java	2021-01-06 03:34:30.537095376 -0800
++++ ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_9/src/org/mockito/internal/stubbing/answers/CallsRealMethods.java	2021-01-06 03:34:34.161218758 -0800
+@@ -5,7 +5,9 @@
+ package org.mockito.internal.stubbing.answers;
+ 
+ import java.io.Serializable;
++import java.lang.reflect.Modifier;
+ 
++import org.mockito.internal.stubbing.defaultanswers.GloballyConfiguredAnswer;
+ import org.mockito.invocation.InvocationOnMock;
+ import org.mockito.stubbing.Answer;
+ 
+@@ -33,6 +35,9 @@
+     private static final long serialVersionUID = 9057165148930624087L;
+ 
+     public Object answer(InvocationOnMock invocation) throws Throwable {
++    	if (Modifier.isAbstract(invocation.getMethod().getModifiers())) {
++    		return new GloballyConfiguredAnswer().answer(invocation);
++    	}
+         return invocation.callRealMethod();
+     }
+ }
+\ No newline at end of file

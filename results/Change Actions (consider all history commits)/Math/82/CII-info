@@ -1,0 +1,15 @@
+
+
+hASList: 
+[UPD IfStatement@@InfixExpression:MathUtils.compareTo(entry,0,epsilon) >= 0 @TO@ InfixExpression:MathUtils.compareTo(entry,0,epsilon) > 0 @AT@ 3193 @LENGTH@ 248
+---UPD InfixExpression@@MathUtils.compareTo(entry,0,epsilon) >= 0 @TO@ MathUtils.compareTo(entry,0,epsilon) > 0 @AT@ 3197 @LENGTH@ 43
+------UPD Operator@@>= @TO@ > @AT@ 3235 @LENGTH@ 2
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (UPD, InfixExpression, OP1, OP3)
+OP3:      (UPD, Operator, OP2, null)
+
+
+

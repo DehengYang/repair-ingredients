@@ -1,0 +1,144 @@
+
+
+hASList: 
+[UPD EnhancedForStatement@@Map.Entry<TypeVariable<?>,Type> entry, MethodInvocation:toTypeVarAssigns.entrySet() @TO@ TypeVariable<?> var, MethodInvocation:toTypeVarAssigns.keySet() @AT@ 8126 @LENGTH@ 686
+---UPD SingleVariableDeclaration@@Map.Entry<TypeVariable<?>,Type> entry @TO@ TypeVariable<?> var @AT@ 8131 @LENGTH@ 38
+------INS ParameterizedType@@TypeVariable<?> @TO@ SingleVariableDeclaration@@Map.Entry<TypeVariable<?>,Type> entry @AT@ 8131 @LENGTH@ 15
+---------MOV SimpleType@@TypeVariable @TO@ ParameterizedType@@TypeVariable<?> @AT@ 8141 @LENGTH@ 12
+---------MOV WildcardType@@? @TO@ ParameterizedType@@TypeVariable<?> @AT@ 8154 @LENGTH@ 1
+------DEL ParameterizedType@@Map.Entry<TypeVariable<?>,Type> @AT@ 8131 @LENGTH@ 32
+---------DEL SimpleType@@Map.Entry @AT@ 8131 @LENGTH@ 9
+---------DEL ParameterizedType@@TypeVariable<?> @AT@ 8141 @LENGTH@ 15
+---------DEL SimpleType@@Type @AT@ 8158 @LENGTH@ 4
+------UPD SimpleName@@entry @TO@ var @AT@ 8164 @LENGTH@ 5
+---UPD MethodInvocation@@toTypeVarAssigns.entrySet() @TO@ toTypeVarAssigns.keySet() @AT@ 8172 @LENGTH@ 27
+------UPD SimpleName@@MethodName:entrySet:[] @TO@ MethodName:keySet:[] @AT@ 8189 @LENGTH@ 10
+---UPD VariableDeclarationStatement@@Type toTypeArg=entry.getValue(); @TO@ Type toTypeArg=unrollVariableAssignments(var,toTypeVarAssigns); @AT@ 8215 @LENGTH@ 34
+------UPD VariableDeclarationFragment@@toTypeArg=entry.getValue() @TO@ toTypeArg=unrollVariableAssignments(var,toTypeVarAssigns) @AT@ 8220 @LENGTH@ 28
+---------UPD MethodInvocation@@entry.getValue() @TO@ unrollVariableAssignments(var,toTypeVarAssigns) @AT@ 8232 @LENGTH@ 16
+------------INS SimpleName@@MethodName:unrollVariableAssignments:[var, toTypeVarAssigns] @TO@ MethodInvocation@@entry.getValue() @AT@ 8211 @LENGTH@ 48
+---------------INS SimpleName@@var @TO@ SimpleName@@MethodName:unrollVariableAssignments:[var, toTypeVarAssigns] @AT@ 8237 @LENGTH@ 3
+---------------INS SimpleName@@toTypeVarAssigns @TO@ SimpleName@@MethodName:unrollVariableAssignments:[var, toTypeVarAssigns] @AT@ 8242 @LENGTH@ 16
+------------DEL SimpleName@@Name:entry @AT@ 8232 @LENGTH@ 5
+------------DEL SimpleName@@MethodName:getValue:[] @AT@ 8238 @LENGTH@ 10
+---UPD VariableDeclarationStatement@@Type fromTypeArg=fromTypeVarAssigns.get(entry.getKey()); @TO@ Type fromTypeArg=unrollVariableAssignments(var,fromTypeVarAssigns); @AT@ 8262 @LENGTH@ 58
+------UPD VariableDeclarationFragment@@fromTypeArg=fromTypeVarAssigns.get(entry.getKey()) @TO@ fromTypeArg=unrollVariableAssignments(var,fromTypeVarAssigns) @AT@ 8267 @LENGTH@ 52
+---------UPD MethodInvocation@@fromTypeVarAssigns.get(entry.getKey()) @TO@ unrollVariableAssignments(var,fromTypeVarAssigns) @AT@ 8281 @LENGTH@ 38
+------------DEL SimpleName@@Name:fromTypeVarAssigns @AT@ 8281 @LENGTH@ 18
+------------UPD SimpleName@@MethodName:get:[entry.getKey()] @TO@ MethodName:unrollVariableAssignments:[var, fromTypeVarAssigns] @AT@ 8300 @LENGTH@ 19
+---------------DEL MethodInvocation@@entry.getKey() @AT@ 8304 @LENGTH@ 14
+------------------DEL SimpleName@@Name:entry @AT@ 8304 @LENGTH@ 5
+------------------DEL SimpleName@@MethodName:getKey:[] @AT@ 8310 @LENGTH@ 8
+---------------INS SimpleName@@var @TO@ SimpleName@@MethodName:get:[entry.getKey()] @AT@ 8318 @LENGTH@ 3
+---------------INS SimpleName@@fromTypeVarAssigns @TO@ SimpleName@@MethodName:get:[entry.getKey()] @AT@ 8323 @LENGTH@ 18
+, UPD IfStatement@@InfixExpression:cls.getTypeParameters().length > 0 || toClass.equals(cls) @TO@ MethodInvocation:toClass.equals(cls) @AT@ 26477 @LENGTH@ 109
+---DEL InfixExpression@@cls.getTypeParameters().length > 0 || toClass.equals(cls) @AT@ 26481 @LENGTH@ 57
+------DEL InfixExpression@@cls.getTypeParameters().length > 0 @AT@ 26481 @LENGTH@ 34
+---------DEL FieldAccess@@cls.getTypeParameters().length @AT@ 26481 @LENGTH@ 30
+------------DEL MethodInvocation@@cls.getTypeParameters() @AT@ 26481 @LENGTH@ 23
+---------------DEL SimpleName@@Name:cls @AT@ 26481 @LENGTH@ 3
+---------------DEL SimpleName@@MethodName:getTypeParameters:[] @AT@ 26485 @LENGTH@ 19
+------------DEL SimpleName@@length @AT@ 26505 @LENGTH@ 6
+---------DEL Operator@@> @AT@ 26511 @LENGTH@ 1
+---------DEL NumberLiteral@@0 @AT@ 26514 @LENGTH@ 1
+------DEL Operator@@|| @AT@ 26515 @LENGTH@ 2
+---MOV MethodInvocation@@toClass.equals(cls) @TO@ IfStatement@@InfixExpression:cls.getTypeParameters().length > 0 || toClass.equals(cls) @AT@ 26519 @LENGTH@ 19
+]
+
+CII:
+OP1:(UPD, EnhancedForStatement, null, OP2 OP11 OP13 OP21)
+OP2:   (UPD, SingleVariableDeclaration, OP1, OP3 OP6 OP10)
+OP3:      (INS, ParameterizedType, OP2, OP4 OP5)
+OP4:         (MOV, SimpleType, OP3, null)
+OP5:         (MOV, WildcardType, OP3, null)
+OP6:      (DEL, ParameterizedType, OP2, OP7 OP8 OP9)
+OP7:         (DEL, SimpleType, OP6, null)
+OP8:         (DEL, ParameterizedType, OP6, null)
+OP9:         (DEL, SimpleType, OP6, null)
+OP10:      (UPD, SimpleName, OP2, null)
+OP11:   (UPD, MethodInvocation, OP1, OP12)
+OP12:      (UPD, SimpleName, OP11, null)
+OP13:   (UPD, VariableDeclarationStatement, OP1, OP14)
+OP14:      (UPD, VariableDeclarationFragment, OP13, OP15)
+OP15:         (UPD, MethodInvocation, OP14, OP16 OP19 OP20)
+OP16:            (INS, SimpleName, OP15, OP17 OP18)
+OP17:               (INS, SimpleName, OP16, null)
+OP18:               (INS, SimpleName, OP16, null)
+OP19:            (DEL, SimpleName, OP15, null)
+OP20:            (DEL, SimpleName, OP15, null)
+OP21:   (UPD, VariableDeclarationStatement, OP1, OP22)
+OP22:      (UPD, VariableDeclarationFragment, OP21, OP23)
+OP23:         (UPD, MethodInvocation, OP22, OP24 OP25)
+OP24:            (DEL, SimpleName, OP23, null)
+OP25:            (UPD, SimpleName, OP23, OP26 OP29 OP30)
+OP26:               (DEL, MethodInvocation, OP25, OP27 OP28)
+OP27:                  (DEL, SimpleName, OP26, null)
+OP28:                  (DEL, SimpleName, OP26, null)
+OP29:               (INS, SimpleName, OP25, null)
+OP30:               (INS, SimpleName, OP25, null)
+
+
+
+
+
+hASList: 
+[UPD EnhancedForStatement@@Map.Entry<TypeVariable<?>,Type> entry, MethodInvocation:toTypeVarAssigns.entrySet() @TO@ TypeVariable<?> var, MethodInvocation:toTypeVarAssigns.keySet() @AT@ 8126 @LENGTH@ 686
+---UPD SingleVariableDeclaration@@Map.Entry<TypeVariable<?>,Type> entry @TO@ TypeVariable<?> var @AT@ 8131 @LENGTH@ 38
+------INS ParameterizedType@@TypeVariable<?> @TO@ SingleVariableDeclaration@@Map.Entry<TypeVariable<?>,Type> entry @AT@ 8131 @LENGTH@ 15
+---------MOV SimpleType@@TypeVariable @TO@ ParameterizedType@@TypeVariable<?> @AT@ 8141 @LENGTH@ 12
+---------MOV WildcardType@@? @TO@ ParameterizedType@@TypeVariable<?> @AT@ 8154 @LENGTH@ 1
+------DEL ParameterizedType@@Map.Entry<TypeVariable<?>,Type> @AT@ 8131 @LENGTH@ 32
+---------DEL SimpleType@@Map.Entry @AT@ 8131 @LENGTH@ 9
+---------DEL ParameterizedType@@TypeVariable<?> @AT@ 8141 @LENGTH@ 15
+---------DEL SimpleType@@Type @AT@ 8158 @LENGTH@ 4
+------UPD SimpleName@@entry @TO@ var @AT@ 8164 @LENGTH@ 5
+---UPD MethodInvocation@@toTypeVarAssigns.entrySet() @TO@ toTypeVarAssigns.keySet() @AT@ 8172 @LENGTH@ 27
+------UPD SimpleName@@MethodName:entrySet:[] @TO@ MethodName:keySet:[] @AT@ 8189 @LENGTH@ 10
+---UPD VariableDeclarationStatement@@Type toTypeArg=entry.getValue(); @TO@ Type toTypeArg=unrollVariableAssignments(var,toTypeVarAssigns); @AT@ 8215 @LENGTH@ 34
+------UPD VariableDeclarationFragment@@toTypeArg=entry.getValue() @TO@ toTypeArg=unrollVariableAssignments(var,toTypeVarAssigns) @AT@ 8220 @LENGTH@ 28
+---------UPD MethodInvocation@@entry.getValue() @TO@ unrollVariableAssignments(var,toTypeVarAssigns) @AT@ 8232 @LENGTH@ 16
+------------INS SimpleName@@MethodName:unrollVariableAssignments:[var, toTypeVarAssigns] @TO@ MethodInvocation@@entry.getValue() @AT@ 8211 @LENGTH@ 48
+---------------INS SimpleName@@var @TO@ SimpleName@@MethodName:unrollVariableAssignments:[var, toTypeVarAssigns] @AT@ 8237 @LENGTH@ 3
+---------------INS SimpleName@@toTypeVarAssigns @TO@ SimpleName@@MethodName:unrollVariableAssignments:[var, toTypeVarAssigns] @AT@ 8242 @LENGTH@ 16
+------------DEL SimpleName@@Name:entry @AT@ 8232 @LENGTH@ 5
+------------DEL SimpleName@@MethodName:getValue:[] @AT@ 8238 @LENGTH@ 10
+---UPD VariableDeclarationStatement@@Type fromTypeArg=fromTypeVarAssigns.get(entry.getKey()); @TO@ Type fromTypeArg=unrollVariableAssignments(var,fromTypeVarAssigns); @AT@ 8262 @LENGTH@ 58
+------UPD VariableDeclarationFragment@@fromTypeArg=fromTypeVarAssigns.get(entry.getKey()) @TO@ fromTypeArg=unrollVariableAssignments(var,fromTypeVarAssigns) @AT@ 8267 @LENGTH@ 52
+---------UPD MethodInvocation@@fromTypeVarAssigns.get(entry.getKey()) @TO@ unrollVariableAssignments(var,fromTypeVarAssigns) @AT@ 8281 @LENGTH@ 38
+------------DEL SimpleName@@Name:fromTypeVarAssigns @AT@ 8281 @LENGTH@ 18
+------------UPD SimpleName@@MethodName:get:[entry.getKey()] @TO@ MethodName:unrollVariableAssignments:[var, fromTypeVarAssigns] @AT@ 8300 @LENGTH@ 19
+---------------DEL MethodInvocation@@entry.getKey() @AT@ 8304 @LENGTH@ 14
+------------------DEL SimpleName@@Name:entry @AT@ 8304 @LENGTH@ 5
+------------------DEL SimpleName@@MethodName:getKey:[] @AT@ 8310 @LENGTH@ 8
+---------------INS SimpleName@@var @TO@ SimpleName@@MethodName:get:[entry.getKey()] @AT@ 8318 @LENGTH@ 3
+---------------INS SimpleName@@fromTypeVarAssigns @TO@ SimpleName@@MethodName:get:[entry.getKey()] @AT@ 8323 @LENGTH@ 18
+, UPD IfStatement@@InfixExpression:cls.getTypeParameters().length > 0 || toClass.equals(cls) @TO@ MethodInvocation:toClass.equals(cls) @AT@ 26477 @LENGTH@ 109
+---DEL InfixExpression@@cls.getTypeParameters().length > 0 || toClass.equals(cls) @AT@ 26481 @LENGTH@ 57
+------DEL InfixExpression@@cls.getTypeParameters().length > 0 @AT@ 26481 @LENGTH@ 34
+---------DEL FieldAccess@@cls.getTypeParameters().length @AT@ 26481 @LENGTH@ 30
+------------DEL MethodInvocation@@cls.getTypeParameters() @AT@ 26481 @LENGTH@ 23
+---------------DEL SimpleName@@Name:cls @AT@ 26481 @LENGTH@ 3
+---------------DEL SimpleName@@MethodName:getTypeParameters:[] @AT@ 26485 @LENGTH@ 19
+------------DEL SimpleName@@length @AT@ 26505 @LENGTH@ 6
+---------DEL Operator@@> @AT@ 26511 @LENGTH@ 1
+---------DEL NumberLiteral@@0 @AT@ 26514 @LENGTH@ 1
+------DEL Operator@@|| @AT@ 26515 @LENGTH@ 2
+---MOV MethodInvocation@@toClass.equals(cls) @TO@ IfStatement@@InfixExpression:cls.getTypeParameters().length > 0 || toClass.equals(cls) @AT@ 26519 @LENGTH@ 19
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2 OP12)
+OP2:   (DEL, InfixExpression, OP1, OP3 OP11)
+OP3:      (DEL, InfixExpression, OP2, OP4 OP9 OP10)
+OP4:         (DEL, FieldAccess, OP3, OP5 OP8)
+OP5:            (DEL, MethodInvocation, OP4, OP6 OP7)
+OP6:               (DEL, SimpleName, OP5, null)
+OP7:               (DEL, SimpleName, OP5, null)
+OP8:            (DEL, SimpleName, OP4, null)
+OP9:         (DEL, Operator, OP3, null)
+OP10:         (DEL, NumberLiteral, OP3, null)
+OP11:      (DEL, Operator, OP2, null)
+OP12:   (MOV, MethodInvocation, OP1, null)
+
+
+

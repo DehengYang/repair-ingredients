@@ -1,0 +1,26 @@
+
+diff -Naur ../d4j-repo/Time/Time_18/src/main/java/org/joda/time/chrono/GJChronology.java ../d4j-repo/fixed_bugs_dir/Time/Time_18/src/main/java/org/joda/time/chrono/GJChronology.java
+--- ../d4j-repo/Time/Time_18/src/main/java/org/joda/time/chrono/GJChronology.java	2021-01-06 03:38:54.694089287 -0800
++++ ../d4j-repo/fixed_bugs_dir/Time/Time_18/src/main/java/org/joda/time/chrono/GJChronology.java	2021-01-06 03:38:56.026134644 -0800
+@@ -361,9 +361,21 @@
+ 
+         // Assume date is Gregorian.
+         long instant;
++        try {
+             instant = iGregorianChronology.getDateTimeMillis
+                 (year, monthOfYear, dayOfMonth,
+                  hourOfDay, minuteOfHour, secondOfMinute, millisOfSecond);
++        } catch (IllegalFieldValueException ex) {
++            if (monthOfYear != 2 || dayOfMonth != 29) {
++                throw ex;
++            }
++            instant = iGregorianChronology.getDateTimeMillis
++                (year, monthOfYear, 28,
++                 hourOfDay, minuteOfHour, secondOfMinute, millisOfSecond);
++            if (instant >= iCutoverMillis) {
++                throw ex;
++            }
++        }
+         if (instant < iCutoverMillis) {
+             // Maybe it's Julian.
+             instant = iJulianChronology.getDateTimeMillis

@@ -1,0 +1,35 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_47/src/com/google/debugging/sourcemap/SourceMapConsumerV3.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_47/src/com/google/debugging/sourcemap/SourceMapConsumerV3.java
+--- ../d4j-repo/Closure/Closure_47/src/com/google/debugging/sourcemap/SourceMapConsumerV3.java	2021-01-06 03:43:12.202858370 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_47/src/com/google/debugging/sourcemap/SourceMapConsumerV3.java	2021-01-06 03:43:14.210926757 -0800
+@@ -486,8 +486,8 @@
+       // Adjust the line/column here to be start at 1.
+       Builder x = OriginalMapping.newBuilder()
+         .setOriginalFile(sources[entry.getSourceFileId()])
+-        .setLineNumber(entry.getSourceLine())
+-        .setColumnPosition(entry.getSourceColumn());
++        .setLineNumber(entry.getSourceLine() + 1)
++        .setColumnPosition(entry.getSourceColumn() + 1);
+       if (entry.getNameId() != UNMAPPED) {
+         x.setIdentifier(names[entry.getNameId()]);
+       }
+diff -Naur ../d4j-repo/Closure/Closure_47/src/com/google/javascript/jscomp/SourceMap.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_47/src/com/google/javascript/jscomp/SourceMap.java
+--- ../d4j-repo/Closure/Closure_47/src/com/google/javascript/jscomp/SourceMap.java	2021-01-06 03:43:12.190857961 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_47/src/com/google/javascript/jscomp/SourceMap.java	2021-01-06 03:43:14.202926485 -0800
+@@ -135,10 +135,15 @@
+     // zero based.
+     // We don't change this for the v1 or v2 source maps but for
+     // v3 we make them both 0 based.
++    int lineBaseOffset = 1;
++    if (generator instanceof SourceMapGeneratorV1
++        || generator instanceof SourceMapGeneratorV2) {
++      lineBaseOffset = 0;
++    }
+ 
+     generator.addMapping(
+         sourceFile, originalName,
+-        new FilePosition(node.getLineno(), node.getCharno()),
++        new FilePosition(node.getLineno() - lineBaseOffset, node.getCharno()),
+         outputStartPosition, outputEndPosition);
+   }
+ 

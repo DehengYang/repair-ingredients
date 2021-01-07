@@ -1,0 +1,17 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_61/src/com/google/javascript/jscomp/NodeUtil.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_61/src/com/google/javascript/jscomp/NodeUtil.java
+--- ../d4j-repo/Closure/Closure_61/src/com/google/javascript/jscomp/NodeUtil.java	2021-01-06 03:44:08.204765623 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_61/src/com/google/javascript/jscomp/NodeUtil.java	2021-01-06 03:44:10.224834421 -0800
+@@ -955,6 +955,12 @@
+       }
+ 
+       // Functions in the "Math" namespace have no side effects.
++      if (nameNode.getFirstChild().getType() == Token.NAME) {
++        String namespaceName = nameNode.getFirstChild().getString();
++        if (namespaceName.equals("Math")) {
++          return false;
++        }
++      }
+ 
+       if (compiler != null && !compiler.hasRegExpGlobalReferences()) {
+         if (nameNode.getFirstChild().getType() == Token.REGEXP

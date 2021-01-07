@@ -1,0 +1,308 @@
+
+
+hASList: 
+[INS IfStatement@@MethodInvocation:settings.isSerializable() @TO@ MethodDeclaration@@public, @@T, T, MethodName:createMock, @@Argus:Class<T>+classToMock+MockSettingsImpl+settings+ @AT@ 1696 @LENGTH@ 288
+---MOV ExpressionStatement@@Assignment:ancillaryTypes=interfaces == null ? new Class<?>[0] : interfaces @TO@ IfStatement@@MethodInvocation:settings.isSerializable() @AT@ 1670 @LENGTH@ 67
+---INS MethodInvocation@@settings.isSerializable() @TO@ IfStatement@@MethodInvocation:settings.isSerializable() @AT@ 1700 @LENGTH@ 25
+------INS SimpleName@@Name:settings @TO@ MethodInvocation@@settings.isSerializable() @AT@ 1700 @LENGTH@ 8
+------INS SimpleName@@MethodName:isSerializable:[] @TO@ MethodInvocation@@settings.isSerializable() @AT@ 1709 @LENGTH@ 16
+---INS ExpressionStatement@@Assignment:ancillaryTypes=interfaces == null ? new Class<?>[]{Serializable.class} : new ArrayUtils().concat(interfaces,Serializable.class) @TO@ IfStatement@@MethodInvocation:settings.isSerializable() @AT@ 1742 @LENGTH@ 132
+------INS Assignment@@ancillaryTypes=interfaces == null ? new Class<?>[]{Serializable.class} : new ArrayUtils().concat(interfaces,Serializable.class) @TO@ ExpressionStatement@@Assignment:ancillaryTypes=interfaces == null ? new Class<?>[]{Serializable.class} : new ArrayUtils().concat(interfaces,Serializable.class) @AT@ 1742 @LENGTH@ 131
+---------INS SimpleName@@ancillaryTypes @TO@ Assignment@@ancillaryTypes=interfaces == null ? new Class<?>[]{Serializable.class} : new ArrayUtils().concat(interfaces,Serializable.class) @AT@ 1742 @LENGTH@ 14
+---------INS Operator@@= @TO@ Assignment@@ancillaryTypes=interfaces == null ? new Class<?>[]{Serializable.class} : new ArrayUtils().concat(interfaces,Serializable.class) @AT@ 1756 @LENGTH@ 1
+---------INS ConditionalExpression@@interfaces == null ? new Class<?>[]{Serializable.class} : new ArrayUtils().concat(interfaces,Serializable.class) @TO@ Assignment@@ancillaryTypes=interfaces == null ? new Class<?>[]{Serializable.class} : new ArrayUtils().concat(interfaces,Serializable.class) @AT@ 1759 @LENGTH@ 114
+------------INS InfixExpression@@interfaces == null @TO@ ConditionalExpression@@interfaces == null ? new Class<?>[]{Serializable.class} : new ArrayUtils().concat(interfaces,Serializable.class) @AT@ 1759 @LENGTH@ 18
+---------------INS SimpleName@@interfaces @TO@ InfixExpression@@interfaces == null @AT@ 1759 @LENGTH@ 10
+---------------INS Operator@@== @TO@ InfixExpression@@interfaces == null @AT@ 1769 @LENGTH@ 2
+---------------INS NullLiteral@@null @TO@ InfixExpression@@interfaces == null @AT@ 1773 @LENGTH@ 4
+------------INS ArrayCreation@@new Class<?>[]{Serializable.class} @TO@ ConditionalExpression@@interfaces == null ? new Class<?>[]{Serializable.class} : new ArrayUtils().concat(interfaces,Serializable.class) @AT@ 1780 @LENGTH@ 35
+---------------INS ArrayType@@Class<?>[] @TO@ ArrayCreation@@new Class<?>[]{Serializable.class} @AT@ 1784 @LENGTH@ 10
+------------------INS ParameterizedType@@Class<?> @TO@ ArrayType@@Class<?>[] @AT@ 1784 @LENGTH@ 8
+---------------------INS SimpleType@@Class @TO@ ParameterizedType@@Class<?> @AT@ 1784 @LENGTH@ 5
+---------------------INS WildcardType@@? @TO@ ParameterizedType@@Class<?> @AT@ 1790 @LENGTH@ 1
+---------------INS ArrayInitializer@@{Serializable.class} @TO@ ArrayCreation@@new Class<?>[]{Serializable.class} @AT@ 1795 @LENGTH@ 20
+------------------INS TypeLiteral@@Serializable.class @TO@ ArrayInitializer@@{Serializable.class} @AT@ 1796 @LENGTH@ 18
+------------INS MethodInvocation@@new ArrayUtils().concat(interfaces,Serializable.class) @TO@ ConditionalExpression@@interfaces == null ? new Class<?>[]{Serializable.class} : new ArrayUtils().concat(interfaces,Serializable.class) @AT@ 1818 @LENGTH@ 55
+---------------INS ClassInstanceCreation@@ArrayUtils[] @TO@ MethodInvocation@@new ArrayUtils().concat(interfaces,Serializable.class) @AT@ 1818 @LENGTH@ 16
+------------------INS New@@new @TO@ ClassInstanceCreation@@ArrayUtils[] @AT@ 1818 @LENGTH@ 3
+------------------INS SimpleType@@ArrayUtils @TO@ ClassInstanceCreation@@ArrayUtils[] @AT@ 1822 @LENGTH@ 10
+---------------INS SimpleName@@MethodName:concat:[interfaces, Serializable.class] @TO@ MethodInvocation@@new ArrayUtils().concat(interfaces,Serializable.class) @AT@ 1835 @LENGTH@ 38
+------------------INS SimpleName@@interfaces @TO@ SimpleName@@MethodName:concat:[interfaces, Serializable.class] @AT@ 1842 @LENGTH@ 10
+------------------INS TypeLiteral@@Serializable.class @TO@ SimpleName@@MethodName:concat:[interfaces, Serializable.class] @AT@ 1854 @LENGTH@ 18
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3 OP6)
+OP2:   (MOV, ExpressionStatement, OP1, null)
+OP3:   (INS, MethodInvocation, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, SimpleName, OP3, null)
+OP6:   (INS, ExpressionStatement, OP1, OP7)
+OP7:      (INS, Assignment, OP6, OP8 OP9 OP10)
+OP8:         (INS, SimpleName, OP7, null)
+OP9:         (INS, Operator, OP7, null)
+OP10:         (INS, ConditionalExpression, OP7, OP11 OP15 OP22)
+OP11:            (INS, InfixExpression, OP10, OP12 OP13 OP14)
+OP12:               (INS, SimpleName, OP11, null)
+OP13:               (INS, Operator, OP11, null)
+OP14:               (INS, NullLiteral, OP11, null)
+OP15:            (INS, ArrayCreation, OP10, OP16 OP20)
+OP16:               (INS, ArrayType, OP15, OP17)
+OP17:                  (INS, ParameterizedType, OP16, OP18 OP19)
+OP18:                     (INS, SimpleType, OP17, null)
+OP19:                     (INS, WildcardType, OP17, null)
+OP20:               (INS, ArrayInitializer, OP15, OP21)
+OP21:                  (INS, TypeLiteral, OP20, null)
+OP22:            (INS, MethodInvocation, OP10, OP23 OP26)
+OP23:               (INS, ClassInstanceCreation, OP22, OP24 OP25)
+OP24:                  (INS, New, OP23, null)
+OP25:                  (INS, SimpleType, OP23, null)
+OP26:               (INS, SimpleName, OP22, OP27 OP28)
+OP27:                  (INS, SimpleName, OP26, null)
+OP28:                  (INS, TypeLiteral, OP26, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, boolean, [serializable] @TO@ TypeDeclaration@@[public]MockSettingsImpl, [MockSettings] @AT@ 636 @LENGTH@ 29
+---INS Modifier@@private @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 636 @LENGTH@ 7
+---INS PrimitiveType@@boolean @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 644 @LENGTH@ 7
+---INS VariableDeclarationFragment@@serializable @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 652 @LENGTH@ 12
+------INS SimpleName@@serializable @TO@ VariableDeclarationFragment@@serializable @AT@ 652 @LENGTH@ 12
+, DEL ReturnStatement@@MethodInvocation:this.extraInterfaces(java.io.Serializable.class) @AT@ 684 @LENGTH@ 56
+---DEL MethodInvocation@@this.extraInterfaces(java.io.Serializable.class) @AT@ 691 @LENGTH@ 48
+------DEL ThisExpression@@this @AT@ 691 @LENGTH@ 4
+------DEL SimpleName@@MethodName:extraInterfaces:[java.io.Serializable.class] @AT@ 696 @LENGTH@ 43
+---------DEL TypeLiteral@@java.io.Serializable.class @AT@ 712 @LENGTH@ 26
+, INS ExpressionStatement@@Assignment:this.serializable=true @TO@ MethodDeclaration@@public, @@MockSettings, MethodName:serializable, @@Argus:null @AT@ 719 @LENGTH@ 25
+---INS Assignment@@this.serializable=true @TO@ ExpressionStatement@@Assignment:this.serializable=true @AT@ 719 @LENGTH@ 24
+------INS FieldAccess@@this.serializable @TO@ Assignment@@this.serializable=true @AT@ 719 @LENGTH@ 17
+---------INS ThisExpression@@this @TO@ FieldAccess@@this.serializable @AT@ 719 @LENGTH@ 4
+---------INS SimpleName@@serializable @TO@ FieldAccess@@this.serializable @AT@ 724 @LENGTH@ 12
+------INS Operator@@= @TO@ Assignment@@this.serializable=true @AT@ 736 @LENGTH@ 1
+------INS BooleanLiteral@@true @TO@ Assignment@@this.serializable=true @AT@ 739 @LENGTH@ 4
+, INS ReturnStatement@@ThisExpression:this @TO@ MethodDeclaration@@public, @@MockSettings, MethodName:serializable, @@Argus:null @AT@ 754 @LENGTH@ 12
+---INS ThisExpression@@this @TO@ ReturnStatement@@ThisExpression:this @AT@ 761 @LENGTH@ 4
+, UPD ReturnStatement@@InfixExpression:extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @TO@ SimpleName:serializable @AT@ 2162 @LENGTH@ 112
+---DEL InfixExpression@@extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2169 @LENGTH@ 104
+------DEL InfixExpression@@extraInterfaces != null @AT@ 2169 @LENGTH@ 23
+---------DEL SimpleName@@extraInterfaces @AT@ 2169 @LENGTH@ 15
+---------DEL Operator@@!= @AT@ 2184 @LENGTH@ 2
+---------DEL NullLiteral@@null @AT@ 2188 @LENGTH@ 4
+------DEL Operator@@&& @AT@ 2192 @LENGTH@ 2
+------DEL MethodInvocation@@java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2196 @LENGTH@ 77
+---------DEL QualifiedName@@Name:java.util.Arrays @AT@ 2196 @LENGTH@ 16
+---------DEL MethodInvocation@@MethodName:asList:[extraInterfaces] @AT@ 2196 @LENGTH@ 40
+------------DEL SimpleName@@extraInterfaces @AT@ 2220 @LENGTH@ 15
+---------DEL SimpleName@@MethodName:contains:[java.io.Serializable.class] @AT@ 2237 @LENGTH@ 36
+------------DEL TypeLiteral@@java.io.Serializable.class @AT@ 2246 @LENGTH@ 26
+---INS SimpleName@@serializable @TO@ ReturnStatement@@InfixExpression:extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2195 @LENGTH@ 12
+]
+
+CII:
+OP1:(INS, FieldDeclaration, null, OP2 OP3 OP4)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, PrimitiveType, OP1, null)
+OP4:   (INS, VariableDeclarationFragment, OP1, OP5)
+OP5:      (INS, SimpleName, OP4, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, boolean, [serializable] @TO@ TypeDeclaration@@[public]MockSettingsImpl, [MockSettings] @AT@ 636 @LENGTH@ 29
+---INS Modifier@@private @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 636 @LENGTH@ 7
+---INS PrimitiveType@@boolean @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 644 @LENGTH@ 7
+---INS VariableDeclarationFragment@@serializable @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 652 @LENGTH@ 12
+------INS SimpleName@@serializable @TO@ VariableDeclarationFragment@@serializable @AT@ 652 @LENGTH@ 12
+, DEL ReturnStatement@@MethodInvocation:this.extraInterfaces(java.io.Serializable.class) @AT@ 684 @LENGTH@ 56
+---DEL MethodInvocation@@this.extraInterfaces(java.io.Serializable.class) @AT@ 691 @LENGTH@ 48
+------DEL ThisExpression@@this @AT@ 691 @LENGTH@ 4
+------DEL SimpleName@@MethodName:extraInterfaces:[java.io.Serializable.class] @AT@ 696 @LENGTH@ 43
+---------DEL TypeLiteral@@java.io.Serializable.class @AT@ 712 @LENGTH@ 26
+, INS ExpressionStatement@@Assignment:this.serializable=true @TO@ MethodDeclaration@@public, @@MockSettings, MethodName:serializable, @@Argus:null @AT@ 719 @LENGTH@ 25
+---INS Assignment@@this.serializable=true @TO@ ExpressionStatement@@Assignment:this.serializable=true @AT@ 719 @LENGTH@ 24
+------INS FieldAccess@@this.serializable @TO@ Assignment@@this.serializable=true @AT@ 719 @LENGTH@ 17
+---------INS ThisExpression@@this @TO@ FieldAccess@@this.serializable @AT@ 719 @LENGTH@ 4
+---------INS SimpleName@@serializable @TO@ FieldAccess@@this.serializable @AT@ 724 @LENGTH@ 12
+------INS Operator@@= @TO@ Assignment@@this.serializable=true @AT@ 736 @LENGTH@ 1
+------INS BooleanLiteral@@true @TO@ Assignment@@this.serializable=true @AT@ 739 @LENGTH@ 4
+, INS ReturnStatement@@ThisExpression:this @TO@ MethodDeclaration@@public, @@MockSettings, MethodName:serializable, @@Argus:null @AT@ 754 @LENGTH@ 12
+---INS ThisExpression@@this @TO@ ReturnStatement@@ThisExpression:this @AT@ 761 @LENGTH@ 4
+, UPD ReturnStatement@@InfixExpression:extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @TO@ SimpleName:serializable @AT@ 2162 @LENGTH@ 112
+---DEL InfixExpression@@extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2169 @LENGTH@ 104
+------DEL InfixExpression@@extraInterfaces != null @AT@ 2169 @LENGTH@ 23
+---------DEL SimpleName@@extraInterfaces @AT@ 2169 @LENGTH@ 15
+---------DEL Operator@@!= @AT@ 2184 @LENGTH@ 2
+---------DEL NullLiteral@@null @AT@ 2188 @LENGTH@ 4
+------DEL Operator@@&& @AT@ 2192 @LENGTH@ 2
+------DEL MethodInvocation@@java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2196 @LENGTH@ 77
+---------DEL QualifiedName@@Name:java.util.Arrays @AT@ 2196 @LENGTH@ 16
+---------DEL MethodInvocation@@MethodName:asList:[extraInterfaces] @AT@ 2196 @LENGTH@ 40
+------------DEL SimpleName@@extraInterfaces @AT@ 2220 @LENGTH@ 15
+---------DEL SimpleName@@MethodName:contains:[java.io.Serializable.class] @AT@ 2237 @LENGTH@ 36
+------------DEL TypeLiteral@@java.io.Serializable.class @AT@ 2246 @LENGTH@ 26
+---INS SimpleName@@serializable @TO@ ReturnStatement@@InfixExpression:extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2195 @LENGTH@ 12
+]
+
+CII:
+OP1:(DEL, ReturnStatement, null, OP2)
+OP2:   (DEL, MethodInvocation, OP1, OP3 OP4)
+OP3:      (DEL, ThisExpression, OP2, null)
+OP4:      (DEL, SimpleName, OP2, OP5)
+OP5:         (DEL, TypeLiteral, OP4, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, boolean, [serializable] @TO@ TypeDeclaration@@[public]MockSettingsImpl, [MockSettings] @AT@ 636 @LENGTH@ 29
+---INS Modifier@@private @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 636 @LENGTH@ 7
+---INS PrimitiveType@@boolean @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 644 @LENGTH@ 7
+---INS VariableDeclarationFragment@@serializable @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 652 @LENGTH@ 12
+------INS SimpleName@@serializable @TO@ VariableDeclarationFragment@@serializable @AT@ 652 @LENGTH@ 12
+, DEL ReturnStatement@@MethodInvocation:this.extraInterfaces(java.io.Serializable.class) @AT@ 684 @LENGTH@ 56
+---DEL MethodInvocation@@this.extraInterfaces(java.io.Serializable.class) @AT@ 691 @LENGTH@ 48
+------DEL ThisExpression@@this @AT@ 691 @LENGTH@ 4
+------DEL SimpleName@@MethodName:extraInterfaces:[java.io.Serializable.class] @AT@ 696 @LENGTH@ 43
+---------DEL TypeLiteral@@java.io.Serializable.class @AT@ 712 @LENGTH@ 26
+, INS ExpressionStatement@@Assignment:this.serializable=true @TO@ MethodDeclaration@@public, @@MockSettings, MethodName:serializable, @@Argus:null @AT@ 719 @LENGTH@ 25
+---INS Assignment@@this.serializable=true @TO@ ExpressionStatement@@Assignment:this.serializable=true @AT@ 719 @LENGTH@ 24
+------INS FieldAccess@@this.serializable @TO@ Assignment@@this.serializable=true @AT@ 719 @LENGTH@ 17
+---------INS ThisExpression@@this @TO@ FieldAccess@@this.serializable @AT@ 719 @LENGTH@ 4
+---------INS SimpleName@@serializable @TO@ FieldAccess@@this.serializable @AT@ 724 @LENGTH@ 12
+------INS Operator@@= @TO@ Assignment@@this.serializable=true @AT@ 736 @LENGTH@ 1
+------INS BooleanLiteral@@true @TO@ Assignment@@this.serializable=true @AT@ 739 @LENGTH@ 4
+, INS ReturnStatement@@ThisExpression:this @TO@ MethodDeclaration@@public, @@MockSettings, MethodName:serializable, @@Argus:null @AT@ 754 @LENGTH@ 12
+---INS ThisExpression@@this @TO@ ReturnStatement@@ThisExpression:this @AT@ 761 @LENGTH@ 4
+, UPD ReturnStatement@@InfixExpression:extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @TO@ SimpleName:serializable @AT@ 2162 @LENGTH@ 112
+---DEL InfixExpression@@extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2169 @LENGTH@ 104
+------DEL InfixExpression@@extraInterfaces != null @AT@ 2169 @LENGTH@ 23
+---------DEL SimpleName@@extraInterfaces @AT@ 2169 @LENGTH@ 15
+---------DEL Operator@@!= @AT@ 2184 @LENGTH@ 2
+---------DEL NullLiteral@@null @AT@ 2188 @LENGTH@ 4
+------DEL Operator@@&& @AT@ 2192 @LENGTH@ 2
+------DEL MethodInvocation@@java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2196 @LENGTH@ 77
+---------DEL QualifiedName@@Name:java.util.Arrays @AT@ 2196 @LENGTH@ 16
+---------DEL MethodInvocation@@MethodName:asList:[extraInterfaces] @AT@ 2196 @LENGTH@ 40
+------------DEL SimpleName@@extraInterfaces @AT@ 2220 @LENGTH@ 15
+---------DEL SimpleName@@MethodName:contains:[java.io.Serializable.class] @AT@ 2237 @LENGTH@ 36
+------------DEL TypeLiteral@@java.io.Serializable.class @AT@ 2246 @LENGTH@ 26
+---INS SimpleName@@serializable @TO@ ReturnStatement@@InfixExpression:extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2195 @LENGTH@ 12
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, Assignment, OP1, OP3 OP6 OP7)
+OP3:      (INS, FieldAccess, OP2, OP4 OP5)
+OP4:         (INS, ThisExpression, OP3, null)
+OP5:         (INS, SimpleName, OP3, null)
+OP6:      (INS, Operator, OP2, null)
+OP7:      (INS, BooleanLiteral, OP2, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, boolean, [serializable] @TO@ TypeDeclaration@@[public]MockSettingsImpl, [MockSettings] @AT@ 636 @LENGTH@ 29
+---INS Modifier@@private @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 636 @LENGTH@ 7
+---INS PrimitiveType@@boolean @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 644 @LENGTH@ 7
+---INS VariableDeclarationFragment@@serializable @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 652 @LENGTH@ 12
+------INS SimpleName@@serializable @TO@ VariableDeclarationFragment@@serializable @AT@ 652 @LENGTH@ 12
+, DEL ReturnStatement@@MethodInvocation:this.extraInterfaces(java.io.Serializable.class) @AT@ 684 @LENGTH@ 56
+---DEL MethodInvocation@@this.extraInterfaces(java.io.Serializable.class) @AT@ 691 @LENGTH@ 48
+------DEL ThisExpression@@this @AT@ 691 @LENGTH@ 4
+------DEL SimpleName@@MethodName:extraInterfaces:[java.io.Serializable.class] @AT@ 696 @LENGTH@ 43
+---------DEL TypeLiteral@@java.io.Serializable.class @AT@ 712 @LENGTH@ 26
+, INS ExpressionStatement@@Assignment:this.serializable=true @TO@ MethodDeclaration@@public, @@MockSettings, MethodName:serializable, @@Argus:null @AT@ 719 @LENGTH@ 25
+---INS Assignment@@this.serializable=true @TO@ ExpressionStatement@@Assignment:this.serializable=true @AT@ 719 @LENGTH@ 24
+------INS FieldAccess@@this.serializable @TO@ Assignment@@this.serializable=true @AT@ 719 @LENGTH@ 17
+---------INS ThisExpression@@this @TO@ FieldAccess@@this.serializable @AT@ 719 @LENGTH@ 4
+---------INS SimpleName@@serializable @TO@ FieldAccess@@this.serializable @AT@ 724 @LENGTH@ 12
+------INS Operator@@= @TO@ Assignment@@this.serializable=true @AT@ 736 @LENGTH@ 1
+------INS BooleanLiteral@@true @TO@ Assignment@@this.serializable=true @AT@ 739 @LENGTH@ 4
+, INS ReturnStatement@@ThisExpression:this @TO@ MethodDeclaration@@public, @@MockSettings, MethodName:serializable, @@Argus:null @AT@ 754 @LENGTH@ 12
+---INS ThisExpression@@this @TO@ ReturnStatement@@ThisExpression:this @AT@ 761 @LENGTH@ 4
+, UPD ReturnStatement@@InfixExpression:extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @TO@ SimpleName:serializable @AT@ 2162 @LENGTH@ 112
+---DEL InfixExpression@@extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2169 @LENGTH@ 104
+------DEL InfixExpression@@extraInterfaces != null @AT@ 2169 @LENGTH@ 23
+---------DEL SimpleName@@extraInterfaces @AT@ 2169 @LENGTH@ 15
+---------DEL Operator@@!= @AT@ 2184 @LENGTH@ 2
+---------DEL NullLiteral@@null @AT@ 2188 @LENGTH@ 4
+------DEL Operator@@&& @AT@ 2192 @LENGTH@ 2
+------DEL MethodInvocation@@java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2196 @LENGTH@ 77
+---------DEL QualifiedName@@Name:java.util.Arrays @AT@ 2196 @LENGTH@ 16
+---------DEL MethodInvocation@@MethodName:asList:[extraInterfaces] @AT@ 2196 @LENGTH@ 40
+------------DEL SimpleName@@extraInterfaces @AT@ 2220 @LENGTH@ 15
+---------DEL SimpleName@@MethodName:contains:[java.io.Serializable.class] @AT@ 2237 @LENGTH@ 36
+------------DEL TypeLiteral@@java.io.Serializable.class @AT@ 2246 @LENGTH@ 26
+---INS SimpleName@@serializable @TO@ ReturnStatement@@InfixExpression:extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2195 @LENGTH@ 12
+]
+
+CII:
+OP1:(INS, ReturnStatement, null, OP2)
+OP2:   (INS, ThisExpression, OP1, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, boolean, [serializable] @TO@ TypeDeclaration@@[public]MockSettingsImpl, [MockSettings] @AT@ 636 @LENGTH@ 29
+---INS Modifier@@private @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 636 @LENGTH@ 7
+---INS PrimitiveType@@boolean @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 644 @LENGTH@ 7
+---INS VariableDeclarationFragment@@serializable @TO@ FieldDeclaration@@private, boolean, [serializable] @AT@ 652 @LENGTH@ 12
+------INS SimpleName@@serializable @TO@ VariableDeclarationFragment@@serializable @AT@ 652 @LENGTH@ 12
+, DEL ReturnStatement@@MethodInvocation:this.extraInterfaces(java.io.Serializable.class) @AT@ 684 @LENGTH@ 56
+---DEL MethodInvocation@@this.extraInterfaces(java.io.Serializable.class) @AT@ 691 @LENGTH@ 48
+------DEL ThisExpression@@this @AT@ 691 @LENGTH@ 4
+------DEL SimpleName@@MethodName:extraInterfaces:[java.io.Serializable.class] @AT@ 696 @LENGTH@ 43
+---------DEL TypeLiteral@@java.io.Serializable.class @AT@ 712 @LENGTH@ 26
+, INS ExpressionStatement@@Assignment:this.serializable=true @TO@ MethodDeclaration@@public, @@MockSettings, MethodName:serializable, @@Argus:null @AT@ 719 @LENGTH@ 25
+---INS Assignment@@this.serializable=true @TO@ ExpressionStatement@@Assignment:this.serializable=true @AT@ 719 @LENGTH@ 24
+------INS FieldAccess@@this.serializable @TO@ Assignment@@this.serializable=true @AT@ 719 @LENGTH@ 17
+---------INS ThisExpression@@this @TO@ FieldAccess@@this.serializable @AT@ 719 @LENGTH@ 4
+---------INS SimpleName@@serializable @TO@ FieldAccess@@this.serializable @AT@ 724 @LENGTH@ 12
+------INS Operator@@= @TO@ Assignment@@this.serializable=true @AT@ 736 @LENGTH@ 1
+------INS BooleanLiteral@@true @TO@ Assignment@@this.serializable=true @AT@ 739 @LENGTH@ 4
+, INS ReturnStatement@@ThisExpression:this @TO@ MethodDeclaration@@public, @@MockSettings, MethodName:serializable, @@Argus:null @AT@ 754 @LENGTH@ 12
+---INS ThisExpression@@this @TO@ ReturnStatement@@ThisExpression:this @AT@ 761 @LENGTH@ 4
+, UPD ReturnStatement@@InfixExpression:extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @TO@ SimpleName:serializable @AT@ 2162 @LENGTH@ 112
+---DEL InfixExpression@@extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2169 @LENGTH@ 104
+------DEL InfixExpression@@extraInterfaces != null @AT@ 2169 @LENGTH@ 23
+---------DEL SimpleName@@extraInterfaces @AT@ 2169 @LENGTH@ 15
+---------DEL Operator@@!= @AT@ 2184 @LENGTH@ 2
+---------DEL NullLiteral@@null @AT@ 2188 @LENGTH@ 4
+------DEL Operator@@&& @AT@ 2192 @LENGTH@ 2
+------DEL MethodInvocation@@java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2196 @LENGTH@ 77
+---------DEL QualifiedName@@Name:java.util.Arrays @AT@ 2196 @LENGTH@ 16
+---------DEL MethodInvocation@@MethodName:asList:[extraInterfaces] @AT@ 2196 @LENGTH@ 40
+------------DEL SimpleName@@extraInterfaces @AT@ 2220 @LENGTH@ 15
+---------DEL SimpleName@@MethodName:contains:[java.io.Serializable.class] @AT@ 2237 @LENGTH@ 36
+------------DEL TypeLiteral@@java.io.Serializable.class @AT@ 2246 @LENGTH@ 26
+---INS SimpleName@@serializable @TO@ ReturnStatement@@InfixExpression:extraInterfaces != null && java.util.Arrays.asList(extraInterfaces).contains(java.io.Serializable.class) @AT@ 2195 @LENGTH@ 12
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2 OP14)
+OP2:   (DEL, InfixExpression, OP1, OP3 OP7 OP8)
+OP3:      (DEL, InfixExpression, OP2, OP4 OP5 OP6)
+OP4:         (DEL, SimpleName, OP3, null)
+OP5:         (DEL, Operator, OP3, null)
+OP6:         (DEL, NullLiteral, OP3, null)
+OP7:      (DEL, Operator, OP2, null)
+OP8:      (DEL, MethodInvocation, OP2, OP9 OP10 OP12)
+OP9:         (DEL, QualifiedName, OP8, null)
+OP10:         (DEL, MethodInvocation, OP8, OP11)
+OP11:            (DEL, SimpleName, OP10, null)
+OP12:         (DEL, SimpleName, OP8, OP13)
+OP13:            (DEL, TypeLiteral, OP12, null)
+OP14:   (INS, SimpleName, OP1, null)
+
+
+

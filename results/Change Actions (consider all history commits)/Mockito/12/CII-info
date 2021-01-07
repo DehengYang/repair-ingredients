@@ -1,0 +1,49 @@
+
+
+hASList: 
+[INS IfStatement@@InstanceofExpression:actual instanceof Class @TO@ IfStatement@@InfixExpression:generic != null && generic instanceof ParameterizedType @AT@ 682 @LENGTH@ 286
+---INS InstanceofExpression@@actual instanceof Class @TO@ IfStatement@@InstanceofExpression:actual instanceof Class @AT@ 686 @LENGTH@ 23
+------INS SimpleName@@actual @TO@ InstanceofExpression@@actual instanceof Class @AT@ 686 @LENGTH@ 6
+------INS Instanceof@@instanceof @TO@ InstanceofExpression@@actual instanceof Class @AT@ 693 @LENGTH@ 10
+------INS SimpleType@@Class @TO@ InstanceofExpression@@actual instanceof Class @AT@ 704 @LENGTH@ 5
+---MOV ReturnStatement@@CastExpression:(Class)actual @TO@ IfStatement@@InstanceofExpression:actual instanceof Class @AT@ 686 @LENGTH@ 22
+---INS IfStatement@@InstanceofExpression:actual instanceof ParameterizedType @TO@ IfStatement@@InstanceofExpression:actual instanceof Class @AT@ 773 @LENGTH@ 195
+------INS InstanceofExpression@@actual instanceof ParameterizedType @TO@ IfStatement@@InstanceofExpression:actual instanceof ParameterizedType @AT@ 777 @LENGTH@ 35
+---------INS SimpleName@@actual @TO@ InstanceofExpression@@actual instanceof ParameterizedType @AT@ 777 @LENGTH@ 6
+---------INS Instanceof@@instanceof @TO@ InstanceofExpression@@actual instanceof ParameterizedType @AT@ 784 @LENGTH@ 10
+---------INS SimpleType@@ParameterizedType @TO@ InstanceofExpression@@actual instanceof ParameterizedType @AT@ 795 @LENGTH@ 17
+------INS ReturnStatement@@CastExpression:(Class)((ParameterizedType)actual).getRawType() @TO@ IfStatement@@InstanceofExpression:actual instanceof ParameterizedType @AT@ 896 @LENGTH@ 57
+---------INS CastExpression@@(Class)((ParameterizedType)actual).getRawType() @TO@ ReturnStatement@@CastExpression:(Class)((ParameterizedType)actual).getRawType() @AT@ 903 @LENGTH@ 49
+------------INS SimpleType@@Class @TO@ CastExpression@@(Class)((ParameterizedType)actual).getRawType() @AT@ 904 @LENGTH@ 5
+------------INS MethodInvocation@@((ParameterizedType)actual).getRawType() @TO@ CastExpression@@(Class)((ParameterizedType)actual).getRawType() @AT@ 911 @LENGTH@ 41
+---------------INS ParenthesizedExpression@@((ParameterizedType)actual) @TO@ MethodInvocation@@((ParameterizedType)actual).getRawType() @AT@ 911 @LENGTH@ 28
+------------------INS CastExpression@@(ParameterizedType)actual @TO@ ParenthesizedExpression@@((ParameterizedType)actual) @AT@ 912 @LENGTH@ 26
+---------------------INS SimpleType@@ParameterizedType @TO@ CastExpression@@(ParameterizedType)actual @AT@ 913 @LENGTH@ 17
+---------------------INS SimpleName@@actual @TO@ CastExpression@@(ParameterizedType)actual @AT@ 932 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:getRawType:[] @TO@ MethodInvocation@@((ParameterizedType)actual).getRawType() @AT@ 940 @LENGTH@ 12
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6 OP7)
+OP2:   (INS, InstanceofExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Instanceof, OP2, null)
+OP5:      (INS, SimpleType, OP2, null)
+OP6:   (MOV, ReturnStatement, OP1, null)
+OP7:   (INS, IfStatement, OP1, OP8 OP12)
+OP8:      (INS, InstanceofExpression, OP7, OP9 OP10 OP11)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, Instanceof, OP8, null)
+OP11:         (INS, SimpleType, OP8, null)
+OP12:      (INS, ReturnStatement, OP7, OP13)
+OP13:         (INS, CastExpression, OP12, OP14 OP15)
+OP14:            (INS, SimpleType, OP13, null)
+OP15:            (INS, MethodInvocation, OP13, OP16 OP20)
+OP16:               (INS, ParenthesizedExpression, OP15, OP17)
+OP17:                  (INS, CastExpression, OP16, OP18 OP19)
+OP18:                     (INS, SimpleType, OP17, null)
+OP19:                     (INS, SimpleName, OP17, null)
+OP20:               (INS, SimpleName, OP15, null)
+
+
+

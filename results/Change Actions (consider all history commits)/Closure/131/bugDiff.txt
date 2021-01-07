@@ -1,0 +1,19 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_131/src/com/google/javascript/rhino/TokenStream.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_131/src/com/google/javascript/rhino/TokenStream.java
+--- ../d4j-repo/Closure/Closure_131/src/com/google/javascript/rhino/TokenStream.java	2021-01-06 03:49:55.196584538 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_131/src/com/google/javascript/rhino/TokenStream.java	2021-01-06 03:49:58.124684282 -0800
+@@ -191,12 +191,13 @@
+       int length = s.length();
+ 
+       if (length == 0 ||
++          Character.isIdentifierIgnorable(s.charAt(0)) ||
+           !Character.isJavaIdentifierStart(s.charAt(0))) {
+         return false;
+       }
+ 
+       for (int i = 1; i < length; i++) {
+-        if (
++        if (Character.isIdentifierIgnorable(s.charAt(i)) ||
+             !Character.isJavaIdentifierPart(s.charAt(i))) {
+           return false;
+         }

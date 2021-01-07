@@ -1,0 +1,13 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_61/src/java/org/apache/commons/lang/text/StrBuilder.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_61/src/java/org/apache/commons/lang/text/StrBuilder.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_61/src/java/org/apache/commons/lang/text/StrBuilder.java	2020-01-05 05:31:37.884271140 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_61/src/java/org/apache/commons/lang/text/StrBuilder.java	2020-01-05 05:31:41.428241540 -0800
+@@ -1773,7 +1773,7 @@
+             return -1;
+         }
+         char[] thisBuf = buffer;
+-        int len = thisBuf.length - strLen;
++        int len = size - strLen + 1;
+         outer:
+         for (int i = startIndex; i < len; i++) {
+             for (int j = 0; j < strLen; j++) {

@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Math/Math_27/src/main/java/org/apache/commons/math3/fraction/Fraction.java ../d4j-repo/fixed_bugs_dir/Math/Math_27/src/main/java/org/apache/commons/math3/fraction/Fraction.java
+--- ../d4j-repo/Math/Math_27/src/main/java/org/apache/commons/math3/fraction/Fraction.java	2021-01-04 22:59:45.657678195 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_27/src/main/java/org/apache/commons/math3/fraction/Fraction.java	2021-01-04 22:59:49.201811068 -0800
+@@ -594,7 +594,7 @@
+      * @return the fraction percentage as a <tt>double</tt>.
+      */
+     public double percentageValue() {
+-        return multiply(100).doubleValue();
++        return 100 * doubleValue();
+     }
+ 
+     /**

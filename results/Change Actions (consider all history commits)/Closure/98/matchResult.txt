@@ -1,0 +1,10 @@
+No.1 CCI matched.
+freq: 5
+CommitIds: 2acd6c19 de13c331 66485d3d 168bc14f 6a6e135c 
+FreqRank:16
+
+No.2 CCI matched.
+freq: 5
+CommitIds: 2acd6c19 de13c331 66485d3d 168bc14f 6a6e135c 
+FreqRank:16
+

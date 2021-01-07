@@ -1,0 +1,8 @@
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, null)
+
+
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, null)
+
+

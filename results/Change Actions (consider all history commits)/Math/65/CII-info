@@ -1,0 +1,341 @@
+
+
+hASList: 
+[MOV MethodDeclaration@@public, @@double, MethodName:getRMS, @@Argus:null @TO@ TypeDeclaration@@[public, abstract]AbstractLeastSquaresOptimizer, [DifferentiableMultivariateVectorialOptimizer] @AT@ 7934 @LENGTH@ 700
+---MOV VariableDeclarationStatement@@double chiSquare=0; @TO@ MethodDeclaration@@public, @@double, MethodName:getRMS, @@Argus:null @AT@ 8909 @LENGTH@ 21
+------MOV PrimitiveType@@double @TO@ VariableDeclarationStatement@@double chiSquare=0; @AT@ 8394 @LENGTH@ 6
+, UPD MethodDeclaration@@public, @@double, MethodName:getRMS, @@Argus:null @TO@ public, @@double, MethodName:getChiSquare, @@Argus:null @AT@ 7934 @LENGTH@ 700
+---UPD SimpleName@@MethodName:getRMS @TO@ MethodName:getChiSquare @AT@ 8375 @LENGTH@ 6
+---UPD ReturnStatement@@MethodInvocation:Math.sqrt(criterion / rows) @TO@ SimpleName:chiSquare @AT@ 8593 @LENGTH@ 35
+------DEL MethodInvocation@@Math.sqrt(criterion / rows) @AT@ 8600 @LENGTH@ 27
+---------DEL SimpleName@@Name:Math @AT@ 8600 @LENGTH@ 4
+---------DEL SimpleName@@MethodName:sqrt:[criterion / rows] @AT@ 8605 @LENGTH@ 22
+------------DEL InfixExpression@@criterion / rows @AT@ 8610 @LENGTH@ 16
+---------------DEL SimpleName@@criterion @AT@ 8610 @LENGTH@ 9
+---------------DEL Operator@@/ @AT@ 8619 @LENGTH@ 1
+---------------DEL SimpleName@@rows @AT@ 8622 @LENGTH@ 4
+------INS SimpleName@@chiSquare @TO@ ReturnStatement@@MethodInvocation:Math.sqrt(criterion / rows) @AT@ 8921 @LENGTH@ 9
+, UPD ExpressionStatement@@Assignment:criterion+=residual * residual * residualsWeights[i] @TO@ Assignment:chiSquare+=residual * residual * residualsWeights[i] @AT@ 8519 @LENGTH@ 55
+---UPD Assignment@@criterion+=residual * residual * residualsWeights[i] @TO@ chiSquare+=residual * residual * residualsWeights[i] @AT@ 8519 @LENGTH@ 54
+------UPD SimpleName@@criterion @TO@ chiSquare @AT@ 8519 @LENGTH@ 9
+, UPD MethodDeclaration@@public, @@double, MethodName:getChiSquare, @@Argus:null @TO@ public, @@double, MethodName:getRMS, @@Argus:null @AT@ 8640 @LENGTH@ 491
+---INS ReturnStatement@@MethodInvocation:Math.sqrt(getChiSquare() / rows) @TO@ MethodDeclaration@@public, @@double, MethodName:getChiSquare, @@Argus:null @AT@ 8394 @LENGTH@ 40
+------INS MethodInvocation@@Math.sqrt(getChiSquare() / rows) @TO@ ReturnStatement@@MethodInvocation:Math.sqrt(getChiSquare() / rows) @AT@ 8401 @LENGTH@ 32
+---------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.sqrt(getChiSquare() / rows) @AT@ 8401 @LENGTH@ 4
+---------INS SimpleName@@MethodName:sqrt:[getChiSquare() / rows] @TO@ MethodInvocation@@Math.sqrt(getChiSquare() / rows) @AT@ 8406 @LENGTH@ 27
+------------INS InfixExpression@@getChiSquare() / rows @TO@ SimpleName@@MethodName:sqrt:[getChiSquare() / rows] @AT@ 8411 @LENGTH@ 21
+---------------INS MethodInvocation@@MethodName:getChiSquare:[] @TO@ InfixExpression@@getChiSquare() / rows @AT@ 8411 @LENGTH@ 14
+---------------MOV Operator@@< @TO@ InfixExpression@@getChiSquare() / rows @AT@ 8956 @LENGTH@ 1
+---------------MOV SimpleName@@rows @TO@ InfixExpression@@getChiSquare() / rows @AT@ 8959 @LENGTH@ 4
+---UPD SimpleName@@MethodName:getChiSquare @TO@ MethodName:getRMS @AT@ 8884 @LENGTH@ 12
+---DEL ForStatement@@[int i=0];i < rows; [++i] @AT@ 8939 @LENGTH@ 160
+------DEL VariableDeclarationExpression@@int i=0 @AT@ 8944 @LENGTH@ 9
+---------DEL PrimitiveType@@int @AT@ 8944 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@i=0 @AT@ 8948 @LENGTH@ 5
+------------DEL SimpleName@@i @AT@ 8948 @LENGTH@ 1
+------------DEL NumberLiteral@@0 @AT@ 8952 @LENGTH@ 1
+------DEL InfixExpression@@i < rows @AT@ 8955 @LENGTH@ 8
+---------DEL SimpleName@@i @AT@ 8955 @LENGTH@ 1
+------DEL PrefixExpression@@++i @AT@ 8965 @LENGTH@ 3
+---------DEL Operator@@++ @AT@ 8965 @LENGTH@ 2
+---------DEL SimpleName@@i @AT@ 8967 @LENGTH@ 1
+------DEL VariableDeclarationStatement@@final double residual=residuals[i]; @AT@ 8984 @LENGTH@ 37
+---------DEL Modifier@@final @AT@ 8984 @LENGTH@ 5
+---------DEL PrimitiveType@@double @AT@ 8990 @LENGTH@ 6
+---------DEL VariableDeclarationFragment@@residual=residuals[i] @AT@ 8997 @LENGTH@ 23
+------------DEL SimpleName@@residual @AT@ 8997 @LENGTH@ 8
+------------DEL ArrayAccess@@residuals[i] @AT@ 9008 @LENGTH@ 12
+---------------DEL SimpleName@@residuals @AT@ 9008 @LENGTH@ 9
+---------------DEL SimpleName@@i @AT@ 9018 @LENGTH@ 1
+------DEL ExpressionStatement@@Assignment:chiSquare+=residual * residual / residualsWeights[i] @AT@ 9034 @LENGTH@ 55
+---------DEL Assignment@@chiSquare+=residual * residual / residualsWeights[i] @AT@ 9034 @LENGTH@ 54
+------------DEL SimpleName@@chiSquare @AT@ 9034 @LENGTH@ 9
+------------DEL Operator@@+= @AT@ 9043 @LENGTH@ 2
+------------DEL InfixExpression@@residual * residual / residualsWeights[i] @AT@ 9047 @LENGTH@ 41
+---------------DEL InfixExpression@@residual * residual @AT@ 9047 @LENGTH@ 19
+------------------DEL SimpleName@@residual @AT@ 9047 @LENGTH@ 8
+------------------DEL Operator@@* @AT@ 9055 @LENGTH@ 1
+------------------DEL SimpleName@@residual @AT@ 9058 @LENGTH@ 8
+---------------DEL Operator@@/ @AT@ 9066 @LENGTH@ 1
+---------------DEL ArrayAccess@@residualsWeights[i] @AT@ 9069 @LENGTH@ 19
+------------------DEL SimpleName@@residualsWeights @AT@ 9069 @LENGTH@ 16
+------------------DEL SimpleName@@i @AT@ 9086 @LENGTH@ 1
+---DEL ReturnStatement@@SimpleName:chiSquare @AT@ 9108 @LENGTH@ 17
+------DEL SimpleName@@chiSquare @AT@ 9115 @LENGTH@ 9
+]
+
+CII:
+OP1:(MOV, MethodDeclaration, null, OP2)
+OP2:   (MOV, VariableDeclarationStatement, OP1, OP3)
+OP3:      (MOV, PrimitiveType, OP2, null)
+
+
+
+
+
+hASList: 
+[MOV MethodDeclaration@@public, @@double, MethodName:getRMS, @@Argus:null @TO@ TypeDeclaration@@[public, abstract]AbstractLeastSquaresOptimizer, [DifferentiableMultivariateVectorialOptimizer] @AT@ 7934 @LENGTH@ 700
+---MOV VariableDeclarationStatement@@double chiSquare=0; @TO@ MethodDeclaration@@public, @@double, MethodName:getRMS, @@Argus:null @AT@ 8909 @LENGTH@ 21
+------MOV PrimitiveType@@double @TO@ VariableDeclarationStatement@@double chiSquare=0; @AT@ 8394 @LENGTH@ 6
+, UPD MethodDeclaration@@public, @@double, MethodName:getRMS, @@Argus:null @TO@ public, @@double, MethodName:getChiSquare, @@Argus:null @AT@ 7934 @LENGTH@ 700
+---UPD SimpleName@@MethodName:getRMS @TO@ MethodName:getChiSquare @AT@ 8375 @LENGTH@ 6
+---UPD ReturnStatement@@MethodInvocation:Math.sqrt(criterion / rows) @TO@ SimpleName:chiSquare @AT@ 8593 @LENGTH@ 35
+------DEL MethodInvocation@@Math.sqrt(criterion / rows) @AT@ 8600 @LENGTH@ 27
+---------DEL SimpleName@@Name:Math @AT@ 8600 @LENGTH@ 4
+---------DEL SimpleName@@MethodName:sqrt:[criterion / rows] @AT@ 8605 @LENGTH@ 22
+------------DEL InfixExpression@@criterion / rows @AT@ 8610 @LENGTH@ 16
+---------------DEL SimpleName@@criterion @AT@ 8610 @LENGTH@ 9
+---------------DEL Operator@@/ @AT@ 8619 @LENGTH@ 1
+---------------DEL SimpleName@@rows @AT@ 8622 @LENGTH@ 4
+------INS SimpleName@@chiSquare @TO@ ReturnStatement@@MethodInvocation:Math.sqrt(criterion / rows) @AT@ 8921 @LENGTH@ 9
+, UPD ExpressionStatement@@Assignment:criterion+=residual * residual * residualsWeights[i] @TO@ Assignment:chiSquare+=residual * residual * residualsWeights[i] @AT@ 8519 @LENGTH@ 55
+---UPD Assignment@@criterion+=residual * residual * residualsWeights[i] @TO@ chiSquare+=residual * residual * residualsWeights[i] @AT@ 8519 @LENGTH@ 54
+------UPD SimpleName@@criterion @TO@ chiSquare @AT@ 8519 @LENGTH@ 9
+, UPD MethodDeclaration@@public, @@double, MethodName:getChiSquare, @@Argus:null @TO@ public, @@double, MethodName:getRMS, @@Argus:null @AT@ 8640 @LENGTH@ 491
+---INS ReturnStatement@@MethodInvocation:Math.sqrt(getChiSquare() / rows) @TO@ MethodDeclaration@@public, @@double, MethodName:getChiSquare, @@Argus:null @AT@ 8394 @LENGTH@ 40
+------INS MethodInvocation@@Math.sqrt(getChiSquare() / rows) @TO@ ReturnStatement@@MethodInvocation:Math.sqrt(getChiSquare() / rows) @AT@ 8401 @LENGTH@ 32
+---------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.sqrt(getChiSquare() / rows) @AT@ 8401 @LENGTH@ 4
+---------INS SimpleName@@MethodName:sqrt:[getChiSquare() / rows] @TO@ MethodInvocation@@Math.sqrt(getChiSquare() / rows) @AT@ 8406 @LENGTH@ 27
+------------INS InfixExpression@@getChiSquare() / rows @TO@ SimpleName@@MethodName:sqrt:[getChiSquare() / rows] @AT@ 8411 @LENGTH@ 21
+---------------INS MethodInvocation@@MethodName:getChiSquare:[] @TO@ InfixExpression@@getChiSquare() / rows @AT@ 8411 @LENGTH@ 14
+---------------MOV Operator@@< @TO@ InfixExpression@@getChiSquare() / rows @AT@ 8956 @LENGTH@ 1
+---------------MOV SimpleName@@rows @TO@ InfixExpression@@getChiSquare() / rows @AT@ 8959 @LENGTH@ 4
+---UPD SimpleName@@MethodName:getChiSquare @TO@ MethodName:getRMS @AT@ 8884 @LENGTH@ 12
+---DEL ForStatement@@[int i=0];i < rows; [++i] @AT@ 8939 @LENGTH@ 160
+------DEL VariableDeclarationExpression@@int i=0 @AT@ 8944 @LENGTH@ 9
+---------DEL PrimitiveType@@int @AT@ 8944 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@i=0 @AT@ 8948 @LENGTH@ 5
+------------DEL SimpleName@@i @AT@ 8948 @LENGTH@ 1
+------------DEL NumberLiteral@@0 @AT@ 8952 @LENGTH@ 1
+------DEL InfixExpression@@i < rows @AT@ 8955 @LENGTH@ 8
+---------DEL SimpleName@@i @AT@ 8955 @LENGTH@ 1
+------DEL PrefixExpression@@++i @AT@ 8965 @LENGTH@ 3
+---------DEL Operator@@++ @AT@ 8965 @LENGTH@ 2
+---------DEL SimpleName@@i @AT@ 8967 @LENGTH@ 1
+------DEL VariableDeclarationStatement@@final double residual=residuals[i]; @AT@ 8984 @LENGTH@ 37
+---------DEL Modifier@@final @AT@ 8984 @LENGTH@ 5
+---------DEL PrimitiveType@@double @AT@ 8990 @LENGTH@ 6
+---------DEL VariableDeclarationFragment@@residual=residuals[i] @AT@ 8997 @LENGTH@ 23
+------------DEL SimpleName@@residual @AT@ 8997 @LENGTH@ 8
+------------DEL ArrayAccess@@residuals[i] @AT@ 9008 @LENGTH@ 12
+---------------DEL SimpleName@@residuals @AT@ 9008 @LENGTH@ 9
+---------------DEL SimpleName@@i @AT@ 9018 @LENGTH@ 1
+------DEL ExpressionStatement@@Assignment:chiSquare+=residual * residual / residualsWeights[i] @AT@ 9034 @LENGTH@ 55
+---------DEL Assignment@@chiSquare+=residual * residual / residualsWeights[i] @AT@ 9034 @LENGTH@ 54
+------------DEL SimpleName@@chiSquare @AT@ 9034 @LENGTH@ 9
+------------DEL Operator@@+= @AT@ 9043 @LENGTH@ 2
+------------DEL InfixExpression@@residual * residual / residualsWeights[i] @AT@ 9047 @LENGTH@ 41
+---------------DEL InfixExpression@@residual * residual @AT@ 9047 @LENGTH@ 19
+------------------DEL SimpleName@@residual @AT@ 9047 @LENGTH@ 8
+------------------DEL Operator@@* @AT@ 9055 @LENGTH@ 1
+------------------DEL SimpleName@@residual @AT@ 9058 @LENGTH@ 8
+---------------DEL Operator@@/ @AT@ 9066 @LENGTH@ 1
+---------------DEL ArrayAccess@@residualsWeights[i] @AT@ 9069 @LENGTH@ 19
+------------------DEL SimpleName@@residualsWeights @AT@ 9069 @LENGTH@ 16
+------------------DEL SimpleName@@i @AT@ 9086 @LENGTH@ 1
+---DEL ReturnStatement@@SimpleName:chiSquare @AT@ 9108 @LENGTH@ 17
+------DEL SimpleName@@chiSquare @AT@ 9115 @LENGTH@ 9
+]
+
+CII:
+OP1:(UPD, MethodDeclaration, null, OP2 OP3)
+OP2:   (UPD, SimpleName, OP1, null)
+OP3:   (UPD, ReturnStatement, OP1, OP4 OP11)
+OP4:      (DEL, MethodInvocation, OP3, OP5 OP6)
+OP5:         (DEL, SimpleName, OP4, null)
+OP6:         (DEL, SimpleName, OP4, OP7)
+OP7:            (DEL, InfixExpression, OP6, OP8 OP9 OP10)
+OP8:               (DEL, SimpleName, OP7, null)
+OP9:               (DEL, Operator, OP7, null)
+OP10:               (DEL, SimpleName, OP7, null)
+OP11:      (INS, SimpleName, OP3, null)
+
+
+
+
+
+hASList: 
+[MOV MethodDeclaration@@public, @@double, MethodName:getRMS, @@Argus:null @TO@ TypeDeclaration@@[public, abstract]AbstractLeastSquaresOptimizer, [DifferentiableMultivariateVectorialOptimizer] @AT@ 7934 @LENGTH@ 700
+---MOV VariableDeclarationStatement@@double chiSquare=0; @TO@ MethodDeclaration@@public, @@double, MethodName:getRMS, @@Argus:null @AT@ 8909 @LENGTH@ 21
+------MOV PrimitiveType@@double @TO@ VariableDeclarationStatement@@double chiSquare=0; @AT@ 8394 @LENGTH@ 6
+, UPD MethodDeclaration@@public, @@double, MethodName:getRMS, @@Argus:null @TO@ public, @@double, MethodName:getChiSquare, @@Argus:null @AT@ 7934 @LENGTH@ 700
+---UPD SimpleName@@MethodName:getRMS @TO@ MethodName:getChiSquare @AT@ 8375 @LENGTH@ 6
+---UPD ReturnStatement@@MethodInvocation:Math.sqrt(criterion / rows) @TO@ SimpleName:chiSquare @AT@ 8593 @LENGTH@ 35
+------DEL MethodInvocation@@Math.sqrt(criterion / rows) @AT@ 8600 @LENGTH@ 27
+---------DEL SimpleName@@Name:Math @AT@ 8600 @LENGTH@ 4
+---------DEL SimpleName@@MethodName:sqrt:[criterion / rows] @AT@ 8605 @LENGTH@ 22
+------------DEL InfixExpression@@criterion / rows @AT@ 8610 @LENGTH@ 16
+---------------DEL SimpleName@@criterion @AT@ 8610 @LENGTH@ 9
+---------------DEL Operator@@/ @AT@ 8619 @LENGTH@ 1
+---------------DEL SimpleName@@rows @AT@ 8622 @LENGTH@ 4
+------INS SimpleName@@chiSquare @TO@ ReturnStatement@@MethodInvocation:Math.sqrt(criterion / rows) @AT@ 8921 @LENGTH@ 9
+, UPD ExpressionStatement@@Assignment:criterion+=residual * residual * residualsWeights[i] @TO@ Assignment:chiSquare+=residual * residual * residualsWeights[i] @AT@ 8519 @LENGTH@ 55
+---UPD Assignment@@criterion+=residual * residual * residualsWeights[i] @TO@ chiSquare+=residual * residual * residualsWeights[i] @AT@ 8519 @LENGTH@ 54
+------UPD SimpleName@@criterion @TO@ chiSquare @AT@ 8519 @LENGTH@ 9
+, UPD MethodDeclaration@@public, @@double, MethodName:getChiSquare, @@Argus:null @TO@ public, @@double, MethodName:getRMS, @@Argus:null @AT@ 8640 @LENGTH@ 491
+---INS ReturnStatement@@MethodInvocation:Math.sqrt(getChiSquare() / rows) @TO@ MethodDeclaration@@public, @@double, MethodName:getChiSquare, @@Argus:null @AT@ 8394 @LENGTH@ 40
+------INS MethodInvocation@@Math.sqrt(getChiSquare() / rows) @TO@ ReturnStatement@@MethodInvocation:Math.sqrt(getChiSquare() / rows) @AT@ 8401 @LENGTH@ 32
+---------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.sqrt(getChiSquare() / rows) @AT@ 8401 @LENGTH@ 4
+---------INS SimpleName@@MethodName:sqrt:[getChiSquare() / rows] @TO@ MethodInvocation@@Math.sqrt(getChiSquare() / rows) @AT@ 8406 @LENGTH@ 27
+------------INS InfixExpression@@getChiSquare() / rows @TO@ SimpleName@@MethodName:sqrt:[getChiSquare() / rows] @AT@ 8411 @LENGTH@ 21
+---------------INS MethodInvocation@@MethodName:getChiSquare:[] @TO@ InfixExpression@@getChiSquare() / rows @AT@ 8411 @LENGTH@ 14
+---------------MOV Operator@@< @TO@ InfixExpression@@getChiSquare() / rows @AT@ 8956 @LENGTH@ 1
+---------------MOV SimpleName@@rows @TO@ InfixExpression@@getChiSquare() / rows @AT@ 8959 @LENGTH@ 4
+---UPD SimpleName@@MethodName:getChiSquare @TO@ MethodName:getRMS @AT@ 8884 @LENGTH@ 12
+---DEL ForStatement@@[int i=0];i < rows; [++i] @AT@ 8939 @LENGTH@ 160
+------DEL VariableDeclarationExpression@@int i=0 @AT@ 8944 @LENGTH@ 9
+---------DEL PrimitiveType@@int @AT@ 8944 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@i=0 @AT@ 8948 @LENGTH@ 5
+------------DEL SimpleName@@i @AT@ 8948 @LENGTH@ 1
+------------DEL NumberLiteral@@0 @AT@ 8952 @LENGTH@ 1
+------DEL InfixExpression@@i < rows @AT@ 8955 @LENGTH@ 8
+---------DEL SimpleName@@i @AT@ 8955 @LENGTH@ 1
+------DEL PrefixExpression@@++i @AT@ 8965 @LENGTH@ 3
+---------DEL Operator@@++ @AT@ 8965 @LENGTH@ 2
+---------DEL SimpleName@@i @AT@ 8967 @LENGTH@ 1
+------DEL VariableDeclarationStatement@@final double residual=residuals[i]; @AT@ 8984 @LENGTH@ 37
+---------DEL Modifier@@final @AT@ 8984 @LENGTH@ 5
+---------DEL PrimitiveType@@double @AT@ 8990 @LENGTH@ 6
+---------DEL VariableDeclarationFragment@@residual=residuals[i] @AT@ 8997 @LENGTH@ 23
+------------DEL SimpleName@@residual @AT@ 8997 @LENGTH@ 8
+------------DEL ArrayAccess@@residuals[i] @AT@ 9008 @LENGTH@ 12
+---------------DEL SimpleName@@residuals @AT@ 9008 @LENGTH@ 9
+---------------DEL SimpleName@@i @AT@ 9018 @LENGTH@ 1
+------DEL ExpressionStatement@@Assignment:chiSquare+=residual * residual / residualsWeights[i] @AT@ 9034 @LENGTH@ 55
+---------DEL Assignment@@chiSquare+=residual * residual / residualsWeights[i] @AT@ 9034 @LENGTH@ 54
+------------DEL SimpleName@@chiSquare @AT@ 9034 @LENGTH@ 9
+------------DEL Operator@@+= @AT@ 9043 @LENGTH@ 2
+------------DEL InfixExpression@@residual * residual / residualsWeights[i] @AT@ 9047 @LENGTH@ 41
+---------------DEL InfixExpression@@residual * residual @AT@ 9047 @LENGTH@ 19
+------------------DEL SimpleName@@residual @AT@ 9047 @LENGTH@ 8
+------------------DEL Operator@@* @AT@ 9055 @LENGTH@ 1
+------------------DEL SimpleName@@residual @AT@ 9058 @LENGTH@ 8
+---------------DEL Operator@@/ @AT@ 9066 @LENGTH@ 1
+---------------DEL ArrayAccess@@residualsWeights[i] @AT@ 9069 @LENGTH@ 19
+------------------DEL SimpleName@@residualsWeights @AT@ 9069 @LENGTH@ 16
+------------------DEL SimpleName@@i @AT@ 9086 @LENGTH@ 1
+---DEL ReturnStatement@@SimpleName:chiSquare @AT@ 9108 @LENGTH@ 17
+------DEL SimpleName@@chiSquare @AT@ 9115 @LENGTH@ 9
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, Assignment, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, null)
+
+
+
+
+
+hASList: 
+[MOV MethodDeclaration@@public, @@double, MethodName:getRMS, @@Argus:null @TO@ TypeDeclaration@@[public, abstract]AbstractLeastSquaresOptimizer, [DifferentiableMultivariateVectorialOptimizer] @AT@ 7934 @LENGTH@ 700
+---MOV VariableDeclarationStatement@@double chiSquare=0; @TO@ MethodDeclaration@@public, @@double, MethodName:getRMS, @@Argus:null @AT@ 8909 @LENGTH@ 21
+------MOV PrimitiveType@@double @TO@ VariableDeclarationStatement@@double chiSquare=0; @AT@ 8394 @LENGTH@ 6
+, UPD MethodDeclaration@@public, @@double, MethodName:getRMS, @@Argus:null @TO@ public, @@double, MethodName:getChiSquare, @@Argus:null @AT@ 7934 @LENGTH@ 700
+---UPD SimpleName@@MethodName:getRMS @TO@ MethodName:getChiSquare @AT@ 8375 @LENGTH@ 6
+---UPD ReturnStatement@@MethodInvocation:Math.sqrt(criterion / rows) @TO@ SimpleName:chiSquare @AT@ 8593 @LENGTH@ 35
+------DEL MethodInvocation@@Math.sqrt(criterion / rows) @AT@ 8600 @LENGTH@ 27
+---------DEL SimpleName@@Name:Math @AT@ 8600 @LENGTH@ 4
+---------DEL SimpleName@@MethodName:sqrt:[criterion / rows] @AT@ 8605 @LENGTH@ 22
+------------DEL InfixExpression@@criterion / rows @AT@ 8610 @LENGTH@ 16
+---------------DEL SimpleName@@criterion @AT@ 8610 @LENGTH@ 9
+---------------DEL Operator@@/ @AT@ 8619 @LENGTH@ 1
+---------------DEL SimpleName@@rows @AT@ 8622 @LENGTH@ 4
+------INS SimpleName@@chiSquare @TO@ ReturnStatement@@MethodInvocation:Math.sqrt(criterion / rows) @AT@ 8921 @LENGTH@ 9
+, UPD ExpressionStatement@@Assignment:criterion+=residual * residual * residualsWeights[i] @TO@ Assignment:chiSquare+=residual * residual * residualsWeights[i] @AT@ 8519 @LENGTH@ 55
+---UPD Assignment@@criterion+=residual * residual * residualsWeights[i] @TO@ chiSquare+=residual * residual * residualsWeights[i] @AT@ 8519 @LENGTH@ 54
+------UPD SimpleName@@criterion @TO@ chiSquare @AT@ 8519 @LENGTH@ 9
+, UPD MethodDeclaration@@public, @@double, MethodName:getChiSquare, @@Argus:null @TO@ public, @@double, MethodName:getRMS, @@Argus:null @AT@ 8640 @LENGTH@ 491
+---INS ReturnStatement@@MethodInvocation:Math.sqrt(getChiSquare() / rows) @TO@ MethodDeclaration@@public, @@double, MethodName:getChiSquare, @@Argus:null @AT@ 8394 @LENGTH@ 40
+------INS MethodInvocation@@Math.sqrt(getChiSquare() / rows) @TO@ ReturnStatement@@MethodInvocation:Math.sqrt(getChiSquare() / rows) @AT@ 8401 @LENGTH@ 32
+---------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.sqrt(getChiSquare() / rows) @AT@ 8401 @LENGTH@ 4
+---------INS SimpleName@@MethodName:sqrt:[getChiSquare() / rows] @TO@ MethodInvocation@@Math.sqrt(getChiSquare() / rows) @AT@ 8406 @LENGTH@ 27
+------------INS InfixExpression@@getChiSquare() / rows @TO@ SimpleName@@MethodName:sqrt:[getChiSquare() / rows] @AT@ 8411 @LENGTH@ 21
+---------------INS MethodInvocation@@MethodName:getChiSquare:[] @TO@ InfixExpression@@getChiSquare() / rows @AT@ 8411 @LENGTH@ 14
+---------------MOV Operator@@< @TO@ InfixExpression@@getChiSquare() / rows @AT@ 8956 @LENGTH@ 1
+---------------MOV SimpleName@@rows @TO@ InfixExpression@@getChiSquare() / rows @AT@ 8959 @LENGTH@ 4
+---UPD SimpleName@@MethodName:getChiSquare @TO@ MethodName:getRMS @AT@ 8884 @LENGTH@ 12
+---DEL ForStatement@@[int i=0];i < rows; [++i] @AT@ 8939 @LENGTH@ 160
+------DEL VariableDeclarationExpression@@int i=0 @AT@ 8944 @LENGTH@ 9
+---------DEL PrimitiveType@@int @AT@ 8944 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@i=0 @AT@ 8948 @LENGTH@ 5
+------------DEL SimpleName@@i @AT@ 8948 @LENGTH@ 1
+------------DEL NumberLiteral@@0 @AT@ 8952 @LENGTH@ 1
+------DEL InfixExpression@@i < rows @AT@ 8955 @LENGTH@ 8
+---------DEL SimpleName@@i @AT@ 8955 @LENGTH@ 1
+------DEL PrefixExpression@@++i @AT@ 8965 @LENGTH@ 3
+---------DEL Operator@@++ @AT@ 8965 @LENGTH@ 2
+---------DEL SimpleName@@i @AT@ 8967 @LENGTH@ 1
+------DEL VariableDeclarationStatement@@final double residual=residuals[i]; @AT@ 8984 @LENGTH@ 37
+---------DEL Modifier@@final @AT@ 8984 @LENGTH@ 5
+---------DEL PrimitiveType@@double @AT@ 8990 @LENGTH@ 6
+---------DEL VariableDeclarationFragment@@residual=residuals[i] @AT@ 8997 @LENGTH@ 23
+------------DEL SimpleName@@residual @AT@ 8997 @LENGTH@ 8
+------------DEL ArrayAccess@@residuals[i] @AT@ 9008 @LENGTH@ 12
+---------------DEL SimpleName@@residuals @AT@ 9008 @LENGTH@ 9
+---------------DEL SimpleName@@i @AT@ 9018 @LENGTH@ 1
+------DEL ExpressionStatement@@Assignment:chiSquare+=residual * residual / residualsWeights[i] @AT@ 9034 @LENGTH@ 55
+---------DEL Assignment@@chiSquare+=residual * residual / residualsWeights[i] @AT@ 9034 @LENGTH@ 54
+------------DEL SimpleName@@chiSquare @AT@ 9034 @LENGTH@ 9
+------------DEL Operator@@+= @AT@ 9043 @LENGTH@ 2
+------------DEL InfixExpression@@residual * residual / residualsWeights[i] @AT@ 9047 @LENGTH@ 41
+---------------DEL InfixExpression@@residual * residual @AT@ 9047 @LENGTH@ 19
+------------------DEL SimpleName@@residual @AT@ 9047 @LENGTH@ 8
+------------------DEL Operator@@* @AT@ 9055 @LENGTH@ 1
+------------------DEL SimpleName@@residual @AT@ 9058 @LENGTH@ 8
+---------------DEL Operator@@/ @AT@ 9066 @LENGTH@ 1
+---------------DEL ArrayAccess@@residualsWeights[i] @AT@ 9069 @LENGTH@ 19
+------------------DEL SimpleName@@residualsWeights @AT@ 9069 @LENGTH@ 16
+------------------DEL SimpleName@@i @AT@ 9086 @LENGTH@ 1
+---DEL ReturnStatement@@SimpleName:chiSquare @AT@ 9108 @LENGTH@ 17
+------DEL SimpleName@@chiSquare @AT@ 9115 @LENGTH@ 9
+]
+
+CII:
+OP1:(UPD, MethodDeclaration, null, OP2 OP10 OP11 OP43)
+OP2:   (INS, ReturnStatement, OP1, OP3)
+OP3:      (INS, MethodInvocation, OP2, OP4 OP5)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, SimpleName, OP3, OP6)
+OP6:            (INS, InfixExpression, OP5, OP7 OP8 OP9)
+OP7:               (INS, MethodInvocation, OP6, null)
+OP8:               (MOV, Operator, OP6, null)
+OP9:               (MOV, SimpleName, OP6, null)
+OP10:   (UPD, SimpleName, OP1, null)
+OP11:   (DEL, ForStatement, OP1, OP12 OP17 OP19 OP22 OP30)
+OP12:      (DEL, VariableDeclarationExpression, OP11, OP13 OP14)
+OP13:         (DEL, PrimitiveType, OP12, null)
+OP14:         (DEL, VariableDeclarationFragment, OP12, OP15 OP16)
+OP15:            (DEL, SimpleName, OP14, null)
+OP16:            (DEL, NumberLiteral, OP14, null)
+OP17:      (DEL, InfixExpression, OP11, OP18)
+OP18:         (DEL, SimpleName, OP17, null)
+OP19:      (DEL, PrefixExpression, OP11, OP20 OP21)
+OP20:         (DEL, Operator, OP19, null)
+OP21:         (DEL, SimpleName, OP19, null)
+OP22:      (DEL, VariableDeclarationStatement, OP11, OP23 OP24 OP25)
+OP23:         (DEL, Modifier, OP22, null)
+OP24:         (DEL, PrimitiveType, OP22, null)
+OP25:         (DEL, VariableDeclarationFragment, OP22, OP26 OP27)
+OP26:            (DEL, SimpleName, OP25, null)
+OP27:            (DEL, ArrayAccess, OP25, OP28 OP29)
+OP28:               (DEL, SimpleName, OP27, null)
+OP29:               (DEL, SimpleName, OP27, null)
+OP30:      (DEL, ExpressionStatement, OP11, OP31)
+OP31:         (DEL, Assignment, OP30, OP32 OP33 OP34)
+OP32:            (DEL, SimpleName, OP31, null)
+OP33:            (DEL, Operator, OP31, null)
+OP34:            (DEL, InfixExpression, OP31, OP35 OP39 OP40)
+OP35:               (DEL, InfixExpression, OP34, OP36 OP37 OP38)
+OP36:                  (DEL, SimpleName, OP35, null)
+OP37:                  (DEL, Operator, OP35, null)
+OP38:                  (DEL, SimpleName, OP35, null)
+OP39:               (DEL, Operator, OP34, null)
+OP40:               (DEL, ArrayAccess, OP34, OP41 OP42)
+OP41:                  (DEL, SimpleName, OP40, null)
+OP42:                  (DEL, SimpleName, OP40, null)
+OP43:   (DEL, ReturnStatement, OP1, OP44)
+OP44:      (DEL, SimpleName, OP43, null)
+
+
+

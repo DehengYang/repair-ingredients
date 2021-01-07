@@ -1,0 +1,27 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_100/src/com/google/javascript/jscomp/CheckGlobalThis.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_100/src/com/google/javascript/jscomp/CheckGlobalThis.java
+--- ../d4j-repo/Closure/Closure_100/src/com/google/javascript/jscomp/CheckGlobalThis.java	2021-01-06 03:46:49.346253973 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_100/src/com/google/javascript/jscomp/CheckGlobalThis.java	2021-01-06 03:46:52.330355614 -0800
+@@ -96,6 +96,13 @@
+       // var a = function() { }; // or
+       // function a() {} // or
+       // a.x = function() {};
++      int pType = parent.getType();
++      if (!(pType == Token.BLOCK ||
++            pType == Token.SCRIPT ||
++            pType == Token.NAME ||
++            pType == Token.ASSIGN)) {
++        return false;
++      }
+     }
+ 
+     if (parent != null && parent.getType() == Token.ASSIGN) {
+@@ -143,7 +150,7 @@
+     }
+ 
+     // Also report a THIS with a property access.
+-    return false;
++    return parent != null && NodeUtil.isGet(parent);
+   }
+ 
+   /**

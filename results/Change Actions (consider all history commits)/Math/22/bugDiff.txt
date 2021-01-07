@@ -1,0 +1,25 @@
+
+diff -Naur ../d4j-repo/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/FDistribution.java ../d4j-repo/fixed_bugs_dir/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/FDistribution.java
+--- ../d4j-repo/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/FDistribution.java	2021-01-04 22:59:07.632252561 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/FDistribution.java	2021-01-04 22:59:11.208386638 -0800
+@@ -272,7 +272,7 @@
+ 
+     /** {@inheritDoc} */
+     public boolean isSupportLowerBoundInclusive() {
+-        return true;
++        return false;
+     }
+ 
+     /** {@inheritDoc} */
+diff -Naur ../d4j-repo/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/UniformRealDistribution.java ../d4j-repo/fixed_bugs_dir/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/UniformRealDistribution.java
+--- ../d4j-repo/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/UniformRealDistribution.java	2021-01-04 22:59:07.632252561 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_22/src/main/java/org/apache/commons/math3/distribution/UniformRealDistribution.java	2021-01-04 22:59:11.208386638 -0800
+@@ -181,7 +181,7 @@
+ 
+     /** {@inheritDoc} */
+     public boolean isSupportUpperBoundInclusive() {
+-        return false;
++        return true;
+     }
+ 
+     /**

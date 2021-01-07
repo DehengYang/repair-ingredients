@@ -1,0 +1,24 @@
+OP1:(INS, FieldDeclaration, null, OP2 OP3 OP4)
+OP2:   (MOV, Modifier, OP1, null)
+OP3:   (MOV, ParameterizedType, OP1, null)
+OP4:   (INS, VariableDeclarationFragment, OP1, OP5 OP6)
+OP5:      (MOV, SimpleName, OP4, null)
+OP6:      (INS, ClassInstanceCreation, OP4, OP7 OP8 OP9)
+OP7:         (MOV, New, OP6, null)
+OP8:         (MOV, ParameterizedType, OP6, null)
+OP9:         (INS, AnonymousClassDeclaration, OP6, OP10)
+OP10:            (INS, MethodDeclaration, OP9, OP11 OP12 OP13 OP14)
+OP11:               (INS, Modifier, OP10, null)
+OP12:               (INS, SimpleType, OP10, null)
+OP13:               (INS, SimpleName, OP10, null)
+OP14:               (INS, ReturnStatement, OP10, OP15)
+OP15:                  (INS, QualifiedName, OP14, OP16 OP17)
+OP16:                     (MOV, SimpleName, OP15, null)
+OP17:                     (MOV, SimpleName, OP15, null)
+
+
+OP1:(DEL, FieldDeclaration, null, OP2)
+OP2:   (DEL, VariableDeclarationFragment, OP1, OP3)
+OP3:      (DEL, ClassInstanceCreation, OP2, null)
+
+

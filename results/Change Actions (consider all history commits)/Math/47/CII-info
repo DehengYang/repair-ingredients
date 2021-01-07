@@ -1,0 +1,291 @@
+
+
+hASList: 
+[INS FieldDeclaration@@private, final, transient, boolean, [isZero] @TO@ TypeDeclaration@@[public]Complex, [FieldElement<Complex>, Serializable] @AT@ 3559 @LENGTH@ 39
+---INS Modifier@@private @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3559 @LENGTH@ 7
+---INS Modifier@@final @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3567 @LENGTH@ 5
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3573 @LENGTH@ 9
+---INS PrimitiveType@@boolean @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3583 @LENGTH@ 7
+---INS VariableDeclarationFragment@@isZero @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3591 @LENGTH@ 6
+------INS SimpleName@@isZero @TO@ VariableDeclarationFragment@@isZero @AT@ 3591 @LENGTH@ 6
+, INS ExpressionStatement@@Assignment:isZero=real == 0 && imaginary == 0 @TO@ MethodDeclaration@@public, @@=CONSTRUCTOR=, MethodName:Complex, @@Argus:double+real+double+imaginary+ @AT@ 4224 @LENGTH@ 37
+---INS Assignment@@isZero=real == 0 && imaginary == 0 @TO@ ExpressionStatement@@Assignment:isZero=real == 0 && imaginary == 0 @AT@ 4224 @LENGTH@ 36
+------INS SimpleName@@isZero @TO@ Assignment@@isZero=real == 0 && imaginary == 0 @AT@ 4224 @LENGTH@ 6
+------INS Operator@@= @TO@ Assignment@@isZero=real == 0 && imaginary == 0 @AT@ 4230 @LENGTH@ 1
+------INS InfixExpression@@real == 0 && imaginary == 0 @TO@ Assignment@@isZero=real == 0 && imaginary == 0 @AT@ 4233 @LENGTH@ 27
+---------INS InfixExpression@@real == 0 @TO@ InfixExpression@@real == 0 && imaginary == 0 @AT@ 4233 @LENGTH@ 9
+------------INS SimpleName@@real @TO@ InfixExpression@@real == 0 @AT@ 4233 @LENGTH@ 4
+------------INS Operator@@== @TO@ InfixExpression@@real == 0 @AT@ 4237 @LENGTH@ 2
+------------INS NumberLiteral@@0 @TO@ InfixExpression@@real == 0 @AT@ 4241 @LENGTH@ 1
+---------INS Operator@@&& @TO@ InfixExpression@@real == 0 && imaginary == 0 @AT@ 4242 @LENGTH@ 2
+---------INS InfixExpression@@imaginary == 0 @TO@ InfixExpression@@real == 0 && imaginary == 0 @AT@ 4246 @LENGTH@ 14
+------------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary == 0 @AT@ 4246 @LENGTH@ 9
+------------INS Operator@@== @TO@ InfixExpression@@imaginary == 0 @AT@ 4255 @LENGTH@ 2
+------------INS NumberLiteral@@0 @TO@ InfixExpression@@imaginary == 0 @AT@ 4259 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:divisor.getReal() == 0.0 && divisor.getImaginary() == 0.0 @TO@ QualifiedName:divisor.isZero @AT@ 9456 @LENGTH@ 98
+---DEL InfixExpression@@divisor.getReal() == 0.0 && divisor.getImaginary() == 0.0 @AT@ 9460 @LENGTH@ 57
+------DEL InfixExpression@@divisor.getReal() == 0.0 @AT@ 9460 @LENGTH@ 24
+---------DEL MethodInvocation@@divisor.getReal() @AT@ 9460 @LENGTH@ 17
+------------DEL SimpleName@@Name:divisor @AT@ 9460 @LENGTH@ 7
+------------DEL SimpleName@@MethodName:getReal:[] @AT@ 9468 @LENGTH@ 9
+---------DEL Operator@@== @AT@ 9477 @LENGTH@ 2
+---------DEL NumberLiteral@@0.0 @AT@ 9481 @LENGTH@ 3
+------DEL Operator@@&& @AT@ 9484 @LENGTH@ 2
+------DEL InfixExpression@@divisor.getImaginary() == 0.0 @AT@ 9488 @LENGTH@ 29
+---------DEL MethodInvocation@@divisor.getImaginary() @AT@ 9488 @LENGTH@ 22
+------------DEL SimpleName@@Name:divisor @AT@ 9488 @LENGTH@ 7
+------------DEL SimpleName@@MethodName:getImaginary:[] @AT@ 9496 @LENGTH@ 14
+---------DEL Operator@@== @AT@ 9510 @LENGTH@ 2
+---------DEL NumberLiteral@@0.0 @AT@ 9514 @LENGTH@ 3
+---UPD ReturnStatement@@SimpleName:NaN @TO@ ConditionalExpression:isZero ? NaN : INF @AT@ 9533 @LENGTH@ 11
+------DEL SimpleName@@NaN @AT@ 9540 @LENGTH@ 3
+------INS ConditionalExpression@@isZero ? NaN : INF @TO@ ReturnStatement@@SimpleName:NaN @AT@ 9587 @LENGTH@ 18
+---------INS SimpleName@@isZero @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 9587 @LENGTH@ 6
+---------INS SimpleName@@NaN @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 9596 @LENGTH@ 3
+---------INS SimpleName@@INF @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 9602 @LENGTH@ 3
+---INS QualifiedName@@divisor.isZero @TO@ IfStatement@@InfixExpression:divisor.getReal() == 0.0 && divisor.getImaginary() == 0.0 @AT@ 9550 @LENGTH@ 14
+------INS SimpleName@@divisor @TO@ QualifiedName@@divisor.isZero @AT@ 9550 @LENGTH@ 7
+------INS SimpleName@@isZero @TO@ QualifiedName@@divisor.isZero @AT@ 9558 @LENGTH@ 6
+, UPD ReturnStatement@@SimpleName:NaN @TO@ ConditionalExpression:isZero ? NaN : INF @AT@ 10687 @LENGTH@ 11
+---DEL SimpleName@@NaN @AT@ 10694 @LENGTH@ 3
+---INS ConditionalExpression@@isZero ? NaN : INF @TO@ ReturnStatement@@SimpleName:NaN @AT@ 10756 @LENGTH@ 18
+------INS SimpleName@@isZero @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 10756 @LENGTH@ 6
+------INS SimpleName@@NaN @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 10765 @LENGTH@ 3
+------INS SimpleName@@INF @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 10771 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, FieldDeclaration, null, OP2 OP3 OP4 OP5 OP6)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (INS, Modifier, OP1, null)
+OP5:   (INS, PrimitiveType, OP1, null)
+OP6:   (INS, VariableDeclarationFragment, OP1, OP7)
+OP7:      (INS, SimpleName, OP6, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, final, transient, boolean, [isZero] @TO@ TypeDeclaration@@[public]Complex, [FieldElement<Complex>, Serializable] @AT@ 3559 @LENGTH@ 39
+---INS Modifier@@private @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3559 @LENGTH@ 7
+---INS Modifier@@final @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3567 @LENGTH@ 5
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3573 @LENGTH@ 9
+---INS PrimitiveType@@boolean @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3583 @LENGTH@ 7
+---INS VariableDeclarationFragment@@isZero @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3591 @LENGTH@ 6
+------INS SimpleName@@isZero @TO@ VariableDeclarationFragment@@isZero @AT@ 3591 @LENGTH@ 6
+, INS ExpressionStatement@@Assignment:isZero=real == 0 && imaginary == 0 @TO@ MethodDeclaration@@public, @@=CONSTRUCTOR=, MethodName:Complex, @@Argus:double+real+double+imaginary+ @AT@ 4224 @LENGTH@ 37
+---INS Assignment@@isZero=real == 0 && imaginary == 0 @TO@ ExpressionStatement@@Assignment:isZero=real == 0 && imaginary == 0 @AT@ 4224 @LENGTH@ 36
+------INS SimpleName@@isZero @TO@ Assignment@@isZero=real == 0 && imaginary == 0 @AT@ 4224 @LENGTH@ 6
+------INS Operator@@= @TO@ Assignment@@isZero=real == 0 && imaginary == 0 @AT@ 4230 @LENGTH@ 1
+------INS InfixExpression@@real == 0 && imaginary == 0 @TO@ Assignment@@isZero=real == 0 && imaginary == 0 @AT@ 4233 @LENGTH@ 27
+---------INS InfixExpression@@real == 0 @TO@ InfixExpression@@real == 0 && imaginary == 0 @AT@ 4233 @LENGTH@ 9
+------------INS SimpleName@@real @TO@ InfixExpression@@real == 0 @AT@ 4233 @LENGTH@ 4
+------------INS Operator@@== @TO@ InfixExpression@@real == 0 @AT@ 4237 @LENGTH@ 2
+------------INS NumberLiteral@@0 @TO@ InfixExpression@@real == 0 @AT@ 4241 @LENGTH@ 1
+---------INS Operator@@&& @TO@ InfixExpression@@real == 0 && imaginary == 0 @AT@ 4242 @LENGTH@ 2
+---------INS InfixExpression@@imaginary == 0 @TO@ InfixExpression@@real == 0 && imaginary == 0 @AT@ 4246 @LENGTH@ 14
+------------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary == 0 @AT@ 4246 @LENGTH@ 9
+------------INS Operator@@== @TO@ InfixExpression@@imaginary == 0 @AT@ 4255 @LENGTH@ 2
+------------INS NumberLiteral@@0 @TO@ InfixExpression@@imaginary == 0 @AT@ 4259 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:divisor.getReal() == 0.0 && divisor.getImaginary() == 0.0 @TO@ QualifiedName:divisor.isZero @AT@ 9456 @LENGTH@ 98
+---DEL InfixExpression@@divisor.getReal() == 0.0 && divisor.getImaginary() == 0.0 @AT@ 9460 @LENGTH@ 57
+------DEL InfixExpression@@divisor.getReal() == 0.0 @AT@ 9460 @LENGTH@ 24
+---------DEL MethodInvocation@@divisor.getReal() @AT@ 9460 @LENGTH@ 17
+------------DEL SimpleName@@Name:divisor @AT@ 9460 @LENGTH@ 7
+------------DEL SimpleName@@MethodName:getReal:[] @AT@ 9468 @LENGTH@ 9
+---------DEL Operator@@== @AT@ 9477 @LENGTH@ 2
+---------DEL NumberLiteral@@0.0 @AT@ 9481 @LENGTH@ 3
+------DEL Operator@@&& @AT@ 9484 @LENGTH@ 2
+------DEL InfixExpression@@divisor.getImaginary() == 0.0 @AT@ 9488 @LENGTH@ 29
+---------DEL MethodInvocation@@divisor.getImaginary() @AT@ 9488 @LENGTH@ 22
+------------DEL SimpleName@@Name:divisor @AT@ 9488 @LENGTH@ 7
+------------DEL SimpleName@@MethodName:getImaginary:[] @AT@ 9496 @LENGTH@ 14
+---------DEL Operator@@== @AT@ 9510 @LENGTH@ 2
+---------DEL NumberLiteral@@0.0 @AT@ 9514 @LENGTH@ 3
+---UPD ReturnStatement@@SimpleName:NaN @TO@ ConditionalExpression:isZero ? NaN : INF @AT@ 9533 @LENGTH@ 11
+------DEL SimpleName@@NaN @AT@ 9540 @LENGTH@ 3
+------INS ConditionalExpression@@isZero ? NaN : INF @TO@ ReturnStatement@@SimpleName:NaN @AT@ 9587 @LENGTH@ 18
+---------INS SimpleName@@isZero @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 9587 @LENGTH@ 6
+---------INS SimpleName@@NaN @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 9596 @LENGTH@ 3
+---------INS SimpleName@@INF @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 9602 @LENGTH@ 3
+---INS QualifiedName@@divisor.isZero @TO@ IfStatement@@InfixExpression:divisor.getReal() == 0.0 && divisor.getImaginary() == 0.0 @AT@ 9550 @LENGTH@ 14
+------INS SimpleName@@divisor @TO@ QualifiedName@@divisor.isZero @AT@ 9550 @LENGTH@ 7
+------INS SimpleName@@isZero @TO@ QualifiedName@@divisor.isZero @AT@ 9558 @LENGTH@ 6
+, UPD ReturnStatement@@SimpleName:NaN @TO@ ConditionalExpression:isZero ? NaN : INF @AT@ 10687 @LENGTH@ 11
+---DEL SimpleName@@NaN @AT@ 10694 @LENGTH@ 3
+---INS ConditionalExpression@@isZero ? NaN : INF @TO@ ReturnStatement@@SimpleName:NaN @AT@ 10756 @LENGTH@ 18
+------INS SimpleName@@isZero @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 10756 @LENGTH@ 6
+------INS SimpleName@@NaN @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 10765 @LENGTH@ 3
+------INS SimpleName@@INF @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 10771 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, InfixExpression, OP2, OP6 OP10 OP11)
+OP6:         (INS, InfixExpression, OP5, OP7 OP8 OP9)
+OP7:            (INS, SimpleName, OP6, null)
+OP8:            (INS, Operator, OP6, null)
+OP9:            (INS, NumberLiteral, OP6, null)
+OP10:         (INS, Operator, OP5, null)
+OP11:         (INS, InfixExpression, OP5, OP12 OP13 OP14)
+OP12:            (INS, SimpleName, OP11, null)
+OP13:            (INS, Operator, OP11, null)
+OP14:            (INS, NumberLiteral, OP11, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, final, transient, boolean, [isZero] @TO@ TypeDeclaration@@[public]Complex, [FieldElement<Complex>, Serializable] @AT@ 3559 @LENGTH@ 39
+---INS Modifier@@private @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3559 @LENGTH@ 7
+---INS Modifier@@final @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3567 @LENGTH@ 5
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3573 @LENGTH@ 9
+---INS PrimitiveType@@boolean @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3583 @LENGTH@ 7
+---INS VariableDeclarationFragment@@isZero @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3591 @LENGTH@ 6
+------INS SimpleName@@isZero @TO@ VariableDeclarationFragment@@isZero @AT@ 3591 @LENGTH@ 6
+, INS ExpressionStatement@@Assignment:isZero=real == 0 && imaginary == 0 @TO@ MethodDeclaration@@public, @@=CONSTRUCTOR=, MethodName:Complex, @@Argus:double+real+double+imaginary+ @AT@ 4224 @LENGTH@ 37
+---INS Assignment@@isZero=real == 0 && imaginary == 0 @TO@ ExpressionStatement@@Assignment:isZero=real == 0 && imaginary == 0 @AT@ 4224 @LENGTH@ 36
+------INS SimpleName@@isZero @TO@ Assignment@@isZero=real == 0 && imaginary == 0 @AT@ 4224 @LENGTH@ 6
+------INS Operator@@= @TO@ Assignment@@isZero=real == 0 && imaginary == 0 @AT@ 4230 @LENGTH@ 1
+------INS InfixExpression@@real == 0 && imaginary == 0 @TO@ Assignment@@isZero=real == 0 && imaginary == 0 @AT@ 4233 @LENGTH@ 27
+---------INS InfixExpression@@real == 0 @TO@ InfixExpression@@real == 0 && imaginary == 0 @AT@ 4233 @LENGTH@ 9
+------------INS SimpleName@@real @TO@ InfixExpression@@real == 0 @AT@ 4233 @LENGTH@ 4
+------------INS Operator@@== @TO@ InfixExpression@@real == 0 @AT@ 4237 @LENGTH@ 2
+------------INS NumberLiteral@@0 @TO@ InfixExpression@@real == 0 @AT@ 4241 @LENGTH@ 1
+---------INS Operator@@&& @TO@ InfixExpression@@real == 0 && imaginary == 0 @AT@ 4242 @LENGTH@ 2
+---------INS InfixExpression@@imaginary == 0 @TO@ InfixExpression@@real == 0 && imaginary == 0 @AT@ 4246 @LENGTH@ 14
+------------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary == 0 @AT@ 4246 @LENGTH@ 9
+------------INS Operator@@== @TO@ InfixExpression@@imaginary == 0 @AT@ 4255 @LENGTH@ 2
+------------INS NumberLiteral@@0 @TO@ InfixExpression@@imaginary == 0 @AT@ 4259 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:divisor.getReal() == 0.0 && divisor.getImaginary() == 0.0 @TO@ QualifiedName:divisor.isZero @AT@ 9456 @LENGTH@ 98
+---DEL InfixExpression@@divisor.getReal() == 0.0 && divisor.getImaginary() == 0.0 @AT@ 9460 @LENGTH@ 57
+------DEL InfixExpression@@divisor.getReal() == 0.0 @AT@ 9460 @LENGTH@ 24
+---------DEL MethodInvocation@@divisor.getReal() @AT@ 9460 @LENGTH@ 17
+------------DEL SimpleName@@Name:divisor @AT@ 9460 @LENGTH@ 7
+------------DEL SimpleName@@MethodName:getReal:[] @AT@ 9468 @LENGTH@ 9
+---------DEL Operator@@== @AT@ 9477 @LENGTH@ 2
+---------DEL NumberLiteral@@0.0 @AT@ 9481 @LENGTH@ 3
+------DEL Operator@@&& @AT@ 9484 @LENGTH@ 2
+------DEL InfixExpression@@divisor.getImaginary() == 0.0 @AT@ 9488 @LENGTH@ 29
+---------DEL MethodInvocation@@divisor.getImaginary() @AT@ 9488 @LENGTH@ 22
+------------DEL SimpleName@@Name:divisor @AT@ 9488 @LENGTH@ 7
+------------DEL SimpleName@@MethodName:getImaginary:[] @AT@ 9496 @LENGTH@ 14
+---------DEL Operator@@== @AT@ 9510 @LENGTH@ 2
+---------DEL NumberLiteral@@0.0 @AT@ 9514 @LENGTH@ 3
+---UPD ReturnStatement@@SimpleName:NaN @TO@ ConditionalExpression:isZero ? NaN : INF @AT@ 9533 @LENGTH@ 11
+------DEL SimpleName@@NaN @AT@ 9540 @LENGTH@ 3
+------INS ConditionalExpression@@isZero ? NaN : INF @TO@ ReturnStatement@@SimpleName:NaN @AT@ 9587 @LENGTH@ 18
+---------INS SimpleName@@isZero @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 9587 @LENGTH@ 6
+---------INS SimpleName@@NaN @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 9596 @LENGTH@ 3
+---------INS SimpleName@@INF @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 9602 @LENGTH@ 3
+---INS QualifiedName@@divisor.isZero @TO@ IfStatement@@InfixExpression:divisor.getReal() == 0.0 && divisor.getImaginary() == 0.0 @AT@ 9550 @LENGTH@ 14
+------INS SimpleName@@divisor @TO@ QualifiedName@@divisor.isZero @AT@ 9550 @LENGTH@ 7
+------INS SimpleName@@isZero @TO@ QualifiedName@@divisor.isZero @AT@ 9558 @LENGTH@ 6
+, UPD ReturnStatement@@SimpleName:NaN @TO@ ConditionalExpression:isZero ? NaN : INF @AT@ 10687 @LENGTH@ 11
+---DEL SimpleName@@NaN @AT@ 10694 @LENGTH@ 3
+---INS ConditionalExpression@@isZero ? NaN : INF @TO@ ReturnStatement@@SimpleName:NaN @AT@ 10756 @LENGTH@ 18
+------INS SimpleName@@isZero @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 10756 @LENGTH@ 6
+------INS SimpleName@@NaN @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 10765 @LENGTH@ 3
+------INS SimpleName@@INF @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 10771 @LENGTH@ 3
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2 OP16 OP22)
+OP2:   (DEL, InfixExpression, OP1, OP3 OP9 OP10)
+OP3:      (DEL, InfixExpression, OP2, OP4 OP7 OP8)
+OP4:         (DEL, MethodInvocation, OP3, OP5 OP6)
+OP5:            (DEL, SimpleName, OP4, null)
+OP6:            (DEL, SimpleName, OP4, null)
+OP7:         (DEL, Operator, OP3, null)
+OP8:         (DEL, NumberLiteral, OP3, null)
+OP9:      (DEL, Operator, OP2, null)
+OP10:      (DEL, InfixExpression, OP2, OP11 OP14 OP15)
+OP11:         (DEL, MethodInvocation, OP10, OP12 OP13)
+OP12:            (DEL, SimpleName, OP11, null)
+OP13:            (DEL, SimpleName, OP11, null)
+OP14:         (DEL, Operator, OP10, null)
+OP15:         (DEL, NumberLiteral, OP10, null)
+OP16:   (UPD, ReturnStatement, OP1, OP17 OP18)
+OP17:      (DEL, SimpleName, OP16, null)
+OP18:      (INS, ConditionalExpression, OP16, OP19 OP20 OP21)
+OP19:         (INS, SimpleName, OP18, null)
+OP20:         (INS, SimpleName, OP18, null)
+OP21:         (INS, SimpleName, OP18, null)
+OP22:   (INS, QualifiedName, OP1, OP23 OP24)
+OP23:      (INS, SimpleName, OP22, null)
+OP24:      (INS, SimpleName, OP22, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, final, transient, boolean, [isZero] @TO@ TypeDeclaration@@[public]Complex, [FieldElement<Complex>, Serializable] @AT@ 3559 @LENGTH@ 39
+---INS Modifier@@private @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3559 @LENGTH@ 7
+---INS Modifier@@final @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3567 @LENGTH@ 5
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3573 @LENGTH@ 9
+---INS PrimitiveType@@boolean @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3583 @LENGTH@ 7
+---INS VariableDeclarationFragment@@isZero @TO@ FieldDeclaration@@private, final, transient, boolean, [isZero] @AT@ 3591 @LENGTH@ 6
+------INS SimpleName@@isZero @TO@ VariableDeclarationFragment@@isZero @AT@ 3591 @LENGTH@ 6
+, INS ExpressionStatement@@Assignment:isZero=real == 0 && imaginary == 0 @TO@ MethodDeclaration@@public, @@=CONSTRUCTOR=, MethodName:Complex, @@Argus:double+real+double+imaginary+ @AT@ 4224 @LENGTH@ 37
+---INS Assignment@@isZero=real == 0 && imaginary == 0 @TO@ ExpressionStatement@@Assignment:isZero=real == 0 && imaginary == 0 @AT@ 4224 @LENGTH@ 36
+------INS SimpleName@@isZero @TO@ Assignment@@isZero=real == 0 && imaginary == 0 @AT@ 4224 @LENGTH@ 6
+------INS Operator@@= @TO@ Assignment@@isZero=real == 0 && imaginary == 0 @AT@ 4230 @LENGTH@ 1
+------INS InfixExpression@@real == 0 && imaginary == 0 @TO@ Assignment@@isZero=real == 0 && imaginary == 0 @AT@ 4233 @LENGTH@ 27
+---------INS InfixExpression@@real == 0 @TO@ InfixExpression@@real == 0 && imaginary == 0 @AT@ 4233 @LENGTH@ 9
+------------INS SimpleName@@real @TO@ InfixExpression@@real == 0 @AT@ 4233 @LENGTH@ 4
+------------INS Operator@@== @TO@ InfixExpression@@real == 0 @AT@ 4237 @LENGTH@ 2
+------------INS NumberLiteral@@0 @TO@ InfixExpression@@real == 0 @AT@ 4241 @LENGTH@ 1
+---------INS Operator@@&& @TO@ InfixExpression@@real == 0 && imaginary == 0 @AT@ 4242 @LENGTH@ 2
+---------INS InfixExpression@@imaginary == 0 @TO@ InfixExpression@@real == 0 && imaginary == 0 @AT@ 4246 @LENGTH@ 14
+------------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary == 0 @AT@ 4246 @LENGTH@ 9
+------------INS Operator@@== @TO@ InfixExpression@@imaginary == 0 @AT@ 4255 @LENGTH@ 2
+------------INS NumberLiteral@@0 @TO@ InfixExpression@@imaginary == 0 @AT@ 4259 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:divisor.getReal() == 0.0 && divisor.getImaginary() == 0.0 @TO@ QualifiedName:divisor.isZero @AT@ 9456 @LENGTH@ 98
+---DEL InfixExpression@@divisor.getReal() == 0.0 && divisor.getImaginary() == 0.0 @AT@ 9460 @LENGTH@ 57
+------DEL InfixExpression@@divisor.getReal() == 0.0 @AT@ 9460 @LENGTH@ 24
+---------DEL MethodInvocation@@divisor.getReal() @AT@ 9460 @LENGTH@ 17
+------------DEL SimpleName@@Name:divisor @AT@ 9460 @LENGTH@ 7
+------------DEL SimpleName@@MethodName:getReal:[] @AT@ 9468 @LENGTH@ 9
+---------DEL Operator@@== @AT@ 9477 @LENGTH@ 2
+---------DEL NumberLiteral@@0.0 @AT@ 9481 @LENGTH@ 3
+------DEL Operator@@&& @AT@ 9484 @LENGTH@ 2
+------DEL InfixExpression@@divisor.getImaginary() == 0.0 @AT@ 9488 @LENGTH@ 29
+---------DEL MethodInvocation@@divisor.getImaginary() @AT@ 9488 @LENGTH@ 22
+------------DEL SimpleName@@Name:divisor @AT@ 9488 @LENGTH@ 7
+------------DEL SimpleName@@MethodName:getImaginary:[] @AT@ 9496 @LENGTH@ 14
+---------DEL Operator@@== @AT@ 9510 @LENGTH@ 2
+---------DEL NumberLiteral@@0.0 @AT@ 9514 @LENGTH@ 3
+---UPD ReturnStatement@@SimpleName:NaN @TO@ ConditionalExpression:isZero ? NaN : INF @AT@ 9533 @LENGTH@ 11
+------DEL SimpleName@@NaN @AT@ 9540 @LENGTH@ 3
+------INS ConditionalExpression@@isZero ? NaN : INF @TO@ ReturnStatement@@SimpleName:NaN @AT@ 9587 @LENGTH@ 18
+---------INS SimpleName@@isZero @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 9587 @LENGTH@ 6
+---------INS SimpleName@@NaN @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 9596 @LENGTH@ 3
+---------INS SimpleName@@INF @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 9602 @LENGTH@ 3
+---INS QualifiedName@@divisor.isZero @TO@ IfStatement@@InfixExpression:divisor.getReal() == 0.0 && divisor.getImaginary() == 0.0 @AT@ 9550 @LENGTH@ 14
+------INS SimpleName@@divisor @TO@ QualifiedName@@divisor.isZero @AT@ 9550 @LENGTH@ 7
+------INS SimpleName@@isZero @TO@ QualifiedName@@divisor.isZero @AT@ 9558 @LENGTH@ 6
+, UPD ReturnStatement@@SimpleName:NaN @TO@ ConditionalExpression:isZero ? NaN : INF @AT@ 10687 @LENGTH@ 11
+---DEL SimpleName@@NaN @AT@ 10694 @LENGTH@ 3
+---INS ConditionalExpression@@isZero ? NaN : INF @TO@ ReturnStatement@@SimpleName:NaN @AT@ 10756 @LENGTH@ 18
+------INS SimpleName@@isZero @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 10756 @LENGTH@ 6
+------INS SimpleName@@NaN @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 10765 @LENGTH@ 3
+------INS SimpleName@@INF @TO@ ConditionalExpression@@isZero ? NaN : INF @AT@ 10771 @LENGTH@ 3
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2 OP3)
+OP2:   (DEL, SimpleName, OP1, null)
+OP3:   (INS, ConditionalExpression, OP1, OP4 OP5 OP6)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, SimpleName, OP3, null)
+OP6:      (INS, SimpleName, OP3, null)
+
+
+

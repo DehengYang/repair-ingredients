@@ -1,0 +1,25 @@
+
+diff -Naur ../d4j-repo/Time/Time_20/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java ../d4j-repo/fixed_bugs_dir/Time/Time_20/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java
+--- ../d4j-repo/Time/Time_20/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java	2021-01-06 03:39:00.098273303 -0800
++++ ../d4j-repo/fixed_bugs_dir/Time/Time_20/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java	2021-01-06 03:39:01.422318388 -0800
+@@ -2539,12 +2539,18 @@
+ 
+         public int parseInto(DateTimeParserBucket bucket, String text, int position) {
+             String str = text.substring(position);
++            String best = null;
+             for (String id : ALL_IDS) {
+                 if (str.startsWith(id)) {
+-                    bucket.setZone(DateTimeZone.forID(id));
+-                    return position + id.length();
++                	if (best == null || id.length() > best.length()) {
++                		best = id;
++                	}
+                 }
+             }
++            if (best != null) {
++                bucket.setZone(DateTimeZone.forID(best));
++                return position + best.length();
++            }
+             return ~position;
+         }
+     }

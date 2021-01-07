@@ -1,0 +1,19 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_8/src/com/google/javascript/jscomp/CollapseVariableDeclarations.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_8/src/com/google/javascript/jscomp/CollapseVariableDeclarations.java
+--- ../d4j-repo/Closure/Closure_8/src/com/google/javascript/jscomp/CollapseVariableDeclarations.java	2021-01-06 03:40:25.185170661 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_8/src/com/google/javascript/jscomp/CollapseVariableDeclarations.java	2021-01-06 03:40:28.249275003 -0800
+@@ -201,10 +201,14 @@
+       Var var = s.getVar(lhs.getString());
+       return var != null
+           && var.getScope() == s
++          && !isNamedParameter(var)
+           && !blacklistedVars.contains(var);
+     }
+   }
+ 
++  private boolean isNamedParameter(Var v) {
++    return v.getParentNode().isParamList();
++  }
+ 
+   private void applyCollapses() {
+     for (Collapse collapse : collapses) {

@@ -1,0 +1,85 @@
+No.0 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.1 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.2 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.3 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.4 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.5 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.6 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.7 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.8 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.9 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.10 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.11 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.12 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.13 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.14 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.15 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+
+No.17 CCI matched.
+freq: 9
+CommitIds: 8c5eb247 222eafd3 52ecbc65 30994e27 9a185e0c 9a185e0c 9a185e0c 9a185e0c 2f5cb162 
+FreqRank:24
+

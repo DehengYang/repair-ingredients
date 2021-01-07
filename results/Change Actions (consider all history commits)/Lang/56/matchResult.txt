@@ -1,0 +1,10 @@
+No.0 CCI matched.
+freq: 16
+CommitIds: 89d6fa50 3bac0b1b 3bac0b1b 3bac0b1b 47f7bace 6200e136 8e8b5046 98732b58 9545c70a 8b1992ee c8723efd 1d44ada5 1d44ada5 1d44ada5 8b1992ee 8e8b5046 
+FreqRank:14
+
+No.1 CCI matched.
+freq: 16
+CommitIds: 89d6fa50 3bac0b1b 3bac0b1b 3bac0b1b 47f7bace 6200e136 8e8b5046 98732b58 9545c70a 8b1992ee c8723efd 1d44ada5 1d44ada5 1d44ada5 8b1992ee 8e8b5046 
+FreqRank:14
+

@@ -1,0 +1,17 @@
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@PathIterator iterator2=p1.getPathIterator(null); @TO@ PathIterator iterator2=p2.getPathIterator(null); @AT@ 9061 @LENGTH@ 50
+---UPD VariableDeclarationFragment@@iterator2=p1.getPathIterator(null) @TO@ iterator2=p2.getPathIterator(null) @AT@ 9074 @LENGTH@ 36
+------UPD MethodInvocation@@p1.getPathIterator(null) @TO@ p2.getPathIterator(null) @AT@ 9086 @LENGTH@ 24
+---------UPD SimpleName@@Name:p1 @TO@ Name:p2 @AT@ 9086 @LENGTH@ 2
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, MethodInvocation, OP2, OP4)
+OP4:         (UPD, SimpleName, OP3, null)
+
+
+

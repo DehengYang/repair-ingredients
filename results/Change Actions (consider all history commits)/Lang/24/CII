@@ -1,0 +1,7 @@
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, InfixExpression, OP1, OP3)
+OP3:      (INS, PrefixExpression, OP2, OP4 OP5)
+OP4:         (INS, Operator, OP3, null)
+OP5:         (INS, SimpleName, OP3, null)
+
+

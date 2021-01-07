@@ -1,0 +1,26 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_50/src/com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_50/src/com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java
+--- ../d4j-repo/Closure/Closure_50/src/com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java	2021-01-06 03:43:24.187266517 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_50/src/com/google/javascript/jscomp/PeepholeReplaceKnownMethods.java	2021-01-06 03:43:26.203335177 -0800
+@@ -373,7 +373,7 @@
+ 
+     Node right = callTarget.getNext();
+     if (right != null) {
+-      if (!NodeUtil.isImmutableValue(right)) {
++      if (right.getNext() != null || !NodeUtil.isImmutableValue(right)) {
+         return n;
+       }
+     }
+@@ -386,7 +386,12 @@
+       return n;
+     }
+ 
++    if (right != null && right.getType() == Token.STRING
++        && ",".equals(right.getString())) {
+       // "," is the default, it doesn't need to be explicit
++      n.removeChild(right);
++      reportCodeChange();
++    }
+ 
+     String joinString = (right == null) ? "," : NodeUtil.getStringValue(right);
+     List<Node> arrayFoldedChildren = Lists.newLinkedList();

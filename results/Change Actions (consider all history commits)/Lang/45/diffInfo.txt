@@ -1,0 +1,14 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_45/src/java/org/apache/commons/lang/WordUtils.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_45/src/java/org/apache/commons/lang/WordUtils.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_45/src/java/org/apache/commons/lang/WordUtils.java	2020-01-05 05:29:47.561192569 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_45/src/java/org/apache/commons/lang/WordUtils.java	2020-01-05 05:29:51.057163371 -0800
+@@ -613,6 +613,9 @@
+ 
+         // if the lower value is greater than the length of the string,
+         // set to the length of the string
++        if (lower > str.length()) {
++            lower = str.length();    
++        }
+         // if the upper value is -1 (i.e. no limit) or is greater
+         // than the length of the string, set to the length of the string
+         if (upper == -1 || upper > str.length()) {

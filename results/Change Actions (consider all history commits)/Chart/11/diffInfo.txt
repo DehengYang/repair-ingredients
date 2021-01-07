@@ -1,0 +1,13 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Chart/Chart_11/source/org/jfree/chart/util/ShapeUtilities.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_11/source/org/jfree/chart/util/ShapeUtilities.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Chart/Chart_11/source/org/jfree/chart/util/ShapeUtilities.java	2020-01-04 01:53:38.863963072 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Chart/Chart_11/source/org/jfree/chart/util/ShapeUtilities.java	2020-01-04 01:53:40.039928795 -0800
+@@ -272,7 +272,7 @@
+             return false;
+         }
+         PathIterator iterator1 = p1.getPathIterator(null);
+-        PathIterator iterator2 = p1.getPathIterator(null);
++        PathIterator iterator2 = p2.getPathIterator(null);
+         double[] d1 = new double[6];
+         double[] d2 = new double[6];
+         boolean done = iterator1.isDone() && iterator2.isDone();

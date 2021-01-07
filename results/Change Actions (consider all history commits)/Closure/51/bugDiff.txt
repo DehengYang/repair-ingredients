@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_51/src/com/google/javascript/jscomp/CodeConsumer.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_51/src/com/google/javascript/jscomp/CodeConsumer.java
+--- ../d4j-repo/Closure/Closure_51/src/com/google/javascript/jscomp/CodeConsumer.java	2021-01-06 03:43:28.243404655 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_51/src/com/google/javascript/jscomp/CodeConsumer.java	2021-01-06 03:43:30.143469366 -0800
+@@ -238,7 +238,7 @@
+       add(" ");
+     }
+ 
+-    if ((long) x == x) {
++    if ((long) x == x && !isNegativeZero(x)) {
+       long value = (long) x;
+       long mantissa = value;
+       int exp = 0;

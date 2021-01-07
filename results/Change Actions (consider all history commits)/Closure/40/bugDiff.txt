@@ -1,0 +1,17 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_40/src/com/google/javascript/jscomp/NameAnalyzer.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_40/src/com/google/javascript/jscomp/NameAnalyzer.java
+--- ../d4j-repo/Closure/Closure_40/src/com/google/javascript/jscomp/NameAnalyzer.java	2021-01-06 03:42:44.209905041 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_40/src/com/google/javascript/jscomp/NameAnalyzer.java	2021-01-06 03:42:46.233973972 -0800
+@@ -632,11 +632,9 @@
+         Node nameNode = n.getFirstChild();
+         NameInformation ns = createNameInformation(t, nameNode, n);
+         if (ns != null && ns.onlyAffectsClassDef) {
+-          JsName name = getName(ns.name, false);
+-          if (name != null) {
++          JsName name = getName(ns.name, true);
+           refNodes.add(new ClassDefiningFunctionNode(
+               name, n, parent, parent.getParent()));
+-          }
+         }
+       }
+     }

@@ -1,0 +1,123 @@
+
+
+hASList: 
+[INS VariableDeclarationStatement@@final double inPlaneThreshold=0.001; @TO@ MethodDeclaration@@public, @@=CONSTRUCTOR=, MethodName:Rotation, @@Argus:Vector3D+u1+Vector3D+u2+Vector3D+v1+Vector3D+v2+ @AT@ 15546 @LENGTH@ 38
+---INS Modifier@@final @TO@ VariableDeclarationStatement@@final double inPlaneThreshold=0.001; @AT@ 15546 @LENGTH@ 5
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double inPlaneThreshold=0.001; @AT@ 15552 @LENGTH@ 6
+---INS VariableDeclarationFragment@@inPlaneThreshold=0.001 @TO@ VariableDeclarationStatement@@final double inPlaneThreshold=0.001; @AT@ 15559 @LENGTH@ 24
+------INS SimpleName@@inPlaneThreshold @TO@ VariableDeclarationFragment@@inPlaneThreshold=0.001 @AT@ 15559 @LENGTH@ 16
+------INS NumberLiteral@@0.001 @TO@ VariableDeclarationFragment@@inPlaneThreshold=0.001 @AT@ 15578 @LENGTH@ 5
+, UPD IfStatement@@InfixExpression:c == 0 @TO@ InfixExpression:c <= inPlaneThreshold * k.getNorm() * u3.getNorm() @AT@ 15546 @LENGTH@ 881
+---UPD InfixExpression@@c == 0 @TO@ c <= inPlaneThreshold * k.getNorm() * u3.getNorm() @AT@ 15550 @LENGTH@ 6
+------UPD Operator@@== @TO@ <= @AT@ 15551 @LENGTH@ 2
+------DEL NumberLiteral@@0 @AT@ 15555 @LENGTH@ 1
+------INS InfixExpression@@inPlaneThreshold * k.getNorm() * u3.getNorm() @TO@ InfixExpression@@c == 0 @AT@ 15596 @LENGTH@ 45
+---------INS SimpleName@@inPlaneThreshold @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u3.getNorm() @AT@ 15596 @LENGTH@ 16
+---------INS Operator@@* @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u3.getNorm() @AT@ 15612 @LENGTH@ 1
+---------INS MethodInvocation@@k.getNorm() @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u3.getNorm() @AT@ 15615 @LENGTH@ 11
+------------INS SimpleName@@Name:k @TO@ MethodInvocation@@k.getNorm() @AT@ 15615 @LENGTH@ 1
+------------INS SimpleName@@MethodName:getNorm:[] @TO@ MethodInvocation@@k.getNorm() @AT@ 15617 @LENGTH@ 9
+---------INS MethodInvocation@@u3.getNorm() @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u3.getNorm() @AT@ 15629 @LENGTH@ 12
+------------INS SimpleName@@Name:u3 @TO@ MethodInvocation@@u3.getNorm() @AT@ 15629 @LENGTH@ 2
+------------INS SimpleName@@MethodName:getNorm:[] @TO@ MethodInvocation@@u3.getNorm() @AT@ 15632 @LENGTH@ 9
+---UPD IfStatement@@InfixExpression:c == 0 @TO@ InfixExpression:c <= inPlaneThreshold * k.getNorm() * u2Prime.getNorm() @AT@ 15852 @LENGTH@ 570
+------UPD InfixExpression@@c == 0 @TO@ c <= inPlaneThreshold * k.getNorm() * u2Prime.getNorm() @AT@ 15856 @LENGTH@ 6
+---------UPD Operator@@== @TO@ <= @AT@ 15857 @LENGTH@ 2
+---------DEL NumberLiteral@@0 @AT@ 15861 @LENGTH@ 1
+---------INS InfixExpression@@inPlaneThreshold * k.getNorm() * u2Prime.getNorm() @TO@ InfixExpression@@c == 0 @AT@ 15946 @LENGTH@ 50
+------------INS SimpleName@@inPlaneThreshold @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u2Prime.getNorm() @AT@ 15946 @LENGTH@ 16
+------------INS Operator@@* @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u2Prime.getNorm() @AT@ 15962 @LENGTH@ 1
+------------INS MethodInvocation@@k.getNorm() @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u2Prime.getNorm() @AT@ 15965 @LENGTH@ 11
+---------------INS SimpleName@@Name:k @TO@ MethodInvocation@@k.getNorm() @AT@ 15965 @LENGTH@ 1
+---------------INS SimpleName@@MethodName:getNorm:[] @TO@ MethodInvocation@@k.getNorm() @AT@ 15967 @LENGTH@ 9
+------------INS MethodInvocation@@u2Prime.getNorm() @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u2Prime.getNorm() @AT@ 15979 @LENGTH@ 17
+---------------INS SimpleName@@Name:u2Prime @TO@ MethodInvocation@@u2Prime.getNorm() @AT@ 15979 @LENGTH@ 7
+---------------INS SimpleName@@MethodName:getNorm:[] @TO@ MethodInvocation@@u2Prime.getNorm() @AT@ 15987 @LENGTH@ 9
+------UPD IfStatement@@InfixExpression:c == 0 @TO@ InfixExpression:c <= 0 @AT@ 16095 @LENGTH@ 219
+---------UPD InfixExpression@@c == 0 @TO@ c <= 0 @AT@ 16099 @LENGTH@ 6
+------------UPD Operator@@== @TO@ <= @AT@ 16100 @LENGTH@ 2
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3 OP4)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, PrimitiveType, OP1, null)
+OP4:   (INS, VariableDeclarationFragment, OP1, OP5 OP6)
+OP5:      (INS, SimpleName, OP4, null)
+OP6:      (INS, NumberLiteral, OP4, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@final double inPlaneThreshold=0.001; @TO@ MethodDeclaration@@public, @@=CONSTRUCTOR=, MethodName:Rotation, @@Argus:Vector3D+u1+Vector3D+u2+Vector3D+v1+Vector3D+v2+ @AT@ 15546 @LENGTH@ 38
+---INS Modifier@@final @TO@ VariableDeclarationStatement@@final double inPlaneThreshold=0.001; @AT@ 15546 @LENGTH@ 5
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double inPlaneThreshold=0.001; @AT@ 15552 @LENGTH@ 6
+---INS VariableDeclarationFragment@@inPlaneThreshold=0.001 @TO@ VariableDeclarationStatement@@final double inPlaneThreshold=0.001; @AT@ 15559 @LENGTH@ 24
+------INS SimpleName@@inPlaneThreshold @TO@ VariableDeclarationFragment@@inPlaneThreshold=0.001 @AT@ 15559 @LENGTH@ 16
+------INS NumberLiteral@@0.001 @TO@ VariableDeclarationFragment@@inPlaneThreshold=0.001 @AT@ 15578 @LENGTH@ 5
+, UPD IfStatement@@InfixExpression:c == 0 @TO@ InfixExpression:c <= inPlaneThreshold * k.getNorm() * u3.getNorm() @AT@ 15546 @LENGTH@ 881
+---UPD InfixExpression@@c == 0 @TO@ c <= inPlaneThreshold * k.getNorm() * u3.getNorm() @AT@ 15550 @LENGTH@ 6
+------UPD Operator@@== @TO@ <= @AT@ 15551 @LENGTH@ 2
+------DEL NumberLiteral@@0 @AT@ 15555 @LENGTH@ 1
+------INS InfixExpression@@inPlaneThreshold * k.getNorm() * u3.getNorm() @TO@ InfixExpression@@c == 0 @AT@ 15596 @LENGTH@ 45
+---------INS SimpleName@@inPlaneThreshold @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u3.getNorm() @AT@ 15596 @LENGTH@ 16
+---------INS Operator@@* @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u3.getNorm() @AT@ 15612 @LENGTH@ 1
+---------INS MethodInvocation@@k.getNorm() @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u3.getNorm() @AT@ 15615 @LENGTH@ 11
+------------INS SimpleName@@Name:k @TO@ MethodInvocation@@k.getNorm() @AT@ 15615 @LENGTH@ 1
+------------INS SimpleName@@MethodName:getNorm:[] @TO@ MethodInvocation@@k.getNorm() @AT@ 15617 @LENGTH@ 9
+---------INS MethodInvocation@@u3.getNorm() @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u3.getNorm() @AT@ 15629 @LENGTH@ 12
+------------INS SimpleName@@Name:u3 @TO@ MethodInvocation@@u3.getNorm() @AT@ 15629 @LENGTH@ 2
+------------INS SimpleName@@MethodName:getNorm:[] @TO@ MethodInvocation@@u3.getNorm() @AT@ 15632 @LENGTH@ 9
+---UPD IfStatement@@InfixExpression:c == 0 @TO@ InfixExpression:c <= inPlaneThreshold * k.getNorm() * u2Prime.getNorm() @AT@ 15852 @LENGTH@ 570
+------UPD InfixExpression@@c == 0 @TO@ c <= inPlaneThreshold * k.getNorm() * u2Prime.getNorm() @AT@ 15856 @LENGTH@ 6
+---------UPD Operator@@== @TO@ <= @AT@ 15857 @LENGTH@ 2
+---------DEL NumberLiteral@@0 @AT@ 15861 @LENGTH@ 1
+---------INS InfixExpression@@inPlaneThreshold * k.getNorm() * u2Prime.getNorm() @TO@ InfixExpression@@c == 0 @AT@ 15946 @LENGTH@ 50
+------------INS SimpleName@@inPlaneThreshold @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u2Prime.getNorm() @AT@ 15946 @LENGTH@ 16
+------------INS Operator@@* @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u2Prime.getNorm() @AT@ 15962 @LENGTH@ 1
+------------INS MethodInvocation@@k.getNorm() @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u2Prime.getNorm() @AT@ 15965 @LENGTH@ 11
+---------------INS SimpleName@@Name:k @TO@ MethodInvocation@@k.getNorm() @AT@ 15965 @LENGTH@ 1
+---------------INS SimpleName@@MethodName:getNorm:[] @TO@ MethodInvocation@@k.getNorm() @AT@ 15967 @LENGTH@ 9
+------------INS MethodInvocation@@u2Prime.getNorm() @TO@ InfixExpression@@inPlaneThreshold * k.getNorm() * u2Prime.getNorm() @AT@ 15979 @LENGTH@ 17
+---------------INS SimpleName@@Name:u2Prime @TO@ MethodInvocation@@u2Prime.getNorm() @AT@ 15979 @LENGTH@ 7
+---------------INS SimpleName@@MethodName:getNorm:[] @TO@ MethodInvocation@@u2Prime.getNorm() @AT@ 15987 @LENGTH@ 9
+------UPD IfStatement@@InfixExpression:c == 0 @TO@ InfixExpression:c <= 0 @AT@ 16095 @LENGTH@ 219
+---------UPD InfixExpression@@c == 0 @TO@ c <= 0 @AT@ 16099 @LENGTH@ 6
+------------UPD Operator@@== @TO@ <= @AT@ 16100 @LENGTH@ 2
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2 OP14)
+OP2:   (UPD, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (UPD, Operator, OP2, null)
+OP4:      (DEL, NumberLiteral, OP2, null)
+OP5:      (INS, InfixExpression, OP2, OP6 OP7 OP8 OP11)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, Operator, OP5, null)
+OP8:         (INS, MethodInvocation, OP5, OP9 OP10)
+OP9:            (INS, SimpleName, OP8, null)
+OP10:            (INS, SimpleName, OP8, null)
+OP11:         (INS, MethodInvocation, OP5, OP12 OP13)
+OP12:            (INS, SimpleName, OP11, null)
+OP13:            (INS, SimpleName, OP11, null)
+OP14:   (UPD, IfStatement, OP1, OP15 OP27)
+OP15:      (UPD, InfixExpression, OP14, OP16 OP17 OP18)
+OP16:         (UPD, Operator, OP15, null)
+OP17:         (DEL, NumberLiteral, OP15, null)
+OP18:         (INS, InfixExpression, OP15, OP19 OP20 OP21 OP24)
+OP19:            (INS, SimpleName, OP18, null)
+OP20:            (INS, Operator, OP18, null)
+OP21:            (INS, MethodInvocation, OP18, OP22 OP23)
+OP22:               (INS, SimpleName, OP21, null)
+OP23:               (INS, SimpleName, OP21, null)
+OP24:            (INS, MethodInvocation, OP18, OP25 OP26)
+OP25:               (INS, SimpleName, OP24, null)
+OP26:               (INS, SimpleName, OP24, null)
+OP27:      (UPD, IfStatement, OP14, OP28)
+OP28:         (UPD, InfixExpression, OP27, OP29)
+OP29:            (UPD, Operator, OP28, null)
+
+
+

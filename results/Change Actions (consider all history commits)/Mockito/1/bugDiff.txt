@@ -1,0 +1,24 @@
+
+diff -Naur ../d4j-repo/Mockito/Mockito_1/src/org/mockito/internal/invocation/InvocationMatcher.java ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_1/src/org/mockito/internal/invocation/InvocationMatcher.java
+--- ../d4j-repo/Mockito/Mockito_1/src/org/mockito/internal/invocation/InvocationMatcher.java	2021-01-06 03:33:30.007034708 -0800
++++ ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_1/src/org/mockito/internal/invocation/InvocationMatcher.java	2021-01-06 03:33:34.075173199 -0800
+@@ -120,7 +120,18 @@
+     public void captureArgumentsFrom(Invocation invocation) {
+         if (invocation.getMethod().isVarArgs()) {
+             int indexOfVararg = invocation.getRawArguments().length - 1;
+-            throw new UnsupportedOperationException();
++            for (int position = 0; position < indexOfVararg; position++) {
++                Matcher m = matchers.get(position);
++                if (m instanceof CapturesArguments) {
++                    ((CapturesArguments) m).captureFrom(invocation.getArgumentAt(position, Object.class));
++                }
++            }
++            for (int position = indexOfVararg; position < matchers.size(); position++) {
++                Matcher m = matchers.get(position);
++                if (m instanceof CapturesArguments) {
++                    ((CapturesArguments) m).captureFrom(invocation.getRawArguments()[position - indexOfVararg]);
++                }
++            }
+ 
+         } else {
+             for (int position = 0; position < matchers.size(); position++) {

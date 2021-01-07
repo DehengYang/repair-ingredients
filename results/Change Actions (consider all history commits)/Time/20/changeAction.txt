@@ -1,0 +1,61 @@
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, SimpleType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, NullLiteral, OP3, null)
+
+
+OP1:(DEL, EnhancedForStatement, null, OP2)
+OP2:   (DEL, IfStatement, OP1, null)
+
+
+OP1:(INS, EnhancedForStatement, null, OP2 OP3 OP4)
+OP2:   (MOV, SingleVariableDeclaration, OP1, null)
+OP3:   (MOV, SimpleName, OP1, null)
+OP4:   (INS, IfStatement, OP1, OP5 OP6)
+OP5:      (MOV, MethodInvocation, OP4, null)
+OP6:      (INS, IfStatement, OP4, OP7 OP21)
+OP7:         (INS, InfixExpression, OP6, OP8 OP12 OP13)
+OP8:            (INS, InfixExpression, OP7, OP9 OP10 OP11)
+OP9:               (INS, SimpleName, OP8, null)
+OP10:               (INS, Operator, OP8, null)
+OP11:               (INS, NullLiteral, OP8, null)
+OP12:            (INS, Operator, OP7, null)
+OP13:            (INS, InfixExpression, OP7, OP14 OP17 OP18)
+OP14:               (INS, MethodInvocation, OP13, OP15 OP16)
+OP15:                  (INS, SimpleName, OP14, null)
+OP16:                  (INS, SimpleName, OP14, null)
+OP17:               (INS, Operator, OP13, null)
+OP18:               (INS, MethodInvocation, OP13, OP19 OP20)
+OP19:                  (INS, SimpleName, OP18, null)
+OP20:                  (INS, SimpleName, OP18, null)
+OP21:         (INS, ExpressionStatement, OP6, OP22)
+OP22:            (INS, Assignment, OP21, OP23 OP24 OP25)
+OP23:               (INS, SimpleName, OP22, null)
+OP24:               (INS, Operator, OP22, null)
+OP25:               (INS, SimpleName, OP22, null)
+
+
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (UPD, MethodInvocation, OP3, OP5)
+OP5:            (UPD, SimpleName, OP4, OP6)
+OP6:               (UPD, SimpleName, OP5, null)
+
+
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, InfixExpression, OP1, OP3)
+OP3:      (UPD, MethodInvocation, OP2, OP4)
+OP4:         (UPD, SimpleName, OP3, null)
+
+
+OP1:(INS, IfStatement, null, OP2 OP3 OP4)
+OP2:   (MOV, ExpressionStatement, OP1, null)
+OP3:   (MOV, ReturnStatement, OP1, null)
+OP4:   (INS, InfixExpression, OP1, OP5 OP6 OP7)
+OP5:      (INS, SimpleName, OP4, null)
+OP6:      (INS, Operator, OP4, null)
+OP7:      (INS, NullLiteral, OP4, null)
+
+

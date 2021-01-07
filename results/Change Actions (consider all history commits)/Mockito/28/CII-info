@@ -1,0 +1,48 @@
+
+
+hASList: 
+[INS VariableDeclarationStatement@@Object injected=mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject(); @TO@ EnhancedForStatement@@Field field, MethodInvocation:orderedInstanceFieldsFrom(awaitingInjectionClazz) @AT@ 3805 @LENGTH@ 96
+---INS SimpleType@@Object @TO@ VariableDeclarationStatement@@Object injected=mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject(); @AT@ 3805 @LENGTH@ 6
+---INS VariableDeclarationFragment@@injected=mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject() @TO@ VariableDeclarationStatement@@Object injected=mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject(); @AT@ 3812 @LENGTH@ 88
+------MOV MethodInvocation@@mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject() @TO@ VariableDeclarationFragment@@injected=mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject() @AT@ 3805 @LENGTH@ 77
+------INS SimpleName@@injected @TO@ VariableDeclarationFragment@@injected=mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject() @AT@ 3812 @LENGTH@ 8
+, UPD ExpressionStatement@@MethodInvocation:mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject() @TO@ MethodInvocation:mocks.remove(injected) @AT@ 3805 @LENGTH@ 78
+---INS MethodInvocation@@mocks.remove(injected) @TO@ ExpressionStatement@@MethodInvocation:mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject() @AT@ 3915 @LENGTH@ 22
+------INS SimpleName@@Name:mocks @TO@ MethodInvocation@@mocks.remove(injected) @AT@ 3915 @LENGTH@ 5
+------INS SimpleName@@MethodName:remove:[injected] @TO@ MethodInvocation@@mocks.remove(injected) @AT@ 3921 @LENGTH@ 16
+---------INS SimpleName@@injected @TO@ SimpleName@@MethodName:remove:[injected] @AT@ 3928 @LENGTH@ 8
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, SimpleType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (MOV, MethodInvocation, OP3, null)
+OP5:      (INS, SimpleName, OP3, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@Object injected=mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject(); @TO@ EnhancedForStatement@@Field field, MethodInvocation:orderedInstanceFieldsFrom(awaitingInjectionClazz) @AT@ 3805 @LENGTH@ 96
+---INS SimpleType@@Object @TO@ VariableDeclarationStatement@@Object injected=mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject(); @AT@ 3805 @LENGTH@ 6
+---INS VariableDeclarationFragment@@injected=mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject() @TO@ VariableDeclarationStatement@@Object injected=mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject(); @AT@ 3812 @LENGTH@ 88
+------MOV MethodInvocation@@mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject() @TO@ VariableDeclarationFragment@@injected=mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject() @AT@ 3805 @LENGTH@ 77
+------INS SimpleName@@injected @TO@ VariableDeclarationFragment@@injected=mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject() @AT@ 3812 @LENGTH@ 8
+, UPD ExpressionStatement@@MethodInvocation:mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject() @TO@ MethodInvocation:mocks.remove(injected) @AT@ 3805 @LENGTH@ 78
+---INS MethodInvocation@@mocks.remove(injected) @TO@ ExpressionStatement@@MethodInvocation:mockCandidateFilter.filterCandidate(mocks,field,fieldInstance).thenInject() @AT@ 3915 @LENGTH@ 22
+------INS SimpleName@@Name:mocks @TO@ MethodInvocation@@mocks.remove(injected) @AT@ 3915 @LENGTH@ 5
+------INS SimpleName@@MethodName:remove:[injected] @TO@ MethodInvocation@@mocks.remove(injected) @AT@ 3921 @LENGTH@ 16
+---------INS SimpleName@@injected @TO@ SimpleName@@MethodName:remove:[injected] @AT@ 3928 @LENGTH@ 8
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, OP3 OP4)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, SimpleName, OP2, OP5)
+OP5:         (INS, SimpleName, OP4, null)
+
+
+

@@ -1,0 +1,41 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:end <= start @TO@ IfStatement@@InfixExpression:start == 0 && end == 0 @AT@ 9511 @LENGTH@ 159
+---INS InfixExpression@@end <= start @TO@ IfStatement@@InfixExpression:end <= start @AT@ 9515 @LENGTH@ 12
+------INS SimpleName@@end @TO@ InfixExpression@@end <= start @AT@ 9515 @LENGTH@ 3
+------INS Operator@@<= @TO@ InfixExpression@@end <= start @AT@ 9518 @LENGTH@ 2
+------INS SimpleName@@start @TO@ InfixExpression@@end <= start @AT@ 9522 @LENGTH@ 5
+---INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Parameter end (" + end + ") must be greater than start ("+ start+ ")") @TO@ IfStatement@@InfixExpression:end <= start @AT@ 9547 @LENGTH@ 109
+------INS ClassInstanceCreation@@IllegalArgumentException["Parameter end (" + end + ") must be greater than start ("+ start+ ")"] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Parameter end (" + end + ") must be greater than start ("+ start+ ")") @AT@ 9553 @LENGTH@ 102
+---------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Parameter end (" + end + ") must be greater than start ("+ start+ ")"] @AT@ 9553 @LENGTH@ 3
+---------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Parameter end (" + end + ") must be greater than start ("+ start+ ")"] @AT@ 9557 @LENGTH@ 24
+---------INS InfixExpression@@"Parameter end (" + end + ") must be greater than start ("+ start+ ")" @TO@ ClassInstanceCreation@@IllegalArgumentException["Parameter end (" + end + ") must be greater than start ("+ start+ ")"] @AT@ 9582 @LENGTH@ 72
+------------INS StringLiteral@@"Parameter end (" @TO@ InfixExpression@@"Parameter end (" + end + ") must be greater than start ("+ start+ ")" @AT@ 9582 @LENGTH@ 17
+------------INS Operator@@+ @TO@ InfixExpression@@"Parameter end (" + end + ") must be greater than start ("+ start+ ")" @AT@ 9599 @LENGTH@ 1
+------------INS SimpleName@@end @TO@ InfixExpression@@"Parameter end (" + end + ") must be greater than start ("+ start+ ")" @AT@ 9602 @LENGTH@ 3
+------------INS StringLiteral@@") must be greater than start (" @TO@ InfixExpression@@"Parameter end (" + end + ") must be greater than start ("+ start+ ")" @AT@ 9608 @LENGTH@ 32
+------------INS SimpleName@@start @TO@ InfixExpression@@"Parameter end (" + end + ") must be greater than start ("+ start+ ")" @AT@ 9643 @LENGTH@ 5
+------------INS StringLiteral@@")" @TO@ InfixExpression@@"Parameter end (" + end + ") must be greater than start ("+ start+ ")" @AT@ 9651 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, SimpleName, OP2, null)
+OP6:   (INS, ThrowStatement, OP1, OP7)
+OP7:      (INS, ClassInstanceCreation, OP6, OP8 OP9 OP10)
+OP8:         (INS, New, OP7, null)
+OP9:         (INS, SimpleType, OP7, null)
+OP10:         (INS, InfixExpression, OP7, OP11 OP12 OP13 OP14 OP15 OP16)
+OP11:            (INS, StringLiteral, OP10, null)
+OP12:            (INS, Operator, OP10, null)
+OP13:            (INS, SimpleName, OP10, null)
+OP14:            (INS, StringLiteral, OP10, null)
+OP15:            (INS, SimpleName, OP10, null)
+OP16:            (INS, StringLiteral, OP10, null)
+
+
+

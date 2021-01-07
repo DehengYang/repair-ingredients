@@ -1,0 +1,10 @@
+No.1 CCI matched.
+freq: 3
+CommitIds: 7ec4d387 7ec4d387 f18c6b1a 
+FreqRank:75
+
+No.2 CCI matched.
+freq: 3
+CommitIds: 7ec4d387 7ec4d387 f18c6b1a 
+FreqRank:75
+

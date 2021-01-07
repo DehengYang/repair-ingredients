@@ -1,0 +1,22 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_35/src/main/java/org/apache/commons/lang3/ArrayUtils.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_35/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_35/src/main/java/org/apache/commons/lang3/ArrayUtils.java	2020-01-05 05:28:38.497769394 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_35/src/main/java/org/apache/commons/lang3/ArrayUtils.java	2020-01-05 05:28:41.937740663 -0800
+@@ -3292,7 +3292,7 @@
+         } else if (element != null) {
+             type = element.getClass();
+         } else {
+-            type = Object.class;
++            throw new IllegalArgumentException("Arguments cannot both be null");            
+         }
+         @SuppressWarnings("unchecked") // type must be T
+         T[] newArray = (T[]) copyArrayGrow1(array, type);
+@@ -3571,7 +3571,7 @@
+         } else if (element != null) {
+             clss = element.getClass();
+         } else {
+-            return (T[]) new Object[] { null };
++            throw new IllegalArgumentException("Array and element cannot both be null");            
+         }
+         @SuppressWarnings("unchecked") // the add method creates an array of type clss, which is type T
+         final T[] newArray = (T[]) add(array, index, element, clss);

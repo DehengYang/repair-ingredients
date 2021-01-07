@@ -1,0 +1,72 @@
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final Line reverted=new Line(zero,zero.subtract(direction)); @TO@ final Line reverted=new Line(this); @AT@ 3699 @LENGTH@ 63
+---UPD VariableDeclarationFragment@@reverted=new Line(zero,zero.subtract(direction)) @TO@ reverted=new Line(this) @AT@ 3710 @LENGTH@ 51
+------UPD ClassInstanceCreation@@Line[zero, zero.subtract(direction)] @TO@ Line[this] @AT@ 3721 @LENGTH@ 40
+---------INS ThisExpression@@this @TO@ ClassInstanceCreation@@Line[zero, zero.subtract(direction)] @AT@ 3730 @LENGTH@ 4
+---------DEL SimpleName@@zero @AT@ 3730 @LENGTH@ 4
+---------DEL MethodInvocation@@zero.subtract(direction) @AT@ 3736 @LENGTH@ 24
+------------DEL SimpleName@@Name:zero @AT@ 3736 @LENGTH@ 4
+------------DEL SimpleName@@MethodName:subtract:[direction] @AT@ 3741 @LENGTH@ 19
+---------------DEL SimpleName@@direction @AT@ 3750 @LENGTH@ 9
+, INS ExpressionStatement@@Assignment:reverted.direction=reverted.direction.negate() @TO@ MethodDeclaration@@public, @@Line, MethodName:revert, @@Argus:null @AT@ 3745 @LENGTH@ 49
+---INS Assignment@@reverted.direction=reverted.direction.negate() @TO@ ExpressionStatement@@Assignment:reverted.direction=reverted.direction.negate() @AT@ 3745 @LENGTH@ 48
+------INS QualifiedName@@reverted.direction @TO@ Assignment@@reverted.direction=reverted.direction.negate() @AT@ 3745 @LENGTH@ 18
+---------INS SimpleName@@reverted @TO@ QualifiedName@@reverted.direction @AT@ 3745 @LENGTH@ 8
+---------INS SimpleName@@direction @TO@ QualifiedName@@reverted.direction @AT@ 3754 @LENGTH@ 9
+------INS Operator@@= @TO@ Assignment@@reverted.direction=reverted.direction.negate() @AT@ 3763 @LENGTH@ 1
+------INS MethodInvocation@@reverted.direction.negate() @TO@ Assignment@@reverted.direction=reverted.direction.negate() @AT@ 3766 @LENGTH@ 27
+---------INS QualifiedName@@Name:reverted.direction @TO@ MethodInvocation@@reverted.direction.negate() @AT@ 3766 @LENGTH@ 18
+---------INS SimpleName@@MethodName:negate:[] @TO@ MethodInvocation@@reverted.direction.negate() @AT@ 3785 @LENGTH@ 8
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, ClassInstanceCreation, OP2, OP4 OP5 OP6)
+OP4:         (INS, ThisExpression, OP3, null)
+OP5:         (DEL, SimpleName, OP3, null)
+OP6:         (DEL, MethodInvocation, OP3, OP7 OP8)
+OP7:            (DEL, SimpleName, OP6, null)
+OP8:            (DEL, SimpleName, OP6, OP9)
+OP9:               (DEL, SimpleName, OP8, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final Line reverted=new Line(zero,zero.subtract(direction)); @TO@ final Line reverted=new Line(this); @AT@ 3699 @LENGTH@ 63
+---UPD VariableDeclarationFragment@@reverted=new Line(zero,zero.subtract(direction)) @TO@ reverted=new Line(this) @AT@ 3710 @LENGTH@ 51
+------UPD ClassInstanceCreation@@Line[zero, zero.subtract(direction)] @TO@ Line[this] @AT@ 3721 @LENGTH@ 40
+---------INS ThisExpression@@this @TO@ ClassInstanceCreation@@Line[zero, zero.subtract(direction)] @AT@ 3730 @LENGTH@ 4
+---------DEL SimpleName@@zero @AT@ 3730 @LENGTH@ 4
+---------DEL MethodInvocation@@zero.subtract(direction) @AT@ 3736 @LENGTH@ 24
+------------DEL SimpleName@@Name:zero @AT@ 3736 @LENGTH@ 4
+------------DEL SimpleName@@MethodName:subtract:[direction] @AT@ 3741 @LENGTH@ 19
+---------------DEL SimpleName@@direction @AT@ 3750 @LENGTH@ 9
+, INS ExpressionStatement@@Assignment:reverted.direction=reverted.direction.negate() @TO@ MethodDeclaration@@public, @@Line, MethodName:revert, @@Argus:null @AT@ 3745 @LENGTH@ 49
+---INS Assignment@@reverted.direction=reverted.direction.negate() @TO@ ExpressionStatement@@Assignment:reverted.direction=reverted.direction.negate() @AT@ 3745 @LENGTH@ 48
+------INS QualifiedName@@reverted.direction @TO@ Assignment@@reverted.direction=reverted.direction.negate() @AT@ 3745 @LENGTH@ 18
+---------INS SimpleName@@reverted @TO@ QualifiedName@@reverted.direction @AT@ 3745 @LENGTH@ 8
+---------INS SimpleName@@direction @TO@ QualifiedName@@reverted.direction @AT@ 3754 @LENGTH@ 9
+------INS Operator@@= @TO@ Assignment@@reverted.direction=reverted.direction.negate() @AT@ 3763 @LENGTH@ 1
+------INS MethodInvocation@@reverted.direction.negate() @TO@ Assignment@@reverted.direction=reverted.direction.negate() @AT@ 3766 @LENGTH@ 27
+---------INS QualifiedName@@Name:reverted.direction @TO@ MethodInvocation@@reverted.direction.negate() @AT@ 3766 @LENGTH@ 18
+---------INS SimpleName@@MethodName:negate:[] @TO@ MethodInvocation@@reverted.direction.negate() @AT@ 3785 @LENGTH@ 8
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, Assignment, OP1, OP3 OP6 OP7)
+OP3:      (INS, QualifiedName, OP2, OP4 OP5)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, SimpleName, OP3, null)
+OP6:      (INS, Operator, OP2, null)
+OP7:      (INS, MethodInvocation, OP2, OP8 OP9)
+OP8:         (INS, QualifiedName, OP7, null)
+OP9:         (INS, SimpleName, OP7, null)
+
+
+

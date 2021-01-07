@@ -1,0 +1,15 @@
+
+diff -Naur ../d4j-repo/Lang/Lang_11/src/main/java/org/apache/commons/lang3/RandomStringUtils.java ../d4j-repo/fixed_bugs_dir/Lang/Lang_11/src/main/java/org/apache/commons/lang3/RandomStringUtils.java
+--- ../d4j-repo/Lang/Lang_11/src/main/java/org/apache/commons/lang3/RandomStringUtils.java	2021-01-04 13:13:05.118793995 -0800
++++ ../d4j-repo/fixed_bugs_dir/Lang/Lang_11/src/main/java/org/apache/commons/lang3/RandomStringUtils.java	2021-01-04 13:13:08.694928153 -0800
+@@ -242,6 +242,10 @@
+                     start = ' ';                
+                 }
+             }
++        } else {
++            if (end <= start) {
++                throw new IllegalArgumentException("Parameter end (" + end + ") must be greater than start (" + start + ")");
++            }
+         }
+ 
+         char[] buffer = new char[count];

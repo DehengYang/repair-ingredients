@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Math/Math_69/src/main/java/org/apache/commons/math/stat/correlation/PearsonsCorrelation.java ../d4j-repo/fixed_bugs_dir/Math/Math_69/src/main/java/org/apache/commons/math/stat/correlation/PearsonsCorrelation.java
+--- ../d4j-repo/Math/Math_69/src/main/java/org/apache/commons/math/stat/correlation/PearsonsCorrelation.java	2021-01-04 23:04:30.604355841 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_69/src/main/java/org/apache/commons/math/stat/correlation/PearsonsCorrelation.java	2021-01-04 23:04:34.180489828 -0800
+@@ -168,7 +168,7 @@
+                 } else {
+                     double r = correlationMatrix.getEntry(i, j);
+                     double t = Math.abs(r * Math.sqrt((nObs - 2)/(1 - r * r)));
+-                    out[i][j] = 2 * (1 - tDistribution.cumulativeProbability(t));
++                    out[i][j] = 2 * tDistribution.cumulativeProbability(-t);
+                 }
+             }
+         }

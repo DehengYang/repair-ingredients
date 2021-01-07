@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Mockito/Mockito_5/src/org/mockito/internal/verification/VerificationOverTimeImpl.java ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_5/src/org/mockito/internal/verification/VerificationOverTimeImpl.java
+--- ../d4j-repo/Mockito/Mockito_5/src/org/mockito/internal/verification/VerificationOverTimeImpl.java	2021-01-06 03:34:00.540074155 -0800
++++ ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_5/src/org/mockito/internal/verification/VerificationOverTimeImpl.java	2021-01-06 03:34:04.176197942 -0800
+@@ -88,7 +88,7 @@
+             } catch (MockitoAssertionError e) {
+                 error = handleVerifyException(e);
+             }
+-            catch (org.mockito.exceptions.verification.junit.ArgumentsAreDifferent e) {
++            catch (AssertionError e) {
+                 error = handleVerifyException(e);
+             }
+         }

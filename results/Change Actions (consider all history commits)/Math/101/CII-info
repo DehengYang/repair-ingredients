@@ -1,0 +1,45 @@
+
+
+hASList: 
+[UPD IfStatement@@InfixExpression:source.substring(startIndex,endIndex).compareTo(getImaginaryCharacter()) != 0 @TO@ InfixExpression:(startIndex >= source.length()) || (endIndex > source.length()) || source.substring(startIndex,endIndex).compareTo(getImaginaryCharacter()) != 0 @AT@ 13464 @LENGTH@ 344
+---INS InfixExpression@@(startIndex >= source.length()) || (endIndex > source.length()) || source.substring(startIndex,endIndex).compareTo(getImaginaryCharacter()) != 0 @TO@ IfStatement@@InfixExpression:source.substring(startIndex,endIndex).compareTo(getImaginaryCharacter()) != 0 @AT@ 13468 @LENGTH@ 182
+------INS ParenthesizedExpression@@(startIndex >= source.length()) @TO@ InfixExpression@@(startIndex >= source.length()) || (endIndex > source.length()) || source.substring(startIndex,endIndex).compareTo(getImaginaryCharacter()) != 0 @AT@ 13468 @LENGTH@ 31
+---------INS InfixExpression@@startIndex >= source.length() @TO@ ParenthesizedExpression@@(startIndex >= source.length()) @AT@ 13469 @LENGTH@ 29
+------------INS SimpleName@@startIndex @TO@ InfixExpression@@startIndex >= source.length() @AT@ 13469 @LENGTH@ 10
+------------INS Operator@@>= @TO@ InfixExpression@@startIndex >= source.length() @AT@ 13479 @LENGTH@ 2
+------------INS MethodInvocation@@source.length() @TO@ InfixExpression@@startIndex >= source.length() @AT@ 13483 @LENGTH@ 15
+---------------INS SimpleName@@Name:source @TO@ MethodInvocation@@source.length() @AT@ 13483 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@source.length() @AT@ 13490 @LENGTH@ 8
+------MOV InfixExpression@@source.substring(startIndex,endIndex).compareTo(getImaginaryCharacter()) != 0 @TO@ InfixExpression@@(startIndex >= source.length()) || (endIndex > source.length()) || source.substring(startIndex,endIndex).compareTo(getImaginaryCharacter()) != 0 @AT@ 13481 @LENGTH@ 91
+------INS Operator@@|| @TO@ InfixExpression@@(startIndex >= source.length()) || (endIndex > source.length()) || source.substring(startIndex,endIndex).compareTo(getImaginaryCharacter()) != 0 @AT@ 13499 @LENGTH@ 2
+------INS ParenthesizedExpression@@(endIndex > source.length()) @TO@ InfixExpression@@(startIndex >= source.length()) || (endIndex > source.length()) || source.substring(startIndex,endIndex).compareTo(getImaginaryCharacter()) != 0 @AT@ 13515 @LENGTH@ 28
+---------INS InfixExpression@@endIndex > source.length() @TO@ ParenthesizedExpression@@(endIndex > source.length()) @AT@ 13516 @LENGTH@ 26
+------------INS SimpleName@@endIndex @TO@ InfixExpression@@endIndex > source.length() @AT@ 13516 @LENGTH@ 8
+------------INS Operator@@> @TO@ InfixExpression@@endIndex > source.length() @AT@ 13524 @LENGTH@ 1
+------------INS MethodInvocation@@source.length() @TO@ InfixExpression@@endIndex > source.length() @AT@ 13527 @LENGTH@ 15
+---------------INS SimpleName@@Name:source @TO@ MethodInvocation@@source.length() @AT@ 13527 @LENGTH@ 6
+---------------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@source.length() @AT@ 13534 @LENGTH@ 8
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (INS, InfixExpression, OP1, OP3 OP10 OP11 OP12)
+OP3:      (INS, ParenthesizedExpression, OP2, OP4)
+OP4:         (INS, InfixExpression, OP3, OP5 OP6 OP7)
+OP5:            (INS, SimpleName, OP4, null)
+OP6:            (INS, Operator, OP4, null)
+OP7:            (INS, MethodInvocation, OP4, OP8 OP9)
+OP8:               (INS, SimpleName, OP7, null)
+OP9:               (INS, SimpleName, OP7, null)
+OP10:      (MOV, InfixExpression, OP2, null)
+OP11:      (INS, Operator, OP2, null)
+OP12:      (INS, ParenthesizedExpression, OP2, OP13)
+OP13:         (INS, InfixExpression, OP12, OP14 OP15 OP16)
+OP14:            (INS, SimpleName, OP13, null)
+OP15:            (INS, Operator, OP13, null)
+OP16:            (INS, MethodInvocation, OP13, OP17 OP18)
+OP17:               (INS, SimpleName, OP16, null)
+OP18:               (INS, SimpleName, OP16, null)
+
+
+

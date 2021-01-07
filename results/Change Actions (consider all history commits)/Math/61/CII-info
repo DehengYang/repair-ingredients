@@ -1,0 +1,35 @@
+
+
+hASList: 
+[UPD ThrowStatement@@MethodInvocation:MathRuntimeException.createIllegalArgumentException(LocalizedFormats.NOT_POSITIVE_POISSON_MEAN,p) @TO@ ClassInstanceCreation:new NotStrictlyPositiveException(LocalizedFormats.MEAN,p) @AT@ 3340 @LENGTH@ 105
+---DEL MethodInvocation@@MathRuntimeException.createIllegalArgumentException(LocalizedFormats.NOT_POSITIVE_POISSON_MEAN,p) @AT@ 3346 @LENGTH@ 98
+------DEL SimpleName@@Name:MathRuntimeException @AT@ 3346 @LENGTH@ 20
+------DEL SimpleName@@MethodName:createIllegalArgumentException:[LocalizedFormats.NOT_POSITIVE_POISSON_MEAN, p] @AT@ 3367 @LENGTH@ 77
+---------DEL QualifiedName@@LocalizedFormats.NOT_POSITIVE_POISSON_MEAN @AT@ 3398 @LENGTH@ 42
+---------DEL SimpleName@@p @AT@ 3442 @LENGTH@ 1
+---INS ClassInstanceCreation@@NotStrictlyPositiveException[LocalizedFormats.MEAN, p] @TO@ ThrowStatement@@MethodInvocation:MathRuntimeException.createIllegalArgumentException(LocalizedFormats.NOT_POSITIVE_POISSON_MEAN,p) @AT@ 3364 @LENGTH@ 58
+------INS New@@new @TO@ ClassInstanceCreation@@NotStrictlyPositiveException[LocalizedFormats.MEAN, p] @AT@ 3364 @LENGTH@ 3
+------INS SimpleType@@NotStrictlyPositiveException @TO@ ClassInstanceCreation@@NotStrictlyPositiveException[LocalizedFormats.MEAN, p] @AT@ 3368 @LENGTH@ 28
+------INS QualifiedName@@LocalizedFormats.MEAN @TO@ ClassInstanceCreation@@NotStrictlyPositiveException[LocalizedFormats.MEAN, p] @AT@ 3397 @LENGTH@ 21
+---------MOV SimpleName@@LocalizedFormats @TO@ QualifiedName@@LocalizedFormats.MEAN @AT@ 3398 @LENGTH@ 16
+---------MOV SimpleName@@NOT_POSITIVE_POISSON_MEAN @TO@ QualifiedName@@LocalizedFormats.MEAN @AT@ 3415 @LENGTH@ 25
+------INS SimpleName@@p @TO@ ClassInstanceCreation@@NotStrictlyPositiveException[LocalizedFormats.MEAN, p] @AT@ 3420 @LENGTH@ 1
+]
+
+CII:
+OP1:(UPD, ThrowStatement, null, OP2 OP7)
+OP2:   (DEL, MethodInvocation, OP1, OP3 OP4)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, SimpleName, OP2, OP5 OP6)
+OP5:         (DEL, QualifiedName, OP4, null)
+OP6:         (DEL, SimpleName, OP4, null)
+OP7:   (INS, ClassInstanceCreation, OP1, OP8 OP9 OP10 OP13)
+OP8:      (INS, New, OP7, null)
+OP9:      (INS, SimpleType, OP7, null)
+OP10:      (INS, QualifiedName, OP7, OP11 OP12)
+OP11:         (MOV, SimpleName, OP10, null)
+OP12:         (MOV, SimpleName, OP10, null)
+OP13:      (INS, SimpleName, OP7, null)
+
+
+

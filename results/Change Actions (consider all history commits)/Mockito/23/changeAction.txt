@@ -1,0 +1,99 @@
+OP1:(INS, FieldDeclaration, null, OP2 OP3 OP4 OP5)
+OP2:   (MOV, Modifier, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (MOV, SimpleType, OP1, null)
+OP5:   (INS, VariableDeclarationFragment, OP1, OP6)
+OP6:      (MOV, SimpleName, OP5, null)
+
+
+OP1:(DEL, FieldDeclaration, null, OP2)
+OP2:   (DEL, VariableDeclarationFragment, OP1, OP3)
+OP3:      (DEL, ClassInstanceCreation, OP2, null)
+
+
+OP1:(INS, FieldDeclaration, null, OP2 OP3 OP4 OP5)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (INS, SimpleType, OP1, null)
+OP5:   (INS, VariableDeclarationFragment, OP1, OP6)
+OP6:      (INS, SimpleName, OP5, null)
+
+
+OP1:(DEL, FieldDeclaration, null, OP2 OP3 OP4)
+OP2:   (DEL, Modifier, OP1, null)
+OP3:   (DEL, SimpleType, OP1, null)
+OP4:   (DEL, VariableDeclarationFragment, OP1, OP5 OP6)
+OP5:      (DEL, SimpleName, OP4, null)
+OP6:      (DEL, ClassInstanceCreation, OP4, null)
+
+
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, null)
+
+
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, null)
+
+
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP6)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (INS, PrimitiveType, OP1, null)
+OP5:   (INS, SimpleName, OP1, null)
+OP6:   (INS, IfStatement, OP1, OP7 OP11)
+OP7:      (INS, InfixExpression, OP6, OP8 OP9 OP10)
+OP8:         (INS, SimpleName, OP7, null)
+OP9:         (INS, Operator, OP7, null)
+OP10:         (INS, NullLiteral, OP7, null)
+OP11:      (INS, ExpressionStatement, OP6, OP12)
+OP12:         (INS, Assignment, OP11, OP13 OP14 OP15)
+OP13:            (INS, SimpleName, OP12, null)
+OP14:            (INS, Operator, OP12, null)
+OP15:            (INS, ClassInstanceCreation, OP12, OP16 OP17)
+OP16:               (MOV, New, OP15, null)
+OP17:               (MOV, SimpleType, OP15, null)
+
+
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP6)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (INS, PrimitiveType, OP1, null)
+OP5:   (INS, SimpleName, OP1, null)
+OP6:   (INS, IfStatement, OP1, OP7 OP11)
+OP7:      (INS, InfixExpression, OP6, OP8 OP9 OP10)
+OP8:         (INS, SimpleName, OP7, null)
+OP9:         (INS, Operator, OP7, null)
+OP10:         (INS, NullLiteral, OP7, null)
+OP11:      (INS, ExpressionStatement, OP6, OP12)
+OP12:         (INS, Assignment, OP11, OP13 OP14 OP15)
+OP13:            (INS, SimpleName, OP12, null)
+OP14:            (INS, Operator, OP12, null)
+OP15:            (INS, ClassInstanceCreation, OP12, OP16 OP17)
+OP16:               (MOV, New, OP15, null)
+OP17:               (MOV, SimpleType, OP15, null)
+
+
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (INS, MethodInvocation, OP2, null)
+
+
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (UPD, ClassInstanceCreation, OP3, OP5 OP8)
+OP5:            (DEL, ParameterizedType, OP4, OP6 OP7)
+OP6:               (DEL, SimpleType, OP5, null)
+OP7:               (DEL, SimpleType, OP5, null)
+OP8:            (INS, SimpleType, OP4, null)
+
+
+OP1:(INS, TypeDeclaration, null, OP2 OP3 OP4 OP7)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, SimpleName, OP1, null)
+OP4:   (INS, ParameterizedType, OP1, OP5 OP6)
+OP5:      (INS, SimpleType, OP4, null)
+OP6:      (INS, SimpleType, OP4, null)
+OP7:   (INS, SimpleType, OP1, null)
+
+

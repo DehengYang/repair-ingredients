@@ -1,0 +1,30 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_26/src/com/google/javascript/jscomp/ProcessCommonJSModules.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_26/src/com/google/javascript/jscomp/ProcessCommonJSModules.java
+--- ../d4j-repo/Closure/Closure_26/src/com/google/javascript/jscomp/ProcessCommonJSModules.java	2021-01-06 03:41:48.143995709 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_26/src/com/google/javascript/jscomp/ProcessCommonJSModules.java	2021-01-06 03:41:50.196065592 -0800
+@@ -125,6 +125,7 @@
+       AbstractPostOrderCallback {
+ 
+     private int scriptNodeCount = 0;
++    private Set<String> modulesWithExports = Sets.newHashSet();
+ 
+     @Override
+     public void visit(NodeTraversal t, Node n, Node parent) {
+@@ -204,6 +205,9 @@
+      */
+     private void emitOptionalModuleExportsOverride(Node script,
+         String moduleName) {
++      if (!modulesWithExports.contains(moduleName)) {
++        return;
++      }
+ 
+       Node moduleExportsProp = IR.getprop(IR.name(moduleName),
+           IR.string("module$exports"));
+@@ -225,6 +229,7 @@
+       Node exports = prop.getChildAtIndex(1);
+       exports.putProp(Node.ORIGINALNAME_PROP, "exports");
+       exports.setString("module$exports");
++      modulesWithExports.add(moduleName);
+     }
+ 
+     /**

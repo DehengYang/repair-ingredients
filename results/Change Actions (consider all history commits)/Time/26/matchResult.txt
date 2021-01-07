@@ -1,0 +1,35 @@
+No.0 CCI matched.
+freq: 5
+CommitIds: 3746dd47 3746dd47 3746dd47 3746dd47 83df500a 
+FreqRank:40
+
+No.1 CCI matched.
+freq: 5
+CommitIds: 3746dd47 3746dd47 3746dd47 3746dd47 83df500a 
+FreqRank:40
+
+No.2 CCI matched.
+freq: 5
+CommitIds: 3746dd47 3746dd47 3746dd47 3746dd47 83df500a 
+FreqRank:40
+
+No.3 CCI matched.
+freq: 4
+CommitIds: 83df500a 83df500a 6cad8020 6cad8020 
+FreqRank:41
+
+No.4 CCI matched.
+freq: 5
+CommitIds: 3746dd47 3746dd47 3746dd47 3746dd47 83df500a 
+FreqRank:40
+
+No.5 CCI matched.
+freq: 5
+CommitIds: 3746dd47 3746dd47 3746dd47 3746dd47 83df500a 
+FreqRank:40
+
+No.6 CCI matched.
+freq: 5
+CommitIds: 3746dd47 3746dd47 3746dd47 3746dd47 83df500a 
+FreqRank:40
+

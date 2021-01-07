@@ -1,0 +1,14 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_101/src/java/org/apache/commons/math/complex/ComplexFormat.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_101/src/java/org/apache/commons/math/complex/ComplexFormat.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_101/src/java/org/apache/commons/math/complex/ComplexFormat.java	2020-01-05 06:41:21.285330945 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_101/src/java/org/apache/commons/math/complex/ComplexFormat.java	2020-01-05 06:41:23.685310901 -0800
+@@ -374,7 +374,8 @@
+         int n = getImaginaryCharacter().length();
+         startIndex = pos.getIndex();
+         int endIndex = startIndex + n;
+-        if (
++        if ((startIndex >= source.length()) ||
++            (endIndex > source.length()) ||
+             source.substring(startIndex, endIndex).compareTo(
+             getImaginaryCharacter()) != 0) {
+             // set index back to initial, error index should be the start index

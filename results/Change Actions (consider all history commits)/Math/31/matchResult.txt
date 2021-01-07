@@ -1,0 +1,35 @@
+No.0 CCI matched.
+freq: 4
+CommitIds: 46dfce79 67b86d4c 5dadec87 22072e00 
+FreqRank:70
+
+No.1 CCI matched.
+freq: 4
+CommitIds: 46dfce79 67b86d4c 5dadec87 22072e00 
+FreqRank:70
+
+No.11 CCI matched.
+freq: 5
+CommitIds: d451a1fb d451a1fb d451a1fb 0234e465 fd93fdf0 
+FreqRank:69
+
+No.12 CCI matched.
+freq: 23
+CommitIds: 67b86d4c d29a6961 b5724e1c b5724e1c 08ca1e7a 1de86072 1de86072 73a8e5d1 73a8e5d1 9824f209 2c36a666 2c36a666 2c36a666 2c36a666 bcebd1a5 d451a1fb a70c0de4 a70c0de4 a70c0de4 483f5506 483f5506 483f5506 483f5506 
+FreqRank:51
+
+No.14 CCI matched.
+freq: 4
+CommitIds: a1071f49 86fa786c 2b4bc7c5 5dadec87 
+FreqRank:70
+
+No.15 CCI matched.
+freq: 23
+CommitIds: 67b86d4c d29a6961 b5724e1c b5724e1c 08ca1e7a 1de86072 1de86072 73a8e5d1 73a8e5d1 9824f209 2c36a666 2c36a666 2c36a666 2c36a666 bcebd1a5 d451a1fb a70c0de4 a70c0de4 a70c0de4 483f5506 483f5506 483f5506 483f5506 
+FreqRank:51
+
+No.16 CCI matched.
+freq: 4
+CommitIds: a1071f49 86fa786c 2b4bc7c5 5dadec87 
+FreqRank:70
+

@@ -1,0 +1,1095 @@
+
+
+hASList: 
+[INS FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @TO@ TypeDeclaration@@[public]FastMath,  @AT@ 3465 @LENGTH@ 77
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3465 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3473 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3480 @LENGTH@ 5
+---INS PrimitiveType@@double @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3486 @LENGTH@ 6
+---INS VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3493 @LENGTH@ 48
+------INS SimpleName@@LOG_MAX_VALUE @TO@ VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @AT@ 3493 @LENGTH@ 13
+------INS MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @TO@ VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @AT@ 3509 @LENGTH@ 32
+---------INS SimpleName@@Name:StrictMath @TO@ MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @AT@ 3509 @LENGTH@ 10
+---------INS SimpleName@@MethodName:log:[Double.MAX_VALUE] @TO@ MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @AT@ 3520 @LENGTH@ 21
+------------INS QualifiedName@@Double.MAX_VALUE @TO@ SimpleName@@MethodName:log:[Double.MAX_VALUE] @AT@ 3524 @LENGTH@ 16
+---------------INS SimpleName@@Double @TO@ QualifiedName@@Double.MAX_VALUE @AT@ 3524 @LENGTH@ 6
+---------------INS SimpleName@@MAX_VALUE @TO@ QualifiedName@@Double.MAX_VALUE @AT@ 3531 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 14438 @LENGTH@ 216
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(x) @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14404 @LENGTH@ 20
+---INS InfixExpression@@x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14442 @LENGTH@ 18
+------INS SimpleName@@x @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14442 @LENGTH@ 1
+------INS Operator@@>= @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14443 @LENGTH@ 2
+------INS SimpleName@@LOG_MAX_VALUE @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14447 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(0.5 * x); @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14522 @LENGTH@ 30
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14522 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14528 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14535 @LENGTH@ 16
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 14535 @LENGTH@ 1
+---------INS MethodInvocation@@exp(0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 14539 @LENGTH@ 12
+------------INS SimpleName@@MethodName:exp:[0.5 * x] @TO@ MethodInvocation@@exp(0.5 * x) @AT@ 14539 @LENGTH@ 12
+---------------INS InfixExpression@@0.5 * x @TO@ SimpleName@@MethodName:exp:[0.5 * x] @AT@ 14543 @LENGTH@ 7
+------------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * x @AT@ 14543 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@0.5 * x @AT@ 14546 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@0.5 * x @AT@ 14549 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14567 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 14574 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14574 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 14575 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 14575 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 14578 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 14581 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14583 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14586 @LENGTH@ 1
+, MOV IfStatement@@InfixExpression:x < -20 @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 14443 @LENGTH@ 102
+, INS IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x < -20 @AT@ 14693 @LENGTH@ 219
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(-x) @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14516 @LENGTH@ 21
+---INS InfixExpression@@x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14697 @LENGTH@ 19
+------INS SimpleName@@x @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14697 @LENGTH@ 1
+------INS Operator@@<= @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14698 @LENGTH@ 2
+------INS PrefixExpression@@-LOG_MAX_VALUE @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14702 @LENGTH@ 14
+---------INS Operator@@- @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 14702 @LENGTH@ 1
+---------INS SimpleName@@LOG_MAX_VALUE @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 14703 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(-0.5 * x); @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14778 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14778 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14784 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(-0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14791 @LENGTH@ 17
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 14791 @LENGTH@ 1
+---------INS MethodInvocation@@exp(-0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 14795 @LENGTH@ 13
+------------INS SimpleName@@MethodName:exp:[-0.5 * x] @TO@ MethodInvocation@@exp(-0.5 * x) @AT@ 14795 @LENGTH@ 13
+---------------INS InfixExpression@@-0.5 * x @TO@ SimpleName@@MethodName:exp:[-0.5 * x] @AT@ 14799 @LENGTH@ 8
+------------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * x @AT@ 14799 @LENGTH@ 4
+---------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 14799 @LENGTH@ 1
+---------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 14800 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@-0.5 * x @AT@ 14803 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@-0.5 * x @AT@ 14806 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14824 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 14831 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14831 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 14832 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 14832 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 14835 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 14838 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14840 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14843 @LENGTH@ 1
+, MOV IfStatement@@InfixExpression:x < -20 @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 16006 @LENGTH@ 103
+, INS IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 16294 @LENGTH@ 216
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(x) @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 15967 @LENGTH@ 20
+---INS InfixExpression@@x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16298 @LENGTH@ 18
+------INS SimpleName@@x @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16298 @LENGTH@ 1
+------INS Operator@@>= @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16299 @LENGTH@ 2
+------INS SimpleName@@LOG_MAX_VALUE @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16303 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(0.5 * x); @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16378 @LENGTH@ 30
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16378 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16384 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16391 @LENGTH@ 16
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 16391 @LENGTH@ 1
+---------INS MethodInvocation@@exp(0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 16395 @LENGTH@ 12
+------------INS SimpleName@@MethodName:exp:[0.5 * x] @TO@ MethodInvocation@@exp(0.5 * x) @AT@ 16395 @LENGTH@ 12
+---------------INS InfixExpression@@0.5 * x @TO@ SimpleName@@MethodName:exp:[0.5 * x] @AT@ 16399 @LENGTH@ 7
+------------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * x @AT@ 16399 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@0.5 * x @AT@ 16402 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@0.5 * x @AT@ 16405 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16423 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 16430 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16430 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 16431 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 16431 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 16434 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 16437 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16439 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16442 @LENGTH@ 1
+, INS IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x < -20 @AT@ 16549 @LENGTH@ 221
+---MOV ReturnStatement@@InfixExpression:-0.5 * exp(-x) @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16079 @LENGTH@ 22
+---INS InfixExpression@@x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16553 @LENGTH@ 19
+------INS SimpleName@@x @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16553 @LENGTH@ 1
+------INS Operator@@<= @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16554 @LENGTH@ 2
+------INS PrefixExpression@@-LOG_MAX_VALUE @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16558 @LENGTH@ 14
+---------INS Operator@@- @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 16558 @LENGTH@ 1
+---------INS SimpleName@@LOG_MAX_VALUE @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 16559 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(-0.5 * x); @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16634 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16634 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16640 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(-0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16647 @LENGTH@ 17
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 16647 @LENGTH@ 1
+---------INS MethodInvocation@@exp(-0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 16651 @LENGTH@ 13
+------------INS SimpleName@@MethodName:exp:[-0.5 * x] @TO@ MethodInvocation@@exp(-0.5 * x) @AT@ 16651 @LENGTH@ 13
+---------------INS InfixExpression@@-0.5 * x @TO@ SimpleName@@MethodName:exp:[-0.5 * x] @AT@ 16655 @LENGTH@ 8
+------------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * x @AT@ 16655 @LENGTH@ 4
+---------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 16655 @LENGTH@ 1
+---------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 16656 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@-0.5 * x @AT@ 16659 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@-0.5 * x @AT@ 16662 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(-0.5 * t) * t @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16680 @LENGTH@ 22
+------INS InfixExpression@@(-0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(-0.5 * t) * t @AT@ 16687 @LENGTH@ 14
+---------INS ParenthesizedExpression@@(-0.5 * t) @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16687 @LENGTH@ 10
+------------INS InfixExpression@@-0.5 * t @TO@ ParenthesizedExpression@@(-0.5 * t) @AT@ 16688 @LENGTH@ 8
+---------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * t @AT@ 16688 @LENGTH@ 4
+------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 16688 @LENGTH@ 1
+------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 16689 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@-0.5 * t @AT@ 16692 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@-0.5 * t @AT@ 16695 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16697 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16700 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, FieldDeclaration, null, OP2 OP3 OP4 OP5 OP6)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (INS, Modifier, OP1, null)
+OP5:   (INS, PrimitiveType, OP1, null)
+OP6:   (INS, VariableDeclarationFragment, OP1, OP7 OP8)
+OP7:      (INS, SimpleName, OP6, null)
+OP8:      (INS, MethodInvocation, OP6, OP9 OP10)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, SimpleName, OP8, OP11)
+OP11:            (INS, QualifiedName, OP10, OP12 OP13)
+OP12:               (INS, SimpleName, OP11, null)
+OP13:               (INS, SimpleName, OP11, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @TO@ TypeDeclaration@@[public]FastMath,  @AT@ 3465 @LENGTH@ 77
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3465 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3473 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3480 @LENGTH@ 5
+---INS PrimitiveType@@double @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3486 @LENGTH@ 6
+---INS VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3493 @LENGTH@ 48
+------INS SimpleName@@LOG_MAX_VALUE @TO@ VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @AT@ 3493 @LENGTH@ 13
+------INS MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @TO@ VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @AT@ 3509 @LENGTH@ 32
+---------INS SimpleName@@Name:StrictMath @TO@ MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @AT@ 3509 @LENGTH@ 10
+---------INS SimpleName@@MethodName:log:[Double.MAX_VALUE] @TO@ MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @AT@ 3520 @LENGTH@ 21
+------------INS QualifiedName@@Double.MAX_VALUE @TO@ SimpleName@@MethodName:log:[Double.MAX_VALUE] @AT@ 3524 @LENGTH@ 16
+---------------INS SimpleName@@Double @TO@ QualifiedName@@Double.MAX_VALUE @AT@ 3524 @LENGTH@ 6
+---------------INS SimpleName@@MAX_VALUE @TO@ QualifiedName@@Double.MAX_VALUE @AT@ 3531 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 14438 @LENGTH@ 216
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(x) @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14404 @LENGTH@ 20
+---INS InfixExpression@@x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14442 @LENGTH@ 18
+------INS SimpleName@@x @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14442 @LENGTH@ 1
+------INS Operator@@>= @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14443 @LENGTH@ 2
+------INS SimpleName@@LOG_MAX_VALUE @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14447 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(0.5 * x); @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14522 @LENGTH@ 30
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14522 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14528 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14535 @LENGTH@ 16
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 14535 @LENGTH@ 1
+---------INS MethodInvocation@@exp(0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 14539 @LENGTH@ 12
+------------INS SimpleName@@MethodName:exp:[0.5 * x] @TO@ MethodInvocation@@exp(0.5 * x) @AT@ 14539 @LENGTH@ 12
+---------------INS InfixExpression@@0.5 * x @TO@ SimpleName@@MethodName:exp:[0.5 * x] @AT@ 14543 @LENGTH@ 7
+------------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * x @AT@ 14543 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@0.5 * x @AT@ 14546 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@0.5 * x @AT@ 14549 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14567 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 14574 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14574 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 14575 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 14575 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 14578 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 14581 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14583 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14586 @LENGTH@ 1
+, MOV IfStatement@@InfixExpression:x < -20 @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 14443 @LENGTH@ 102
+, INS IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x < -20 @AT@ 14693 @LENGTH@ 219
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(-x) @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14516 @LENGTH@ 21
+---INS InfixExpression@@x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14697 @LENGTH@ 19
+------INS SimpleName@@x @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14697 @LENGTH@ 1
+------INS Operator@@<= @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14698 @LENGTH@ 2
+------INS PrefixExpression@@-LOG_MAX_VALUE @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14702 @LENGTH@ 14
+---------INS Operator@@- @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 14702 @LENGTH@ 1
+---------INS SimpleName@@LOG_MAX_VALUE @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 14703 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(-0.5 * x); @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14778 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14778 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14784 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(-0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14791 @LENGTH@ 17
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 14791 @LENGTH@ 1
+---------INS MethodInvocation@@exp(-0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 14795 @LENGTH@ 13
+------------INS SimpleName@@MethodName:exp:[-0.5 * x] @TO@ MethodInvocation@@exp(-0.5 * x) @AT@ 14795 @LENGTH@ 13
+---------------INS InfixExpression@@-0.5 * x @TO@ SimpleName@@MethodName:exp:[-0.5 * x] @AT@ 14799 @LENGTH@ 8
+------------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * x @AT@ 14799 @LENGTH@ 4
+---------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 14799 @LENGTH@ 1
+---------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 14800 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@-0.5 * x @AT@ 14803 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@-0.5 * x @AT@ 14806 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14824 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 14831 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14831 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 14832 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 14832 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 14835 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 14838 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14840 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14843 @LENGTH@ 1
+, MOV IfStatement@@InfixExpression:x < -20 @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 16006 @LENGTH@ 103
+, INS IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 16294 @LENGTH@ 216
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(x) @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 15967 @LENGTH@ 20
+---INS InfixExpression@@x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16298 @LENGTH@ 18
+------INS SimpleName@@x @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16298 @LENGTH@ 1
+------INS Operator@@>= @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16299 @LENGTH@ 2
+------INS SimpleName@@LOG_MAX_VALUE @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16303 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(0.5 * x); @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16378 @LENGTH@ 30
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16378 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16384 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16391 @LENGTH@ 16
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 16391 @LENGTH@ 1
+---------INS MethodInvocation@@exp(0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 16395 @LENGTH@ 12
+------------INS SimpleName@@MethodName:exp:[0.5 * x] @TO@ MethodInvocation@@exp(0.5 * x) @AT@ 16395 @LENGTH@ 12
+---------------INS InfixExpression@@0.5 * x @TO@ SimpleName@@MethodName:exp:[0.5 * x] @AT@ 16399 @LENGTH@ 7
+------------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * x @AT@ 16399 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@0.5 * x @AT@ 16402 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@0.5 * x @AT@ 16405 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16423 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 16430 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16430 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 16431 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 16431 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 16434 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 16437 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16439 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16442 @LENGTH@ 1
+, INS IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x < -20 @AT@ 16549 @LENGTH@ 221
+---MOV ReturnStatement@@InfixExpression:-0.5 * exp(-x) @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16079 @LENGTH@ 22
+---INS InfixExpression@@x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16553 @LENGTH@ 19
+------INS SimpleName@@x @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16553 @LENGTH@ 1
+------INS Operator@@<= @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16554 @LENGTH@ 2
+------INS PrefixExpression@@-LOG_MAX_VALUE @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16558 @LENGTH@ 14
+---------INS Operator@@- @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 16558 @LENGTH@ 1
+---------INS SimpleName@@LOG_MAX_VALUE @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 16559 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(-0.5 * x); @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16634 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16634 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16640 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(-0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16647 @LENGTH@ 17
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 16647 @LENGTH@ 1
+---------INS MethodInvocation@@exp(-0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 16651 @LENGTH@ 13
+------------INS SimpleName@@MethodName:exp:[-0.5 * x] @TO@ MethodInvocation@@exp(-0.5 * x) @AT@ 16651 @LENGTH@ 13
+---------------INS InfixExpression@@-0.5 * x @TO@ SimpleName@@MethodName:exp:[-0.5 * x] @AT@ 16655 @LENGTH@ 8
+------------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * x @AT@ 16655 @LENGTH@ 4
+---------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 16655 @LENGTH@ 1
+---------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 16656 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@-0.5 * x @AT@ 16659 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@-0.5 * x @AT@ 16662 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(-0.5 * t) * t @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16680 @LENGTH@ 22
+------INS InfixExpression@@(-0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(-0.5 * t) * t @AT@ 16687 @LENGTH@ 14
+---------INS ParenthesizedExpression@@(-0.5 * t) @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16687 @LENGTH@ 10
+------------INS InfixExpression@@-0.5 * t @TO@ ParenthesizedExpression@@(-0.5 * t) @AT@ 16688 @LENGTH@ 8
+---------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * t @AT@ 16688 @LENGTH@ 4
+------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 16688 @LENGTH@ 1
+------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 16689 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@-0.5 * t @AT@ 16692 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@-0.5 * t @AT@ 16695 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16697 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16700 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3 OP7 OP18)
+OP2:   (MOV, ReturnStatement, OP1, null)
+OP3:   (INS, InfixExpression, OP1, OP4 OP5 OP6)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, Operator, OP3, null)
+OP6:      (INS, SimpleName, OP3, null)
+OP7:   (INS, VariableDeclarationStatement, OP1, OP8 OP9 OP10)
+OP8:      (INS, Modifier, OP7, null)
+OP9:      (INS, PrimitiveType, OP7, null)
+OP10:      (INS, VariableDeclarationFragment, OP7, OP11 OP12)
+OP11:         (INS, SimpleName, OP10, null)
+OP12:         (INS, MethodInvocation, OP10, OP13)
+OP13:            (INS, SimpleName, OP12, OP14)
+OP14:               (INS, InfixExpression, OP13, OP15 OP16 OP17)
+OP15:                  (INS, NumberLiteral, OP14, null)
+OP16:                  (INS, Operator, OP14, null)
+OP17:                  (INS, SimpleName, OP14, null)
+OP18:   (INS, ReturnStatement, OP1, OP19)
+OP19:      (INS, InfixExpression, OP18, OP20 OP25 OP26)
+OP20:         (INS, ParenthesizedExpression, OP19, OP21)
+OP21:            (INS, InfixExpression, OP20, OP22 OP23 OP24)
+OP22:               (INS, NumberLiteral, OP21, null)
+OP23:               (INS, Operator, OP21, null)
+OP24:               (INS, SimpleName, OP21, null)
+OP25:         (INS, Operator, OP19, null)
+OP26:         (INS, SimpleName, OP19, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @TO@ TypeDeclaration@@[public]FastMath,  @AT@ 3465 @LENGTH@ 77
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3465 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3473 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3480 @LENGTH@ 5
+---INS PrimitiveType@@double @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3486 @LENGTH@ 6
+---INS VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3493 @LENGTH@ 48
+------INS SimpleName@@LOG_MAX_VALUE @TO@ VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @AT@ 3493 @LENGTH@ 13
+------INS MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @TO@ VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @AT@ 3509 @LENGTH@ 32
+---------INS SimpleName@@Name:StrictMath @TO@ MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @AT@ 3509 @LENGTH@ 10
+---------INS SimpleName@@MethodName:log:[Double.MAX_VALUE] @TO@ MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @AT@ 3520 @LENGTH@ 21
+------------INS QualifiedName@@Double.MAX_VALUE @TO@ SimpleName@@MethodName:log:[Double.MAX_VALUE] @AT@ 3524 @LENGTH@ 16
+---------------INS SimpleName@@Double @TO@ QualifiedName@@Double.MAX_VALUE @AT@ 3524 @LENGTH@ 6
+---------------INS SimpleName@@MAX_VALUE @TO@ QualifiedName@@Double.MAX_VALUE @AT@ 3531 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 14438 @LENGTH@ 216
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(x) @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14404 @LENGTH@ 20
+---INS InfixExpression@@x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14442 @LENGTH@ 18
+------INS SimpleName@@x @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14442 @LENGTH@ 1
+------INS Operator@@>= @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14443 @LENGTH@ 2
+------INS SimpleName@@LOG_MAX_VALUE @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14447 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(0.5 * x); @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14522 @LENGTH@ 30
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14522 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14528 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14535 @LENGTH@ 16
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 14535 @LENGTH@ 1
+---------INS MethodInvocation@@exp(0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 14539 @LENGTH@ 12
+------------INS SimpleName@@MethodName:exp:[0.5 * x] @TO@ MethodInvocation@@exp(0.5 * x) @AT@ 14539 @LENGTH@ 12
+---------------INS InfixExpression@@0.5 * x @TO@ SimpleName@@MethodName:exp:[0.5 * x] @AT@ 14543 @LENGTH@ 7
+------------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * x @AT@ 14543 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@0.5 * x @AT@ 14546 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@0.5 * x @AT@ 14549 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14567 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 14574 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14574 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 14575 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 14575 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 14578 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 14581 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14583 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14586 @LENGTH@ 1
+, MOV IfStatement@@InfixExpression:x < -20 @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 14443 @LENGTH@ 102
+, INS IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x < -20 @AT@ 14693 @LENGTH@ 219
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(-x) @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14516 @LENGTH@ 21
+---INS InfixExpression@@x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14697 @LENGTH@ 19
+------INS SimpleName@@x @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14697 @LENGTH@ 1
+------INS Operator@@<= @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14698 @LENGTH@ 2
+------INS PrefixExpression@@-LOG_MAX_VALUE @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14702 @LENGTH@ 14
+---------INS Operator@@- @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 14702 @LENGTH@ 1
+---------INS SimpleName@@LOG_MAX_VALUE @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 14703 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(-0.5 * x); @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14778 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14778 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14784 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(-0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14791 @LENGTH@ 17
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 14791 @LENGTH@ 1
+---------INS MethodInvocation@@exp(-0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 14795 @LENGTH@ 13
+------------INS SimpleName@@MethodName:exp:[-0.5 * x] @TO@ MethodInvocation@@exp(-0.5 * x) @AT@ 14795 @LENGTH@ 13
+---------------INS InfixExpression@@-0.5 * x @TO@ SimpleName@@MethodName:exp:[-0.5 * x] @AT@ 14799 @LENGTH@ 8
+------------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * x @AT@ 14799 @LENGTH@ 4
+---------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 14799 @LENGTH@ 1
+---------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 14800 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@-0.5 * x @AT@ 14803 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@-0.5 * x @AT@ 14806 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14824 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 14831 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14831 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 14832 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 14832 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 14835 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 14838 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14840 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14843 @LENGTH@ 1
+, MOV IfStatement@@InfixExpression:x < -20 @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 16006 @LENGTH@ 103
+, INS IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 16294 @LENGTH@ 216
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(x) @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 15967 @LENGTH@ 20
+---INS InfixExpression@@x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16298 @LENGTH@ 18
+------INS SimpleName@@x @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16298 @LENGTH@ 1
+------INS Operator@@>= @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16299 @LENGTH@ 2
+------INS SimpleName@@LOG_MAX_VALUE @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16303 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(0.5 * x); @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16378 @LENGTH@ 30
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16378 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16384 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16391 @LENGTH@ 16
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 16391 @LENGTH@ 1
+---------INS MethodInvocation@@exp(0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 16395 @LENGTH@ 12
+------------INS SimpleName@@MethodName:exp:[0.5 * x] @TO@ MethodInvocation@@exp(0.5 * x) @AT@ 16395 @LENGTH@ 12
+---------------INS InfixExpression@@0.5 * x @TO@ SimpleName@@MethodName:exp:[0.5 * x] @AT@ 16399 @LENGTH@ 7
+------------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * x @AT@ 16399 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@0.5 * x @AT@ 16402 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@0.5 * x @AT@ 16405 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16423 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 16430 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16430 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 16431 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 16431 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 16434 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 16437 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16439 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16442 @LENGTH@ 1
+, INS IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x < -20 @AT@ 16549 @LENGTH@ 221
+---MOV ReturnStatement@@InfixExpression:-0.5 * exp(-x) @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16079 @LENGTH@ 22
+---INS InfixExpression@@x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16553 @LENGTH@ 19
+------INS SimpleName@@x @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16553 @LENGTH@ 1
+------INS Operator@@<= @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16554 @LENGTH@ 2
+------INS PrefixExpression@@-LOG_MAX_VALUE @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16558 @LENGTH@ 14
+---------INS Operator@@- @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 16558 @LENGTH@ 1
+---------INS SimpleName@@LOG_MAX_VALUE @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 16559 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(-0.5 * x); @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16634 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16634 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16640 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(-0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16647 @LENGTH@ 17
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 16647 @LENGTH@ 1
+---------INS MethodInvocation@@exp(-0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 16651 @LENGTH@ 13
+------------INS SimpleName@@MethodName:exp:[-0.5 * x] @TO@ MethodInvocation@@exp(-0.5 * x) @AT@ 16651 @LENGTH@ 13
+---------------INS InfixExpression@@-0.5 * x @TO@ SimpleName@@MethodName:exp:[-0.5 * x] @AT@ 16655 @LENGTH@ 8
+------------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * x @AT@ 16655 @LENGTH@ 4
+---------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 16655 @LENGTH@ 1
+---------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 16656 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@-0.5 * x @AT@ 16659 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@-0.5 * x @AT@ 16662 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(-0.5 * t) * t @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16680 @LENGTH@ 22
+------INS InfixExpression@@(-0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(-0.5 * t) * t @AT@ 16687 @LENGTH@ 14
+---------INS ParenthesizedExpression@@(-0.5 * t) @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16687 @LENGTH@ 10
+------------INS InfixExpression@@-0.5 * t @TO@ ParenthesizedExpression@@(-0.5 * t) @AT@ 16688 @LENGTH@ 8
+---------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * t @AT@ 16688 @LENGTH@ 4
+------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 16688 @LENGTH@ 1
+------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 16689 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@-0.5 * t @AT@ 16692 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@-0.5 * t @AT@ 16695 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16697 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16700 @LENGTH@ 1
+]
+
+CII:
+OP1:(MOV, IfStatement, null, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @TO@ TypeDeclaration@@[public]FastMath,  @AT@ 3465 @LENGTH@ 77
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3465 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3473 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3480 @LENGTH@ 5
+---INS PrimitiveType@@double @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3486 @LENGTH@ 6
+---INS VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3493 @LENGTH@ 48
+------INS SimpleName@@LOG_MAX_VALUE @TO@ VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @AT@ 3493 @LENGTH@ 13
+------INS MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @TO@ VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @AT@ 3509 @LENGTH@ 32
+---------INS SimpleName@@Name:StrictMath @TO@ MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @AT@ 3509 @LENGTH@ 10
+---------INS SimpleName@@MethodName:log:[Double.MAX_VALUE] @TO@ MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @AT@ 3520 @LENGTH@ 21
+------------INS QualifiedName@@Double.MAX_VALUE @TO@ SimpleName@@MethodName:log:[Double.MAX_VALUE] @AT@ 3524 @LENGTH@ 16
+---------------INS SimpleName@@Double @TO@ QualifiedName@@Double.MAX_VALUE @AT@ 3524 @LENGTH@ 6
+---------------INS SimpleName@@MAX_VALUE @TO@ QualifiedName@@Double.MAX_VALUE @AT@ 3531 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 14438 @LENGTH@ 216
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(x) @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14404 @LENGTH@ 20
+---INS InfixExpression@@x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14442 @LENGTH@ 18
+------INS SimpleName@@x @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14442 @LENGTH@ 1
+------INS Operator@@>= @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14443 @LENGTH@ 2
+------INS SimpleName@@LOG_MAX_VALUE @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14447 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(0.5 * x); @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14522 @LENGTH@ 30
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14522 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14528 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14535 @LENGTH@ 16
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 14535 @LENGTH@ 1
+---------INS MethodInvocation@@exp(0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 14539 @LENGTH@ 12
+------------INS SimpleName@@MethodName:exp:[0.5 * x] @TO@ MethodInvocation@@exp(0.5 * x) @AT@ 14539 @LENGTH@ 12
+---------------INS InfixExpression@@0.5 * x @TO@ SimpleName@@MethodName:exp:[0.5 * x] @AT@ 14543 @LENGTH@ 7
+------------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * x @AT@ 14543 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@0.5 * x @AT@ 14546 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@0.5 * x @AT@ 14549 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14567 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 14574 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14574 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 14575 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 14575 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 14578 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 14581 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14583 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14586 @LENGTH@ 1
+, MOV IfStatement@@InfixExpression:x < -20 @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 14443 @LENGTH@ 102
+, INS IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x < -20 @AT@ 14693 @LENGTH@ 219
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(-x) @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14516 @LENGTH@ 21
+---INS InfixExpression@@x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14697 @LENGTH@ 19
+------INS SimpleName@@x @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14697 @LENGTH@ 1
+------INS Operator@@<= @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14698 @LENGTH@ 2
+------INS PrefixExpression@@-LOG_MAX_VALUE @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14702 @LENGTH@ 14
+---------INS Operator@@- @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 14702 @LENGTH@ 1
+---------INS SimpleName@@LOG_MAX_VALUE @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 14703 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(-0.5 * x); @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14778 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14778 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14784 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(-0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14791 @LENGTH@ 17
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 14791 @LENGTH@ 1
+---------INS MethodInvocation@@exp(-0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 14795 @LENGTH@ 13
+------------INS SimpleName@@MethodName:exp:[-0.5 * x] @TO@ MethodInvocation@@exp(-0.5 * x) @AT@ 14795 @LENGTH@ 13
+---------------INS InfixExpression@@-0.5 * x @TO@ SimpleName@@MethodName:exp:[-0.5 * x] @AT@ 14799 @LENGTH@ 8
+------------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * x @AT@ 14799 @LENGTH@ 4
+---------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 14799 @LENGTH@ 1
+---------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 14800 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@-0.5 * x @AT@ 14803 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@-0.5 * x @AT@ 14806 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14824 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 14831 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14831 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 14832 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 14832 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 14835 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 14838 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14840 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14843 @LENGTH@ 1
+, MOV IfStatement@@InfixExpression:x < -20 @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 16006 @LENGTH@ 103
+, INS IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 16294 @LENGTH@ 216
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(x) @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 15967 @LENGTH@ 20
+---INS InfixExpression@@x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16298 @LENGTH@ 18
+------INS SimpleName@@x @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16298 @LENGTH@ 1
+------INS Operator@@>= @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16299 @LENGTH@ 2
+------INS SimpleName@@LOG_MAX_VALUE @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16303 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(0.5 * x); @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16378 @LENGTH@ 30
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16378 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16384 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16391 @LENGTH@ 16
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 16391 @LENGTH@ 1
+---------INS MethodInvocation@@exp(0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 16395 @LENGTH@ 12
+------------INS SimpleName@@MethodName:exp:[0.5 * x] @TO@ MethodInvocation@@exp(0.5 * x) @AT@ 16395 @LENGTH@ 12
+---------------INS InfixExpression@@0.5 * x @TO@ SimpleName@@MethodName:exp:[0.5 * x] @AT@ 16399 @LENGTH@ 7
+------------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * x @AT@ 16399 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@0.5 * x @AT@ 16402 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@0.5 * x @AT@ 16405 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16423 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 16430 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16430 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 16431 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 16431 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 16434 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 16437 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16439 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16442 @LENGTH@ 1
+, INS IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x < -20 @AT@ 16549 @LENGTH@ 221
+---MOV ReturnStatement@@InfixExpression:-0.5 * exp(-x) @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16079 @LENGTH@ 22
+---INS InfixExpression@@x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16553 @LENGTH@ 19
+------INS SimpleName@@x @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16553 @LENGTH@ 1
+------INS Operator@@<= @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16554 @LENGTH@ 2
+------INS PrefixExpression@@-LOG_MAX_VALUE @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16558 @LENGTH@ 14
+---------INS Operator@@- @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 16558 @LENGTH@ 1
+---------INS SimpleName@@LOG_MAX_VALUE @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 16559 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(-0.5 * x); @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16634 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16634 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16640 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(-0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16647 @LENGTH@ 17
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 16647 @LENGTH@ 1
+---------INS MethodInvocation@@exp(-0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 16651 @LENGTH@ 13
+------------INS SimpleName@@MethodName:exp:[-0.5 * x] @TO@ MethodInvocation@@exp(-0.5 * x) @AT@ 16651 @LENGTH@ 13
+---------------INS InfixExpression@@-0.5 * x @TO@ SimpleName@@MethodName:exp:[-0.5 * x] @AT@ 16655 @LENGTH@ 8
+------------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * x @AT@ 16655 @LENGTH@ 4
+---------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 16655 @LENGTH@ 1
+---------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 16656 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@-0.5 * x @AT@ 16659 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@-0.5 * x @AT@ 16662 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(-0.5 * t) * t @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16680 @LENGTH@ 22
+------INS InfixExpression@@(-0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(-0.5 * t) * t @AT@ 16687 @LENGTH@ 14
+---------INS ParenthesizedExpression@@(-0.5 * t) @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16687 @LENGTH@ 10
+------------INS InfixExpression@@-0.5 * t @TO@ ParenthesizedExpression@@(-0.5 * t) @AT@ 16688 @LENGTH@ 8
+---------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * t @AT@ 16688 @LENGTH@ 4
+------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 16688 @LENGTH@ 1
+------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 16689 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@-0.5 * t @AT@ 16692 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@-0.5 * t @AT@ 16695 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16697 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16700 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3 OP9 OP22)
+OP2:   (MOV, ReturnStatement, OP1, null)
+OP3:   (INS, InfixExpression, OP1, OP4 OP5 OP6)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, Operator, OP3, null)
+OP6:      (INS, PrefixExpression, OP3, OP7 OP8)
+OP7:         (INS, Operator, OP6, null)
+OP8:         (INS, SimpleName, OP6, null)
+OP9:   (INS, VariableDeclarationStatement, OP1, OP10 OP11 OP12)
+OP10:      (INS, Modifier, OP9, null)
+OP11:      (INS, PrimitiveType, OP9, null)
+OP12:      (INS, VariableDeclarationFragment, OP9, OP13 OP14)
+OP13:         (INS, SimpleName, OP12, null)
+OP14:         (INS, MethodInvocation, OP12, OP15)
+OP15:            (INS, SimpleName, OP14, OP16)
+OP16:               (INS, InfixExpression, OP15, OP17 OP20 OP21)
+OP17:                  (INS, PrefixExpression, OP16, OP18 OP19)
+OP18:                     (INS, Operator, OP17, null)
+OP19:                     (INS, NumberLiteral, OP17, null)
+OP20:                  (INS, Operator, OP16, null)
+OP21:                  (INS, SimpleName, OP16, null)
+OP22:   (INS, ReturnStatement, OP1, OP23)
+OP23:      (INS, InfixExpression, OP22, OP24 OP29 OP30)
+OP24:         (INS, ParenthesizedExpression, OP23, OP25)
+OP25:            (INS, InfixExpression, OP24, OP26 OP27 OP28)
+OP26:               (INS, NumberLiteral, OP25, null)
+OP27:               (INS, Operator, OP25, null)
+OP28:               (INS, SimpleName, OP25, null)
+OP29:         (INS, Operator, OP23, null)
+OP30:         (INS, SimpleName, OP23, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @TO@ TypeDeclaration@@[public]FastMath,  @AT@ 3465 @LENGTH@ 77
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3465 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3473 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3480 @LENGTH@ 5
+---INS PrimitiveType@@double @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3486 @LENGTH@ 6
+---INS VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3493 @LENGTH@ 48
+------INS SimpleName@@LOG_MAX_VALUE @TO@ VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @AT@ 3493 @LENGTH@ 13
+------INS MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @TO@ VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @AT@ 3509 @LENGTH@ 32
+---------INS SimpleName@@Name:StrictMath @TO@ MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @AT@ 3509 @LENGTH@ 10
+---------INS SimpleName@@MethodName:log:[Double.MAX_VALUE] @TO@ MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @AT@ 3520 @LENGTH@ 21
+------------INS QualifiedName@@Double.MAX_VALUE @TO@ SimpleName@@MethodName:log:[Double.MAX_VALUE] @AT@ 3524 @LENGTH@ 16
+---------------INS SimpleName@@Double @TO@ QualifiedName@@Double.MAX_VALUE @AT@ 3524 @LENGTH@ 6
+---------------INS SimpleName@@MAX_VALUE @TO@ QualifiedName@@Double.MAX_VALUE @AT@ 3531 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 14438 @LENGTH@ 216
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(x) @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14404 @LENGTH@ 20
+---INS InfixExpression@@x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14442 @LENGTH@ 18
+------INS SimpleName@@x @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14442 @LENGTH@ 1
+------INS Operator@@>= @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14443 @LENGTH@ 2
+------INS SimpleName@@LOG_MAX_VALUE @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14447 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(0.5 * x); @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14522 @LENGTH@ 30
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14522 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14528 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14535 @LENGTH@ 16
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 14535 @LENGTH@ 1
+---------INS MethodInvocation@@exp(0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 14539 @LENGTH@ 12
+------------INS SimpleName@@MethodName:exp:[0.5 * x] @TO@ MethodInvocation@@exp(0.5 * x) @AT@ 14539 @LENGTH@ 12
+---------------INS InfixExpression@@0.5 * x @TO@ SimpleName@@MethodName:exp:[0.5 * x] @AT@ 14543 @LENGTH@ 7
+------------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * x @AT@ 14543 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@0.5 * x @AT@ 14546 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@0.5 * x @AT@ 14549 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14567 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 14574 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14574 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 14575 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 14575 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 14578 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 14581 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14583 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14586 @LENGTH@ 1
+, MOV IfStatement@@InfixExpression:x < -20 @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 14443 @LENGTH@ 102
+, INS IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x < -20 @AT@ 14693 @LENGTH@ 219
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(-x) @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14516 @LENGTH@ 21
+---INS InfixExpression@@x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14697 @LENGTH@ 19
+------INS SimpleName@@x @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14697 @LENGTH@ 1
+------INS Operator@@<= @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14698 @LENGTH@ 2
+------INS PrefixExpression@@-LOG_MAX_VALUE @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14702 @LENGTH@ 14
+---------INS Operator@@- @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 14702 @LENGTH@ 1
+---------INS SimpleName@@LOG_MAX_VALUE @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 14703 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(-0.5 * x); @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14778 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14778 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14784 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(-0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14791 @LENGTH@ 17
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 14791 @LENGTH@ 1
+---------INS MethodInvocation@@exp(-0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 14795 @LENGTH@ 13
+------------INS SimpleName@@MethodName:exp:[-0.5 * x] @TO@ MethodInvocation@@exp(-0.5 * x) @AT@ 14795 @LENGTH@ 13
+---------------INS InfixExpression@@-0.5 * x @TO@ SimpleName@@MethodName:exp:[-0.5 * x] @AT@ 14799 @LENGTH@ 8
+------------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * x @AT@ 14799 @LENGTH@ 4
+---------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 14799 @LENGTH@ 1
+---------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 14800 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@-0.5 * x @AT@ 14803 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@-0.5 * x @AT@ 14806 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14824 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 14831 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14831 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 14832 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 14832 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 14835 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 14838 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14840 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14843 @LENGTH@ 1
+, MOV IfStatement@@InfixExpression:x < -20 @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 16006 @LENGTH@ 103
+, INS IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 16294 @LENGTH@ 216
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(x) @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 15967 @LENGTH@ 20
+---INS InfixExpression@@x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16298 @LENGTH@ 18
+------INS SimpleName@@x @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16298 @LENGTH@ 1
+------INS Operator@@>= @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16299 @LENGTH@ 2
+------INS SimpleName@@LOG_MAX_VALUE @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16303 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(0.5 * x); @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16378 @LENGTH@ 30
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16378 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16384 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16391 @LENGTH@ 16
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 16391 @LENGTH@ 1
+---------INS MethodInvocation@@exp(0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 16395 @LENGTH@ 12
+------------INS SimpleName@@MethodName:exp:[0.5 * x] @TO@ MethodInvocation@@exp(0.5 * x) @AT@ 16395 @LENGTH@ 12
+---------------INS InfixExpression@@0.5 * x @TO@ SimpleName@@MethodName:exp:[0.5 * x] @AT@ 16399 @LENGTH@ 7
+------------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * x @AT@ 16399 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@0.5 * x @AT@ 16402 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@0.5 * x @AT@ 16405 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16423 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 16430 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16430 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 16431 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 16431 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 16434 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 16437 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16439 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16442 @LENGTH@ 1
+, INS IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x < -20 @AT@ 16549 @LENGTH@ 221
+---MOV ReturnStatement@@InfixExpression:-0.5 * exp(-x) @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16079 @LENGTH@ 22
+---INS InfixExpression@@x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16553 @LENGTH@ 19
+------INS SimpleName@@x @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16553 @LENGTH@ 1
+------INS Operator@@<= @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16554 @LENGTH@ 2
+------INS PrefixExpression@@-LOG_MAX_VALUE @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16558 @LENGTH@ 14
+---------INS Operator@@- @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 16558 @LENGTH@ 1
+---------INS SimpleName@@LOG_MAX_VALUE @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 16559 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(-0.5 * x); @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16634 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16634 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16640 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(-0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16647 @LENGTH@ 17
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 16647 @LENGTH@ 1
+---------INS MethodInvocation@@exp(-0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 16651 @LENGTH@ 13
+------------INS SimpleName@@MethodName:exp:[-0.5 * x] @TO@ MethodInvocation@@exp(-0.5 * x) @AT@ 16651 @LENGTH@ 13
+---------------INS InfixExpression@@-0.5 * x @TO@ SimpleName@@MethodName:exp:[-0.5 * x] @AT@ 16655 @LENGTH@ 8
+------------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * x @AT@ 16655 @LENGTH@ 4
+---------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 16655 @LENGTH@ 1
+---------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 16656 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@-0.5 * x @AT@ 16659 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@-0.5 * x @AT@ 16662 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(-0.5 * t) * t @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16680 @LENGTH@ 22
+------INS InfixExpression@@(-0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(-0.5 * t) * t @AT@ 16687 @LENGTH@ 14
+---------INS ParenthesizedExpression@@(-0.5 * t) @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16687 @LENGTH@ 10
+------------INS InfixExpression@@-0.5 * t @TO@ ParenthesizedExpression@@(-0.5 * t) @AT@ 16688 @LENGTH@ 8
+---------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * t @AT@ 16688 @LENGTH@ 4
+------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 16688 @LENGTH@ 1
+------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 16689 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@-0.5 * t @AT@ 16692 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@-0.5 * t @AT@ 16695 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16697 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16700 @LENGTH@ 1
+]
+
+CII:
+OP1:(MOV, IfStatement, null, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @TO@ TypeDeclaration@@[public]FastMath,  @AT@ 3465 @LENGTH@ 77
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3465 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3473 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3480 @LENGTH@ 5
+---INS PrimitiveType@@double @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3486 @LENGTH@ 6
+---INS VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3493 @LENGTH@ 48
+------INS SimpleName@@LOG_MAX_VALUE @TO@ VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @AT@ 3493 @LENGTH@ 13
+------INS MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @TO@ VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @AT@ 3509 @LENGTH@ 32
+---------INS SimpleName@@Name:StrictMath @TO@ MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @AT@ 3509 @LENGTH@ 10
+---------INS SimpleName@@MethodName:log:[Double.MAX_VALUE] @TO@ MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @AT@ 3520 @LENGTH@ 21
+------------INS QualifiedName@@Double.MAX_VALUE @TO@ SimpleName@@MethodName:log:[Double.MAX_VALUE] @AT@ 3524 @LENGTH@ 16
+---------------INS SimpleName@@Double @TO@ QualifiedName@@Double.MAX_VALUE @AT@ 3524 @LENGTH@ 6
+---------------INS SimpleName@@MAX_VALUE @TO@ QualifiedName@@Double.MAX_VALUE @AT@ 3531 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 14438 @LENGTH@ 216
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(x) @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14404 @LENGTH@ 20
+---INS InfixExpression@@x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14442 @LENGTH@ 18
+------INS SimpleName@@x @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14442 @LENGTH@ 1
+------INS Operator@@>= @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14443 @LENGTH@ 2
+------INS SimpleName@@LOG_MAX_VALUE @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14447 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(0.5 * x); @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14522 @LENGTH@ 30
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14522 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14528 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14535 @LENGTH@ 16
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 14535 @LENGTH@ 1
+---------INS MethodInvocation@@exp(0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 14539 @LENGTH@ 12
+------------INS SimpleName@@MethodName:exp:[0.5 * x] @TO@ MethodInvocation@@exp(0.5 * x) @AT@ 14539 @LENGTH@ 12
+---------------INS InfixExpression@@0.5 * x @TO@ SimpleName@@MethodName:exp:[0.5 * x] @AT@ 14543 @LENGTH@ 7
+------------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * x @AT@ 14543 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@0.5 * x @AT@ 14546 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@0.5 * x @AT@ 14549 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14567 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 14574 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14574 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 14575 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 14575 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 14578 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 14581 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14583 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14586 @LENGTH@ 1
+, MOV IfStatement@@InfixExpression:x < -20 @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 14443 @LENGTH@ 102
+, INS IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x < -20 @AT@ 14693 @LENGTH@ 219
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(-x) @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14516 @LENGTH@ 21
+---INS InfixExpression@@x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14697 @LENGTH@ 19
+------INS SimpleName@@x @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14697 @LENGTH@ 1
+------INS Operator@@<= @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14698 @LENGTH@ 2
+------INS PrefixExpression@@-LOG_MAX_VALUE @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14702 @LENGTH@ 14
+---------INS Operator@@- @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 14702 @LENGTH@ 1
+---------INS SimpleName@@LOG_MAX_VALUE @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 14703 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(-0.5 * x); @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14778 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14778 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14784 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(-0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14791 @LENGTH@ 17
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 14791 @LENGTH@ 1
+---------INS MethodInvocation@@exp(-0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 14795 @LENGTH@ 13
+------------INS SimpleName@@MethodName:exp:[-0.5 * x] @TO@ MethodInvocation@@exp(-0.5 * x) @AT@ 14795 @LENGTH@ 13
+---------------INS InfixExpression@@-0.5 * x @TO@ SimpleName@@MethodName:exp:[-0.5 * x] @AT@ 14799 @LENGTH@ 8
+------------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * x @AT@ 14799 @LENGTH@ 4
+---------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 14799 @LENGTH@ 1
+---------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 14800 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@-0.5 * x @AT@ 14803 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@-0.5 * x @AT@ 14806 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14824 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 14831 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14831 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 14832 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 14832 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 14835 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 14838 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14840 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14843 @LENGTH@ 1
+, MOV IfStatement@@InfixExpression:x < -20 @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 16006 @LENGTH@ 103
+, INS IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 16294 @LENGTH@ 216
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(x) @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 15967 @LENGTH@ 20
+---INS InfixExpression@@x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16298 @LENGTH@ 18
+------INS SimpleName@@x @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16298 @LENGTH@ 1
+------INS Operator@@>= @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16299 @LENGTH@ 2
+------INS SimpleName@@LOG_MAX_VALUE @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16303 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(0.5 * x); @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16378 @LENGTH@ 30
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16378 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16384 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16391 @LENGTH@ 16
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 16391 @LENGTH@ 1
+---------INS MethodInvocation@@exp(0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 16395 @LENGTH@ 12
+------------INS SimpleName@@MethodName:exp:[0.5 * x] @TO@ MethodInvocation@@exp(0.5 * x) @AT@ 16395 @LENGTH@ 12
+---------------INS InfixExpression@@0.5 * x @TO@ SimpleName@@MethodName:exp:[0.5 * x] @AT@ 16399 @LENGTH@ 7
+------------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * x @AT@ 16399 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@0.5 * x @AT@ 16402 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@0.5 * x @AT@ 16405 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16423 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 16430 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16430 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 16431 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 16431 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 16434 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 16437 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16439 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16442 @LENGTH@ 1
+, INS IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x < -20 @AT@ 16549 @LENGTH@ 221
+---MOV ReturnStatement@@InfixExpression:-0.5 * exp(-x) @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16079 @LENGTH@ 22
+---INS InfixExpression@@x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16553 @LENGTH@ 19
+------INS SimpleName@@x @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16553 @LENGTH@ 1
+------INS Operator@@<= @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16554 @LENGTH@ 2
+------INS PrefixExpression@@-LOG_MAX_VALUE @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16558 @LENGTH@ 14
+---------INS Operator@@- @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 16558 @LENGTH@ 1
+---------INS SimpleName@@LOG_MAX_VALUE @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 16559 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(-0.5 * x); @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16634 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16634 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16640 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(-0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16647 @LENGTH@ 17
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 16647 @LENGTH@ 1
+---------INS MethodInvocation@@exp(-0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 16651 @LENGTH@ 13
+------------INS SimpleName@@MethodName:exp:[-0.5 * x] @TO@ MethodInvocation@@exp(-0.5 * x) @AT@ 16651 @LENGTH@ 13
+---------------INS InfixExpression@@-0.5 * x @TO@ SimpleName@@MethodName:exp:[-0.5 * x] @AT@ 16655 @LENGTH@ 8
+------------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * x @AT@ 16655 @LENGTH@ 4
+---------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 16655 @LENGTH@ 1
+---------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 16656 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@-0.5 * x @AT@ 16659 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@-0.5 * x @AT@ 16662 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(-0.5 * t) * t @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16680 @LENGTH@ 22
+------INS InfixExpression@@(-0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(-0.5 * t) * t @AT@ 16687 @LENGTH@ 14
+---------INS ParenthesizedExpression@@(-0.5 * t) @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16687 @LENGTH@ 10
+------------INS InfixExpression@@-0.5 * t @TO@ ParenthesizedExpression@@(-0.5 * t) @AT@ 16688 @LENGTH@ 8
+---------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * t @AT@ 16688 @LENGTH@ 4
+------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 16688 @LENGTH@ 1
+------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 16689 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@-0.5 * t @AT@ 16692 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@-0.5 * t @AT@ 16695 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16697 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16700 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3 OP7 OP18)
+OP2:   (MOV, ReturnStatement, OP1, null)
+OP3:   (INS, InfixExpression, OP1, OP4 OP5 OP6)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, Operator, OP3, null)
+OP6:      (INS, SimpleName, OP3, null)
+OP7:   (INS, VariableDeclarationStatement, OP1, OP8 OP9 OP10)
+OP8:      (INS, Modifier, OP7, null)
+OP9:      (INS, PrimitiveType, OP7, null)
+OP10:      (INS, VariableDeclarationFragment, OP7, OP11 OP12)
+OP11:         (INS, SimpleName, OP10, null)
+OP12:         (INS, MethodInvocation, OP10, OP13)
+OP13:            (INS, SimpleName, OP12, OP14)
+OP14:               (INS, InfixExpression, OP13, OP15 OP16 OP17)
+OP15:                  (INS, NumberLiteral, OP14, null)
+OP16:                  (INS, Operator, OP14, null)
+OP17:                  (INS, SimpleName, OP14, null)
+OP18:   (INS, ReturnStatement, OP1, OP19)
+OP19:      (INS, InfixExpression, OP18, OP20 OP25 OP26)
+OP20:         (INS, ParenthesizedExpression, OP19, OP21)
+OP21:            (INS, InfixExpression, OP20, OP22 OP23 OP24)
+OP22:               (INS, NumberLiteral, OP21, null)
+OP23:               (INS, Operator, OP21, null)
+OP24:               (INS, SimpleName, OP21, null)
+OP25:         (INS, Operator, OP19, null)
+OP26:         (INS, SimpleName, OP19, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @TO@ TypeDeclaration@@[public]FastMath,  @AT@ 3465 @LENGTH@ 77
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3465 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3473 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3480 @LENGTH@ 5
+---INS PrimitiveType@@double @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3486 @LENGTH@ 6
+---INS VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @TO@ FieldDeclaration@@private, static, final, double, [LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE)] @AT@ 3493 @LENGTH@ 48
+------INS SimpleName@@LOG_MAX_VALUE @TO@ VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @AT@ 3493 @LENGTH@ 13
+------INS MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @TO@ VariableDeclarationFragment@@LOG_MAX_VALUE=StrictMath.log(Double.MAX_VALUE) @AT@ 3509 @LENGTH@ 32
+---------INS SimpleName@@Name:StrictMath @TO@ MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @AT@ 3509 @LENGTH@ 10
+---------INS SimpleName@@MethodName:log:[Double.MAX_VALUE] @TO@ MethodInvocation@@StrictMath.log(Double.MAX_VALUE) @AT@ 3520 @LENGTH@ 21
+------------INS QualifiedName@@Double.MAX_VALUE @TO@ SimpleName@@MethodName:log:[Double.MAX_VALUE] @AT@ 3524 @LENGTH@ 16
+---------------INS SimpleName@@Double @TO@ QualifiedName@@Double.MAX_VALUE @AT@ 3524 @LENGTH@ 6
+---------------INS SimpleName@@MAX_VALUE @TO@ QualifiedName@@Double.MAX_VALUE @AT@ 3531 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 14438 @LENGTH@ 216
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(x) @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14404 @LENGTH@ 20
+---INS InfixExpression@@x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14442 @LENGTH@ 18
+------INS SimpleName@@x @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14442 @LENGTH@ 1
+------INS Operator@@>= @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14443 @LENGTH@ 2
+------INS SimpleName@@LOG_MAX_VALUE @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 14447 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(0.5 * x); @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14522 @LENGTH@ 30
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14522 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14528 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 14535 @LENGTH@ 16
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 14535 @LENGTH@ 1
+---------INS MethodInvocation@@exp(0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 14539 @LENGTH@ 12
+------------INS SimpleName@@MethodName:exp:[0.5 * x] @TO@ MethodInvocation@@exp(0.5 * x) @AT@ 14539 @LENGTH@ 12
+---------------INS InfixExpression@@0.5 * x @TO@ SimpleName@@MethodName:exp:[0.5 * x] @AT@ 14543 @LENGTH@ 7
+------------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * x @AT@ 14543 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@0.5 * x @AT@ 14546 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@0.5 * x @AT@ 14549 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 14567 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 14574 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14574 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 14575 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 14575 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 14578 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 14581 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14583 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14586 @LENGTH@ 1
+, MOV IfStatement@@InfixExpression:x < -20 @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 14443 @LENGTH@ 102
+, INS IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x < -20 @AT@ 14693 @LENGTH@ 219
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(-x) @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14516 @LENGTH@ 21
+---INS InfixExpression@@x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14697 @LENGTH@ 19
+------INS SimpleName@@x @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14697 @LENGTH@ 1
+------INS Operator@@<= @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14698 @LENGTH@ 2
+------INS PrefixExpression@@-LOG_MAX_VALUE @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 14702 @LENGTH@ 14
+---------INS Operator@@- @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 14702 @LENGTH@ 1
+---------INS SimpleName@@LOG_MAX_VALUE @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 14703 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(-0.5 * x); @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14778 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14778 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14784 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(-0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 14791 @LENGTH@ 17
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 14791 @LENGTH@ 1
+---------INS MethodInvocation@@exp(-0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 14795 @LENGTH@ 13
+------------INS SimpleName@@MethodName:exp:[-0.5 * x] @TO@ MethodInvocation@@exp(-0.5 * x) @AT@ 14795 @LENGTH@ 13
+---------------INS InfixExpression@@-0.5 * x @TO@ SimpleName@@MethodName:exp:[-0.5 * x] @AT@ 14799 @LENGTH@ 8
+------------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * x @AT@ 14799 @LENGTH@ 4
+---------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 14799 @LENGTH@ 1
+---------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 14800 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@-0.5 * x @AT@ 14803 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@-0.5 * x @AT@ 14806 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 14824 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 14831 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14831 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 14832 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 14832 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 14835 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 14838 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14840 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 14843 @LENGTH@ 1
+, MOV IfStatement@@InfixExpression:x < -20 @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 16006 @LENGTH@ 103
+, INS IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x > 20 @AT@ 16294 @LENGTH@ 216
+---MOV ReturnStatement@@InfixExpression:0.5 * exp(x) @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 15967 @LENGTH@ 20
+---INS InfixExpression@@x >= LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16298 @LENGTH@ 18
+------INS SimpleName@@x @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16298 @LENGTH@ 1
+------INS Operator@@>= @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16299 @LENGTH@ 2
+------INS SimpleName@@LOG_MAX_VALUE @TO@ InfixExpression@@x >= LOG_MAX_VALUE @AT@ 16303 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(0.5 * x); @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16378 @LENGTH@ 30
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16378 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16384 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(0.5 * x); @AT@ 16391 @LENGTH@ 16
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 16391 @LENGTH@ 1
+---------INS MethodInvocation@@exp(0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(0.5 * x) @AT@ 16395 @LENGTH@ 12
+------------INS SimpleName@@MethodName:exp:[0.5 * x] @TO@ MethodInvocation@@exp(0.5 * x) @AT@ 16395 @LENGTH@ 12
+---------------INS InfixExpression@@0.5 * x @TO@ SimpleName@@MethodName:exp:[0.5 * x] @AT@ 16399 @LENGTH@ 7
+------------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * x @AT@ 16399 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@0.5 * x @AT@ 16402 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@0.5 * x @AT@ 16405 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(0.5 * t) * t @TO@ IfStatement@@InfixExpression:x >= LOG_MAX_VALUE @AT@ 16423 @LENGTH@ 21
+------INS InfixExpression@@(0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(0.5 * t) * t @AT@ 16430 @LENGTH@ 13
+---------INS ParenthesizedExpression@@(0.5 * t) @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16430 @LENGTH@ 9
+------------INS InfixExpression@@0.5 * t @TO@ ParenthesizedExpression@@(0.5 * t) @AT@ 16431 @LENGTH@ 7
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * t @AT@ 16431 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * t @AT@ 16434 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@0.5 * t @AT@ 16437 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16439 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(0.5 * t) * t @AT@ 16442 @LENGTH@ 1
+, INS IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x < -20 @AT@ 16549 @LENGTH@ 221
+---MOV ReturnStatement@@InfixExpression:-0.5 * exp(-x) @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16079 @LENGTH@ 22
+---INS InfixExpression@@x <= -LOG_MAX_VALUE @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16553 @LENGTH@ 19
+------INS SimpleName@@x @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16553 @LENGTH@ 1
+------INS Operator@@<= @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16554 @LENGTH@ 2
+------INS PrefixExpression@@-LOG_MAX_VALUE @TO@ InfixExpression@@x <= -LOG_MAX_VALUE @AT@ 16558 @LENGTH@ 14
+---------INS Operator@@- @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 16558 @LENGTH@ 1
+---------INS SimpleName@@LOG_MAX_VALUE @TO@ PrefixExpression@@-LOG_MAX_VALUE @AT@ 16559 @LENGTH@ 13
+---INS VariableDeclarationStatement@@final double t=exp(-0.5 * x); @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16634 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16634 @LENGTH@ 5
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16640 @LENGTH@ 6
+------INS VariableDeclarationFragment@@t=exp(-0.5 * x) @TO@ VariableDeclarationStatement@@final double t=exp(-0.5 * x); @AT@ 16647 @LENGTH@ 17
+---------INS SimpleName@@t @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 16647 @LENGTH@ 1
+---------INS MethodInvocation@@exp(-0.5 * x) @TO@ VariableDeclarationFragment@@t=exp(-0.5 * x) @AT@ 16651 @LENGTH@ 13
+------------INS SimpleName@@MethodName:exp:[-0.5 * x] @TO@ MethodInvocation@@exp(-0.5 * x) @AT@ 16651 @LENGTH@ 13
+---------------INS InfixExpression@@-0.5 * x @TO@ SimpleName@@MethodName:exp:[-0.5 * x] @AT@ 16655 @LENGTH@ 8
+------------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * x @AT@ 16655 @LENGTH@ 4
+---------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 16655 @LENGTH@ 1
+---------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 16656 @LENGTH@ 3
+------------------INS Operator@@* @TO@ InfixExpression@@-0.5 * x @AT@ 16659 @LENGTH@ 1
+------------------INS SimpleName@@x @TO@ InfixExpression@@-0.5 * x @AT@ 16662 @LENGTH@ 1
+---INS ReturnStatement@@InfixExpression:(-0.5 * t) * t @TO@ IfStatement@@InfixExpression:x <= -LOG_MAX_VALUE @AT@ 16680 @LENGTH@ 22
+------INS InfixExpression@@(-0.5 * t) * t @TO@ ReturnStatement@@InfixExpression:(-0.5 * t) * t @AT@ 16687 @LENGTH@ 14
+---------INS ParenthesizedExpression@@(-0.5 * t) @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16687 @LENGTH@ 10
+------------INS InfixExpression@@-0.5 * t @TO@ ParenthesizedExpression@@(-0.5 * t) @AT@ 16688 @LENGTH@ 8
+---------------INS PrefixExpression@@-0.5 @TO@ InfixExpression@@-0.5 * t @AT@ 16688 @LENGTH@ 4
+------------------INS Operator@@- @TO@ PrefixExpression@@-0.5 @AT@ 16688 @LENGTH@ 1
+------------------INS NumberLiteral@@0.5 @TO@ PrefixExpression@@-0.5 @AT@ 16689 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@-0.5 * t @AT@ 16692 @LENGTH@ 1
+---------------INS SimpleName@@t @TO@ InfixExpression@@-0.5 * t @AT@ 16695 @LENGTH@ 1
+---------INS Operator@@* @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16697 @LENGTH@ 1
+---------INS SimpleName@@t @TO@ InfixExpression@@(-0.5 * t) * t @AT@ 16700 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3 OP9 OP22)
+OP2:   (MOV, ReturnStatement, OP1, null)
+OP3:   (INS, InfixExpression, OP1, OP4 OP5 OP6)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, Operator, OP3, null)
+OP6:      (INS, PrefixExpression, OP3, OP7 OP8)
+OP7:         (INS, Operator, OP6, null)
+OP8:         (INS, SimpleName, OP6, null)
+OP9:   (INS, VariableDeclarationStatement, OP1, OP10 OP11 OP12)
+OP10:      (INS, Modifier, OP9, null)
+OP11:      (INS, PrimitiveType, OP9, null)
+OP12:      (INS, VariableDeclarationFragment, OP9, OP13 OP14)
+OP13:         (INS, SimpleName, OP12, null)
+OP14:         (INS, MethodInvocation, OP12, OP15)
+OP15:            (INS, SimpleName, OP14, OP16)
+OP16:               (INS, InfixExpression, OP15, OP17 OP20 OP21)
+OP17:                  (INS, PrefixExpression, OP16, OP18 OP19)
+OP18:                     (INS, Operator, OP17, null)
+OP19:                     (INS, NumberLiteral, OP17, null)
+OP20:                  (INS, Operator, OP16, null)
+OP21:                  (INS, SimpleName, OP16, null)
+OP22:   (INS, ReturnStatement, OP1, OP23)
+OP23:      (INS, InfixExpression, OP22, OP24 OP31 OP32)
+OP24:         (INS, ParenthesizedExpression, OP23, OP25)
+OP25:            (INS, InfixExpression, OP24, OP26 OP29 OP30)
+OP26:               (INS, PrefixExpression, OP25, OP27 OP28)
+OP27:                  (INS, Operator, OP26, null)
+OP28:                  (INS, NumberLiteral, OP26, null)
+OP29:               (INS, Operator, OP25, null)
+OP30:               (INS, SimpleName, OP25, null)
+OP31:         (INS, Operator, OP23, null)
+OP32:         (INS, SimpleName, OP23, null)
+
+
+

@@ -1,0 +1,25 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_33/src/org/mockito/internal/invocation/InvocationMatcher.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_33/src/org/mockito/internal/invocation/InvocationMatcher.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_33/src/org/mockito/internal/invocation/InvocationMatcher.java	2020-01-05 22:35:19.304550073 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_33/src/org/mockito/internal/invocation/InvocationMatcher.java	2020-01-05 22:35:22.044550063 -0800
+@@ -95,8 +95,19 @@
+         Method m1 = invocation.getMethod();
+         Method m2 = candidate.getMethod();
+         
++        if (m1.getName() != null && m1.getName().equals(m2.getName())) {
+         	/* Avoid unnecessary cloning */
+-        return m1.equals(m2);
++        	Class[] params1 = m1.getParameterTypes();
++        	Class[] params2 = m2.getParameterTypes();
++        	if (params1.length == params2.length) {
++        	    for (int i = 0; i < params1.length; i++) {
++        		if (params1[i] != params2[i])
++        		    return false;
++        	    }
++        	    return true;
++        	}
++        }
++        return false;
+     }
+     
+     public Location getLocation() {

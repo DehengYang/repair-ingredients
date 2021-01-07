@@ -1,0 +1,23 @@
+
+
+hASList: 
+[UPD ReturnStatement@@InfixExpression:" title=\"" + toolTipText + "\" alt=\"\"" @TO@ InfixExpression:" title=\"" + ImageMapUtilities.htmlEscape(toolTipText) + "\" alt=\"\"" @AT@ 2319 @LENGTH@ 62
+---UPD InfixExpression@@" title=\"" + toolTipText + "\" alt=\"\"" @TO@ " title=\"" + ImageMapUtilities.htmlEscape(toolTipText) + "\" alt=\"\"" @AT@ 2326 @LENGTH@ 54
+------INS MethodInvocation@@ImageMapUtilities.htmlEscape(toolTipText) @TO@ InfixExpression@@" title=\"" + toolTipText + "\" alt=\"\"" @AT@ 2340 @LENGTH@ 41
+---------INS SimpleName@@Name:ImageMapUtilities @TO@ MethodInvocation@@ImageMapUtilities.htmlEscape(toolTipText) @AT@ 2340 @LENGTH@ 17
+---------INS SimpleName@@MethodName:htmlEscape:[toolTipText] @TO@ MethodInvocation@@ImageMapUtilities.htmlEscape(toolTipText) @AT@ 2358 @LENGTH@ 23
+------------INS SimpleName@@toolTipText @TO@ SimpleName@@MethodName:htmlEscape:[toolTipText] @AT@ 2369 @LENGTH@ 11
+------DEL SimpleName@@toolTipText @AT@ 2340 @LENGTH@ 11
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, InfixExpression, OP1, OP3 OP7)
+OP3:      (INS, MethodInvocation, OP2, OP4 OP5)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, SimpleName, OP3, OP6)
+OP6:            (INS, SimpleName, OP5, null)
+OP7:      (DEL, SimpleName, OP2, null)
+
+
+

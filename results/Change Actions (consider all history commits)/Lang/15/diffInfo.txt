@@ -1,0 +1,26 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_15/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_15/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_15/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java	2020-01-05 05:26:20.618920972 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_15/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java	2020-01-05 05:26:24.010892642 -0800
+@@ -216,9 +216,9 @@
+                 toClass, typeVarAssigns);
+ 
+         // now to check each type argument
+-        for (Map.Entry<TypeVariable<?>, Type> entry : toTypeVarAssigns.entrySet()) {
+-            Type toTypeArg = entry.getValue();
+-            Type fromTypeArg = fromTypeVarAssigns.get(entry.getKey());
++        for (TypeVariable<?> var : toTypeVarAssigns.keySet()) {
++            Type toTypeArg = unrollVariableAssignments(var, toTypeVarAssigns);
++            Type fromTypeArg = unrollVariableAssignments(var, fromTypeVarAssigns);
+ 
+             // parameters must either be absent from the subject type, within
+             // the bounds of the wildcard type, or be an exact match to the
+@@ -672,7 +672,7 @@
+                 : new HashMap<TypeVariable<?>, Type>(subtypeVarAssigns);
+ 
+         // has target class been reached?
+-        if (cls.getTypeParameters().length > 0 || toClass.equals(cls)) {
++        if (toClass.equals(cls)) {
+             return typeVarAssigns;
+         }
+ 

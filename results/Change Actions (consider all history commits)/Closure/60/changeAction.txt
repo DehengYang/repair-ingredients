@@ -1,0 +1,30 @@
+OP1:(INS, SwitchCase, null, OP2)
+OP2:   (INS, QualifiedName, OP1, OP3 OP4)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, SimpleName, OP2, null)
+
+
+OP1:(MOV, ReturnStatement, null, null)
+
+
+OP1:(INS, IfStatement, null, OP2 OP9)
+OP2:   (INS, PrefixExpression, OP1, OP3 OP4)
+OP3:      (INS, Operator, OP2, null)
+OP4:      (INS, MethodInvocation, OP2, OP5)
+OP5:         (INS, SimpleName, OP4, OP6)
+OP6:            (INS, MethodInvocation, OP5, OP7 OP8)
+OP7:               (INS, SimpleName, OP6, null)
+OP8:               (INS, SimpleName, OP6, null)
+OP9:   (INS, ReturnStatement, OP1, OP10)
+OP10:      (MOV, QualifiedName, OP9, null)
+
+
+OP1:(MOV, BreakStatement, null, null)
+
+
+OP1:(MOV, BreakStatement, null, null)
+
+
+OP1:(INS, BreakStatement, null, null)
+
+

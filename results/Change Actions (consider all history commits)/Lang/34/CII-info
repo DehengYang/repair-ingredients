@@ -1,0 +1,87 @@
+
+
+hASList: 
+[UPD ReturnStatement@@ConditionalExpression:REGISTRY.get() != null ? REGISTRY.get() : Collections.<Object,Object>emptyMap() @TO@ MethodInvocation:REGISTRY.get() @AT@ 5186 @LENGTH@ 88
+---INS MethodInvocation@@REGISTRY.get() @TO@ ReturnStatement@@ConditionalExpression:REGISTRY.get() != null ? REGISTRY.get() : Collections.<Object,Object>emptyMap() @AT@ 5193 @LENGTH@ 14
+------MOV SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.get() @AT@ 5193 @LENGTH@ 8
+------MOV SimpleName@@MethodName:get:[] @TO@ MethodInvocation@@REGISTRY.get() @AT@ 5202 @LENGTH@ 5
+---DEL ConditionalExpression@@REGISTRY.get() != null ? REGISTRY.get() : Collections.<Object,Object>emptyMap() @AT@ 5193 @LENGTH@ 80
+------DEL InfixExpression@@REGISTRY.get() != null @AT@ 5193 @LENGTH@ 22
+---------DEL MethodInvocation@@REGISTRY.get() @AT@ 5193 @LENGTH@ 14
+---------DEL Operator@@!= @AT@ 5207 @LENGTH@ 2
+---------DEL NullLiteral@@null @AT@ 5211 @LENGTH@ 4
+------DEL MethodInvocation@@REGISTRY.get() @AT@ 5218 @LENGTH@ 14
+---------DEL SimpleName@@Name:REGISTRY @AT@ 5218 @LENGTH@ 8
+---------DEL SimpleName@@MethodName:get:[] @AT@ 5227 @LENGTH@ 5
+------DEL MethodInvocation@@Collections.<Object,Object>emptyMap() @AT@ 5235 @LENGTH@ 38
+---------DEL SimpleName@@Name:Collections @AT@ 5235 @LENGTH@ 11
+---------DEL SimpleName@@MethodName:emptyMap:[] @AT@ 5263 @LENGTH@ 10
+, UPD ReturnStatement@@MethodInvocation:m.containsKey(value) @TO@ InfixExpression:m != null && m.containsKey(value) @AT@ 5755 @LENGTH@ 28
+---INS InfixExpression@@m != null && m.containsKey(value) @TO@ ReturnStatement@@MethodInvocation:m.containsKey(value) @AT@ 5696 @LENGTH@ 33
+------INS InfixExpression@@m != null @TO@ InfixExpression@@m != null && m.containsKey(value) @AT@ 5696 @LENGTH@ 9
+---------INS SimpleName@@m @TO@ InfixExpression@@m != null @AT@ 5696 @LENGTH@ 1
+---------INS Operator@@!= @TO@ InfixExpression@@m != null @AT@ 5697 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@m != null @AT@ 5701 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@m != null && m.containsKey(value) @AT@ 5705 @LENGTH@ 2
+------MOV MethodInvocation@@m.containsKey(value) @TO@ InfixExpression@@m != null && m.containsKey(value) @AT@ 5762 @LENGTH@ 20
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2 OP5)
+OP2:   (INS, MethodInvocation, OP1, OP3 OP4)
+OP3:      (MOV, SimpleName, OP2, null)
+OP4:      (MOV, SimpleName, OP2, null)
+OP5:   (DEL, ConditionalExpression, OP1, OP6 OP10 OP13)
+OP6:      (DEL, InfixExpression, OP5, OP7 OP8 OP9)
+OP7:         (DEL, MethodInvocation, OP6, null)
+OP8:         (DEL, Operator, OP6, null)
+OP9:         (DEL, NullLiteral, OP6, null)
+OP10:      (DEL, MethodInvocation, OP5, OP11 OP12)
+OP11:         (DEL, SimpleName, OP10, null)
+OP12:         (DEL, SimpleName, OP10, null)
+OP13:      (DEL, MethodInvocation, OP5, OP14 OP15)
+OP14:         (DEL, SimpleName, OP13, null)
+OP15:         (DEL, SimpleName, OP13, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@ConditionalExpression:REGISTRY.get() != null ? REGISTRY.get() : Collections.<Object,Object>emptyMap() @TO@ MethodInvocation:REGISTRY.get() @AT@ 5186 @LENGTH@ 88
+---INS MethodInvocation@@REGISTRY.get() @TO@ ReturnStatement@@ConditionalExpression:REGISTRY.get() != null ? REGISTRY.get() : Collections.<Object,Object>emptyMap() @AT@ 5193 @LENGTH@ 14
+------MOV SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.get() @AT@ 5193 @LENGTH@ 8
+------MOV SimpleName@@MethodName:get:[] @TO@ MethodInvocation@@REGISTRY.get() @AT@ 5202 @LENGTH@ 5
+---DEL ConditionalExpression@@REGISTRY.get() != null ? REGISTRY.get() : Collections.<Object,Object>emptyMap() @AT@ 5193 @LENGTH@ 80
+------DEL InfixExpression@@REGISTRY.get() != null @AT@ 5193 @LENGTH@ 22
+---------DEL MethodInvocation@@REGISTRY.get() @AT@ 5193 @LENGTH@ 14
+---------DEL Operator@@!= @AT@ 5207 @LENGTH@ 2
+---------DEL NullLiteral@@null @AT@ 5211 @LENGTH@ 4
+------DEL MethodInvocation@@REGISTRY.get() @AT@ 5218 @LENGTH@ 14
+---------DEL SimpleName@@Name:REGISTRY @AT@ 5218 @LENGTH@ 8
+---------DEL SimpleName@@MethodName:get:[] @AT@ 5227 @LENGTH@ 5
+------DEL MethodInvocation@@Collections.<Object,Object>emptyMap() @AT@ 5235 @LENGTH@ 38
+---------DEL SimpleName@@Name:Collections @AT@ 5235 @LENGTH@ 11
+---------DEL SimpleName@@MethodName:emptyMap:[] @AT@ 5263 @LENGTH@ 10
+, UPD ReturnStatement@@MethodInvocation:m.containsKey(value) @TO@ InfixExpression:m != null && m.containsKey(value) @AT@ 5755 @LENGTH@ 28
+---INS InfixExpression@@m != null && m.containsKey(value) @TO@ ReturnStatement@@MethodInvocation:m.containsKey(value) @AT@ 5696 @LENGTH@ 33
+------INS InfixExpression@@m != null @TO@ InfixExpression@@m != null && m.containsKey(value) @AT@ 5696 @LENGTH@ 9
+---------INS SimpleName@@m @TO@ InfixExpression@@m != null @AT@ 5696 @LENGTH@ 1
+---------INS Operator@@!= @TO@ InfixExpression@@m != null @AT@ 5697 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@m != null @AT@ 5701 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@m != null && m.containsKey(value) @AT@ 5705 @LENGTH@ 2
+------MOV MethodInvocation@@m.containsKey(value) @TO@ InfixExpression@@m != null && m.containsKey(value) @AT@ 5762 @LENGTH@ 20
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (INS, InfixExpression, OP1, OP3 OP7 OP8)
+OP3:      (INS, InfixExpression, OP2, OP4 OP5 OP6)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, Operator, OP3, null)
+OP6:         (INS, NullLiteral, OP3, null)
+OP7:      (INS, Operator, OP2, null)
+OP8:      (MOV, MethodInvocation, OP2, null)
+
+
+

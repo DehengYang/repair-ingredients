@@ -1,0 +1,387 @@
+
+
+hASList: 
+[INS ExpressionStatement@@MethodInvocation:rebuildIndex() @TO@ MethodDeclaration@@public, @@void, MethodName:removeValue, @@Argus:int+index+ @AT@ 10570 @LENGTH@ 15
+---MOV MethodInvocation@@MethodName:rebuildIndex:[] @TO@ ExpressionStatement@@MethodInvocation:rebuildIndex() @AT@ 10610 @LENGTH@ 14
+, DEL IfStatement@@InfixExpression:index < this.keys.size() @AT@ 10570 @LENGTH@ 65
+---DEL InfixExpression@@index < this.keys.size() @AT@ 10574 @LENGTH@ 24
+------DEL SimpleName@@index @AT@ 10574 @LENGTH@ 5
+------DEL Operator@@< @AT@ 10579 @LENGTH@ 1
+------DEL MethodInvocation@@this.keys.size() @AT@ 10582 @LENGTH@ 16
+---------DEL FieldAccess@@this.keys @AT@ 10582 @LENGTH@ 9
+------------DEL ThisExpression@@this @AT@ 10582 @LENGTH@ 4
+------------DEL SimpleName@@keys @AT@ 10587 @LENGTH@ 4
+---------DEL SimpleName@@MethodName:size:[] @AT@ 10592 @LENGTH@ 6
+---DEL ExpressionStatement@@MethodInvocation:rebuildIndex() @AT@ 10610 @LENGTH@ 15
+, INS ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("The key (" + key + ") is not recognised.") @TO@ IfStatement@@InfixExpression:index < 0 @AT@ 11021 @LENGTH@ 95
+---INS ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @TO@ ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("The key (" + key + ") is not recognised.") @AT@ 11027 @LENGTH@ 88
+------INS New@@new @TO@ ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @AT@ 11027 @LENGTH@ 3
+------INS SimpleType@@UnknownKeyException @TO@ ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @AT@ 11031 @LENGTH@ 19
+------INS InfixExpression@@"The key (" + key + ") is not recognised." @TO@ ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @AT@ 11051 @LENGTH@ 63
+---------INS StringLiteral@@"The key (" @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11051 @LENGTH@ 11
+---------INS Operator@@+ @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11062 @LENGTH@ 1
+---------INS SimpleName@@key @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11065 @LENGTH@ 3
+---------INS StringLiteral@@") is not recognised." @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11092 @LENGTH@ 22
+, DEL ReturnStatement@@ @AT@ 11062 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (MOV, MethodInvocation, OP1, null)
+
+
+
+
+
+hASList: 
+[INS ExpressionStatement@@MethodInvocation:rebuildIndex() @TO@ MethodDeclaration@@public, @@void, MethodName:removeValue, @@Argus:int+index+ @AT@ 10570 @LENGTH@ 15
+---MOV MethodInvocation@@MethodName:rebuildIndex:[] @TO@ ExpressionStatement@@MethodInvocation:rebuildIndex() @AT@ 10610 @LENGTH@ 14
+, DEL IfStatement@@InfixExpression:index < this.keys.size() @AT@ 10570 @LENGTH@ 65
+---DEL InfixExpression@@index < this.keys.size() @AT@ 10574 @LENGTH@ 24
+------DEL SimpleName@@index @AT@ 10574 @LENGTH@ 5
+------DEL Operator@@< @AT@ 10579 @LENGTH@ 1
+------DEL MethodInvocation@@this.keys.size() @AT@ 10582 @LENGTH@ 16
+---------DEL FieldAccess@@this.keys @AT@ 10582 @LENGTH@ 9
+------------DEL ThisExpression@@this @AT@ 10582 @LENGTH@ 4
+------------DEL SimpleName@@keys @AT@ 10587 @LENGTH@ 4
+---------DEL SimpleName@@MethodName:size:[] @AT@ 10592 @LENGTH@ 6
+---DEL ExpressionStatement@@MethodInvocation:rebuildIndex() @AT@ 10610 @LENGTH@ 15
+, INS ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("The key (" + key + ") is not recognised.") @TO@ IfStatement@@InfixExpression:index < 0 @AT@ 11021 @LENGTH@ 95
+---INS ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @TO@ ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("The key (" + key + ") is not recognised.") @AT@ 11027 @LENGTH@ 88
+------INS New@@new @TO@ ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @AT@ 11027 @LENGTH@ 3
+------INS SimpleType@@UnknownKeyException @TO@ ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @AT@ 11031 @LENGTH@ 19
+------INS InfixExpression@@"The key (" + key + ") is not recognised." @TO@ ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @AT@ 11051 @LENGTH@ 63
+---------INS StringLiteral@@"The key (" @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11051 @LENGTH@ 11
+---------INS Operator@@+ @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11062 @LENGTH@ 1
+---------INS SimpleName@@key @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11065 @LENGTH@ 3
+---------INS StringLiteral@@") is not recognised." @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11092 @LENGTH@ 22
+, DEL ReturnStatement@@ @AT@ 11062 @LENGTH@ 7
+]
+
+CII:
+OP1:(DEL, IfStatement, null, OP2 OP10)
+OP2:   (DEL, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, MethodInvocation, OP2, OP6 OP9)
+OP6:         (DEL, FieldAccess, OP5, OP7 OP8)
+OP7:            (DEL, ThisExpression, OP6, null)
+OP8:            (DEL, SimpleName, OP6, null)
+OP9:         (DEL, SimpleName, OP5, null)
+OP10:   (DEL, ExpressionStatement, OP1, null)
+
+
+
+
+
+hASList: 
+[INS ExpressionStatement@@MethodInvocation:rebuildIndex() @TO@ MethodDeclaration@@public, @@void, MethodName:removeValue, @@Argus:int+index+ @AT@ 10570 @LENGTH@ 15
+---MOV MethodInvocation@@MethodName:rebuildIndex:[] @TO@ ExpressionStatement@@MethodInvocation:rebuildIndex() @AT@ 10610 @LENGTH@ 14
+, DEL IfStatement@@InfixExpression:index < this.keys.size() @AT@ 10570 @LENGTH@ 65
+---DEL InfixExpression@@index < this.keys.size() @AT@ 10574 @LENGTH@ 24
+------DEL SimpleName@@index @AT@ 10574 @LENGTH@ 5
+------DEL Operator@@< @AT@ 10579 @LENGTH@ 1
+------DEL MethodInvocation@@this.keys.size() @AT@ 10582 @LENGTH@ 16
+---------DEL FieldAccess@@this.keys @AT@ 10582 @LENGTH@ 9
+------------DEL ThisExpression@@this @AT@ 10582 @LENGTH@ 4
+------------DEL SimpleName@@keys @AT@ 10587 @LENGTH@ 4
+---------DEL SimpleName@@MethodName:size:[] @AT@ 10592 @LENGTH@ 6
+---DEL ExpressionStatement@@MethodInvocation:rebuildIndex() @AT@ 10610 @LENGTH@ 15
+, INS ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("The key (" + key + ") is not recognised.") @TO@ IfStatement@@InfixExpression:index < 0 @AT@ 11021 @LENGTH@ 95
+---INS ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @TO@ ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("The key (" + key + ") is not recognised.") @AT@ 11027 @LENGTH@ 88
+------INS New@@new @TO@ ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @AT@ 11027 @LENGTH@ 3
+------INS SimpleType@@UnknownKeyException @TO@ ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @AT@ 11031 @LENGTH@ 19
+------INS InfixExpression@@"The key (" + key + ") is not recognised." @TO@ ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @AT@ 11051 @LENGTH@ 63
+---------INS StringLiteral@@"The key (" @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11051 @LENGTH@ 11
+---------INS Operator@@+ @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11062 @LENGTH@ 1
+---------INS SimpleName@@key @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11065 @LENGTH@ 3
+---------INS StringLiteral@@") is not recognised." @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11092 @LENGTH@ 22
+, DEL ReturnStatement@@ @AT@ 11062 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, ThrowStatement, null, OP2)
+OP2:   (INS, ClassInstanceCreation, OP1, OP3 OP4 OP5)
+OP3:      (INS, New, OP2, null)
+OP4:      (INS, SimpleType, OP2, null)
+OP5:      (INS, InfixExpression, OP2, OP6 OP7 OP8 OP9)
+OP6:         (INS, StringLiteral, OP5, null)
+OP7:         (INS, Operator, OP5, null)
+OP8:         (INS, SimpleName, OP5, null)
+OP9:         (INS, StringLiteral, OP5, null)
+
+
+
+
+
+hASList: 
+[INS ExpressionStatement@@MethodInvocation:rebuildIndex() @TO@ MethodDeclaration@@public, @@void, MethodName:removeValue, @@Argus:int+index+ @AT@ 10570 @LENGTH@ 15
+---MOV MethodInvocation@@MethodName:rebuildIndex:[] @TO@ ExpressionStatement@@MethodInvocation:rebuildIndex() @AT@ 10610 @LENGTH@ 14
+, DEL IfStatement@@InfixExpression:index < this.keys.size() @AT@ 10570 @LENGTH@ 65
+---DEL InfixExpression@@index < this.keys.size() @AT@ 10574 @LENGTH@ 24
+------DEL SimpleName@@index @AT@ 10574 @LENGTH@ 5
+------DEL Operator@@< @AT@ 10579 @LENGTH@ 1
+------DEL MethodInvocation@@this.keys.size() @AT@ 10582 @LENGTH@ 16
+---------DEL FieldAccess@@this.keys @AT@ 10582 @LENGTH@ 9
+------------DEL ThisExpression@@this @AT@ 10582 @LENGTH@ 4
+------------DEL SimpleName@@keys @AT@ 10587 @LENGTH@ 4
+---------DEL SimpleName@@MethodName:size:[] @AT@ 10592 @LENGTH@ 6
+---DEL ExpressionStatement@@MethodInvocation:rebuildIndex() @AT@ 10610 @LENGTH@ 15
+, INS ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("The key (" + key + ") is not recognised.") @TO@ IfStatement@@InfixExpression:index < 0 @AT@ 11021 @LENGTH@ 95
+---INS ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @TO@ ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("The key (" + key + ") is not recognised.") @AT@ 11027 @LENGTH@ 88
+------INS New@@new @TO@ ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @AT@ 11027 @LENGTH@ 3
+------INS SimpleType@@UnknownKeyException @TO@ ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @AT@ 11031 @LENGTH@ 19
+------INS InfixExpression@@"The key (" + key + ") is not recognised." @TO@ ClassInstanceCreation@@UnknownKeyException["The key (" + key + ") is not recognised."] @AT@ 11051 @LENGTH@ 63
+---------INS StringLiteral@@"The key (" @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11051 @LENGTH@ 11
+---------INS Operator@@+ @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11062 @LENGTH@ 1
+---------INS SimpleName@@key @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11065 @LENGTH@ 3
+---------INS StringLiteral@@") is not recognised." @TO@ InfixExpression@@"The key (" + key + ") is not recognised." @AT@ 11092 @LENGTH@ 22
+, DEL ReturnStatement@@ @AT@ 11062 @LENGTH@ 7
+]
+
+CII:
+OP1:(DEL, ReturnStatement, null, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:columnKey == null @TO@ MethodDeclaration@@public, @@void, MethodName:removeColumn, @@Argus:Comparable+columnKey+ @AT@ 14918 @LENGTH@ 105
+---INS InfixExpression@@columnKey == null @TO@ IfStatement@@InfixExpression:columnKey == null @AT@ 14922 @LENGTH@ 17
+------INS SimpleName@@columnKey @TO@ InfixExpression@@columnKey == null @AT@ 14922 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@columnKey == null @AT@ 14931 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@columnKey == null @AT@ 14935 @LENGTH@ 4
+---INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Null 'columnKey' argument.") @TO@ IfStatement@@InfixExpression:columnKey == null @AT@ 14950 @LENGTH@ 65
+------INS ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Null 'columnKey' argument.") @AT@ 14956 @LENGTH@ 58
+---------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @AT@ 14956 @LENGTH@ 3
+---------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @AT@ 14960 @LENGTH@ 24
+---------INS StringLiteral@@"Null 'columnKey' argument." @TO@ ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @AT@ 14985 @LENGTH@ 28
+, INS IfStatement@@PrefixExpression:!this.columnKeys.contains(columnKey) @TO@ MethodDeclaration@@public, @@void, MethodName:removeColumn, @@Argus:Comparable+columnKey+ @AT@ 15030 @LENGTH@ 118
+---INS PrefixExpression@@!this.columnKeys.contains(columnKey) @TO@ IfStatement@@PrefixExpression:!this.columnKeys.contains(columnKey) @AT@ 15034 @LENGTH@ 36
+------INS Operator@@! @TO@ PrefixExpression@@!this.columnKeys.contains(columnKey) @AT@ 15034 @LENGTH@ 1
+------INS MethodInvocation@@this.columnKeys.contains(columnKey) @TO@ PrefixExpression@@!this.columnKeys.contains(columnKey) @AT@ 15035 @LENGTH@ 35
+---------INS FieldAccess@@this.columnKeys @TO@ MethodInvocation@@this.columnKeys.contains(columnKey) @AT@ 15035 @LENGTH@ 15
+------------INS ThisExpression@@this @TO@ FieldAccess@@this.columnKeys @AT@ 15035 @LENGTH@ 4
+------------INS SimpleName@@columnKeys @TO@ FieldAccess@@this.columnKeys @AT@ 15040 @LENGTH@ 10
+---------INS SimpleName@@MethodName:contains:[columnKey] @TO@ MethodInvocation@@this.columnKeys.contains(columnKey) @AT@ 15051 @LENGTH@ 19
+------------INS SimpleName@@columnKey @TO@ SimpleName@@MethodName:contains:[columnKey] @AT@ 15060 @LENGTH@ 9
+---INS ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("Unknown key: " + columnKey) @TO@ IfStatement@@PrefixExpression:!this.columnKeys.contains(columnKey) @AT@ 15081 @LENGTH@ 59
+------INS ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @TO@ ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("Unknown key: " + columnKey) @AT@ 15087 @LENGTH@ 52
+---------INS New@@new @TO@ ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @AT@ 15087 @LENGTH@ 3
+---------INS SimpleType@@UnknownKeyException @TO@ ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @AT@ 15091 @LENGTH@ 19
+---------INS InfixExpression@@"Unknown key: " + columnKey @TO@ ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @AT@ 15111 @LENGTH@ 27
+------------INS StringLiteral@@"Unknown key: " @TO@ InfixExpression@@"Unknown key: " + columnKey @AT@ 15111 @LENGTH@ 15
+------------INS Operator@@+ @TO@ InfixExpression@@"Unknown key: " + columnKey @AT@ 15126 @LENGTH@ 1
+------------INS SimpleName@@columnKey @TO@ InfixExpression@@"Unknown key: " + columnKey @AT@ 15129 @LENGTH@ 9
+, INS VariableDeclarationStatement@@int index=rowData.getIndex(columnKey); @TO@ WhileStatement@@MethodInvocation:iterator.hasNext() @AT@ 15331 @LENGTH@ 40
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int index=rowData.getIndex(columnKey); @AT@ 15331 @LENGTH@ 3
+---INS VariableDeclarationFragment@@index=rowData.getIndex(columnKey) @TO@ VariableDeclarationStatement@@int index=rowData.getIndex(columnKey); @AT@ 15335 @LENGTH@ 35
+------INS SimpleName@@index @TO@ VariableDeclarationFragment@@index=rowData.getIndex(columnKey) @AT@ 15335 @LENGTH@ 5
+------INS MethodInvocation@@rowData.getIndex(columnKey) @TO@ VariableDeclarationFragment@@index=rowData.getIndex(columnKey) @AT@ 15343 @LENGTH@ 27
+---------INS SimpleName@@Name:rowData @TO@ MethodInvocation@@rowData.getIndex(columnKey) @AT@ 15343 @LENGTH@ 7
+---------INS SimpleName@@MethodName:getIndex:[columnKey] @TO@ MethodInvocation@@rowData.getIndex(columnKey) @AT@ 15351 @LENGTH@ 19
+------------INS SimpleName@@columnKey @TO@ SimpleName@@MethodName:getIndex:[columnKey] @AT@ 15360 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:index >= 0 @TO@ WhileStatement@@MethodInvocation:iterator.hasNext() @AT@ 15385 @LENGTH@ 81
+---MOV ExpressionStatement@@MethodInvocation:rowData.removeValue(columnKey) @TO@ IfStatement@@InfixExpression:index >= 0 @AT@ 15098 @LENGTH@ 31
+---INS InfixExpression@@index >= 0 @TO@ IfStatement@@InfixExpression:index >= 0 @AT@ 15389 @LENGTH@ 10
+------INS SimpleName@@index @TO@ InfixExpression@@index >= 0 @AT@ 15389 @LENGTH@ 5
+------INS Operator@@>= @TO@ InfixExpression@@index >= 0 @AT@ 15394 @LENGTH@ 2
+------INS NumberLiteral@@0 @TO@ InfixExpression@@index >= 0 @AT@ 15398 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, NullLiteral, OP2, null)
+OP6:   (INS, ThrowStatement, OP1, OP7)
+OP7:      (INS, ClassInstanceCreation, OP6, OP8 OP9 OP10)
+OP8:         (INS, New, OP7, null)
+OP9:         (INS, SimpleType, OP7, null)
+OP10:         (INS, StringLiteral, OP7, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:columnKey == null @TO@ MethodDeclaration@@public, @@void, MethodName:removeColumn, @@Argus:Comparable+columnKey+ @AT@ 14918 @LENGTH@ 105
+---INS InfixExpression@@columnKey == null @TO@ IfStatement@@InfixExpression:columnKey == null @AT@ 14922 @LENGTH@ 17
+------INS SimpleName@@columnKey @TO@ InfixExpression@@columnKey == null @AT@ 14922 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@columnKey == null @AT@ 14931 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@columnKey == null @AT@ 14935 @LENGTH@ 4
+---INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Null 'columnKey' argument.") @TO@ IfStatement@@InfixExpression:columnKey == null @AT@ 14950 @LENGTH@ 65
+------INS ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Null 'columnKey' argument.") @AT@ 14956 @LENGTH@ 58
+---------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @AT@ 14956 @LENGTH@ 3
+---------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @AT@ 14960 @LENGTH@ 24
+---------INS StringLiteral@@"Null 'columnKey' argument." @TO@ ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @AT@ 14985 @LENGTH@ 28
+, INS IfStatement@@PrefixExpression:!this.columnKeys.contains(columnKey) @TO@ MethodDeclaration@@public, @@void, MethodName:removeColumn, @@Argus:Comparable+columnKey+ @AT@ 15030 @LENGTH@ 118
+---INS PrefixExpression@@!this.columnKeys.contains(columnKey) @TO@ IfStatement@@PrefixExpression:!this.columnKeys.contains(columnKey) @AT@ 15034 @LENGTH@ 36
+------INS Operator@@! @TO@ PrefixExpression@@!this.columnKeys.contains(columnKey) @AT@ 15034 @LENGTH@ 1
+------INS MethodInvocation@@this.columnKeys.contains(columnKey) @TO@ PrefixExpression@@!this.columnKeys.contains(columnKey) @AT@ 15035 @LENGTH@ 35
+---------INS FieldAccess@@this.columnKeys @TO@ MethodInvocation@@this.columnKeys.contains(columnKey) @AT@ 15035 @LENGTH@ 15
+------------INS ThisExpression@@this @TO@ FieldAccess@@this.columnKeys @AT@ 15035 @LENGTH@ 4
+------------INS SimpleName@@columnKeys @TO@ FieldAccess@@this.columnKeys @AT@ 15040 @LENGTH@ 10
+---------INS SimpleName@@MethodName:contains:[columnKey] @TO@ MethodInvocation@@this.columnKeys.contains(columnKey) @AT@ 15051 @LENGTH@ 19
+------------INS SimpleName@@columnKey @TO@ SimpleName@@MethodName:contains:[columnKey] @AT@ 15060 @LENGTH@ 9
+---INS ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("Unknown key: " + columnKey) @TO@ IfStatement@@PrefixExpression:!this.columnKeys.contains(columnKey) @AT@ 15081 @LENGTH@ 59
+------INS ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @TO@ ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("Unknown key: " + columnKey) @AT@ 15087 @LENGTH@ 52
+---------INS New@@new @TO@ ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @AT@ 15087 @LENGTH@ 3
+---------INS SimpleType@@UnknownKeyException @TO@ ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @AT@ 15091 @LENGTH@ 19
+---------INS InfixExpression@@"Unknown key: " + columnKey @TO@ ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @AT@ 15111 @LENGTH@ 27
+------------INS StringLiteral@@"Unknown key: " @TO@ InfixExpression@@"Unknown key: " + columnKey @AT@ 15111 @LENGTH@ 15
+------------INS Operator@@+ @TO@ InfixExpression@@"Unknown key: " + columnKey @AT@ 15126 @LENGTH@ 1
+------------INS SimpleName@@columnKey @TO@ InfixExpression@@"Unknown key: " + columnKey @AT@ 15129 @LENGTH@ 9
+, INS VariableDeclarationStatement@@int index=rowData.getIndex(columnKey); @TO@ WhileStatement@@MethodInvocation:iterator.hasNext() @AT@ 15331 @LENGTH@ 40
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int index=rowData.getIndex(columnKey); @AT@ 15331 @LENGTH@ 3
+---INS VariableDeclarationFragment@@index=rowData.getIndex(columnKey) @TO@ VariableDeclarationStatement@@int index=rowData.getIndex(columnKey); @AT@ 15335 @LENGTH@ 35
+------INS SimpleName@@index @TO@ VariableDeclarationFragment@@index=rowData.getIndex(columnKey) @AT@ 15335 @LENGTH@ 5
+------INS MethodInvocation@@rowData.getIndex(columnKey) @TO@ VariableDeclarationFragment@@index=rowData.getIndex(columnKey) @AT@ 15343 @LENGTH@ 27
+---------INS SimpleName@@Name:rowData @TO@ MethodInvocation@@rowData.getIndex(columnKey) @AT@ 15343 @LENGTH@ 7
+---------INS SimpleName@@MethodName:getIndex:[columnKey] @TO@ MethodInvocation@@rowData.getIndex(columnKey) @AT@ 15351 @LENGTH@ 19
+------------INS SimpleName@@columnKey @TO@ SimpleName@@MethodName:getIndex:[columnKey] @AT@ 15360 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:index >= 0 @TO@ WhileStatement@@MethodInvocation:iterator.hasNext() @AT@ 15385 @LENGTH@ 81
+---MOV ExpressionStatement@@MethodInvocation:rowData.removeValue(columnKey) @TO@ IfStatement@@InfixExpression:index >= 0 @AT@ 15098 @LENGTH@ 31
+---INS InfixExpression@@index >= 0 @TO@ IfStatement@@InfixExpression:index >= 0 @AT@ 15389 @LENGTH@ 10
+------INS SimpleName@@index @TO@ InfixExpression@@index >= 0 @AT@ 15389 @LENGTH@ 5
+------INS Operator@@>= @TO@ InfixExpression@@index >= 0 @AT@ 15394 @LENGTH@ 2
+------INS NumberLiteral@@0 @TO@ InfixExpression@@index >= 0 @AT@ 15398 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP10)
+OP2:   (INS, PrefixExpression, OP1, OP3 OP4)
+OP3:      (INS, Operator, OP2, null)
+OP4:      (INS, MethodInvocation, OP2, OP5 OP8)
+OP5:         (INS, FieldAccess, OP4, OP6 OP7)
+OP6:            (INS, ThisExpression, OP5, null)
+OP7:            (INS, SimpleName, OP5, null)
+OP8:         (INS, SimpleName, OP4, OP9)
+OP9:            (INS, SimpleName, OP8, null)
+OP10:   (INS, ThrowStatement, OP1, OP11)
+OP11:      (INS, ClassInstanceCreation, OP10, OP12 OP13 OP14)
+OP12:         (INS, New, OP11, null)
+OP13:         (INS, SimpleType, OP11, null)
+OP14:         (INS, InfixExpression, OP11, OP15 OP16 OP17)
+OP15:            (INS, StringLiteral, OP14, null)
+OP16:            (INS, Operator, OP14, null)
+OP17:            (INS, SimpleName, OP14, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:columnKey == null @TO@ MethodDeclaration@@public, @@void, MethodName:removeColumn, @@Argus:Comparable+columnKey+ @AT@ 14918 @LENGTH@ 105
+---INS InfixExpression@@columnKey == null @TO@ IfStatement@@InfixExpression:columnKey == null @AT@ 14922 @LENGTH@ 17
+------INS SimpleName@@columnKey @TO@ InfixExpression@@columnKey == null @AT@ 14922 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@columnKey == null @AT@ 14931 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@columnKey == null @AT@ 14935 @LENGTH@ 4
+---INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Null 'columnKey' argument.") @TO@ IfStatement@@InfixExpression:columnKey == null @AT@ 14950 @LENGTH@ 65
+------INS ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Null 'columnKey' argument.") @AT@ 14956 @LENGTH@ 58
+---------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @AT@ 14956 @LENGTH@ 3
+---------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @AT@ 14960 @LENGTH@ 24
+---------INS StringLiteral@@"Null 'columnKey' argument." @TO@ ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @AT@ 14985 @LENGTH@ 28
+, INS IfStatement@@PrefixExpression:!this.columnKeys.contains(columnKey) @TO@ MethodDeclaration@@public, @@void, MethodName:removeColumn, @@Argus:Comparable+columnKey+ @AT@ 15030 @LENGTH@ 118
+---INS PrefixExpression@@!this.columnKeys.contains(columnKey) @TO@ IfStatement@@PrefixExpression:!this.columnKeys.contains(columnKey) @AT@ 15034 @LENGTH@ 36
+------INS Operator@@! @TO@ PrefixExpression@@!this.columnKeys.contains(columnKey) @AT@ 15034 @LENGTH@ 1
+------INS MethodInvocation@@this.columnKeys.contains(columnKey) @TO@ PrefixExpression@@!this.columnKeys.contains(columnKey) @AT@ 15035 @LENGTH@ 35
+---------INS FieldAccess@@this.columnKeys @TO@ MethodInvocation@@this.columnKeys.contains(columnKey) @AT@ 15035 @LENGTH@ 15
+------------INS ThisExpression@@this @TO@ FieldAccess@@this.columnKeys @AT@ 15035 @LENGTH@ 4
+------------INS SimpleName@@columnKeys @TO@ FieldAccess@@this.columnKeys @AT@ 15040 @LENGTH@ 10
+---------INS SimpleName@@MethodName:contains:[columnKey] @TO@ MethodInvocation@@this.columnKeys.contains(columnKey) @AT@ 15051 @LENGTH@ 19
+------------INS SimpleName@@columnKey @TO@ SimpleName@@MethodName:contains:[columnKey] @AT@ 15060 @LENGTH@ 9
+---INS ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("Unknown key: " + columnKey) @TO@ IfStatement@@PrefixExpression:!this.columnKeys.contains(columnKey) @AT@ 15081 @LENGTH@ 59
+------INS ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @TO@ ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("Unknown key: " + columnKey) @AT@ 15087 @LENGTH@ 52
+---------INS New@@new @TO@ ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @AT@ 15087 @LENGTH@ 3
+---------INS SimpleType@@UnknownKeyException @TO@ ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @AT@ 15091 @LENGTH@ 19
+---------INS InfixExpression@@"Unknown key: " + columnKey @TO@ ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @AT@ 15111 @LENGTH@ 27
+------------INS StringLiteral@@"Unknown key: " @TO@ InfixExpression@@"Unknown key: " + columnKey @AT@ 15111 @LENGTH@ 15
+------------INS Operator@@+ @TO@ InfixExpression@@"Unknown key: " + columnKey @AT@ 15126 @LENGTH@ 1
+------------INS SimpleName@@columnKey @TO@ InfixExpression@@"Unknown key: " + columnKey @AT@ 15129 @LENGTH@ 9
+, INS VariableDeclarationStatement@@int index=rowData.getIndex(columnKey); @TO@ WhileStatement@@MethodInvocation:iterator.hasNext() @AT@ 15331 @LENGTH@ 40
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int index=rowData.getIndex(columnKey); @AT@ 15331 @LENGTH@ 3
+---INS VariableDeclarationFragment@@index=rowData.getIndex(columnKey) @TO@ VariableDeclarationStatement@@int index=rowData.getIndex(columnKey); @AT@ 15335 @LENGTH@ 35
+------INS SimpleName@@index @TO@ VariableDeclarationFragment@@index=rowData.getIndex(columnKey) @AT@ 15335 @LENGTH@ 5
+------INS MethodInvocation@@rowData.getIndex(columnKey) @TO@ VariableDeclarationFragment@@index=rowData.getIndex(columnKey) @AT@ 15343 @LENGTH@ 27
+---------INS SimpleName@@Name:rowData @TO@ MethodInvocation@@rowData.getIndex(columnKey) @AT@ 15343 @LENGTH@ 7
+---------INS SimpleName@@MethodName:getIndex:[columnKey] @TO@ MethodInvocation@@rowData.getIndex(columnKey) @AT@ 15351 @LENGTH@ 19
+------------INS SimpleName@@columnKey @TO@ SimpleName@@MethodName:getIndex:[columnKey] @AT@ 15360 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:index >= 0 @TO@ WhileStatement@@MethodInvocation:iterator.hasNext() @AT@ 15385 @LENGTH@ 81
+---MOV ExpressionStatement@@MethodInvocation:rowData.removeValue(columnKey) @TO@ IfStatement@@InfixExpression:index >= 0 @AT@ 15098 @LENGTH@ 31
+---INS InfixExpression@@index >= 0 @TO@ IfStatement@@InfixExpression:index >= 0 @AT@ 15389 @LENGTH@ 10
+------INS SimpleName@@index @TO@ InfixExpression@@index >= 0 @AT@ 15389 @LENGTH@ 5
+------INS Operator@@>= @TO@ InfixExpression@@index >= 0 @AT@ 15394 @LENGTH@ 2
+------INS NumberLiteral@@0 @TO@ InfixExpression@@index >= 0 @AT@ 15398 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, OP8)
+OP8:            (INS, SimpleName, OP7, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:columnKey == null @TO@ MethodDeclaration@@public, @@void, MethodName:removeColumn, @@Argus:Comparable+columnKey+ @AT@ 14918 @LENGTH@ 105
+---INS InfixExpression@@columnKey == null @TO@ IfStatement@@InfixExpression:columnKey == null @AT@ 14922 @LENGTH@ 17
+------INS SimpleName@@columnKey @TO@ InfixExpression@@columnKey == null @AT@ 14922 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@columnKey == null @AT@ 14931 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@columnKey == null @AT@ 14935 @LENGTH@ 4
+---INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Null 'columnKey' argument.") @TO@ IfStatement@@InfixExpression:columnKey == null @AT@ 14950 @LENGTH@ 65
+------INS ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Null 'columnKey' argument.") @AT@ 14956 @LENGTH@ 58
+---------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @AT@ 14956 @LENGTH@ 3
+---------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @AT@ 14960 @LENGTH@ 24
+---------INS StringLiteral@@"Null 'columnKey' argument." @TO@ ClassInstanceCreation@@IllegalArgumentException["Null 'columnKey' argument."] @AT@ 14985 @LENGTH@ 28
+, INS IfStatement@@PrefixExpression:!this.columnKeys.contains(columnKey) @TO@ MethodDeclaration@@public, @@void, MethodName:removeColumn, @@Argus:Comparable+columnKey+ @AT@ 15030 @LENGTH@ 118
+---INS PrefixExpression@@!this.columnKeys.contains(columnKey) @TO@ IfStatement@@PrefixExpression:!this.columnKeys.contains(columnKey) @AT@ 15034 @LENGTH@ 36
+------INS Operator@@! @TO@ PrefixExpression@@!this.columnKeys.contains(columnKey) @AT@ 15034 @LENGTH@ 1
+------INS MethodInvocation@@this.columnKeys.contains(columnKey) @TO@ PrefixExpression@@!this.columnKeys.contains(columnKey) @AT@ 15035 @LENGTH@ 35
+---------INS FieldAccess@@this.columnKeys @TO@ MethodInvocation@@this.columnKeys.contains(columnKey) @AT@ 15035 @LENGTH@ 15
+------------INS ThisExpression@@this @TO@ FieldAccess@@this.columnKeys @AT@ 15035 @LENGTH@ 4
+------------INS SimpleName@@columnKeys @TO@ FieldAccess@@this.columnKeys @AT@ 15040 @LENGTH@ 10
+---------INS SimpleName@@MethodName:contains:[columnKey] @TO@ MethodInvocation@@this.columnKeys.contains(columnKey) @AT@ 15051 @LENGTH@ 19
+------------INS SimpleName@@columnKey @TO@ SimpleName@@MethodName:contains:[columnKey] @AT@ 15060 @LENGTH@ 9
+---INS ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("Unknown key: " + columnKey) @TO@ IfStatement@@PrefixExpression:!this.columnKeys.contains(columnKey) @AT@ 15081 @LENGTH@ 59
+------INS ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @TO@ ThrowStatement@@ClassInstanceCreation:new UnknownKeyException("Unknown key: " + columnKey) @AT@ 15087 @LENGTH@ 52
+---------INS New@@new @TO@ ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @AT@ 15087 @LENGTH@ 3
+---------INS SimpleType@@UnknownKeyException @TO@ ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @AT@ 15091 @LENGTH@ 19
+---------INS InfixExpression@@"Unknown key: " + columnKey @TO@ ClassInstanceCreation@@UnknownKeyException["Unknown key: " + columnKey] @AT@ 15111 @LENGTH@ 27
+------------INS StringLiteral@@"Unknown key: " @TO@ InfixExpression@@"Unknown key: " + columnKey @AT@ 15111 @LENGTH@ 15
+------------INS Operator@@+ @TO@ InfixExpression@@"Unknown key: " + columnKey @AT@ 15126 @LENGTH@ 1
+------------INS SimpleName@@columnKey @TO@ InfixExpression@@"Unknown key: " + columnKey @AT@ 15129 @LENGTH@ 9
+, INS VariableDeclarationStatement@@int index=rowData.getIndex(columnKey); @TO@ WhileStatement@@MethodInvocation:iterator.hasNext() @AT@ 15331 @LENGTH@ 40
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int index=rowData.getIndex(columnKey); @AT@ 15331 @LENGTH@ 3
+---INS VariableDeclarationFragment@@index=rowData.getIndex(columnKey) @TO@ VariableDeclarationStatement@@int index=rowData.getIndex(columnKey); @AT@ 15335 @LENGTH@ 35
+------INS SimpleName@@index @TO@ VariableDeclarationFragment@@index=rowData.getIndex(columnKey) @AT@ 15335 @LENGTH@ 5
+------INS MethodInvocation@@rowData.getIndex(columnKey) @TO@ VariableDeclarationFragment@@index=rowData.getIndex(columnKey) @AT@ 15343 @LENGTH@ 27
+---------INS SimpleName@@Name:rowData @TO@ MethodInvocation@@rowData.getIndex(columnKey) @AT@ 15343 @LENGTH@ 7
+---------INS SimpleName@@MethodName:getIndex:[columnKey] @TO@ MethodInvocation@@rowData.getIndex(columnKey) @AT@ 15351 @LENGTH@ 19
+------------INS SimpleName@@columnKey @TO@ SimpleName@@MethodName:getIndex:[columnKey] @AT@ 15360 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:index >= 0 @TO@ WhileStatement@@MethodInvocation:iterator.hasNext() @AT@ 15385 @LENGTH@ 81
+---MOV ExpressionStatement@@MethodInvocation:rowData.removeValue(columnKey) @TO@ IfStatement@@InfixExpression:index >= 0 @AT@ 15098 @LENGTH@ 31
+---INS InfixExpression@@index >= 0 @TO@ IfStatement@@InfixExpression:index >= 0 @AT@ 15389 @LENGTH@ 10
+------INS SimpleName@@index @TO@ InfixExpression@@index >= 0 @AT@ 15389 @LENGTH@ 5
+------INS Operator@@>= @TO@ InfixExpression@@index >= 0 @AT@ 15394 @LENGTH@ 2
+------INS NumberLiteral@@0 @TO@ InfixExpression@@index >= 0 @AT@ 15398 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3)
+OP2:   (MOV, ExpressionStatement, OP1, null)
+OP3:   (INS, InfixExpression, OP1, OP4 OP5 OP6)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, Operator, OP3, null)
+OP6:      (INS, NumberLiteral, OP3, null)
+
+
+

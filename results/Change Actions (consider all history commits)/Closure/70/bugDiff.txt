@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_70/src/com/google/javascript/jscomp/TypedScopeCreator.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_70/src/com/google/javascript/jscomp/TypedScopeCreator.java
+--- ../d4j-repo/Closure/Closure_70/src/com/google/javascript/jscomp/TypedScopeCreator.java	2021-01-06 03:44:44.245993112 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_70/src/com/google/javascript/jscomp/TypedScopeCreator.java	2021-01-06 03:44:46.194059459 -0800
+@@ -1742,7 +1742,7 @@
+           for (Node astParameter : astParameters.children()) {
+             if (jsDocParameter != null) {
+               defineSlot(astParameter, functionNode,
+-                  jsDocParameter.getJSType(), true);
++                  jsDocParameter.getJSType(), false);
+               jsDocParameter = jsDocParameter.getNext();
+             } else {
+               defineSlot(astParameter, functionNode, null, true);

@@ -1,0 +1,32 @@
+
+diff -Naur ../d4j-repo/Mockito/Mockito_4/src/org/mockito/exceptions/Reporter.java ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_4/src/org/mockito/exceptions/Reporter.java
+--- ../d4j-repo/Mockito/Mockito_4/src/org/mockito/exceptions/Reporter.java	2021-01-06 03:33:53.007817729 -0800
++++ ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_4/src/org/mockito/exceptions/Reporter.java	2021-01-06 03:33:56.735944648 -0800
+@@ -421,7 +421,7 @@
+         throw new NoInteractionsWanted(join(
+                 "No interactions wanted here:",
+                 new LocationImpl(),
+-                "But found this interaction on mock '" + undesired.getMock() + "':",
++                "But found this interaction on mock '" + safelyGetMockName(undesired.getMock()) + "':",
+                 undesired.getLocation(),
+                 scenario
+         ));
+@@ -431,7 +431,7 @@
+         throw new VerificationInOrderFailure(join(
+                 "No interactions wanted here:",
+                 new LocationImpl(),
+-                "But found this interaction on mock '" + undesired.getMock() + "':",
++                "But found this interaction on mock '" + safelyGetMockName(undesired.getMock()) + "':",
+                 undesired.getLocation()
+         ));
+     }
+@@ -674,6 +674,9 @@
+     }
+ 
+     private String exceptionCauseMessageIfAvailable(Exception details) {
++        if (details.getCause() == null) {
++            return details.getMessage();
++        }
+         return details.getCause().getMessage();
+     }
+ 

@@ -1,0 +1,17 @@
+
+diff -Naur ../d4j-repo/Time/Time_14/src/main/java/org/joda/time/chrono/BasicMonthOfYearDateTimeField.java ../d4j-repo/fixed_bugs_dir/Time/Time_14/src/main/java/org/joda/time/chrono/BasicMonthOfYearDateTimeField.java
+--- ../d4j-repo/Time/Time_14/src/main/java/org/joda/time/chrono/BasicMonthOfYearDateTimeField.java	2021-01-06 03:38:43.949723436 -0800
++++ ../d4j-repo/fixed_bugs_dir/Time/Time_14/src/main/java/org/joda/time/chrono/BasicMonthOfYearDateTimeField.java	2021-01-06 03:38:45.273768520 -0800
+@@ -206,7 +206,12 @@
+         if (valueToAdd == 0) {
+             return values;
+         }
++        if (partial.size() > 0 && partial.getFieldType(0).equals(DateTimeFieldType.monthOfYear()) && fieldIndex == 0) {
+             // month is largest field and being added to, such as month-day
++            int curMonth0 = partial.getValue(0) - 1;
++            int newMonth = ((curMonth0 + (valueToAdd % 12) + 12) % 12) + 1;
++            return set(partial, 0, values, newMonth);
++        }
+         if (DateTimeUtils.isContiguous(partial)) {
+             long instant = 0L;
+             for (int i = 0, isize = partial.size(); i < isize; i++) {

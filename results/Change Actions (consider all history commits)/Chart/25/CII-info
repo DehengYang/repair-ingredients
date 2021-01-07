@@ -1,0 +1,642 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:meanValue == null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawHorizontalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 9956 @LENGTH@ 56
+---INS InfixExpression@@meanValue == null @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 9960 @LENGTH@ 17
+------INS SimpleName@@meanValue @TO@ InfixExpression@@meanValue == null @AT@ 9960 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@meanValue == null @AT@ 9969 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@meanValue == null @AT@ 9973 @LENGTH@ 4
+---INS ReturnStatement@@ @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 9994 @LENGTH@ 7
+, UPD VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @TO@ Number n=dataset.getStdDevValue(row,column); @AT@ 11823 @LENGTH@ 70
+---DEL PrimitiveType@@double @AT@ 11823 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@valueDelta=dataset.getStdDevValue(row,column).doubleValue() @TO@ n=dataset.getStdDevValue(row,column) @AT@ 11830 @LENGTH@ 62
+------UPD SimpleName@@valueDelta @TO@ n @AT@ 11830 @LENGTH@ 10
+------UPD MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @TO@ dataset.getStdDevValue(row,column) @AT@ 11843 @LENGTH@ 49
+---------DEL MethodInvocation@@MethodName:getStdDevValue:[row, column] @AT@ 11843 @LENGTH@ 35
+------------DEL SimpleName@@row @AT@ 11866 @LENGTH@ 3
+------------DEL SimpleName@@column @AT@ 11871 @LENGTH@ 6
+---------DEL SimpleName@@MethodName:doubleValue:[] @AT@ 11879 @LENGTH@ 13
+---------INS SimpleName@@MethodName:getStdDevValue:[row, column] @TO@ MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @AT@ 11904 @LENGTH@ 27
+------------INS SimpleName@@row @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 11919 @LENGTH@ 3
+------------INS SimpleName@@column @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 11924 @LENGTH@ 6
+---INS SimpleType@@Number @TO@ VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @AT@ 11885 @LENGTH@ 6
+, INS IfStatement@@InfixExpression:n != null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawHorizontalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 11942 @LENGTH@ 1388
+---MOV VariableDeclarationStatement@@double highVal=rangeAxis.valueToJava2D(meanValue.doubleValue() + valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 11907 @LENGTH@ 126
+---INS InfixExpression@@n != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 11946 @LENGTH@ 9
+------INS SimpleName@@n @TO@ InfixExpression@@n != null @AT@ 11946 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@n != null @AT@ 11947 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@n != null @AT@ 11951 @LENGTH@ 4
+---INS VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @TO@ IfStatement@@InfixExpression:n != null @AT@ 11972 @LENGTH@ 36
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 11972 @LENGTH@ 6
+------INS VariableDeclarationFragment@@valueDelta=n.doubleValue() @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 11979 @LENGTH@ 28
+---------INS SimpleName@@valueDelta @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 11979 @LENGTH@ 10
+---------INS MethodInvocation@@n.doubleValue() @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 11992 @LENGTH@ 15
+------------INS SimpleName@@Name:n @TO@ MethodInvocation@@n.doubleValue() @AT@ 11992 @LENGTH@ 1
+------------INS SimpleName@@MethodName:doubleValue:[] @TO@ MethodInvocation@@n.doubleValue() @AT@ 11994 @LENGTH@ 13
+---MOV VariableDeclarationStatement@@double lowVal=rangeAxis.valueToJava2D(meanValue.doubleValue() - valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 12047 @LENGTH@ 125
+---MOV IfStatement@@InfixExpression:this.errorIndicatorStroke != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 12188 @LENGTH@ 214
+---MOV IfStatement@@InfixExpression:this.errorIndicatorPaint != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 12416 @LENGTH@ 214
+---MOV VariableDeclarationStatement@@Line2D line=null; @TO@ IfStatement@@InfixExpression:n != null @AT@ 12654 @LENGTH@ 19
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(lowVal,rectY + rectHeight / 2.0d,highVal,rectY + rectHeight / 2.0d) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12687 @LENGTH@ 135
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12836 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(highVal,rectY + rectHeight * 0.25,highVal,rectY + rectHeight * 0.75) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12864 @LENGTH@ 136
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13014 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(lowVal,rectY + rectHeight * 0.25,lowVal,rectY + rectHeight * 0.75) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13042 @LENGTH@ 134
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13190 @LENGTH@ 14
+, INS IfStatement@@InfixExpression:meanValue == null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawVerticalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 15674 @LENGTH@ 56
+---INS InfixExpression@@meanValue == null @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 15678 @LENGTH@ 17
+------INS SimpleName@@meanValue @TO@ InfixExpression@@meanValue == null @AT@ 15678 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@meanValue == null @AT@ 15687 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@meanValue == null @AT@ 15691 @LENGTH@ 4
+---INS ReturnStatement@@ @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 15712 @LENGTH@ 7
+, UPD VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @TO@ Number n=dataset.getStdDevValue(row,column); @AT@ 17415 @LENGTH@ 70
+---DEL PrimitiveType@@double @AT@ 17415 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@valueDelta=dataset.getStdDevValue(row,column).doubleValue() @TO@ n=dataset.getStdDevValue(row,column) @AT@ 17422 @LENGTH@ 62
+------UPD SimpleName@@valueDelta @TO@ n @AT@ 17422 @LENGTH@ 10
+------UPD MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @TO@ dataset.getStdDevValue(row,column) @AT@ 17435 @LENGTH@ 49
+---------DEL MethodInvocation@@MethodName:getStdDevValue:[row, column] @AT@ 17435 @LENGTH@ 35
+------------DEL SimpleName@@row @AT@ 17458 @LENGTH@ 3
+------------DEL SimpleName@@column @AT@ 17463 @LENGTH@ 6
+---------DEL SimpleName@@MethodName:doubleValue:[] @AT@ 17471 @LENGTH@ 13
+---------INS SimpleName@@MethodName:getStdDevValue:[row, column] @TO@ MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @AT@ 17622 @LENGTH@ 27
+------------INS SimpleName@@row @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 17637 @LENGTH@ 3
+------------INS SimpleName@@column @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 17642 @LENGTH@ 6
+---INS SimpleType@@Number @TO@ VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @AT@ 17603 @LENGTH@ 6
+, INS IfStatement@@InfixExpression:n != null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawVerticalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 17660 @LENGTH@ 1397
+---MOV VariableDeclarationStatement@@double highVal=rangeAxis.valueToJava2D(meanValue.doubleValue() + valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17499 @LENGTH@ 126
+---MOV VariableDeclarationStatement@@double lowVal=rangeAxis.valueToJava2D(meanValue.doubleValue() - valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17639 @LENGTH@ 125
+---INS InfixExpression@@n != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 17664 @LENGTH@ 9
+------INS SimpleName@@n @TO@ InfixExpression@@n != null @AT@ 17664 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@n != null @AT@ 17665 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@n != null @AT@ 17669 @LENGTH@ 4
+---INS VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17690 @LENGTH@ 36
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 17690 @LENGTH@ 6
+------INS VariableDeclarationFragment@@valueDelta=n.doubleValue() @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 17697 @LENGTH@ 28
+---------INS SimpleName@@valueDelta @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 17697 @LENGTH@ 10
+---------INS MethodInvocation@@n.doubleValue() @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 17710 @LENGTH@ 15
+------------INS SimpleName@@Name:n @TO@ MethodInvocation@@n.doubleValue() @AT@ 17710 @LENGTH@ 1
+------------INS SimpleName@@MethodName:doubleValue:[] @TO@ MethodInvocation@@n.doubleValue() @AT@ 17712 @LENGTH@ 13
+---MOV IfStatement@@InfixExpression:this.errorIndicatorStroke != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 17780 @LENGTH@ 214
+---MOV IfStatement@@InfixExpression:this.errorIndicatorPaint != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 18008 @LENGTH@ 214
+---MOV VariableDeclarationStatement@@Line2D line=null; @TO@ IfStatement@@InfixExpression:n != null @AT@ 18236 @LENGTH@ 19
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d,lowVal,rectX + rectWidth / 2.0d,highVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18269 @LENGTH@ 132
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18415 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d - 5.0d,highVal,rectX + rectWidth / 2.0d + 5.0d,highVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18443 @LENGTH@ 147
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18604 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d - 5.0d,lowVal,rectX + rectWidth / 2.0d + 5.0d,lowVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18632 @LENGTH@ 145
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18791 @LENGTH@ 14
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, NullLiteral, OP2, null)
+OP6:   (INS, ReturnStatement, OP1, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:meanValue == null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawHorizontalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 9956 @LENGTH@ 56
+---INS InfixExpression@@meanValue == null @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 9960 @LENGTH@ 17
+------INS SimpleName@@meanValue @TO@ InfixExpression@@meanValue == null @AT@ 9960 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@meanValue == null @AT@ 9969 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@meanValue == null @AT@ 9973 @LENGTH@ 4
+---INS ReturnStatement@@ @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 9994 @LENGTH@ 7
+, UPD VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @TO@ Number n=dataset.getStdDevValue(row,column); @AT@ 11823 @LENGTH@ 70
+---DEL PrimitiveType@@double @AT@ 11823 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@valueDelta=dataset.getStdDevValue(row,column).doubleValue() @TO@ n=dataset.getStdDevValue(row,column) @AT@ 11830 @LENGTH@ 62
+------UPD SimpleName@@valueDelta @TO@ n @AT@ 11830 @LENGTH@ 10
+------UPD MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @TO@ dataset.getStdDevValue(row,column) @AT@ 11843 @LENGTH@ 49
+---------DEL MethodInvocation@@MethodName:getStdDevValue:[row, column] @AT@ 11843 @LENGTH@ 35
+------------DEL SimpleName@@row @AT@ 11866 @LENGTH@ 3
+------------DEL SimpleName@@column @AT@ 11871 @LENGTH@ 6
+---------DEL SimpleName@@MethodName:doubleValue:[] @AT@ 11879 @LENGTH@ 13
+---------INS SimpleName@@MethodName:getStdDevValue:[row, column] @TO@ MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @AT@ 11904 @LENGTH@ 27
+------------INS SimpleName@@row @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 11919 @LENGTH@ 3
+------------INS SimpleName@@column @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 11924 @LENGTH@ 6
+---INS SimpleType@@Number @TO@ VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @AT@ 11885 @LENGTH@ 6
+, INS IfStatement@@InfixExpression:n != null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawHorizontalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 11942 @LENGTH@ 1388
+---MOV VariableDeclarationStatement@@double highVal=rangeAxis.valueToJava2D(meanValue.doubleValue() + valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 11907 @LENGTH@ 126
+---INS InfixExpression@@n != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 11946 @LENGTH@ 9
+------INS SimpleName@@n @TO@ InfixExpression@@n != null @AT@ 11946 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@n != null @AT@ 11947 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@n != null @AT@ 11951 @LENGTH@ 4
+---INS VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @TO@ IfStatement@@InfixExpression:n != null @AT@ 11972 @LENGTH@ 36
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 11972 @LENGTH@ 6
+------INS VariableDeclarationFragment@@valueDelta=n.doubleValue() @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 11979 @LENGTH@ 28
+---------INS SimpleName@@valueDelta @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 11979 @LENGTH@ 10
+---------INS MethodInvocation@@n.doubleValue() @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 11992 @LENGTH@ 15
+------------INS SimpleName@@Name:n @TO@ MethodInvocation@@n.doubleValue() @AT@ 11992 @LENGTH@ 1
+------------INS SimpleName@@MethodName:doubleValue:[] @TO@ MethodInvocation@@n.doubleValue() @AT@ 11994 @LENGTH@ 13
+---MOV VariableDeclarationStatement@@double lowVal=rangeAxis.valueToJava2D(meanValue.doubleValue() - valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 12047 @LENGTH@ 125
+---MOV IfStatement@@InfixExpression:this.errorIndicatorStroke != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 12188 @LENGTH@ 214
+---MOV IfStatement@@InfixExpression:this.errorIndicatorPaint != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 12416 @LENGTH@ 214
+---MOV VariableDeclarationStatement@@Line2D line=null; @TO@ IfStatement@@InfixExpression:n != null @AT@ 12654 @LENGTH@ 19
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(lowVal,rectY + rectHeight / 2.0d,highVal,rectY + rectHeight / 2.0d) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12687 @LENGTH@ 135
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12836 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(highVal,rectY + rectHeight * 0.25,highVal,rectY + rectHeight * 0.75) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12864 @LENGTH@ 136
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13014 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(lowVal,rectY + rectHeight * 0.25,lowVal,rectY + rectHeight * 0.75) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13042 @LENGTH@ 134
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13190 @LENGTH@ 14
+, INS IfStatement@@InfixExpression:meanValue == null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawVerticalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 15674 @LENGTH@ 56
+---INS InfixExpression@@meanValue == null @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 15678 @LENGTH@ 17
+------INS SimpleName@@meanValue @TO@ InfixExpression@@meanValue == null @AT@ 15678 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@meanValue == null @AT@ 15687 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@meanValue == null @AT@ 15691 @LENGTH@ 4
+---INS ReturnStatement@@ @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 15712 @LENGTH@ 7
+, UPD VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @TO@ Number n=dataset.getStdDevValue(row,column); @AT@ 17415 @LENGTH@ 70
+---DEL PrimitiveType@@double @AT@ 17415 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@valueDelta=dataset.getStdDevValue(row,column).doubleValue() @TO@ n=dataset.getStdDevValue(row,column) @AT@ 17422 @LENGTH@ 62
+------UPD SimpleName@@valueDelta @TO@ n @AT@ 17422 @LENGTH@ 10
+------UPD MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @TO@ dataset.getStdDevValue(row,column) @AT@ 17435 @LENGTH@ 49
+---------DEL MethodInvocation@@MethodName:getStdDevValue:[row, column] @AT@ 17435 @LENGTH@ 35
+------------DEL SimpleName@@row @AT@ 17458 @LENGTH@ 3
+------------DEL SimpleName@@column @AT@ 17463 @LENGTH@ 6
+---------DEL SimpleName@@MethodName:doubleValue:[] @AT@ 17471 @LENGTH@ 13
+---------INS SimpleName@@MethodName:getStdDevValue:[row, column] @TO@ MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @AT@ 17622 @LENGTH@ 27
+------------INS SimpleName@@row @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 17637 @LENGTH@ 3
+------------INS SimpleName@@column @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 17642 @LENGTH@ 6
+---INS SimpleType@@Number @TO@ VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @AT@ 17603 @LENGTH@ 6
+, INS IfStatement@@InfixExpression:n != null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawVerticalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 17660 @LENGTH@ 1397
+---MOV VariableDeclarationStatement@@double highVal=rangeAxis.valueToJava2D(meanValue.doubleValue() + valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17499 @LENGTH@ 126
+---MOV VariableDeclarationStatement@@double lowVal=rangeAxis.valueToJava2D(meanValue.doubleValue() - valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17639 @LENGTH@ 125
+---INS InfixExpression@@n != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 17664 @LENGTH@ 9
+------INS SimpleName@@n @TO@ InfixExpression@@n != null @AT@ 17664 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@n != null @AT@ 17665 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@n != null @AT@ 17669 @LENGTH@ 4
+---INS VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17690 @LENGTH@ 36
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 17690 @LENGTH@ 6
+------INS VariableDeclarationFragment@@valueDelta=n.doubleValue() @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 17697 @LENGTH@ 28
+---------INS SimpleName@@valueDelta @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 17697 @LENGTH@ 10
+---------INS MethodInvocation@@n.doubleValue() @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 17710 @LENGTH@ 15
+------------INS SimpleName@@Name:n @TO@ MethodInvocation@@n.doubleValue() @AT@ 17710 @LENGTH@ 1
+------------INS SimpleName@@MethodName:doubleValue:[] @TO@ MethodInvocation@@n.doubleValue() @AT@ 17712 @LENGTH@ 13
+---MOV IfStatement@@InfixExpression:this.errorIndicatorStroke != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 17780 @LENGTH@ 214
+---MOV IfStatement@@InfixExpression:this.errorIndicatorPaint != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 18008 @LENGTH@ 214
+---MOV VariableDeclarationStatement@@Line2D line=null; @TO@ IfStatement@@InfixExpression:n != null @AT@ 18236 @LENGTH@ 19
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d,lowVal,rectX + rectWidth / 2.0d,highVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18269 @LENGTH@ 132
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18415 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d - 5.0d,highVal,rectX + rectWidth / 2.0d + 5.0d,highVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18443 @LENGTH@ 147
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18604 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d - 5.0d,lowVal,rectX + rectWidth / 2.0d + 5.0d,lowVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18632 @LENGTH@ 145
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18791 @LENGTH@ 14
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2 OP3 OP13)
+OP2:   (DEL, PrimitiveType, OP1, null)
+OP3:   (UPD, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (UPD, SimpleName, OP3, null)
+OP5:      (UPD, MethodInvocation, OP3, OP6 OP9 OP10)
+OP6:         (DEL, MethodInvocation, OP5, OP7 OP8)
+OP7:            (DEL, SimpleName, OP6, null)
+OP8:            (DEL, SimpleName, OP6, null)
+OP9:         (DEL, SimpleName, OP5, null)
+OP10:         (INS, SimpleName, OP5, OP11 OP12)
+OP11:            (INS, SimpleName, OP10, null)
+OP12:            (INS, SimpleName, OP10, null)
+OP13:   (INS, SimpleType, OP1, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:meanValue == null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawHorizontalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 9956 @LENGTH@ 56
+---INS InfixExpression@@meanValue == null @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 9960 @LENGTH@ 17
+------INS SimpleName@@meanValue @TO@ InfixExpression@@meanValue == null @AT@ 9960 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@meanValue == null @AT@ 9969 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@meanValue == null @AT@ 9973 @LENGTH@ 4
+---INS ReturnStatement@@ @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 9994 @LENGTH@ 7
+, UPD VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @TO@ Number n=dataset.getStdDevValue(row,column); @AT@ 11823 @LENGTH@ 70
+---DEL PrimitiveType@@double @AT@ 11823 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@valueDelta=dataset.getStdDevValue(row,column).doubleValue() @TO@ n=dataset.getStdDevValue(row,column) @AT@ 11830 @LENGTH@ 62
+------UPD SimpleName@@valueDelta @TO@ n @AT@ 11830 @LENGTH@ 10
+------UPD MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @TO@ dataset.getStdDevValue(row,column) @AT@ 11843 @LENGTH@ 49
+---------DEL MethodInvocation@@MethodName:getStdDevValue:[row, column] @AT@ 11843 @LENGTH@ 35
+------------DEL SimpleName@@row @AT@ 11866 @LENGTH@ 3
+------------DEL SimpleName@@column @AT@ 11871 @LENGTH@ 6
+---------DEL SimpleName@@MethodName:doubleValue:[] @AT@ 11879 @LENGTH@ 13
+---------INS SimpleName@@MethodName:getStdDevValue:[row, column] @TO@ MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @AT@ 11904 @LENGTH@ 27
+------------INS SimpleName@@row @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 11919 @LENGTH@ 3
+------------INS SimpleName@@column @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 11924 @LENGTH@ 6
+---INS SimpleType@@Number @TO@ VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @AT@ 11885 @LENGTH@ 6
+, INS IfStatement@@InfixExpression:n != null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawHorizontalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 11942 @LENGTH@ 1388
+---MOV VariableDeclarationStatement@@double highVal=rangeAxis.valueToJava2D(meanValue.doubleValue() + valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 11907 @LENGTH@ 126
+---INS InfixExpression@@n != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 11946 @LENGTH@ 9
+------INS SimpleName@@n @TO@ InfixExpression@@n != null @AT@ 11946 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@n != null @AT@ 11947 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@n != null @AT@ 11951 @LENGTH@ 4
+---INS VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @TO@ IfStatement@@InfixExpression:n != null @AT@ 11972 @LENGTH@ 36
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 11972 @LENGTH@ 6
+------INS VariableDeclarationFragment@@valueDelta=n.doubleValue() @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 11979 @LENGTH@ 28
+---------INS SimpleName@@valueDelta @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 11979 @LENGTH@ 10
+---------INS MethodInvocation@@n.doubleValue() @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 11992 @LENGTH@ 15
+------------INS SimpleName@@Name:n @TO@ MethodInvocation@@n.doubleValue() @AT@ 11992 @LENGTH@ 1
+------------INS SimpleName@@MethodName:doubleValue:[] @TO@ MethodInvocation@@n.doubleValue() @AT@ 11994 @LENGTH@ 13
+---MOV VariableDeclarationStatement@@double lowVal=rangeAxis.valueToJava2D(meanValue.doubleValue() - valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 12047 @LENGTH@ 125
+---MOV IfStatement@@InfixExpression:this.errorIndicatorStroke != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 12188 @LENGTH@ 214
+---MOV IfStatement@@InfixExpression:this.errorIndicatorPaint != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 12416 @LENGTH@ 214
+---MOV VariableDeclarationStatement@@Line2D line=null; @TO@ IfStatement@@InfixExpression:n != null @AT@ 12654 @LENGTH@ 19
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(lowVal,rectY + rectHeight / 2.0d,highVal,rectY + rectHeight / 2.0d) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12687 @LENGTH@ 135
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12836 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(highVal,rectY + rectHeight * 0.25,highVal,rectY + rectHeight * 0.75) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12864 @LENGTH@ 136
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13014 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(lowVal,rectY + rectHeight * 0.25,lowVal,rectY + rectHeight * 0.75) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13042 @LENGTH@ 134
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13190 @LENGTH@ 14
+, INS IfStatement@@InfixExpression:meanValue == null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawVerticalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 15674 @LENGTH@ 56
+---INS InfixExpression@@meanValue == null @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 15678 @LENGTH@ 17
+------INS SimpleName@@meanValue @TO@ InfixExpression@@meanValue == null @AT@ 15678 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@meanValue == null @AT@ 15687 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@meanValue == null @AT@ 15691 @LENGTH@ 4
+---INS ReturnStatement@@ @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 15712 @LENGTH@ 7
+, UPD VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @TO@ Number n=dataset.getStdDevValue(row,column); @AT@ 17415 @LENGTH@ 70
+---DEL PrimitiveType@@double @AT@ 17415 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@valueDelta=dataset.getStdDevValue(row,column).doubleValue() @TO@ n=dataset.getStdDevValue(row,column) @AT@ 17422 @LENGTH@ 62
+------UPD SimpleName@@valueDelta @TO@ n @AT@ 17422 @LENGTH@ 10
+------UPD MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @TO@ dataset.getStdDevValue(row,column) @AT@ 17435 @LENGTH@ 49
+---------DEL MethodInvocation@@MethodName:getStdDevValue:[row, column] @AT@ 17435 @LENGTH@ 35
+------------DEL SimpleName@@row @AT@ 17458 @LENGTH@ 3
+------------DEL SimpleName@@column @AT@ 17463 @LENGTH@ 6
+---------DEL SimpleName@@MethodName:doubleValue:[] @AT@ 17471 @LENGTH@ 13
+---------INS SimpleName@@MethodName:getStdDevValue:[row, column] @TO@ MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @AT@ 17622 @LENGTH@ 27
+------------INS SimpleName@@row @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 17637 @LENGTH@ 3
+------------INS SimpleName@@column @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 17642 @LENGTH@ 6
+---INS SimpleType@@Number @TO@ VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @AT@ 17603 @LENGTH@ 6
+, INS IfStatement@@InfixExpression:n != null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawVerticalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 17660 @LENGTH@ 1397
+---MOV VariableDeclarationStatement@@double highVal=rangeAxis.valueToJava2D(meanValue.doubleValue() + valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17499 @LENGTH@ 126
+---MOV VariableDeclarationStatement@@double lowVal=rangeAxis.valueToJava2D(meanValue.doubleValue() - valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17639 @LENGTH@ 125
+---INS InfixExpression@@n != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 17664 @LENGTH@ 9
+------INS SimpleName@@n @TO@ InfixExpression@@n != null @AT@ 17664 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@n != null @AT@ 17665 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@n != null @AT@ 17669 @LENGTH@ 4
+---INS VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17690 @LENGTH@ 36
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 17690 @LENGTH@ 6
+------INS VariableDeclarationFragment@@valueDelta=n.doubleValue() @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 17697 @LENGTH@ 28
+---------INS SimpleName@@valueDelta @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 17697 @LENGTH@ 10
+---------INS MethodInvocation@@n.doubleValue() @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 17710 @LENGTH@ 15
+------------INS SimpleName@@Name:n @TO@ MethodInvocation@@n.doubleValue() @AT@ 17710 @LENGTH@ 1
+------------INS SimpleName@@MethodName:doubleValue:[] @TO@ MethodInvocation@@n.doubleValue() @AT@ 17712 @LENGTH@ 13
+---MOV IfStatement@@InfixExpression:this.errorIndicatorStroke != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 17780 @LENGTH@ 214
+---MOV IfStatement@@InfixExpression:this.errorIndicatorPaint != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 18008 @LENGTH@ 214
+---MOV VariableDeclarationStatement@@Line2D line=null; @TO@ IfStatement@@InfixExpression:n != null @AT@ 18236 @LENGTH@ 19
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d,lowVal,rectX + rectWidth / 2.0d,highVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18269 @LENGTH@ 132
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18415 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d - 5.0d,highVal,rectX + rectWidth / 2.0d + 5.0d,highVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18443 @LENGTH@ 147
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18604 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d - 5.0d,lowVal,rectX + rectWidth / 2.0d + 5.0d,lowVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18632 @LENGTH@ 145
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18791 @LENGTH@ 14
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3 OP7 OP14 OP15 OP16 OP17 OP18 OP19 OP20 OP21 OP22 OP23)
+OP2:   (MOV, VariableDeclarationStatement, OP1, null)
+OP3:   (INS, InfixExpression, OP1, OP4 OP5 OP6)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, Operator, OP3, null)
+OP6:      (INS, NullLiteral, OP3, null)
+OP7:   (INS, VariableDeclarationStatement, OP1, OP8 OP9)
+OP8:      (INS, PrimitiveType, OP7, null)
+OP9:      (INS, VariableDeclarationFragment, OP7, OP10 OP11)
+OP10:         (INS, SimpleName, OP9, null)
+OP11:         (INS, MethodInvocation, OP9, OP12 OP13)
+OP12:            (INS, SimpleName, OP11, null)
+OP13:            (INS, SimpleName, OP11, null)
+OP14:   (MOV, VariableDeclarationStatement, OP1, null)
+OP15:   (MOV, IfStatement, OP1, null)
+OP16:   (MOV, IfStatement, OP1, null)
+OP17:   (MOV, VariableDeclarationStatement, OP1, null)
+OP18:   (MOV, ExpressionStatement, OP1, null)
+OP19:   (MOV, ExpressionStatement, OP1, null)
+OP20:   (MOV, ExpressionStatement, OP1, null)
+OP21:   (MOV, ExpressionStatement, OP1, null)
+OP22:   (MOV, ExpressionStatement, OP1, null)
+OP23:   (MOV, ExpressionStatement, OP1, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:meanValue == null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawHorizontalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 9956 @LENGTH@ 56
+---INS InfixExpression@@meanValue == null @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 9960 @LENGTH@ 17
+------INS SimpleName@@meanValue @TO@ InfixExpression@@meanValue == null @AT@ 9960 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@meanValue == null @AT@ 9969 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@meanValue == null @AT@ 9973 @LENGTH@ 4
+---INS ReturnStatement@@ @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 9994 @LENGTH@ 7
+, UPD VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @TO@ Number n=dataset.getStdDevValue(row,column); @AT@ 11823 @LENGTH@ 70
+---DEL PrimitiveType@@double @AT@ 11823 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@valueDelta=dataset.getStdDevValue(row,column).doubleValue() @TO@ n=dataset.getStdDevValue(row,column) @AT@ 11830 @LENGTH@ 62
+------UPD SimpleName@@valueDelta @TO@ n @AT@ 11830 @LENGTH@ 10
+------UPD MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @TO@ dataset.getStdDevValue(row,column) @AT@ 11843 @LENGTH@ 49
+---------DEL MethodInvocation@@MethodName:getStdDevValue:[row, column] @AT@ 11843 @LENGTH@ 35
+------------DEL SimpleName@@row @AT@ 11866 @LENGTH@ 3
+------------DEL SimpleName@@column @AT@ 11871 @LENGTH@ 6
+---------DEL SimpleName@@MethodName:doubleValue:[] @AT@ 11879 @LENGTH@ 13
+---------INS SimpleName@@MethodName:getStdDevValue:[row, column] @TO@ MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @AT@ 11904 @LENGTH@ 27
+------------INS SimpleName@@row @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 11919 @LENGTH@ 3
+------------INS SimpleName@@column @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 11924 @LENGTH@ 6
+---INS SimpleType@@Number @TO@ VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @AT@ 11885 @LENGTH@ 6
+, INS IfStatement@@InfixExpression:n != null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawHorizontalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 11942 @LENGTH@ 1388
+---MOV VariableDeclarationStatement@@double highVal=rangeAxis.valueToJava2D(meanValue.doubleValue() + valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 11907 @LENGTH@ 126
+---INS InfixExpression@@n != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 11946 @LENGTH@ 9
+------INS SimpleName@@n @TO@ InfixExpression@@n != null @AT@ 11946 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@n != null @AT@ 11947 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@n != null @AT@ 11951 @LENGTH@ 4
+---INS VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @TO@ IfStatement@@InfixExpression:n != null @AT@ 11972 @LENGTH@ 36
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 11972 @LENGTH@ 6
+------INS VariableDeclarationFragment@@valueDelta=n.doubleValue() @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 11979 @LENGTH@ 28
+---------INS SimpleName@@valueDelta @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 11979 @LENGTH@ 10
+---------INS MethodInvocation@@n.doubleValue() @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 11992 @LENGTH@ 15
+------------INS SimpleName@@Name:n @TO@ MethodInvocation@@n.doubleValue() @AT@ 11992 @LENGTH@ 1
+------------INS SimpleName@@MethodName:doubleValue:[] @TO@ MethodInvocation@@n.doubleValue() @AT@ 11994 @LENGTH@ 13
+---MOV VariableDeclarationStatement@@double lowVal=rangeAxis.valueToJava2D(meanValue.doubleValue() - valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 12047 @LENGTH@ 125
+---MOV IfStatement@@InfixExpression:this.errorIndicatorStroke != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 12188 @LENGTH@ 214
+---MOV IfStatement@@InfixExpression:this.errorIndicatorPaint != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 12416 @LENGTH@ 214
+---MOV VariableDeclarationStatement@@Line2D line=null; @TO@ IfStatement@@InfixExpression:n != null @AT@ 12654 @LENGTH@ 19
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(lowVal,rectY + rectHeight / 2.0d,highVal,rectY + rectHeight / 2.0d) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12687 @LENGTH@ 135
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12836 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(highVal,rectY + rectHeight * 0.25,highVal,rectY + rectHeight * 0.75) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12864 @LENGTH@ 136
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13014 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(lowVal,rectY + rectHeight * 0.25,lowVal,rectY + rectHeight * 0.75) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13042 @LENGTH@ 134
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13190 @LENGTH@ 14
+, INS IfStatement@@InfixExpression:meanValue == null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawVerticalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 15674 @LENGTH@ 56
+---INS InfixExpression@@meanValue == null @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 15678 @LENGTH@ 17
+------INS SimpleName@@meanValue @TO@ InfixExpression@@meanValue == null @AT@ 15678 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@meanValue == null @AT@ 15687 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@meanValue == null @AT@ 15691 @LENGTH@ 4
+---INS ReturnStatement@@ @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 15712 @LENGTH@ 7
+, UPD VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @TO@ Number n=dataset.getStdDevValue(row,column); @AT@ 17415 @LENGTH@ 70
+---DEL PrimitiveType@@double @AT@ 17415 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@valueDelta=dataset.getStdDevValue(row,column).doubleValue() @TO@ n=dataset.getStdDevValue(row,column) @AT@ 17422 @LENGTH@ 62
+------UPD SimpleName@@valueDelta @TO@ n @AT@ 17422 @LENGTH@ 10
+------UPD MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @TO@ dataset.getStdDevValue(row,column) @AT@ 17435 @LENGTH@ 49
+---------DEL MethodInvocation@@MethodName:getStdDevValue:[row, column] @AT@ 17435 @LENGTH@ 35
+------------DEL SimpleName@@row @AT@ 17458 @LENGTH@ 3
+------------DEL SimpleName@@column @AT@ 17463 @LENGTH@ 6
+---------DEL SimpleName@@MethodName:doubleValue:[] @AT@ 17471 @LENGTH@ 13
+---------INS SimpleName@@MethodName:getStdDevValue:[row, column] @TO@ MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @AT@ 17622 @LENGTH@ 27
+------------INS SimpleName@@row @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 17637 @LENGTH@ 3
+------------INS SimpleName@@column @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 17642 @LENGTH@ 6
+---INS SimpleType@@Number @TO@ VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @AT@ 17603 @LENGTH@ 6
+, INS IfStatement@@InfixExpression:n != null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawVerticalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 17660 @LENGTH@ 1397
+---MOV VariableDeclarationStatement@@double highVal=rangeAxis.valueToJava2D(meanValue.doubleValue() + valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17499 @LENGTH@ 126
+---MOV VariableDeclarationStatement@@double lowVal=rangeAxis.valueToJava2D(meanValue.doubleValue() - valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17639 @LENGTH@ 125
+---INS InfixExpression@@n != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 17664 @LENGTH@ 9
+------INS SimpleName@@n @TO@ InfixExpression@@n != null @AT@ 17664 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@n != null @AT@ 17665 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@n != null @AT@ 17669 @LENGTH@ 4
+---INS VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17690 @LENGTH@ 36
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 17690 @LENGTH@ 6
+------INS VariableDeclarationFragment@@valueDelta=n.doubleValue() @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 17697 @LENGTH@ 28
+---------INS SimpleName@@valueDelta @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 17697 @LENGTH@ 10
+---------INS MethodInvocation@@n.doubleValue() @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 17710 @LENGTH@ 15
+------------INS SimpleName@@Name:n @TO@ MethodInvocation@@n.doubleValue() @AT@ 17710 @LENGTH@ 1
+------------INS SimpleName@@MethodName:doubleValue:[] @TO@ MethodInvocation@@n.doubleValue() @AT@ 17712 @LENGTH@ 13
+---MOV IfStatement@@InfixExpression:this.errorIndicatorStroke != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 17780 @LENGTH@ 214
+---MOV IfStatement@@InfixExpression:this.errorIndicatorPaint != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 18008 @LENGTH@ 214
+---MOV VariableDeclarationStatement@@Line2D line=null; @TO@ IfStatement@@InfixExpression:n != null @AT@ 18236 @LENGTH@ 19
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d,lowVal,rectX + rectWidth / 2.0d,highVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18269 @LENGTH@ 132
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18415 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d - 5.0d,highVal,rectX + rectWidth / 2.0d + 5.0d,highVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18443 @LENGTH@ 147
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18604 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d - 5.0d,lowVal,rectX + rectWidth / 2.0d + 5.0d,lowVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18632 @LENGTH@ 145
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18791 @LENGTH@ 14
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, NullLiteral, OP2, null)
+OP6:   (INS, ReturnStatement, OP1, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:meanValue == null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawHorizontalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 9956 @LENGTH@ 56
+---INS InfixExpression@@meanValue == null @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 9960 @LENGTH@ 17
+------INS SimpleName@@meanValue @TO@ InfixExpression@@meanValue == null @AT@ 9960 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@meanValue == null @AT@ 9969 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@meanValue == null @AT@ 9973 @LENGTH@ 4
+---INS ReturnStatement@@ @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 9994 @LENGTH@ 7
+, UPD VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @TO@ Number n=dataset.getStdDevValue(row,column); @AT@ 11823 @LENGTH@ 70
+---DEL PrimitiveType@@double @AT@ 11823 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@valueDelta=dataset.getStdDevValue(row,column).doubleValue() @TO@ n=dataset.getStdDevValue(row,column) @AT@ 11830 @LENGTH@ 62
+------UPD SimpleName@@valueDelta @TO@ n @AT@ 11830 @LENGTH@ 10
+------UPD MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @TO@ dataset.getStdDevValue(row,column) @AT@ 11843 @LENGTH@ 49
+---------DEL MethodInvocation@@MethodName:getStdDevValue:[row, column] @AT@ 11843 @LENGTH@ 35
+------------DEL SimpleName@@row @AT@ 11866 @LENGTH@ 3
+------------DEL SimpleName@@column @AT@ 11871 @LENGTH@ 6
+---------DEL SimpleName@@MethodName:doubleValue:[] @AT@ 11879 @LENGTH@ 13
+---------INS SimpleName@@MethodName:getStdDevValue:[row, column] @TO@ MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @AT@ 11904 @LENGTH@ 27
+------------INS SimpleName@@row @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 11919 @LENGTH@ 3
+------------INS SimpleName@@column @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 11924 @LENGTH@ 6
+---INS SimpleType@@Number @TO@ VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @AT@ 11885 @LENGTH@ 6
+, INS IfStatement@@InfixExpression:n != null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawHorizontalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 11942 @LENGTH@ 1388
+---MOV VariableDeclarationStatement@@double highVal=rangeAxis.valueToJava2D(meanValue.doubleValue() + valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 11907 @LENGTH@ 126
+---INS InfixExpression@@n != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 11946 @LENGTH@ 9
+------INS SimpleName@@n @TO@ InfixExpression@@n != null @AT@ 11946 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@n != null @AT@ 11947 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@n != null @AT@ 11951 @LENGTH@ 4
+---INS VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @TO@ IfStatement@@InfixExpression:n != null @AT@ 11972 @LENGTH@ 36
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 11972 @LENGTH@ 6
+------INS VariableDeclarationFragment@@valueDelta=n.doubleValue() @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 11979 @LENGTH@ 28
+---------INS SimpleName@@valueDelta @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 11979 @LENGTH@ 10
+---------INS MethodInvocation@@n.doubleValue() @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 11992 @LENGTH@ 15
+------------INS SimpleName@@Name:n @TO@ MethodInvocation@@n.doubleValue() @AT@ 11992 @LENGTH@ 1
+------------INS SimpleName@@MethodName:doubleValue:[] @TO@ MethodInvocation@@n.doubleValue() @AT@ 11994 @LENGTH@ 13
+---MOV VariableDeclarationStatement@@double lowVal=rangeAxis.valueToJava2D(meanValue.doubleValue() - valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 12047 @LENGTH@ 125
+---MOV IfStatement@@InfixExpression:this.errorIndicatorStroke != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 12188 @LENGTH@ 214
+---MOV IfStatement@@InfixExpression:this.errorIndicatorPaint != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 12416 @LENGTH@ 214
+---MOV VariableDeclarationStatement@@Line2D line=null; @TO@ IfStatement@@InfixExpression:n != null @AT@ 12654 @LENGTH@ 19
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(lowVal,rectY + rectHeight / 2.0d,highVal,rectY + rectHeight / 2.0d) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12687 @LENGTH@ 135
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12836 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(highVal,rectY + rectHeight * 0.25,highVal,rectY + rectHeight * 0.75) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12864 @LENGTH@ 136
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13014 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(lowVal,rectY + rectHeight * 0.25,lowVal,rectY + rectHeight * 0.75) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13042 @LENGTH@ 134
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13190 @LENGTH@ 14
+, INS IfStatement@@InfixExpression:meanValue == null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawVerticalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 15674 @LENGTH@ 56
+---INS InfixExpression@@meanValue == null @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 15678 @LENGTH@ 17
+------INS SimpleName@@meanValue @TO@ InfixExpression@@meanValue == null @AT@ 15678 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@meanValue == null @AT@ 15687 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@meanValue == null @AT@ 15691 @LENGTH@ 4
+---INS ReturnStatement@@ @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 15712 @LENGTH@ 7
+, UPD VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @TO@ Number n=dataset.getStdDevValue(row,column); @AT@ 17415 @LENGTH@ 70
+---DEL PrimitiveType@@double @AT@ 17415 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@valueDelta=dataset.getStdDevValue(row,column).doubleValue() @TO@ n=dataset.getStdDevValue(row,column) @AT@ 17422 @LENGTH@ 62
+------UPD SimpleName@@valueDelta @TO@ n @AT@ 17422 @LENGTH@ 10
+------UPD MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @TO@ dataset.getStdDevValue(row,column) @AT@ 17435 @LENGTH@ 49
+---------DEL MethodInvocation@@MethodName:getStdDevValue:[row, column] @AT@ 17435 @LENGTH@ 35
+------------DEL SimpleName@@row @AT@ 17458 @LENGTH@ 3
+------------DEL SimpleName@@column @AT@ 17463 @LENGTH@ 6
+---------DEL SimpleName@@MethodName:doubleValue:[] @AT@ 17471 @LENGTH@ 13
+---------INS SimpleName@@MethodName:getStdDevValue:[row, column] @TO@ MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @AT@ 17622 @LENGTH@ 27
+------------INS SimpleName@@row @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 17637 @LENGTH@ 3
+------------INS SimpleName@@column @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 17642 @LENGTH@ 6
+---INS SimpleType@@Number @TO@ VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @AT@ 17603 @LENGTH@ 6
+, INS IfStatement@@InfixExpression:n != null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawVerticalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 17660 @LENGTH@ 1397
+---MOV VariableDeclarationStatement@@double highVal=rangeAxis.valueToJava2D(meanValue.doubleValue() + valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17499 @LENGTH@ 126
+---MOV VariableDeclarationStatement@@double lowVal=rangeAxis.valueToJava2D(meanValue.doubleValue() - valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17639 @LENGTH@ 125
+---INS InfixExpression@@n != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 17664 @LENGTH@ 9
+------INS SimpleName@@n @TO@ InfixExpression@@n != null @AT@ 17664 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@n != null @AT@ 17665 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@n != null @AT@ 17669 @LENGTH@ 4
+---INS VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17690 @LENGTH@ 36
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 17690 @LENGTH@ 6
+------INS VariableDeclarationFragment@@valueDelta=n.doubleValue() @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 17697 @LENGTH@ 28
+---------INS SimpleName@@valueDelta @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 17697 @LENGTH@ 10
+---------INS MethodInvocation@@n.doubleValue() @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 17710 @LENGTH@ 15
+------------INS SimpleName@@Name:n @TO@ MethodInvocation@@n.doubleValue() @AT@ 17710 @LENGTH@ 1
+------------INS SimpleName@@MethodName:doubleValue:[] @TO@ MethodInvocation@@n.doubleValue() @AT@ 17712 @LENGTH@ 13
+---MOV IfStatement@@InfixExpression:this.errorIndicatorStroke != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 17780 @LENGTH@ 214
+---MOV IfStatement@@InfixExpression:this.errorIndicatorPaint != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 18008 @LENGTH@ 214
+---MOV VariableDeclarationStatement@@Line2D line=null; @TO@ IfStatement@@InfixExpression:n != null @AT@ 18236 @LENGTH@ 19
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d,lowVal,rectX + rectWidth / 2.0d,highVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18269 @LENGTH@ 132
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18415 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d - 5.0d,highVal,rectX + rectWidth / 2.0d + 5.0d,highVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18443 @LENGTH@ 147
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18604 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d - 5.0d,lowVal,rectX + rectWidth / 2.0d + 5.0d,lowVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18632 @LENGTH@ 145
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18791 @LENGTH@ 14
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2 OP3 OP13)
+OP2:   (DEL, PrimitiveType, OP1, null)
+OP3:   (UPD, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (UPD, SimpleName, OP3, null)
+OP5:      (UPD, MethodInvocation, OP3, OP6 OP9 OP10)
+OP6:         (DEL, MethodInvocation, OP5, OP7 OP8)
+OP7:            (DEL, SimpleName, OP6, null)
+OP8:            (DEL, SimpleName, OP6, null)
+OP9:         (DEL, SimpleName, OP5, null)
+OP10:         (INS, SimpleName, OP5, OP11 OP12)
+OP11:            (INS, SimpleName, OP10, null)
+OP12:            (INS, SimpleName, OP10, null)
+OP13:   (INS, SimpleType, OP1, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:meanValue == null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawHorizontalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 9956 @LENGTH@ 56
+---INS InfixExpression@@meanValue == null @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 9960 @LENGTH@ 17
+------INS SimpleName@@meanValue @TO@ InfixExpression@@meanValue == null @AT@ 9960 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@meanValue == null @AT@ 9969 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@meanValue == null @AT@ 9973 @LENGTH@ 4
+---INS ReturnStatement@@ @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 9994 @LENGTH@ 7
+, UPD VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @TO@ Number n=dataset.getStdDevValue(row,column); @AT@ 11823 @LENGTH@ 70
+---DEL PrimitiveType@@double @AT@ 11823 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@valueDelta=dataset.getStdDevValue(row,column).doubleValue() @TO@ n=dataset.getStdDevValue(row,column) @AT@ 11830 @LENGTH@ 62
+------UPD SimpleName@@valueDelta @TO@ n @AT@ 11830 @LENGTH@ 10
+------UPD MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @TO@ dataset.getStdDevValue(row,column) @AT@ 11843 @LENGTH@ 49
+---------DEL MethodInvocation@@MethodName:getStdDevValue:[row, column] @AT@ 11843 @LENGTH@ 35
+------------DEL SimpleName@@row @AT@ 11866 @LENGTH@ 3
+------------DEL SimpleName@@column @AT@ 11871 @LENGTH@ 6
+---------DEL SimpleName@@MethodName:doubleValue:[] @AT@ 11879 @LENGTH@ 13
+---------INS SimpleName@@MethodName:getStdDevValue:[row, column] @TO@ MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @AT@ 11904 @LENGTH@ 27
+------------INS SimpleName@@row @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 11919 @LENGTH@ 3
+------------INS SimpleName@@column @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 11924 @LENGTH@ 6
+---INS SimpleType@@Number @TO@ VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @AT@ 11885 @LENGTH@ 6
+, INS IfStatement@@InfixExpression:n != null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawHorizontalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 11942 @LENGTH@ 1388
+---MOV VariableDeclarationStatement@@double highVal=rangeAxis.valueToJava2D(meanValue.doubleValue() + valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 11907 @LENGTH@ 126
+---INS InfixExpression@@n != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 11946 @LENGTH@ 9
+------INS SimpleName@@n @TO@ InfixExpression@@n != null @AT@ 11946 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@n != null @AT@ 11947 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@n != null @AT@ 11951 @LENGTH@ 4
+---INS VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @TO@ IfStatement@@InfixExpression:n != null @AT@ 11972 @LENGTH@ 36
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 11972 @LENGTH@ 6
+------INS VariableDeclarationFragment@@valueDelta=n.doubleValue() @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 11979 @LENGTH@ 28
+---------INS SimpleName@@valueDelta @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 11979 @LENGTH@ 10
+---------INS MethodInvocation@@n.doubleValue() @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 11992 @LENGTH@ 15
+------------INS SimpleName@@Name:n @TO@ MethodInvocation@@n.doubleValue() @AT@ 11992 @LENGTH@ 1
+------------INS SimpleName@@MethodName:doubleValue:[] @TO@ MethodInvocation@@n.doubleValue() @AT@ 11994 @LENGTH@ 13
+---MOV VariableDeclarationStatement@@double lowVal=rangeAxis.valueToJava2D(meanValue.doubleValue() - valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 12047 @LENGTH@ 125
+---MOV IfStatement@@InfixExpression:this.errorIndicatorStroke != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 12188 @LENGTH@ 214
+---MOV IfStatement@@InfixExpression:this.errorIndicatorPaint != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 12416 @LENGTH@ 214
+---MOV VariableDeclarationStatement@@Line2D line=null; @TO@ IfStatement@@InfixExpression:n != null @AT@ 12654 @LENGTH@ 19
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(lowVal,rectY + rectHeight / 2.0d,highVal,rectY + rectHeight / 2.0d) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12687 @LENGTH@ 135
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12836 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(highVal,rectY + rectHeight * 0.25,highVal,rectY + rectHeight * 0.75) @TO@ IfStatement@@InfixExpression:n != null @AT@ 12864 @LENGTH@ 136
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13014 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(lowVal,rectY + rectHeight * 0.25,lowVal,rectY + rectHeight * 0.75) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13042 @LENGTH@ 134
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 13190 @LENGTH@ 14
+, INS IfStatement@@InfixExpression:meanValue == null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawVerticalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 15674 @LENGTH@ 56
+---INS InfixExpression@@meanValue == null @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 15678 @LENGTH@ 17
+------INS SimpleName@@meanValue @TO@ InfixExpression@@meanValue == null @AT@ 15678 @LENGTH@ 9
+------INS Operator@@== @TO@ InfixExpression@@meanValue == null @AT@ 15687 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@meanValue == null @AT@ 15691 @LENGTH@ 4
+---INS ReturnStatement@@ @TO@ IfStatement@@InfixExpression:meanValue == null @AT@ 15712 @LENGTH@ 7
+, UPD VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @TO@ Number n=dataset.getStdDevValue(row,column); @AT@ 17415 @LENGTH@ 70
+---DEL PrimitiveType@@double @AT@ 17415 @LENGTH@ 6
+---UPD VariableDeclarationFragment@@valueDelta=dataset.getStdDevValue(row,column).doubleValue() @TO@ n=dataset.getStdDevValue(row,column) @AT@ 17422 @LENGTH@ 62
+------UPD SimpleName@@valueDelta @TO@ n @AT@ 17422 @LENGTH@ 10
+------UPD MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @TO@ dataset.getStdDevValue(row,column) @AT@ 17435 @LENGTH@ 49
+---------DEL MethodInvocation@@MethodName:getStdDevValue:[row, column] @AT@ 17435 @LENGTH@ 35
+------------DEL SimpleName@@row @AT@ 17458 @LENGTH@ 3
+------------DEL SimpleName@@column @AT@ 17463 @LENGTH@ 6
+---------DEL SimpleName@@MethodName:doubleValue:[] @AT@ 17471 @LENGTH@ 13
+---------INS SimpleName@@MethodName:getStdDevValue:[row, column] @TO@ MethodInvocation@@dataset.getStdDevValue(row,column).doubleValue() @AT@ 17622 @LENGTH@ 27
+------------INS SimpleName@@row @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 17637 @LENGTH@ 3
+------------INS SimpleName@@column @TO@ SimpleName@@MethodName:getStdDevValue:[row, column] @AT@ 17642 @LENGTH@ 6
+---INS SimpleType@@Number @TO@ VariableDeclarationStatement@@double valueDelta=dataset.getStdDevValue(row,column).doubleValue(); @AT@ 17603 @LENGTH@ 6
+, INS IfStatement@@InfixExpression:n != null @TO@ MethodDeclaration@@protected, @@void, MethodName:drawVerticalItem, @@Argus:Graphics2D+g2+CategoryItemRendererState+state+Rectangle2D+dataArea+CategoryPlot+plot+CategoryAxis+domainAxis+ValueAxis+rangeAxis+StatisticalCategoryDataset+dataset+int+row+int+column+ @AT@ 17660 @LENGTH@ 1397
+---MOV VariableDeclarationStatement@@double highVal=rangeAxis.valueToJava2D(meanValue.doubleValue() + valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17499 @LENGTH@ 126
+---MOV VariableDeclarationStatement@@double lowVal=rangeAxis.valueToJava2D(meanValue.doubleValue() - valueDelta,dataArea,yAxisLocation); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17639 @LENGTH@ 125
+---INS InfixExpression@@n != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 17664 @LENGTH@ 9
+------INS SimpleName@@n @TO@ InfixExpression@@n != null @AT@ 17664 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@n != null @AT@ 17665 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@n != null @AT@ 17669 @LENGTH@ 4
+---INS VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @TO@ IfStatement@@InfixExpression:n != null @AT@ 17690 @LENGTH@ 36
+------INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 17690 @LENGTH@ 6
+------INS VariableDeclarationFragment@@valueDelta=n.doubleValue() @TO@ VariableDeclarationStatement@@double valueDelta=n.doubleValue(); @AT@ 17697 @LENGTH@ 28
+---------INS SimpleName@@valueDelta @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 17697 @LENGTH@ 10
+---------INS MethodInvocation@@n.doubleValue() @TO@ VariableDeclarationFragment@@valueDelta=n.doubleValue() @AT@ 17710 @LENGTH@ 15
+------------INS SimpleName@@Name:n @TO@ MethodInvocation@@n.doubleValue() @AT@ 17710 @LENGTH@ 1
+------------INS SimpleName@@MethodName:doubleValue:[] @TO@ MethodInvocation@@n.doubleValue() @AT@ 17712 @LENGTH@ 13
+---MOV IfStatement@@InfixExpression:this.errorIndicatorStroke != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 17780 @LENGTH@ 214
+---MOV IfStatement@@InfixExpression:this.errorIndicatorPaint != null @TO@ IfStatement@@InfixExpression:n != null @AT@ 18008 @LENGTH@ 214
+---MOV VariableDeclarationStatement@@Line2D line=null; @TO@ IfStatement@@InfixExpression:n != null @AT@ 18236 @LENGTH@ 19
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d,lowVal,rectX + rectWidth / 2.0d,highVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18269 @LENGTH@ 132
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18415 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d - 5.0d,highVal,rectX + rectWidth / 2.0d + 5.0d,highVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18443 @LENGTH@ 147
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18604 @LENGTH@ 14
+---MOV ExpressionStatement@@Assignment:line=new Line2D.Double(rectX + rectWidth / 2.0d - 5.0d,lowVal,rectX + rectWidth / 2.0d + 5.0d,lowVal) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18632 @LENGTH@ 145
+---MOV ExpressionStatement@@MethodInvocation:g2.draw(line) @TO@ IfStatement@@InfixExpression:n != null @AT@ 18791 @LENGTH@ 14
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3 OP4 OP8 OP15 OP16 OP17 OP18 OP19 OP20 OP21 OP22 OP23)
+OP2:   (MOV, VariableDeclarationStatement, OP1, null)
+OP3:   (MOV, VariableDeclarationStatement, OP1, null)
+OP4:   (INS, InfixExpression, OP1, OP5 OP6 OP7)
+OP5:      (INS, SimpleName, OP4, null)
+OP6:      (INS, Operator, OP4, null)
+OP7:      (INS, NullLiteral, OP4, null)
+OP8:   (INS, VariableDeclarationStatement, OP1, OP9 OP10)
+OP9:      (INS, PrimitiveType, OP8, null)
+OP10:      (INS, VariableDeclarationFragment, OP8, OP11 OP12)
+OP11:         (INS, SimpleName, OP10, null)
+OP12:         (INS, MethodInvocation, OP10, OP13 OP14)
+OP13:            (INS, SimpleName, OP12, null)
+OP14:            (INS, SimpleName, OP12, null)
+OP15:   (MOV, IfStatement, OP1, null)
+OP16:   (MOV, IfStatement, OP1, null)
+OP17:   (MOV, VariableDeclarationStatement, OP1, null)
+OP18:   (MOV, ExpressionStatement, OP1, null)
+OP19:   (MOV, ExpressionStatement, OP1, null)
+OP20:   (MOV, ExpressionStatement, OP1, null)
+OP21:   (MOV, ExpressionStatement, OP1, null)
+OP22:   (MOV, ExpressionStatement, OP1, null)
+OP23:   (MOV, ExpressionStatement, OP1, null)
+
+
+

@@ -1,0 +1,156 @@
+
+
+hASList: 
+[INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Arguments cannot both be null") @TO@ IfStatement@@InfixExpression:element != null @AT@ 127661 @LENGTH@ 68
+---INS ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Arguments cannot both be null") @AT@ 127667 @LENGTH@ 61
+------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @AT@ 127667 @LENGTH@ 3
+------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @AT@ 127671 @LENGTH@ 24
+------INS StringLiteral@@"Arguments cannot both be null" @TO@ ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @AT@ 127696 @LENGTH@ 31
+, DEL ExpressionStatement@@Assignment:type=Object.class @AT@ 127661 @LENGTH@ 20
+---DEL Assignment@@type=Object.class @AT@ 127661 @LENGTH@ 19
+------DEL SimpleName@@type @AT@ 127661 @LENGTH@ 4
+------DEL Operator@@= @AT@ 127665 @LENGTH@ 1
+------DEL TypeLiteral@@Object.class @AT@ 127668 @LENGTH@ 12
+, DEL ReturnStatement@@CastExpression:(T[])new Object[]{null} @AT@ 139524 @LENGTH@ 35
+---DEL CastExpression@@(T[])new Object[]{null} @AT@ 139531 @LENGTH@ 27
+------DEL ArrayType@@T[] @AT@ 139532 @LENGTH@ 3
+---------DEL SimpleType@@T @AT@ 139532 @LENGTH@ 1
+------DEL ArrayCreation@@new Object[]{null} @AT@ 139537 @LENGTH@ 21
+---------DEL ArrayType@@Object[] @AT@ 139541 @LENGTH@ 8
+------------DEL SimpleType@@Object @AT@ 139541 @LENGTH@ 6
+---------DEL ArrayInitializer@@{null} @AT@ 139550 @LENGTH@ 8
+------------DEL NullLiteral@@null @AT@ 139552 @LENGTH@ 4
+, INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Array and element cannot both be null") @TO@ IfStatement@@InfixExpression:element != null @AT@ 139584 @LENGTH@ 76
+---INS ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Array and element cannot both be null") @AT@ 139590 @LENGTH@ 69
+------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @AT@ 139590 @LENGTH@ 3
+------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @AT@ 139594 @LENGTH@ 24
+------INS StringLiteral@@"Array and element cannot both be null" @TO@ ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @AT@ 139619 @LENGTH@ 39
+]
+
+CII:
+OP1:(INS, ThrowStatement, null, OP2)
+OP2:   (INS, ClassInstanceCreation, OP1, OP3 OP4 OP5)
+OP3:      (INS, New, OP2, null)
+OP4:      (INS, SimpleType, OP2, null)
+OP5:      (INS, StringLiteral, OP2, null)
+
+
+
+
+
+hASList: 
+[INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Arguments cannot both be null") @TO@ IfStatement@@InfixExpression:element != null @AT@ 127661 @LENGTH@ 68
+---INS ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Arguments cannot both be null") @AT@ 127667 @LENGTH@ 61
+------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @AT@ 127667 @LENGTH@ 3
+------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @AT@ 127671 @LENGTH@ 24
+------INS StringLiteral@@"Arguments cannot both be null" @TO@ ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @AT@ 127696 @LENGTH@ 31
+, DEL ExpressionStatement@@Assignment:type=Object.class @AT@ 127661 @LENGTH@ 20
+---DEL Assignment@@type=Object.class @AT@ 127661 @LENGTH@ 19
+------DEL SimpleName@@type @AT@ 127661 @LENGTH@ 4
+------DEL Operator@@= @AT@ 127665 @LENGTH@ 1
+------DEL TypeLiteral@@Object.class @AT@ 127668 @LENGTH@ 12
+, DEL ReturnStatement@@CastExpression:(T[])new Object[]{null} @AT@ 139524 @LENGTH@ 35
+---DEL CastExpression@@(T[])new Object[]{null} @AT@ 139531 @LENGTH@ 27
+------DEL ArrayType@@T[] @AT@ 139532 @LENGTH@ 3
+---------DEL SimpleType@@T @AT@ 139532 @LENGTH@ 1
+------DEL ArrayCreation@@new Object[]{null} @AT@ 139537 @LENGTH@ 21
+---------DEL ArrayType@@Object[] @AT@ 139541 @LENGTH@ 8
+------------DEL SimpleType@@Object @AT@ 139541 @LENGTH@ 6
+---------DEL ArrayInitializer@@{null} @AT@ 139550 @LENGTH@ 8
+------------DEL NullLiteral@@null @AT@ 139552 @LENGTH@ 4
+, INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Array and element cannot both be null") @TO@ IfStatement@@InfixExpression:element != null @AT@ 139584 @LENGTH@ 76
+---INS ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Array and element cannot both be null") @AT@ 139590 @LENGTH@ 69
+------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @AT@ 139590 @LENGTH@ 3
+------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @AT@ 139594 @LENGTH@ 24
+------INS StringLiteral@@"Array and element cannot both be null" @TO@ ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @AT@ 139619 @LENGTH@ 39
+]
+
+CII:
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, TypeLiteral, OP2, null)
+
+
+
+
+
+hASList: 
+[INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Arguments cannot both be null") @TO@ IfStatement@@InfixExpression:element != null @AT@ 127661 @LENGTH@ 68
+---INS ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Arguments cannot both be null") @AT@ 127667 @LENGTH@ 61
+------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @AT@ 127667 @LENGTH@ 3
+------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @AT@ 127671 @LENGTH@ 24
+------INS StringLiteral@@"Arguments cannot both be null" @TO@ ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @AT@ 127696 @LENGTH@ 31
+, DEL ExpressionStatement@@Assignment:type=Object.class @AT@ 127661 @LENGTH@ 20
+---DEL Assignment@@type=Object.class @AT@ 127661 @LENGTH@ 19
+------DEL SimpleName@@type @AT@ 127661 @LENGTH@ 4
+------DEL Operator@@= @AT@ 127665 @LENGTH@ 1
+------DEL TypeLiteral@@Object.class @AT@ 127668 @LENGTH@ 12
+, DEL ReturnStatement@@CastExpression:(T[])new Object[]{null} @AT@ 139524 @LENGTH@ 35
+---DEL CastExpression@@(T[])new Object[]{null} @AT@ 139531 @LENGTH@ 27
+------DEL ArrayType@@T[] @AT@ 139532 @LENGTH@ 3
+---------DEL SimpleType@@T @AT@ 139532 @LENGTH@ 1
+------DEL ArrayCreation@@new Object[]{null} @AT@ 139537 @LENGTH@ 21
+---------DEL ArrayType@@Object[] @AT@ 139541 @LENGTH@ 8
+------------DEL SimpleType@@Object @AT@ 139541 @LENGTH@ 6
+---------DEL ArrayInitializer@@{null} @AT@ 139550 @LENGTH@ 8
+------------DEL NullLiteral@@null @AT@ 139552 @LENGTH@ 4
+, INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Array and element cannot both be null") @TO@ IfStatement@@InfixExpression:element != null @AT@ 139584 @LENGTH@ 76
+---INS ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Array and element cannot both be null") @AT@ 139590 @LENGTH@ 69
+------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @AT@ 139590 @LENGTH@ 3
+------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @AT@ 139594 @LENGTH@ 24
+------INS StringLiteral@@"Array and element cannot both be null" @TO@ ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @AT@ 139619 @LENGTH@ 39
+]
+
+CII:
+OP1:(DEL, ReturnStatement, null, OP2)
+OP2:   (DEL, CastExpression, OP1, OP3 OP5)
+OP3:      (DEL, ArrayType, OP2, OP4)
+OP4:         (DEL, SimpleType, OP3, null)
+OP5:      (DEL, ArrayCreation, OP2, OP6 OP8)
+OP6:         (DEL, ArrayType, OP5, OP7)
+OP7:            (DEL, SimpleType, OP6, null)
+OP8:         (DEL, ArrayInitializer, OP5, OP9)
+OP9:            (DEL, NullLiteral, OP8, null)
+
+
+
+
+
+hASList: 
+[INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Arguments cannot both be null") @TO@ IfStatement@@InfixExpression:element != null @AT@ 127661 @LENGTH@ 68
+---INS ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Arguments cannot both be null") @AT@ 127667 @LENGTH@ 61
+------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @AT@ 127667 @LENGTH@ 3
+------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @AT@ 127671 @LENGTH@ 24
+------INS StringLiteral@@"Arguments cannot both be null" @TO@ ClassInstanceCreation@@IllegalArgumentException["Arguments cannot both be null"] @AT@ 127696 @LENGTH@ 31
+, DEL ExpressionStatement@@Assignment:type=Object.class @AT@ 127661 @LENGTH@ 20
+---DEL Assignment@@type=Object.class @AT@ 127661 @LENGTH@ 19
+------DEL SimpleName@@type @AT@ 127661 @LENGTH@ 4
+------DEL Operator@@= @AT@ 127665 @LENGTH@ 1
+------DEL TypeLiteral@@Object.class @AT@ 127668 @LENGTH@ 12
+, DEL ReturnStatement@@CastExpression:(T[])new Object[]{null} @AT@ 139524 @LENGTH@ 35
+---DEL CastExpression@@(T[])new Object[]{null} @AT@ 139531 @LENGTH@ 27
+------DEL ArrayType@@T[] @AT@ 139532 @LENGTH@ 3
+---------DEL SimpleType@@T @AT@ 139532 @LENGTH@ 1
+------DEL ArrayCreation@@new Object[]{null} @AT@ 139537 @LENGTH@ 21
+---------DEL ArrayType@@Object[] @AT@ 139541 @LENGTH@ 8
+------------DEL SimpleType@@Object @AT@ 139541 @LENGTH@ 6
+---------DEL ArrayInitializer@@{null} @AT@ 139550 @LENGTH@ 8
+------------DEL NullLiteral@@null @AT@ 139552 @LENGTH@ 4
+, INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Array and element cannot both be null") @TO@ IfStatement@@InfixExpression:element != null @AT@ 139584 @LENGTH@ 76
+---INS ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Array and element cannot both be null") @AT@ 139590 @LENGTH@ 69
+------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @AT@ 139590 @LENGTH@ 3
+------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @AT@ 139594 @LENGTH@ 24
+------INS StringLiteral@@"Array and element cannot both be null" @TO@ ClassInstanceCreation@@IllegalArgumentException["Array and element cannot both be null"] @AT@ 139619 @LENGTH@ 39
+]
+
+CII:
+OP1:(INS, ThrowStatement, null, OP2)
+OP2:   (INS, ClassInstanceCreation, OP1, OP3 OP4 OP5)
+OP3:      (INS, New, OP2, null)
+OP4:      (INS, SimpleType, OP2, null)
+OP5:      (INS, StringLiteral, OP2, null)
+
+
+

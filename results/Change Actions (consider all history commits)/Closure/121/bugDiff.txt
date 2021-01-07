@@ -1,0 +1,18 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_121/src/com/google/javascript/jscomp/InlineVariables.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_121/src/com/google/javascript/jscomp/InlineVariables.java
+--- ../d4j-repo/Closure/Closure_121/src/com/google/javascript/jscomp/InlineVariables.java	2021-01-06 03:48:55.210541176 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_121/src/com/google/javascript/jscomp/InlineVariables.java	2021-01-06 03:48:58.154641462 -0800
+@@ -301,10 +301,12 @@
+       if (!maybeModifiedArguments &&
+           !staleVars.contains(v) &&
+           referenceInfo.isWellDefined() &&
+-          referenceInfo.isAssignedOnceInLifetime()) {
++          referenceInfo.isAssignedOnceInLifetime() &&
+           // Inlining the variable based solely on well-defined and assigned
+           // once is *NOT* correct. We relax the correctness requirement if
+           // the variable is declared constant.
++          (isInlineableDeclaredConstant(v, referenceInfo) ||
++           referenceInfo.isOnlyAssignmentSameScopeAsDeclaration())) {
+         List<Reference> refs = referenceInfo.references;
+         for (int i = 1 /* start from a read */; i < refs.size(); i++) {
+           Node nameNode = refs.get(i).getNode();

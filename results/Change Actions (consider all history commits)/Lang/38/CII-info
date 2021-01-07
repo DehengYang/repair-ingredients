@@ -1,0 +1,17 @@
+
+
+hASList: 
+[INS ExpressionStatement@@MethodInvocation:calendar.getTime() @TO@ IfStatement@@SimpleName:mTimeZoneForced @AT@ 31738 @LENGTH@ 19
+---INS MethodInvocation@@calendar.getTime() @TO@ ExpressionStatement@@MethodInvocation:calendar.getTime() @AT@ 31738 @LENGTH@ 18
+------INS SimpleName@@Name:calendar @TO@ MethodInvocation@@calendar.getTime() @AT@ 31738 @LENGTH@ 8
+------INS SimpleName@@MethodName:getTime:[] @TO@ MethodInvocation@@calendar.getTime() @AT@ 31747 @LENGTH@ 9
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, OP3 OP4)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, SimpleName, OP2, null)
+
+
+

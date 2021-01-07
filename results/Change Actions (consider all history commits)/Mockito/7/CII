@@ -1,0 +1,10 @@
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, OP3)
+OP3:      (INS, SimpleName, OP2, OP4)
+OP4:         (INS, ArrayCreation, OP3, OP5 OP7)
+OP5:            (INS, ArrayType, OP4, OP6)
+OP6:               (INS, SimpleType, OP5, null)
+OP7:            (INS, ArrayInitializer, OP4, OP8)
+OP8:               (INS, SimpleName, OP7, null)
+
+

@@ -1,0 +1,13 @@
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@final int n1n2prod=n1 * n2; @TO@ final double n1n2prod=n1 * n2; @AT@ 6401 @LENGTH@ 29
+---UPD PrimitiveType@@int @TO@ double @AT@ 6407 @LENGTH@ 3
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, PrimitiveType, OP1, null)
+
+
+

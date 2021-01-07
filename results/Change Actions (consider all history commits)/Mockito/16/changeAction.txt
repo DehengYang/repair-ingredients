@@ -1,0 +1,43 @@
+OP1:(DEL, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP10 OP13 OP16)
+OP2:   (DEL, Modifier, OP1, null)
+OP3:   (DEL, SimpleType, OP1, null)
+OP4:   (DEL, SimpleName, OP1, null)
+OP5:   (DEL, SingleVariableDeclaration, OP1, OP6 OP9)
+OP6:      (DEL, ParameterizedType, OP5, OP7 OP8)
+OP7:         (DEL, SimpleType, OP6, null)
+OP8:         (DEL, SimpleType, OP6, null)
+OP9:      (DEL, SimpleName, OP5, null)
+OP10:   (DEL, SingleVariableDeclaration, OP1, OP11 OP12)
+OP11:      (DEL, SimpleType, OP10, null)
+OP12:      (DEL, SimpleName, OP10, null)
+OP13:   (DEL, SingleVariableDeclaration, OP1, OP14 OP15)
+OP14:      (DEL, PrimitiveType, OP13, null)
+OP15:      (DEL, SimpleName, OP13, null)
+OP16:   (DEL, ReturnStatement, OP1, OP17)
+OP17:      (DEL, MethodInvocation, OP16, OP18)
+OP18:         (DEL, SimpleName, OP17, OP19 OP20)
+OP19:            (DEL, SimpleName, OP18, null)
+OP20:            (DEL, SimpleName, OP18, null)
+
+
+OP1:(UPD, MethodDeclaration, null, OP2 OP5)
+OP2:   (INS, SingleVariableDeclaration, OP1, OP3 OP4)
+OP3:      (INS, PrimitiveType, OP2, null)
+OP4:      (INS, SimpleName, OP2, null)
+OP5:   (INS, IfStatement, OP1, OP6 OP7)
+OP6:      (INS, SimpleName, OP5, null)
+OP7:      (MOV, ExpressionStatement, OP5, null)
+
+
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (INS, BooleanLiteral, OP3, null)
+
+
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (INS, BooleanLiteral, OP3, null)
+
+

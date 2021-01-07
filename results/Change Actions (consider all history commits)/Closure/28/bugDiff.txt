@@ -1,0 +1,14 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_28/src/com/google/javascript/jscomp/InlineCostEstimator.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_28/src/com/google/javascript/jscomp/InlineCostEstimator.java
+--- ../d4j-repo/Closure/Closure_28/src/com/google/javascript/jscomp/InlineCostEstimator.java	2021-01-06 03:41:56.224270880 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_28/src/com/google/javascript/jscomp/InlineCostEstimator.java	2021-01-06 03:41:58.160336812 -0800
+@@ -99,5 +99,9 @@
+      * Constants (true, false, null) are considered basically free,
+      * because it's likely that they will get folded when we're done.
+      */
++    @Override
++    void addConstant(String newcode) {
++      add("0");
++    }
+   }
+ }

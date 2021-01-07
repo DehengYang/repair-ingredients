@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Mockito/Mockito_8/src/org/mockito/internal/util/reflection/GenericMetadataSupport.java ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_8/src/org/mockito/internal/util/reflection/GenericMetadataSupport.java
+--- ../d4j-repo/Mockito/Mockito_8/src/org/mockito/internal/util/reflection/GenericMetadataSupport.java	2021-01-06 03:34:23.004838945 -0800
++++ ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_8/src/org/mockito/internal/util/reflection/GenericMetadataSupport.java	2021-01-06 03:34:26.736966003 -0800
+@@ -76,7 +76,7 @@
+ 
+             if (actualTypeArgument instanceof WildcardType) {
+                 contextualActualTypeParameters.put(typeParameter, boundsOf((WildcardType) actualTypeArgument));
+-            } else {
++            } else if (typeParameter != actualTypeArgument) {
+                 contextualActualTypeParameters.put(typeParameter, actualTypeArgument);
+             }
+             // logger.log("For '" + parameterizedType + "' found type variable : { '" + typeParameter + "(" + System.identityHashCode(typeParameter) + ")" + "' : '" + actualTypeArgument + "(" + System.identityHashCode(typeParameter) + ")" + "' }");

@@ -1,0 +1,51 @@
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (INS, MethodInvocation, OP3, OP5 OP6)
+OP5:            (INS, SimpleName, OP4, null)
+OP6:            (INS, SimpleName, OP4, null)
+
+
+OP1:(UPD, MethodDeclaration, null, OP2 OP6)
+OP2:   (INS, SingleVariableDeclaration, OP1, OP3 OP4 OP5)
+OP3:      (INS, Modifier, OP2, null)
+OP4:      (INS, SimpleType, OP2, null)
+OP5:      (INS, SimpleName, OP2, null)
+OP6:   (UPD, IfStatement, OP1, OP7)
+OP7:      (UPD, MethodInvocation, OP6, OP8)
+OP8:         (UPD, SimpleName, OP7, null)
+
+
+OP1:(INS, SwitchCase, null, OP2)
+OP2:   (INS, QualifiedName, OP1, OP3 OP4)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, SimpleName, OP2, null)
+
+
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, SimpleType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, OP8)
+OP8:            (INS, MethodInvocation, OP7, OP9 OP10)
+OP9:               (INS, SimpleName, OP8, null)
+OP10:               (INS, SimpleName, OP8, null)
+
+
+OP1:(INS, IfStatement, null, OP2 OP12)
+OP2:   (INS, InfixExpression, OP1, OP3 OP7 OP8)
+OP3:      (INS, InfixExpression, OP2, OP4 OP5 OP6)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, Operator, OP3, null)
+OP6:         (INS, NullLiteral, OP3, null)
+OP7:      (INS, Operator, OP2, null)
+OP8:      (INS, MethodInvocation, OP2, OP9 OP10 OP11)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, MethodInvocation, OP8, null)
+OP11:         (INS, SimpleName, OP8, null)
+OP12:   (INS, ReturnStatement, OP1, OP13)
+OP13:      (INS, BooleanLiteral, OP12, null)
+
+

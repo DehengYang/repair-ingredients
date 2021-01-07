@@ -1,0 +1,16 @@
+
+diff -Naur ../d4j-repo/Time/Time_24/src/main/java/org/joda/time/format/DateTimeParserBucket.java ../d4j-repo/fixed_bugs_dir/Time/Time_24/src/main/java/org/joda/time/format/DateTimeParserBucket.java
+--- ../d4j-repo/Time/Time_24/src/main/java/org/joda/time/format/DateTimeParserBucket.java	2021-01-06 03:39:13.062714755 -0800
++++ ../d4j-repo/fixed_bugs_dir/Time/Time_24/src/main/java/org/joda/time/format/DateTimeParserBucket.java	2021-01-06 03:39:14.866776185 -0800
+@@ -352,6 +352,11 @@
+             for (int i = 0; i < count; i++) {
+                 millis = savedFields[i].set(millis, resetFields);
+             }
++            if (resetFields) {
++                for (int i = 0; i < count; i++) {
++                    millis = savedFields[i].set(millis, i == (count - 1));
++                }
++            }
+         } catch (IllegalFieldValueException e) {
+             if (text != null) {
+                 e.prependMessage("Cannot parse \"" + text + '"');

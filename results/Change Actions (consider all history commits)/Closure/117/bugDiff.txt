@@ -1,0 +1,44 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_117/src/com/google/javascript/jscomp/TypeValidator.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_117/src/com/google/javascript/jscomp/TypeValidator.java
+--- ../d4j-repo/Closure/Closure_117/src/com/google/javascript/jscomp/TypeValidator.java	2021-01-06 03:48:31.161721998 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_117/src/com/google/javascript/jscomp/TypeValidator.java	2021-01-06 03:48:34.209825826 -0800
+@@ -722,8 +722,20 @@
+    *     to an Object type, if possible.
+    */
+   String getReadableJSTypeName(Node n, boolean dereference) {
++    JSType type = getJSType(n);
++    if (dereference) {
++      ObjectType dereferenced = type.dereference();
++      if (dereferenced != null) {
++        type = dereferenced;
++      }
++    }
+ 
+     // The best type name is the actual type name.
++    if (type.isFunctionPrototypeType() ||
++        (type.toObjectType() != null &&
++         type.toObjectType().getConstructor() != null)) {
++      return type.toString();
++    }
+ 
+     // If we're analyzing a GETPROP, the property may be inherited by the
+     // prototype chain. So climb the prototype chain and find out where
+@@ -753,18 +765,6 @@
+       }
+     }
+ 
+-    JSType type = getJSType(n);
+-    if (dereference) {
+-      ObjectType dereferenced = type.dereference();
+-      if (dereferenced != null) {
+-        type = dereferenced;
+-      }
+-    }
+-    if (type.isFunctionPrototypeType() ||
+-        (type.toObjectType() != null &&
+-         type.toObjectType().getConstructor() != null)) {
+-      return type.toString();
+-    }
+     String qualifiedName = n.getQualifiedName();
+     if (qualifiedName != null) {
+       return qualifiedName;

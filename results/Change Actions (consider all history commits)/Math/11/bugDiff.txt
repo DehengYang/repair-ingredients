@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Math/Math_11/src/main/java/org/apache/commons/math3/distribution/MultivariateNormalDistribution.java ../d4j-repo/fixed_bugs_dir/Math/Math_11/src/main/java/org/apache/commons/math3/distribution/MultivariateNormalDistribution.java
+--- ../d4j-repo/Math/Math_11/src/main/java/org/apache/commons/math3/distribution/MultivariateNormalDistribution.java	2021-01-04 22:57:43.669104475 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_11/src/main/java/org/apache/commons/math3/distribution/MultivariateNormalDistribution.java	2021-01-04 22:57:47.249238713 -0800
+@@ -180,7 +180,7 @@
+             throw new DimensionMismatchException(vals.length, dim);
+         }
+ 
+-        return FastMath.pow(2 * FastMath.PI, -dim / 2) *
++        return FastMath.pow(2 * FastMath.PI, -0.5 * dim) *
+             FastMath.pow(covarianceMatrixDeterminant, -0.5) *
+             getExponentTerm(vals);
+     }

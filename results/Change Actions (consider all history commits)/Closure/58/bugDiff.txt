@@ -1,0 +1,17 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_58/src/com/google/javascript/jscomp/LiveVariablesAnalysis.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_58/src/com/google/javascript/jscomp/LiveVariablesAnalysis.java
+--- ../d4j-repo/Closure/Closure_58/src/com/google/javascript/jscomp/LiveVariablesAnalysis.java	2021-01-06 03:43:56.136354604 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_58/src/com/google/javascript/jscomp/LiveVariablesAnalysis.java	2021-01-06 03:43:58.152423266 -0800
+@@ -203,8 +203,12 @@
+             // for(var x in y) {...}
+             lhs = lhs.getLastChild();
+           }
++          if (NodeUtil.isName(lhs)) {
+             addToSetIfLocal(lhs, kill);
+             addToSetIfLocal(lhs, gen);
++          } else {
++            computeGenKill(lhs, gen, kill, conditional);
++          }
+           computeGenKill(rhs, gen, kill, conditional);
+         }
+         return;

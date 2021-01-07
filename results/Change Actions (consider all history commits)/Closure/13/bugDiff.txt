@@ -1,0 +1,14 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_13/src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_13/src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java
+--- ../d4j-repo/Closure/Closure_13/src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java	2021-01-06 03:40:55.230193785 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_13/src/com/google/javascript/jscomp/PeepholeOptimizationsPass.java	2021-01-06 03:40:58.186294451 -0800
+@@ -123,8 +123,8 @@
+     do {
+       Node c = node.getFirstChild();
+       while(c != null) {
+-        traverse(c);
+         Node next = c.getNext();
++        traverse(c);
+         c = next;
+       }
+ 

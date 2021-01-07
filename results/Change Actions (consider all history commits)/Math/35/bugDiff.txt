@@ -1,0 +1,22 @@
+
+diff -Naur ../d4j-repo/Math/Math_35/src/main/java/org/apache/commons/math3/genetics/ElitisticListPopulation.java ../d4j-repo/fixed_bugs_dir/Math/Math_35/src/main/java/org/apache/commons/math3/genetics/ElitisticListPopulation.java
+--- ../d4j-repo/Math/Math_35/src/main/java/org/apache/commons/math3/genetics/ElitisticListPopulation.java	2021-01-04 23:00:46.435956214 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_35/src/main/java/org/apache/commons/math3/genetics/ElitisticListPopulation.java	2021-01-04 23:00:50.192096969 -0800
+@@ -48,7 +48,7 @@
+                                    final int populationLimit,
+                                    final double elitismRate) {
+         super(chromosomes, populationLimit);
+-        this.elitismRate = elitismRate;
++        setElitismRate(elitismRate);
+     }
+ 
+     /**
+@@ -62,7 +62,7 @@
+      */
+     public ElitisticListPopulation(final int populationLimit, final double elitismRate) {
+         super(populationLimit);
+-        this.elitismRate = elitismRate;
++        setElitismRate(elitismRate);
+     }
+ 
+     /**

@@ -1,0 +1,2305 @@
+
+
+hASList: 
+[UPD ExpressionStatement@@MethodInvocation:setMaxEvaluations(Integer.MAX_VALUE) @TO@ MethodInvocation:setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 37
+---UPD MethodInvocation@@setMaxEvaluations(Integer.MAX_VALUE) @TO@ setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 36
+------UPD SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @TO@ MethodName:setMaxEvaluations:[1000] @AT@ 1775 @LENGTH@ 36
+---------INS NumberLiteral@@1000 @TO@ SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @AT@ 1793 @LENGTH@ 4
+---------DEL QualifiedName@@Integer.MAX_VALUE @AT@ 1793 @LENGTH@ 17
+------------DEL SimpleName@@Integer @AT@ 1793 @LENGTH@ 7
+------------DEL SimpleName@@MAX_VALUE @AT@ 1801 @LENGTH@ 9
+, UPD ExpressionStatement@@MethodInvocation:setAbsoluteAccuracy(1E-10) @TO@ MethodInvocation:setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 27
+---UPD MethodInvocation@@setAbsoluteAccuracy(1E-10) @TO@ setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 26
+------UPD SimpleName@@MethodName:setAbsoluteAccuracy:[1E-10] @TO@ MethodName:setAbsoluteAccuracy:[1e-11] @AT@ 1860 @LENGTH@ 26
+---------UPD NumberLiteral@@1E-10 @TO@ 1e-11 @AT@ 1880 @LENGTH@ 5
+, UPD ExpressionStatement@@MethodInvocation:setRelativeAccuracy(1.0e-14) @TO@ MethodInvocation:setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 29
+---UPD MethodInvocation@@setRelativeAccuracy(1.0e-14) @TO@ setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 28
+------UPD SimpleName@@MethodName:setRelativeAccuracy:[1.0e-14] @TO@ MethodName:setRelativeAccuracy:[1e-9] @AT@ 1896 @LENGTH@ 28
+---------UPD NumberLiteral@@1.0e-14 @TO@ 1e-9 @AT@ 1916 @LENGTH@ 7
+, DEL ThrowStatement@@ClassInstanceCreation:new UnsupportedOperationException() @AT@ 2136 @LENGTH@ 42
+---DEL ClassInstanceCreation@@UnsupportedOperationException[] @AT@ 2142 @LENGTH@ 35
+------DEL New@@new @AT@ 2142 @LENGTH@ 3
+------DEL SimpleType@@UnsupportedOperationException @AT@ 2146 @LENGTH@ 29
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+double+startValue+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2189 @LENGTH@ 428
+---DEL Modifier@@public @AT@ 2189 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2196 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2203 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2212 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2212 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2218 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2241 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2244 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2244 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2250 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2259 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2269 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2269 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2275 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2282 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2287 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2287 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2293 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2300 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double startValue @AT@ 2305 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2305 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2311 @LENGTH@ 6
+------DEL SimpleName@@startValue @AT@ 2318 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:clearResult() @AT@ 2407 @LENGTH@ 14
+------DEL MethodInvocation@@MethodName:clearResult:[] @AT@ 2407 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2430 @LENGTH@ 181
+---UPD MethodInvocation@@localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2437 @LENGTH@ 173
+------UPD SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @TO@ MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, getMin(), getStartValue(), getMax(), getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2437 @LENGTH@ 173
+---------INS MethodInvocation@@MethodName:getMin:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2196 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:getStartValue:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2206 @LENGTH@ 15
+---------INS MethodInvocation@@MethodName:getMax:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2223 @LENGTH@ 8
+---------DEL SimpleName@@f @AT@ 2506 @LENGTH@ 1
+---------DEL SimpleName@@goalType @AT@ 2509 @LENGTH@ 8
+---------DEL SimpleName@@min @AT@ 2519 @LENGTH@ 3
+---------DEL SimpleName@@startValue @AT@ 2524 @LENGTH@ 10
+---------DEL SimpleName@@max @AT@ 2536 @LENGTH@ 3
+, MOV ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodDeclaration@@protected, @@double, MethodName:doOptimize, @@Argus:nullMaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2430 @LENGTH@ 181
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2622 @LENGTH@ 274
+---DEL Modifier@@public @AT@ 2622 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2629 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2636 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2645 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2645 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2651 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2674 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2677 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2677 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2683 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2692 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2702 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2702 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2708 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2715 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2720 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2720 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2726 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2733 @LENGTH@ 3
+---DEL ReturnStatement@@MethodInvocation:optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2815 @LENGTH@ 75
+------DEL MethodInvocation@@optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2822 @LENGTH@ 67
+---------DEL SimpleName@@MethodName:optimize:[f, goalType, min, max, min + GOLDEN_SECTION * (max - min)] @AT@ 2822 @LENGTH@ 67
+------------DEL SimpleName@@f @AT@ 2831 @LENGTH@ 1
+------------DEL SimpleName@@goalType @AT@ 2834 @LENGTH@ 8
+------------DEL SimpleName@@min @AT@ 2844 @LENGTH@ 3
+------------DEL SimpleName@@max @AT@ 2849 @LENGTH@ 3
+------------DEL InfixExpression@@min + GOLDEN_SECTION * (max - min) @AT@ 2854 @LENGTH@ 34
+---------------DEL SimpleName@@min @AT@ 2854 @LENGTH@ 3
+---------------DEL Operator@@+ @AT@ 2857 @LENGTH@ 1
+---------------DEL InfixExpression@@GOLDEN_SECTION * (max - min) @AT@ 2860 @LENGTH@ 28
+------------------DEL SimpleName@@GOLDEN_SECTION @AT@ 2860 @LENGTH@ 14
+------------------DEL Operator@@* @AT@ 2874 @LENGTH@ 1
+------------------DEL ParenthesizedExpression@@(max - min) @AT@ 2877 @LENGTH@ 11
+---------------------DEL InfixExpression@@max - min @AT@ 2878 @LENGTH@ 9
+------------------------DEL SimpleName@@max @AT@ 2878 @LENGTH@ 3
+------------------------DEL Operator@@- @AT@ 2881 @LENGTH@ 1
+------------------------DEL SimpleName@@min @AT@ 2884 @LENGTH@ 3
+, UPD MethodDeclaration@@private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+UnivariateRealFunction+f+GoalType+goalType+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @TO@ private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2902 @LENGTH@ 6029
+---DEL SingleVariableDeclaration@@UnivariateRealFunction f @AT@ 4182 @LENGTH@ 24
+------DEL SimpleType@@UnivariateRealFunction @AT@ 4182 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 4205 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@GoalType goalType @AT@ 4236 @LENGTH@ 17
+------DEL SimpleType@@GoalType @AT@ 4236 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 4245 @LENGTH@ 8
+---UPD VariableDeclarationStatement@@double fx=computeObjectiveValue(f,x); @TO@ double fx=computeObjectiveValue(x); @AT@ 4894 @LENGTH@ 40
+------UPD VariableDeclarationFragment@@fx=computeObjectiveValue(f,x) @TO@ fx=computeObjectiveValue(x) @AT@ 4901 @LENGTH@ 32
+---------UPD MethodInvocation@@computeObjectiveValue(f,x) @TO@ computeObjectiveValue(x) @AT@ 4906 @LENGTH@ 27
+------------UPD SimpleName@@MethodName:computeObjectiveValue:[f, x] @TO@ MethodName:computeObjectiveValue:[x] @AT@ 4906 @LENGTH@ 27
+---------------DEL SimpleName@@f @AT@ 4928 @LENGTH@ 1
+---UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 4943 @LENGTH@ 68
+------INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 4256 @LENGTH@ 8
+---------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 4256 @LENGTH@ 1
+---------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 4257 @LENGTH@ 7
+------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 4947 @LENGTH@ 29
+---------DEL SimpleName@@goalType @AT@ 4947 @LENGTH@ 8
+---------DEL Operator@@== @AT@ 4955 @LENGTH@ 2
+---------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 4959 @LENGTH@ 17
+------------DEL SimpleName@@GoalType @AT@ 4959 @LENGTH@ 8
+------------DEL SimpleName@@MAXIMIZE @AT@ 4968 @LENGTH@ 8
+---DEL VariableDeclarationStatement@@int count=0; @AT@ 5069 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 5069 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@count=0 @AT@ 5073 @LENGTH@ 9
+---------DEL SimpleName@@count @AT@ 5073 @LENGTH@ 5
+---------DEL NumberLiteral@@0 @AT@ 5081 @LENGTH@ 1
+---UPD WhileStatement@@InfixExpression:count < maximalIterationCount @TO@ BooleanLiteral:true @AT@ 5092 @LENGTH@ 3760
+------INS BooleanLiteral@@true @TO@ WhileStatement@@InfixExpression:count < maximalIterationCount @AT@ 4364 @LENGTH@ 4
+------DEL InfixExpression@@count < maximalIterationCount @AT@ 5099 @LENGTH@ 29
+---------DEL SimpleName@@count @AT@ 5099 @LENGTH@ 5
+---------DEL Operator@@< @AT@ 5104 @LENGTH@ 1
+---------DEL SimpleName@@maximalIterationCount @AT@ 5107 @LENGTH@ 21
+------UPD ExpressionStatement@@PrefixExpression:++count @TO@ MethodInvocation:incrementIterationsCounter() @AT@ 8834 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:incrementIterationsCounter:[] @TO@ ExpressionStatement@@PrefixExpression:++count @AT@ 8023 @LENGTH@ 28
+---------DEL PrefixExpression@@++count @AT@ 8834 @LENGTH@ 7
+------------DEL Operator@@++ @AT@ 8834 @LENGTH@ 2
+------------DEL SimpleName@@count @AT@ 8836 @LENGTH@ 5
+---DEL ThrowStatement@@ClassInstanceCreation:new MaxIterationsExceededException(maximalIterationCount) @AT@ 8861 @LENGTH@ 64
+------DEL ClassInstanceCreation@@MaxIterationsExceededException[maximalIterationCount] @AT@ 8867 @LENGTH@ 57
+---------DEL New@@new @AT@ 8867 @LENGTH@ 3
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 8871 @LENGTH@ 30
+---------DEL SimpleName@@maximalIterationCount @AT@ 8902 @LENGTH@ 21
+, UPD VariableDeclarationStatement@@double fu=computeObjectiveValue(f,u); @TO@ double fu=computeObjectiveValue(u); @AT@ 7534 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@fu=computeObjectiveValue(f,u) @TO@ fu=computeObjectiveValue(u) @AT@ 7541 @LENGTH@ 32
+------UPD MethodInvocation@@computeObjectiveValue(f,u) @TO@ computeObjectiveValue(u) @AT@ 7546 @LENGTH@ 27
+---------UPD SimpleName@@MethodName:computeObjectiveValue:[f, u] @TO@ MethodName:computeObjectiveValue:[u] @AT@ 7546 @LENGTH@ 27
+------------DEL SimpleName@@f @AT@ 7568 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 7591 @LENGTH@ 84
+---INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 6832 @LENGTH@ 8
+------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 6832 @LENGTH@ 1
+------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 6833 @LENGTH@ 7
+---DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 7595 @LENGTH@ 29
+------DEL SimpleName@@goalType @AT@ 7595 @LENGTH@ 8
+------DEL Operator@@== @AT@ 7603 @LENGTH@ 2
+------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 7607 @LENGTH@ 17
+---------DEL SimpleName@@GoalType @AT@ 7607 @LENGTH@ 8
+---------DEL SimpleName@@MAXIMIZE @AT@ 7616 @LENGTH@ 8
+, UPD ExpressionStatement@@MethodInvocation:setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ MethodInvocation:setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 64
+---UPD MethodInvocation@@setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 63
+------UPD SimpleName@@MethodName:setResult:[x, (goalType == GoalType.MAXIMIZE) ? -fx : fx, count] @TO@ MethodName:setFunctionValue:[isMinim ? fx : -fx] @AT@ 8717 @LENGTH@ 63
+---------DEL SimpleName@@x @AT@ 8727 @LENGTH@ 1
+---------UPD ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @TO@ isMinim ? fx : -fx @AT@ 8730 @LENGTH@ 42
+------------INS SimpleName@@isMinim @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7950 @LENGTH@ 7
+------------INS SimpleName@@fx @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7960 @LENGTH@ 2
+------------DEL ParenthesizedExpression@@(goalType == GoalType.MAXIMIZE) @AT@ 8730 @LENGTH@ 31
+---------------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 8731 @LENGTH@ 29
+------------------DEL SimpleName@@goalType @AT@ 8731 @LENGTH@ 8
+------------------DEL Operator@@== @AT@ 8739 @LENGTH@ 2
+------------------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 8743 @LENGTH@ 17
+---------------------DEL SimpleName@@GoalType @AT@ 8743 @LENGTH@ 8
+---------------------DEL SimpleName@@MAXIMIZE @AT@ 8752 @LENGTH@ 8
+------------DEL SimpleName@@fx @AT@ 8770 @LENGTH@ 2
+---------DEL SimpleName@@count @AT@ 8774 @LENGTH@ 5
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4 OP5)
+OP4:         (INS, NumberLiteral, OP3, null)
+OP5:         (DEL, QualifiedName, OP3, OP6 OP7)
+OP6:            (DEL, SimpleName, OP5, null)
+OP7:            (DEL, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[UPD ExpressionStatement@@MethodInvocation:setMaxEvaluations(Integer.MAX_VALUE) @TO@ MethodInvocation:setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 37
+---UPD MethodInvocation@@setMaxEvaluations(Integer.MAX_VALUE) @TO@ setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 36
+------UPD SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @TO@ MethodName:setMaxEvaluations:[1000] @AT@ 1775 @LENGTH@ 36
+---------INS NumberLiteral@@1000 @TO@ SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @AT@ 1793 @LENGTH@ 4
+---------DEL QualifiedName@@Integer.MAX_VALUE @AT@ 1793 @LENGTH@ 17
+------------DEL SimpleName@@Integer @AT@ 1793 @LENGTH@ 7
+------------DEL SimpleName@@MAX_VALUE @AT@ 1801 @LENGTH@ 9
+, UPD ExpressionStatement@@MethodInvocation:setAbsoluteAccuracy(1E-10) @TO@ MethodInvocation:setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 27
+---UPD MethodInvocation@@setAbsoluteAccuracy(1E-10) @TO@ setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 26
+------UPD SimpleName@@MethodName:setAbsoluteAccuracy:[1E-10] @TO@ MethodName:setAbsoluteAccuracy:[1e-11] @AT@ 1860 @LENGTH@ 26
+---------UPD NumberLiteral@@1E-10 @TO@ 1e-11 @AT@ 1880 @LENGTH@ 5
+, UPD ExpressionStatement@@MethodInvocation:setRelativeAccuracy(1.0e-14) @TO@ MethodInvocation:setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 29
+---UPD MethodInvocation@@setRelativeAccuracy(1.0e-14) @TO@ setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 28
+------UPD SimpleName@@MethodName:setRelativeAccuracy:[1.0e-14] @TO@ MethodName:setRelativeAccuracy:[1e-9] @AT@ 1896 @LENGTH@ 28
+---------UPD NumberLiteral@@1.0e-14 @TO@ 1e-9 @AT@ 1916 @LENGTH@ 7
+, DEL ThrowStatement@@ClassInstanceCreation:new UnsupportedOperationException() @AT@ 2136 @LENGTH@ 42
+---DEL ClassInstanceCreation@@UnsupportedOperationException[] @AT@ 2142 @LENGTH@ 35
+------DEL New@@new @AT@ 2142 @LENGTH@ 3
+------DEL SimpleType@@UnsupportedOperationException @AT@ 2146 @LENGTH@ 29
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+double+startValue+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2189 @LENGTH@ 428
+---DEL Modifier@@public @AT@ 2189 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2196 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2203 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2212 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2212 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2218 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2241 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2244 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2244 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2250 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2259 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2269 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2269 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2275 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2282 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2287 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2287 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2293 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2300 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double startValue @AT@ 2305 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2305 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2311 @LENGTH@ 6
+------DEL SimpleName@@startValue @AT@ 2318 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:clearResult() @AT@ 2407 @LENGTH@ 14
+------DEL MethodInvocation@@MethodName:clearResult:[] @AT@ 2407 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2430 @LENGTH@ 181
+---UPD MethodInvocation@@localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2437 @LENGTH@ 173
+------UPD SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @TO@ MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, getMin(), getStartValue(), getMax(), getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2437 @LENGTH@ 173
+---------INS MethodInvocation@@MethodName:getMin:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2196 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:getStartValue:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2206 @LENGTH@ 15
+---------INS MethodInvocation@@MethodName:getMax:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2223 @LENGTH@ 8
+---------DEL SimpleName@@f @AT@ 2506 @LENGTH@ 1
+---------DEL SimpleName@@goalType @AT@ 2509 @LENGTH@ 8
+---------DEL SimpleName@@min @AT@ 2519 @LENGTH@ 3
+---------DEL SimpleName@@startValue @AT@ 2524 @LENGTH@ 10
+---------DEL SimpleName@@max @AT@ 2536 @LENGTH@ 3
+, MOV ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodDeclaration@@protected, @@double, MethodName:doOptimize, @@Argus:nullMaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2430 @LENGTH@ 181
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2622 @LENGTH@ 274
+---DEL Modifier@@public @AT@ 2622 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2629 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2636 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2645 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2645 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2651 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2674 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2677 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2677 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2683 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2692 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2702 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2702 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2708 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2715 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2720 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2720 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2726 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2733 @LENGTH@ 3
+---DEL ReturnStatement@@MethodInvocation:optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2815 @LENGTH@ 75
+------DEL MethodInvocation@@optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2822 @LENGTH@ 67
+---------DEL SimpleName@@MethodName:optimize:[f, goalType, min, max, min + GOLDEN_SECTION * (max - min)] @AT@ 2822 @LENGTH@ 67
+------------DEL SimpleName@@f @AT@ 2831 @LENGTH@ 1
+------------DEL SimpleName@@goalType @AT@ 2834 @LENGTH@ 8
+------------DEL SimpleName@@min @AT@ 2844 @LENGTH@ 3
+------------DEL SimpleName@@max @AT@ 2849 @LENGTH@ 3
+------------DEL InfixExpression@@min + GOLDEN_SECTION * (max - min) @AT@ 2854 @LENGTH@ 34
+---------------DEL SimpleName@@min @AT@ 2854 @LENGTH@ 3
+---------------DEL Operator@@+ @AT@ 2857 @LENGTH@ 1
+---------------DEL InfixExpression@@GOLDEN_SECTION * (max - min) @AT@ 2860 @LENGTH@ 28
+------------------DEL SimpleName@@GOLDEN_SECTION @AT@ 2860 @LENGTH@ 14
+------------------DEL Operator@@* @AT@ 2874 @LENGTH@ 1
+------------------DEL ParenthesizedExpression@@(max - min) @AT@ 2877 @LENGTH@ 11
+---------------------DEL InfixExpression@@max - min @AT@ 2878 @LENGTH@ 9
+------------------------DEL SimpleName@@max @AT@ 2878 @LENGTH@ 3
+------------------------DEL Operator@@- @AT@ 2881 @LENGTH@ 1
+------------------------DEL SimpleName@@min @AT@ 2884 @LENGTH@ 3
+, UPD MethodDeclaration@@private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+UnivariateRealFunction+f+GoalType+goalType+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @TO@ private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2902 @LENGTH@ 6029
+---DEL SingleVariableDeclaration@@UnivariateRealFunction f @AT@ 4182 @LENGTH@ 24
+------DEL SimpleType@@UnivariateRealFunction @AT@ 4182 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 4205 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@GoalType goalType @AT@ 4236 @LENGTH@ 17
+------DEL SimpleType@@GoalType @AT@ 4236 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 4245 @LENGTH@ 8
+---UPD VariableDeclarationStatement@@double fx=computeObjectiveValue(f,x); @TO@ double fx=computeObjectiveValue(x); @AT@ 4894 @LENGTH@ 40
+------UPD VariableDeclarationFragment@@fx=computeObjectiveValue(f,x) @TO@ fx=computeObjectiveValue(x) @AT@ 4901 @LENGTH@ 32
+---------UPD MethodInvocation@@computeObjectiveValue(f,x) @TO@ computeObjectiveValue(x) @AT@ 4906 @LENGTH@ 27
+------------UPD SimpleName@@MethodName:computeObjectiveValue:[f, x] @TO@ MethodName:computeObjectiveValue:[x] @AT@ 4906 @LENGTH@ 27
+---------------DEL SimpleName@@f @AT@ 4928 @LENGTH@ 1
+---UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 4943 @LENGTH@ 68
+------INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 4256 @LENGTH@ 8
+---------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 4256 @LENGTH@ 1
+---------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 4257 @LENGTH@ 7
+------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 4947 @LENGTH@ 29
+---------DEL SimpleName@@goalType @AT@ 4947 @LENGTH@ 8
+---------DEL Operator@@== @AT@ 4955 @LENGTH@ 2
+---------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 4959 @LENGTH@ 17
+------------DEL SimpleName@@GoalType @AT@ 4959 @LENGTH@ 8
+------------DEL SimpleName@@MAXIMIZE @AT@ 4968 @LENGTH@ 8
+---DEL VariableDeclarationStatement@@int count=0; @AT@ 5069 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 5069 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@count=0 @AT@ 5073 @LENGTH@ 9
+---------DEL SimpleName@@count @AT@ 5073 @LENGTH@ 5
+---------DEL NumberLiteral@@0 @AT@ 5081 @LENGTH@ 1
+---UPD WhileStatement@@InfixExpression:count < maximalIterationCount @TO@ BooleanLiteral:true @AT@ 5092 @LENGTH@ 3760
+------INS BooleanLiteral@@true @TO@ WhileStatement@@InfixExpression:count < maximalIterationCount @AT@ 4364 @LENGTH@ 4
+------DEL InfixExpression@@count < maximalIterationCount @AT@ 5099 @LENGTH@ 29
+---------DEL SimpleName@@count @AT@ 5099 @LENGTH@ 5
+---------DEL Operator@@< @AT@ 5104 @LENGTH@ 1
+---------DEL SimpleName@@maximalIterationCount @AT@ 5107 @LENGTH@ 21
+------UPD ExpressionStatement@@PrefixExpression:++count @TO@ MethodInvocation:incrementIterationsCounter() @AT@ 8834 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:incrementIterationsCounter:[] @TO@ ExpressionStatement@@PrefixExpression:++count @AT@ 8023 @LENGTH@ 28
+---------DEL PrefixExpression@@++count @AT@ 8834 @LENGTH@ 7
+------------DEL Operator@@++ @AT@ 8834 @LENGTH@ 2
+------------DEL SimpleName@@count @AT@ 8836 @LENGTH@ 5
+---DEL ThrowStatement@@ClassInstanceCreation:new MaxIterationsExceededException(maximalIterationCount) @AT@ 8861 @LENGTH@ 64
+------DEL ClassInstanceCreation@@MaxIterationsExceededException[maximalIterationCount] @AT@ 8867 @LENGTH@ 57
+---------DEL New@@new @AT@ 8867 @LENGTH@ 3
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 8871 @LENGTH@ 30
+---------DEL SimpleName@@maximalIterationCount @AT@ 8902 @LENGTH@ 21
+, UPD VariableDeclarationStatement@@double fu=computeObjectiveValue(f,u); @TO@ double fu=computeObjectiveValue(u); @AT@ 7534 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@fu=computeObjectiveValue(f,u) @TO@ fu=computeObjectiveValue(u) @AT@ 7541 @LENGTH@ 32
+------UPD MethodInvocation@@computeObjectiveValue(f,u) @TO@ computeObjectiveValue(u) @AT@ 7546 @LENGTH@ 27
+---------UPD SimpleName@@MethodName:computeObjectiveValue:[f, u] @TO@ MethodName:computeObjectiveValue:[u] @AT@ 7546 @LENGTH@ 27
+------------DEL SimpleName@@f @AT@ 7568 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 7591 @LENGTH@ 84
+---INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 6832 @LENGTH@ 8
+------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 6832 @LENGTH@ 1
+------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 6833 @LENGTH@ 7
+---DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 7595 @LENGTH@ 29
+------DEL SimpleName@@goalType @AT@ 7595 @LENGTH@ 8
+------DEL Operator@@== @AT@ 7603 @LENGTH@ 2
+------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 7607 @LENGTH@ 17
+---------DEL SimpleName@@GoalType @AT@ 7607 @LENGTH@ 8
+---------DEL SimpleName@@MAXIMIZE @AT@ 7616 @LENGTH@ 8
+, UPD ExpressionStatement@@MethodInvocation:setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ MethodInvocation:setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 64
+---UPD MethodInvocation@@setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 63
+------UPD SimpleName@@MethodName:setResult:[x, (goalType == GoalType.MAXIMIZE) ? -fx : fx, count] @TO@ MethodName:setFunctionValue:[isMinim ? fx : -fx] @AT@ 8717 @LENGTH@ 63
+---------DEL SimpleName@@x @AT@ 8727 @LENGTH@ 1
+---------UPD ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @TO@ isMinim ? fx : -fx @AT@ 8730 @LENGTH@ 42
+------------INS SimpleName@@isMinim @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7950 @LENGTH@ 7
+------------INS SimpleName@@fx @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7960 @LENGTH@ 2
+------------DEL ParenthesizedExpression@@(goalType == GoalType.MAXIMIZE) @AT@ 8730 @LENGTH@ 31
+---------------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 8731 @LENGTH@ 29
+------------------DEL SimpleName@@goalType @AT@ 8731 @LENGTH@ 8
+------------------DEL Operator@@== @AT@ 8739 @LENGTH@ 2
+------------------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 8743 @LENGTH@ 17
+---------------------DEL SimpleName@@GoalType @AT@ 8743 @LENGTH@ 8
+---------------------DEL SimpleName@@MAXIMIZE @AT@ 8752 @LENGTH@ 8
+------------DEL SimpleName@@fx @AT@ 8770 @LENGTH@ 2
+---------DEL SimpleName@@count @AT@ 8774 @LENGTH@ 5
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (UPD, NumberLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[UPD ExpressionStatement@@MethodInvocation:setMaxEvaluations(Integer.MAX_VALUE) @TO@ MethodInvocation:setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 37
+---UPD MethodInvocation@@setMaxEvaluations(Integer.MAX_VALUE) @TO@ setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 36
+------UPD SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @TO@ MethodName:setMaxEvaluations:[1000] @AT@ 1775 @LENGTH@ 36
+---------INS NumberLiteral@@1000 @TO@ SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @AT@ 1793 @LENGTH@ 4
+---------DEL QualifiedName@@Integer.MAX_VALUE @AT@ 1793 @LENGTH@ 17
+------------DEL SimpleName@@Integer @AT@ 1793 @LENGTH@ 7
+------------DEL SimpleName@@MAX_VALUE @AT@ 1801 @LENGTH@ 9
+, UPD ExpressionStatement@@MethodInvocation:setAbsoluteAccuracy(1E-10) @TO@ MethodInvocation:setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 27
+---UPD MethodInvocation@@setAbsoluteAccuracy(1E-10) @TO@ setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 26
+------UPD SimpleName@@MethodName:setAbsoluteAccuracy:[1E-10] @TO@ MethodName:setAbsoluteAccuracy:[1e-11] @AT@ 1860 @LENGTH@ 26
+---------UPD NumberLiteral@@1E-10 @TO@ 1e-11 @AT@ 1880 @LENGTH@ 5
+, UPD ExpressionStatement@@MethodInvocation:setRelativeAccuracy(1.0e-14) @TO@ MethodInvocation:setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 29
+---UPD MethodInvocation@@setRelativeAccuracy(1.0e-14) @TO@ setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 28
+------UPD SimpleName@@MethodName:setRelativeAccuracy:[1.0e-14] @TO@ MethodName:setRelativeAccuracy:[1e-9] @AT@ 1896 @LENGTH@ 28
+---------UPD NumberLiteral@@1.0e-14 @TO@ 1e-9 @AT@ 1916 @LENGTH@ 7
+, DEL ThrowStatement@@ClassInstanceCreation:new UnsupportedOperationException() @AT@ 2136 @LENGTH@ 42
+---DEL ClassInstanceCreation@@UnsupportedOperationException[] @AT@ 2142 @LENGTH@ 35
+------DEL New@@new @AT@ 2142 @LENGTH@ 3
+------DEL SimpleType@@UnsupportedOperationException @AT@ 2146 @LENGTH@ 29
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+double+startValue+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2189 @LENGTH@ 428
+---DEL Modifier@@public @AT@ 2189 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2196 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2203 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2212 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2212 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2218 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2241 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2244 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2244 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2250 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2259 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2269 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2269 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2275 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2282 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2287 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2287 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2293 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2300 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double startValue @AT@ 2305 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2305 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2311 @LENGTH@ 6
+------DEL SimpleName@@startValue @AT@ 2318 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:clearResult() @AT@ 2407 @LENGTH@ 14
+------DEL MethodInvocation@@MethodName:clearResult:[] @AT@ 2407 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2430 @LENGTH@ 181
+---UPD MethodInvocation@@localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2437 @LENGTH@ 173
+------UPD SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @TO@ MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, getMin(), getStartValue(), getMax(), getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2437 @LENGTH@ 173
+---------INS MethodInvocation@@MethodName:getMin:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2196 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:getStartValue:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2206 @LENGTH@ 15
+---------INS MethodInvocation@@MethodName:getMax:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2223 @LENGTH@ 8
+---------DEL SimpleName@@f @AT@ 2506 @LENGTH@ 1
+---------DEL SimpleName@@goalType @AT@ 2509 @LENGTH@ 8
+---------DEL SimpleName@@min @AT@ 2519 @LENGTH@ 3
+---------DEL SimpleName@@startValue @AT@ 2524 @LENGTH@ 10
+---------DEL SimpleName@@max @AT@ 2536 @LENGTH@ 3
+, MOV ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodDeclaration@@protected, @@double, MethodName:doOptimize, @@Argus:nullMaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2430 @LENGTH@ 181
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2622 @LENGTH@ 274
+---DEL Modifier@@public @AT@ 2622 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2629 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2636 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2645 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2645 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2651 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2674 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2677 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2677 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2683 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2692 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2702 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2702 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2708 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2715 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2720 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2720 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2726 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2733 @LENGTH@ 3
+---DEL ReturnStatement@@MethodInvocation:optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2815 @LENGTH@ 75
+------DEL MethodInvocation@@optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2822 @LENGTH@ 67
+---------DEL SimpleName@@MethodName:optimize:[f, goalType, min, max, min + GOLDEN_SECTION * (max - min)] @AT@ 2822 @LENGTH@ 67
+------------DEL SimpleName@@f @AT@ 2831 @LENGTH@ 1
+------------DEL SimpleName@@goalType @AT@ 2834 @LENGTH@ 8
+------------DEL SimpleName@@min @AT@ 2844 @LENGTH@ 3
+------------DEL SimpleName@@max @AT@ 2849 @LENGTH@ 3
+------------DEL InfixExpression@@min + GOLDEN_SECTION * (max - min) @AT@ 2854 @LENGTH@ 34
+---------------DEL SimpleName@@min @AT@ 2854 @LENGTH@ 3
+---------------DEL Operator@@+ @AT@ 2857 @LENGTH@ 1
+---------------DEL InfixExpression@@GOLDEN_SECTION * (max - min) @AT@ 2860 @LENGTH@ 28
+------------------DEL SimpleName@@GOLDEN_SECTION @AT@ 2860 @LENGTH@ 14
+------------------DEL Operator@@* @AT@ 2874 @LENGTH@ 1
+------------------DEL ParenthesizedExpression@@(max - min) @AT@ 2877 @LENGTH@ 11
+---------------------DEL InfixExpression@@max - min @AT@ 2878 @LENGTH@ 9
+------------------------DEL SimpleName@@max @AT@ 2878 @LENGTH@ 3
+------------------------DEL Operator@@- @AT@ 2881 @LENGTH@ 1
+------------------------DEL SimpleName@@min @AT@ 2884 @LENGTH@ 3
+, UPD MethodDeclaration@@private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+UnivariateRealFunction+f+GoalType+goalType+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @TO@ private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2902 @LENGTH@ 6029
+---DEL SingleVariableDeclaration@@UnivariateRealFunction f @AT@ 4182 @LENGTH@ 24
+------DEL SimpleType@@UnivariateRealFunction @AT@ 4182 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 4205 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@GoalType goalType @AT@ 4236 @LENGTH@ 17
+------DEL SimpleType@@GoalType @AT@ 4236 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 4245 @LENGTH@ 8
+---UPD VariableDeclarationStatement@@double fx=computeObjectiveValue(f,x); @TO@ double fx=computeObjectiveValue(x); @AT@ 4894 @LENGTH@ 40
+------UPD VariableDeclarationFragment@@fx=computeObjectiveValue(f,x) @TO@ fx=computeObjectiveValue(x) @AT@ 4901 @LENGTH@ 32
+---------UPD MethodInvocation@@computeObjectiveValue(f,x) @TO@ computeObjectiveValue(x) @AT@ 4906 @LENGTH@ 27
+------------UPD SimpleName@@MethodName:computeObjectiveValue:[f, x] @TO@ MethodName:computeObjectiveValue:[x] @AT@ 4906 @LENGTH@ 27
+---------------DEL SimpleName@@f @AT@ 4928 @LENGTH@ 1
+---UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 4943 @LENGTH@ 68
+------INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 4256 @LENGTH@ 8
+---------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 4256 @LENGTH@ 1
+---------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 4257 @LENGTH@ 7
+------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 4947 @LENGTH@ 29
+---------DEL SimpleName@@goalType @AT@ 4947 @LENGTH@ 8
+---------DEL Operator@@== @AT@ 4955 @LENGTH@ 2
+---------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 4959 @LENGTH@ 17
+------------DEL SimpleName@@GoalType @AT@ 4959 @LENGTH@ 8
+------------DEL SimpleName@@MAXIMIZE @AT@ 4968 @LENGTH@ 8
+---DEL VariableDeclarationStatement@@int count=0; @AT@ 5069 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 5069 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@count=0 @AT@ 5073 @LENGTH@ 9
+---------DEL SimpleName@@count @AT@ 5073 @LENGTH@ 5
+---------DEL NumberLiteral@@0 @AT@ 5081 @LENGTH@ 1
+---UPD WhileStatement@@InfixExpression:count < maximalIterationCount @TO@ BooleanLiteral:true @AT@ 5092 @LENGTH@ 3760
+------INS BooleanLiteral@@true @TO@ WhileStatement@@InfixExpression:count < maximalIterationCount @AT@ 4364 @LENGTH@ 4
+------DEL InfixExpression@@count < maximalIterationCount @AT@ 5099 @LENGTH@ 29
+---------DEL SimpleName@@count @AT@ 5099 @LENGTH@ 5
+---------DEL Operator@@< @AT@ 5104 @LENGTH@ 1
+---------DEL SimpleName@@maximalIterationCount @AT@ 5107 @LENGTH@ 21
+------UPD ExpressionStatement@@PrefixExpression:++count @TO@ MethodInvocation:incrementIterationsCounter() @AT@ 8834 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:incrementIterationsCounter:[] @TO@ ExpressionStatement@@PrefixExpression:++count @AT@ 8023 @LENGTH@ 28
+---------DEL PrefixExpression@@++count @AT@ 8834 @LENGTH@ 7
+------------DEL Operator@@++ @AT@ 8834 @LENGTH@ 2
+------------DEL SimpleName@@count @AT@ 8836 @LENGTH@ 5
+---DEL ThrowStatement@@ClassInstanceCreation:new MaxIterationsExceededException(maximalIterationCount) @AT@ 8861 @LENGTH@ 64
+------DEL ClassInstanceCreation@@MaxIterationsExceededException[maximalIterationCount] @AT@ 8867 @LENGTH@ 57
+---------DEL New@@new @AT@ 8867 @LENGTH@ 3
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 8871 @LENGTH@ 30
+---------DEL SimpleName@@maximalIterationCount @AT@ 8902 @LENGTH@ 21
+, UPD VariableDeclarationStatement@@double fu=computeObjectiveValue(f,u); @TO@ double fu=computeObjectiveValue(u); @AT@ 7534 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@fu=computeObjectiveValue(f,u) @TO@ fu=computeObjectiveValue(u) @AT@ 7541 @LENGTH@ 32
+------UPD MethodInvocation@@computeObjectiveValue(f,u) @TO@ computeObjectiveValue(u) @AT@ 7546 @LENGTH@ 27
+---------UPD SimpleName@@MethodName:computeObjectiveValue:[f, u] @TO@ MethodName:computeObjectiveValue:[u] @AT@ 7546 @LENGTH@ 27
+------------DEL SimpleName@@f @AT@ 7568 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 7591 @LENGTH@ 84
+---INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 6832 @LENGTH@ 8
+------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 6832 @LENGTH@ 1
+------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 6833 @LENGTH@ 7
+---DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 7595 @LENGTH@ 29
+------DEL SimpleName@@goalType @AT@ 7595 @LENGTH@ 8
+------DEL Operator@@== @AT@ 7603 @LENGTH@ 2
+------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 7607 @LENGTH@ 17
+---------DEL SimpleName@@GoalType @AT@ 7607 @LENGTH@ 8
+---------DEL SimpleName@@MAXIMIZE @AT@ 7616 @LENGTH@ 8
+, UPD ExpressionStatement@@MethodInvocation:setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ MethodInvocation:setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 64
+---UPD MethodInvocation@@setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 63
+------UPD SimpleName@@MethodName:setResult:[x, (goalType == GoalType.MAXIMIZE) ? -fx : fx, count] @TO@ MethodName:setFunctionValue:[isMinim ? fx : -fx] @AT@ 8717 @LENGTH@ 63
+---------DEL SimpleName@@x @AT@ 8727 @LENGTH@ 1
+---------UPD ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @TO@ isMinim ? fx : -fx @AT@ 8730 @LENGTH@ 42
+------------INS SimpleName@@isMinim @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7950 @LENGTH@ 7
+------------INS SimpleName@@fx @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7960 @LENGTH@ 2
+------------DEL ParenthesizedExpression@@(goalType == GoalType.MAXIMIZE) @AT@ 8730 @LENGTH@ 31
+---------------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 8731 @LENGTH@ 29
+------------------DEL SimpleName@@goalType @AT@ 8731 @LENGTH@ 8
+------------------DEL Operator@@== @AT@ 8739 @LENGTH@ 2
+------------------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 8743 @LENGTH@ 17
+---------------------DEL SimpleName@@GoalType @AT@ 8743 @LENGTH@ 8
+---------------------DEL SimpleName@@MAXIMIZE @AT@ 8752 @LENGTH@ 8
+------------DEL SimpleName@@fx @AT@ 8770 @LENGTH@ 2
+---------DEL SimpleName@@count @AT@ 8774 @LENGTH@ 5
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (UPD, NumberLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[UPD ExpressionStatement@@MethodInvocation:setMaxEvaluations(Integer.MAX_VALUE) @TO@ MethodInvocation:setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 37
+---UPD MethodInvocation@@setMaxEvaluations(Integer.MAX_VALUE) @TO@ setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 36
+------UPD SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @TO@ MethodName:setMaxEvaluations:[1000] @AT@ 1775 @LENGTH@ 36
+---------INS NumberLiteral@@1000 @TO@ SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @AT@ 1793 @LENGTH@ 4
+---------DEL QualifiedName@@Integer.MAX_VALUE @AT@ 1793 @LENGTH@ 17
+------------DEL SimpleName@@Integer @AT@ 1793 @LENGTH@ 7
+------------DEL SimpleName@@MAX_VALUE @AT@ 1801 @LENGTH@ 9
+, UPD ExpressionStatement@@MethodInvocation:setAbsoluteAccuracy(1E-10) @TO@ MethodInvocation:setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 27
+---UPD MethodInvocation@@setAbsoluteAccuracy(1E-10) @TO@ setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 26
+------UPD SimpleName@@MethodName:setAbsoluteAccuracy:[1E-10] @TO@ MethodName:setAbsoluteAccuracy:[1e-11] @AT@ 1860 @LENGTH@ 26
+---------UPD NumberLiteral@@1E-10 @TO@ 1e-11 @AT@ 1880 @LENGTH@ 5
+, UPD ExpressionStatement@@MethodInvocation:setRelativeAccuracy(1.0e-14) @TO@ MethodInvocation:setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 29
+---UPD MethodInvocation@@setRelativeAccuracy(1.0e-14) @TO@ setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 28
+------UPD SimpleName@@MethodName:setRelativeAccuracy:[1.0e-14] @TO@ MethodName:setRelativeAccuracy:[1e-9] @AT@ 1896 @LENGTH@ 28
+---------UPD NumberLiteral@@1.0e-14 @TO@ 1e-9 @AT@ 1916 @LENGTH@ 7
+, DEL ThrowStatement@@ClassInstanceCreation:new UnsupportedOperationException() @AT@ 2136 @LENGTH@ 42
+---DEL ClassInstanceCreation@@UnsupportedOperationException[] @AT@ 2142 @LENGTH@ 35
+------DEL New@@new @AT@ 2142 @LENGTH@ 3
+------DEL SimpleType@@UnsupportedOperationException @AT@ 2146 @LENGTH@ 29
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+double+startValue+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2189 @LENGTH@ 428
+---DEL Modifier@@public @AT@ 2189 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2196 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2203 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2212 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2212 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2218 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2241 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2244 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2244 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2250 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2259 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2269 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2269 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2275 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2282 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2287 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2287 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2293 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2300 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double startValue @AT@ 2305 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2305 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2311 @LENGTH@ 6
+------DEL SimpleName@@startValue @AT@ 2318 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:clearResult() @AT@ 2407 @LENGTH@ 14
+------DEL MethodInvocation@@MethodName:clearResult:[] @AT@ 2407 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2430 @LENGTH@ 181
+---UPD MethodInvocation@@localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2437 @LENGTH@ 173
+------UPD SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @TO@ MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, getMin(), getStartValue(), getMax(), getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2437 @LENGTH@ 173
+---------INS MethodInvocation@@MethodName:getMin:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2196 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:getStartValue:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2206 @LENGTH@ 15
+---------INS MethodInvocation@@MethodName:getMax:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2223 @LENGTH@ 8
+---------DEL SimpleName@@f @AT@ 2506 @LENGTH@ 1
+---------DEL SimpleName@@goalType @AT@ 2509 @LENGTH@ 8
+---------DEL SimpleName@@min @AT@ 2519 @LENGTH@ 3
+---------DEL SimpleName@@startValue @AT@ 2524 @LENGTH@ 10
+---------DEL SimpleName@@max @AT@ 2536 @LENGTH@ 3
+, MOV ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodDeclaration@@protected, @@double, MethodName:doOptimize, @@Argus:nullMaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2430 @LENGTH@ 181
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2622 @LENGTH@ 274
+---DEL Modifier@@public @AT@ 2622 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2629 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2636 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2645 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2645 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2651 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2674 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2677 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2677 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2683 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2692 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2702 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2702 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2708 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2715 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2720 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2720 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2726 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2733 @LENGTH@ 3
+---DEL ReturnStatement@@MethodInvocation:optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2815 @LENGTH@ 75
+------DEL MethodInvocation@@optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2822 @LENGTH@ 67
+---------DEL SimpleName@@MethodName:optimize:[f, goalType, min, max, min + GOLDEN_SECTION * (max - min)] @AT@ 2822 @LENGTH@ 67
+------------DEL SimpleName@@f @AT@ 2831 @LENGTH@ 1
+------------DEL SimpleName@@goalType @AT@ 2834 @LENGTH@ 8
+------------DEL SimpleName@@min @AT@ 2844 @LENGTH@ 3
+------------DEL SimpleName@@max @AT@ 2849 @LENGTH@ 3
+------------DEL InfixExpression@@min + GOLDEN_SECTION * (max - min) @AT@ 2854 @LENGTH@ 34
+---------------DEL SimpleName@@min @AT@ 2854 @LENGTH@ 3
+---------------DEL Operator@@+ @AT@ 2857 @LENGTH@ 1
+---------------DEL InfixExpression@@GOLDEN_SECTION * (max - min) @AT@ 2860 @LENGTH@ 28
+------------------DEL SimpleName@@GOLDEN_SECTION @AT@ 2860 @LENGTH@ 14
+------------------DEL Operator@@* @AT@ 2874 @LENGTH@ 1
+------------------DEL ParenthesizedExpression@@(max - min) @AT@ 2877 @LENGTH@ 11
+---------------------DEL InfixExpression@@max - min @AT@ 2878 @LENGTH@ 9
+------------------------DEL SimpleName@@max @AT@ 2878 @LENGTH@ 3
+------------------------DEL Operator@@- @AT@ 2881 @LENGTH@ 1
+------------------------DEL SimpleName@@min @AT@ 2884 @LENGTH@ 3
+, UPD MethodDeclaration@@private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+UnivariateRealFunction+f+GoalType+goalType+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @TO@ private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2902 @LENGTH@ 6029
+---DEL SingleVariableDeclaration@@UnivariateRealFunction f @AT@ 4182 @LENGTH@ 24
+------DEL SimpleType@@UnivariateRealFunction @AT@ 4182 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 4205 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@GoalType goalType @AT@ 4236 @LENGTH@ 17
+------DEL SimpleType@@GoalType @AT@ 4236 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 4245 @LENGTH@ 8
+---UPD VariableDeclarationStatement@@double fx=computeObjectiveValue(f,x); @TO@ double fx=computeObjectiveValue(x); @AT@ 4894 @LENGTH@ 40
+------UPD VariableDeclarationFragment@@fx=computeObjectiveValue(f,x) @TO@ fx=computeObjectiveValue(x) @AT@ 4901 @LENGTH@ 32
+---------UPD MethodInvocation@@computeObjectiveValue(f,x) @TO@ computeObjectiveValue(x) @AT@ 4906 @LENGTH@ 27
+------------UPD SimpleName@@MethodName:computeObjectiveValue:[f, x] @TO@ MethodName:computeObjectiveValue:[x] @AT@ 4906 @LENGTH@ 27
+---------------DEL SimpleName@@f @AT@ 4928 @LENGTH@ 1
+---UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 4943 @LENGTH@ 68
+------INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 4256 @LENGTH@ 8
+---------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 4256 @LENGTH@ 1
+---------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 4257 @LENGTH@ 7
+------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 4947 @LENGTH@ 29
+---------DEL SimpleName@@goalType @AT@ 4947 @LENGTH@ 8
+---------DEL Operator@@== @AT@ 4955 @LENGTH@ 2
+---------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 4959 @LENGTH@ 17
+------------DEL SimpleName@@GoalType @AT@ 4959 @LENGTH@ 8
+------------DEL SimpleName@@MAXIMIZE @AT@ 4968 @LENGTH@ 8
+---DEL VariableDeclarationStatement@@int count=0; @AT@ 5069 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 5069 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@count=0 @AT@ 5073 @LENGTH@ 9
+---------DEL SimpleName@@count @AT@ 5073 @LENGTH@ 5
+---------DEL NumberLiteral@@0 @AT@ 5081 @LENGTH@ 1
+---UPD WhileStatement@@InfixExpression:count < maximalIterationCount @TO@ BooleanLiteral:true @AT@ 5092 @LENGTH@ 3760
+------INS BooleanLiteral@@true @TO@ WhileStatement@@InfixExpression:count < maximalIterationCount @AT@ 4364 @LENGTH@ 4
+------DEL InfixExpression@@count < maximalIterationCount @AT@ 5099 @LENGTH@ 29
+---------DEL SimpleName@@count @AT@ 5099 @LENGTH@ 5
+---------DEL Operator@@< @AT@ 5104 @LENGTH@ 1
+---------DEL SimpleName@@maximalIterationCount @AT@ 5107 @LENGTH@ 21
+------UPD ExpressionStatement@@PrefixExpression:++count @TO@ MethodInvocation:incrementIterationsCounter() @AT@ 8834 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:incrementIterationsCounter:[] @TO@ ExpressionStatement@@PrefixExpression:++count @AT@ 8023 @LENGTH@ 28
+---------DEL PrefixExpression@@++count @AT@ 8834 @LENGTH@ 7
+------------DEL Operator@@++ @AT@ 8834 @LENGTH@ 2
+------------DEL SimpleName@@count @AT@ 8836 @LENGTH@ 5
+---DEL ThrowStatement@@ClassInstanceCreation:new MaxIterationsExceededException(maximalIterationCount) @AT@ 8861 @LENGTH@ 64
+------DEL ClassInstanceCreation@@MaxIterationsExceededException[maximalIterationCount] @AT@ 8867 @LENGTH@ 57
+---------DEL New@@new @AT@ 8867 @LENGTH@ 3
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 8871 @LENGTH@ 30
+---------DEL SimpleName@@maximalIterationCount @AT@ 8902 @LENGTH@ 21
+, UPD VariableDeclarationStatement@@double fu=computeObjectiveValue(f,u); @TO@ double fu=computeObjectiveValue(u); @AT@ 7534 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@fu=computeObjectiveValue(f,u) @TO@ fu=computeObjectiveValue(u) @AT@ 7541 @LENGTH@ 32
+------UPD MethodInvocation@@computeObjectiveValue(f,u) @TO@ computeObjectiveValue(u) @AT@ 7546 @LENGTH@ 27
+---------UPD SimpleName@@MethodName:computeObjectiveValue:[f, u] @TO@ MethodName:computeObjectiveValue:[u] @AT@ 7546 @LENGTH@ 27
+------------DEL SimpleName@@f @AT@ 7568 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 7591 @LENGTH@ 84
+---INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 6832 @LENGTH@ 8
+------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 6832 @LENGTH@ 1
+------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 6833 @LENGTH@ 7
+---DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 7595 @LENGTH@ 29
+------DEL SimpleName@@goalType @AT@ 7595 @LENGTH@ 8
+------DEL Operator@@== @AT@ 7603 @LENGTH@ 2
+------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 7607 @LENGTH@ 17
+---------DEL SimpleName@@GoalType @AT@ 7607 @LENGTH@ 8
+---------DEL SimpleName@@MAXIMIZE @AT@ 7616 @LENGTH@ 8
+, UPD ExpressionStatement@@MethodInvocation:setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ MethodInvocation:setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 64
+---UPD MethodInvocation@@setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 63
+------UPD SimpleName@@MethodName:setResult:[x, (goalType == GoalType.MAXIMIZE) ? -fx : fx, count] @TO@ MethodName:setFunctionValue:[isMinim ? fx : -fx] @AT@ 8717 @LENGTH@ 63
+---------DEL SimpleName@@x @AT@ 8727 @LENGTH@ 1
+---------UPD ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @TO@ isMinim ? fx : -fx @AT@ 8730 @LENGTH@ 42
+------------INS SimpleName@@isMinim @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7950 @LENGTH@ 7
+------------INS SimpleName@@fx @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7960 @LENGTH@ 2
+------------DEL ParenthesizedExpression@@(goalType == GoalType.MAXIMIZE) @AT@ 8730 @LENGTH@ 31
+---------------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 8731 @LENGTH@ 29
+------------------DEL SimpleName@@goalType @AT@ 8731 @LENGTH@ 8
+------------------DEL Operator@@== @AT@ 8739 @LENGTH@ 2
+------------------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 8743 @LENGTH@ 17
+---------------------DEL SimpleName@@GoalType @AT@ 8743 @LENGTH@ 8
+---------------------DEL SimpleName@@MAXIMIZE @AT@ 8752 @LENGTH@ 8
+------------DEL SimpleName@@fx @AT@ 8770 @LENGTH@ 2
+---------DEL SimpleName@@count @AT@ 8774 @LENGTH@ 5
+]
+
+CII:
+OP1:(DEL, ThrowStatement, null, OP2)
+OP2:   (DEL, ClassInstanceCreation, OP1, OP3 OP4)
+OP3:      (DEL, New, OP2, null)
+OP4:      (DEL, SimpleType, OP2, null)
+
+
+
+
+
+hASList: 
+[UPD ExpressionStatement@@MethodInvocation:setMaxEvaluations(Integer.MAX_VALUE) @TO@ MethodInvocation:setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 37
+---UPD MethodInvocation@@setMaxEvaluations(Integer.MAX_VALUE) @TO@ setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 36
+------UPD SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @TO@ MethodName:setMaxEvaluations:[1000] @AT@ 1775 @LENGTH@ 36
+---------INS NumberLiteral@@1000 @TO@ SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @AT@ 1793 @LENGTH@ 4
+---------DEL QualifiedName@@Integer.MAX_VALUE @AT@ 1793 @LENGTH@ 17
+------------DEL SimpleName@@Integer @AT@ 1793 @LENGTH@ 7
+------------DEL SimpleName@@MAX_VALUE @AT@ 1801 @LENGTH@ 9
+, UPD ExpressionStatement@@MethodInvocation:setAbsoluteAccuracy(1E-10) @TO@ MethodInvocation:setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 27
+---UPD MethodInvocation@@setAbsoluteAccuracy(1E-10) @TO@ setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 26
+------UPD SimpleName@@MethodName:setAbsoluteAccuracy:[1E-10] @TO@ MethodName:setAbsoluteAccuracy:[1e-11] @AT@ 1860 @LENGTH@ 26
+---------UPD NumberLiteral@@1E-10 @TO@ 1e-11 @AT@ 1880 @LENGTH@ 5
+, UPD ExpressionStatement@@MethodInvocation:setRelativeAccuracy(1.0e-14) @TO@ MethodInvocation:setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 29
+---UPD MethodInvocation@@setRelativeAccuracy(1.0e-14) @TO@ setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 28
+------UPD SimpleName@@MethodName:setRelativeAccuracy:[1.0e-14] @TO@ MethodName:setRelativeAccuracy:[1e-9] @AT@ 1896 @LENGTH@ 28
+---------UPD NumberLiteral@@1.0e-14 @TO@ 1e-9 @AT@ 1916 @LENGTH@ 7
+, DEL ThrowStatement@@ClassInstanceCreation:new UnsupportedOperationException() @AT@ 2136 @LENGTH@ 42
+---DEL ClassInstanceCreation@@UnsupportedOperationException[] @AT@ 2142 @LENGTH@ 35
+------DEL New@@new @AT@ 2142 @LENGTH@ 3
+------DEL SimpleType@@UnsupportedOperationException @AT@ 2146 @LENGTH@ 29
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+double+startValue+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2189 @LENGTH@ 428
+---DEL Modifier@@public @AT@ 2189 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2196 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2203 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2212 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2212 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2218 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2241 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2244 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2244 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2250 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2259 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2269 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2269 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2275 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2282 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2287 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2287 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2293 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2300 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double startValue @AT@ 2305 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2305 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2311 @LENGTH@ 6
+------DEL SimpleName@@startValue @AT@ 2318 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:clearResult() @AT@ 2407 @LENGTH@ 14
+------DEL MethodInvocation@@MethodName:clearResult:[] @AT@ 2407 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2430 @LENGTH@ 181
+---UPD MethodInvocation@@localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2437 @LENGTH@ 173
+------UPD SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @TO@ MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, getMin(), getStartValue(), getMax(), getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2437 @LENGTH@ 173
+---------INS MethodInvocation@@MethodName:getMin:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2196 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:getStartValue:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2206 @LENGTH@ 15
+---------INS MethodInvocation@@MethodName:getMax:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2223 @LENGTH@ 8
+---------DEL SimpleName@@f @AT@ 2506 @LENGTH@ 1
+---------DEL SimpleName@@goalType @AT@ 2509 @LENGTH@ 8
+---------DEL SimpleName@@min @AT@ 2519 @LENGTH@ 3
+---------DEL SimpleName@@startValue @AT@ 2524 @LENGTH@ 10
+---------DEL SimpleName@@max @AT@ 2536 @LENGTH@ 3
+, MOV ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodDeclaration@@protected, @@double, MethodName:doOptimize, @@Argus:nullMaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2430 @LENGTH@ 181
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2622 @LENGTH@ 274
+---DEL Modifier@@public @AT@ 2622 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2629 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2636 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2645 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2645 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2651 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2674 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2677 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2677 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2683 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2692 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2702 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2702 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2708 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2715 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2720 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2720 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2726 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2733 @LENGTH@ 3
+---DEL ReturnStatement@@MethodInvocation:optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2815 @LENGTH@ 75
+------DEL MethodInvocation@@optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2822 @LENGTH@ 67
+---------DEL SimpleName@@MethodName:optimize:[f, goalType, min, max, min + GOLDEN_SECTION * (max - min)] @AT@ 2822 @LENGTH@ 67
+------------DEL SimpleName@@f @AT@ 2831 @LENGTH@ 1
+------------DEL SimpleName@@goalType @AT@ 2834 @LENGTH@ 8
+------------DEL SimpleName@@min @AT@ 2844 @LENGTH@ 3
+------------DEL SimpleName@@max @AT@ 2849 @LENGTH@ 3
+------------DEL InfixExpression@@min + GOLDEN_SECTION * (max - min) @AT@ 2854 @LENGTH@ 34
+---------------DEL SimpleName@@min @AT@ 2854 @LENGTH@ 3
+---------------DEL Operator@@+ @AT@ 2857 @LENGTH@ 1
+---------------DEL InfixExpression@@GOLDEN_SECTION * (max - min) @AT@ 2860 @LENGTH@ 28
+------------------DEL SimpleName@@GOLDEN_SECTION @AT@ 2860 @LENGTH@ 14
+------------------DEL Operator@@* @AT@ 2874 @LENGTH@ 1
+------------------DEL ParenthesizedExpression@@(max - min) @AT@ 2877 @LENGTH@ 11
+---------------------DEL InfixExpression@@max - min @AT@ 2878 @LENGTH@ 9
+------------------------DEL SimpleName@@max @AT@ 2878 @LENGTH@ 3
+------------------------DEL Operator@@- @AT@ 2881 @LENGTH@ 1
+------------------------DEL SimpleName@@min @AT@ 2884 @LENGTH@ 3
+, UPD MethodDeclaration@@private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+UnivariateRealFunction+f+GoalType+goalType+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @TO@ private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2902 @LENGTH@ 6029
+---DEL SingleVariableDeclaration@@UnivariateRealFunction f @AT@ 4182 @LENGTH@ 24
+------DEL SimpleType@@UnivariateRealFunction @AT@ 4182 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 4205 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@GoalType goalType @AT@ 4236 @LENGTH@ 17
+------DEL SimpleType@@GoalType @AT@ 4236 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 4245 @LENGTH@ 8
+---UPD VariableDeclarationStatement@@double fx=computeObjectiveValue(f,x); @TO@ double fx=computeObjectiveValue(x); @AT@ 4894 @LENGTH@ 40
+------UPD VariableDeclarationFragment@@fx=computeObjectiveValue(f,x) @TO@ fx=computeObjectiveValue(x) @AT@ 4901 @LENGTH@ 32
+---------UPD MethodInvocation@@computeObjectiveValue(f,x) @TO@ computeObjectiveValue(x) @AT@ 4906 @LENGTH@ 27
+------------UPD SimpleName@@MethodName:computeObjectiveValue:[f, x] @TO@ MethodName:computeObjectiveValue:[x] @AT@ 4906 @LENGTH@ 27
+---------------DEL SimpleName@@f @AT@ 4928 @LENGTH@ 1
+---UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 4943 @LENGTH@ 68
+------INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 4256 @LENGTH@ 8
+---------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 4256 @LENGTH@ 1
+---------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 4257 @LENGTH@ 7
+------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 4947 @LENGTH@ 29
+---------DEL SimpleName@@goalType @AT@ 4947 @LENGTH@ 8
+---------DEL Operator@@== @AT@ 4955 @LENGTH@ 2
+---------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 4959 @LENGTH@ 17
+------------DEL SimpleName@@GoalType @AT@ 4959 @LENGTH@ 8
+------------DEL SimpleName@@MAXIMIZE @AT@ 4968 @LENGTH@ 8
+---DEL VariableDeclarationStatement@@int count=0; @AT@ 5069 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 5069 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@count=0 @AT@ 5073 @LENGTH@ 9
+---------DEL SimpleName@@count @AT@ 5073 @LENGTH@ 5
+---------DEL NumberLiteral@@0 @AT@ 5081 @LENGTH@ 1
+---UPD WhileStatement@@InfixExpression:count < maximalIterationCount @TO@ BooleanLiteral:true @AT@ 5092 @LENGTH@ 3760
+------INS BooleanLiteral@@true @TO@ WhileStatement@@InfixExpression:count < maximalIterationCount @AT@ 4364 @LENGTH@ 4
+------DEL InfixExpression@@count < maximalIterationCount @AT@ 5099 @LENGTH@ 29
+---------DEL SimpleName@@count @AT@ 5099 @LENGTH@ 5
+---------DEL Operator@@< @AT@ 5104 @LENGTH@ 1
+---------DEL SimpleName@@maximalIterationCount @AT@ 5107 @LENGTH@ 21
+------UPD ExpressionStatement@@PrefixExpression:++count @TO@ MethodInvocation:incrementIterationsCounter() @AT@ 8834 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:incrementIterationsCounter:[] @TO@ ExpressionStatement@@PrefixExpression:++count @AT@ 8023 @LENGTH@ 28
+---------DEL PrefixExpression@@++count @AT@ 8834 @LENGTH@ 7
+------------DEL Operator@@++ @AT@ 8834 @LENGTH@ 2
+------------DEL SimpleName@@count @AT@ 8836 @LENGTH@ 5
+---DEL ThrowStatement@@ClassInstanceCreation:new MaxIterationsExceededException(maximalIterationCount) @AT@ 8861 @LENGTH@ 64
+------DEL ClassInstanceCreation@@MaxIterationsExceededException[maximalIterationCount] @AT@ 8867 @LENGTH@ 57
+---------DEL New@@new @AT@ 8867 @LENGTH@ 3
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 8871 @LENGTH@ 30
+---------DEL SimpleName@@maximalIterationCount @AT@ 8902 @LENGTH@ 21
+, UPD VariableDeclarationStatement@@double fu=computeObjectiveValue(f,u); @TO@ double fu=computeObjectiveValue(u); @AT@ 7534 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@fu=computeObjectiveValue(f,u) @TO@ fu=computeObjectiveValue(u) @AT@ 7541 @LENGTH@ 32
+------UPD MethodInvocation@@computeObjectiveValue(f,u) @TO@ computeObjectiveValue(u) @AT@ 7546 @LENGTH@ 27
+---------UPD SimpleName@@MethodName:computeObjectiveValue:[f, u] @TO@ MethodName:computeObjectiveValue:[u] @AT@ 7546 @LENGTH@ 27
+------------DEL SimpleName@@f @AT@ 7568 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 7591 @LENGTH@ 84
+---INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 6832 @LENGTH@ 8
+------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 6832 @LENGTH@ 1
+------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 6833 @LENGTH@ 7
+---DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 7595 @LENGTH@ 29
+------DEL SimpleName@@goalType @AT@ 7595 @LENGTH@ 8
+------DEL Operator@@== @AT@ 7603 @LENGTH@ 2
+------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 7607 @LENGTH@ 17
+---------DEL SimpleName@@GoalType @AT@ 7607 @LENGTH@ 8
+---------DEL SimpleName@@MAXIMIZE @AT@ 7616 @LENGTH@ 8
+, UPD ExpressionStatement@@MethodInvocation:setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ MethodInvocation:setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 64
+---UPD MethodInvocation@@setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 63
+------UPD SimpleName@@MethodName:setResult:[x, (goalType == GoalType.MAXIMIZE) ? -fx : fx, count] @TO@ MethodName:setFunctionValue:[isMinim ? fx : -fx] @AT@ 8717 @LENGTH@ 63
+---------DEL SimpleName@@x @AT@ 8727 @LENGTH@ 1
+---------UPD ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @TO@ isMinim ? fx : -fx @AT@ 8730 @LENGTH@ 42
+------------INS SimpleName@@isMinim @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7950 @LENGTH@ 7
+------------INS SimpleName@@fx @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7960 @LENGTH@ 2
+------------DEL ParenthesizedExpression@@(goalType == GoalType.MAXIMIZE) @AT@ 8730 @LENGTH@ 31
+---------------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 8731 @LENGTH@ 29
+------------------DEL SimpleName@@goalType @AT@ 8731 @LENGTH@ 8
+------------------DEL Operator@@== @AT@ 8739 @LENGTH@ 2
+------------------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 8743 @LENGTH@ 17
+---------------------DEL SimpleName@@GoalType @AT@ 8743 @LENGTH@ 8
+---------------------DEL SimpleName@@MAXIMIZE @AT@ 8752 @LENGTH@ 8
+------------DEL SimpleName@@fx @AT@ 8770 @LENGTH@ 2
+---------DEL SimpleName@@count @AT@ 8774 @LENGTH@ 5
+]
+
+CII:
+OP1:(DEL, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP9 OP13 OP17 OP21 OP25)
+OP2:   (DEL, Modifier, OP1, null)
+OP3:   (DEL, PrimitiveType, OP1, null)
+OP4:   (DEL, SimpleName, OP1, null)
+OP5:   (DEL, SingleVariableDeclaration, OP1, OP6 OP7 OP8)
+OP6:      (DEL, Modifier, OP5, null)
+OP7:      (DEL, SimpleType, OP5, null)
+OP8:      (DEL, SimpleName, OP5, null)
+OP9:   (DEL, SingleVariableDeclaration, OP1, OP10 OP11 OP12)
+OP10:      (DEL, Modifier, OP9, null)
+OP11:      (DEL, SimpleType, OP9, null)
+OP12:      (DEL, SimpleName, OP9, null)
+OP13:   (DEL, SingleVariableDeclaration, OP1, OP14 OP15 OP16)
+OP14:      (DEL, Modifier, OP13, null)
+OP15:      (DEL, PrimitiveType, OP13, null)
+OP16:      (DEL, SimpleName, OP13, null)
+OP17:   (DEL, SingleVariableDeclaration, OP1, OP18 OP19 OP20)
+OP18:      (DEL, Modifier, OP17, null)
+OP19:      (DEL, PrimitiveType, OP17, null)
+OP20:      (DEL, SimpleName, OP17, null)
+OP21:   (DEL, SingleVariableDeclaration, OP1, OP22 OP23 OP24)
+OP22:      (DEL, Modifier, OP21, null)
+OP23:      (DEL, PrimitiveType, OP21, null)
+OP24:      (DEL, SimpleName, OP21, null)
+OP25:   (DEL, ExpressionStatement, OP1, OP26)
+OP26:      (DEL, MethodInvocation, OP25, null)
+
+
+
+
+
+hASList: 
+[UPD ExpressionStatement@@MethodInvocation:setMaxEvaluations(Integer.MAX_VALUE) @TO@ MethodInvocation:setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 37
+---UPD MethodInvocation@@setMaxEvaluations(Integer.MAX_VALUE) @TO@ setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 36
+------UPD SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @TO@ MethodName:setMaxEvaluations:[1000] @AT@ 1775 @LENGTH@ 36
+---------INS NumberLiteral@@1000 @TO@ SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @AT@ 1793 @LENGTH@ 4
+---------DEL QualifiedName@@Integer.MAX_VALUE @AT@ 1793 @LENGTH@ 17
+------------DEL SimpleName@@Integer @AT@ 1793 @LENGTH@ 7
+------------DEL SimpleName@@MAX_VALUE @AT@ 1801 @LENGTH@ 9
+, UPD ExpressionStatement@@MethodInvocation:setAbsoluteAccuracy(1E-10) @TO@ MethodInvocation:setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 27
+---UPD MethodInvocation@@setAbsoluteAccuracy(1E-10) @TO@ setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 26
+------UPD SimpleName@@MethodName:setAbsoluteAccuracy:[1E-10] @TO@ MethodName:setAbsoluteAccuracy:[1e-11] @AT@ 1860 @LENGTH@ 26
+---------UPD NumberLiteral@@1E-10 @TO@ 1e-11 @AT@ 1880 @LENGTH@ 5
+, UPD ExpressionStatement@@MethodInvocation:setRelativeAccuracy(1.0e-14) @TO@ MethodInvocation:setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 29
+---UPD MethodInvocation@@setRelativeAccuracy(1.0e-14) @TO@ setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 28
+------UPD SimpleName@@MethodName:setRelativeAccuracy:[1.0e-14] @TO@ MethodName:setRelativeAccuracy:[1e-9] @AT@ 1896 @LENGTH@ 28
+---------UPD NumberLiteral@@1.0e-14 @TO@ 1e-9 @AT@ 1916 @LENGTH@ 7
+, DEL ThrowStatement@@ClassInstanceCreation:new UnsupportedOperationException() @AT@ 2136 @LENGTH@ 42
+---DEL ClassInstanceCreation@@UnsupportedOperationException[] @AT@ 2142 @LENGTH@ 35
+------DEL New@@new @AT@ 2142 @LENGTH@ 3
+------DEL SimpleType@@UnsupportedOperationException @AT@ 2146 @LENGTH@ 29
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+double+startValue+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2189 @LENGTH@ 428
+---DEL Modifier@@public @AT@ 2189 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2196 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2203 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2212 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2212 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2218 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2241 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2244 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2244 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2250 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2259 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2269 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2269 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2275 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2282 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2287 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2287 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2293 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2300 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double startValue @AT@ 2305 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2305 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2311 @LENGTH@ 6
+------DEL SimpleName@@startValue @AT@ 2318 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:clearResult() @AT@ 2407 @LENGTH@ 14
+------DEL MethodInvocation@@MethodName:clearResult:[] @AT@ 2407 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2430 @LENGTH@ 181
+---UPD MethodInvocation@@localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2437 @LENGTH@ 173
+------UPD SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @TO@ MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, getMin(), getStartValue(), getMax(), getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2437 @LENGTH@ 173
+---------INS MethodInvocation@@MethodName:getMin:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2196 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:getStartValue:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2206 @LENGTH@ 15
+---------INS MethodInvocation@@MethodName:getMax:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2223 @LENGTH@ 8
+---------DEL SimpleName@@f @AT@ 2506 @LENGTH@ 1
+---------DEL SimpleName@@goalType @AT@ 2509 @LENGTH@ 8
+---------DEL SimpleName@@min @AT@ 2519 @LENGTH@ 3
+---------DEL SimpleName@@startValue @AT@ 2524 @LENGTH@ 10
+---------DEL SimpleName@@max @AT@ 2536 @LENGTH@ 3
+, MOV ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodDeclaration@@protected, @@double, MethodName:doOptimize, @@Argus:nullMaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2430 @LENGTH@ 181
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2622 @LENGTH@ 274
+---DEL Modifier@@public @AT@ 2622 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2629 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2636 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2645 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2645 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2651 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2674 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2677 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2677 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2683 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2692 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2702 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2702 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2708 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2715 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2720 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2720 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2726 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2733 @LENGTH@ 3
+---DEL ReturnStatement@@MethodInvocation:optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2815 @LENGTH@ 75
+------DEL MethodInvocation@@optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2822 @LENGTH@ 67
+---------DEL SimpleName@@MethodName:optimize:[f, goalType, min, max, min + GOLDEN_SECTION * (max - min)] @AT@ 2822 @LENGTH@ 67
+------------DEL SimpleName@@f @AT@ 2831 @LENGTH@ 1
+------------DEL SimpleName@@goalType @AT@ 2834 @LENGTH@ 8
+------------DEL SimpleName@@min @AT@ 2844 @LENGTH@ 3
+------------DEL SimpleName@@max @AT@ 2849 @LENGTH@ 3
+------------DEL InfixExpression@@min + GOLDEN_SECTION * (max - min) @AT@ 2854 @LENGTH@ 34
+---------------DEL SimpleName@@min @AT@ 2854 @LENGTH@ 3
+---------------DEL Operator@@+ @AT@ 2857 @LENGTH@ 1
+---------------DEL InfixExpression@@GOLDEN_SECTION * (max - min) @AT@ 2860 @LENGTH@ 28
+------------------DEL SimpleName@@GOLDEN_SECTION @AT@ 2860 @LENGTH@ 14
+------------------DEL Operator@@* @AT@ 2874 @LENGTH@ 1
+------------------DEL ParenthesizedExpression@@(max - min) @AT@ 2877 @LENGTH@ 11
+---------------------DEL InfixExpression@@max - min @AT@ 2878 @LENGTH@ 9
+------------------------DEL SimpleName@@max @AT@ 2878 @LENGTH@ 3
+------------------------DEL Operator@@- @AT@ 2881 @LENGTH@ 1
+------------------------DEL SimpleName@@min @AT@ 2884 @LENGTH@ 3
+, UPD MethodDeclaration@@private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+UnivariateRealFunction+f+GoalType+goalType+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @TO@ private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2902 @LENGTH@ 6029
+---DEL SingleVariableDeclaration@@UnivariateRealFunction f @AT@ 4182 @LENGTH@ 24
+------DEL SimpleType@@UnivariateRealFunction @AT@ 4182 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 4205 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@GoalType goalType @AT@ 4236 @LENGTH@ 17
+------DEL SimpleType@@GoalType @AT@ 4236 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 4245 @LENGTH@ 8
+---UPD VariableDeclarationStatement@@double fx=computeObjectiveValue(f,x); @TO@ double fx=computeObjectiveValue(x); @AT@ 4894 @LENGTH@ 40
+------UPD VariableDeclarationFragment@@fx=computeObjectiveValue(f,x) @TO@ fx=computeObjectiveValue(x) @AT@ 4901 @LENGTH@ 32
+---------UPD MethodInvocation@@computeObjectiveValue(f,x) @TO@ computeObjectiveValue(x) @AT@ 4906 @LENGTH@ 27
+------------UPD SimpleName@@MethodName:computeObjectiveValue:[f, x] @TO@ MethodName:computeObjectiveValue:[x] @AT@ 4906 @LENGTH@ 27
+---------------DEL SimpleName@@f @AT@ 4928 @LENGTH@ 1
+---UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 4943 @LENGTH@ 68
+------INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 4256 @LENGTH@ 8
+---------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 4256 @LENGTH@ 1
+---------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 4257 @LENGTH@ 7
+------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 4947 @LENGTH@ 29
+---------DEL SimpleName@@goalType @AT@ 4947 @LENGTH@ 8
+---------DEL Operator@@== @AT@ 4955 @LENGTH@ 2
+---------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 4959 @LENGTH@ 17
+------------DEL SimpleName@@GoalType @AT@ 4959 @LENGTH@ 8
+------------DEL SimpleName@@MAXIMIZE @AT@ 4968 @LENGTH@ 8
+---DEL VariableDeclarationStatement@@int count=0; @AT@ 5069 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 5069 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@count=0 @AT@ 5073 @LENGTH@ 9
+---------DEL SimpleName@@count @AT@ 5073 @LENGTH@ 5
+---------DEL NumberLiteral@@0 @AT@ 5081 @LENGTH@ 1
+---UPD WhileStatement@@InfixExpression:count < maximalIterationCount @TO@ BooleanLiteral:true @AT@ 5092 @LENGTH@ 3760
+------INS BooleanLiteral@@true @TO@ WhileStatement@@InfixExpression:count < maximalIterationCount @AT@ 4364 @LENGTH@ 4
+------DEL InfixExpression@@count < maximalIterationCount @AT@ 5099 @LENGTH@ 29
+---------DEL SimpleName@@count @AT@ 5099 @LENGTH@ 5
+---------DEL Operator@@< @AT@ 5104 @LENGTH@ 1
+---------DEL SimpleName@@maximalIterationCount @AT@ 5107 @LENGTH@ 21
+------UPD ExpressionStatement@@PrefixExpression:++count @TO@ MethodInvocation:incrementIterationsCounter() @AT@ 8834 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:incrementIterationsCounter:[] @TO@ ExpressionStatement@@PrefixExpression:++count @AT@ 8023 @LENGTH@ 28
+---------DEL PrefixExpression@@++count @AT@ 8834 @LENGTH@ 7
+------------DEL Operator@@++ @AT@ 8834 @LENGTH@ 2
+------------DEL SimpleName@@count @AT@ 8836 @LENGTH@ 5
+---DEL ThrowStatement@@ClassInstanceCreation:new MaxIterationsExceededException(maximalIterationCount) @AT@ 8861 @LENGTH@ 64
+------DEL ClassInstanceCreation@@MaxIterationsExceededException[maximalIterationCount] @AT@ 8867 @LENGTH@ 57
+---------DEL New@@new @AT@ 8867 @LENGTH@ 3
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 8871 @LENGTH@ 30
+---------DEL SimpleName@@maximalIterationCount @AT@ 8902 @LENGTH@ 21
+, UPD VariableDeclarationStatement@@double fu=computeObjectiveValue(f,u); @TO@ double fu=computeObjectiveValue(u); @AT@ 7534 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@fu=computeObjectiveValue(f,u) @TO@ fu=computeObjectiveValue(u) @AT@ 7541 @LENGTH@ 32
+------UPD MethodInvocation@@computeObjectiveValue(f,u) @TO@ computeObjectiveValue(u) @AT@ 7546 @LENGTH@ 27
+---------UPD SimpleName@@MethodName:computeObjectiveValue:[f, u] @TO@ MethodName:computeObjectiveValue:[u] @AT@ 7546 @LENGTH@ 27
+------------DEL SimpleName@@f @AT@ 7568 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 7591 @LENGTH@ 84
+---INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 6832 @LENGTH@ 8
+------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 6832 @LENGTH@ 1
+------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 6833 @LENGTH@ 7
+---DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 7595 @LENGTH@ 29
+------DEL SimpleName@@goalType @AT@ 7595 @LENGTH@ 8
+------DEL Operator@@== @AT@ 7603 @LENGTH@ 2
+------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 7607 @LENGTH@ 17
+---------DEL SimpleName@@GoalType @AT@ 7607 @LENGTH@ 8
+---------DEL SimpleName@@MAXIMIZE @AT@ 7616 @LENGTH@ 8
+, UPD ExpressionStatement@@MethodInvocation:setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ MethodInvocation:setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 64
+---UPD MethodInvocation@@setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 63
+------UPD SimpleName@@MethodName:setResult:[x, (goalType == GoalType.MAXIMIZE) ? -fx : fx, count] @TO@ MethodName:setFunctionValue:[isMinim ? fx : -fx] @AT@ 8717 @LENGTH@ 63
+---------DEL SimpleName@@x @AT@ 8727 @LENGTH@ 1
+---------UPD ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @TO@ isMinim ? fx : -fx @AT@ 8730 @LENGTH@ 42
+------------INS SimpleName@@isMinim @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7950 @LENGTH@ 7
+------------INS SimpleName@@fx @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7960 @LENGTH@ 2
+------------DEL ParenthesizedExpression@@(goalType == GoalType.MAXIMIZE) @AT@ 8730 @LENGTH@ 31
+---------------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 8731 @LENGTH@ 29
+------------------DEL SimpleName@@goalType @AT@ 8731 @LENGTH@ 8
+------------------DEL Operator@@== @AT@ 8739 @LENGTH@ 2
+------------------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 8743 @LENGTH@ 17
+---------------------DEL SimpleName@@GoalType @AT@ 8743 @LENGTH@ 8
+---------------------DEL SimpleName@@MAXIMIZE @AT@ 8752 @LENGTH@ 8
+------------DEL SimpleName@@fx @AT@ 8770 @LENGTH@ 2
+---------DEL SimpleName@@count @AT@ 8774 @LENGTH@ 5
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4 OP5 OP6 OP7 OP8 OP9 OP10 OP11)
+OP4:         (INS, MethodInvocation, OP3, null)
+OP5:         (INS, MethodInvocation, OP3, null)
+OP6:         (INS, MethodInvocation, OP3, null)
+OP7:         (DEL, SimpleName, OP3, null)
+OP8:         (DEL, SimpleName, OP3, null)
+OP9:         (DEL, SimpleName, OP3, null)
+OP10:         (DEL, SimpleName, OP3, null)
+OP11:         (DEL, SimpleName, OP3, null)
+
+
+
+
+
+hASList: 
+[UPD ExpressionStatement@@MethodInvocation:setMaxEvaluations(Integer.MAX_VALUE) @TO@ MethodInvocation:setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 37
+---UPD MethodInvocation@@setMaxEvaluations(Integer.MAX_VALUE) @TO@ setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 36
+------UPD SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @TO@ MethodName:setMaxEvaluations:[1000] @AT@ 1775 @LENGTH@ 36
+---------INS NumberLiteral@@1000 @TO@ SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @AT@ 1793 @LENGTH@ 4
+---------DEL QualifiedName@@Integer.MAX_VALUE @AT@ 1793 @LENGTH@ 17
+------------DEL SimpleName@@Integer @AT@ 1793 @LENGTH@ 7
+------------DEL SimpleName@@MAX_VALUE @AT@ 1801 @LENGTH@ 9
+, UPD ExpressionStatement@@MethodInvocation:setAbsoluteAccuracy(1E-10) @TO@ MethodInvocation:setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 27
+---UPD MethodInvocation@@setAbsoluteAccuracy(1E-10) @TO@ setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 26
+------UPD SimpleName@@MethodName:setAbsoluteAccuracy:[1E-10] @TO@ MethodName:setAbsoluteAccuracy:[1e-11] @AT@ 1860 @LENGTH@ 26
+---------UPD NumberLiteral@@1E-10 @TO@ 1e-11 @AT@ 1880 @LENGTH@ 5
+, UPD ExpressionStatement@@MethodInvocation:setRelativeAccuracy(1.0e-14) @TO@ MethodInvocation:setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 29
+---UPD MethodInvocation@@setRelativeAccuracy(1.0e-14) @TO@ setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 28
+------UPD SimpleName@@MethodName:setRelativeAccuracy:[1.0e-14] @TO@ MethodName:setRelativeAccuracy:[1e-9] @AT@ 1896 @LENGTH@ 28
+---------UPD NumberLiteral@@1.0e-14 @TO@ 1e-9 @AT@ 1916 @LENGTH@ 7
+, DEL ThrowStatement@@ClassInstanceCreation:new UnsupportedOperationException() @AT@ 2136 @LENGTH@ 42
+---DEL ClassInstanceCreation@@UnsupportedOperationException[] @AT@ 2142 @LENGTH@ 35
+------DEL New@@new @AT@ 2142 @LENGTH@ 3
+------DEL SimpleType@@UnsupportedOperationException @AT@ 2146 @LENGTH@ 29
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+double+startValue+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2189 @LENGTH@ 428
+---DEL Modifier@@public @AT@ 2189 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2196 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2203 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2212 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2212 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2218 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2241 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2244 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2244 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2250 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2259 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2269 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2269 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2275 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2282 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2287 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2287 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2293 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2300 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double startValue @AT@ 2305 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2305 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2311 @LENGTH@ 6
+------DEL SimpleName@@startValue @AT@ 2318 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:clearResult() @AT@ 2407 @LENGTH@ 14
+------DEL MethodInvocation@@MethodName:clearResult:[] @AT@ 2407 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2430 @LENGTH@ 181
+---UPD MethodInvocation@@localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2437 @LENGTH@ 173
+------UPD SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @TO@ MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, getMin(), getStartValue(), getMax(), getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2437 @LENGTH@ 173
+---------INS MethodInvocation@@MethodName:getMin:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2196 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:getStartValue:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2206 @LENGTH@ 15
+---------INS MethodInvocation@@MethodName:getMax:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2223 @LENGTH@ 8
+---------DEL SimpleName@@f @AT@ 2506 @LENGTH@ 1
+---------DEL SimpleName@@goalType @AT@ 2509 @LENGTH@ 8
+---------DEL SimpleName@@min @AT@ 2519 @LENGTH@ 3
+---------DEL SimpleName@@startValue @AT@ 2524 @LENGTH@ 10
+---------DEL SimpleName@@max @AT@ 2536 @LENGTH@ 3
+, MOV ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodDeclaration@@protected, @@double, MethodName:doOptimize, @@Argus:nullMaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2430 @LENGTH@ 181
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2622 @LENGTH@ 274
+---DEL Modifier@@public @AT@ 2622 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2629 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2636 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2645 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2645 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2651 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2674 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2677 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2677 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2683 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2692 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2702 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2702 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2708 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2715 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2720 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2720 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2726 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2733 @LENGTH@ 3
+---DEL ReturnStatement@@MethodInvocation:optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2815 @LENGTH@ 75
+------DEL MethodInvocation@@optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2822 @LENGTH@ 67
+---------DEL SimpleName@@MethodName:optimize:[f, goalType, min, max, min + GOLDEN_SECTION * (max - min)] @AT@ 2822 @LENGTH@ 67
+------------DEL SimpleName@@f @AT@ 2831 @LENGTH@ 1
+------------DEL SimpleName@@goalType @AT@ 2834 @LENGTH@ 8
+------------DEL SimpleName@@min @AT@ 2844 @LENGTH@ 3
+------------DEL SimpleName@@max @AT@ 2849 @LENGTH@ 3
+------------DEL InfixExpression@@min + GOLDEN_SECTION * (max - min) @AT@ 2854 @LENGTH@ 34
+---------------DEL SimpleName@@min @AT@ 2854 @LENGTH@ 3
+---------------DEL Operator@@+ @AT@ 2857 @LENGTH@ 1
+---------------DEL InfixExpression@@GOLDEN_SECTION * (max - min) @AT@ 2860 @LENGTH@ 28
+------------------DEL SimpleName@@GOLDEN_SECTION @AT@ 2860 @LENGTH@ 14
+------------------DEL Operator@@* @AT@ 2874 @LENGTH@ 1
+------------------DEL ParenthesizedExpression@@(max - min) @AT@ 2877 @LENGTH@ 11
+---------------------DEL InfixExpression@@max - min @AT@ 2878 @LENGTH@ 9
+------------------------DEL SimpleName@@max @AT@ 2878 @LENGTH@ 3
+------------------------DEL Operator@@- @AT@ 2881 @LENGTH@ 1
+------------------------DEL SimpleName@@min @AT@ 2884 @LENGTH@ 3
+, UPD MethodDeclaration@@private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+UnivariateRealFunction+f+GoalType+goalType+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @TO@ private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2902 @LENGTH@ 6029
+---DEL SingleVariableDeclaration@@UnivariateRealFunction f @AT@ 4182 @LENGTH@ 24
+------DEL SimpleType@@UnivariateRealFunction @AT@ 4182 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 4205 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@GoalType goalType @AT@ 4236 @LENGTH@ 17
+------DEL SimpleType@@GoalType @AT@ 4236 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 4245 @LENGTH@ 8
+---UPD VariableDeclarationStatement@@double fx=computeObjectiveValue(f,x); @TO@ double fx=computeObjectiveValue(x); @AT@ 4894 @LENGTH@ 40
+------UPD VariableDeclarationFragment@@fx=computeObjectiveValue(f,x) @TO@ fx=computeObjectiveValue(x) @AT@ 4901 @LENGTH@ 32
+---------UPD MethodInvocation@@computeObjectiveValue(f,x) @TO@ computeObjectiveValue(x) @AT@ 4906 @LENGTH@ 27
+------------UPD SimpleName@@MethodName:computeObjectiveValue:[f, x] @TO@ MethodName:computeObjectiveValue:[x] @AT@ 4906 @LENGTH@ 27
+---------------DEL SimpleName@@f @AT@ 4928 @LENGTH@ 1
+---UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 4943 @LENGTH@ 68
+------INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 4256 @LENGTH@ 8
+---------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 4256 @LENGTH@ 1
+---------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 4257 @LENGTH@ 7
+------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 4947 @LENGTH@ 29
+---------DEL SimpleName@@goalType @AT@ 4947 @LENGTH@ 8
+---------DEL Operator@@== @AT@ 4955 @LENGTH@ 2
+---------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 4959 @LENGTH@ 17
+------------DEL SimpleName@@GoalType @AT@ 4959 @LENGTH@ 8
+------------DEL SimpleName@@MAXIMIZE @AT@ 4968 @LENGTH@ 8
+---DEL VariableDeclarationStatement@@int count=0; @AT@ 5069 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 5069 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@count=0 @AT@ 5073 @LENGTH@ 9
+---------DEL SimpleName@@count @AT@ 5073 @LENGTH@ 5
+---------DEL NumberLiteral@@0 @AT@ 5081 @LENGTH@ 1
+---UPD WhileStatement@@InfixExpression:count < maximalIterationCount @TO@ BooleanLiteral:true @AT@ 5092 @LENGTH@ 3760
+------INS BooleanLiteral@@true @TO@ WhileStatement@@InfixExpression:count < maximalIterationCount @AT@ 4364 @LENGTH@ 4
+------DEL InfixExpression@@count < maximalIterationCount @AT@ 5099 @LENGTH@ 29
+---------DEL SimpleName@@count @AT@ 5099 @LENGTH@ 5
+---------DEL Operator@@< @AT@ 5104 @LENGTH@ 1
+---------DEL SimpleName@@maximalIterationCount @AT@ 5107 @LENGTH@ 21
+------UPD ExpressionStatement@@PrefixExpression:++count @TO@ MethodInvocation:incrementIterationsCounter() @AT@ 8834 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:incrementIterationsCounter:[] @TO@ ExpressionStatement@@PrefixExpression:++count @AT@ 8023 @LENGTH@ 28
+---------DEL PrefixExpression@@++count @AT@ 8834 @LENGTH@ 7
+------------DEL Operator@@++ @AT@ 8834 @LENGTH@ 2
+------------DEL SimpleName@@count @AT@ 8836 @LENGTH@ 5
+---DEL ThrowStatement@@ClassInstanceCreation:new MaxIterationsExceededException(maximalIterationCount) @AT@ 8861 @LENGTH@ 64
+------DEL ClassInstanceCreation@@MaxIterationsExceededException[maximalIterationCount] @AT@ 8867 @LENGTH@ 57
+---------DEL New@@new @AT@ 8867 @LENGTH@ 3
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 8871 @LENGTH@ 30
+---------DEL SimpleName@@maximalIterationCount @AT@ 8902 @LENGTH@ 21
+, UPD VariableDeclarationStatement@@double fu=computeObjectiveValue(f,u); @TO@ double fu=computeObjectiveValue(u); @AT@ 7534 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@fu=computeObjectiveValue(f,u) @TO@ fu=computeObjectiveValue(u) @AT@ 7541 @LENGTH@ 32
+------UPD MethodInvocation@@computeObjectiveValue(f,u) @TO@ computeObjectiveValue(u) @AT@ 7546 @LENGTH@ 27
+---------UPD SimpleName@@MethodName:computeObjectiveValue:[f, u] @TO@ MethodName:computeObjectiveValue:[u] @AT@ 7546 @LENGTH@ 27
+------------DEL SimpleName@@f @AT@ 7568 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 7591 @LENGTH@ 84
+---INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 6832 @LENGTH@ 8
+------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 6832 @LENGTH@ 1
+------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 6833 @LENGTH@ 7
+---DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 7595 @LENGTH@ 29
+------DEL SimpleName@@goalType @AT@ 7595 @LENGTH@ 8
+------DEL Operator@@== @AT@ 7603 @LENGTH@ 2
+------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 7607 @LENGTH@ 17
+---------DEL SimpleName@@GoalType @AT@ 7607 @LENGTH@ 8
+---------DEL SimpleName@@MAXIMIZE @AT@ 7616 @LENGTH@ 8
+, UPD ExpressionStatement@@MethodInvocation:setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ MethodInvocation:setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 64
+---UPD MethodInvocation@@setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 63
+------UPD SimpleName@@MethodName:setResult:[x, (goalType == GoalType.MAXIMIZE) ? -fx : fx, count] @TO@ MethodName:setFunctionValue:[isMinim ? fx : -fx] @AT@ 8717 @LENGTH@ 63
+---------DEL SimpleName@@x @AT@ 8727 @LENGTH@ 1
+---------UPD ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @TO@ isMinim ? fx : -fx @AT@ 8730 @LENGTH@ 42
+------------INS SimpleName@@isMinim @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7950 @LENGTH@ 7
+------------INS SimpleName@@fx @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7960 @LENGTH@ 2
+------------DEL ParenthesizedExpression@@(goalType == GoalType.MAXIMIZE) @AT@ 8730 @LENGTH@ 31
+---------------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 8731 @LENGTH@ 29
+------------------DEL SimpleName@@goalType @AT@ 8731 @LENGTH@ 8
+------------------DEL Operator@@== @AT@ 8739 @LENGTH@ 2
+------------------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 8743 @LENGTH@ 17
+---------------------DEL SimpleName@@GoalType @AT@ 8743 @LENGTH@ 8
+---------------------DEL SimpleName@@MAXIMIZE @AT@ 8752 @LENGTH@ 8
+------------DEL SimpleName@@fx @AT@ 8770 @LENGTH@ 2
+---------DEL SimpleName@@count @AT@ 8774 @LENGTH@ 5
+]
+
+CII:
+OP1:(MOV, ReturnStatement, null, null)
+
+
+
+
+
+hASList: 
+[UPD ExpressionStatement@@MethodInvocation:setMaxEvaluations(Integer.MAX_VALUE) @TO@ MethodInvocation:setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 37
+---UPD MethodInvocation@@setMaxEvaluations(Integer.MAX_VALUE) @TO@ setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 36
+------UPD SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @TO@ MethodName:setMaxEvaluations:[1000] @AT@ 1775 @LENGTH@ 36
+---------INS NumberLiteral@@1000 @TO@ SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @AT@ 1793 @LENGTH@ 4
+---------DEL QualifiedName@@Integer.MAX_VALUE @AT@ 1793 @LENGTH@ 17
+------------DEL SimpleName@@Integer @AT@ 1793 @LENGTH@ 7
+------------DEL SimpleName@@MAX_VALUE @AT@ 1801 @LENGTH@ 9
+, UPD ExpressionStatement@@MethodInvocation:setAbsoluteAccuracy(1E-10) @TO@ MethodInvocation:setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 27
+---UPD MethodInvocation@@setAbsoluteAccuracy(1E-10) @TO@ setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 26
+------UPD SimpleName@@MethodName:setAbsoluteAccuracy:[1E-10] @TO@ MethodName:setAbsoluteAccuracy:[1e-11] @AT@ 1860 @LENGTH@ 26
+---------UPD NumberLiteral@@1E-10 @TO@ 1e-11 @AT@ 1880 @LENGTH@ 5
+, UPD ExpressionStatement@@MethodInvocation:setRelativeAccuracy(1.0e-14) @TO@ MethodInvocation:setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 29
+---UPD MethodInvocation@@setRelativeAccuracy(1.0e-14) @TO@ setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 28
+------UPD SimpleName@@MethodName:setRelativeAccuracy:[1.0e-14] @TO@ MethodName:setRelativeAccuracy:[1e-9] @AT@ 1896 @LENGTH@ 28
+---------UPD NumberLiteral@@1.0e-14 @TO@ 1e-9 @AT@ 1916 @LENGTH@ 7
+, DEL ThrowStatement@@ClassInstanceCreation:new UnsupportedOperationException() @AT@ 2136 @LENGTH@ 42
+---DEL ClassInstanceCreation@@UnsupportedOperationException[] @AT@ 2142 @LENGTH@ 35
+------DEL New@@new @AT@ 2142 @LENGTH@ 3
+------DEL SimpleType@@UnsupportedOperationException @AT@ 2146 @LENGTH@ 29
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+double+startValue+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2189 @LENGTH@ 428
+---DEL Modifier@@public @AT@ 2189 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2196 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2203 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2212 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2212 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2218 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2241 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2244 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2244 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2250 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2259 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2269 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2269 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2275 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2282 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2287 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2287 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2293 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2300 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double startValue @AT@ 2305 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2305 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2311 @LENGTH@ 6
+------DEL SimpleName@@startValue @AT@ 2318 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:clearResult() @AT@ 2407 @LENGTH@ 14
+------DEL MethodInvocation@@MethodName:clearResult:[] @AT@ 2407 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2430 @LENGTH@ 181
+---UPD MethodInvocation@@localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2437 @LENGTH@ 173
+------UPD SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @TO@ MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, getMin(), getStartValue(), getMax(), getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2437 @LENGTH@ 173
+---------INS MethodInvocation@@MethodName:getMin:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2196 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:getStartValue:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2206 @LENGTH@ 15
+---------INS MethodInvocation@@MethodName:getMax:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2223 @LENGTH@ 8
+---------DEL SimpleName@@f @AT@ 2506 @LENGTH@ 1
+---------DEL SimpleName@@goalType @AT@ 2509 @LENGTH@ 8
+---------DEL SimpleName@@min @AT@ 2519 @LENGTH@ 3
+---------DEL SimpleName@@startValue @AT@ 2524 @LENGTH@ 10
+---------DEL SimpleName@@max @AT@ 2536 @LENGTH@ 3
+, MOV ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodDeclaration@@protected, @@double, MethodName:doOptimize, @@Argus:nullMaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2430 @LENGTH@ 181
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2622 @LENGTH@ 274
+---DEL Modifier@@public @AT@ 2622 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2629 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2636 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2645 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2645 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2651 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2674 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2677 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2677 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2683 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2692 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2702 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2702 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2708 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2715 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2720 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2720 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2726 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2733 @LENGTH@ 3
+---DEL ReturnStatement@@MethodInvocation:optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2815 @LENGTH@ 75
+------DEL MethodInvocation@@optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2822 @LENGTH@ 67
+---------DEL SimpleName@@MethodName:optimize:[f, goalType, min, max, min + GOLDEN_SECTION * (max - min)] @AT@ 2822 @LENGTH@ 67
+------------DEL SimpleName@@f @AT@ 2831 @LENGTH@ 1
+------------DEL SimpleName@@goalType @AT@ 2834 @LENGTH@ 8
+------------DEL SimpleName@@min @AT@ 2844 @LENGTH@ 3
+------------DEL SimpleName@@max @AT@ 2849 @LENGTH@ 3
+------------DEL InfixExpression@@min + GOLDEN_SECTION * (max - min) @AT@ 2854 @LENGTH@ 34
+---------------DEL SimpleName@@min @AT@ 2854 @LENGTH@ 3
+---------------DEL Operator@@+ @AT@ 2857 @LENGTH@ 1
+---------------DEL InfixExpression@@GOLDEN_SECTION * (max - min) @AT@ 2860 @LENGTH@ 28
+------------------DEL SimpleName@@GOLDEN_SECTION @AT@ 2860 @LENGTH@ 14
+------------------DEL Operator@@* @AT@ 2874 @LENGTH@ 1
+------------------DEL ParenthesizedExpression@@(max - min) @AT@ 2877 @LENGTH@ 11
+---------------------DEL InfixExpression@@max - min @AT@ 2878 @LENGTH@ 9
+------------------------DEL SimpleName@@max @AT@ 2878 @LENGTH@ 3
+------------------------DEL Operator@@- @AT@ 2881 @LENGTH@ 1
+------------------------DEL SimpleName@@min @AT@ 2884 @LENGTH@ 3
+, UPD MethodDeclaration@@private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+UnivariateRealFunction+f+GoalType+goalType+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @TO@ private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2902 @LENGTH@ 6029
+---DEL SingleVariableDeclaration@@UnivariateRealFunction f @AT@ 4182 @LENGTH@ 24
+------DEL SimpleType@@UnivariateRealFunction @AT@ 4182 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 4205 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@GoalType goalType @AT@ 4236 @LENGTH@ 17
+------DEL SimpleType@@GoalType @AT@ 4236 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 4245 @LENGTH@ 8
+---UPD VariableDeclarationStatement@@double fx=computeObjectiveValue(f,x); @TO@ double fx=computeObjectiveValue(x); @AT@ 4894 @LENGTH@ 40
+------UPD VariableDeclarationFragment@@fx=computeObjectiveValue(f,x) @TO@ fx=computeObjectiveValue(x) @AT@ 4901 @LENGTH@ 32
+---------UPD MethodInvocation@@computeObjectiveValue(f,x) @TO@ computeObjectiveValue(x) @AT@ 4906 @LENGTH@ 27
+------------UPD SimpleName@@MethodName:computeObjectiveValue:[f, x] @TO@ MethodName:computeObjectiveValue:[x] @AT@ 4906 @LENGTH@ 27
+---------------DEL SimpleName@@f @AT@ 4928 @LENGTH@ 1
+---UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 4943 @LENGTH@ 68
+------INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 4256 @LENGTH@ 8
+---------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 4256 @LENGTH@ 1
+---------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 4257 @LENGTH@ 7
+------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 4947 @LENGTH@ 29
+---------DEL SimpleName@@goalType @AT@ 4947 @LENGTH@ 8
+---------DEL Operator@@== @AT@ 4955 @LENGTH@ 2
+---------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 4959 @LENGTH@ 17
+------------DEL SimpleName@@GoalType @AT@ 4959 @LENGTH@ 8
+------------DEL SimpleName@@MAXIMIZE @AT@ 4968 @LENGTH@ 8
+---DEL VariableDeclarationStatement@@int count=0; @AT@ 5069 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 5069 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@count=0 @AT@ 5073 @LENGTH@ 9
+---------DEL SimpleName@@count @AT@ 5073 @LENGTH@ 5
+---------DEL NumberLiteral@@0 @AT@ 5081 @LENGTH@ 1
+---UPD WhileStatement@@InfixExpression:count < maximalIterationCount @TO@ BooleanLiteral:true @AT@ 5092 @LENGTH@ 3760
+------INS BooleanLiteral@@true @TO@ WhileStatement@@InfixExpression:count < maximalIterationCount @AT@ 4364 @LENGTH@ 4
+------DEL InfixExpression@@count < maximalIterationCount @AT@ 5099 @LENGTH@ 29
+---------DEL SimpleName@@count @AT@ 5099 @LENGTH@ 5
+---------DEL Operator@@< @AT@ 5104 @LENGTH@ 1
+---------DEL SimpleName@@maximalIterationCount @AT@ 5107 @LENGTH@ 21
+------UPD ExpressionStatement@@PrefixExpression:++count @TO@ MethodInvocation:incrementIterationsCounter() @AT@ 8834 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:incrementIterationsCounter:[] @TO@ ExpressionStatement@@PrefixExpression:++count @AT@ 8023 @LENGTH@ 28
+---------DEL PrefixExpression@@++count @AT@ 8834 @LENGTH@ 7
+------------DEL Operator@@++ @AT@ 8834 @LENGTH@ 2
+------------DEL SimpleName@@count @AT@ 8836 @LENGTH@ 5
+---DEL ThrowStatement@@ClassInstanceCreation:new MaxIterationsExceededException(maximalIterationCount) @AT@ 8861 @LENGTH@ 64
+------DEL ClassInstanceCreation@@MaxIterationsExceededException[maximalIterationCount] @AT@ 8867 @LENGTH@ 57
+---------DEL New@@new @AT@ 8867 @LENGTH@ 3
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 8871 @LENGTH@ 30
+---------DEL SimpleName@@maximalIterationCount @AT@ 8902 @LENGTH@ 21
+, UPD VariableDeclarationStatement@@double fu=computeObjectiveValue(f,u); @TO@ double fu=computeObjectiveValue(u); @AT@ 7534 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@fu=computeObjectiveValue(f,u) @TO@ fu=computeObjectiveValue(u) @AT@ 7541 @LENGTH@ 32
+------UPD MethodInvocation@@computeObjectiveValue(f,u) @TO@ computeObjectiveValue(u) @AT@ 7546 @LENGTH@ 27
+---------UPD SimpleName@@MethodName:computeObjectiveValue:[f, u] @TO@ MethodName:computeObjectiveValue:[u] @AT@ 7546 @LENGTH@ 27
+------------DEL SimpleName@@f @AT@ 7568 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 7591 @LENGTH@ 84
+---INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 6832 @LENGTH@ 8
+------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 6832 @LENGTH@ 1
+------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 6833 @LENGTH@ 7
+---DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 7595 @LENGTH@ 29
+------DEL SimpleName@@goalType @AT@ 7595 @LENGTH@ 8
+------DEL Operator@@== @AT@ 7603 @LENGTH@ 2
+------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 7607 @LENGTH@ 17
+---------DEL SimpleName@@GoalType @AT@ 7607 @LENGTH@ 8
+---------DEL SimpleName@@MAXIMIZE @AT@ 7616 @LENGTH@ 8
+, UPD ExpressionStatement@@MethodInvocation:setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ MethodInvocation:setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 64
+---UPD MethodInvocation@@setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 63
+------UPD SimpleName@@MethodName:setResult:[x, (goalType == GoalType.MAXIMIZE) ? -fx : fx, count] @TO@ MethodName:setFunctionValue:[isMinim ? fx : -fx] @AT@ 8717 @LENGTH@ 63
+---------DEL SimpleName@@x @AT@ 8727 @LENGTH@ 1
+---------UPD ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @TO@ isMinim ? fx : -fx @AT@ 8730 @LENGTH@ 42
+------------INS SimpleName@@isMinim @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7950 @LENGTH@ 7
+------------INS SimpleName@@fx @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7960 @LENGTH@ 2
+------------DEL ParenthesizedExpression@@(goalType == GoalType.MAXIMIZE) @AT@ 8730 @LENGTH@ 31
+---------------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 8731 @LENGTH@ 29
+------------------DEL SimpleName@@goalType @AT@ 8731 @LENGTH@ 8
+------------------DEL Operator@@== @AT@ 8739 @LENGTH@ 2
+------------------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 8743 @LENGTH@ 17
+---------------------DEL SimpleName@@GoalType @AT@ 8743 @LENGTH@ 8
+---------------------DEL SimpleName@@MAXIMIZE @AT@ 8752 @LENGTH@ 8
+------------DEL SimpleName@@fx @AT@ 8770 @LENGTH@ 2
+---------DEL SimpleName@@count @AT@ 8774 @LENGTH@ 5
+]
+
+CII:
+OP1:(DEL, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP9 OP13 OP17 OP21)
+OP2:   (DEL, Modifier, OP1, null)
+OP3:   (DEL, PrimitiveType, OP1, null)
+OP4:   (DEL, SimpleName, OP1, null)
+OP5:   (DEL, SingleVariableDeclaration, OP1, OP6 OP7 OP8)
+OP6:      (DEL, Modifier, OP5, null)
+OP7:      (DEL, SimpleType, OP5, null)
+OP8:      (DEL, SimpleName, OP5, null)
+OP9:   (DEL, SingleVariableDeclaration, OP1, OP10 OP11 OP12)
+OP10:      (DEL, Modifier, OP9, null)
+OP11:      (DEL, SimpleType, OP9, null)
+OP12:      (DEL, SimpleName, OP9, null)
+OP13:   (DEL, SingleVariableDeclaration, OP1, OP14 OP15 OP16)
+OP14:      (DEL, Modifier, OP13, null)
+OP15:      (DEL, PrimitiveType, OP13, null)
+OP16:      (DEL, SimpleName, OP13, null)
+OP17:   (DEL, SingleVariableDeclaration, OP1, OP18 OP19 OP20)
+OP18:      (DEL, Modifier, OP17, null)
+OP19:      (DEL, PrimitiveType, OP17, null)
+OP20:      (DEL, SimpleName, OP17, null)
+OP21:   (DEL, ReturnStatement, OP1, OP22)
+OP22:      (DEL, MethodInvocation, OP21, OP23)
+OP23:         (DEL, SimpleName, OP22, OP24 OP25 OP26 OP27 OP28)
+OP24:            (DEL, SimpleName, OP23, null)
+OP25:            (DEL, SimpleName, OP23, null)
+OP26:            (DEL, SimpleName, OP23, null)
+OP27:            (DEL, SimpleName, OP23, null)
+OP28:            (DEL, InfixExpression, OP23, OP29 OP30 OP31)
+OP29:               (DEL, SimpleName, OP28, null)
+OP30:               (DEL, Operator, OP28, null)
+OP31:               (DEL, InfixExpression, OP28, OP32 OP33 OP34)
+OP32:                  (DEL, SimpleName, OP31, null)
+OP33:                  (DEL, Operator, OP31, null)
+OP34:                  (DEL, ParenthesizedExpression, OP31, OP35)
+OP35:                     (DEL, InfixExpression, OP34, OP36 OP37 OP38)
+OP36:                        (DEL, SimpleName, OP35, null)
+OP37:                        (DEL, Operator, OP35, null)
+OP38:                        (DEL, SimpleName, OP35, null)
+
+
+
+
+
+hASList: 
+[UPD ExpressionStatement@@MethodInvocation:setMaxEvaluations(Integer.MAX_VALUE) @TO@ MethodInvocation:setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 37
+---UPD MethodInvocation@@setMaxEvaluations(Integer.MAX_VALUE) @TO@ setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 36
+------UPD SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @TO@ MethodName:setMaxEvaluations:[1000] @AT@ 1775 @LENGTH@ 36
+---------INS NumberLiteral@@1000 @TO@ SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @AT@ 1793 @LENGTH@ 4
+---------DEL QualifiedName@@Integer.MAX_VALUE @AT@ 1793 @LENGTH@ 17
+------------DEL SimpleName@@Integer @AT@ 1793 @LENGTH@ 7
+------------DEL SimpleName@@MAX_VALUE @AT@ 1801 @LENGTH@ 9
+, UPD ExpressionStatement@@MethodInvocation:setAbsoluteAccuracy(1E-10) @TO@ MethodInvocation:setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 27
+---UPD MethodInvocation@@setAbsoluteAccuracy(1E-10) @TO@ setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 26
+------UPD SimpleName@@MethodName:setAbsoluteAccuracy:[1E-10] @TO@ MethodName:setAbsoluteAccuracy:[1e-11] @AT@ 1860 @LENGTH@ 26
+---------UPD NumberLiteral@@1E-10 @TO@ 1e-11 @AT@ 1880 @LENGTH@ 5
+, UPD ExpressionStatement@@MethodInvocation:setRelativeAccuracy(1.0e-14) @TO@ MethodInvocation:setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 29
+---UPD MethodInvocation@@setRelativeAccuracy(1.0e-14) @TO@ setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 28
+------UPD SimpleName@@MethodName:setRelativeAccuracy:[1.0e-14] @TO@ MethodName:setRelativeAccuracy:[1e-9] @AT@ 1896 @LENGTH@ 28
+---------UPD NumberLiteral@@1.0e-14 @TO@ 1e-9 @AT@ 1916 @LENGTH@ 7
+, DEL ThrowStatement@@ClassInstanceCreation:new UnsupportedOperationException() @AT@ 2136 @LENGTH@ 42
+---DEL ClassInstanceCreation@@UnsupportedOperationException[] @AT@ 2142 @LENGTH@ 35
+------DEL New@@new @AT@ 2142 @LENGTH@ 3
+------DEL SimpleType@@UnsupportedOperationException @AT@ 2146 @LENGTH@ 29
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+double+startValue+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2189 @LENGTH@ 428
+---DEL Modifier@@public @AT@ 2189 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2196 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2203 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2212 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2212 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2218 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2241 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2244 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2244 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2250 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2259 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2269 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2269 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2275 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2282 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2287 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2287 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2293 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2300 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double startValue @AT@ 2305 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2305 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2311 @LENGTH@ 6
+------DEL SimpleName@@startValue @AT@ 2318 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:clearResult() @AT@ 2407 @LENGTH@ 14
+------DEL MethodInvocation@@MethodName:clearResult:[] @AT@ 2407 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2430 @LENGTH@ 181
+---UPD MethodInvocation@@localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2437 @LENGTH@ 173
+------UPD SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @TO@ MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, getMin(), getStartValue(), getMax(), getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2437 @LENGTH@ 173
+---------INS MethodInvocation@@MethodName:getMin:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2196 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:getStartValue:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2206 @LENGTH@ 15
+---------INS MethodInvocation@@MethodName:getMax:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2223 @LENGTH@ 8
+---------DEL SimpleName@@f @AT@ 2506 @LENGTH@ 1
+---------DEL SimpleName@@goalType @AT@ 2509 @LENGTH@ 8
+---------DEL SimpleName@@min @AT@ 2519 @LENGTH@ 3
+---------DEL SimpleName@@startValue @AT@ 2524 @LENGTH@ 10
+---------DEL SimpleName@@max @AT@ 2536 @LENGTH@ 3
+, MOV ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodDeclaration@@protected, @@double, MethodName:doOptimize, @@Argus:nullMaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2430 @LENGTH@ 181
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2622 @LENGTH@ 274
+---DEL Modifier@@public @AT@ 2622 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2629 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2636 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2645 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2645 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2651 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2674 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2677 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2677 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2683 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2692 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2702 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2702 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2708 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2715 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2720 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2720 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2726 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2733 @LENGTH@ 3
+---DEL ReturnStatement@@MethodInvocation:optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2815 @LENGTH@ 75
+------DEL MethodInvocation@@optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2822 @LENGTH@ 67
+---------DEL SimpleName@@MethodName:optimize:[f, goalType, min, max, min + GOLDEN_SECTION * (max - min)] @AT@ 2822 @LENGTH@ 67
+------------DEL SimpleName@@f @AT@ 2831 @LENGTH@ 1
+------------DEL SimpleName@@goalType @AT@ 2834 @LENGTH@ 8
+------------DEL SimpleName@@min @AT@ 2844 @LENGTH@ 3
+------------DEL SimpleName@@max @AT@ 2849 @LENGTH@ 3
+------------DEL InfixExpression@@min + GOLDEN_SECTION * (max - min) @AT@ 2854 @LENGTH@ 34
+---------------DEL SimpleName@@min @AT@ 2854 @LENGTH@ 3
+---------------DEL Operator@@+ @AT@ 2857 @LENGTH@ 1
+---------------DEL InfixExpression@@GOLDEN_SECTION * (max - min) @AT@ 2860 @LENGTH@ 28
+------------------DEL SimpleName@@GOLDEN_SECTION @AT@ 2860 @LENGTH@ 14
+------------------DEL Operator@@* @AT@ 2874 @LENGTH@ 1
+------------------DEL ParenthesizedExpression@@(max - min) @AT@ 2877 @LENGTH@ 11
+---------------------DEL InfixExpression@@max - min @AT@ 2878 @LENGTH@ 9
+------------------------DEL SimpleName@@max @AT@ 2878 @LENGTH@ 3
+------------------------DEL Operator@@- @AT@ 2881 @LENGTH@ 1
+------------------------DEL SimpleName@@min @AT@ 2884 @LENGTH@ 3
+, UPD MethodDeclaration@@private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+UnivariateRealFunction+f+GoalType+goalType+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @TO@ private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2902 @LENGTH@ 6029
+---DEL SingleVariableDeclaration@@UnivariateRealFunction f @AT@ 4182 @LENGTH@ 24
+------DEL SimpleType@@UnivariateRealFunction @AT@ 4182 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 4205 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@GoalType goalType @AT@ 4236 @LENGTH@ 17
+------DEL SimpleType@@GoalType @AT@ 4236 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 4245 @LENGTH@ 8
+---UPD VariableDeclarationStatement@@double fx=computeObjectiveValue(f,x); @TO@ double fx=computeObjectiveValue(x); @AT@ 4894 @LENGTH@ 40
+------UPD VariableDeclarationFragment@@fx=computeObjectiveValue(f,x) @TO@ fx=computeObjectiveValue(x) @AT@ 4901 @LENGTH@ 32
+---------UPD MethodInvocation@@computeObjectiveValue(f,x) @TO@ computeObjectiveValue(x) @AT@ 4906 @LENGTH@ 27
+------------UPD SimpleName@@MethodName:computeObjectiveValue:[f, x] @TO@ MethodName:computeObjectiveValue:[x] @AT@ 4906 @LENGTH@ 27
+---------------DEL SimpleName@@f @AT@ 4928 @LENGTH@ 1
+---UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 4943 @LENGTH@ 68
+------INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 4256 @LENGTH@ 8
+---------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 4256 @LENGTH@ 1
+---------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 4257 @LENGTH@ 7
+------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 4947 @LENGTH@ 29
+---------DEL SimpleName@@goalType @AT@ 4947 @LENGTH@ 8
+---------DEL Operator@@== @AT@ 4955 @LENGTH@ 2
+---------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 4959 @LENGTH@ 17
+------------DEL SimpleName@@GoalType @AT@ 4959 @LENGTH@ 8
+------------DEL SimpleName@@MAXIMIZE @AT@ 4968 @LENGTH@ 8
+---DEL VariableDeclarationStatement@@int count=0; @AT@ 5069 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 5069 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@count=0 @AT@ 5073 @LENGTH@ 9
+---------DEL SimpleName@@count @AT@ 5073 @LENGTH@ 5
+---------DEL NumberLiteral@@0 @AT@ 5081 @LENGTH@ 1
+---UPD WhileStatement@@InfixExpression:count < maximalIterationCount @TO@ BooleanLiteral:true @AT@ 5092 @LENGTH@ 3760
+------INS BooleanLiteral@@true @TO@ WhileStatement@@InfixExpression:count < maximalIterationCount @AT@ 4364 @LENGTH@ 4
+------DEL InfixExpression@@count < maximalIterationCount @AT@ 5099 @LENGTH@ 29
+---------DEL SimpleName@@count @AT@ 5099 @LENGTH@ 5
+---------DEL Operator@@< @AT@ 5104 @LENGTH@ 1
+---------DEL SimpleName@@maximalIterationCount @AT@ 5107 @LENGTH@ 21
+------UPD ExpressionStatement@@PrefixExpression:++count @TO@ MethodInvocation:incrementIterationsCounter() @AT@ 8834 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:incrementIterationsCounter:[] @TO@ ExpressionStatement@@PrefixExpression:++count @AT@ 8023 @LENGTH@ 28
+---------DEL PrefixExpression@@++count @AT@ 8834 @LENGTH@ 7
+------------DEL Operator@@++ @AT@ 8834 @LENGTH@ 2
+------------DEL SimpleName@@count @AT@ 8836 @LENGTH@ 5
+---DEL ThrowStatement@@ClassInstanceCreation:new MaxIterationsExceededException(maximalIterationCount) @AT@ 8861 @LENGTH@ 64
+------DEL ClassInstanceCreation@@MaxIterationsExceededException[maximalIterationCount] @AT@ 8867 @LENGTH@ 57
+---------DEL New@@new @AT@ 8867 @LENGTH@ 3
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 8871 @LENGTH@ 30
+---------DEL SimpleName@@maximalIterationCount @AT@ 8902 @LENGTH@ 21
+, UPD VariableDeclarationStatement@@double fu=computeObjectiveValue(f,u); @TO@ double fu=computeObjectiveValue(u); @AT@ 7534 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@fu=computeObjectiveValue(f,u) @TO@ fu=computeObjectiveValue(u) @AT@ 7541 @LENGTH@ 32
+------UPD MethodInvocation@@computeObjectiveValue(f,u) @TO@ computeObjectiveValue(u) @AT@ 7546 @LENGTH@ 27
+---------UPD SimpleName@@MethodName:computeObjectiveValue:[f, u] @TO@ MethodName:computeObjectiveValue:[u] @AT@ 7546 @LENGTH@ 27
+------------DEL SimpleName@@f @AT@ 7568 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 7591 @LENGTH@ 84
+---INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 6832 @LENGTH@ 8
+------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 6832 @LENGTH@ 1
+------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 6833 @LENGTH@ 7
+---DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 7595 @LENGTH@ 29
+------DEL SimpleName@@goalType @AT@ 7595 @LENGTH@ 8
+------DEL Operator@@== @AT@ 7603 @LENGTH@ 2
+------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 7607 @LENGTH@ 17
+---------DEL SimpleName@@GoalType @AT@ 7607 @LENGTH@ 8
+---------DEL SimpleName@@MAXIMIZE @AT@ 7616 @LENGTH@ 8
+, UPD ExpressionStatement@@MethodInvocation:setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ MethodInvocation:setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 64
+---UPD MethodInvocation@@setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 63
+------UPD SimpleName@@MethodName:setResult:[x, (goalType == GoalType.MAXIMIZE) ? -fx : fx, count] @TO@ MethodName:setFunctionValue:[isMinim ? fx : -fx] @AT@ 8717 @LENGTH@ 63
+---------DEL SimpleName@@x @AT@ 8727 @LENGTH@ 1
+---------UPD ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @TO@ isMinim ? fx : -fx @AT@ 8730 @LENGTH@ 42
+------------INS SimpleName@@isMinim @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7950 @LENGTH@ 7
+------------INS SimpleName@@fx @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7960 @LENGTH@ 2
+------------DEL ParenthesizedExpression@@(goalType == GoalType.MAXIMIZE) @AT@ 8730 @LENGTH@ 31
+---------------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 8731 @LENGTH@ 29
+------------------DEL SimpleName@@goalType @AT@ 8731 @LENGTH@ 8
+------------------DEL Operator@@== @AT@ 8739 @LENGTH@ 2
+------------------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 8743 @LENGTH@ 17
+---------------------DEL SimpleName@@GoalType @AT@ 8743 @LENGTH@ 8
+---------------------DEL SimpleName@@MAXIMIZE @AT@ 8752 @LENGTH@ 8
+------------DEL SimpleName@@fx @AT@ 8770 @LENGTH@ 2
+---------DEL SimpleName@@count @AT@ 8774 @LENGTH@ 5
+]
+
+CII:
+OP1:(UPD, MethodDeclaration, null, OP2 OP5 OP8 OP13 OP23 OP28 OP39)
+OP2:   (DEL, SingleVariableDeclaration, OP1, OP3 OP4)
+OP3:      (DEL, SimpleType, OP2, null)
+OP4:      (DEL, SimpleName, OP2, null)
+OP5:   (DEL, SingleVariableDeclaration, OP1, OP6 OP7)
+OP6:      (DEL, SimpleType, OP5, null)
+OP7:      (DEL, SimpleName, OP5, null)
+OP8:   (UPD, VariableDeclarationStatement, OP1, OP9)
+OP9:      (UPD, VariableDeclarationFragment, OP8, OP10)
+OP10:         (UPD, MethodInvocation, OP9, OP11)
+OP11:            (UPD, SimpleName, OP10, OP12)
+OP12:               (DEL, SimpleName, OP11, null)
+OP13:   (UPD, IfStatement, OP1, OP14 OP17)
+OP14:      (INS, PrefixExpression, OP13, OP15 OP16)
+OP15:         (INS, Operator, OP14, null)
+OP16:         (INS, SimpleName, OP14, null)
+OP17:      (DEL, InfixExpression, OP13, OP18 OP19 OP20)
+OP18:         (DEL, SimpleName, OP17, null)
+OP19:         (DEL, Operator, OP17, null)
+OP20:         (DEL, QualifiedName, OP17, OP21 OP22)
+OP21:            (DEL, SimpleName, OP20, null)
+OP22:            (DEL, SimpleName, OP20, null)
+OP23:   (DEL, VariableDeclarationStatement, OP1, OP24 OP25)
+OP24:      (DEL, PrimitiveType, OP23, null)
+OP25:      (DEL, VariableDeclarationFragment, OP23, OP26 OP27)
+OP26:         (DEL, SimpleName, OP25, null)
+OP27:         (DEL, NumberLiteral, OP25, null)
+OP28:   (UPD, WhileStatement, OP1, OP29 OP30 OP34)
+OP29:      (INS, BooleanLiteral, OP28, null)
+OP30:      (DEL, InfixExpression, OP28, OP31 OP32 OP33)
+OP31:         (DEL, SimpleName, OP30, null)
+OP32:         (DEL, Operator, OP30, null)
+OP33:         (DEL, SimpleName, OP30, null)
+OP34:      (UPD, ExpressionStatement, OP28, OP35 OP36)
+OP35:         (INS, MethodInvocation, OP34, null)
+OP36:         (DEL, PrefixExpression, OP34, OP37 OP38)
+OP37:            (DEL, Operator, OP36, null)
+OP38:            (DEL, SimpleName, OP36, null)
+OP39:   (DEL, ThrowStatement, OP1, OP40)
+OP40:      (DEL, ClassInstanceCreation, OP39, OP41 OP42 OP43)
+OP41:         (DEL, New, OP40, null)
+OP42:         (DEL, SimpleType, OP40, null)
+OP43:         (DEL, SimpleName, OP40, null)
+
+
+
+
+
+hASList: 
+[UPD ExpressionStatement@@MethodInvocation:setMaxEvaluations(Integer.MAX_VALUE) @TO@ MethodInvocation:setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 37
+---UPD MethodInvocation@@setMaxEvaluations(Integer.MAX_VALUE) @TO@ setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 36
+------UPD SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @TO@ MethodName:setMaxEvaluations:[1000] @AT@ 1775 @LENGTH@ 36
+---------INS NumberLiteral@@1000 @TO@ SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @AT@ 1793 @LENGTH@ 4
+---------DEL QualifiedName@@Integer.MAX_VALUE @AT@ 1793 @LENGTH@ 17
+------------DEL SimpleName@@Integer @AT@ 1793 @LENGTH@ 7
+------------DEL SimpleName@@MAX_VALUE @AT@ 1801 @LENGTH@ 9
+, UPD ExpressionStatement@@MethodInvocation:setAbsoluteAccuracy(1E-10) @TO@ MethodInvocation:setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 27
+---UPD MethodInvocation@@setAbsoluteAccuracy(1E-10) @TO@ setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 26
+------UPD SimpleName@@MethodName:setAbsoluteAccuracy:[1E-10] @TO@ MethodName:setAbsoluteAccuracy:[1e-11] @AT@ 1860 @LENGTH@ 26
+---------UPD NumberLiteral@@1E-10 @TO@ 1e-11 @AT@ 1880 @LENGTH@ 5
+, UPD ExpressionStatement@@MethodInvocation:setRelativeAccuracy(1.0e-14) @TO@ MethodInvocation:setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 29
+---UPD MethodInvocation@@setRelativeAccuracy(1.0e-14) @TO@ setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 28
+------UPD SimpleName@@MethodName:setRelativeAccuracy:[1.0e-14] @TO@ MethodName:setRelativeAccuracy:[1e-9] @AT@ 1896 @LENGTH@ 28
+---------UPD NumberLiteral@@1.0e-14 @TO@ 1e-9 @AT@ 1916 @LENGTH@ 7
+, DEL ThrowStatement@@ClassInstanceCreation:new UnsupportedOperationException() @AT@ 2136 @LENGTH@ 42
+---DEL ClassInstanceCreation@@UnsupportedOperationException[] @AT@ 2142 @LENGTH@ 35
+------DEL New@@new @AT@ 2142 @LENGTH@ 3
+------DEL SimpleType@@UnsupportedOperationException @AT@ 2146 @LENGTH@ 29
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+double+startValue+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2189 @LENGTH@ 428
+---DEL Modifier@@public @AT@ 2189 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2196 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2203 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2212 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2212 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2218 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2241 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2244 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2244 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2250 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2259 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2269 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2269 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2275 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2282 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2287 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2287 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2293 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2300 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double startValue @AT@ 2305 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2305 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2311 @LENGTH@ 6
+------DEL SimpleName@@startValue @AT@ 2318 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:clearResult() @AT@ 2407 @LENGTH@ 14
+------DEL MethodInvocation@@MethodName:clearResult:[] @AT@ 2407 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2430 @LENGTH@ 181
+---UPD MethodInvocation@@localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2437 @LENGTH@ 173
+------UPD SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @TO@ MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, getMin(), getStartValue(), getMax(), getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2437 @LENGTH@ 173
+---------INS MethodInvocation@@MethodName:getMin:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2196 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:getStartValue:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2206 @LENGTH@ 15
+---------INS MethodInvocation@@MethodName:getMax:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2223 @LENGTH@ 8
+---------DEL SimpleName@@f @AT@ 2506 @LENGTH@ 1
+---------DEL SimpleName@@goalType @AT@ 2509 @LENGTH@ 8
+---------DEL SimpleName@@min @AT@ 2519 @LENGTH@ 3
+---------DEL SimpleName@@startValue @AT@ 2524 @LENGTH@ 10
+---------DEL SimpleName@@max @AT@ 2536 @LENGTH@ 3
+, MOV ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodDeclaration@@protected, @@double, MethodName:doOptimize, @@Argus:nullMaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2430 @LENGTH@ 181
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2622 @LENGTH@ 274
+---DEL Modifier@@public @AT@ 2622 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2629 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2636 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2645 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2645 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2651 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2674 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2677 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2677 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2683 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2692 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2702 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2702 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2708 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2715 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2720 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2720 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2726 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2733 @LENGTH@ 3
+---DEL ReturnStatement@@MethodInvocation:optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2815 @LENGTH@ 75
+------DEL MethodInvocation@@optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2822 @LENGTH@ 67
+---------DEL SimpleName@@MethodName:optimize:[f, goalType, min, max, min + GOLDEN_SECTION * (max - min)] @AT@ 2822 @LENGTH@ 67
+------------DEL SimpleName@@f @AT@ 2831 @LENGTH@ 1
+------------DEL SimpleName@@goalType @AT@ 2834 @LENGTH@ 8
+------------DEL SimpleName@@min @AT@ 2844 @LENGTH@ 3
+------------DEL SimpleName@@max @AT@ 2849 @LENGTH@ 3
+------------DEL InfixExpression@@min + GOLDEN_SECTION * (max - min) @AT@ 2854 @LENGTH@ 34
+---------------DEL SimpleName@@min @AT@ 2854 @LENGTH@ 3
+---------------DEL Operator@@+ @AT@ 2857 @LENGTH@ 1
+---------------DEL InfixExpression@@GOLDEN_SECTION * (max - min) @AT@ 2860 @LENGTH@ 28
+------------------DEL SimpleName@@GOLDEN_SECTION @AT@ 2860 @LENGTH@ 14
+------------------DEL Operator@@* @AT@ 2874 @LENGTH@ 1
+------------------DEL ParenthesizedExpression@@(max - min) @AT@ 2877 @LENGTH@ 11
+---------------------DEL InfixExpression@@max - min @AT@ 2878 @LENGTH@ 9
+------------------------DEL SimpleName@@max @AT@ 2878 @LENGTH@ 3
+------------------------DEL Operator@@- @AT@ 2881 @LENGTH@ 1
+------------------------DEL SimpleName@@min @AT@ 2884 @LENGTH@ 3
+, UPD MethodDeclaration@@private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+UnivariateRealFunction+f+GoalType+goalType+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @TO@ private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2902 @LENGTH@ 6029
+---DEL SingleVariableDeclaration@@UnivariateRealFunction f @AT@ 4182 @LENGTH@ 24
+------DEL SimpleType@@UnivariateRealFunction @AT@ 4182 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 4205 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@GoalType goalType @AT@ 4236 @LENGTH@ 17
+------DEL SimpleType@@GoalType @AT@ 4236 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 4245 @LENGTH@ 8
+---UPD VariableDeclarationStatement@@double fx=computeObjectiveValue(f,x); @TO@ double fx=computeObjectiveValue(x); @AT@ 4894 @LENGTH@ 40
+------UPD VariableDeclarationFragment@@fx=computeObjectiveValue(f,x) @TO@ fx=computeObjectiveValue(x) @AT@ 4901 @LENGTH@ 32
+---------UPD MethodInvocation@@computeObjectiveValue(f,x) @TO@ computeObjectiveValue(x) @AT@ 4906 @LENGTH@ 27
+------------UPD SimpleName@@MethodName:computeObjectiveValue:[f, x] @TO@ MethodName:computeObjectiveValue:[x] @AT@ 4906 @LENGTH@ 27
+---------------DEL SimpleName@@f @AT@ 4928 @LENGTH@ 1
+---UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 4943 @LENGTH@ 68
+------INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 4256 @LENGTH@ 8
+---------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 4256 @LENGTH@ 1
+---------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 4257 @LENGTH@ 7
+------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 4947 @LENGTH@ 29
+---------DEL SimpleName@@goalType @AT@ 4947 @LENGTH@ 8
+---------DEL Operator@@== @AT@ 4955 @LENGTH@ 2
+---------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 4959 @LENGTH@ 17
+------------DEL SimpleName@@GoalType @AT@ 4959 @LENGTH@ 8
+------------DEL SimpleName@@MAXIMIZE @AT@ 4968 @LENGTH@ 8
+---DEL VariableDeclarationStatement@@int count=0; @AT@ 5069 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 5069 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@count=0 @AT@ 5073 @LENGTH@ 9
+---------DEL SimpleName@@count @AT@ 5073 @LENGTH@ 5
+---------DEL NumberLiteral@@0 @AT@ 5081 @LENGTH@ 1
+---UPD WhileStatement@@InfixExpression:count < maximalIterationCount @TO@ BooleanLiteral:true @AT@ 5092 @LENGTH@ 3760
+------INS BooleanLiteral@@true @TO@ WhileStatement@@InfixExpression:count < maximalIterationCount @AT@ 4364 @LENGTH@ 4
+------DEL InfixExpression@@count < maximalIterationCount @AT@ 5099 @LENGTH@ 29
+---------DEL SimpleName@@count @AT@ 5099 @LENGTH@ 5
+---------DEL Operator@@< @AT@ 5104 @LENGTH@ 1
+---------DEL SimpleName@@maximalIterationCount @AT@ 5107 @LENGTH@ 21
+------UPD ExpressionStatement@@PrefixExpression:++count @TO@ MethodInvocation:incrementIterationsCounter() @AT@ 8834 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:incrementIterationsCounter:[] @TO@ ExpressionStatement@@PrefixExpression:++count @AT@ 8023 @LENGTH@ 28
+---------DEL PrefixExpression@@++count @AT@ 8834 @LENGTH@ 7
+------------DEL Operator@@++ @AT@ 8834 @LENGTH@ 2
+------------DEL SimpleName@@count @AT@ 8836 @LENGTH@ 5
+---DEL ThrowStatement@@ClassInstanceCreation:new MaxIterationsExceededException(maximalIterationCount) @AT@ 8861 @LENGTH@ 64
+------DEL ClassInstanceCreation@@MaxIterationsExceededException[maximalIterationCount] @AT@ 8867 @LENGTH@ 57
+---------DEL New@@new @AT@ 8867 @LENGTH@ 3
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 8871 @LENGTH@ 30
+---------DEL SimpleName@@maximalIterationCount @AT@ 8902 @LENGTH@ 21
+, UPD VariableDeclarationStatement@@double fu=computeObjectiveValue(f,u); @TO@ double fu=computeObjectiveValue(u); @AT@ 7534 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@fu=computeObjectiveValue(f,u) @TO@ fu=computeObjectiveValue(u) @AT@ 7541 @LENGTH@ 32
+------UPD MethodInvocation@@computeObjectiveValue(f,u) @TO@ computeObjectiveValue(u) @AT@ 7546 @LENGTH@ 27
+---------UPD SimpleName@@MethodName:computeObjectiveValue:[f, u] @TO@ MethodName:computeObjectiveValue:[u] @AT@ 7546 @LENGTH@ 27
+------------DEL SimpleName@@f @AT@ 7568 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 7591 @LENGTH@ 84
+---INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 6832 @LENGTH@ 8
+------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 6832 @LENGTH@ 1
+------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 6833 @LENGTH@ 7
+---DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 7595 @LENGTH@ 29
+------DEL SimpleName@@goalType @AT@ 7595 @LENGTH@ 8
+------DEL Operator@@== @AT@ 7603 @LENGTH@ 2
+------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 7607 @LENGTH@ 17
+---------DEL SimpleName@@GoalType @AT@ 7607 @LENGTH@ 8
+---------DEL SimpleName@@MAXIMIZE @AT@ 7616 @LENGTH@ 8
+, UPD ExpressionStatement@@MethodInvocation:setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ MethodInvocation:setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 64
+---UPD MethodInvocation@@setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 63
+------UPD SimpleName@@MethodName:setResult:[x, (goalType == GoalType.MAXIMIZE) ? -fx : fx, count] @TO@ MethodName:setFunctionValue:[isMinim ? fx : -fx] @AT@ 8717 @LENGTH@ 63
+---------DEL SimpleName@@x @AT@ 8727 @LENGTH@ 1
+---------UPD ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @TO@ isMinim ? fx : -fx @AT@ 8730 @LENGTH@ 42
+------------INS SimpleName@@isMinim @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7950 @LENGTH@ 7
+------------INS SimpleName@@fx @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7960 @LENGTH@ 2
+------------DEL ParenthesizedExpression@@(goalType == GoalType.MAXIMIZE) @AT@ 8730 @LENGTH@ 31
+---------------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 8731 @LENGTH@ 29
+------------------DEL SimpleName@@goalType @AT@ 8731 @LENGTH@ 8
+------------------DEL Operator@@== @AT@ 8739 @LENGTH@ 2
+------------------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 8743 @LENGTH@ 17
+---------------------DEL SimpleName@@GoalType @AT@ 8743 @LENGTH@ 8
+---------------------DEL SimpleName@@MAXIMIZE @AT@ 8752 @LENGTH@ 8
+------------DEL SimpleName@@fx @AT@ 8770 @LENGTH@ 2
+---------DEL SimpleName@@count @AT@ 8774 @LENGTH@ 5
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, MethodInvocation, OP2, OP4)
+OP4:         (UPD, SimpleName, OP3, OP5)
+OP5:            (DEL, SimpleName, OP4, null)
+
+
+
+
+
+hASList: 
+[UPD ExpressionStatement@@MethodInvocation:setMaxEvaluations(Integer.MAX_VALUE) @TO@ MethodInvocation:setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 37
+---UPD MethodInvocation@@setMaxEvaluations(Integer.MAX_VALUE) @TO@ setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 36
+------UPD SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @TO@ MethodName:setMaxEvaluations:[1000] @AT@ 1775 @LENGTH@ 36
+---------INS NumberLiteral@@1000 @TO@ SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @AT@ 1793 @LENGTH@ 4
+---------DEL QualifiedName@@Integer.MAX_VALUE @AT@ 1793 @LENGTH@ 17
+------------DEL SimpleName@@Integer @AT@ 1793 @LENGTH@ 7
+------------DEL SimpleName@@MAX_VALUE @AT@ 1801 @LENGTH@ 9
+, UPD ExpressionStatement@@MethodInvocation:setAbsoluteAccuracy(1E-10) @TO@ MethodInvocation:setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 27
+---UPD MethodInvocation@@setAbsoluteAccuracy(1E-10) @TO@ setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 26
+------UPD SimpleName@@MethodName:setAbsoluteAccuracy:[1E-10] @TO@ MethodName:setAbsoluteAccuracy:[1e-11] @AT@ 1860 @LENGTH@ 26
+---------UPD NumberLiteral@@1E-10 @TO@ 1e-11 @AT@ 1880 @LENGTH@ 5
+, UPD ExpressionStatement@@MethodInvocation:setRelativeAccuracy(1.0e-14) @TO@ MethodInvocation:setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 29
+---UPD MethodInvocation@@setRelativeAccuracy(1.0e-14) @TO@ setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 28
+------UPD SimpleName@@MethodName:setRelativeAccuracy:[1.0e-14] @TO@ MethodName:setRelativeAccuracy:[1e-9] @AT@ 1896 @LENGTH@ 28
+---------UPD NumberLiteral@@1.0e-14 @TO@ 1e-9 @AT@ 1916 @LENGTH@ 7
+, DEL ThrowStatement@@ClassInstanceCreation:new UnsupportedOperationException() @AT@ 2136 @LENGTH@ 42
+---DEL ClassInstanceCreation@@UnsupportedOperationException[] @AT@ 2142 @LENGTH@ 35
+------DEL New@@new @AT@ 2142 @LENGTH@ 3
+------DEL SimpleType@@UnsupportedOperationException @AT@ 2146 @LENGTH@ 29
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+double+startValue+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2189 @LENGTH@ 428
+---DEL Modifier@@public @AT@ 2189 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2196 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2203 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2212 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2212 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2218 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2241 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2244 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2244 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2250 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2259 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2269 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2269 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2275 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2282 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2287 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2287 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2293 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2300 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double startValue @AT@ 2305 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2305 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2311 @LENGTH@ 6
+------DEL SimpleName@@startValue @AT@ 2318 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:clearResult() @AT@ 2407 @LENGTH@ 14
+------DEL MethodInvocation@@MethodName:clearResult:[] @AT@ 2407 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2430 @LENGTH@ 181
+---UPD MethodInvocation@@localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2437 @LENGTH@ 173
+------UPD SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @TO@ MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, getMin(), getStartValue(), getMax(), getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2437 @LENGTH@ 173
+---------INS MethodInvocation@@MethodName:getMin:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2196 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:getStartValue:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2206 @LENGTH@ 15
+---------INS MethodInvocation@@MethodName:getMax:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2223 @LENGTH@ 8
+---------DEL SimpleName@@f @AT@ 2506 @LENGTH@ 1
+---------DEL SimpleName@@goalType @AT@ 2509 @LENGTH@ 8
+---------DEL SimpleName@@min @AT@ 2519 @LENGTH@ 3
+---------DEL SimpleName@@startValue @AT@ 2524 @LENGTH@ 10
+---------DEL SimpleName@@max @AT@ 2536 @LENGTH@ 3
+, MOV ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodDeclaration@@protected, @@double, MethodName:doOptimize, @@Argus:nullMaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2430 @LENGTH@ 181
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2622 @LENGTH@ 274
+---DEL Modifier@@public @AT@ 2622 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2629 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2636 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2645 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2645 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2651 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2674 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2677 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2677 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2683 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2692 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2702 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2702 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2708 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2715 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2720 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2720 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2726 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2733 @LENGTH@ 3
+---DEL ReturnStatement@@MethodInvocation:optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2815 @LENGTH@ 75
+------DEL MethodInvocation@@optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2822 @LENGTH@ 67
+---------DEL SimpleName@@MethodName:optimize:[f, goalType, min, max, min + GOLDEN_SECTION * (max - min)] @AT@ 2822 @LENGTH@ 67
+------------DEL SimpleName@@f @AT@ 2831 @LENGTH@ 1
+------------DEL SimpleName@@goalType @AT@ 2834 @LENGTH@ 8
+------------DEL SimpleName@@min @AT@ 2844 @LENGTH@ 3
+------------DEL SimpleName@@max @AT@ 2849 @LENGTH@ 3
+------------DEL InfixExpression@@min + GOLDEN_SECTION * (max - min) @AT@ 2854 @LENGTH@ 34
+---------------DEL SimpleName@@min @AT@ 2854 @LENGTH@ 3
+---------------DEL Operator@@+ @AT@ 2857 @LENGTH@ 1
+---------------DEL InfixExpression@@GOLDEN_SECTION * (max - min) @AT@ 2860 @LENGTH@ 28
+------------------DEL SimpleName@@GOLDEN_SECTION @AT@ 2860 @LENGTH@ 14
+------------------DEL Operator@@* @AT@ 2874 @LENGTH@ 1
+------------------DEL ParenthesizedExpression@@(max - min) @AT@ 2877 @LENGTH@ 11
+---------------------DEL InfixExpression@@max - min @AT@ 2878 @LENGTH@ 9
+------------------------DEL SimpleName@@max @AT@ 2878 @LENGTH@ 3
+------------------------DEL Operator@@- @AT@ 2881 @LENGTH@ 1
+------------------------DEL SimpleName@@min @AT@ 2884 @LENGTH@ 3
+, UPD MethodDeclaration@@private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+UnivariateRealFunction+f+GoalType+goalType+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @TO@ private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2902 @LENGTH@ 6029
+---DEL SingleVariableDeclaration@@UnivariateRealFunction f @AT@ 4182 @LENGTH@ 24
+------DEL SimpleType@@UnivariateRealFunction @AT@ 4182 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 4205 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@GoalType goalType @AT@ 4236 @LENGTH@ 17
+------DEL SimpleType@@GoalType @AT@ 4236 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 4245 @LENGTH@ 8
+---UPD VariableDeclarationStatement@@double fx=computeObjectiveValue(f,x); @TO@ double fx=computeObjectiveValue(x); @AT@ 4894 @LENGTH@ 40
+------UPD VariableDeclarationFragment@@fx=computeObjectiveValue(f,x) @TO@ fx=computeObjectiveValue(x) @AT@ 4901 @LENGTH@ 32
+---------UPD MethodInvocation@@computeObjectiveValue(f,x) @TO@ computeObjectiveValue(x) @AT@ 4906 @LENGTH@ 27
+------------UPD SimpleName@@MethodName:computeObjectiveValue:[f, x] @TO@ MethodName:computeObjectiveValue:[x] @AT@ 4906 @LENGTH@ 27
+---------------DEL SimpleName@@f @AT@ 4928 @LENGTH@ 1
+---UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 4943 @LENGTH@ 68
+------INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 4256 @LENGTH@ 8
+---------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 4256 @LENGTH@ 1
+---------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 4257 @LENGTH@ 7
+------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 4947 @LENGTH@ 29
+---------DEL SimpleName@@goalType @AT@ 4947 @LENGTH@ 8
+---------DEL Operator@@== @AT@ 4955 @LENGTH@ 2
+---------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 4959 @LENGTH@ 17
+------------DEL SimpleName@@GoalType @AT@ 4959 @LENGTH@ 8
+------------DEL SimpleName@@MAXIMIZE @AT@ 4968 @LENGTH@ 8
+---DEL VariableDeclarationStatement@@int count=0; @AT@ 5069 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 5069 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@count=0 @AT@ 5073 @LENGTH@ 9
+---------DEL SimpleName@@count @AT@ 5073 @LENGTH@ 5
+---------DEL NumberLiteral@@0 @AT@ 5081 @LENGTH@ 1
+---UPD WhileStatement@@InfixExpression:count < maximalIterationCount @TO@ BooleanLiteral:true @AT@ 5092 @LENGTH@ 3760
+------INS BooleanLiteral@@true @TO@ WhileStatement@@InfixExpression:count < maximalIterationCount @AT@ 4364 @LENGTH@ 4
+------DEL InfixExpression@@count < maximalIterationCount @AT@ 5099 @LENGTH@ 29
+---------DEL SimpleName@@count @AT@ 5099 @LENGTH@ 5
+---------DEL Operator@@< @AT@ 5104 @LENGTH@ 1
+---------DEL SimpleName@@maximalIterationCount @AT@ 5107 @LENGTH@ 21
+------UPD ExpressionStatement@@PrefixExpression:++count @TO@ MethodInvocation:incrementIterationsCounter() @AT@ 8834 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:incrementIterationsCounter:[] @TO@ ExpressionStatement@@PrefixExpression:++count @AT@ 8023 @LENGTH@ 28
+---------DEL PrefixExpression@@++count @AT@ 8834 @LENGTH@ 7
+------------DEL Operator@@++ @AT@ 8834 @LENGTH@ 2
+------------DEL SimpleName@@count @AT@ 8836 @LENGTH@ 5
+---DEL ThrowStatement@@ClassInstanceCreation:new MaxIterationsExceededException(maximalIterationCount) @AT@ 8861 @LENGTH@ 64
+------DEL ClassInstanceCreation@@MaxIterationsExceededException[maximalIterationCount] @AT@ 8867 @LENGTH@ 57
+---------DEL New@@new @AT@ 8867 @LENGTH@ 3
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 8871 @LENGTH@ 30
+---------DEL SimpleName@@maximalIterationCount @AT@ 8902 @LENGTH@ 21
+, UPD VariableDeclarationStatement@@double fu=computeObjectiveValue(f,u); @TO@ double fu=computeObjectiveValue(u); @AT@ 7534 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@fu=computeObjectiveValue(f,u) @TO@ fu=computeObjectiveValue(u) @AT@ 7541 @LENGTH@ 32
+------UPD MethodInvocation@@computeObjectiveValue(f,u) @TO@ computeObjectiveValue(u) @AT@ 7546 @LENGTH@ 27
+---------UPD SimpleName@@MethodName:computeObjectiveValue:[f, u] @TO@ MethodName:computeObjectiveValue:[u] @AT@ 7546 @LENGTH@ 27
+------------DEL SimpleName@@f @AT@ 7568 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 7591 @LENGTH@ 84
+---INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 6832 @LENGTH@ 8
+------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 6832 @LENGTH@ 1
+------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 6833 @LENGTH@ 7
+---DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 7595 @LENGTH@ 29
+------DEL SimpleName@@goalType @AT@ 7595 @LENGTH@ 8
+------DEL Operator@@== @AT@ 7603 @LENGTH@ 2
+------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 7607 @LENGTH@ 17
+---------DEL SimpleName@@GoalType @AT@ 7607 @LENGTH@ 8
+---------DEL SimpleName@@MAXIMIZE @AT@ 7616 @LENGTH@ 8
+, UPD ExpressionStatement@@MethodInvocation:setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ MethodInvocation:setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 64
+---UPD MethodInvocation@@setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 63
+------UPD SimpleName@@MethodName:setResult:[x, (goalType == GoalType.MAXIMIZE) ? -fx : fx, count] @TO@ MethodName:setFunctionValue:[isMinim ? fx : -fx] @AT@ 8717 @LENGTH@ 63
+---------DEL SimpleName@@x @AT@ 8727 @LENGTH@ 1
+---------UPD ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @TO@ isMinim ? fx : -fx @AT@ 8730 @LENGTH@ 42
+------------INS SimpleName@@isMinim @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7950 @LENGTH@ 7
+------------INS SimpleName@@fx @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7960 @LENGTH@ 2
+------------DEL ParenthesizedExpression@@(goalType == GoalType.MAXIMIZE) @AT@ 8730 @LENGTH@ 31
+---------------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 8731 @LENGTH@ 29
+------------------DEL SimpleName@@goalType @AT@ 8731 @LENGTH@ 8
+------------------DEL Operator@@== @AT@ 8739 @LENGTH@ 2
+------------------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 8743 @LENGTH@ 17
+---------------------DEL SimpleName@@GoalType @AT@ 8743 @LENGTH@ 8
+---------------------DEL SimpleName@@MAXIMIZE @AT@ 8752 @LENGTH@ 8
+------------DEL SimpleName@@fx @AT@ 8770 @LENGTH@ 2
+---------DEL SimpleName@@count @AT@ 8774 @LENGTH@ 5
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2 OP5)
+OP2:   (INS, PrefixExpression, OP1, OP3 OP4)
+OP3:      (INS, Operator, OP2, null)
+OP4:      (INS, SimpleName, OP2, null)
+OP5:   (DEL, InfixExpression, OP1, OP6 OP7 OP8)
+OP6:      (DEL, SimpleName, OP5, null)
+OP7:      (DEL, Operator, OP5, null)
+OP8:      (DEL, QualifiedName, OP5, OP9 OP10)
+OP9:         (DEL, SimpleName, OP8, null)
+OP10:         (DEL, SimpleName, OP8, null)
+
+
+
+
+
+hASList: 
+[UPD ExpressionStatement@@MethodInvocation:setMaxEvaluations(Integer.MAX_VALUE) @TO@ MethodInvocation:setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 37
+---UPD MethodInvocation@@setMaxEvaluations(Integer.MAX_VALUE) @TO@ setMaxEvaluations(1000) @AT@ 1775 @LENGTH@ 36
+------UPD SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @TO@ MethodName:setMaxEvaluations:[1000] @AT@ 1775 @LENGTH@ 36
+---------INS NumberLiteral@@1000 @TO@ SimpleName@@MethodName:setMaxEvaluations:[Integer.MAX_VALUE] @AT@ 1793 @LENGTH@ 4
+---------DEL QualifiedName@@Integer.MAX_VALUE @AT@ 1793 @LENGTH@ 17
+------------DEL SimpleName@@Integer @AT@ 1793 @LENGTH@ 7
+------------DEL SimpleName@@MAX_VALUE @AT@ 1801 @LENGTH@ 9
+, UPD ExpressionStatement@@MethodInvocation:setAbsoluteAccuracy(1E-10) @TO@ MethodInvocation:setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 27
+---UPD MethodInvocation@@setAbsoluteAccuracy(1E-10) @TO@ setAbsoluteAccuracy(1e-11) @AT@ 1860 @LENGTH@ 26
+------UPD SimpleName@@MethodName:setAbsoluteAccuracy:[1E-10] @TO@ MethodName:setAbsoluteAccuracy:[1e-11] @AT@ 1860 @LENGTH@ 26
+---------UPD NumberLiteral@@1E-10 @TO@ 1e-11 @AT@ 1880 @LENGTH@ 5
+, UPD ExpressionStatement@@MethodInvocation:setRelativeAccuracy(1.0e-14) @TO@ MethodInvocation:setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 29
+---UPD MethodInvocation@@setRelativeAccuracy(1.0e-14) @TO@ setRelativeAccuracy(1e-9) @AT@ 1896 @LENGTH@ 28
+------UPD SimpleName@@MethodName:setRelativeAccuracy:[1.0e-14] @TO@ MethodName:setRelativeAccuracy:[1e-9] @AT@ 1896 @LENGTH@ 28
+---------UPD NumberLiteral@@1.0e-14 @TO@ 1e-9 @AT@ 1916 @LENGTH@ 7
+, DEL ThrowStatement@@ClassInstanceCreation:new UnsupportedOperationException() @AT@ 2136 @LENGTH@ 42
+---DEL ClassInstanceCreation@@UnsupportedOperationException[] @AT@ 2142 @LENGTH@ 35
+------DEL New@@new @AT@ 2142 @LENGTH@ 3
+------DEL SimpleType@@UnsupportedOperationException @AT@ 2146 @LENGTH@ 29
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+double+startValue+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2189 @LENGTH@ 428
+---DEL Modifier@@public @AT@ 2189 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2196 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2203 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2212 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2212 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2218 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2241 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2244 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2244 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2250 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2259 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2269 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2269 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2275 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2282 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2287 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2287 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2293 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2300 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double startValue @AT@ 2305 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2305 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2311 @LENGTH@ 6
+------DEL SimpleName@@startValue @AT@ 2318 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:clearResult() @AT@ 2407 @LENGTH@ 14
+------DEL MethodInvocation@@MethodName:clearResult:[] @AT@ 2407 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2430 @LENGTH@ 181
+---UPD MethodInvocation@@localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ localMin(getGoalType() == GoalType.MINIMIZE,getMin(),getStartValue(),getMax(),getRelativeAccuracy(),getAbsoluteAccuracy()) @AT@ 2437 @LENGTH@ 173
+------UPD SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @TO@ MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, getMin(), getStartValue(), getMax(), getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2437 @LENGTH@ 173
+---------INS MethodInvocation@@MethodName:getMin:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2196 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:getStartValue:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2206 @LENGTH@ 15
+---------INS MethodInvocation@@MethodName:getMax:[] @TO@ SimpleName@@MethodName:localMin:[getGoalType() == GoalType.MINIMIZE, f, goalType, min, startValue, max, getRelativeAccuracy(), getAbsoluteAccuracy()] @AT@ 2223 @LENGTH@ 8
+---------DEL SimpleName@@f @AT@ 2506 @LENGTH@ 1
+---------DEL SimpleName@@goalType @AT@ 2509 @LENGTH@ 8
+---------DEL SimpleName@@min @AT@ 2519 @LENGTH@ 3
+---------DEL SimpleName@@startValue @AT@ 2524 @LENGTH@ 10
+---------DEL SimpleName@@max @AT@ 2536 @LENGTH@ 3
+, MOV ReturnStatement@@MethodInvocation:localMin(getGoalType() == GoalType.MINIMIZE,f,goalType,min,startValue,max,getRelativeAccuracy(),getAbsoluteAccuracy()) @TO@ MethodDeclaration@@protected, @@double, MethodName:doOptimize, @@Argus:nullMaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2430 @LENGTH@ 181
+, DEL MethodDeclaration@@public, @@double, MethodName:optimize, @@Argus:UnivariateRealFunction+f+GoalType+goalType+double+min+double+max+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2622 @LENGTH@ 274
+---DEL Modifier@@public @AT@ 2622 @LENGTH@ 6
+---DEL PrimitiveType@@double @AT@ 2629 @LENGTH@ 6
+---DEL SimpleName@@MethodName:optimize @AT@ 2636 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final UnivariateRealFunction f @AT@ 2645 @LENGTH@ 30
+------DEL Modifier@@final @AT@ 2645 @LENGTH@ 5
+------DEL SimpleType@@UnivariateRealFunction @AT@ 2651 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 2674 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@final GoalType goalType @AT@ 2677 @LENGTH@ 23
+------DEL Modifier@@final @AT@ 2677 @LENGTH@ 5
+------DEL SimpleType@@GoalType @AT@ 2683 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 2692 @LENGTH@ 8
+---DEL SingleVariableDeclaration@@final double min @AT@ 2702 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2702 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2708 @LENGTH@ 6
+------DEL SimpleName@@min @AT@ 2715 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@final double max @AT@ 2720 @LENGTH@ 16
+------DEL Modifier@@final @AT@ 2720 @LENGTH@ 5
+------DEL PrimitiveType@@double @AT@ 2726 @LENGTH@ 6
+------DEL SimpleName@@max @AT@ 2733 @LENGTH@ 3
+---DEL ReturnStatement@@MethodInvocation:optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2815 @LENGTH@ 75
+------DEL MethodInvocation@@optimize(f,goalType,min,max,min + GOLDEN_SECTION * (max - min)) @AT@ 2822 @LENGTH@ 67
+---------DEL SimpleName@@MethodName:optimize:[f, goalType, min, max, min + GOLDEN_SECTION * (max - min)] @AT@ 2822 @LENGTH@ 67
+------------DEL SimpleName@@f @AT@ 2831 @LENGTH@ 1
+------------DEL SimpleName@@goalType @AT@ 2834 @LENGTH@ 8
+------------DEL SimpleName@@min @AT@ 2844 @LENGTH@ 3
+------------DEL SimpleName@@max @AT@ 2849 @LENGTH@ 3
+------------DEL InfixExpression@@min + GOLDEN_SECTION * (max - min) @AT@ 2854 @LENGTH@ 34
+---------------DEL SimpleName@@min @AT@ 2854 @LENGTH@ 3
+---------------DEL Operator@@+ @AT@ 2857 @LENGTH@ 1
+---------------DEL InfixExpression@@GOLDEN_SECTION * (max - min) @AT@ 2860 @LENGTH@ 28
+------------------DEL SimpleName@@GOLDEN_SECTION @AT@ 2860 @LENGTH@ 14
+------------------DEL Operator@@* @AT@ 2874 @LENGTH@ 1
+------------------DEL ParenthesizedExpression@@(max - min) @AT@ 2877 @LENGTH@ 11
+---------------------DEL InfixExpression@@max - min @AT@ 2878 @LENGTH@ 9
+------------------------DEL SimpleName@@max @AT@ 2878 @LENGTH@ 3
+------------------------DEL Operator@@- @AT@ 2881 @LENGTH@ 1
+------------------------DEL SimpleName@@min @AT@ 2884 @LENGTH@ 3
+, UPD MethodDeclaration@@private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+UnivariateRealFunction+f+GoalType+goalType+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @TO@ private, @@double, MethodName:localMin, @@Argus:boolean+isMinim+double+lo+double+mid+double+hi+double+eps+double+t+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 2902 @LENGTH@ 6029
+---DEL SingleVariableDeclaration@@UnivariateRealFunction f @AT@ 4182 @LENGTH@ 24
+------DEL SimpleType@@UnivariateRealFunction @AT@ 4182 @LENGTH@ 22
+------DEL SimpleName@@f @AT@ 4205 @LENGTH@ 1
+---DEL SingleVariableDeclaration@@GoalType goalType @AT@ 4236 @LENGTH@ 17
+------DEL SimpleType@@GoalType @AT@ 4236 @LENGTH@ 8
+------DEL SimpleName@@goalType @AT@ 4245 @LENGTH@ 8
+---UPD VariableDeclarationStatement@@double fx=computeObjectiveValue(f,x); @TO@ double fx=computeObjectiveValue(x); @AT@ 4894 @LENGTH@ 40
+------UPD VariableDeclarationFragment@@fx=computeObjectiveValue(f,x) @TO@ fx=computeObjectiveValue(x) @AT@ 4901 @LENGTH@ 32
+---------UPD MethodInvocation@@computeObjectiveValue(f,x) @TO@ computeObjectiveValue(x) @AT@ 4906 @LENGTH@ 27
+------------UPD SimpleName@@MethodName:computeObjectiveValue:[f, x] @TO@ MethodName:computeObjectiveValue:[x] @AT@ 4906 @LENGTH@ 27
+---------------DEL SimpleName@@f @AT@ 4928 @LENGTH@ 1
+---UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 4943 @LENGTH@ 68
+------INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 4256 @LENGTH@ 8
+---------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 4256 @LENGTH@ 1
+---------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 4257 @LENGTH@ 7
+------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 4947 @LENGTH@ 29
+---------DEL SimpleName@@goalType @AT@ 4947 @LENGTH@ 8
+---------DEL Operator@@== @AT@ 4955 @LENGTH@ 2
+---------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 4959 @LENGTH@ 17
+------------DEL SimpleName@@GoalType @AT@ 4959 @LENGTH@ 8
+------------DEL SimpleName@@MAXIMIZE @AT@ 4968 @LENGTH@ 8
+---DEL VariableDeclarationStatement@@int count=0; @AT@ 5069 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 5069 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@count=0 @AT@ 5073 @LENGTH@ 9
+---------DEL SimpleName@@count @AT@ 5073 @LENGTH@ 5
+---------DEL NumberLiteral@@0 @AT@ 5081 @LENGTH@ 1
+---UPD WhileStatement@@InfixExpression:count < maximalIterationCount @TO@ BooleanLiteral:true @AT@ 5092 @LENGTH@ 3760
+------INS BooleanLiteral@@true @TO@ WhileStatement@@InfixExpression:count < maximalIterationCount @AT@ 4364 @LENGTH@ 4
+------DEL InfixExpression@@count < maximalIterationCount @AT@ 5099 @LENGTH@ 29
+---------DEL SimpleName@@count @AT@ 5099 @LENGTH@ 5
+---------DEL Operator@@< @AT@ 5104 @LENGTH@ 1
+---------DEL SimpleName@@maximalIterationCount @AT@ 5107 @LENGTH@ 21
+------UPD ExpressionStatement@@PrefixExpression:++count @TO@ MethodInvocation:incrementIterationsCounter() @AT@ 8834 @LENGTH@ 8
+---------INS MethodInvocation@@MethodName:incrementIterationsCounter:[] @TO@ ExpressionStatement@@PrefixExpression:++count @AT@ 8023 @LENGTH@ 28
+---------DEL PrefixExpression@@++count @AT@ 8834 @LENGTH@ 7
+------------DEL Operator@@++ @AT@ 8834 @LENGTH@ 2
+------------DEL SimpleName@@count @AT@ 8836 @LENGTH@ 5
+---DEL ThrowStatement@@ClassInstanceCreation:new MaxIterationsExceededException(maximalIterationCount) @AT@ 8861 @LENGTH@ 64
+------DEL ClassInstanceCreation@@MaxIterationsExceededException[maximalIterationCount] @AT@ 8867 @LENGTH@ 57
+---------DEL New@@new @AT@ 8867 @LENGTH@ 3
+---------DEL SimpleType@@MaxIterationsExceededException @AT@ 8871 @LENGTH@ 30
+---------DEL SimpleName@@maximalIterationCount @AT@ 8902 @LENGTH@ 21
+, UPD VariableDeclarationStatement@@double fu=computeObjectiveValue(f,u); @TO@ double fu=computeObjectiveValue(u); @AT@ 7534 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@fu=computeObjectiveValue(f,u) @TO@ fu=computeObjectiveValue(u) @AT@ 7541 @LENGTH@ 32
+------UPD MethodInvocation@@computeObjectiveValue(f,u) @TO@ computeObjectiveValue(u) @AT@ 7546 @LENGTH@ 27
+---------UPD SimpleName@@MethodName:computeObjectiveValue:[f, u] @TO@ MethodName:computeObjectiveValue:[u] @AT@ 7546 @LENGTH@ 27
+------------DEL SimpleName@@f @AT@ 7568 @LENGTH@ 1
+, UPD IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @TO@ PrefixExpression:!isMinim @AT@ 7591 @LENGTH@ 84
+---INS PrefixExpression@@!isMinim @TO@ IfStatement@@InfixExpression:goalType == GoalType.MAXIMIZE @AT@ 6832 @LENGTH@ 8
+------INS Operator@@! @TO@ PrefixExpression@@!isMinim @AT@ 6832 @LENGTH@ 1
+------INS SimpleName@@isMinim @TO@ PrefixExpression@@!isMinim @AT@ 6833 @LENGTH@ 7
+---DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 7595 @LENGTH@ 29
+------DEL SimpleName@@goalType @AT@ 7595 @LENGTH@ 8
+------DEL Operator@@== @AT@ 7603 @LENGTH@ 2
+------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 7607 @LENGTH@ 17
+---------DEL SimpleName@@GoalType @AT@ 7607 @LENGTH@ 8
+---------DEL SimpleName@@MAXIMIZE @AT@ 7616 @LENGTH@ 8
+, UPD ExpressionStatement@@MethodInvocation:setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ MethodInvocation:setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 64
+---UPD MethodInvocation@@setResult(x,(goalType == GoalType.MAXIMIZE) ? -fx : fx,count) @TO@ setFunctionValue(isMinim ? fx : -fx) @AT@ 8717 @LENGTH@ 63
+------UPD SimpleName@@MethodName:setResult:[x, (goalType == GoalType.MAXIMIZE) ? -fx : fx, count] @TO@ MethodName:setFunctionValue:[isMinim ? fx : -fx] @AT@ 8717 @LENGTH@ 63
+---------DEL SimpleName@@x @AT@ 8727 @LENGTH@ 1
+---------UPD ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @TO@ isMinim ? fx : -fx @AT@ 8730 @LENGTH@ 42
+------------INS SimpleName@@isMinim @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7950 @LENGTH@ 7
+------------INS SimpleName@@fx @TO@ ConditionalExpression@@(goalType == GoalType.MAXIMIZE) ? -fx : fx @AT@ 7960 @LENGTH@ 2
+------------DEL ParenthesizedExpression@@(goalType == GoalType.MAXIMIZE) @AT@ 8730 @LENGTH@ 31
+---------------DEL InfixExpression@@goalType == GoalType.MAXIMIZE @AT@ 8731 @LENGTH@ 29
+------------------DEL SimpleName@@goalType @AT@ 8731 @LENGTH@ 8
+------------------DEL Operator@@== @AT@ 8739 @LENGTH@ 2
+------------------DEL QualifiedName@@GoalType.MAXIMIZE @AT@ 8743 @LENGTH@ 17
+---------------------DEL SimpleName@@GoalType @AT@ 8743 @LENGTH@ 8
+---------------------DEL SimpleName@@MAXIMIZE @AT@ 8752 @LENGTH@ 8
+------------DEL SimpleName@@fx @AT@ 8770 @LENGTH@ 2
+---------DEL SimpleName@@count @AT@ 8774 @LENGTH@ 5
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4 OP5 OP16)
+OP4:         (DEL, SimpleName, OP3, null)
+OP5:         (UPD, ConditionalExpression, OP3, OP6 OP7 OP8 OP15)
+OP6:            (INS, SimpleName, OP5, null)
+OP7:            (INS, SimpleName, OP5, null)
+OP8:            (DEL, ParenthesizedExpression, OP5, OP9)
+OP9:               (DEL, InfixExpression, OP8, OP10 OP11 OP12)
+OP10:                  (DEL, SimpleName, OP9, null)
+OP11:                  (DEL, Operator, OP9, null)
+OP12:                  (DEL, QualifiedName, OP9, OP13 OP14)
+OP13:                     (DEL, SimpleName, OP12, null)
+OP14:                     (DEL, SimpleName, OP12, null)
+OP15:            (DEL, SimpleName, OP5, null)
+OP16:         (DEL, SimpleName, OP3, null)
+
+
+

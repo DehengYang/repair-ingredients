@@ -1,0 +1,16 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_83/src/com/google/javascript/jscomp/CommandLineRunner.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_83/src/com/google/javascript/jscomp/CommandLineRunner.java
+--- ../d4j-repo/Closure/Closure_83/src/com/google/javascript/jscomp/CommandLineRunner.java	2021-01-06 03:45:36.167761506 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_83/src/com/google/javascript/jscomp/CommandLineRunner.java	2021-01-06 03:45:38.123828128 -0800
+@@ -331,7 +331,10 @@
+ 
+       @Override
+       public int parseArguments(Parameters params) throws CmdLineException {
+-        String param = params.getParameter(0);
++        String param = null;
++        try {
++          param = params.getParameter(0);
++        } catch (CmdLineException e) {}
+ 
+         if (param == null) {
+           setter.addValue(true);

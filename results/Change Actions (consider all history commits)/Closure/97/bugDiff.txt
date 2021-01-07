@@ -1,0 +1,14 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_97/src/com/google/javascript/jscomp/PeepholeFoldConstants.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_97/src/com/google/javascript/jscomp/PeepholeFoldConstants.java
+--- ../d4j-repo/Closure/Closure_97/src/com/google/javascript/jscomp/PeepholeFoldConstants.java	2021-01-06 03:46:32.153668382 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_97/src/com/google/javascript/jscomp/PeepholeFoldConstants.java	2021-01-06 03:46:34.157736642 -0800
+@@ -695,7 +695,8 @@
+           // JavaScript handles zero shifts on signed numbers differently than
+           // Java as an Java int can not represent the unsigned 32-bit number
+           // where JavaScript can so use a long here.
+-          result = lvalInt >>> rvalInt;
++          long lvalLong = lvalInt & 0xffffffffL;
++          result = lvalLong >>> rvalInt;
+           break;
+         default:
+           throw new AssertionError("Unknown shift operator: " +

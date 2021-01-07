@@ -1,0 +1,27 @@
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, InfixExpression, OP1, OP3 OP11)
+OP3:      (INS, InfixExpression, OP2, OP4 OP5 OP6)
+OP4:         (MOV, InfixExpression, OP3, null)
+OP5:         (MOV, Operator, OP3, null)
+OP6:         (INS, PrefixExpression, OP3, OP7 OP8)
+OP7:            (INS, Operator, OP6, null)
+OP8:            (INS, MethodInvocation, OP6, OP9)
+OP9:               (INS, SimpleName, OP8, OP10)
+OP10:                  (INS, SimpleName, OP9, null)
+OP11:      (INS, Operator, OP2, null)
+
+
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP8)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, PrimitiveType, OP1, null)
+OP4:   (INS, SimpleName, OP1, null)
+OP5:   (INS, SingleVariableDeclaration, OP1, OP6 OP7)
+OP6:      (INS, SimpleType, OP5, null)
+OP7:      (INS, SimpleName, OP5, null)
+OP8:   (INS, ReturnStatement, OP1, OP9)
+OP9:      (INS, MethodInvocation, OP8, OP10 OP11 OP12)
+OP10:         (INS, SimpleName, OP9, null)
+OP11:         (INS, MethodInvocation, OP9, null)
+OP12:         (INS, SimpleName, OP9, null)
+
+

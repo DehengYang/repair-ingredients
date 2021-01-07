@@ -1,0 +1,162 @@
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@StringBuilder buf=new StringBuilder((array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1); @TO@ StringBuilder buf=new StringBuilder(noOfItems * 16); @AT@ 136859 @LENGTH@ 116
+---UPD VariableDeclarationFragment@@buf=new StringBuilder((array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1) @TO@ buf=new StringBuilder(noOfItems * 16) @AT@ 136873 @LENGTH@ 101
+------UPD ClassInstanceCreation@@StringBuilder[(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1] @TO@ StringBuilder[noOfItems * 16] @AT@ 136879 @LENGTH@ 95
+---------UPD InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1 @TO@ noOfItems * 16 @AT@ 136897 @LENGTH@ 76
+------------INS SimpleName@@noOfItems @TO@ InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1 @AT@ 136897 @LENGTH@ 9
+------------DEL ParenthesizedExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) @AT@ 136897 @LENGTH@ 72
+---------------DEL ConditionalExpression@@array[startIndex] == null ? 16 : array[startIndex].toString().length() @AT@ 136898 @LENGTH@ 70
+------------------DEL InfixExpression@@array[startIndex] == null @AT@ 136898 @LENGTH@ 25
+---------------------DEL ArrayAccess@@array[startIndex] @AT@ 136898 @LENGTH@ 17
+------------------------DEL SimpleName@@array @AT@ 136898 @LENGTH@ 5
+------------------------DEL SimpleName@@startIndex @AT@ 136904 @LENGTH@ 10
+---------------------DEL NullLiteral@@null @AT@ 136919 @LENGTH@ 4
+------------------DEL NumberLiteral@@16 @AT@ 136926 @LENGTH@ 2
+------------------DEL MethodInvocation@@array[startIndex].toString().length() @AT@ 136931 @LENGTH@ 37
+---------------------DEL ArrayAccess@@array[startIndex] @AT@ 136931 @LENGTH@ 17
+------------------------DEL SimpleName@@array @AT@ 136931 @LENGTH@ 5
+------------------------DEL SimpleName@@startIndex @AT@ 136937 @LENGTH@ 10
+---------------------DEL MethodInvocation@@MethodName:toString:[] @AT@ 136931 @LENGTH@ 28
+---------------------DEL SimpleName@@MethodName:length:[] @AT@ 136960 @LENGTH@ 8
+------------INS NumberLiteral@@16 @TO@ InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1 @AT@ 136909 @LENGTH@ 2
+------------MOV Operator@@== @TO@ InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1 @AT@ 136915 @LENGTH@ 2
+------------DEL Operator@@+ @AT@ 136969 @LENGTH@ 1
+------------DEL NumberLiteral@@1 @AT@ 136972 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@StringBuilder buf=new StringBuilder((array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length()); @TO@ StringBuilder buf=new StringBuilder(noOfItems * 16); @AT@ 140286 @LENGTH@ 133
+---UPD VariableDeclarationFragment@@buf=new StringBuilder((array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length()) @TO@ buf=new StringBuilder(noOfItems * 16) @AT@ 140300 @LENGTH@ 118
+------UPD ClassInstanceCreation@@StringBuilder[(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length()] @TO@ StringBuilder[noOfItems * 16] @AT@ 140306 @LENGTH@ 112
+---------UPD InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length() @TO@ noOfItems * 16 @AT@ 140324 @LENGTH@ 93
+------------INS SimpleName@@noOfItems @TO@ InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length() @AT@ 140262 @LENGTH@ 9
+------------INS NumberLiteral@@16 @TO@ InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length() @AT@ 140274 @LENGTH@ 2
+------------DEL ParenthesizedExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) @AT@ 140324 @LENGTH@ 72
+---------------DEL ConditionalExpression@@array[startIndex] == null ? 16 : array[startIndex].toString().length() @AT@ 140325 @LENGTH@ 70
+------------------DEL InfixExpression@@array[startIndex] == null @AT@ 140325 @LENGTH@ 25
+---------------------DEL ArrayAccess@@array[startIndex] @AT@ 140325 @LENGTH@ 17
+------------------------DEL SimpleName@@array @AT@ 140325 @LENGTH@ 5
+------------------------DEL SimpleName@@startIndex @AT@ 140331 @LENGTH@ 10
+---------------------DEL NullLiteral@@null @AT@ 140346 @LENGTH@ 4
+------------------DEL NumberLiteral@@16 @AT@ 140353 @LENGTH@ 2
+------------------DEL MethodInvocation@@array[startIndex].toString().length() @AT@ 140358 @LENGTH@ 37
+---------------------DEL ArrayAccess@@array[startIndex] @AT@ 140358 @LENGTH@ 17
+------------------------DEL SimpleName@@array @AT@ 140358 @LENGTH@ 5
+------------------------DEL SimpleName@@startIndex @AT@ 140364 @LENGTH@ 10
+---------------------DEL MethodInvocation@@MethodName:toString:[] @AT@ 140358 @LENGTH@ 28
+---------------------DEL SimpleName@@MethodName:length:[] @AT@ 140387 @LENGTH@ 8
+------------MOV Operator@@== @TO@ InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length() @AT@ 140342 @LENGTH@ 2
+------------DEL Operator@@+ @AT@ 140396 @LENGTH@ 1
+------------DEL MethodInvocation@@separator.length() @AT@ 140399 @LENGTH@ 18
+---------------DEL SimpleName@@Name:separator @AT@ 140399 @LENGTH@ 9
+---------------DEL SimpleName@@MethodName:length:[] @AT@ 140409 @LENGTH@ 8
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, ClassInstanceCreation, OP2, OP4)
+OP4:         (UPD, InfixExpression, OP3, OP5 OP6 OP20 OP21 OP22 OP23)
+OP5:            (INS, SimpleName, OP4, null)
+OP6:            (DEL, ParenthesizedExpression, OP4, OP7)
+OP7:               (DEL, ConditionalExpression, OP6, OP8 OP13 OP14)
+OP8:                  (DEL, InfixExpression, OP7, OP9 OP12)
+OP9:                     (DEL, ArrayAccess, OP8, OP10 OP11)
+OP10:                        (DEL, SimpleName, OP9, null)
+OP11:                        (DEL, SimpleName, OP9, null)
+OP12:                     (DEL, NullLiteral, OP8, null)
+OP13:                  (DEL, NumberLiteral, OP7, null)
+OP14:                  (DEL, MethodInvocation, OP7, OP15 OP18 OP19)
+OP15:                     (DEL, ArrayAccess, OP14, OP16 OP17)
+OP16:                        (DEL, SimpleName, OP15, null)
+OP17:                        (DEL, SimpleName, OP15, null)
+OP18:                     (DEL, MethodInvocation, OP14, null)
+OP19:                     (DEL, SimpleName, OP14, null)
+OP20:            (INS, NumberLiteral, OP4, null)
+OP21:            (MOV, Operator, OP4, null)
+OP22:            (DEL, Operator, OP4, null)
+OP23:            (DEL, NumberLiteral, OP4, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@StringBuilder buf=new StringBuilder((array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1); @TO@ StringBuilder buf=new StringBuilder(noOfItems * 16); @AT@ 136859 @LENGTH@ 116
+---UPD VariableDeclarationFragment@@buf=new StringBuilder((array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1) @TO@ buf=new StringBuilder(noOfItems * 16) @AT@ 136873 @LENGTH@ 101
+------UPD ClassInstanceCreation@@StringBuilder[(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1] @TO@ StringBuilder[noOfItems * 16] @AT@ 136879 @LENGTH@ 95
+---------UPD InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1 @TO@ noOfItems * 16 @AT@ 136897 @LENGTH@ 76
+------------INS SimpleName@@noOfItems @TO@ InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1 @AT@ 136897 @LENGTH@ 9
+------------DEL ParenthesizedExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) @AT@ 136897 @LENGTH@ 72
+---------------DEL ConditionalExpression@@array[startIndex] == null ? 16 : array[startIndex].toString().length() @AT@ 136898 @LENGTH@ 70
+------------------DEL InfixExpression@@array[startIndex] == null @AT@ 136898 @LENGTH@ 25
+---------------------DEL ArrayAccess@@array[startIndex] @AT@ 136898 @LENGTH@ 17
+------------------------DEL SimpleName@@array @AT@ 136898 @LENGTH@ 5
+------------------------DEL SimpleName@@startIndex @AT@ 136904 @LENGTH@ 10
+---------------------DEL NullLiteral@@null @AT@ 136919 @LENGTH@ 4
+------------------DEL NumberLiteral@@16 @AT@ 136926 @LENGTH@ 2
+------------------DEL MethodInvocation@@array[startIndex].toString().length() @AT@ 136931 @LENGTH@ 37
+---------------------DEL ArrayAccess@@array[startIndex] @AT@ 136931 @LENGTH@ 17
+------------------------DEL SimpleName@@array @AT@ 136931 @LENGTH@ 5
+------------------------DEL SimpleName@@startIndex @AT@ 136937 @LENGTH@ 10
+---------------------DEL MethodInvocation@@MethodName:toString:[] @AT@ 136931 @LENGTH@ 28
+---------------------DEL SimpleName@@MethodName:length:[] @AT@ 136960 @LENGTH@ 8
+------------INS NumberLiteral@@16 @TO@ InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1 @AT@ 136909 @LENGTH@ 2
+------------MOV Operator@@== @TO@ InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1 @AT@ 136915 @LENGTH@ 2
+------------DEL Operator@@+ @AT@ 136969 @LENGTH@ 1
+------------DEL NumberLiteral@@1 @AT@ 136972 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@StringBuilder buf=new StringBuilder((array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length()); @TO@ StringBuilder buf=new StringBuilder(noOfItems * 16); @AT@ 140286 @LENGTH@ 133
+---UPD VariableDeclarationFragment@@buf=new StringBuilder((array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length()) @TO@ buf=new StringBuilder(noOfItems * 16) @AT@ 140300 @LENGTH@ 118
+------UPD ClassInstanceCreation@@StringBuilder[(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length()] @TO@ StringBuilder[noOfItems * 16] @AT@ 140306 @LENGTH@ 112
+---------UPD InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length() @TO@ noOfItems * 16 @AT@ 140324 @LENGTH@ 93
+------------INS SimpleName@@noOfItems @TO@ InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length() @AT@ 140262 @LENGTH@ 9
+------------INS NumberLiteral@@16 @TO@ InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length() @AT@ 140274 @LENGTH@ 2
+------------DEL ParenthesizedExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) @AT@ 140324 @LENGTH@ 72
+---------------DEL ConditionalExpression@@array[startIndex] == null ? 16 : array[startIndex].toString().length() @AT@ 140325 @LENGTH@ 70
+------------------DEL InfixExpression@@array[startIndex] == null @AT@ 140325 @LENGTH@ 25
+---------------------DEL ArrayAccess@@array[startIndex] @AT@ 140325 @LENGTH@ 17
+------------------------DEL SimpleName@@array @AT@ 140325 @LENGTH@ 5
+------------------------DEL SimpleName@@startIndex @AT@ 140331 @LENGTH@ 10
+---------------------DEL NullLiteral@@null @AT@ 140346 @LENGTH@ 4
+------------------DEL NumberLiteral@@16 @AT@ 140353 @LENGTH@ 2
+------------------DEL MethodInvocation@@array[startIndex].toString().length() @AT@ 140358 @LENGTH@ 37
+---------------------DEL ArrayAccess@@array[startIndex] @AT@ 140358 @LENGTH@ 17
+------------------------DEL SimpleName@@array @AT@ 140358 @LENGTH@ 5
+------------------------DEL SimpleName@@startIndex @AT@ 140364 @LENGTH@ 10
+---------------------DEL MethodInvocation@@MethodName:toString:[] @AT@ 140358 @LENGTH@ 28
+---------------------DEL SimpleName@@MethodName:length:[] @AT@ 140387 @LENGTH@ 8
+------------MOV Operator@@== @TO@ InfixExpression@@(array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length() @AT@ 140342 @LENGTH@ 2
+------------DEL Operator@@+ @AT@ 140396 @LENGTH@ 1
+------------DEL MethodInvocation@@separator.length() @AT@ 140399 @LENGTH@ 18
+---------------DEL SimpleName@@Name:separator @AT@ 140399 @LENGTH@ 9
+---------------DEL SimpleName@@MethodName:length:[] @AT@ 140409 @LENGTH@ 8
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, ClassInstanceCreation, OP2, OP4)
+OP4:         (UPD, InfixExpression, OP3, OP5 OP6 OP7 OP21 OP22 OP23)
+OP5:            (INS, SimpleName, OP4, null)
+OP6:            (INS, NumberLiteral, OP4, null)
+OP7:            (DEL, ParenthesizedExpression, OP4, OP8)
+OP8:               (DEL, ConditionalExpression, OP7, OP9 OP14 OP15)
+OP9:                  (DEL, InfixExpression, OP8, OP10 OP13)
+OP10:                     (DEL, ArrayAccess, OP9, OP11 OP12)
+OP11:                        (DEL, SimpleName, OP10, null)
+OP12:                        (DEL, SimpleName, OP10, null)
+OP13:                     (DEL, NullLiteral, OP9, null)
+OP14:                  (DEL, NumberLiteral, OP8, null)
+OP15:                  (DEL, MethodInvocation, OP8, OP16 OP19 OP20)
+OP16:                     (DEL, ArrayAccess, OP15, OP17 OP18)
+OP17:                        (DEL, SimpleName, OP16, null)
+OP18:                        (DEL, SimpleName, OP16, null)
+OP19:                     (DEL, MethodInvocation, OP15, null)
+OP20:                     (DEL, SimpleName, OP15, null)
+OP21:            (MOV, Operator, OP4, null)
+OP22:            (DEL, Operator, OP4, null)
+OP23:            (DEL, MethodInvocation, OP4, OP24 OP25)
+OP24:               (DEL, SimpleName, OP23, null)
+OP25:               (DEL, SimpleName, OP23, null)
+
+
+

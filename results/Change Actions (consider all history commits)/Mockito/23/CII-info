@@ -1,0 +1,1353 @@
+
+
+hASList: 
+[INS FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1629 @LENGTH@ 42
+---MOV Modifier@@private @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1629 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 9
+---MOV SimpleType@@MockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 11
+---INS VariableDeclarationFragment@@mockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1659 @LENGTH@ 11
+------MOV SimpleName@@mockitoCore @TO@ VariableDeclarationFragment@@mockitoCore @AT@ 1649 @LENGTH@ 11
+, DEL FieldDeclaration@@private, MockitoCore, [mockitoCore=new MockitoCore()] @AT@ 1629 @LENGTH@ 52
+---DEL VariableDeclarationFragment@@mockitoCore=new MockitoCore() @AT@ 1649 @LENGTH@ 31
+------DEL ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 17
+, INS FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1677 @LENGTH@ 46
+---INS Modifier@@private @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1677 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1685 @LENGTH@ 9
+---INS SimpleType@@ReturnsEmptyValues @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1695 @LENGTH@ 18
+---INS VariableDeclarationFragment@@delegate @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1714 @LENGTH@ 8
+------INS SimpleName@@delegate @TO@ VariableDeclarationFragment@@delegate @AT@ 1714 @LENGTH@ 8
+, DEL FieldDeclaration@@private, ReturnsEmptyValues, [delegate=new ReturnsEmptyValues()] @AT@ 1687 @LENGTH@ 63
+---DEL Modifier@@private @AT@ 1687 @LENGTH@ 7
+---DEL SimpleType@@ReturnsEmptyValues @AT@ 1695 @LENGTH@ 18
+---DEL VariableDeclarationFragment@@delegate=new ReturnsEmptyValues() @AT@ 1714 @LENGTH@ 35
+------DEL SimpleName@@delegate @AT@ 1714 @LENGTH@ 8
+------DEL ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 24
+, INS ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2049 @LENGTH@ 33
+---INS MethodInvocation@@MethodName:instantiateMockitoCoreIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @AT@ 2049 @LENGTH@ 32
+, INS ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2092 @LENGTH@ 30
+---INS MethodInvocation@@MethodName:instantiateDelegateIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @AT@ 2092 @LENGTH@ 29
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2321 @LENGTH@ 160
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2321 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2329 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2342 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateMockitoCoreIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2347 @LENGTH@ 30
+---INS IfStatement@@InfixExpression:mockitoCore == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2391 @LENGTH@ 83
+------INS InfixExpression@@mockitoCore == null @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2395 @LENGTH@ 19
+---------INS SimpleName@@mockitoCore @TO@ InfixExpression@@mockitoCore == null @AT@ 2395 @LENGTH@ 11
+---------INS Operator@@== @TO@ InfixExpression@@mockitoCore == null @AT@ 2406 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@mockitoCore == null @AT@ 2410 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2431 @LENGTH@ 32
+---------INS Assignment@@mockitoCore=new MockitoCore() @TO@ ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 31
+------------INS SimpleName@@mockitoCore @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 11
+------------INS Operator@@= @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2442 @LENGTH@ 1
+------------INS ClassInstanceCreation@@MockitoCore[] @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2445 @LENGTH@ 17
+---------------MOV New@@new @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 3
+---------------MOV SimpleType@@MockitoCore @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1667 @LENGTH@ 11
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2489 @LENGTH@ 158
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2489 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2497 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2510 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateDelegateIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2515 @LENGTH@ 27
+---INS IfStatement@@InfixExpression:delegate == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2556 @LENGTH@ 84
+------INS InfixExpression@@delegate == null @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2560 @LENGTH@ 16
+---------INS SimpleName@@delegate @TO@ InfixExpression@@delegate == null @AT@ 2560 @LENGTH@ 8
+---------INS Operator@@== @TO@ InfixExpression@@delegate == null @AT@ 2568 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@delegate == null @AT@ 2572 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2593 @LENGTH@ 36
+---------INS Assignment@@delegate=new ReturnsEmptyValues() @TO@ ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 35
+------------INS SimpleName@@delegate @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 8
+------------INS Operator@@= @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2601 @LENGTH@ 1
+------------INS ClassInstanceCreation@@ReturnsEmptyValues[] @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2604 @LENGTH@ 24
+---------------MOV New@@new @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 3
+---------------MOV SimpleType@@ReturnsEmptyValues @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1729 @LENGTH@ 18
+, UPD ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4192 @LENGTH@ 108
+---UPD MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4199 @LENGTH@ 100
+------INS MethodInvocation@@MethodName:serializable:[] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4585 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ MethodInvocation:container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 189
+---UPD MethodInvocation@@container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 188
+------UPD SimpleName@@MethodName:addAnswer:[new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @TO@ MethodName:addAnswer:[new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @AT@ 4795 @LENGTH@ 178
+---------UPD ClassInstanceCreation@@Answer<Object>[] @TO@ SerializableAnswer[] @AT@ 4805 @LENGTH@ 160
+------------DEL ParameterizedType@@Answer<Object> @AT@ 4809 @LENGTH@ 14
+---------------DEL SimpleType@@Answer @AT@ 4809 @LENGTH@ 6
+---------------DEL SimpleType@@Object @AT@ 4816 @LENGTH@ 6
+------------INS SimpleType@@SerializableAnswer @TO@ ClassInstanceCreation@@Answer<Object>[] @AT@ 5222 @LENGTH@ 18
+, INS TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 83
+---INS Modifier@@abstract @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 8
+---INS SimpleName@@ClassName:SerializableAnswer @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5443 @LENGTH@ 18
+---INS ParameterizedType@@Answer<Object> @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5473 @LENGTH@ 14
+------INS SimpleType@@Answer @TO@ ParameterizedType@@Answer<Object> @AT@ 5473 @LENGTH@ 6
+------INS SimpleType@@Object @TO@ ParameterizedType@@Answer<Object> @AT@ 5480 @LENGTH@ 6
+---INS SimpleType@@Serializable @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5489 @LENGTH@ 12
+]
+
+CII:
+OP1:(INS, FieldDeclaration, null, OP2 OP3 OP4 OP5)
+OP2:   (MOV, Modifier, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (MOV, SimpleType, OP1, null)
+OP5:   (INS, VariableDeclarationFragment, OP1, OP6)
+OP6:      (MOV, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1629 @LENGTH@ 42
+---MOV Modifier@@private @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1629 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 9
+---MOV SimpleType@@MockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 11
+---INS VariableDeclarationFragment@@mockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1659 @LENGTH@ 11
+------MOV SimpleName@@mockitoCore @TO@ VariableDeclarationFragment@@mockitoCore @AT@ 1649 @LENGTH@ 11
+, DEL FieldDeclaration@@private, MockitoCore, [mockitoCore=new MockitoCore()] @AT@ 1629 @LENGTH@ 52
+---DEL VariableDeclarationFragment@@mockitoCore=new MockitoCore() @AT@ 1649 @LENGTH@ 31
+------DEL ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 17
+, INS FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1677 @LENGTH@ 46
+---INS Modifier@@private @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1677 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1685 @LENGTH@ 9
+---INS SimpleType@@ReturnsEmptyValues @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1695 @LENGTH@ 18
+---INS VariableDeclarationFragment@@delegate @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1714 @LENGTH@ 8
+------INS SimpleName@@delegate @TO@ VariableDeclarationFragment@@delegate @AT@ 1714 @LENGTH@ 8
+, DEL FieldDeclaration@@private, ReturnsEmptyValues, [delegate=new ReturnsEmptyValues()] @AT@ 1687 @LENGTH@ 63
+---DEL Modifier@@private @AT@ 1687 @LENGTH@ 7
+---DEL SimpleType@@ReturnsEmptyValues @AT@ 1695 @LENGTH@ 18
+---DEL VariableDeclarationFragment@@delegate=new ReturnsEmptyValues() @AT@ 1714 @LENGTH@ 35
+------DEL SimpleName@@delegate @AT@ 1714 @LENGTH@ 8
+------DEL ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 24
+, INS ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2049 @LENGTH@ 33
+---INS MethodInvocation@@MethodName:instantiateMockitoCoreIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @AT@ 2049 @LENGTH@ 32
+, INS ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2092 @LENGTH@ 30
+---INS MethodInvocation@@MethodName:instantiateDelegateIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @AT@ 2092 @LENGTH@ 29
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2321 @LENGTH@ 160
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2321 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2329 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2342 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateMockitoCoreIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2347 @LENGTH@ 30
+---INS IfStatement@@InfixExpression:mockitoCore == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2391 @LENGTH@ 83
+------INS InfixExpression@@mockitoCore == null @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2395 @LENGTH@ 19
+---------INS SimpleName@@mockitoCore @TO@ InfixExpression@@mockitoCore == null @AT@ 2395 @LENGTH@ 11
+---------INS Operator@@== @TO@ InfixExpression@@mockitoCore == null @AT@ 2406 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@mockitoCore == null @AT@ 2410 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2431 @LENGTH@ 32
+---------INS Assignment@@mockitoCore=new MockitoCore() @TO@ ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 31
+------------INS SimpleName@@mockitoCore @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 11
+------------INS Operator@@= @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2442 @LENGTH@ 1
+------------INS ClassInstanceCreation@@MockitoCore[] @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2445 @LENGTH@ 17
+---------------MOV New@@new @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 3
+---------------MOV SimpleType@@MockitoCore @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1667 @LENGTH@ 11
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2489 @LENGTH@ 158
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2489 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2497 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2510 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateDelegateIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2515 @LENGTH@ 27
+---INS IfStatement@@InfixExpression:delegate == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2556 @LENGTH@ 84
+------INS InfixExpression@@delegate == null @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2560 @LENGTH@ 16
+---------INS SimpleName@@delegate @TO@ InfixExpression@@delegate == null @AT@ 2560 @LENGTH@ 8
+---------INS Operator@@== @TO@ InfixExpression@@delegate == null @AT@ 2568 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@delegate == null @AT@ 2572 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2593 @LENGTH@ 36
+---------INS Assignment@@delegate=new ReturnsEmptyValues() @TO@ ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 35
+------------INS SimpleName@@delegate @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 8
+------------INS Operator@@= @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2601 @LENGTH@ 1
+------------INS ClassInstanceCreation@@ReturnsEmptyValues[] @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2604 @LENGTH@ 24
+---------------MOV New@@new @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 3
+---------------MOV SimpleType@@ReturnsEmptyValues @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1729 @LENGTH@ 18
+, UPD ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4192 @LENGTH@ 108
+---UPD MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4199 @LENGTH@ 100
+------INS MethodInvocation@@MethodName:serializable:[] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4585 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ MethodInvocation:container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 189
+---UPD MethodInvocation@@container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 188
+------UPD SimpleName@@MethodName:addAnswer:[new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @TO@ MethodName:addAnswer:[new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @AT@ 4795 @LENGTH@ 178
+---------UPD ClassInstanceCreation@@Answer<Object>[] @TO@ SerializableAnswer[] @AT@ 4805 @LENGTH@ 160
+------------DEL ParameterizedType@@Answer<Object> @AT@ 4809 @LENGTH@ 14
+---------------DEL SimpleType@@Answer @AT@ 4809 @LENGTH@ 6
+---------------DEL SimpleType@@Object @AT@ 4816 @LENGTH@ 6
+------------INS SimpleType@@SerializableAnswer @TO@ ClassInstanceCreation@@Answer<Object>[] @AT@ 5222 @LENGTH@ 18
+, INS TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 83
+---INS Modifier@@abstract @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 8
+---INS SimpleName@@ClassName:SerializableAnswer @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5443 @LENGTH@ 18
+---INS ParameterizedType@@Answer<Object> @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5473 @LENGTH@ 14
+------INS SimpleType@@Answer @TO@ ParameterizedType@@Answer<Object> @AT@ 5473 @LENGTH@ 6
+------INS SimpleType@@Object @TO@ ParameterizedType@@Answer<Object> @AT@ 5480 @LENGTH@ 6
+---INS SimpleType@@Serializable @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5489 @LENGTH@ 12
+]
+
+CII:
+OP1:(DEL, FieldDeclaration, null, OP2)
+OP2:   (DEL, VariableDeclarationFragment, OP1, OP3)
+OP3:      (DEL, ClassInstanceCreation, OP2, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1629 @LENGTH@ 42
+---MOV Modifier@@private @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1629 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 9
+---MOV SimpleType@@MockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 11
+---INS VariableDeclarationFragment@@mockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1659 @LENGTH@ 11
+------MOV SimpleName@@mockitoCore @TO@ VariableDeclarationFragment@@mockitoCore @AT@ 1649 @LENGTH@ 11
+, DEL FieldDeclaration@@private, MockitoCore, [mockitoCore=new MockitoCore()] @AT@ 1629 @LENGTH@ 52
+---DEL VariableDeclarationFragment@@mockitoCore=new MockitoCore() @AT@ 1649 @LENGTH@ 31
+------DEL ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 17
+, INS FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1677 @LENGTH@ 46
+---INS Modifier@@private @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1677 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1685 @LENGTH@ 9
+---INS SimpleType@@ReturnsEmptyValues @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1695 @LENGTH@ 18
+---INS VariableDeclarationFragment@@delegate @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1714 @LENGTH@ 8
+------INS SimpleName@@delegate @TO@ VariableDeclarationFragment@@delegate @AT@ 1714 @LENGTH@ 8
+, DEL FieldDeclaration@@private, ReturnsEmptyValues, [delegate=new ReturnsEmptyValues()] @AT@ 1687 @LENGTH@ 63
+---DEL Modifier@@private @AT@ 1687 @LENGTH@ 7
+---DEL SimpleType@@ReturnsEmptyValues @AT@ 1695 @LENGTH@ 18
+---DEL VariableDeclarationFragment@@delegate=new ReturnsEmptyValues() @AT@ 1714 @LENGTH@ 35
+------DEL SimpleName@@delegate @AT@ 1714 @LENGTH@ 8
+------DEL ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 24
+, INS ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2049 @LENGTH@ 33
+---INS MethodInvocation@@MethodName:instantiateMockitoCoreIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @AT@ 2049 @LENGTH@ 32
+, INS ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2092 @LENGTH@ 30
+---INS MethodInvocation@@MethodName:instantiateDelegateIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @AT@ 2092 @LENGTH@ 29
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2321 @LENGTH@ 160
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2321 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2329 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2342 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateMockitoCoreIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2347 @LENGTH@ 30
+---INS IfStatement@@InfixExpression:mockitoCore == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2391 @LENGTH@ 83
+------INS InfixExpression@@mockitoCore == null @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2395 @LENGTH@ 19
+---------INS SimpleName@@mockitoCore @TO@ InfixExpression@@mockitoCore == null @AT@ 2395 @LENGTH@ 11
+---------INS Operator@@== @TO@ InfixExpression@@mockitoCore == null @AT@ 2406 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@mockitoCore == null @AT@ 2410 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2431 @LENGTH@ 32
+---------INS Assignment@@mockitoCore=new MockitoCore() @TO@ ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 31
+------------INS SimpleName@@mockitoCore @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 11
+------------INS Operator@@= @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2442 @LENGTH@ 1
+------------INS ClassInstanceCreation@@MockitoCore[] @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2445 @LENGTH@ 17
+---------------MOV New@@new @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 3
+---------------MOV SimpleType@@MockitoCore @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1667 @LENGTH@ 11
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2489 @LENGTH@ 158
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2489 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2497 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2510 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateDelegateIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2515 @LENGTH@ 27
+---INS IfStatement@@InfixExpression:delegate == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2556 @LENGTH@ 84
+------INS InfixExpression@@delegate == null @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2560 @LENGTH@ 16
+---------INS SimpleName@@delegate @TO@ InfixExpression@@delegate == null @AT@ 2560 @LENGTH@ 8
+---------INS Operator@@== @TO@ InfixExpression@@delegate == null @AT@ 2568 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@delegate == null @AT@ 2572 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2593 @LENGTH@ 36
+---------INS Assignment@@delegate=new ReturnsEmptyValues() @TO@ ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 35
+------------INS SimpleName@@delegate @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 8
+------------INS Operator@@= @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2601 @LENGTH@ 1
+------------INS ClassInstanceCreation@@ReturnsEmptyValues[] @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2604 @LENGTH@ 24
+---------------MOV New@@new @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 3
+---------------MOV SimpleType@@ReturnsEmptyValues @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1729 @LENGTH@ 18
+, UPD ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4192 @LENGTH@ 108
+---UPD MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4199 @LENGTH@ 100
+------INS MethodInvocation@@MethodName:serializable:[] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4585 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ MethodInvocation:container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 189
+---UPD MethodInvocation@@container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 188
+------UPD SimpleName@@MethodName:addAnswer:[new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @TO@ MethodName:addAnswer:[new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @AT@ 4795 @LENGTH@ 178
+---------UPD ClassInstanceCreation@@Answer<Object>[] @TO@ SerializableAnswer[] @AT@ 4805 @LENGTH@ 160
+------------DEL ParameterizedType@@Answer<Object> @AT@ 4809 @LENGTH@ 14
+---------------DEL SimpleType@@Answer @AT@ 4809 @LENGTH@ 6
+---------------DEL SimpleType@@Object @AT@ 4816 @LENGTH@ 6
+------------INS SimpleType@@SerializableAnswer @TO@ ClassInstanceCreation@@Answer<Object>[] @AT@ 5222 @LENGTH@ 18
+, INS TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 83
+---INS Modifier@@abstract @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 8
+---INS SimpleName@@ClassName:SerializableAnswer @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5443 @LENGTH@ 18
+---INS ParameterizedType@@Answer<Object> @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5473 @LENGTH@ 14
+------INS SimpleType@@Answer @TO@ ParameterizedType@@Answer<Object> @AT@ 5473 @LENGTH@ 6
+------INS SimpleType@@Object @TO@ ParameterizedType@@Answer<Object> @AT@ 5480 @LENGTH@ 6
+---INS SimpleType@@Serializable @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5489 @LENGTH@ 12
+]
+
+CII:
+OP1:(INS, FieldDeclaration, null, OP2 OP3 OP4 OP5)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (INS, SimpleType, OP1, null)
+OP5:   (INS, VariableDeclarationFragment, OP1, OP6)
+OP6:      (INS, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1629 @LENGTH@ 42
+---MOV Modifier@@private @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1629 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 9
+---MOV SimpleType@@MockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 11
+---INS VariableDeclarationFragment@@mockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1659 @LENGTH@ 11
+------MOV SimpleName@@mockitoCore @TO@ VariableDeclarationFragment@@mockitoCore @AT@ 1649 @LENGTH@ 11
+, DEL FieldDeclaration@@private, MockitoCore, [mockitoCore=new MockitoCore()] @AT@ 1629 @LENGTH@ 52
+---DEL VariableDeclarationFragment@@mockitoCore=new MockitoCore() @AT@ 1649 @LENGTH@ 31
+------DEL ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 17
+, INS FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1677 @LENGTH@ 46
+---INS Modifier@@private @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1677 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1685 @LENGTH@ 9
+---INS SimpleType@@ReturnsEmptyValues @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1695 @LENGTH@ 18
+---INS VariableDeclarationFragment@@delegate @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1714 @LENGTH@ 8
+------INS SimpleName@@delegate @TO@ VariableDeclarationFragment@@delegate @AT@ 1714 @LENGTH@ 8
+, DEL FieldDeclaration@@private, ReturnsEmptyValues, [delegate=new ReturnsEmptyValues()] @AT@ 1687 @LENGTH@ 63
+---DEL Modifier@@private @AT@ 1687 @LENGTH@ 7
+---DEL SimpleType@@ReturnsEmptyValues @AT@ 1695 @LENGTH@ 18
+---DEL VariableDeclarationFragment@@delegate=new ReturnsEmptyValues() @AT@ 1714 @LENGTH@ 35
+------DEL SimpleName@@delegate @AT@ 1714 @LENGTH@ 8
+------DEL ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 24
+, INS ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2049 @LENGTH@ 33
+---INS MethodInvocation@@MethodName:instantiateMockitoCoreIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @AT@ 2049 @LENGTH@ 32
+, INS ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2092 @LENGTH@ 30
+---INS MethodInvocation@@MethodName:instantiateDelegateIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @AT@ 2092 @LENGTH@ 29
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2321 @LENGTH@ 160
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2321 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2329 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2342 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateMockitoCoreIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2347 @LENGTH@ 30
+---INS IfStatement@@InfixExpression:mockitoCore == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2391 @LENGTH@ 83
+------INS InfixExpression@@mockitoCore == null @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2395 @LENGTH@ 19
+---------INS SimpleName@@mockitoCore @TO@ InfixExpression@@mockitoCore == null @AT@ 2395 @LENGTH@ 11
+---------INS Operator@@== @TO@ InfixExpression@@mockitoCore == null @AT@ 2406 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@mockitoCore == null @AT@ 2410 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2431 @LENGTH@ 32
+---------INS Assignment@@mockitoCore=new MockitoCore() @TO@ ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 31
+------------INS SimpleName@@mockitoCore @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 11
+------------INS Operator@@= @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2442 @LENGTH@ 1
+------------INS ClassInstanceCreation@@MockitoCore[] @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2445 @LENGTH@ 17
+---------------MOV New@@new @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 3
+---------------MOV SimpleType@@MockitoCore @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1667 @LENGTH@ 11
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2489 @LENGTH@ 158
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2489 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2497 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2510 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateDelegateIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2515 @LENGTH@ 27
+---INS IfStatement@@InfixExpression:delegate == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2556 @LENGTH@ 84
+------INS InfixExpression@@delegate == null @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2560 @LENGTH@ 16
+---------INS SimpleName@@delegate @TO@ InfixExpression@@delegate == null @AT@ 2560 @LENGTH@ 8
+---------INS Operator@@== @TO@ InfixExpression@@delegate == null @AT@ 2568 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@delegate == null @AT@ 2572 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2593 @LENGTH@ 36
+---------INS Assignment@@delegate=new ReturnsEmptyValues() @TO@ ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 35
+------------INS SimpleName@@delegate @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 8
+------------INS Operator@@= @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2601 @LENGTH@ 1
+------------INS ClassInstanceCreation@@ReturnsEmptyValues[] @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2604 @LENGTH@ 24
+---------------MOV New@@new @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 3
+---------------MOV SimpleType@@ReturnsEmptyValues @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1729 @LENGTH@ 18
+, UPD ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4192 @LENGTH@ 108
+---UPD MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4199 @LENGTH@ 100
+------INS MethodInvocation@@MethodName:serializable:[] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4585 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ MethodInvocation:container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 189
+---UPD MethodInvocation@@container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 188
+------UPD SimpleName@@MethodName:addAnswer:[new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @TO@ MethodName:addAnswer:[new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @AT@ 4795 @LENGTH@ 178
+---------UPD ClassInstanceCreation@@Answer<Object>[] @TO@ SerializableAnswer[] @AT@ 4805 @LENGTH@ 160
+------------DEL ParameterizedType@@Answer<Object> @AT@ 4809 @LENGTH@ 14
+---------------DEL SimpleType@@Answer @AT@ 4809 @LENGTH@ 6
+---------------DEL SimpleType@@Object @AT@ 4816 @LENGTH@ 6
+------------INS SimpleType@@SerializableAnswer @TO@ ClassInstanceCreation@@Answer<Object>[] @AT@ 5222 @LENGTH@ 18
+, INS TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 83
+---INS Modifier@@abstract @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 8
+---INS SimpleName@@ClassName:SerializableAnswer @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5443 @LENGTH@ 18
+---INS ParameterizedType@@Answer<Object> @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5473 @LENGTH@ 14
+------INS SimpleType@@Answer @TO@ ParameterizedType@@Answer<Object> @AT@ 5473 @LENGTH@ 6
+------INS SimpleType@@Object @TO@ ParameterizedType@@Answer<Object> @AT@ 5480 @LENGTH@ 6
+---INS SimpleType@@Serializable @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5489 @LENGTH@ 12
+]
+
+CII:
+OP1:(DEL, FieldDeclaration, null, OP2 OP3 OP4)
+OP2:   (DEL, Modifier, OP1, null)
+OP3:   (DEL, SimpleType, OP1, null)
+OP4:   (DEL, VariableDeclarationFragment, OP1, OP5 OP6)
+OP5:      (DEL, SimpleName, OP4, null)
+OP6:      (DEL, ClassInstanceCreation, OP4, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1629 @LENGTH@ 42
+---MOV Modifier@@private @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1629 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 9
+---MOV SimpleType@@MockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 11
+---INS VariableDeclarationFragment@@mockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1659 @LENGTH@ 11
+------MOV SimpleName@@mockitoCore @TO@ VariableDeclarationFragment@@mockitoCore @AT@ 1649 @LENGTH@ 11
+, DEL FieldDeclaration@@private, MockitoCore, [mockitoCore=new MockitoCore()] @AT@ 1629 @LENGTH@ 52
+---DEL VariableDeclarationFragment@@mockitoCore=new MockitoCore() @AT@ 1649 @LENGTH@ 31
+------DEL ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 17
+, INS FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1677 @LENGTH@ 46
+---INS Modifier@@private @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1677 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1685 @LENGTH@ 9
+---INS SimpleType@@ReturnsEmptyValues @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1695 @LENGTH@ 18
+---INS VariableDeclarationFragment@@delegate @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1714 @LENGTH@ 8
+------INS SimpleName@@delegate @TO@ VariableDeclarationFragment@@delegate @AT@ 1714 @LENGTH@ 8
+, DEL FieldDeclaration@@private, ReturnsEmptyValues, [delegate=new ReturnsEmptyValues()] @AT@ 1687 @LENGTH@ 63
+---DEL Modifier@@private @AT@ 1687 @LENGTH@ 7
+---DEL SimpleType@@ReturnsEmptyValues @AT@ 1695 @LENGTH@ 18
+---DEL VariableDeclarationFragment@@delegate=new ReturnsEmptyValues() @AT@ 1714 @LENGTH@ 35
+------DEL SimpleName@@delegate @AT@ 1714 @LENGTH@ 8
+------DEL ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 24
+, INS ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2049 @LENGTH@ 33
+---INS MethodInvocation@@MethodName:instantiateMockitoCoreIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @AT@ 2049 @LENGTH@ 32
+, INS ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2092 @LENGTH@ 30
+---INS MethodInvocation@@MethodName:instantiateDelegateIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @AT@ 2092 @LENGTH@ 29
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2321 @LENGTH@ 160
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2321 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2329 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2342 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateMockitoCoreIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2347 @LENGTH@ 30
+---INS IfStatement@@InfixExpression:mockitoCore == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2391 @LENGTH@ 83
+------INS InfixExpression@@mockitoCore == null @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2395 @LENGTH@ 19
+---------INS SimpleName@@mockitoCore @TO@ InfixExpression@@mockitoCore == null @AT@ 2395 @LENGTH@ 11
+---------INS Operator@@== @TO@ InfixExpression@@mockitoCore == null @AT@ 2406 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@mockitoCore == null @AT@ 2410 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2431 @LENGTH@ 32
+---------INS Assignment@@mockitoCore=new MockitoCore() @TO@ ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 31
+------------INS SimpleName@@mockitoCore @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 11
+------------INS Operator@@= @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2442 @LENGTH@ 1
+------------INS ClassInstanceCreation@@MockitoCore[] @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2445 @LENGTH@ 17
+---------------MOV New@@new @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 3
+---------------MOV SimpleType@@MockitoCore @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1667 @LENGTH@ 11
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2489 @LENGTH@ 158
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2489 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2497 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2510 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateDelegateIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2515 @LENGTH@ 27
+---INS IfStatement@@InfixExpression:delegate == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2556 @LENGTH@ 84
+------INS InfixExpression@@delegate == null @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2560 @LENGTH@ 16
+---------INS SimpleName@@delegate @TO@ InfixExpression@@delegate == null @AT@ 2560 @LENGTH@ 8
+---------INS Operator@@== @TO@ InfixExpression@@delegate == null @AT@ 2568 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@delegate == null @AT@ 2572 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2593 @LENGTH@ 36
+---------INS Assignment@@delegate=new ReturnsEmptyValues() @TO@ ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 35
+------------INS SimpleName@@delegate @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 8
+------------INS Operator@@= @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2601 @LENGTH@ 1
+------------INS ClassInstanceCreation@@ReturnsEmptyValues[] @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2604 @LENGTH@ 24
+---------------MOV New@@new @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 3
+---------------MOV SimpleType@@ReturnsEmptyValues @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1729 @LENGTH@ 18
+, UPD ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4192 @LENGTH@ 108
+---UPD MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4199 @LENGTH@ 100
+------INS MethodInvocation@@MethodName:serializable:[] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4585 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ MethodInvocation:container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 189
+---UPD MethodInvocation@@container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 188
+------UPD SimpleName@@MethodName:addAnswer:[new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @TO@ MethodName:addAnswer:[new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @AT@ 4795 @LENGTH@ 178
+---------UPD ClassInstanceCreation@@Answer<Object>[] @TO@ SerializableAnswer[] @AT@ 4805 @LENGTH@ 160
+------------DEL ParameterizedType@@Answer<Object> @AT@ 4809 @LENGTH@ 14
+---------------DEL SimpleType@@Answer @AT@ 4809 @LENGTH@ 6
+---------------DEL SimpleType@@Object @AT@ 4816 @LENGTH@ 6
+------------INS SimpleType@@SerializableAnswer @TO@ ClassInstanceCreation@@Answer<Object>[] @AT@ 5222 @LENGTH@ 18
+, INS TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 83
+---INS Modifier@@abstract @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 8
+---INS SimpleName@@ClassName:SerializableAnswer @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5443 @LENGTH@ 18
+---INS ParameterizedType@@Answer<Object> @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5473 @LENGTH@ 14
+------INS SimpleType@@Answer @TO@ ParameterizedType@@Answer<Object> @AT@ 5473 @LENGTH@ 6
+------INS SimpleType@@Object @TO@ ParameterizedType@@Answer<Object> @AT@ 5480 @LENGTH@ 6
+---INS SimpleType@@Serializable @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5489 @LENGTH@ 12
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1629 @LENGTH@ 42
+---MOV Modifier@@private @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1629 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 9
+---MOV SimpleType@@MockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 11
+---INS VariableDeclarationFragment@@mockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1659 @LENGTH@ 11
+------MOV SimpleName@@mockitoCore @TO@ VariableDeclarationFragment@@mockitoCore @AT@ 1649 @LENGTH@ 11
+, DEL FieldDeclaration@@private, MockitoCore, [mockitoCore=new MockitoCore()] @AT@ 1629 @LENGTH@ 52
+---DEL VariableDeclarationFragment@@mockitoCore=new MockitoCore() @AT@ 1649 @LENGTH@ 31
+------DEL ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 17
+, INS FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1677 @LENGTH@ 46
+---INS Modifier@@private @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1677 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1685 @LENGTH@ 9
+---INS SimpleType@@ReturnsEmptyValues @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1695 @LENGTH@ 18
+---INS VariableDeclarationFragment@@delegate @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1714 @LENGTH@ 8
+------INS SimpleName@@delegate @TO@ VariableDeclarationFragment@@delegate @AT@ 1714 @LENGTH@ 8
+, DEL FieldDeclaration@@private, ReturnsEmptyValues, [delegate=new ReturnsEmptyValues()] @AT@ 1687 @LENGTH@ 63
+---DEL Modifier@@private @AT@ 1687 @LENGTH@ 7
+---DEL SimpleType@@ReturnsEmptyValues @AT@ 1695 @LENGTH@ 18
+---DEL VariableDeclarationFragment@@delegate=new ReturnsEmptyValues() @AT@ 1714 @LENGTH@ 35
+------DEL SimpleName@@delegate @AT@ 1714 @LENGTH@ 8
+------DEL ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 24
+, INS ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2049 @LENGTH@ 33
+---INS MethodInvocation@@MethodName:instantiateMockitoCoreIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @AT@ 2049 @LENGTH@ 32
+, INS ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2092 @LENGTH@ 30
+---INS MethodInvocation@@MethodName:instantiateDelegateIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @AT@ 2092 @LENGTH@ 29
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2321 @LENGTH@ 160
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2321 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2329 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2342 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateMockitoCoreIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2347 @LENGTH@ 30
+---INS IfStatement@@InfixExpression:mockitoCore == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2391 @LENGTH@ 83
+------INS InfixExpression@@mockitoCore == null @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2395 @LENGTH@ 19
+---------INS SimpleName@@mockitoCore @TO@ InfixExpression@@mockitoCore == null @AT@ 2395 @LENGTH@ 11
+---------INS Operator@@== @TO@ InfixExpression@@mockitoCore == null @AT@ 2406 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@mockitoCore == null @AT@ 2410 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2431 @LENGTH@ 32
+---------INS Assignment@@mockitoCore=new MockitoCore() @TO@ ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 31
+------------INS SimpleName@@mockitoCore @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 11
+------------INS Operator@@= @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2442 @LENGTH@ 1
+------------INS ClassInstanceCreation@@MockitoCore[] @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2445 @LENGTH@ 17
+---------------MOV New@@new @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 3
+---------------MOV SimpleType@@MockitoCore @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1667 @LENGTH@ 11
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2489 @LENGTH@ 158
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2489 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2497 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2510 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateDelegateIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2515 @LENGTH@ 27
+---INS IfStatement@@InfixExpression:delegate == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2556 @LENGTH@ 84
+------INS InfixExpression@@delegate == null @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2560 @LENGTH@ 16
+---------INS SimpleName@@delegate @TO@ InfixExpression@@delegate == null @AT@ 2560 @LENGTH@ 8
+---------INS Operator@@== @TO@ InfixExpression@@delegate == null @AT@ 2568 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@delegate == null @AT@ 2572 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2593 @LENGTH@ 36
+---------INS Assignment@@delegate=new ReturnsEmptyValues() @TO@ ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 35
+------------INS SimpleName@@delegate @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 8
+------------INS Operator@@= @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2601 @LENGTH@ 1
+------------INS ClassInstanceCreation@@ReturnsEmptyValues[] @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2604 @LENGTH@ 24
+---------------MOV New@@new @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 3
+---------------MOV SimpleType@@ReturnsEmptyValues @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1729 @LENGTH@ 18
+, UPD ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4192 @LENGTH@ 108
+---UPD MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4199 @LENGTH@ 100
+------INS MethodInvocation@@MethodName:serializable:[] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4585 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ MethodInvocation:container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 189
+---UPD MethodInvocation@@container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 188
+------UPD SimpleName@@MethodName:addAnswer:[new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @TO@ MethodName:addAnswer:[new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @AT@ 4795 @LENGTH@ 178
+---------UPD ClassInstanceCreation@@Answer<Object>[] @TO@ SerializableAnswer[] @AT@ 4805 @LENGTH@ 160
+------------DEL ParameterizedType@@Answer<Object> @AT@ 4809 @LENGTH@ 14
+---------------DEL SimpleType@@Answer @AT@ 4809 @LENGTH@ 6
+---------------DEL SimpleType@@Object @AT@ 4816 @LENGTH@ 6
+------------INS SimpleType@@SerializableAnswer @TO@ ClassInstanceCreation@@Answer<Object>[] @AT@ 5222 @LENGTH@ 18
+, INS TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 83
+---INS Modifier@@abstract @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 8
+---INS SimpleName@@ClassName:SerializableAnswer @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5443 @LENGTH@ 18
+---INS ParameterizedType@@Answer<Object> @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5473 @LENGTH@ 14
+------INS SimpleType@@Answer @TO@ ParameterizedType@@Answer<Object> @AT@ 5473 @LENGTH@ 6
+------INS SimpleType@@Object @TO@ ParameterizedType@@Answer<Object> @AT@ 5480 @LENGTH@ 6
+---INS SimpleType@@Serializable @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5489 @LENGTH@ 12
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1629 @LENGTH@ 42
+---MOV Modifier@@private @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1629 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 9
+---MOV SimpleType@@MockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 11
+---INS VariableDeclarationFragment@@mockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1659 @LENGTH@ 11
+------MOV SimpleName@@mockitoCore @TO@ VariableDeclarationFragment@@mockitoCore @AT@ 1649 @LENGTH@ 11
+, DEL FieldDeclaration@@private, MockitoCore, [mockitoCore=new MockitoCore()] @AT@ 1629 @LENGTH@ 52
+---DEL VariableDeclarationFragment@@mockitoCore=new MockitoCore() @AT@ 1649 @LENGTH@ 31
+------DEL ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 17
+, INS FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1677 @LENGTH@ 46
+---INS Modifier@@private @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1677 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1685 @LENGTH@ 9
+---INS SimpleType@@ReturnsEmptyValues @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1695 @LENGTH@ 18
+---INS VariableDeclarationFragment@@delegate @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1714 @LENGTH@ 8
+------INS SimpleName@@delegate @TO@ VariableDeclarationFragment@@delegate @AT@ 1714 @LENGTH@ 8
+, DEL FieldDeclaration@@private, ReturnsEmptyValues, [delegate=new ReturnsEmptyValues()] @AT@ 1687 @LENGTH@ 63
+---DEL Modifier@@private @AT@ 1687 @LENGTH@ 7
+---DEL SimpleType@@ReturnsEmptyValues @AT@ 1695 @LENGTH@ 18
+---DEL VariableDeclarationFragment@@delegate=new ReturnsEmptyValues() @AT@ 1714 @LENGTH@ 35
+------DEL SimpleName@@delegate @AT@ 1714 @LENGTH@ 8
+------DEL ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 24
+, INS ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2049 @LENGTH@ 33
+---INS MethodInvocation@@MethodName:instantiateMockitoCoreIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @AT@ 2049 @LENGTH@ 32
+, INS ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2092 @LENGTH@ 30
+---INS MethodInvocation@@MethodName:instantiateDelegateIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @AT@ 2092 @LENGTH@ 29
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2321 @LENGTH@ 160
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2321 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2329 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2342 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateMockitoCoreIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2347 @LENGTH@ 30
+---INS IfStatement@@InfixExpression:mockitoCore == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2391 @LENGTH@ 83
+------INS InfixExpression@@mockitoCore == null @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2395 @LENGTH@ 19
+---------INS SimpleName@@mockitoCore @TO@ InfixExpression@@mockitoCore == null @AT@ 2395 @LENGTH@ 11
+---------INS Operator@@== @TO@ InfixExpression@@mockitoCore == null @AT@ 2406 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@mockitoCore == null @AT@ 2410 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2431 @LENGTH@ 32
+---------INS Assignment@@mockitoCore=new MockitoCore() @TO@ ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 31
+------------INS SimpleName@@mockitoCore @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 11
+------------INS Operator@@= @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2442 @LENGTH@ 1
+------------INS ClassInstanceCreation@@MockitoCore[] @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2445 @LENGTH@ 17
+---------------MOV New@@new @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 3
+---------------MOV SimpleType@@MockitoCore @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1667 @LENGTH@ 11
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2489 @LENGTH@ 158
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2489 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2497 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2510 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateDelegateIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2515 @LENGTH@ 27
+---INS IfStatement@@InfixExpression:delegate == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2556 @LENGTH@ 84
+------INS InfixExpression@@delegate == null @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2560 @LENGTH@ 16
+---------INS SimpleName@@delegate @TO@ InfixExpression@@delegate == null @AT@ 2560 @LENGTH@ 8
+---------INS Operator@@== @TO@ InfixExpression@@delegate == null @AT@ 2568 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@delegate == null @AT@ 2572 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2593 @LENGTH@ 36
+---------INS Assignment@@delegate=new ReturnsEmptyValues() @TO@ ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 35
+------------INS SimpleName@@delegate @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 8
+------------INS Operator@@= @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2601 @LENGTH@ 1
+------------INS ClassInstanceCreation@@ReturnsEmptyValues[] @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2604 @LENGTH@ 24
+---------------MOV New@@new @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 3
+---------------MOV SimpleType@@ReturnsEmptyValues @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1729 @LENGTH@ 18
+, UPD ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4192 @LENGTH@ 108
+---UPD MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4199 @LENGTH@ 100
+------INS MethodInvocation@@MethodName:serializable:[] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4585 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ MethodInvocation:container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 189
+---UPD MethodInvocation@@container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 188
+------UPD SimpleName@@MethodName:addAnswer:[new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @TO@ MethodName:addAnswer:[new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @AT@ 4795 @LENGTH@ 178
+---------UPD ClassInstanceCreation@@Answer<Object>[] @TO@ SerializableAnswer[] @AT@ 4805 @LENGTH@ 160
+------------DEL ParameterizedType@@Answer<Object> @AT@ 4809 @LENGTH@ 14
+---------------DEL SimpleType@@Answer @AT@ 4809 @LENGTH@ 6
+---------------DEL SimpleType@@Object @AT@ 4816 @LENGTH@ 6
+------------INS SimpleType@@SerializableAnswer @TO@ ClassInstanceCreation@@Answer<Object>[] @AT@ 5222 @LENGTH@ 18
+, INS TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 83
+---INS Modifier@@abstract @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 8
+---INS SimpleName@@ClassName:SerializableAnswer @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5443 @LENGTH@ 18
+---INS ParameterizedType@@Answer<Object> @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5473 @LENGTH@ 14
+------INS SimpleType@@Answer @TO@ ParameterizedType@@Answer<Object> @AT@ 5473 @LENGTH@ 6
+------INS SimpleType@@Object @TO@ ParameterizedType@@Answer<Object> @AT@ 5480 @LENGTH@ 6
+---INS SimpleType@@Serializable @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5489 @LENGTH@ 12
+]
+
+CII:
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP6)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (INS, PrimitiveType, OP1, null)
+OP5:   (INS, SimpleName, OP1, null)
+OP6:   (INS, IfStatement, OP1, OP7 OP11)
+OP7:      (INS, InfixExpression, OP6, OP8 OP9 OP10)
+OP8:         (INS, SimpleName, OP7, null)
+OP9:         (INS, Operator, OP7, null)
+OP10:         (INS, NullLiteral, OP7, null)
+OP11:      (INS, ExpressionStatement, OP6, OP12)
+OP12:         (INS, Assignment, OP11, OP13 OP14 OP15)
+OP13:            (INS, SimpleName, OP12, null)
+OP14:            (INS, Operator, OP12, null)
+OP15:            (INS, ClassInstanceCreation, OP12, OP16 OP17)
+OP16:               (MOV, New, OP15, null)
+OP17:               (MOV, SimpleType, OP15, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1629 @LENGTH@ 42
+---MOV Modifier@@private @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1629 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 9
+---MOV SimpleType@@MockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 11
+---INS VariableDeclarationFragment@@mockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1659 @LENGTH@ 11
+------MOV SimpleName@@mockitoCore @TO@ VariableDeclarationFragment@@mockitoCore @AT@ 1649 @LENGTH@ 11
+, DEL FieldDeclaration@@private, MockitoCore, [mockitoCore=new MockitoCore()] @AT@ 1629 @LENGTH@ 52
+---DEL VariableDeclarationFragment@@mockitoCore=new MockitoCore() @AT@ 1649 @LENGTH@ 31
+------DEL ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 17
+, INS FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1677 @LENGTH@ 46
+---INS Modifier@@private @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1677 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1685 @LENGTH@ 9
+---INS SimpleType@@ReturnsEmptyValues @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1695 @LENGTH@ 18
+---INS VariableDeclarationFragment@@delegate @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1714 @LENGTH@ 8
+------INS SimpleName@@delegate @TO@ VariableDeclarationFragment@@delegate @AT@ 1714 @LENGTH@ 8
+, DEL FieldDeclaration@@private, ReturnsEmptyValues, [delegate=new ReturnsEmptyValues()] @AT@ 1687 @LENGTH@ 63
+---DEL Modifier@@private @AT@ 1687 @LENGTH@ 7
+---DEL SimpleType@@ReturnsEmptyValues @AT@ 1695 @LENGTH@ 18
+---DEL VariableDeclarationFragment@@delegate=new ReturnsEmptyValues() @AT@ 1714 @LENGTH@ 35
+------DEL SimpleName@@delegate @AT@ 1714 @LENGTH@ 8
+------DEL ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 24
+, INS ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2049 @LENGTH@ 33
+---INS MethodInvocation@@MethodName:instantiateMockitoCoreIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @AT@ 2049 @LENGTH@ 32
+, INS ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2092 @LENGTH@ 30
+---INS MethodInvocation@@MethodName:instantiateDelegateIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @AT@ 2092 @LENGTH@ 29
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2321 @LENGTH@ 160
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2321 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2329 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2342 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateMockitoCoreIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2347 @LENGTH@ 30
+---INS IfStatement@@InfixExpression:mockitoCore == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2391 @LENGTH@ 83
+------INS InfixExpression@@mockitoCore == null @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2395 @LENGTH@ 19
+---------INS SimpleName@@mockitoCore @TO@ InfixExpression@@mockitoCore == null @AT@ 2395 @LENGTH@ 11
+---------INS Operator@@== @TO@ InfixExpression@@mockitoCore == null @AT@ 2406 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@mockitoCore == null @AT@ 2410 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2431 @LENGTH@ 32
+---------INS Assignment@@mockitoCore=new MockitoCore() @TO@ ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 31
+------------INS SimpleName@@mockitoCore @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 11
+------------INS Operator@@= @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2442 @LENGTH@ 1
+------------INS ClassInstanceCreation@@MockitoCore[] @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2445 @LENGTH@ 17
+---------------MOV New@@new @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 3
+---------------MOV SimpleType@@MockitoCore @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1667 @LENGTH@ 11
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2489 @LENGTH@ 158
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2489 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2497 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2510 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateDelegateIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2515 @LENGTH@ 27
+---INS IfStatement@@InfixExpression:delegate == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2556 @LENGTH@ 84
+------INS InfixExpression@@delegate == null @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2560 @LENGTH@ 16
+---------INS SimpleName@@delegate @TO@ InfixExpression@@delegate == null @AT@ 2560 @LENGTH@ 8
+---------INS Operator@@== @TO@ InfixExpression@@delegate == null @AT@ 2568 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@delegate == null @AT@ 2572 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2593 @LENGTH@ 36
+---------INS Assignment@@delegate=new ReturnsEmptyValues() @TO@ ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 35
+------------INS SimpleName@@delegate @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 8
+------------INS Operator@@= @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2601 @LENGTH@ 1
+------------INS ClassInstanceCreation@@ReturnsEmptyValues[] @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2604 @LENGTH@ 24
+---------------MOV New@@new @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 3
+---------------MOV SimpleType@@ReturnsEmptyValues @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1729 @LENGTH@ 18
+, UPD ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4192 @LENGTH@ 108
+---UPD MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4199 @LENGTH@ 100
+------INS MethodInvocation@@MethodName:serializable:[] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4585 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ MethodInvocation:container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 189
+---UPD MethodInvocation@@container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 188
+------UPD SimpleName@@MethodName:addAnswer:[new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @TO@ MethodName:addAnswer:[new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @AT@ 4795 @LENGTH@ 178
+---------UPD ClassInstanceCreation@@Answer<Object>[] @TO@ SerializableAnswer[] @AT@ 4805 @LENGTH@ 160
+------------DEL ParameterizedType@@Answer<Object> @AT@ 4809 @LENGTH@ 14
+---------------DEL SimpleType@@Answer @AT@ 4809 @LENGTH@ 6
+---------------DEL SimpleType@@Object @AT@ 4816 @LENGTH@ 6
+------------INS SimpleType@@SerializableAnswer @TO@ ClassInstanceCreation@@Answer<Object>[] @AT@ 5222 @LENGTH@ 18
+, INS TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 83
+---INS Modifier@@abstract @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 8
+---INS SimpleName@@ClassName:SerializableAnswer @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5443 @LENGTH@ 18
+---INS ParameterizedType@@Answer<Object> @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5473 @LENGTH@ 14
+------INS SimpleType@@Answer @TO@ ParameterizedType@@Answer<Object> @AT@ 5473 @LENGTH@ 6
+------INS SimpleType@@Object @TO@ ParameterizedType@@Answer<Object> @AT@ 5480 @LENGTH@ 6
+---INS SimpleType@@Serializable @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5489 @LENGTH@ 12
+]
+
+CII:
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP6)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (INS, PrimitiveType, OP1, null)
+OP5:   (INS, SimpleName, OP1, null)
+OP6:   (INS, IfStatement, OP1, OP7 OP11)
+OP7:      (INS, InfixExpression, OP6, OP8 OP9 OP10)
+OP8:         (INS, SimpleName, OP7, null)
+OP9:         (INS, Operator, OP7, null)
+OP10:         (INS, NullLiteral, OP7, null)
+OP11:      (INS, ExpressionStatement, OP6, OP12)
+OP12:         (INS, Assignment, OP11, OP13 OP14 OP15)
+OP13:            (INS, SimpleName, OP12, null)
+OP14:            (INS, Operator, OP12, null)
+OP15:            (INS, ClassInstanceCreation, OP12, OP16 OP17)
+OP16:               (MOV, New, OP15, null)
+OP17:               (MOV, SimpleType, OP15, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1629 @LENGTH@ 42
+---MOV Modifier@@private @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1629 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 9
+---MOV SimpleType@@MockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 11
+---INS VariableDeclarationFragment@@mockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1659 @LENGTH@ 11
+------MOV SimpleName@@mockitoCore @TO@ VariableDeclarationFragment@@mockitoCore @AT@ 1649 @LENGTH@ 11
+, DEL FieldDeclaration@@private, MockitoCore, [mockitoCore=new MockitoCore()] @AT@ 1629 @LENGTH@ 52
+---DEL VariableDeclarationFragment@@mockitoCore=new MockitoCore() @AT@ 1649 @LENGTH@ 31
+------DEL ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 17
+, INS FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1677 @LENGTH@ 46
+---INS Modifier@@private @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1677 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1685 @LENGTH@ 9
+---INS SimpleType@@ReturnsEmptyValues @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1695 @LENGTH@ 18
+---INS VariableDeclarationFragment@@delegate @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1714 @LENGTH@ 8
+------INS SimpleName@@delegate @TO@ VariableDeclarationFragment@@delegate @AT@ 1714 @LENGTH@ 8
+, DEL FieldDeclaration@@private, ReturnsEmptyValues, [delegate=new ReturnsEmptyValues()] @AT@ 1687 @LENGTH@ 63
+---DEL Modifier@@private @AT@ 1687 @LENGTH@ 7
+---DEL SimpleType@@ReturnsEmptyValues @AT@ 1695 @LENGTH@ 18
+---DEL VariableDeclarationFragment@@delegate=new ReturnsEmptyValues() @AT@ 1714 @LENGTH@ 35
+------DEL SimpleName@@delegate @AT@ 1714 @LENGTH@ 8
+------DEL ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 24
+, INS ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2049 @LENGTH@ 33
+---INS MethodInvocation@@MethodName:instantiateMockitoCoreIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @AT@ 2049 @LENGTH@ 32
+, INS ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2092 @LENGTH@ 30
+---INS MethodInvocation@@MethodName:instantiateDelegateIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @AT@ 2092 @LENGTH@ 29
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2321 @LENGTH@ 160
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2321 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2329 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2342 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateMockitoCoreIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2347 @LENGTH@ 30
+---INS IfStatement@@InfixExpression:mockitoCore == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2391 @LENGTH@ 83
+------INS InfixExpression@@mockitoCore == null @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2395 @LENGTH@ 19
+---------INS SimpleName@@mockitoCore @TO@ InfixExpression@@mockitoCore == null @AT@ 2395 @LENGTH@ 11
+---------INS Operator@@== @TO@ InfixExpression@@mockitoCore == null @AT@ 2406 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@mockitoCore == null @AT@ 2410 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2431 @LENGTH@ 32
+---------INS Assignment@@mockitoCore=new MockitoCore() @TO@ ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 31
+------------INS SimpleName@@mockitoCore @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 11
+------------INS Operator@@= @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2442 @LENGTH@ 1
+------------INS ClassInstanceCreation@@MockitoCore[] @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2445 @LENGTH@ 17
+---------------MOV New@@new @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 3
+---------------MOV SimpleType@@MockitoCore @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1667 @LENGTH@ 11
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2489 @LENGTH@ 158
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2489 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2497 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2510 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateDelegateIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2515 @LENGTH@ 27
+---INS IfStatement@@InfixExpression:delegate == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2556 @LENGTH@ 84
+------INS InfixExpression@@delegate == null @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2560 @LENGTH@ 16
+---------INS SimpleName@@delegate @TO@ InfixExpression@@delegate == null @AT@ 2560 @LENGTH@ 8
+---------INS Operator@@== @TO@ InfixExpression@@delegate == null @AT@ 2568 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@delegate == null @AT@ 2572 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2593 @LENGTH@ 36
+---------INS Assignment@@delegate=new ReturnsEmptyValues() @TO@ ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 35
+------------INS SimpleName@@delegate @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 8
+------------INS Operator@@= @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2601 @LENGTH@ 1
+------------INS ClassInstanceCreation@@ReturnsEmptyValues[] @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2604 @LENGTH@ 24
+---------------MOV New@@new @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 3
+---------------MOV SimpleType@@ReturnsEmptyValues @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1729 @LENGTH@ 18
+, UPD ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4192 @LENGTH@ 108
+---UPD MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4199 @LENGTH@ 100
+------INS MethodInvocation@@MethodName:serializable:[] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4585 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ MethodInvocation:container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 189
+---UPD MethodInvocation@@container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 188
+------UPD SimpleName@@MethodName:addAnswer:[new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @TO@ MethodName:addAnswer:[new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @AT@ 4795 @LENGTH@ 178
+---------UPD ClassInstanceCreation@@Answer<Object>[] @TO@ SerializableAnswer[] @AT@ 4805 @LENGTH@ 160
+------------DEL ParameterizedType@@Answer<Object> @AT@ 4809 @LENGTH@ 14
+---------------DEL SimpleType@@Answer @AT@ 4809 @LENGTH@ 6
+---------------DEL SimpleType@@Object @AT@ 4816 @LENGTH@ 6
+------------INS SimpleType@@SerializableAnswer @TO@ ClassInstanceCreation@@Answer<Object>[] @AT@ 5222 @LENGTH@ 18
+, INS TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 83
+---INS Modifier@@abstract @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 8
+---INS SimpleName@@ClassName:SerializableAnswer @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5443 @LENGTH@ 18
+---INS ParameterizedType@@Answer<Object> @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5473 @LENGTH@ 14
+------INS SimpleType@@Answer @TO@ ParameterizedType@@Answer<Object> @AT@ 5473 @LENGTH@ 6
+------INS SimpleType@@Object @TO@ ParameterizedType@@Answer<Object> @AT@ 5480 @LENGTH@ 6
+---INS SimpleType@@Serializable @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5489 @LENGTH@ 12
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (INS, MethodInvocation, OP2, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1629 @LENGTH@ 42
+---MOV Modifier@@private @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1629 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 9
+---MOV SimpleType@@MockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 11
+---INS VariableDeclarationFragment@@mockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1659 @LENGTH@ 11
+------MOV SimpleName@@mockitoCore @TO@ VariableDeclarationFragment@@mockitoCore @AT@ 1649 @LENGTH@ 11
+, DEL FieldDeclaration@@private, MockitoCore, [mockitoCore=new MockitoCore()] @AT@ 1629 @LENGTH@ 52
+---DEL VariableDeclarationFragment@@mockitoCore=new MockitoCore() @AT@ 1649 @LENGTH@ 31
+------DEL ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 17
+, INS FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1677 @LENGTH@ 46
+---INS Modifier@@private @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1677 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1685 @LENGTH@ 9
+---INS SimpleType@@ReturnsEmptyValues @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1695 @LENGTH@ 18
+---INS VariableDeclarationFragment@@delegate @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1714 @LENGTH@ 8
+------INS SimpleName@@delegate @TO@ VariableDeclarationFragment@@delegate @AT@ 1714 @LENGTH@ 8
+, DEL FieldDeclaration@@private, ReturnsEmptyValues, [delegate=new ReturnsEmptyValues()] @AT@ 1687 @LENGTH@ 63
+---DEL Modifier@@private @AT@ 1687 @LENGTH@ 7
+---DEL SimpleType@@ReturnsEmptyValues @AT@ 1695 @LENGTH@ 18
+---DEL VariableDeclarationFragment@@delegate=new ReturnsEmptyValues() @AT@ 1714 @LENGTH@ 35
+------DEL SimpleName@@delegate @AT@ 1714 @LENGTH@ 8
+------DEL ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 24
+, INS ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2049 @LENGTH@ 33
+---INS MethodInvocation@@MethodName:instantiateMockitoCoreIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @AT@ 2049 @LENGTH@ 32
+, INS ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2092 @LENGTH@ 30
+---INS MethodInvocation@@MethodName:instantiateDelegateIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @AT@ 2092 @LENGTH@ 29
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2321 @LENGTH@ 160
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2321 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2329 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2342 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateMockitoCoreIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2347 @LENGTH@ 30
+---INS IfStatement@@InfixExpression:mockitoCore == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2391 @LENGTH@ 83
+------INS InfixExpression@@mockitoCore == null @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2395 @LENGTH@ 19
+---------INS SimpleName@@mockitoCore @TO@ InfixExpression@@mockitoCore == null @AT@ 2395 @LENGTH@ 11
+---------INS Operator@@== @TO@ InfixExpression@@mockitoCore == null @AT@ 2406 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@mockitoCore == null @AT@ 2410 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2431 @LENGTH@ 32
+---------INS Assignment@@mockitoCore=new MockitoCore() @TO@ ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 31
+------------INS SimpleName@@mockitoCore @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 11
+------------INS Operator@@= @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2442 @LENGTH@ 1
+------------INS ClassInstanceCreation@@MockitoCore[] @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2445 @LENGTH@ 17
+---------------MOV New@@new @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 3
+---------------MOV SimpleType@@MockitoCore @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1667 @LENGTH@ 11
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2489 @LENGTH@ 158
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2489 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2497 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2510 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateDelegateIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2515 @LENGTH@ 27
+---INS IfStatement@@InfixExpression:delegate == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2556 @LENGTH@ 84
+------INS InfixExpression@@delegate == null @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2560 @LENGTH@ 16
+---------INS SimpleName@@delegate @TO@ InfixExpression@@delegate == null @AT@ 2560 @LENGTH@ 8
+---------INS Operator@@== @TO@ InfixExpression@@delegate == null @AT@ 2568 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@delegate == null @AT@ 2572 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2593 @LENGTH@ 36
+---------INS Assignment@@delegate=new ReturnsEmptyValues() @TO@ ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 35
+------------INS SimpleName@@delegate @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 8
+------------INS Operator@@= @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2601 @LENGTH@ 1
+------------INS ClassInstanceCreation@@ReturnsEmptyValues[] @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2604 @LENGTH@ 24
+---------------MOV New@@new @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 3
+---------------MOV SimpleType@@ReturnsEmptyValues @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1729 @LENGTH@ 18
+, UPD ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4192 @LENGTH@ 108
+---UPD MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4199 @LENGTH@ 100
+------INS MethodInvocation@@MethodName:serializable:[] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4585 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ MethodInvocation:container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 189
+---UPD MethodInvocation@@container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 188
+------UPD SimpleName@@MethodName:addAnswer:[new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @TO@ MethodName:addAnswer:[new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @AT@ 4795 @LENGTH@ 178
+---------UPD ClassInstanceCreation@@Answer<Object>[] @TO@ SerializableAnswer[] @AT@ 4805 @LENGTH@ 160
+------------DEL ParameterizedType@@Answer<Object> @AT@ 4809 @LENGTH@ 14
+---------------DEL SimpleType@@Answer @AT@ 4809 @LENGTH@ 6
+---------------DEL SimpleType@@Object @AT@ 4816 @LENGTH@ 6
+------------INS SimpleType@@SerializableAnswer @TO@ ClassInstanceCreation@@Answer<Object>[] @AT@ 5222 @LENGTH@ 18
+, INS TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 83
+---INS Modifier@@abstract @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 8
+---INS SimpleName@@ClassName:SerializableAnswer @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5443 @LENGTH@ 18
+---INS ParameterizedType@@Answer<Object> @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5473 @LENGTH@ 14
+------INS SimpleType@@Answer @TO@ ParameterizedType@@Answer<Object> @AT@ 5473 @LENGTH@ 6
+------INS SimpleType@@Object @TO@ ParameterizedType@@Answer<Object> @AT@ 5480 @LENGTH@ 6
+---INS SimpleType@@Serializable @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5489 @LENGTH@ 12
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (UPD, ClassInstanceCreation, OP3, OP5 OP8)
+OP5:            (DEL, ParameterizedType, OP4, OP6 OP7)
+OP6:               (DEL, SimpleType, OP5, null)
+OP7:               (DEL, SimpleType, OP5, null)
+OP8:            (INS, SimpleType, OP4, null)
+
+
+
+
+
+hASList: 
+[INS FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1629 @LENGTH@ 42
+---MOV Modifier@@private @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1629 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 9
+---MOV SimpleType@@MockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1637 @LENGTH@ 11
+---INS VariableDeclarationFragment@@mockitoCore @TO@ FieldDeclaration@@private, transient, MockitoCore, [mockitoCore] @AT@ 1659 @LENGTH@ 11
+------MOV SimpleName@@mockitoCore @TO@ VariableDeclarationFragment@@mockitoCore @AT@ 1649 @LENGTH@ 11
+, DEL FieldDeclaration@@private, MockitoCore, [mockitoCore=new MockitoCore()] @AT@ 1629 @LENGTH@ 52
+---DEL VariableDeclarationFragment@@mockitoCore=new MockitoCore() @AT@ 1649 @LENGTH@ 31
+------DEL ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 17
+, INS FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 1677 @LENGTH@ 46
+---INS Modifier@@private @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1677 @LENGTH@ 7
+---INS Modifier@@transient @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1685 @LENGTH@ 9
+---INS SimpleType@@ReturnsEmptyValues @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1695 @LENGTH@ 18
+---INS VariableDeclarationFragment@@delegate @TO@ FieldDeclaration@@private, transient, ReturnsEmptyValues, [delegate] @AT@ 1714 @LENGTH@ 8
+------INS SimpleName@@delegate @TO@ VariableDeclarationFragment@@delegate @AT@ 1714 @LENGTH@ 8
+, DEL FieldDeclaration@@private, ReturnsEmptyValues, [delegate=new ReturnsEmptyValues()] @AT@ 1687 @LENGTH@ 63
+---DEL Modifier@@private @AT@ 1687 @LENGTH@ 7
+---DEL SimpleType@@ReturnsEmptyValues @AT@ 1695 @LENGTH@ 18
+---DEL VariableDeclarationFragment@@delegate=new ReturnsEmptyValues() @AT@ 1714 @LENGTH@ 35
+------DEL SimpleName@@delegate @AT@ 1714 @LENGTH@ 8
+------DEL ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 24
+, INS ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2049 @LENGTH@ 33
+---INS MethodInvocation@@MethodName:instantiateMockitoCoreIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateMockitoCoreIfNeeded() @AT@ 2049 @LENGTH@ 32
+, INS ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @TO@ MethodDeclaration@@public, @@Object, MethodName:answer, @@Argus:InvocationOnMock+invocation+Throwable,  @AT@ 2092 @LENGTH@ 30
+---INS MethodInvocation@@MethodName:instantiateDelegateIfNeeded:[] @TO@ ExpressionStatement@@MethodInvocation:instantiateDelegateIfNeeded() @AT@ 2092 @LENGTH@ 29
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2321 @LENGTH@ 160
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2321 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2329 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2342 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateMockitoCoreIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2347 @LENGTH@ 30
+---INS IfStatement@@InfixExpression:mockitoCore == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateMockitoCoreIfNeeded, @@Argus:null @AT@ 2391 @LENGTH@ 83
+------INS InfixExpression@@mockitoCore == null @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2395 @LENGTH@ 19
+---------INS SimpleName@@mockitoCore @TO@ InfixExpression@@mockitoCore == null @AT@ 2395 @LENGTH@ 11
+---------INS Operator@@== @TO@ InfixExpression@@mockitoCore == null @AT@ 2406 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@mockitoCore == null @AT@ 2410 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @TO@ IfStatement@@InfixExpression:mockitoCore == null @AT@ 2431 @LENGTH@ 32
+---------INS Assignment@@mockitoCore=new MockitoCore() @TO@ ExpressionStatement@@Assignment:mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 31
+------------INS SimpleName@@mockitoCore @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2431 @LENGTH@ 11
+------------INS Operator@@= @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2442 @LENGTH@ 1
+------------INS ClassInstanceCreation@@MockitoCore[] @TO@ Assignment@@mockitoCore=new MockitoCore() @AT@ 2445 @LENGTH@ 17
+---------------MOV New@@new @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1663 @LENGTH@ 3
+---------------MOV SimpleType@@MockitoCore @TO@ ClassInstanceCreation@@MockitoCore[] @AT@ 1667 @LENGTH@ 11
+, INS MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 2489 @LENGTH@ 158
+---INS Modifier@@private @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2489 @LENGTH@ 7
+---INS Modifier@@synchronized @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2497 @LENGTH@ 12
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2510 @LENGTH@ 4
+---INS SimpleName@@MethodName:instantiateDelegateIfNeeded @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2515 @LENGTH@ 27
+---INS IfStatement@@InfixExpression:delegate == null @TO@ MethodDeclaration@@private, synchronized, @@void, MethodName:instantiateDelegateIfNeeded, @@Argus:null @AT@ 2556 @LENGTH@ 84
+------INS InfixExpression@@delegate == null @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2560 @LENGTH@ 16
+---------INS SimpleName@@delegate @TO@ InfixExpression@@delegate == null @AT@ 2560 @LENGTH@ 8
+---------INS Operator@@== @TO@ InfixExpression@@delegate == null @AT@ 2568 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@delegate == null @AT@ 2572 @LENGTH@ 4
+------INS ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @TO@ IfStatement@@InfixExpression:delegate == null @AT@ 2593 @LENGTH@ 36
+---------INS Assignment@@delegate=new ReturnsEmptyValues() @TO@ ExpressionStatement@@Assignment:delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 35
+------------INS SimpleName@@delegate @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2593 @LENGTH@ 8
+------------INS Operator@@= @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2601 @LENGTH@ 1
+------------INS ClassInstanceCreation@@ReturnsEmptyValues[] @TO@ Assignment@@delegate=new ReturnsEmptyValues() @AT@ 2604 @LENGTH@ 24
+---------------MOV New@@new @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1725 @LENGTH@ 3
+---------------MOV SimpleType@@ReturnsEmptyValues @TO@ ClassInstanceCreation@@ReturnsEmptyValues[] @AT@ 1729 @LENGTH@ 18
+, UPD ReturnStatement@@MethodInvocation:mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ MethodInvocation:mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4192 @LENGTH@ 108
+---UPD MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @TO@ mockSettings.serializable().defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4199 @LENGTH@ 100
+------INS MethodInvocation@@MethodName:serializable:[] @TO@ MethodInvocation@@mockSettings.defaultAnswer(returnsDeepStubsAnswerUsing(returnTypeGenericMetadata)) @AT@ 4585 @LENGTH@ 39
+, UPD ExpressionStatement@@MethodInvocation:container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ MethodInvocation:container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 189
+---UPD MethodInvocation@@container.addAnswer(new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @TO@ container.addAnswer(new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+,false) @AT@ 4785 @LENGTH@ 188
+------UPD SimpleName@@MethodName:addAnswer:[new Answer<Object>(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @TO@ MethodName:addAnswer:[new SerializableAnswer(){
+  public Object answer(  InvocationOnMock invocation) throws Throwable {
+    return mock;
+  }
+}
+, false] @AT@ 4795 @LENGTH@ 178
+---------UPD ClassInstanceCreation@@Answer<Object>[] @TO@ SerializableAnswer[] @AT@ 4805 @LENGTH@ 160
+------------DEL ParameterizedType@@Answer<Object> @AT@ 4809 @LENGTH@ 14
+---------------DEL SimpleType@@Answer @AT@ 4809 @LENGTH@ 6
+---------------DEL SimpleType@@Object @AT@ 4816 @LENGTH@ 6
+------------INS SimpleType@@SerializableAnswer @TO@ ClassInstanceCreation@@Answer<Object>[] @AT@ 5222 @LENGTH@ 18
+, INS TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @TO@ TypeDeclaration@@[public]ReturnsDeepStubs, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 83
+---INS Modifier@@abstract @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5428 @LENGTH@ 8
+---INS SimpleName@@ClassName:SerializableAnswer @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5443 @LENGTH@ 18
+---INS ParameterizedType@@Answer<Object> @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5473 @LENGTH@ 14
+------INS SimpleType@@Answer @TO@ ParameterizedType@@Answer<Object> @AT@ 5473 @LENGTH@ 6
+------INS SimpleType@@Object @TO@ ParameterizedType@@Answer<Object> @AT@ 5480 @LENGTH@ 6
+---INS SimpleType@@Serializable @TO@ TypeDeclaration@@[abstract]SerializableAnswer, [Answer<Object>, Serializable] @AT@ 5489 @LENGTH@ 12
+]
+
+CII:
+OP1:(INS, TypeDeclaration, null, OP2 OP3 OP4 OP7)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, SimpleName, OP1, null)
+OP4:   (INS, ParameterizedType, OP1, OP5 OP6)
+OP5:      (INS, SimpleType, OP4, null)
+OP6:      (INS, SimpleType, OP4, null)
+OP7:   (INS, SimpleType, OP1, null)
+
+
+

@@ -1,0 +1,556 @@
+
+
+hASList: 
+[INS EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @TO@ IfStatement@@MethodInvocation:invocation.getMethod().isVarArgs() @AT@ 4466 @LENGTH@ 410
+---INS SingleVariableDeclaration@@Matcher m @TO@ EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @AT@ 4471 @LENGTH@ 9
+------INS SimpleType@@Matcher @TO@ SingleVariableDeclaration@@Matcher m @AT@ 4471 @LENGTH@ 7
+------INS SimpleName@@m @TO@ SingleVariableDeclaration@@Matcher m @AT@ 4479 @LENGTH@ 1
+---INS MethodInvocation@@uniqueMatcherSet(indexOfVararg) @TO@ EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @AT@ 4483 @LENGTH@ 31
+------INS SimpleName@@MethodName:uniqueMatcherSet:[indexOfVararg] @TO@ MethodInvocation@@uniqueMatcherSet(indexOfVararg) @AT@ 4483 @LENGTH@ 31
+---------INS SimpleName@@indexOfVararg @TO@ SimpleName@@MethodName:uniqueMatcherSet:[indexOfVararg] @AT@ 4500 @LENGTH@ 13
+---INS IfStatement@@InstanceofExpression:m instanceof CapturesArguments @TO@ EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @AT@ 4534 @LENGTH@ 328
+------INS VariableDeclarationStatement@@Object rawArgument=invocation.getRawArguments()[indexOfVararg]; @TO@ IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4592 @LENGTH@ 65
+---------INS SimpleType@@Object @TO@ VariableDeclarationStatement@@Object rawArgument=invocation.getRawArguments()[indexOfVararg]; @AT@ 4592 @LENGTH@ 6
+---------INS VariableDeclarationFragment@@rawArgument=invocation.getRawArguments()[indexOfVararg] @TO@ VariableDeclarationStatement@@Object rawArgument=invocation.getRawArguments()[indexOfVararg]; @AT@ 4599 @LENGTH@ 57
+------------INS SimpleName@@rawArgument @TO@ VariableDeclarationFragment@@rawArgument=invocation.getRawArguments()[indexOfVararg] @AT@ 4599 @LENGTH@ 11
+------------INS ArrayAccess@@invocation.getRawArguments()[indexOfVararg] @TO@ VariableDeclarationFragment@@rawArgument=invocation.getRawArguments()[indexOfVararg] @AT@ 4613 @LENGTH@ 43
+---------------INS SimpleName@@indexOfVararg @TO@ ArrayAccess@@invocation.getRawArguments()[indexOfVararg] @AT@ 4642 @LENGTH@ 13
+---------------MOV MethodInvocation@@invocation.getRawArguments() @TO@ ArrayAccess@@invocation.getRawArguments()[indexOfVararg] @AT@ 4705 @LENGTH@ 28
+------MOV InstanceofExpression@@m instanceof CapturesArguments @TO@ IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4615 @LENGTH@ 30
+------INS ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @TO@ IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4678 @LENGTH@ 166
+---------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4683 @LENGTH@ 9
+------------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 4683 @LENGTH@ 3
+------------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 4687 @LENGTH@ 5
+---------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 4687 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 4691 @LENGTH@ 1
+---------INS InfixExpression@@i < Array.getLength(rawArgument) @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4694 @LENGTH@ 32
+------------INS MethodInvocation@@Array.getLength(rawArgument) @TO@ InfixExpression@@i < Array.getLength(rawArgument) @AT@ 4698 @LENGTH@ 28
+---------------INS SimpleName@@Name:Array @TO@ MethodInvocation@@Array.getLength(rawArgument) @AT@ 4698 @LENGTH@ 5
+---------------INS SimpleName@@MethodName:getLength:[rawArgument] @TO@ MethodInvocation@@Array.getLength(rawArgument) @AT@ 4704 @LENGTH@ 22
+------------------INS SimpleName@@rawArgument @TO@ SimpleName@@MethodName:getLength:[rawArgument] @AT@ 4714 @LENGTH@ 11
+------------MOV SimpleName@@position @TO@ InfixExpression@@i < Array.getLength(rawArgument) @AT@ 4734 @LENGTH@ 8
+------------MOV Operator@@- @TO@ InfixExpression@@i < Array.getLength(rawArgument) @AT@ 4742 @LENGTH@ 1
+---------INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4728 @LENGTH@ 3
+------------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 4728 @LENGTH@ 1
+------------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 4730 @LENGTH@ 2
+---------INS ExpressionStatement@@MethodInvocation:((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4759 @LENGTH@ 63
+------------INS MethodInvocation@@((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @TO@ ExpressionStatement@@MethodInvocation:((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @AT@ 4759 @LENGTH@ 62
+---------------MOV ParenthesizedExpression@@((CapturesArguments)m) @TO@ MethodInvocation@@((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @AT@ 4669 @LENGTH@ 23
+---------------INS SimpleName@@MethodName:captureFrom:[Array.get(rawArgument,i)] @TO@ MethodInvocation@@((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @AT@ 4783 @LENGTH@ 38
+------------------INS MethodInvocation@@Array.get(rawArgument,i) @TO@ SimpleName@@MethodName:captureFrom:[Array.get(rawArgument,i)] @AT@ 4795 @LENGTH@ 25
+---------------------INS SimpleName@@Name:Array @TO@ MethodInvocation@@Array.get(rawArgument,i) @AT@ 4795 @LENGTH@ 5
+---------------------INS SimpleName@@MethodName:get:[rawArgument, i] @TO@ MethodInvocation@@Array.get(rawArgument,i) @AT@ 4801 @LENGTH@ 19
+------------------------INS SimpleName@@rawArgument @TO@ SimpleName@@MethodName:get:[rawArgument, i] @AT@ 4805 @LENGTH@ 11
+------------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:get:[rawArgument, i] @AT@ 4818 @LENGTH@ 1
+, DEL ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4466 @LENGTH@ 327
+---DEL PostfixExpression@@position++ @AT@ 4529 @LENGTH@ 10
+------DEL SimpleName@@position @AT@ 4529 @LENGTH@ 8
+------DEL Operator@@++ @AT@ 4538 @LENGTH@ 2
+---DEL IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4611 @LENGTH@ 168
+------DEL ExpressionStatement@@MethodInvocation:((CapturesArguments)m).captureFrom(invocation.getRawArguments()[position - indexOfVararg]) @AT@ 4669 @LENGTH@ 92
+---------DEL MethodInvocation@@((CapturesArguments)m).captureFrom(invocation.getRawArguments()[position - indexOfVararg]) @AT@ 4669 @LENGTH@ 91
+------------DEL SimpleName@@MethodName:captureFrom:[invocation.getRawArguments()[position - indexOfVararg]] @AT@ 4693 @LENGTH@ 67
+---------------DEL ArrayAccess@@invocation.getRawArguments()[position - indexOfVararg] @AT@ 4705 @LENGTH@ 54
+------------------DEL InfixExpression@@position - indexOfVararg @AT@ 4734 @LENGTH@ 24
+---------------------DEL SimpleName@@indexOfVararg @AT@ 4745 @LENGTH@ 13
+, UPD VariableDeclarationStatement@@Matcher m=matchers.get(position); @TO@ Matcher matcher=matchers.get(position); @AT@ 4559 @LENGTH@ 35
+---UPD VariableDeclarationFragment@@m=matchers.get(position) @TO@ matcher=matchers.get(position) @AT@ 4567 @LENGTH@ 26
+------UPD SimpleName@@m @TO@ matcher @AT@ 4567 @LENGTH@ 1
+, INS MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @TO@ TypeDeclaration@@[@SuppressWarnings("unchecked"), public]InvocationMatcher, [DescribedInvocation, CapturesArgumensFromInvocation, Serializable] @AT@ 5237 @LENGTH@ 485
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5237 @LENGTH@ 7
+---INS ParameterizedType@@Set<Matcher> @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5245 @LENGTH@ 12
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<Matcher> @AT@ 5245 @LENGTH@ 3
+------INS SimpleType@@Matcher @TO@ ParameterizedType@@Set<Matcher> @AT@ 5249 @LENGTH@ 7
+---INS SimpleName@@MethodName:uniqueMatcherSet @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5258 @LENGTH@ 16
+---INS SingleVariableDeclaration@@int indexOfVararg @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5275 @LENGTH@ 17
+------INS PrimitiveType@@int @TO@ SingleVariableDeclaration@@int indexOfVararg @AT@ 5275 @LENGTH@ 3
+------INS SimpleName@@indexOfVararg @TO@ SingleVariableDeclaration@@int indexOfVararg @AT@ 5279 @LENGTH@ 13
+---INS VariableDeclarationStatement@@HashSet<Matcher> set=new HashSet<Matcher>(); @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5304 @LENGTH@ 46
+------INS ParameterizedType@@HashSet<Matcher> @TO@ VariableDeclarationStatement@@HashSet<Matcher> set=new HashSet<Matcher>(); @AT@ 5304 @LENGTH@ 16
+---------INS SimpleType@@HashSet @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5304 @LENGTH@ 7
+---------INS SimpleType@@Matcher @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5312 @LENGTH@ 7
+------INS VariableDeclarationFragment@@set=new HashSet<Matcher>() @TO@ VariableDeclarationStatement@@HashSet<Matcher> set=new HashSet<Matcher>(); @AT@ 5321 @LENGTH@ 28
+---------INS SimpleName@@set @TO@ VariableDeclarationFragment@@set=new HashSet<Matcher>() @AT@ 5321 @LENGTH@ 3
+---------INS ClassInstanceCreation@@HashSet<Matcher>[] @TO@ VariableDeclarationFragment@@set=new HashSet<Matcher>() @AT@ 5327 @LENGTH@ 22
+------------INS New@@new @TO@ ClassInstanceCreation@@HashSet<Matcher>[] @AT@ 5327 @LENGTH@ 3
+------------INS ParameterizedType@@HashSet<Matcher> @TO@ ClassInstanceCreation@@HashSet<Matcher>[] @AT@ 5331 @LENGTH@ 16
+---------------INS SimpleType@@HashSet @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5331 @LENGTH@ 7
+---------------INS SimpleType@@Matcher @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5339 @LENGTH@ 7
+---INS ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5359 @LENGTH@ 337
+------MOV VariableDeclarationExpression@@int position=indexOfVararg @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4471 @LENGTH@ 28
+------MOV InfixExpression@@position < matchers.size() @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4501 @LENGTH@ 26
+------MOV VariableDeclarationStatement@@Matcher m=matchers.get(position); @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4559 @LENGTH@ 35
+------INS PostfixExpression@@position++ @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 5422 @LENGTH@ 10
+---------INS SimpleName@@position @TO@ PostfixExpression@@position++ @AT@ 5422 @LENGTH@ 8
+---------INS Operator@@++ @TO@ PostfixExpression@@position++ @AT@ 5431 @LENGTH@ 2
+------INS IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 5502 @LENGTH@ 184
+---------INS InstanceofExpression@@matcher instanceof MatcherDecorator @TO@ IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @AT@ 5505 @LENGTH@ 35
+------------INS SimpleName@@matcher @TO@ InstanceofExpression@@matcher instanceof MatcherDecorator @AT@ 5505 @LENGTH@ 7
+------------INS Instanceof@@instanceof @TO@ InstanceofExpression@@matcher instanceof MatcherDecorator @AT@ 5513 @LENGTH@ 10
+------------INS SimpleType@@MatcherDecorator @TO@ InstanceofExpression@@matcher instanceof MatcherDecorator @AT@ 5524 @LENGTH@ 16
+---------INS ExpressionStatement@@MethodInvocation:set.add(((MatcherDecorator)matcher).getActualMatcher()) @TO@ IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @AT@ 5560 @LENGTH@ 57
+------------INS MethodInvocation@@set.add(((MatcherDecorator)matcher).getActualMatcher()) @TO@ ExpressionStatement@@MethodInvocation:set.add(((MatcherDecorator)matcher).getActualMatcher()) @AT@ 5560 @LENGTH@ 56
+---------------INS SimpleName@@Name:set @TO@ MethodInvocation@@set.add(((MatcherDecorator)matcher).getActualMatcher()) @AT@ 5560 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:add:[((MatcherDecorator)matcher).getActualMatcher()] @TO@ MethodInvocation@@set.add(((MatcherDecorator)matcher).getActualMatcher()) @AT@ 5564 @LENGTH@ 52
+------------------INS MethodInvocation@@((MatcherDecorator)matcher).getActualMatcher() @TO@ SimpleName@@MethodName:add:[((MatcherDecorator)matcher).getActualMatcher()] @AT@ 5568 @LENGTH@ 47
+---------------------INS ParenthesizedExpression@@((MatcherDecorator)matcher) @TO@ MethodInvocation@@((MatcherDecorator)matcher).getActualMatcher() @AT@ 5568 @LENGTH@ 28
+------------------------INS CastExpression@@(MatcherDecorator)matcher @TO@ ParenthesizedExpression@@((MatcherDecorator)matcher) @AT@ 5569 @LENGTH@ 26
+---------------------------INS SimpleType@@MatcherDecorator @TO@ CastExpression@@(MatcherDecorator)matcher @AT@ 5570 @LENGTH@ 16
+---------------------------INS SimpleName@@matcher @TO@ CastExpression@@(MatcherDecorator)matcher @AT@ 5588 @LENGTH@ 7
+---------------------INS SimpleName@@MethodName:getActualMatcher:[] @TO@ MethodInvocation@@((MatcherDecorator)matcher).getActualMatcher() @AT@ 5597 @LENGTH@ 18
+---------INS ExpressionStatement@@MethodInvocation:set.add(matcher) @TO@ IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @AT@ 5655 @LENGTH@ 17
+------------INS MethodInvocation@@set.add(matcher) @TO@ ExpressionStatement@@MethodInvocation:set.add(matcher) @AT@ 5655 @LENGTH@ 16
+---------------INS SimpleName@@Name:set @TO@ MethodInvocation@@set.add(matcher) @AT@ 5655 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:add:[matcher] @TO@ MethodInvocation@@set.add(matcher) @AT@ 5659 @LENGTH@ 12
+------------------INS SimpleName@@matcher @TO@ SimpleName@@MethodName:add:[matcher] @AT@ 5663 @LENGTH@ 7
+---INS ReturnStatement@@SimpleName:set @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5705 @LENGTH@ 11
+------INS SimpleName@@set @TO@ ReturnStatement@@SimpleName:set @AT@ 5712 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, EnhancedForStatement, null, OP2 OP5 OP8)
+OP2:   (INS, SingleVariableDeclaration, OP1, OP3 OP4)
+OP3:      (INS, SimpleType, OP2, null)
+OP4:      (INS, SimpleName, OP2, null)
+OP5:   (INS, MethodInvocation, OP1, OP6)
+OP6:      (INS, SimpleName, OP5, OP7)
+OP7:         (INS, SimpleName, OP6, null)
+OP8:   (INS, IfStatement, OP1, OP9 OP16 OP17)
+OP9:      (INS, VariableDeclarationStatement, OP8, OP10 OP11)
+OP10:         (INS, SimpleType, OP9, null)
+OP11:         (INS, VariableDeclarationFragment, OP9, OP12 OP13)
+OP12:            (INS, SimpleName, OP11, null)
+OP13:            (INS, ArrayAccess, OP11, OP14 OP15)
+OP14:               (INS, SimpleName, OP13, null)
+OP15:               (MOV, MethodInvocation, OP13, null)
+OP16:      (MOV, InstanceofExpression, OP8, null)
+OP17:      (INS, ForStatement, OP8, OP18 OP23 OP30 OP33)
+OP18:         (INS, VariableDeclarationExpression, OP17, OP19 OP20)
+OP19:            (INS, PrimitiveType, OP18, null)
+OP20:            (INS, VariableDeclarationFragment, OP18, OP21 OP22)
+OP21:               (INS, SimpleName, OP20, null)
+OP22:               (INS, NumberLiteral, OP20, null)
+OP23:         (INS, InfixExpression, OP17, OP24 OP28 OP29)
+OP24:            (INS, MethodInvocation, OP23, OP25 OP26)
+OP25:               (INS, SimpleName, OP24, null)
+OP26:               (INS, SimpleName, OP24, OP27)
+OP27:                  (INS, SimpleName, OP26, null)
+OP28:            (MOV, SimpleName, OP23, null)
+OP29:            (MOV, Operator, OP23, null)
+OP30:         (INS, PostfixExpression, OP17, OP31 OP32)
+OP31:            (INS, SimpleName, OP30, null)
+OP32:            (INS, Operator, OP30, null)
+OP33:         (INS, ExpressionStatement, OP17, OP34)
+OP34:            (INS, MethodInvocation, OP33, OP35 OP36)
+OP35:               (MOV, ParenthesizedExpression, OP34, null)
+OP36:               (INS, SimpleName, OP34, OP37)
+OP37:                  (INS, MethodInvocation, OP36, OP38 OP39)
+OP38:                     (INS, SimpleName, OP37, null)
+OP39:                     (INS, SimpleName, OP37, OP40 OP41)
+OP40:                        (INS, SimpleName, OP39, null)
+OP41:                        (INS, SimpleName, OP39, null)
+
+
+
+
+
+hASList: 
+[INS EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @TO@ IfStatement@@MethodInvocation:invocation.getMethod().isVarArgs() @AT@ 4466 @LENGTH@ 410
+---INS SingleVariableDeclaration@@Matcher m @TO@ EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @AT@ 4471 @LENGTH@ 9
+------INS SimpleType@@Matcher @TO@ SingleVariableDeclaration@@Matcher m @AT@ 4471 @LENGTH@ 7
+------INS SimpleName@@m @TO@ SingleVariableDeclaration@@Matcher m @AT@ 4479 @LENGTH@ 1
+---INS MethodInvocation@@uniqueMatcherSet(indexOfVararg) @TO@ EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @AT@ 4483 @LENGTH@ 31
+------INS SimpleName@@MethodName:uniqueMatcherSet:[indexOfVararg] @TO@ MethodInvocation@@uniqueMatcherSet(indexOfVararg) @AT@ 4483 @LENGTH@ 31
+---------INS SimpleName@@indexOfVararg @TO@ SimpleName@@MethodName:uniqueMatcherSet:[indexOfVararg] @AT@ 4500 @LENGTH@ 13
+---INS IfStatement@@InstanceofExpression:m instanceof CapturesArguments @TO@ EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @AT@ 4534 @LENGTH@ 328
+------INS VariableDeclarationStatement@@Object rawArgument=invocation.getRawArguments()[indexOfVararg]; @TO@ IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4592 @LENGTH@ 65
+---------INS SimpleType@@Object @TO@ VariableDeclarationStatement@@Object rawArgument=invocation.getRawArguments()[indexOfVararg]; @AT@ 4592 @LENGTH@ 6
+---------INS VariableDeclarationFragment@@rawArgument=invocation.getRawArguments()[indexOfVararg] @TO@ VariableDeclarationStatement@@Object rawArgument=invocation.getRawArguments()[indexOfVararg]; @AT@ 4599 @LENGTH@ 57
+------------INS SimpleName@@rawArgument @TO@ VariableDeclarationFragment@@rawArgument=invocation.getRawArguments()[indexOfVararg] @AT@ 4599 @LENGTH@ 11
+------------INS ArrayAccess@@invocation.getRawArguments()[indexOfVararg] @TO@ VariableDeclarationFragment@@rawArgument=invocation.getRawArguments()[indexOfVararg] @AT@ 4613 @LENGTH@ 43
+---------------INS SimpleName@@indexOfVararg @TO@ ArrayAccess@@invocation.getRawArguments()[indexOfVararg] @AT@ 4642 @LENGTH@ 13
+---------------MOV MethodInvocation@@invocation.getRawArguments() @TO@ ArrayAccess@@invocation.getRawArguments()[indexOfVararg] @AT@ 4705 @LENGTH@ 28
+------MOV InstanceofExpression@@m instanceof CapturesArguments @TO@ IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4615 @LENGTH@ 30
+------INS ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @TO@ IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4678 @LENGTH@ 166
+---------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4683 @LENGTH@ 9
+------------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 4683 @LENGTH@ 3
+------------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 4687 @LENGTH@ 5
+---------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 4687 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 4691 @LENGTH@ 1
+---------INS InfixExpression@@i < Array.getLength(rawArgument) @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4694 @LENGTH@ 32
+------------INS MethodInvocation@@Array.getLength(rawArgument) @TO@ InfixExpression@@i < Array.getLength(rawArgument) @AT@ 4698 @LENGTH@ 28
+---------------INS SimpleName@@Name:Array @TO@ MethodInvocation@@Array.getLength(rawArgument) @AT@ 4698 @LENGTH@ 5
+---------------INS SimpleName@@MethodName:getLength:[rawArgument] @TO@ MethodInvocation@@Array.getLength(rawArgument) @AT@ 4704 @LENGTH@ 22
+------------------INS SimpleName@@rawArgument @TO@ SimpleName@@MethodName:getLength:[rawArgument] @AT@ 4714 @LENGTH@ 11
+------------MOV SimpleName@@position @TO@ InfixExpression@@i < Array.getLength(rawArgument) @AT@ 4734 @LENGTH@ 8
+------------MOV Operator@@- @TO@ InfixExpression@@i < Array.getLength(rawArgument) @AT@ 4742 @LENGTH@ 1
+---------INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4728 @LENGTH@ 3
+------------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 4728 @LENGTH@ 1
+------------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 4730 @LENGTH@ 2
+---------INS ExpressionStatement@@MethodInvocation:((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4759 @LENGTH@ 63
+------------INS MethodInvocation@@((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @TO@ ExpressionStatement@@MethodInvocation:((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @AT@ 4759 @LENGTH@ 62
+---------------MOV ParenthesizedExpression@@((CapturesArguments)m) @TO@ MethodInvocation@@((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @AT@ 4669 @LENGTH@ 23
+---------------INS SimpleName@@MethodName:captureFrom:[Array.get(rawArgument,i)] @TO@ MethodInvocation@@((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @AT@ 4783 @LENGTH@ 38
+------------------INS MethodInvocation@@Array.get(rawArgument,i) @TO@ SimpleName@@MethodName:captureFrom:[Array.get(rawArgument,i)] @AT@ 4795 @LENGTH@ 25
+---------------------INS SimpleName@@Name:Array @TO@ MethodInvocation@@Array.get(rawArgument,i) @AT@ 4795 @LENGTH@ 5
+---------------------INS SimpleName@@MethodName:get:[rawArgument, i] @TO@ MethodInvocation@@Array.get(rawArgument,i) @AT@ 4801 @LENGTH@ 19
+------------------------INS SimpleName@@rawArgument @TO@ SimpleName@@MethodName:get:[rawArgument, i] @AT@ 4805 @LENGTH@ 11
+------------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:get:[rawArgument, i] @AT@ 4818 @LENGTH@ 1
+, DEL ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4466 @LENGTH@ 327
+---DEL PostfixExpression@@position++ @AT@ 4529 @LENGTH@ 10
+------DEL SimpleName@@position @AT@ 4529 @LENGTH@ 8
+------DEL Operator@@++ @AT@ 4538 @LENGTH@ 2
+---DEL IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4611 @LENGTH@ 168
+------DEL ExpressionStatement@@MethodInvocation:((CapturesArguments)m).captureFrom(invocation.getRawArguments()[position - indexOfVararg]) @AT@ 4669 @LENGTH@ 92
+---------DEL MethodInvocation@@((CapturesArguments)m).captureFrom(invocation.getRawArguments()[position - indexOfVararg]) @AT@ 4669 @LENGTH@ 91
+------------DEL SimpleName@@MethodName:captureFrom:[invocation.getRawArguments()[position - indexOfVararg]] @AT@ 4693 @LENGTH@ 67
+---------------DEL ArrayAccess@@invocation.getRawArguments()[position - indexOfVararg] @AT@ 4705 @LENGTH@ 54
+------------------DEL InfixExpression@@position - indexOfVararg @AT@ 4734 @LENGTH@ 24
+---------------------DEL SimpleName@@indexOfVararg @AT@ 4745 @LENGTH@ 13
+, UPD VariableDeclarationStatement@@Matcher m=matchers.get(position); @TO@ Matcher matcher=matchers.get(position); @AT@ 4559 @LENGTH@ 35
+---UPD VariableDeclarationFragment@@m=matchers.get(position) @TO@ matcher=matchers.get(position) @AT@ 4567 @LENGTH@ 26
+------UPD SimpleName@@m @TO@ matcher @AT@ 4567 @LENGTH@ 1
+, INS MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @TO@ TypeDeclaration@@[@SuppressWarnings("unchecked"), public]InvocationMatcher, [DescribedInvocation, CapturesArgumensFromInvocation, Serializable] @AT@ 5237 @LENGTH@ 485
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5237 @LENGTH@ 7
+---INS ParameterizedType@@Set<Matcher> @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5245 @LENGTH@ 12
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<Matcher> @AT@ 5245 @LENGTH@ 3
+------INS SimpleType@@Matcher @TO@ ParameterizedType@@Set<Matcher> @AT@ 5249 @LENGTH@ 7
+---INS SimpleName@@MethodName:uniqueMatcherSet @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5258 @LENGTH@ 16
+---INS SingleVariableDeclaration@@int indexOfVararg @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5275 @LENGTH@ 17
+------INS PrimitiveType@@int @TO@ SingleVariableDeclaration@@int indexOfVararg @AT@ 5275 @LENGTH@ 3
+------INS SimpleName@@indexOfVararg @TO@ SingleVariableDeclaration@@int indexOfVararg @AT@ 5279 @LENGTH@ 13
+---INS VariableDeclarationStatement@@HashSet<Matcher> set=new HashSet<Matcher>(); @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5304 @LENGTH@ 46
+------INS ParameterizedType@@HashSet<Matcher> @TO@ VariableDeclarationStatement@@HashSet<Matcher> set=new HashSet<Matcher>(); @AT@ 5304 @LENGTH@ 16
+---------INS SimpleType@@HashSet @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5304 @LENGTH@ 7
+---------INS SimpleType@@Matcher @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5312 @LENGTH@ 7
+------INS VariableDeclarationFragment@@set=new HashSet<Matcher>() @TO@ VariableDeclarationStatement@@HashSet<Matcher> set=new HashSet<Matcher>(); @AT@ 5321 @LENGTH@ 28
+---------INS SimpleName@@set @TO@ VariableDeclarationFragment@@set=new HashSet<Matcher>() @AT@ 5321 @LENGTH@ 3
+---------INS ClassInstanceCreation@@HashSet<Matcher>[] @TO@ VariableDeclarationFragment@@set=new HashSet<Matcher>() @AT@ 5327 @LENGTH@ 22
+------------INS New@@new @TO@ ClassInstanceCreation@@HashSet<Matcher>[] @AT@ 5327 @LENGTH@ 3
+------------INS ParameterizedType@@HashSet<Matcher> @TO@ ClassInstanceCreation@@HashSet<Matcher>[] @AT@ 5331 @LENGTH@ 16
+---------------INS SimpleType@@HashSet @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5331 @LENGTH@ 7
+---------------INS SimpleType@@Matcher @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5339 @LENGTH@ 7
+---INS ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5359 @LENGTH@ 337
+------MOV VariableDeclarationExpression@@int position=indexOfVararg @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4471 @LENGTH@ 28
+------MOV InfixExpression@@position < matchers.size() @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4501 @LENGTH@ 26
+------MOV VariableDeclarationStatement@@Matcher m=matchers.get(position); @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4559 @LENGTH@ 35
+------INS PostfixExpression@@position++ @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 5422 @LENGTH@ 10
+---------INS SimpleName@@position @TO@ PostfixExpression@@position++ @AT@ 5422 @LENGTH@ 8
+---------INS Operator@@++ @TO@ PostfixExpression@@position++ @AT@ 5431 @LENGTH@ 2
+------INS IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 5502 @LENGTH@ 184
+---------INS InstanceofExpression@@matcher instanceof MatcherDecorator @TO@ IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @AT@ 5505 @LENGTH@ 35
+------------INS SimpleName@@matcher @TO@ InstanceofExpression@@matcher instanceof MatcherDecorator @AT@ 5505 @LENGTH@ 7
+------------INS Instanceof@@instanceof @TO@ InstanceofExpression@@matcher instanceof MatcherDecorator @AT@ 5513 @LENGTH@ 10
+------------INS SimpleType@@MatcherDecorator @TO@ InstanceofExpression@@matcher instanceof MatcherDecorator @AT@ 5524 @LENGTH@ 16
+---------INS ExpressionStatement@@MethodInvocation:set.add(((MatcherDecorator)matcher).getActualMatcher()) @TO@ IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @AT@ 5560 @LENGTH@ 57
+------------INS MethodInvocation@@set.add(((MatcherDecorator)matcher).getActualMatcher()) @TO@ ExpressionStatement@@MethodInvocation:set.add(((MatcherDecorator)matcher).getActualMatcher()) @AT@ 5560 @LENGTH@ 56
+---------------INS SimpleName@@Name:set @TO@ MethodInvocation@@set.add(((MatcherDecorator)matcher).getActualMatcher()) @AT@ 5560 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:add:[((MatcherDecorator)matcher).getActualMatcher()] @TO@ MethodInvocation@@set.add(((MatcherDecorator)matcher).getActualMatcher()) @AT@ 5564 @LENGTH@ 52
+------------------INS MethodInvocation@@((MatcherDecorator)matcher).getActualMatcher() @TO@ SimpleName@@MethodName:add:[((MatcherDecorator)matcher).getActualMatcher()] @AT@ 5568 @LENGTH@ 47
+---------------------INS ParenthesizedExpression@@((MatcherDecorator)matcher) @TO@ MethodInvocation@@((MatcherDecorator)matcher).getActualMatcher() @AT@ 5568 @LENGTH@ 28
+------------------------INS CastExpression@@(MatcherDecorator)matcher @TO@ ParenthesizedExpression@@((MatcherDecorator)matcher) @AT@ 5569 @LENGTH@ 26
+---------------------------INS SimpleType@@MatcherDecorator @TO@ CastExpression@@(MatcherDecorator)matcher @AT@ 5570 @LENGTH@ 16
+---------------------------INS SimpleName@@matcher @TO@ CastExpression@@(MatcherDecorator)matcher @AT@ 5588 @LENGTH@ 7
+---------------------INS SimpleName@@MethodName:getActualMatcher:[] @TO@ MethodInvocation@@((MatcherDecorator)matcher).getActualMatcher() @AT@ 5597 @LENGTH@ 18
+---------INS ExpressionStatement@@MethodInvocation:set.add(matcher) @TO@ IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @AT@ 5655 @LENGTH@ 17
+------------INS MethodInvocation@@set.add(matcher) @TO@ ExpressionStatement@@MethodInvocation:set.add(matcher) @AT@ 5655 @LENGTH@ 16
+---------------INS SimpleName@@Name:set @TO@ MethodInvocation@@set.add(matcher) @AT@ 5655 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:add:[matcher] @TO@ MethodInvocation@@set.add(matcher) @AT@ 5659 @LENGTH@ 12
+------------------INS SimpleName@@matcher @TO@ SimpleName@@MethodName:add:[matcher] @AT@ 5663 @LENGTH@ 7
+---INS ReturnStatement@@SimpleName:set @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5705 @LENGTH@ 11
+------INS SimpleName@@set @TO@ ReturnStatement@@SimpleName:set @AT@ 5712 @LENGTH@ 3
+]
+
+CII:
+OP1:(DEL, ForStatement, null, OP2 OP5)
+OP2:   (DEL, PostfixExpression, OP1, OP3 OP4)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:   (DEL, IfStatement, OP1, OP6)
+OP6:      (DEL, ExpressionStatement, OP5, OP7)
+OP7:         (DEL, MethodInvocation, OP6, OP8)
+OP8:            (DEL, SimpleName, OP7, OP9)
+OP9:               (DEL, ArrayAccess, OP8, OP10)
+OP10:                  (DEL, InfixExpression, OP9, OP11)
+OP11:                     (DEL, SimpleName, OP10, null)
+
+
+
+
+
+hASList: 
+[INS EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @TO@ IfStatement@@MethodInvocation:invocation.getMethod().isVarArgs() @AT@ 4466 @LENGTH@ 410
+---INS SingleVariableDeclaration@@Matcher m @TO@ EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @AT@ 4471 @LENGTH@ 9
+------INS SimpleType@@Matcher @TO@ SingleVariableDeclaration@@Matcher m @AT@ 4471 @LENGTH@ 7
+------INS SimpleName@@m @TO@ SingleVariableDeclaration@@Matcher m @AT@ 4479 @LENGTH@ 1
+---INS MethodInvocation@@uniqueMatcherSet(indexOfVararg) @TO@ EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @AT@ 4483 @LENGTH@ 31
+------INS SimpleName@@MethodName:uniqueMatcherSet:[indexOfVararg] @TO@ MethodInvocation@@uniqueMatcherSet(indexOfVararg) @AT@ 4483 @LENGTH@ 31
+---------INS SimpleName@@indexOfVararg @TO@ SimpleName@@MethodName:uniqueMatcherSet:[indexOfVararg] @AT@ 4500 @LENGTH@ 13
+---INS IfStatement@@InstanceofExpression:m instanceof CapturesArguments @TO@ EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @AT@ 4534 @LENGTH@ 328
+------INS VariableDeclarationStatement@@Object rawArgument=invocation.getRawArguments()[indexOfVararg]; @TO@ IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4592 @LENGTH@ 65
+---------INS SimpleType@@Object @TO@ VariableDeclarationStatement@@Object rawArgument=invocation.getRawArguments()[indexOfVararg]; @AT@ 4592 @LENGTH@ 6
+---------INS VariableDeclarationFragment@@rawArgument=invocation.getRawArguments()[indexOfVararg] @TO@ VariableDeclarationStatement@@Object rawArgument=invocation.getRawArguments()[indexOfVararg]; @AT@ 4599 @LENGTH@ 57
+------------INS SimpleName@@rawArgument @TO@ VariableDeclarationFragment@@rawArgument=invocation.getRawArguments()[indexOfVararg] @AT@ 4599 @LENGTH@ 11
+------------INS ArrayAccess@@invocation.getRawArguments()[indexOfVararg] @TO@ VariableDeclarationFragment@@rawArgument=invocation.getRawArguments()[indexOfVararg] @AT@ 4613 @LENGTH@ 43
+---------------INS SimpleName@@indexOfVararg @TO@ ArrayAccess@@invocation.getRawArguments()[indexOfVararg] @AT@ 4642 @LENGTH@ 13
+---------------MOV MethodInvocation@@invocation.getRawArguments() @TO@ ArrayAccess@@invocation.getRawArguments()[indexOfVararg] @AT@ 4705 @LENGTH@ 28
+------MOV InstanceofExpression@@m instanceof CapturesArguments @TO@ IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4615 @LENGTH@ 30
+------INS ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @TO@ IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4678 @LENGTH@ 166
+---------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4683 @LENGTH@ 9
+------------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 4683 @LENGTH@ 3
+------------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 4687 @LENGTH@ 5
+---------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 4687 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 4691 @LENGTH@ 1
+---------INS InfixExpression@@i < Array.getLength(rawArgument) @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4694 @LENGTH@ 32
+------------INS MethodInvocation@@Array.getLength(rawArgument) @TO@ InfixExpression@@i < Array.getLength(rawArgument) @AT@ 4698 @LENGTH@ 28
+---------------INS SimpleName@@Name:Array @TO@ MethodInvocation@@Array.getLength(rawArgument) @AT@ 4698 @LENGTH@ 5
+---------------INS SimpleName@@MethodName:getLength:[rawArgument] @TO@ MethodInvocation@@Array.getLength(rawArgument) @AT@ 4704 @LENGTH@ 22
+------------------INS SimpleName@@rawArgument @TO@ SimpleName@@MethodName:getLength:[rawArgument] @AT@ 4714 @LENGTH@ 11
+------------MOV SimpleName@@position @TO@ InfixExpression@@i < Array.getLength(rawArgument) @AT@ 4734 @LENGTH@ 8
+------------MOV Operator@@- @TO@ InfixExpression@@i < Array.getLength(rawArgument) @AT@ 4742 @LENGTH@ 1
+---------INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4728 @LENGTH@ 3
+------------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 4728 @LENGTH@ 1
+------------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 4730 @LENGTH@ 2
+---------INS ExpressionStatement@@MethodInvocation:((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4759 @LENGTH@ 63
+------------INS MethodInvocation@@((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @TO@ ExpressionStatement@@MethodInvocation:((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @AT@ 4759 @LENGTH@ 62
+---------------MOV ParenthesizedExpression@@((CapturesArguments)m) @TO@ MethodInvocation@@((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @AT@ 4669 @LENGTH@ 23
+---------------INS SimpleName@@MethodName:captureFrom:[Array.get(rawArgument,i)] @TO@ MethodInvocation@@((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @AT@ 4783 @LENGTH@ 38
+------------------INS MethodInvocation@@Array.get(rawArgument,i) @TO@ SimpleName@@MethodName:captureFrom:[Array.get(rawArgument,i)] @AT@ 4795 @LENGTH@ 25
+---------------------INS SimpleName@@Name:Array @TO@ MethodInvocation@@Array.get(rawArgument,i) @AT@ 4795 @LENGTH@ 5
+---------------------INS SimpleName@@MethodName:get:[rawArgument, i] @TO@ MethodInvocation@@Array.get(rawArgument,i) @AT@ 4801 @LENGTH@ 19
+------------------------INS SimpleName@@rawArgument @TO@ SimpleName@@MethodName:get:[rawArgument, i] @AT@ 4805 @LENGTH@ 11
+------------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:get:[rawArgument, i] @AT@ 4818 @LENGTH@ 1
+, DEL ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4466 @LENGTH@ 327
+---DEL PostfixExpression@@position++ @AT@ 4529 @LENGTH@ 10
+------DEL SimpleName@@position @AT@ 4529 @LENGTH@ 8
+------DEL Operator@@++ @AT@ 4538 @LENGTH@ 2
+---DEL IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4611 @LENGTH@ 168
+------DEL ExpressionStatement@@MethodInvocation:((CapturesArguments)m).captureFrom(invocation.getRawArguments()[position - indexOfVararg]) @AT@ 4669 @LENGTH@ 92
+---------DEL MethodInvocation@@((CapturesArguments)m).captureFrom(invocation.getRawArguments()[position - indexOfVararg]) @AT@ 4669 @LENGTH@ 91
+------------DEL SimpleName@@MethodName:captureFrom:[invocation.getRawArguments()[position - indexOfVararg]] @AT@ 4693 @LENGTH@ 67
+---------------DEL ArrayAccess@@invocation.getRawArguments()[position - indexOfVararg] @AT@ 4705 @LENGTH@ 54
+------------------DEL InfixExpression@@position - indexOfVararg @AT@ 4734 @LENGTH@ 24
+---------------------DEL SimpleName@@indexOfVararg @AT@ 4745 @LENGTH@ 13
+, UPD VariableDeclarationStatement@@Matcher m=matchers.get(position); @TO@ Matcher matcher=matchers.get(position); @AT@ 4559 @LENGTH@ 35
+---UPD VariableDeclarationFragment@@m=matchers.get(position) @TO@ matcher=matchers.get(position) @AT@ 4567 @LENGTH@ 26
+------UPD SimpleName@@m @TO@ matcher @AT@ 4567 @LENGTH@ 1
+, INS MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @TO@ TypeDeclaration@@[@SuppressWarnings("unchecked"), public]InvocationMatcher, [DescribedInvocation, CapturesArgumensFromInvocation, Serializable] @AT@ 5237 @LENGTH@ 485
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5237 @LENGTH@ 7
+---INS ParameterizedType@@Set<Matcher> @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5245 @LENGTH@ 12
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<Matcher> @AT@ 5245 @LENGTH@ 3
+------INS SimpleType@@Matcher @TO@ ParameterizedType@@Set<Matcher> @AT@ 5249 @LENGTH@ 7
+---INS SimpleName@@MethodName:uniqueMatcherSet @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5258 @LENGTH@ 16
+---INS SingleVariableDeclaration@@int indexOfVararg @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5275 @LENGTH@ 17
+------INS PrimitiveType@@int @TO@ SingleVariableDeclaration@@int indexOfVararg @AT@ 5275 @LENGTH@ 3
+------INS SimpleName@@indexOfVararg @TO@ SingleVariableDeclaration@@int indexOfVararg @AT@ 5279 @LENGTH@ 13
+---INS VariableDeclarationStatement@@HashSet<Matcher> set=new HashSet<Matcher>(); @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5304 @LENGTH@ 46
+------INS ParameterizedType@@HashSet<Matcher> @TO@ VariableDeclarationStatement@@HashSet<Matcher> set=new HashSet<Matcher>(); @AT@ 5304 @LENGTH@ 16
+---------INS SimpleType@@HashSet @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5304 @LENGTH@ 7
+---------INS SimpleType@@Matcher @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5312 @LENGTH@ 7
+------INS VariableDeclarationFragment@@set=new HashSet<Matcher>() @TO@ VariableDeclarationStatement@@HashSet<Matcher> set=new HashSet<Matcher>(); @AT@ 5321 @LENGTH@ 28
+---------INS SimpleName@@set @TO@ VariableDeclarationFragment@@set=new HashSet<Matcher>() @AT@ 5321 @LENGTH@ 3
+---------INS ClassInstanceCreation@@HashSet<Matcher>[] @TO@ VariableDeclarationFragment@@set=new HashSet<Matcher>() @AT@ 5327 @LENGTH@ 22
+------------INS New@@new @TO@ ClassInstanceCreation@@HashSet<Matcher>[] @AT@ 5327 @LENGTH@ 3
+------------INS ParameterizedType@@HashSet<Matcher> @TO@ ClassInstanceCreation@@HashSet<Matcher>[] @AT@ 5331 @LENGTH@ 16
+---------------INS SimpleType@@HashSet @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5331 @LENGTH@ 7
+---------------INS SimpleType@@Matcher @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5339 @LENGTH@ 7
+---INS ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5359 @LENGTH@ 337
+------MOV VariableDeclarationExpression@@int position=indexOfVararg @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4471 @LENGTH@ 28
+------MOV InfixExpression@@position < matchers.size() @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4501 @LENGTH@ 26
+------MOV VariableDeclarationStatement@@Matcher m=matchers.get(position); @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4559 @LENGTH@ 35
+------INS PostfixExpression@@position++ @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 5422 @LENGTH@ 10
+---------INS SimpleName@@position @TO@ PostfixExpression@@position++ @AT@ 5422 @LENGTH@ 8
+---------INS Operator@@++ @TO@ PostfixExpression@@position++ @AT@ 5431 @LENGTH@ 2
+------INS IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 5502 @LENGTH@ 184
+---------INS InstanceofExpression@@matcher instanceof MatcherDecorator @TO@ IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @AT@ 5505 @LENGTH@ 35
+------------INS SimpleName@@matcher @TO@ InstanceofExpression@@matcher instanceof MatcherDecorator @AT@ 5505 @LENGTH@ 7
+------------INS Instanceof@@instanceof @TO@ InstanceofExpression@@matcher instanceof MatcherDecorator @AT@ 5513 @LENGTH@ 10
+------------INS SimpleType@@MatcherDecorator @TO@ InstanceofExpression@@matcher instanceof MatcherDecorator @AT@ 5524 @LENGTH@ 16
+---------INS ExpressionStatement@@MethodInvocation:set.add(((MatcherDecorator)matcher).getActualMatcher()) @TO@ IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @AT@ 5560 @LENGTH@ 57
+------------INS MethodInvocation@@set.add(((MatcherDecorator)matcher).getActualMatcher()) @TO@ ExpressionStatement@@MethodInvocation:set.add(((MatcherDecorator)matcher).getActualMatcher()) @AT@ 5560 @LENGTH@ 56
+---------------INS SimpleName@@Name:set @TO@ MethodInvocation@@set.add(((MatcherDecorator)matcher).getActualMatcher()) @AT@ 5560 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:add:[((MatcherDecorator)matcher).getActualMatcher()] @TO@ MethodInvocation@@set.add(((MatcherDecorator)matcher).getActualMatcher()) @AT@ 5564 @LENGTH@ 52
+------------------INS MethodInvocation@@((MatcherDecorator)matcher).getActualMatcher() @TO@ SimpleName@@MethodName:add:[((MatcherDecorator)matcher).getActualMatcher()] @AT@ 5568 @LENGTH@ 47
+---------------------INS ParenthesizedExpression@@((MatcherDecorator)matcher) @TO@ MethodInvocation@@((MatcherDecorator)matcher).getActualMatcher() @AT@ 5568 @LENGTH@ 28
+------------------------INS CastExpression@@(MatcherDecorator)matcher @TO@ ParenthesizedExpression@@((MatcherDecorator)matcher) @AT@ 5569 @LENGTH@ 26
+---------------------------INS SimpleType@@MatcherDecorator @TO@ CastExpression@@(MatcherDecorator)matcher @AT@ 5570 @LENGTH@ 16
+---------------------------INS SimpleName@@matcher @TO@ CastExpression@@(MatcherDecorator)matcher @AT@ 5588 @LENGTH@ 7
+---------------------INS SimpleName@@MethodName:getActualMatcher:[] @TO@ MethodInvocation@@((MatcherDecorator)matcher).getActualMatcher() @AT@ 5597 @LENGTH@ 18
+---------INS ExpressionStatement@@MethodInvocation:set.add(matcher) @TO@ IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @AT@ 5655 @LENGTH@ 17
+------------INS MethodInvocation@@set.add(matcher) @TO@ ExpressionStatement@@MethodInvocation:set.add(matcher) @AT@ 5655 @LENGTH@ 16
+---------------INS SimpleName@@Name:set @TO@ MethodInvocation@@set.add(matcher) @AT@ 5655 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:add:[matcher] @TO@ MethodInvocation@@set.add(matcher) @AT@ 5659 @LENGTH@ 12
+------------------INS SimpleName@@matcher @TO@ SimpleName@@MethodName:add:[matcher] @AT@ 5663 @LENGTH@ 7
+---INS ReturnStatement@@SimpleName:set @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5705 @LENGTH@ 11
+------INS SimpleName@@set @TO@ ReturnStatement@@SimpleName:set @AT@ 5712 @LENGTH@ 3
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, null)
+
+
+
+
+
+hASList: 
+[INS EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @TO@ IfStatement@@MethodInvocation:invocation.getMethod().isVarArgs() @AT@ 4466 @LENGTH@ 410
+---INS SingleVariableDeclaration@@Matcher m @TO@ EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @AT@ 4471 @LENGTH@ 9
+------INS SimpleType@@Matcher @TO@ SingleVariableDeclaration@@Matcher m @AT@ 4471 @LENGTH@ 7
+------INS SimpleName@@m @TO@ SingleVariableDeclaration@@Matcher m @AT@ 4479 @LENGTH@ 1
+---INS MethodInvocation@@uniqueMatcherSet(indexOfVararg) @TO@ EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @AT@ 4483 @LENGTH@ 31
+------INS SimpleName@@MethodName:uniqueMatcherSet:[indexOfVararg] @TO@ MethodInvocation@@uniqueMatcherSet(indexOfVararg) @AT@ 4483 @LENGTH@ 31
+---------INS SimpleName@@indexOfVararg @TO@ SimpleName@@MethodName:uniqueMatcherSet:[indexOfVararg] @AT@ 4500 @LENGTH@ 13
+---INS IfStatement@@InstanceofExpression:m instanceof CapturesArguments @TO@ EnhancedForStatement@@Matcher m, MethodInvocation:uniqueMatcherSet(indexOfVararg) @AT@ 4534 @LENGTH@ 328
+------INS VariableDeclarationStatement@@Object rawArgument=invocation.getRawArguments()[indexOfVararg]; @TO@ IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4592 @LENGTH@ 65
+---------INS SimpleType@@Object @TO@ VariableDeclarationStatement@@Object rawArgument=invocation.getRawArguments()[indexOfVararg]; @AT@ 4592 @LENGTH@ 6
+---------INS VariableDeclarationFragment@@rawArgument=invocation.getRawArguments()[indexOfVararg] @TO@ VariableDeclarationStatement@@Object rawArgument=invocation.getRawArguments()[indexOfVararg]; @AT@ 4599 @LENGTH@ 57
+------------INS SimpleName@@rawArgument @TO@ VariableDeclarationFragment@@rawArgument=invocation.getRawArguments()[indexOfVararg] @AT@ 4599 @LENGTH@ 11
+------------INS ArrayAccess@@invocation.getRawArguments()[indexOfVararg] @TO@ VariableDeclarationFragment@@rawArgument=invocation.getRawArguments()[indexOfVararg] @AT@ 4613 @LENGTH@ 43
+---------------INS SimpleName@@indexOfVararg @TO@ ArrayAccess@@invocation.getRawArguments()[indexOfVararg] @AT@ 4642 @LENGTH@ 13
+---------------MOV MethodInvocation@@invocation.getRawArguments() @TO@ ArrayAccess@@invocation.getRawArguments()[indexOfVararg] @AT@ 4705 @LENGTH@ 28
+------MOV InstanceofExpression@@m instanceof CapturesArguments @TO@ IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4615 @LENGTH@ 30
+------INS ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @TO@ IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4678 @LENGTH@ 166
+---------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4683 @LENGTH@ 9
+------------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 4683 @LENGTH@ 3
+------------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 4687 @LENGTH@ 5
+---------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 4687 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 4691 @LENGTH@ 1
+---------INS InfixExpression@@i < Array.getLength(rawArgument) @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4694 @LENGTH@ 32
+------------INS MethodInvocation@@Array.getLength(rawArgument) @TO@ InfixExpression@@i < Array.getLength(rawArgument) @AT@ 4698 @LENGTH@ 28
+---------------INS SimpleName@@Name:Array @TO@ MethodInvocation@@Array.getLength(rawArgument) @AT@ 4698 @LENGTH@ 5
+---------------INS SimpleName@@MethodName:getLength:[rawArgument] @TO@ MethodInvocation@@Array.getLength(rawArgument) @AT@ 4704 @LENGTH@ 22
+------------------INS SimpleName@@rawArgument @TO@ SimpleName@@MethodName:getLength:[rawArgument] @AT@ 4714 @LENGTH@ 11
+------------MOV SimpleName@@position @TO@ InfixExpression@@i < Array.getLength(rawArgument) @AT@ 4734 @LENGTH@ 8
+------------MOV Operator@@- @TO@ InfixExpression@@i < Array.getLength(rawArgument) @AT@ 4742 @LENGTH@ 1
+---------INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4728 @LENGTH@ 3
+------------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 4728 @LENGTH@ 1
+------------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 4730 @LENGTH@ 2
+---------INS ExpressionStatement@@MethodInvocation:((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @TO@ ForStatement@@[int i=0];i < Array.getLength(rawArgument); [i++] @AT@ 4759 @LENGTH@ 63
+------------INS MethodInvocation@@((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @TO@ ExpressionStatement@@MethodInvocation:((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @AT@ 4759 @LENGTH@ 62
+---------------MOV ParenthesizedExpression@@((CapturesArguments)m) @TO@ MethodInvocation@@((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @AT@ 4669 @LENGTH@ 23
+---------------INS SimpleName@@MethodName:captureFrom:[Array.get(rawArgument,i)] @TO@ MethodInvocation@@((CapturesArguments)m).captureFrom(Array.get(rawArgument,i)) @AT@ 4783 @LENGTH@ 38
+------------------INS MethodInvocation@@Array.get(rawArgument,i) @TO@ SimpleName@@MethodName:captureFrom:[Array.get(rawArgument,i)] @AT@ 4795 @LENGTH@ 25
+---------------------INS SimpleName@@Name:Array @TO@ MethodInvocation@@Array.get(rawArgument,i) @AT@ 4795 @LENGTH@ 5
+---------------------INS SimpleName@@MethodName:get:[rawArgument, i] @TO@ MethodInvocation@@Array.get(rawArgument,i) @AT@ 4801 @LENGTH@ 19
+------------------------INS SimpleName@@rawArgument @TO@ SimpleName@@MethodName:get:[rawArgument, i] @AT@ 4805 @LENGTH@ 11
+------------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:get:[rawArgument, i] @AT@ 4818 @LENGTH@ 1
+, DEL ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4466 @LENGTH@ 327
+---DEL PostfixExpression@@position++ @AT@ 4529 @LENGTH@ 10
+------DEL SimpleName@@position @AT@ 4529 @LENGTH@ 8
+------DEL Operator@@++ @AT@ 4538 @LENGTH@ 2
+---DEL IfStatement@@InstanceofExpression:m instanceof CapturesArguments @AT@ 4611 @LENGTH@ 168
+------DEL ExpressionStatement@@MethodInvocation:((CapturesArguments)m).captureFrom(invocation.getRawArguments()[position - indexOfVararg]) @AT@ 4669 @LENGTH@ 92
+---------DEL MethodInvocation@@((CapturesArguments)m).captureFrom(invocation.getRawArguments()[position - indexOfVararg]) @AT@ 4669 @LENGTH@ 91
+------------DEL SimpleName@@MethodName:captureFrom:[invocation.getRawArguments()[position - indexOfVararg]] @AT@ 4693 @LENGTH@ 67
+---------------DEL ArrayAccess@@invocation.getRawArguments()[position - indexOfVararg] @AT@ 4705 @LENGTH@ 54
+------------------DEL InfixExpression@@position - indexOfVararg @AT@ 4734 @LENGTH@ 24
+---------------------DEL SimpleName@@indexOfVararg @AT@ 4745 @LENGTH@ 13
+, UPD VariableDeclarationStatement@@Matcher m=matchers.get(position); @TO@ Matcher matcher=matchers.get(position); @AT@ 4559 @LENGTH@ 35
+---UPD VariableDeclarationFragment@@m=matchers.get(position) @TO@ matcher=matchers.get(position) @AT@ 4567 @LENGTH@ 26
+------UPD SimpleName@@m @TO@ matcher @AT@ 4567 @LENGTH@ 1
+, INS MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @TO@ TypeDeclaration@@[@SuppressWarnings("unchecked"), public]InvocationMatcher, [DescribedInvocation, CapturesArgumensFromInvocation, Serializable] @AT@ 5237 @LENGTH@ 485
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5237 @LENGTH@ 7
+---INS ParameterizedType@@Set<Matcher> @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5245 @LENGTH@ 12
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<Matcher> @AT@ 5245 @LENGTH@ 3
+------INS SimpleType@@Matcher @TO@ ParameterizedType@@Set<Matcher> @AT@ 5249 @LENGTH@ 7
+---INS SimpleName@@MethodName:uniqueMatcherSet @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5258 @LENGTH@ 16
+---INS SingleVariableDeclaration@@int indexOfVararg @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5275 @LENGTH@ 17
+------INS PrimitiveType@@int @TO@ SingleVariableDeclaration@@int indexOfVararg @AT@ 5275 @LENGTH@ 3
+------INS SimpleName@@indexOfVararg @TO@ SingleVariableDeclaration@@int indexOfVararg @AT@ 5279 @LENGTH@ 13
+---INS VariableDeclarationStatement@@HashSet<Matcher> set=new HashSet<Matcher>(); @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5304 @LENGTH@ 46
+------INS ParameterizedType@@HashSet<Matcher> @TO@ VariableDeclarationStatement@@HashSet<Matcher> set=new HashSet<Matcher>(); @AT@ 5304 @LENGTH@ 16
+---------INS SimpleType@@HashSet @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5304 @LENGTH@ 7
+---------INS SimpleType@@Matcher @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5312 @LENGTH@ 7
+------INS VariableDeclarationFragment@@set=new HashSet<Matcher>() @TO@ VariableDeclarationStatement@@HashSet<Matcher> set=new HashSet<Matcher>(); @AT@ 5321 @LENGTH@ 28
+---------INS SimpleName@@set @TO@ VariableDeclarationFragment@@set=new HashSet<Matcher>() @AT@ 5321 @LENGTH@ 3
+---------INS ClassInstanceCreation@@HashSet<Matcher>[] @TO@ VariableDeclarationFragment@@set=new HashSet<Matcher>() @AT@ 5327 @LENGTH@ 22
+------------INS New@@new @TO@ ClassInstanceCreation@@HashSet<Matcher>[] @AT@ 5327 @LENGTH@ 3
+------------INS ParameterizedType@@HashSet<Matcher> @TO@ ClassInstanceCreation@@HashSet<Matcher>[] @AT@ 5331 @LENGTH@ 16
+---------------INS SimpleType@@HashSet @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5331 @LENGTH@ 7
+---------------INS SimpleType@@Matcher @TO@ ParameterizedType@@HashSet<Matcher> @AT@ 5339 @LENGTH@ 7
+---INS ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5359 @LENGTH@ 337
+------MOV VariableDeclarationExpression@@int position=indexOfVararg @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4471 @LENGTH@ 28
+------MOV InfixExpression@@position < matchers.size() @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4501 @LENGTH@ 26
+------MOV VariableDeclarationStatement@@Matcher m=matchers.get(position); @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 4559 @LENGTH@ 35
+------INS PostfixExpression@@position++ @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 5422 @LENGTH@ 10
+---------INS SimpleName@@position @TO@ PostfixExpression@@position++ @AT@ 5422 @LENGTH@ 8
+---------INS Operator@@++ @TO@ PostfixExpression@@position++ @AT@ 5431 @LENGTH@ 2
+------INS IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @TO@ ForStatement@@[int position=indexOfVararg];position < matchers.size(); [position++] @AT@ 5502 @LENGTH@ 184
+---------INS InstanceofExpression@@matcher instanceof MatcherDecorator @TO@ IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @AT@ 5505 @LENGTH@ 35
+------------INS SimpleName@@matcher @TO@ InstanceofExpression@@matcher instanceof MatcherDecorator @AT@ 5505 @LENGTH@ 7
+------------INS Instanceof@@instanceof @TO@ InstanceofExpression@@matcher instanceof MatcherDecorator @AT@ 5513 @LENGTH@ 10
+------------INS SimpleType@@MatcherDecorator @TO@ InstanceofExpression@@matcher instanceof MatcherDecorator @AT@ 5524 @LENGTH@ 16
+---------INS ExpressionStatement@@MethodInvocation:set.add(((MatcherDecorator)matcher).getActualMatcher()) @TO@ IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @AT@ 5560 @LENGTH@ 57
+------------INS MethodInvocation@@set.add(((MatcherDecorator)matcher).getActualMatcher()) @TO@ ExpressionStatement@@MethodInvocation:set.add(((MatcherDecorator)matcher).getActualMatcher()) @AT@ 5560 @LENGTH@ 56
+---------------INS SimpleName@@Name:set @TO@ MethodInvocation@@set.add(((MatcherDecorator)matcher).getActualMatcher()) @AT@ 5560 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:add:[((MatcherDecorator)matcher).getActualMatcher()] @TO@ MethodInvocation@@set.add(((MatcherDecorator)matcher).getActualMatcher()) @AT@ 5564 @LENGTH@ 52
+------------------INS MethodInvocation@@((MatcherDecorator)matcher).getActualMatcher() @TO@ SimpleName@@MethodName:add:[((MatcherDecorator)matcher).getActualMatcher()] @AT@ 5568 @LENGTH@ 47
+---------------------INS ParenthesizedExpression@@((MatcherDecorator)matcher) @TO@ MethodInvocation@@((MatcherDecorator)matcher).getActualMatcher() @AT@ 5568 @LENGTH@ 28
+------------------------INS CastExpression@@(MatcherDecorator)matcher @TO@ ParenthesizedExpression@@((MatcherDecorator)matcher) @AT@ 5569 @LENGTH@ 26
+---------------------------INS SimpleType@@MatcherDecorator @TO@ CastExpression@@(MatcherDecorator)matcher @AT@ 5570 @LENGTH@ 16
+---------------------------INS SimpleName@@matcher @TO@ CastExpression@@(MatcherDecorator)matcher @AT@ 5588 @LENGTH@ 7
+---------------------INS SimpleName@@MethodName:getActualMatcher:[] @TO@ MethodInvocation@@((MatcherDecorator)matcher).getActualMatcher() @AT@ 5597 @LENGTH@ 18
+---------INS ExpressionStatement@@MethodInvocation:set.add(matcher) @TO@ IfStatement@@InstanceofExpression:matcher instanceof MatcherDecorator @AT@ 5655 @LENGTH@ 17
+------------INS MethodInvocation@@set.add(matcher) @TO@ ExpressionStatement@@MethodInvocation:set.add(matcher) @AT@ 5655 @LENGTH@ 16
+---------------INS SimpleName@@Name:set @TO@ MethodInvocation@@set.add(matcher) @AT@ 5655 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:add:[matcher] @TO@ MethodInvocation@@set.add(matcher) @AT@ 5659 @LENGTH@ 12
+------------------INS SimpleName@@matcher @TO@ SimpleName@@MethodName:add:[matcher] @AT@ 5663 @LENGTH@ 7
+---INS ReturnStatement@@SimpleName:set @TO@ MethodDeclaration@@private, @@Set<Matcher>, MethodName:uniqueMatcherSet, @@Argus:int+indexOfVararg+ @AT@ 5705 @LENGTH@ 11
+------INS SimpleName@@set @TO@ ReturnStatement@@SimpleName:set @AT@ 5712 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP6 OP7 OP10 OP21 OP48)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, ParameterizedType, OP1, OP4 OP5)
+OP4:      (INS, SimpleType, OP3, null)
+OP5:      (INS, SimpleType, OP3, null)
+OP6:   (INS, SimpleName, OP1, null)
+OP7:   (INS, SingleVariableDeclaration, OP1, OP8 OP9)
+OP8:      (INS, PrimitiveType, OP7, null)
+OP9:      (INS, SimpleName, OP7, null)
+OP10:   (INS, VariableDeclarationStatement, OP1, OP11 OP14)
+OP11:      (INS, ParameterizedType, OP10, OP12 OP13)
+OP12:         (INS, SimpleType, OP11, null)
+OP13:         (INS, SimpleType, OP11, null)
+OP14:      (INS, VariableDeclarationFragment, OP10, OP15 OP16)
+OP15:         (INS, SimpleName, OP14, null)
+OP16:         (INS, ClassInstanceCreation, OP14, OP17 OP18)
+OP17:            (INS, New, OP16, null)
+OP18:            (INS, ParameterizedType, OP16, OP19 OP20)
+OP19:               (INS, SimpleType, OP18, null)
+OP20:               (INS, SimpleType, OP18, null)
+OP21:   (INS, ForStatement, OP1, OP22 OP23 OP24 OP25 OP28)
+OP22:      (MOV, VariableDeclarationExpression, OP21, null)
+OP23:      (MOV, InfixExpression, OP21, null)
+OP24:      (MOV, VariableDeclarationStatement, OP21, null)
+OP25:      (INS, PostfixExpression, OP21, OP26 OP27)
+OP26:         (INS, SimpleName, OP25, null)
+OP27:         (INS, Operator, OP25, null)
+OP28:      (INS, IfStatement, OP21, OP29 OP33 OP43)
+OP29:         (INS, InstanceofExpression, OP28, OP30 OP31 OP32)
+OP30:            (INS, SimpleName, OP29, null)
+OP31:            (INS, Instanceof, OP29, null)
+OP32:            (INS, SimpleType, OP29, null)
+OP33:         (INS, ExpressionStatement, OP28, OP34)
+OP34:            (INS, MethodInvocation, OP33, OP35 OP36)
+OP35:               (INS, SimpleName, OP34, null)
+OP36:               (INS, SimpleName, OP34, OP37)
+OP37:                  (INS, MethodInvocation, OP36, OP38 OP42)
+OP38:                     (INS, ParenthesizedExpression, OP37, OP39)
+OP39:                        (INS, CastExpression, OP38, OP40 OP41)
+OP40:                           (INS, SimpleType, OP39, null)
+OP41:                           (INS, SimpleName, OP39, null)
+OP42:                     (INS, SimpleName, OP37, null)
+OP43:         (INS, ExpressionStatement, OP28, OP44)
+OP44:            (INS, MethodInvocation, OP43, OP45 OP46)
+OP45:               (INS, SimpleName, OP44, null)
+OP46:               (INS, SimpleName, OP44, OP47)
+OP47:                  (INS, SimpleName, OP46, null)
+OP48:   (INS, ReturnStatement, OP1, OP49)
+OP49:      (INS, SimpleName, OP48, null)
+
+
+

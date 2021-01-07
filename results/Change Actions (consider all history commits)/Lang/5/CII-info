@@ -1,0 +1,269 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:ch0 == '_' @TO@ MethodDeclaration@@public, static, @@Locale, MethodName:toLocale, @@Argus:String+str+ @AT@ 3704 @LENGTH@ 2306
+---INS InfixExpression@@ch0 == '_' @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 3708 @LENGTH@ 10
+------INS SimpleName@@ch0 @TO@ InfixExpression@@ch0 == '_' @AT@ 3708 @LENGTH@ 3
+------INS Operator@@== @TO@ InfixExpression@@ch0 == '_' @AT@ 3711 @LENGTH@ 2
+------INS CharacterLiteral@@'_' @TO@ InfixExpression@@ch0 == '_' @AT@ 3715 @LENGTH@ 3
+---MOV VariableDeclarationStatement@@final char ch1=str.charAt(1); @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 3708 @LENGTH@ 31
+---INS IfStatement@@InfixExpression:len < 3 @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 3734 @LENGTH@ 113
+------INS InfixExpression@@len < 3 @TO@ IfStatement@@InfixExpression:len < 3 @AT@ 3738 @LENGTH@ 7
+---------INS SimpleName@@len @TO@ InfixExpression@@len < 3 @AT@ 3738 @LENGTH@ 3
+---------INS Operator@@< @TO@ InfixExpression@@len < 3 @AT@ 3741 @LENGTH@ 1
+---------INS NumberLiteral@@3 @TO@ InfixExpression@@len < 3 @AT@ 3744 @LENGTH@ 1
+------INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Invalid locale format: " + str) @TO@ IfStatement@@InfixExpression:len < 3 @AT@ 3765 @LENGTH@ 68
+---------INS ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Invalid locale format: " + str) @AT@ 3771 @LENGTH@ 61
+------------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @AT@ 3771 @LENGTH@ 3
+------------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @AT@ 3775 @LENGTH@ 24
+------------INS InfixExpression@@"Invalid locale format: " + str @TO@ ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @AT@ 3800 @LENGTH@ 31
+---------------INS StringLiteral@@"Invalid locale format: " @TO@ InfixExpression@@"Invalid locale format: " + str @AT@ 3800 @LENGTH@ 25
+---------------INS Operator@@+ @TO@ InfixExpression@@"Invalid locale format: " + str @AT@ 3825 @LENGTH@ 1
+---------------INS SimpleName@@str @TO@ InfixExpression@@"Invalid locale format: " + str @AT@ 3828 @LENGTH@ 3
+---MOV IfStatement@@InfixExpression:!Character.isLowerCase(ch0) || !Character.isLowerCase(ch1) @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 3752 @LENGTH@ 164
+---INS VariableDeclarationStatement@@final char ch1=str.charAt(1); @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 3860 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final char ch1=str.charAt(1); @AT@ 3860 @LENGTH@ 5
+------INS PrimitiveType@@char @TO@ VariableDeclarationStatement@@final char ch1=str.charAt(1); @AT@ 3866 @LENGTH@ 4
+------INS VariableDeclarationFragment@@ch1=str.charAt(1) @TO@ VariableDeclarationStatement@@final char ch1=str.charAt(1); @AT@ 3871 @LENGTH@ 19
+---------INS SimpleName@@ch1 @TO@ VariableDeclarationFragment@@ch1=str.charAt(1) @AT@ 3871 @LENGTH@ 3
+---------INS MethodInvocation@@str.charAt(1) @TO@ VariableDeclarationFragment@@ch1=str.charAt(1) @AT@ 3877 @LENGTH@ 13
+------------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.charAt(1) @AT@ 3877 @LENGTH@ 3
+------------INS SimpleName@@MethodName:charAt:[1] @TO@ MethodInvocation@@str.charAt(1) @AT@ 3881 @LENGTH@ 9
+---------------INS NumberLiteral@@1 @TO@ SimpleName@@MethodName:charAt:[1] @AT@ 3888 @LENGTH@ 1
+---INS VariableDeclarationStatement@@final char ch2=str.charAt(2); @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 3904 @LENGTH@ 31
+------INS Modifier@@final @TO@ VariableDeclarationStatement@@final char ch2=str.charAt(2); @AT@ 3904 @LENGTH@ 5
+------INS PrimitiveType@@char @TO@ VariableDeclarationStatement@@final char ch2=str.charAt(2); @AT@ 3910 @LENGTH@ 4
+------INS VariableDeclarationFragment@@ch2=str.charAt(2) @TO@ VariableDeclarationStatement@@final char ch2=str.charAt(2); @AT@ 3915 @LENGTH@ 19
+---------INS SimpleName@@ch2 @TO@ VariableDeclarationFragment@@ch2=str.charAt(2) @AT@ 3915 @LENGTH@ 3
+---------INS MethodInvocation@@str.charAt(2) @TO@ VariableDeclarationFragment@@ch2=str.charAt(2) @AT@ 3921 @LENGTH@ 13
+------------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.charAt(2) @AT@ 3921 @LENGTH@ 3
+------------INS SimpleName@@MethodName:charAt:[2] @TO@ MethodInvocation@@str.charAt(2) @AT@ 3925 @LENGTH@ 9
+---------------INS NumberLiteral@@2 @TO@ SimpleName@@MethodName:charAt:[2] @AT@ 3932 @LENGTH@ 1
+---MOV IfStatement@@InfixExpression:len == 2 @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 3929 @LENGTH@ 69
+---INS IfStatement@@InfixExpression:!Character.isUpperCase(ch1) || !Character.isUpperCase(ch2) @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 3948 @LENGTH@ 164
+------INS InfixExpression@@!Character.isUpperCase(ch1) || !Character.isUpperCase(ch2) @TO@ IfStatement@@InfixExpression:!Character.isUpperCase(ch1) || !Character.isUpperCase(ch2) @AT@ 3952 @LENGTH@ 58
+---------INS PrefixExpression@@!Character.isUpperCase(ch1) @TO@ InfixExpression@@!Character.isUpperCase(ch1) || !Character.isUpperCase(ch2) @AT@ 3952 @LENGTH@ 27
+------------INS Operator@@! @TO@ PrefixExpression@@!Character.isUpperCase(ch1) @AT@ 3952 @LENGTH@ 1
+------------INS MethodInvocation@@Character.isUpperCase(ch1) @TO@ PrefixExpression@@!Character.isUpperCase(ch1) @AT@ 3953 @LENGTH@ 26
+---------------INS SimpleName@@Name:Character @TO@ MethodInvocation@@Character.isUpperCase(ch1) @AT@ 3953 @LENGTH@ 9
+---------------INS SimpleName@@MethodName:isUpperCase:[ch1] @TO@ MethodInvocation@@Character.isUpperCase(ch1) @AT@ 3963 @LENGTH@ 16
+------------------INS SimpleName@@ch1 @TO@ SimpleName@@MethodName:isUpperCase:[ch1] @AT@ 3975 @LENGTH@ 3
+---------INS Operator@@|| @TO@ InfixExpression@@!Character.isUpperCase(ch1) || !Character.isUpperCase(ch2) @AT@ 3979 @LENGTH@ 2
+---------INS PrefixExpression@@!Character.isUpperCase(ch2) @TO@ InfixExpression@@!Character.isUpperCase(ch1) || !Character.isUpperCase(ch2) @AT@ 3983 @LENGTH@ 27
+------------INS Operator@@! @TO@ PrefixExpression@@!Character.isUpperCase(ch2) @AT@ 3983 @LENGTH@ 1
+------------INS MethodInvocation@@Character.isUpperCase(ch2) @TO@ PrefixExpression@@!Character.isUpperCase(ch2) @AT@ 3984 @LENGTH@ 26
+---------------INS SimpleName@@Name:Character @TO@ MethodInvocation@@Character.isUpperCase(ch2) @AT@ 3984 @LENGTH@ 9
+---------------INS SimpleName@@MethodName:isUpperCase:[ch2] @TO@ MethodInvocation@@Character.isUpperCase(ch2) @AT@ 3994 @LENGTH@ 16
+------------------INS SimpleName@@ch2 @TO@ SimpleName@@MethodName:isUpperCase:[ch2] @AT@ 4006 @LENGTH@ 3
+------INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Invalid locale format: " + str) @TO@ IfStatement@@InfixExpression:!Character.isUpperCase(ch1) || !Character.isUpperCase(ch2) @AT@ 4030 @LENGTH@ 68
+---------INS ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Invalid locale format: " + str) @AT@ 4036 @LENGTH@ 61
+------------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @AT@ 4036 @LENGTH@ 3
+------------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @AT@ 4040 @LENGTH@ 24
+------------INS InfixExpression@@"Invalid locale format: " + str @TO@ ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @AT@ 4065 @LENGTH@ 31
+---------------INS StringLiteral@@"Invalid locale format: " @TO@ InfixExpression@@"Invalid locale format: " + str @AT@ 4065 @LENGTH@ 25
+---------------INS Operator@@+ @TO@ InfixExpression@@"Invalid locale format: " + str @AT@ 4090 @LENGTH@ 1
+---------------INS SimpleName@@str @TO@ InfixExpression@@"Invalid locale format: " + str @AT@ 4093 @LENGTH@ 3
+---MOV IfStatement@@InfixExpression:len < 5 @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 4011 @LENGTH@ 113
+---INS IfStatement@@InfixExpression:len == 3 @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 4125 @LENGTH@ 89
+------INS InfixExpression@@len == 3 @TO@ IfStatement@@InfixExpression:len == 3 @AT@ 4129 @LENGTH@ 8
+---------INS SimpleName@@len @TO@ InfixExpression@@len == 3 @AT@ 4129 @LENGTH@ 3
+---------INS Operator@@== @TO@ InfixExpression@@len == 3 @AT@ 4132 @LENGTH@ 2
+---------INS NumberLiteral@@3 @TO@ InfixExpression@@len == 3 @AT@ 4136 @LENGTH@ 1
+------INS ReturnStatement@@ClassInstanceCreation:new Locale("",str.substring(1,3)) @TO@ IfStatement@@InfixExpression:len == 3 @AT@ 4157 @LENGTH@ 43
+---------INS ClassInstanceCreation@@Locale["", str.substring(1,3)] @TO@ ReturnStatement@@ClassInstanceCreation:new Locale("",str.substring(1,3)) @AT@ 4164 @LENGTH@ 35
+------------INS New@@new @TO@ ClassInstanceCreation@@Locale["", str.substring(1,3)] @AT@ 4164 @LENGTH@ 3
+------------INS SimpleType@@Locale @TO@ ClassInstanceCreation@@Locale["", str.substring(1,3)] @AT@ 4168 @LENGTH@ 6
+------------INS StringLiteral@@"" @TO@ ClassInstanceCreation@@Locale["", str.substring(1,3)] @AT@ 4175 @LENGTH@ 2
+------------INS MethodInvocation@@str.substring(1,3) @TO@ ClassInstanceCreation@@Locale["", str.substring(1,3)] @AT@ 4179 @LENGTH@ 19
+---------------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.substring(1,3) @AT@ 4179 @LENGTH@ 3
+---------------INS SimpleName@@MethodName:substring:[1, 3] @TO@ MethodInvocation@@str.substring(1,3) @AT@ 4183 @LENGTH@ 15
+------------------INS NumberLiteral@@1 @TO@ SimpleName@@MethodName:substring:[1, 3] @AT@ 4193 @LENGTH@ 1
+------------------INS NumberLiteral@@3 @TO@ SimpleName@@MethodName:substring:[1, 3] @AT@ 4196 @LENGTH@ 1
+---MOV IfStatement@@InfixExpression:str.charAt(2) != '_' @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 4137 @LENGTH@ 126
+---INS IfStatement@@InfixExpression:len < 5 @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 4227 @LENGTH@ 113
+------INS InfixExpression@@len < 5 @TO@ IfStatement@@InfixExpression:len < 5 @AT@ 4231 @LENGTH@ 7
+---------INS SimpleName@@len @TO@ InfixExpression@@len < 5 @AT@ 4231 @LENGTH@ 3
+---------INS Operator@@< @TO@ InfixExpression@@len < 5 @AT@ 4234 @LENGTH@ 1
+---------INS NumberLiteral@@5 @TO@ InfixExpression@@len < 5 @AT@ 4237 @LENGTH@ 1
+------INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Invalid locale format: " + str) @TO@ IfStatement@@InfixExpression:len < 5 @AT@ 4258 @LENGTH@ 68
+---------INS ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Invalid locale format: " + str) @AT@ 4264 @LENGTH@ 61
+------------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @AT@ 4264 @LENGTH@ 3
+------------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @AT@ 4268 @LENGTH@ 24
+------------INS InfixExpression@@"Invalid locale format: " + str @TO@ ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @AT@ 4293 @LENGTH@ 31
+---------------INS StringLiteral@@"Invalid locale format: " @TO@ InfixExpression@@"Invalid locale format: " + str @AT@ 4293 @LENGTH@ 25
+---------------INS Operator@@+ @TO@ InfixExpression@@"Invalid locale format: " + str @AT@ 4318 @LENGTH@ 1
+---------------INS SimpleName@@str @TO@ InfixExpression@@"Invalid locale format: " + str @AT@ 4321 @LENGTH@ 3
+---MOV VariableDeclarationStatement@@final char ch3=str.charAt(3); @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 4276 @LENGTH@ 31
+---MOV IfStatement@@InfixExpression:ch3 == '_' @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 4320 @LENGTH@ 109
+---INS IfStatement@@InfixExpression:str.charAt(3) != '_' @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 4353 @LENGTH@ 126
+------INS InfixExpression@@str.charAt(3) != '_' @TO@ IfStatement@@InfixExpression:str.charAt(3) != '_' @AT@ 4357 @LENGTH@ 20
+---------INS MethodInvocation@@str.charAt(3) @TO@ InfixExpression@@str.charAt(3) != '_' @AT@ 4357 @LENGTH@ 13
+------------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.charAt(3) @AT@ 4357 @LENGTH@ 3
+------------INS SimpleName@@MethodName:charAt:[3] @TO@ MethodInvocation@@str.charAt(3) @AT@ 4361 @LENGTH@ 9
+---------------INS NumberLiteral@@3 @TO@ SimpleName@@MethodName:charAt:[3] @AT@ 4368 @LENGTH@ 1
+---------INS Operator@@!= @TO@ InfixExpression@@str.charAt(3) != '_' @AT@ 4370 @LENGTH@ 2
+---------INS CharacterLiteral@@'_' @TO@ InfixExpression@@str.charAt(3) != '_' @AT@ 4374 @LENGTH@ 3
+------INS ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Invalid locale format: " + str) @TO@ IfStatement@@InfixExpression:str.charAt(3) != '_' @AT@ 4397 @LENGTH@ 68
+---------INS ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @TO@ ThrowStatement@@ClassInstanceCreation:new IllegalArgumentException("Invalid locale format: " + str) @AT@ 4403 @LENGTH@ 61
+------------INS New@@new @TO@ ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @AT@ 4403 @LENGTH@ 3
+------------INS SimpleType@@IllegalArgumentException @TO@ ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @AT@ 4407 @LENGTH@ 24
+------------INS InfixExpression@@"Invalid locale format: " + str @TO@ ClassInstanceCreation@@IllegalArgumentException["Invalid locale format: " + str] @AT@ 4432 @LENGTH@ 31
+---------------INS StringLiteral@@"Invalid locale format: " @TO@ InfixExpression@@"Invalid locale format: " + str @AT@ 4432 @LENGTH@ 25
+---------------INS Operator@@+ @TO@ InfixExpression@@"Invalid locale format: " + str @AT@ 4457 @LENGTH@ 1
+---------------INS SimpleName@@str @TO@ InfixExpression@@"Invalid locale format: " + str @AT@ 4460 @LENGTH@ 3
+---MOV VariableDeclarationStatement@@final char ch4=str.charAt(4); @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 4442 @LENGTH@ 31
+---MOV IfStatement@@InfixExpression:!Character.isUpperCase(ch3) || !Character.isUpperCase(ch4) @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 4486 @LENGTH@ 164
+---INS ReturnStatement@@ClassInstanceCreation:new Locale("",str.substring(1,3),str.substring(4)) @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 4492 @LENGTH@ 61
+------INS ClassInstanceCreation@@Locale["", str.substring(1,3), str.substring(4)] @TO@ ReturnStatement@@ClassInstanceCreation:new Locale("",str.substring(1,3),str.substring(4)) @AT@ 4499 @LENGTH@ 53
+---------INS New@@new @TO@ ClassInstanceCreation@@Locale["", str.substring(1,3), str.substring(4)] @AT@ 4499 @LENGTH@ 3
+---------INS SimpleType@@Locale @TO@ ClassInstanceCreation@@Locale["", str.substring(1,3), str.substring(4)] @AT@ 4503 @LENGTH@ 6
+---------INS StringLiteral@@"" @TO@ ClassInstanceCreation@@Locale["", str.substring(1,3), str.substring(4)] @AT@ 4510 @LENGTH@ 2
+---------INS MethodInvocation@@str.substring(1,3) @TO@ ClassInstanceCreation@@Locale["", str.substring(1,3), str.substring(4)] @AT@ 4514 @LENGTH@ 19
+------------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.substring(1,3) @AT@ 4514 @LENGTH@ 3
+------------INS SimpleName@@MethodName:substring:[1, 3] @TO@ MethodInvocation@@str.substring(1,3) @AT@ 4518 @LENGTH@ 15
+---------------INS NumberLiteral@@1 @TO@ SimpleName@@MethodName:substring:[1, 3] @AT@ 4528 @LENGTH@ 1
+---------------INS NumberLiteral@@3 @TO@ SimpleName@@MethodName:substring:[1, 3] @AT@ 4531 @LENGTH@ 1
+---------INS MethodInvocation@@str.substring(4) @TO@ ClassInstanceCreation@@Locale["", str.substring(1,3), str.substring(4)] @AT@ 4535 @LENGTH@ 16
+------------INS SimpleName@@Name:str @TO@ MethodInvocation@@str.substring(4) @AT@ 4535 @LENGTH@ 3
+------------INS SimpleName@@MethodName:substring:[4] @TO@ MethodInvocation@@str.substring(4) @AT@ 4539 @LENGTH@ 12
+---------------INS NumberLiteral@@4 @TO@ SimpleName@@MethodName:substring:[4] @AT@ 4549 @LENGTH@ 1
+---MOV IfStatement@@InfixExpression:len == 5 @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 4663 @LENGTH@ 106
+---MOV IfStatement@@InfixExpression:len < 7 @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 4782 @LENGTH@ 113
+---MOV IfStatement@@InfixExpression:str.charAt(5) != '_' @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 4908 @LENGTH@ 126
+---MOV ReturnStatement@@ClassInstanceCreation:new Locale(str.substring(0,2),str.substring(3,5),str.substring(6)) @TO@ IfStatement@@InfixExpression:ch0 == '_' @AT@ 5047 @LENGTH@ 78
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6 OP7 OP20 OP21 OP30 OP39 OP40 OP63 OP64 OP79 OP80 OP93 OP94 OP95 OP111 OP112 OP113 OP127 OP128 OP129 OP130)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, CharacterLiteral, OP2, null)
+OP6:   (MOV, VariableDeclarationStatement, OP1, null)
+OP7:   (INS, IfStatement, OP1, OP8 OP12)
+OP8:      (INS, InfixExpression, OP7, OP9 OP10 OP11)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, Operator, OP8, null)
+OP11:         (INS, NumberLiteral, OP8, null)
+OP12:      (INS, ThrowStatement, OP7, OP13)
+OP13:         (INS, ClassInstanceCreation, OP12, OP14 OP15 OP16)
+OP14:            (INS, New, OP13, null)
+OP15:            (INS, SimpleType, OP13, null)
+OP16:            (INS, InfixExpression, OP13, OP17 OP18 OP19)
+OP17:               (INS, StringLiteral, OP16, null)
+OP18:               (INS, Operator, OP16, null)
+OP19:               (INS, SimpleName, OP16, null)
+OP20:   (MOV, IfStatement, OP1, null)
+OP21:   (INS, VariableDeclarationStatement, OP1, OP22 OP23 OP24)
+OP22:      (INS, Modifier, OP21, null)
+OP23:      (INS, PrimitiveType, OP21, null)
+OP24:      (INS, VariableDeclarationFragment, OP21, OP25 OP26)
+OP25:         (INS, SimpleName, OP24, null)
+OP26:         (INS, MethodInvocation, OP24, OP27 OP28)
+OP27:            (INS, SimpleName, OP26, null)
+OP28:            (INS, SimpleName, OP26, OP29)
+OP29:               (INS, NumberLiteral, OP28, null)
+OP30:   (INS, VariableDeclarationStatement, OP1, OP31 OP32 OP33)
+OP31:      (INS, Modifier, OP30, null)
+OP32:      (INS, PrimitiveType, OP30, null)
+OP33:      (INS, VariableDeclarationFragment, OP30, OP34 OP35)
+OP34:         (INS, SimpleName, OP33, null)
+OP35:         (INS, MethodInvocation, OP33, OP36 OP37)
+OP36:            (INS, SimpleName, OP35, null)
+OP37:            (INS, SimpleName, OP35, OP38)
+OP38:               (INS, NumberLiteral, OP37, null)
+OP39:   (MOV, IfStatement, OP1, null)
+OP40:   (INS, IfStatement, OP1, OP41 OP55)
+OP41:      (INS, InfixExpression, OP40, OP42 OP48 OP49)
+OP42:         (INS, PrefixExpression, OP41, OP43 OP44)
+OP43:            (INS, Operator, OP42, null)
+OP44:            (INS, MethodInvocation, OP42, OP45 OP46)
+OP45:               (INS, SimpleName, OP44, null)
+OP46:               (INS, SimpleName, OP44, OP47)
+OP47:                  (INS, SimpleName, OP46, null)
+OP48:         (INS, Operator, OP41, null)
+OP49:         (INS, PrefixExpression, OP41, OP50 OP51)
+OP50:            (INS, Operator, OP49, null)
+OP51:            (INS, MethodInvocation, OP49, OP52 OP53)
+OP52:               (INS, SimpleName, OP51, null)
+OP53:               (INS, SimpleName, OP51, OP54)
+OP54:                  (INS, SimpleName, OP53, null)
+OP55:      (INS, ThrowStatement, OP40, OP56)
+OP56:         (INS, ClassInstanceCreation, OP55, OP57 OP58 OP59)
+OP57:            (INS, New, OP56, null)
+OP58:            (INS, SimpleType, OP56, null)
+OP59:            (INS, InfixExpression, OP56, OP60 OP61 OP62)
+OP60:               (INS, StringLiteral, OP59, null)
+OP61:               (INS, Operator, OP59, null)
+OP62:               (INS, SimpleName, OP59, null)
+OP63:   (MOV, IfStatement, OP1, null)
+OP64:   (INS, IfStatement, OP1, OP65 OP69)
+OP65:      (INS, InfixExpression, OP64, OP66 OP67 OP68)
+OP66:         (INS, SimpleName, OP65, null)
+OP67:         (INS, Operator, OP65, null)
+OP68:         (INS, NumberLiteral, OP65, null)
+OP69:      (INS, ReturnStatement, OP64, OP70)
+OP70:         (INS, ClassInstanceCreation, OP69, OP71 OP72 OP73 OP74)
+OP71:            (INS, New, OP70, null)
+OP72:            (INS, SimpleType, OP70, null)
+OP73:            (INS, StringLiteral, OP70, null)
+OP74:            (INS, MethodInvocation, OP70, OP75 OP76)
+OP75:               (INS, SimpleName, OP74, null)
+OP76:               (INS, SimpleName, OP74, OP77 OP78)
+OP77:                  (INS, NumberLiteral, OP76, null)
+OP78:                  (INS, NumberLiteral, OP76, null)
+OP79:   (MOV, IfStatement, OP1, null)
+OP80:   (INS, IfStatement, OP1, OP81 OP85)
+OP81:      (INS, InfixExpression, OP80, OP82 OP83 OP84)
+OP82:         (INS, SimpleName, OP81, null)
+OP83:         (INS, Operator, OP81, null)
+OP84:         (INS, NumberLiteral, OP81, null)
+OP85:      (INS, ThrowStatement, OP80, OP86)
+OP86:         (INS, ClassInstanceCreation, OP85, OP87 OP88 OP89)
+OP87:            (INS, New, OP86, null)
+OP88:            (INS, SimpleType, OP86, null)
+OP89:            (INS, InfixExpression, OP86, OP90 OP91 OP92)
+OP90:               (INS, StringLiteral, OP89, null)
+OP91:               (INS, Operator, OP89, null)
+OP92:               (INS, SimpleName, OP89, null)
+OP93:   (MOV, VariableDeclarationStatement, OP1, null)
+OP94:   (MOV, IfStatement, OP1, null)
+OP95:   (INS, IfStatement, OP1, OP96 OP103)
+OP96:      (INS, InfixExpression, OP95, OP97 OP101 OP102)
+OP97:         (INS, MethodInvocation, OP96, OP98 OP99)
+OP98:            (INS, SimpleName, OP97, null)
+OP99:            (INS, SimpleName, OP97, OP100)
+OP100:               (INS, NumberLiteral, OP99, null)
+OP101:         (INS, Operator, OP96, null)
+OP102:         (INS, CharacterLiteral, OP96, null)
+OP103:      (INS, ThrowStatement, OP95, OP104)
+OP104:         (INS, ClassInstanceCreation, OP103, OP105 OP106 OP107)
+OP105:            (INS, New, OP104, null)
+OP106:            (INS, SimpleType, OP104, null)
+OP107:            (INS, InfixExpression, OP104, OP108 OP109 OP110)
+OP108:               (INS, StringLiteral, OP107, null)
+OP109:               (INS, Operator, OP107, null)
+OP110:               (INS, SimpleName, OP107, null)
+OP111:   (MOV, VariableDeclarationStatement, OP1, null)
+OP112:   (MOV, IfStatement, OP1, null)
+OP113:   (INS, ReturnStatement, OP1, OP114)
+OP114:      (INS, ClassInstanceCreation, OP113, OP115 OP116 OP117 OP118 OP123)
+OP115:         (INS, New, OP114, null)
+OP116:         (INS, SimpleType, OP114, null)
+OP117:         (INS, StringLiteral, OP114, null)
+OP118:         (INS, MethodInvocation, OP114, OP119 OP120)
+OP119:            (INS, SimpleName, OP118, null)
+OP120:            (INS, SimpleName, OP118, OP121 OP122)
+OP121:               (INS, NumberLiteral, OP120, null)
+OP122:               (INS, NumberLiteral, OP120, null)
+OP123:         (INS, MethodInvocation, OP114, OP124 OP125)
+OP124:            (INS, SimpleName, OP123, null)
+OP125:            (INS, SimpleName, OP123, OP126)
+OP126:               (INS, NumberLiteral, OP125, null)
+OP127:   (MOV, IfStatement, OP1, null)
+OP128:   (MOV, IfStatement, OP1, null)
+OP129:   (MOV, IfStatement, OP1, null)
+OP130:   (MOV, ReturnStatement, OP1, null)
+
+
+

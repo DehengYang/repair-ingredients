@@ -1,0 +1,22 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_15/src/org/mockito/internal/configuration/injection/FinalMockCandidateFilter.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_15/src/org/mockito/internal/configuration/injection/FinalMockCandidateFilter.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_15/src/org/mockito/internal/configuration/injection/FinalMockCandidateFilter.java	2020-01-05 22:33:18.580550534 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_15/src/org/mockito/internal/configuration/injection/FinalMockCandidateFilter.java	2020-01-05 22:33:21.988550521 -0800
+@@ -1,6 +1,7 @@
+ package org.mockito.internal.configuration.injection;
+ 
+ import org.mockito.exceptions.base.MockitoException;
++import org.mockito.internal.util.reflection.BeanPropertySetter;
+ import org.mockito.internal.util.reflection.FieldSetter;
+ 
+ import java.lang.reflect.Field;
+@@ -22,7 +23,9 @@
+             return new OngoingInjecter() {
+                 public boolean thenInject() {
+                     try {
++                        if (!new BeanPropertySetter(fieldInstance, field).set(matchingMock)) {
+                             new FieldSetter(fieldInstance, field).set(matchingMock);
++                        }
+                     } catch (Exception e) {
+                         throw new MockitoException("Problems injecting dependency in " + field.getName(), e);
+                     }

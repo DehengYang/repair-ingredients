@@ -1,0 +1,25 @@
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP8)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, PrimitiveType, OP1, null)
+OP4:   (INS, SimpleName, OP1, null)
+OP5:   (INS, SingleVariableDeclaration, OP1, OP6 OP7)
+OP6:      (INS, SimpleType, OP5, null)
+OP7:      (INS, SimpleName, OP5, null)
+OP8:   (INS, ExpressionStatement, OP1, OP9)
+OP9:      (INS, MethodInvocation, OP8, OP10)
+OP10:         (INS, SimpleName, OP9, OP11)
+OP11:            (INS, CastExpression, OP10, OP12 OP15)
+OP12:               (INS, ParameterizedType, OP11, OP13 OP14)
+OP13:                  (INS, SimpleType, OP12, null)
+OP14:                  (INS, WildcardType, OP12, null)
+OP15:               (INS, SimpleName, OP11, null)
+
+
+OP1:(UPD, MethodDeclaration, null, OP2)
+OP2:   (UPD, SingleVariableDeclaration, OP1, OP3 OP4)
+OP3:      (DEL, SimpleType, OP2, null)
+OP4:      (INS, ParameterizedType, OP2, OP5 OP6)
+OP5:         (INS, SimpleType, OP4, null)
+OP6:         (INS, WildcardType, OP4, null)
+
+

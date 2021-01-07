@@ -1,0 +1,11 @@
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, ClassInstanceCreation, OP2, OP4)
+OP4:         (UPD, ClassInstanceCreation, OP3, OP5)
+OP5:            (INS, MethodInvocation, OP4, OP6 OP7)
+OP6:               (INS, SimpleName, OP5, null)
+OP7:               (INS, SimpleName, OP5, OP8 OP9)
+OP8:                  (MOV, InfixExpression, OP7, null)
+OP9:                  (INS, NumberLiteral, OP7, null)
+
+

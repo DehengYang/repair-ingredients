@@ -1,0 +1,5 @@
+OP1:(UPD, SuperConstructorInvocation, null, OP2 OP3)
+OP2:   (UPD, SimpleName, OP1, null)
+OP3:   (UPD, SimpleName, OP1, null)
+
+

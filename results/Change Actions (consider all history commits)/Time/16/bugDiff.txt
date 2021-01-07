@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Time/Time_16/src/main/java/org/joda/time/format/DateTimeFormatter.java ../d4j-repo/fixed_bugs_dir/Time/Time_16/src/main/java/org/joda/time/format/DateTimeFormatter.java
+--- ../d4j-repo/Time/Time_16/src/main/java/org/joda/time/format/DateTimeFormatter.java	2021-01-06 03:38:49.309905952 -0800
++++ ../d4j-repo/fixed_bugs_dir/Time/Time_16/src/main/java/org/joda/time/format/DateTimeFormatter.java	2021-01-06 03:38:50.637951173 -0800
+@@ -706,7 +706,7 @@
+         chrono = selectChronology(chrono);
+         
+         DateTimeParserBucket bucket = new DateTimeParserBucket(
+-            instantLocal, chrono, iLocale, iPivotYear, iDefaultYear);
++            instantLocal, chrono, iLocale, iPivotYear, chrono.year().get(instantLocal));
+         int newPos = parser.parseInto(bucket, text, position);
+         instant.setMillis(bucket.computeMillis(false, text));
+         if (iOffsetParsed && bucket.getOffsetInteger() != null) {

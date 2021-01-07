@@ -1,0 +1,141 @@
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:MOCKITO_CORE.mock(classToMock,mockSettings) @TO@ MethodInvocation:MOCKITO_CORE.mock(classToMock,mockSettings,true) @AT@ 36089 @LENGTH@ 52
+---UPD MethodInvocation@@MOCKITO_CORE.mock(classToMock,mockSettings) @TO@ MOCKITO_CORE.mock(classToMock,mockSettings,true) @AT@ 36096 @LENGTH@ 44
+------UPD SimpleName@@MethodName:mock:[classToMock, mockSettings] @TO@ MethodName:mock:[classToMock, mockSettings, true] @AT@ 36109 @LENGTH@ 31
+---------INS BooleanLiteral@@true @TO@ SimpleName@@MethodName:mock:[classToMock, mockSettings] @AT@ 36141 @LENGTH@ 4
+, UPD ReturnStatement@@MethodInvocation:MOCKITO_CORE.mock((Class<T>)object.getClass(),withSettings().spiedInstance(object).defaultAnswer(CALLS_REAL_METHODS)) @TO@ MethodInvocation:MOCKITO_CORE.mock((Class<T>)object.getClass(),withSettings().spiedInstance(object).defaultAnswer(CALLS_REAL_METHODS),true) @AT@ 39088 @LENGTH@ 163
+---UPD MethodInvocation@@MOCKITO_CORE.mock((Class<T>)object.getClass(),withSettings().spiedInstance(object).defaultAnswer(CALLS_REAL_METHODS)) @TO@ MOCKITO_CORE.mock((Class<T>)object.getClass(),withSettings().spiedInstance(object).defaultAnswer(CALLS_REAL_METHODS),true) @AT@ 39095 @LENGTH@ 155
+------UPD SimpleName@@MethodName:mock:[(Class<T>)object.getClass(), withSettings().spiedInstance(object).defaultAnswer(CALLS_REAL_METHODS)] @TO@ MethodName:mock:[(Class<T>)object.getClass(), withSettings().spiedInstance(object).defaultAnswer(CALLS_REAL_METHODS), true] @AT@ 39108 @LENGTH@ 142
+---------INS BooleanLiteral@@true @TO@ SimpleName@@MethodName:mock:[(Class<T>)object.getClass(), withSettings().spiedInstance(object).defaultAnswer(CALLS_REAL_METHODS)] @AT@ 39257 @LENGTH@ 4
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (INS, BooleanLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:MOCKITO_CORE.mock(classToMock,mockSettings) @TO@ MethodInvocation:MOCKITO_CORE.mock(classToMock,mockSettings,true) @AT@ 36089 @LENGTH@ 52
+---UPD MethodInvocation@@MOCKITO_CORE.mock(classToMock,mockSettings) @TO@ MOCKITO_CORE.mock(classToMock,mockSettings,true) @AT@ 36096 @LENGTH@ 44
+------UPD SimpleName@@MethodName:mock:[classToMock, mockSettings] @TO@ MethodName:mock:[classToMock, mockSettings, true] @AT@ 36109 @LENGTH@ 31
+---------INS BooleanLiteral@@true @TO@ SimpleName@@MethodName:mock:[classToMock, mockSettings] @AT@ 36141 @LENGTH@ 4
+, UPD ReturnStatement@@MethodInvocation:MOCKITO_CORE.mock((Class<T>)object.getClass(),withSettings().spiedInstance(object).defaultAnswer(CALLS_REAL_METHODS)) @TO@ MethodInvocation:MOCKITO_CORE.mock((Class<T>)object.getClass(),withSettings().spiedInstance(object).defaultAnswer(CALLS_REAL_METHODS),true) @AT@ 39088 @LENGTH@ 163
+---UPD MethodInvocation@@MOCKITO_CORE.mock((Class<T>)object.getClass(),withSettings().spiedInstance(object).defaultAnswer(CALLS_REAL_METHODS)) @TO@ MOCKITO_CORE.mock((Class<T>)object.getClass(),withSettings().spiedInstance(object).defaultAnswer(CALLS_REAL_METHODS),true) @AT@ 39095 @LENGTH@ 155
+------UPD SimpleName@@MethodName:mock:[(Class<T>)object.getClass(), withSettings().spiedInstance(object).defaultAnswer(CALLS_REAL_METHODS)] @TO@ MethodName:mock:[(Class<T>)object.getClass(), withSettings().spiedInstance(object).defaultAnswer(CALLS_REAL_METHODS), true] @AT@ 39108 @LENGTH@ 142
+---------INS BooleanLiteral@@true @TO@ SimpleName@@MethodName:mock:[(Class<T>)object.getClass(), withSettings().spiedInstance(object).defaultAnswer(CALLS_REAL_METHODS)] @AT@ 39257 @LENGTH@ 4
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (INS, BooleanLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[DEL MethodDeclaration@@public, @@T, T, MethodName:mock, @@Argus:Class<T>+classToMock+MockSettings+mockSettings+boolean+shouldResetOngoingStubbing+ @AT@ 1176 @LENGTH@ 146
+---DEL Modifier@@public @AT@ 1176 @LENGTH@ 6
+---DEL SimpleType@@T @AT@ 1187 @LENGTH@ 1
+---DEL SimpleName@@MethodName:mock @AT@ 1189 @LENGTH@ 4
+---DEL SingleVariableDeclaration@@Class<T> classToMock @AT@ 1194 @LENGTH@ 20
+------DEL ParameterizedType@@Class<T> @AT@ 1194 @LENGTH@ 8
+---------DEL SimpleType@@Class @AT@ 1194 @LENGTH@ 5
+---------DEL SimpleType@@T @AT@ 1200 @LENGTH@ 1
+------DEL SimpleName@@classToMock @AT@ 1203 @LENGTH@ 11
+---DEL SingleVariableDeclaration@@MockSettings mockSettings @AT@ 1216 @LENGTH@ 25
+------DEL SimpleType@@MockSettings @AT@ 1216 @LENGTH@ 12
+------DEL SimpleName@@mockSettings @AT@ 1229 @LENGTH@ 12
+---DEL SingleVariableDeclaration@@boolean shouldResetOngoingStubbing @AT@ 1243 @LENGTH@ 34
+------DEL PrimitiveType@@boolean @AT@ 1243 @LENGTH@ 7
+------DEL SimpleName@@shouldResetOngoingStubbing @AT@ 1251 @LENGTH@ 26
+---DEL ReturnStatement@@MethodInvocation:mock(classToMock,mockSettings) @AT@ 1281 @LENGTH@ 39
+------DEL MethodInvocation@@mock(classToMock,mockSettings) @AT@ 1288 @LENGTH@ 31
+---------DEL SimpleName@@MethodName:mock:[classToMock, mockSettings] @AT@ 1288 @LENGTH@ 31
+------------DEL SimpleName@@classToMock @AT@ 1293 @LENGTH@ 11
+------------DEL SimpleName@@mockSettings @AT@ 1306 @LENGTH@ 12
+, UPD MethodDeclaration@@public, @@T, T, MethodName:mock, @@Argus:Class<T>+classToMock+MockSettings+mockSettings+ @TO@ public, @@T, T, MethodName:mock, @@Argus:Class<T>+classToMock+MockSettings+mockSettings+boolean+shouldResetOngoingStubbing+ @AT@ 1328 @LENGTH@ 253
+---INS SingleVariableDeclaration@@boolean shouldResetOngoingStubbing @TO@ MethodDeclaration@@public, @@T, T, MethodName:mock, @@Argus:Class<T>+classToMock+MockSettings+mockSettings+ @AT@ 1243 @LENGTH@ 34
+------INS PrimitiveType@@boolean @TO@ SingleVariableDeclaration@@boolean shouldResetOngoingStubbing @AT@ 1243 @LENGTH@ 7
+------INS SimpleName@@shouldResetOngoingStubbing @TO@ SingleVariableDeclaration@@boolean shouldResetOngoingStubbing @AT@ 1251 @LENGTH@ 26
+---INS IfStatement@@SimpleName:shouldResetOngoingStubbing @TO@ MethodDeclaration@@public, @@T, T, MethodName:mock, @@Argus:Class<T>+classToMock+MockSettings+mockSettings+ @AT@ 1332 @LENGTH@ 97
+------INS SimpleName@@shouldResetOngoingStubbing @TO@ IfStatement@@SimpleName:shouldResetOngoingStubbing @AT@ 1336 @LENGTH@ 26
+------MOV ExpressionStatement@@MethodInvocation:mockingProgress.resetOngoingStubbing() @TO@ IfStatement@@SimpleName:shouldResetOngoingStubbing @AT@ 1452 @LENGTH@ 39
+]
+
+CII:
+OP1:(DEL, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP10 OP13 OP16)
+OP2:   (DEL, Modifier, OP1, null)
+OP3:   (DEL, SimpleType, OP1, null)
+OP4:   (DEL, SimpleName, OP1, null)
+OP5:   (DEL, SingleVariableDeclaration, OP1, OP6 OP9)
+OP6:      (DEL, ParameterizedType, OP5, OP7 OP8)
+OP7:         (DEL, SimpleType, OP6, null)
+OP8:         (DEL, SimpleType, OP6, null)
+OP9:      (DEL, SimpleName, OP5, null)
+OP10:   (DEL, SingleVariableDeclaration, OP1, OP11 OP12)
+OP11:      (DEL, SimpleType, OP10, null)
+OP12:      (DEL, SimpleName, OP10, null)
+OP13:   (DEL, SingleVariableDeclaration, OP1, OP14 OP15)
+OP14:      (DEL, PrimitiveType, OP13, null)
+OP15:      (DEL, SimpleName, OP13, null)
+OP16:   (DEL, ReturnStatement, OP1, OP17)
+OP17:      (DEL, MethodInvocation, OP16, OP18)
+OP18:         (DEL, SimpleName, OP17, OP19 OP20)
+OP19:            (DEL, SimpleName, OP18, null)
+OP20:            (DEL, SimpleName, OP18, null)
+
+
+
+
+
+hASList: 
+[DEL MethodDeclaration@@public, @@T, T, MethodName:mock, @@Argus:Class<T>+classToMock+MockSettings+mockSettings+boolean+shouldResetOngoingStubbing+ @AT@ 1176 @LENGTH@ 146
+---DEL Modifier@@public @AT@ 1176 @LENGTH@ 6
+---DEL SimpleType@@T @AT@ 1187 @LENGTH@ 1
+---DEL SimpleName@@MethodName:mock @AT@ 1189 @LENGTH@ 4
+---DEL SingleVariableDeclaration@@Class<T> classToMock @AT@ 1194 @LENGTH@ 20
+------DEL ParameterizedType@@Class<T> @AT@ 1194 @LENGTH@ 8
+---------DEL SimpleType@@Class @AT@ 1194 @LENGTH@ 5
+---------DEL SimpleType@@T @AT@ 1200 @LENGTH@ 1
+------DEL SimpleName@@classToMock @AT@ 1203 @LENGTH@ 11
+---DEL SingleVariableDeclaration@@MockSettings mockSettings @AT@ 1216 @LENGTH@ 25
+------DEL SimpleType@@MockSettings @AT@ 1216 @LENGTH@ 12
+------DEL SimpleName@@mockSettings @AT@ 1229 @LENGTH@ 12
+---DEL SingleVariableDeclaration@@boolean shouldResetOngoingStubbing @AT@ 1243 @LENGTH@ 34
+------DEL PrimitiveType@@boolean @AT@ 1243 @LENGTH@ 7
+------DEL SimpleName@@shouldResetOngoingStubbing @AT@ 1251 @LENGTH@ 26
+---DEL ReturnStatement@@MethodInvocation:mock(classToMock,mockSettings) @AT@ 1281 @LENGTH@ 39
+------DEL MethodInvocation@@mock(classToMock,mockSettings) @AT@ 1288 @LENGTH@ 31
+---------DEL SimpleName@@MethodName:mock:[classToMock, mockSettings] @AT@ 1288 @LENGTH@ 31
+------------DEL SimpleName@@classToMock @AT@ 1293 @LENGTH@ 11
+------------DEL SimpleName@@mockSettings @AT@ 1306 @LENGTH@ 12
+, UPD MethodDeclaration@@public, @@T, T, MethodName:mock, @@Argus:Class<T>+classToMock+MockSettings+mockSettings+ @TO@ public, @@T, T, MethodName:mock, @@Argus:Class<T>+classToMock+MockSettings+mockSettings+boolean+shouldResetOngoingStubbing+ @AT@ 1328 @LENGTH@ 253
+---INS SingleVariableDeclaration@@boolean shouldResetOngoingStubbing @TO@ MethodDeclaration@@public, @@T, T, MethodName:mock, @@Argus:Class<T>+classToMock+MockSettings+mockSettings+ @AT@ 1243 @LENGTH@ 34
+------INS PrimitiveType@@boolean @TO@ SingleVariableDeclaration@@boolean shouldResetOngoingStubbing @AT@ 1243 @LENGTH@ 7
+------INS SimpleName@@shouldResetOngoingStubbing @TO@ SingleVariableDeclaration@@boolean shouldResetOngoingStubbing @AT@ 1251 @LENGTH@ 26
+---INS IfStatement@@SimpleName:shouldResetOngoingStubbing @TO@ MethodDeclaration@@public, @@T, T, MethodName:mock, @@Argus:Class<T>+classToMock+MockSettings+mockSettings+ @AT@ 1332 @LENGTH@ 97
+------INS SimpleName@@shouldResetOngoingStubbing @TO@ IfStatement@@SimpleName:shouldResetOngoingStubbing @AT@ 1336 @LENGTH@ 26
+------MOV ExpressionStatement@@MethodInvocation:mockingProgress.resetOngoingStubbing() @TO@ IfStatement@@SimpleName:shouldResetOngoingStubbing @AT@ 1452 @LENGTH@ 39
+]
+
+CII:
+OP1:(UPD, MethodDeclaration, null, OP2 OP5)
+OP2:   (INS, SingleVariableDeclaration, OP1, OP3 OP4)
+OP3:      (INS, PrimitiveType, OP2, null)
+OP4:      (INS, SimpleName, OP2, null)
+OP5:   (INS, IfStatement, OP1, OP6 OP7)
+OP6:      (INS, SimpleName, OP5, null)
+OP7:      (MOV, ExpressionStatement, OP5, null)
+
+
+

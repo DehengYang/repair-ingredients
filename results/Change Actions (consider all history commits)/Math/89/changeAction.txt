@@ -1,0 +1,15 @@
+OP1:(INS, IfStatement, null, OP2 OP8 OP9)
+OP2:   (INS, InstanceofExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Instanceof, OP2, null)
+OP5:      (INS, ParameterizedType, OP2, OP6 OP7)
+OP6:         (INS, SimpleType, OP5, null)
+OP7:         (INS, WildcardType, OP5, null)
+OP8:   (MOV, ExpressionStatement, OP1, null)
+OP9:   (INS, ThrowStatement, OP1, OP10)
+OP10:      (INS, ClassInstanceCreation, OP9, OP11 OP12 OP13)
+OP11:         (INS, New, OP10, null)
+OP12:         (INS, SimpleType, OP10, null)
+OP13:         (INS, StringLiteral, OP10, null)
+
+

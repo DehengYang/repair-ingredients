@@ -1,0 +1,12 @@
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP4 OP7)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, SimpleName, OP1, null)
+OP4:   (INS, SingleVariableDeclaration, OP1, OP5 OP6)
+OP5:      (INS, SimpleType, OP4, null)
+OP6:      (INS, SimpleName, OP4, null)
+OP7:   (INS, ExpressionStatement, OP1, OP8)
+OP8:      (INS, MethodInvocation, OP7, OP9)
+OP9:         (INS, SimpleName, OP8, OP10)
+OP10:            (INS, StringLiteral, OP9, null)
+
+

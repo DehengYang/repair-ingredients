@@ -1,0 +1,54 @@
+
+
+hASList: 
+[UPD ReturnStatement@@ConditionalExpression:isZero ? NaN : INF @TO@ SimpleName:NaN @AT@ 9638 @LENGTH@ 26
+---INS SimpleName@@NaN @TO@ ReturnStatement@@ConditionalExpression:isZero ? NaN : INF @AT@ 9645 @LENGTH@ 3
+---DEL ConditionalExpression@@isZero ? NaN : INF @AT@ 9645 @LENGTH@ 18
+------DEL SimpleName@@isZero @AT@ 9645 @LENGTH@ 6
+------DEL SimpleName@@NaN @AT@ 9654 @LENGTH@ 3
+------DEL SimpleName@@INF @AT@ 9660 @LENGTH@ 3
+, UPD ReturnStatement@@ConditionalExpression:isZero ? NaN : INF @TO@ SimpleName:NaN @AT@ 10865 @LENGTH@ 26
+---INS SimpleName@@NaN @TO@ ReturnStatement@@ConditionalExpression:isZero ? NaN : INF @AT@ 10857 @LENGTH@ 3
+---DEL ConditionalExpression@@isZero ? NaN : INF @AT@ 10872 @LENGTH@ 18
+------DEL SimpleName@@isZero @AT@ 10872 @LENGTH@ 6
+------DEL SimpleName@@NaN @AT@ 10881 @LENGTH@ 3
+------DEL SimpleName@@INF @AT@ 10887 @LENGTH@ 3
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2 OP3)
+OP2:   (INS, SimpleName, OP1, null)
+OP3:   (DEL, ConditionalExpression, OP1, OP4 OP5 OP6)
+OP4:      (DEL, SimpleName, OP3, null)
+OP5:      (DEL, SimpleName, OP3, null)
+OP6:      (DEL, SimpleName, OP3, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@ConditionalExpression:isZero ? NaN : INF @TO@ SimpleName:NaN @AT@ 9638 @LENGTH@ 26
+---INS SimpleName@@NaN @TO@ ReturnStatement@@ConditionalExpression:isZero ? NaN : INF @AT@ 9645 @LENGTH@ 3
+---DEL ConditionalExpression@@isZero ? NaN : INF @AT@ 9645 @LENGTH@ 18
+------DEL SimpleName@@isZero @AT@ 9645 @LENGTH@ 6
+------DEL SimpleName@@NaN @AT@ 9654 @LENGTH@ 3
+------DEL SimpleName@@INF @AT@ 9660 @LENGTH@ 3
+, UPD ReturnStatement@@ConditionalExpression:isZero ? NaN : INF @TO@ SimpleName:NaN @AT@ 10865 @LENGTH@ 26
+---INS SimpleName@@NaN @TO@ ReturnStatement@@ConditionalExpression:isZero ? NaN : INF @AT@ 10857 @LENGTH@ 3
+---DEL ConditionalExpression@@isZero ? NaN : INF @AT@ 10872 @LENGTH@ 18
+------DEL SimpleName@@isZero @AT@ 10872 @LENGTH@ 6
+------DEL SimpleName@@NaN @AT@ 10881 @LENGTH@ 3
+------DEL SimpleName@@INF @AT@ 10887 @LENGTH@ 3
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2 OP3)
+OP2:   (INS, SimpleName, OP1, null)
+OP3:   (DEL, ConditionalExpression, OP1, OP4 OP5 OP6)
+OP4:      (DEL, SimpleName, OP3, null)
+OP5:      (DEL, SimpleName, OP3, null)
+OP6:      (DEL, SimpleName, OP3, null)
+
+
+

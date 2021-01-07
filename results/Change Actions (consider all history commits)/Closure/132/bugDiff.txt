@@ -1,0 +1,15 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_132/src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_132/src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java
+--- ../d4j-repo/Closure/Closure_132/src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java	2021-01-06 03:50:01.144787161 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_132/src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java	2021-01-06 03:50:04.180890585 -0800
+@@ -779,7 +779,9 @@
+               // evaluates LHS before cond]
+               // NOTE - there are some circumstances where we can
+               // proceed even if there are side effects...
+-              !mayEffectMutableState(lhs)) {
++              !mayEffectMutableState(lhs) &&
++              (!mayHaveSideEffects(cond) ||
++                  (thenOp.isAssign() && thenOp.getFirstChild().isName()))) {
+ 
+             n.removeChild(cond);
+             Node assignName = thenOp.removeFirstChild();

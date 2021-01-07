@@ -1,0 +1,32 @@
+
+diff -Naur ../d4j-repo/Lang/Lang_62/src/java/org/apache/commons/lang/Entities.java ../d4j-repo/fixed_bugs_dir/Lang/Lang_62/src/java/org/apache/commons/lang/Entities.java
+--- ../d4j-repo/Lang/Lang_62/src/java/org/apache/commons/lang/Entities.java	2021-01-04 13:19:25.977088152 -0800
++++ ../d4j-repo/fixed_bugs_dir/Lang/Lang_62/src/java/org/apache/commons/lang/Entities.java	2021-01-04 13:19:29.529221513 -0800
+@@ -847,6 +847,9 @@
+                             } else {
+                                 entityValue = Integer.parseInt(entityName.substring(1));
+                             }
++                            if (entityValue > 0xFFFF) {
++                                entityValue = -1;
++                            }
+                         } catch (NumberFormatException ex) {
+                             entityValue = -1;
+                         }
+@@ -917,12 +920,17 @@
+                                     case 'X' :
+                                     case 'x' : {
+                                         entityValue = Integer.parseInt(entityContent.substring(2), 16);
++                                        break;
+                                     }
+                                     default : {
+                                         entityValue = Integer.parseInt(entityContent.substring(1), 10);
+                                     }
+                                 }
++                                if (entityValue > 0xFFFF) {
++                                    entityValue = -1;
++                                }
+                             } catch (NumberFormatException e) {
++                                entityValue = -1;
+                             }
+                         }
+                     } else { //escaped value content is an entity name

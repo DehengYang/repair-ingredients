@@ -1,0 +1,14 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_55/src/java/org/apache/commons/lang/time/StopWatch.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_55/src/java/org/apache/commons/lang/time/StopWatch.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_55/src/java/org/apache/commons/lang/time/StopWatch.java	2020-01-05 05:30:56.620615776 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_55/src/java/org/apache/commons/lang/time/StopWatch.java	2020-01-05 05:31:00.020587382 -0800
+@@ -115,7 +115,9 @@
+         if(this.runningState != STATE_RUNNING && this.runningState != STATE_SUSPENDED) {
+             throw new IllegalStateException("Stopwatch is not running. ");
+         }
++        if(this.runningState == STATE_RUNNING) {
+             stopTime = System.currentTimeMillis();
++        }
+         this.runningState = STATE_STOPPED;
+     }
+ 

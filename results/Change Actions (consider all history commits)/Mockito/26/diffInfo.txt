@@ -1,0 +1,13 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_26/src/org/mockito/internal/util/Primitives.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_26/src/org/mockito/internal/util/Primitives.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_26/src/org/mockito/internal/util/Primitives.java	2020-01-05 22:34:36.540550236 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_26/src/org/mockito/internal/util/Primitives.java	2020-01-05 22:34:40.468550221 -0800
+@@ -63,6 +63,6 @@
+         primitiveValues.put(int.class, 0);
+         primitiveValues.put(long.class, 0L);
+         primitiveValues.put(float.class, 0F);
+-        primitiveValues.put(double.class, 0);
++        primitiveValues.put(double.class, 0D);
+     }
+ }
+\ No newline at end of file

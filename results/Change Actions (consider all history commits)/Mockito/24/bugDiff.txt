@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Mockito/Mockito_24/src/org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_24/src/org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java
+--- ../d4j-repo/Mockito/Mockito_24/src/org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java	2021-01-06 03:36:11.004515857 -0800
++++ ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_24/src/org/mockito/internal/stubbing/defaultanswers/ReturnsEmptyValues.java	2021-01-06 03:36:14.712642108 -0800
+@@ -73,7 +73,7 @@
+             //see issue 184.
+             //mocks by default should return 0 if references are the same, otherwise some other value because they are not the same. Hence we return 1 (anything but 0 is good).
+             //Only for compareTo() method by the Comparable interface
+-            return 1;
++            return invocation.getMock() == invocation.getArguments()[0] ? 0 : 1;
+         }
+         
+         Class<?> returnType = invocation.getMethod().getReturnType();

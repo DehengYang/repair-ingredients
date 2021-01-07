@@ -1,0 +1,40 @@
+No.1 CCI matched.
+freq: 2
+CommitIds: afc5bb89 a925c010 
+FreqRank:39
+
+No.2 CCI matched.
+freq: 22
+CommitIds: 634d3482 470659bb a925c010 cf55a936 85ebd3f6 f79e36a6 c427a8fc 0f191f1a bcc618a8 e0f24476 a925c010 1bd90b76 a925c010 e15f06c0 15dbf27d ee88d188 2aed41e0 913b4982 85c3088a 15dbf27d 7227635d 913b4982 
+FreqRank:21
+
+No.3 CCI matched.
+freq: 1
+CommitIds: 7167392b 
+FreqRank:40
+
+No.4 CCI matched.
+freq: 3
+CommitIds: afc5bb89 5f41dde6 7cd8b316 
+FreqRank:38
+
+No.5 CCI matched.
+freq: 3
+CommitIds: afc5bb89 5f41dde6 7cd8b316 
+FreqRank:38
+
+No.8 CCI matched.
+freq: 3
+CommitIds: afac748f cbc530c6 4816bf05 
+FreqRank:38
+
+No.9 CCI matched.
+freq: 1
+CommitIds: afac748f 
+FreqRank:40
+
+No.10 CCI matched.
+freq: 1
+CommitIds: afac748f 
+FreqRank:40
+

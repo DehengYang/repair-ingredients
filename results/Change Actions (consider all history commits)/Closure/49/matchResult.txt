@@ -1,0 +1,45 @@
+No.2 CCI matched.
+freq: 10
+CommitIds: db6ecf32 c9e89727 c9e89727 de13c331 7faf5924 d48c365b 5bebea63 819dd2d2 7fe50e46 cb7f2a32 
+FreqRank:39
+
+No.3 CCI matched.
+freq: 20
+CommitIds: bbf3ed85 8451502c 58786c3f 58786c3f 8c5eb247 68544325 222eafd3 68544325 68544325 e7ce7f71 d3812122 52ecbc65 30994e27 7cc74859 2f5cb162 1c5d6203 9a185e0c 9a185e0c 9a185e0c 9a185e0c 
+FreqRank:29
+
+No.4 CCI matched.
+freq: 3
+CommitIds: 8c5eb247 222eafd3 f01925cb 
+FreqRank:46
+
+No.5 CCI matched.
+freq: 1
+CommitIds: fbaadc73 
+FreqRank:48
+
+No.6 CCI matched.
+freq: 3
+CommitIds: 8c5eb247 222eafd3 f01925cb 
+FreqRank:46
+
+No.7 CCI matched.
+freq: 20
+CommitIds: bbf3ed85 8451502c 58786c3f 58786c3f 8c5eb247 68544325 222eafd3 68544325 68544325 e7ce7f71 d3812122 52ecbc65 30994e27 7cc74859 2f5cb162 1c5d6203 9a185e0c 9a185e0c 9a185e0c 9a185e0c 
+FreqRank:29
+
+No.8 CCI matched.
+freq: 6
+CommitIds: 269cfb2c 3bee5d74 34fd5f82 9b4ae3ac 7437e9b6 c9e89727 
+FreqRank:43
+
+No.9 CCI matched.
+freq: 13
+CommitIds: a552292e ec82f50f efd3c178 c9e89727 14ddcfdc 18251df2 55e1258e c9e89727 cd40201a 5d397618 1c75a548 5da32cba 7647d956 
+FreqRank:36
+
+No.10 CCI matched.
+freq: 1
+CommitIds: fbaadc73 
+FreqRank:48
+

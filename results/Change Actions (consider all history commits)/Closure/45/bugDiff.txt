@@ -1,0 +1,35 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_45/src/com/google/javascript/jscomp/RemoveUnusedVars.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_45/src/com/google/javascript/jscomp/RemoveUnusedVars.java
+--- ../d4j-repo/Closure/Closure_45/src/com/google/javascript/jscomp/RemoveUnusedVars.java	2021-01-06 03:43:04.214586319 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_45/src/com/google/javascript/jscomp/RemoveUnusedVars.java	2021-01-06 03:43:06.226654843 -0800
+@@ -729,6 +729,7 @@
+             assignedToUnknownValue = true;
+           }
+ 
++          boolean maybeEscaped = false;
+           for (Assign assign : assignsByVar.get(var)) {
+             if (assign.isPropertyAssign) {
+               hasPropertyAssign = true;
+@@ -736,9 +737,12 @@
+                 assign.assignNode.getLastChild(), true)) {
+               assignedToUnknownValue = true;
+             }
++            if (assign.maybeAliased) {
++              maybeEscaped = true;
++            }
+           }
+ 
+-          if (assignedToUnknownValue && hasPropertyAssign) {
++          if ((assignedToUnknownValue || maybeEscaped) && hasPropertyAssign) {
+             changes = markReferencedVar(var) || changes;
+             maybeUnreferenced.remove(current);
+             current--;
+@@ -901,7 +905,7 @@
+       this.nameNode = nameNode;
+       this.isPropertyAssign = isPropertyAssign;
+ 
+-      this.maybeAliased = !assignNode.getParent().isExprResult();
++      this.maybeAliased = NodeUtil.isExpressionResultUsed(assignNode);
+       this.mayHaveSecondarySideEffects =
+           maybeAliased ||
+           NodeUtil.mayHaveSideEffects(assignNode.getFirstChild()) ||

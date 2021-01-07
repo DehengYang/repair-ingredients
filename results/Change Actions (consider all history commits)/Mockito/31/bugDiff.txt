@@ -1,0 +1,22 @@
+
+diff -Naur ../d4j-repo/Mockito/Mockito_31/src/org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_31/src/org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java
+--- ../d4j-repo/Mockito/Mockito_31/src/org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java	2021-01-06 03:36:56.018048451 -0800
++++ ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_31/src/org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java	2021-01-06 03:36:59.590170074 -0800
+@@ -6,6 +6,7 @@
+ 
+ import java.io.Serializable;
+ import java.lang.reflect.Method;
++import java.util.Arrays;
+ 
+ import org.mockito.Mockito;
+ import org.mockito.cglib.proxy.MethodInterceptor;
+@@ -57,7 +58,8 @@
+         }
+ 
+ 		private String formatMethodCall() {
+-			return invocation.getMethod().getName() + "()";
++			String args = Arrays.toString(invocation.getArguments());
++			return invocation.getMethod().getName() + "(" + args.substring(1, args.length() - 1) +	")";
+ 		}
+     }
+ 

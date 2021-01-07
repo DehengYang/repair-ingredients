@@ -1,0 +1,831 @@
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:withOuterClass(cls) @TO@ MethodInvocation:withParams(cls,outerClassInstance) @AT@ 470 @LENGTH@ 27
+---UPD MethodInvocation@@withOuterClass(cls) @TO@ withParams(cls,outerClassInstance) @AT@ 477 @LENGTH@ 19
+------UPD SimpleName@@MethodName:withOuterClass:[cls] @TO@ MethodName:withParams:[cls, outerClassInstance] @AT@ 477 @LENGTH@ 19
+---------INS SimpleName@@outerClassInstance @TO@ SimpleName@@MethodName:withOuterClass:[cls] @AT@ 493 @LENGTH@ 18
+, UPD MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @TO@ private, static, @@T, T, MethodName:withParams, @@Argus:Class<T>+cls+Object+params+ @AT@ 509 @LENGTH@ 438
+---UPD SimpleName@@MethodName:withOuterClass @TO@ MethodName:withParams @AT@ 523 @LENGTH@ 14
+---INS Modifier@@static @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 533 @LENGTH@ 6
+---INS SingleVariableDeclaration@@Object... params @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 571 @LENGTH@ 16
+------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object... params @AT@ 571 @LENGTH@ 6
+------INS SimpleName@@params @TO@ SingleVariableDeclaration@@Object... params @AT@ 581 @LENGTH@ 6
+---INS ThrowStatement@@MethodInvocation:paramsException(cls,null) @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 1136 @LENGTH@ 33
+------INS MethodInvocation@@paramsException(cls,null) @TO@ ThrowStatement@@MethodInvocation:paramsException(cls,null) @AT@ 1142 @LENGTH@ 26
+---------INS SimpleName@@MethodName:paramsException:[cls, null] @TO@ MethodInvocation@@paramsException(cls,null) @AT@ 1142 @LENGTH@ 26
+------------INS SimpleName@@cls @TO@ SimpleName@@MethodName:paramsException:[cls, null] @AT@ 1158 @LENGTH@ 3
+------------INS NullLiteral@@null @TO@ SimpleName@@MethodName:paramsException:[cls, null] @AT@ 1163 @LENGTH@ 4
+, DEL VariableDeclarationStatement@@Constructor<T> c=cls.getDeclaredConstructor(outerClassInstance.getClass()); @AT@ 725 @LENGTH@ 77
+---DEL ParameterizedType@@Constructor<T> @AT@ 725 @LENGTH@ 14
+------DEL SimpleType@@T @AT@ 737 @LENGTH@ 1
+---DEL VariableDeclarationFragment@@c=cls.getDeclaredConstructor(outerClassInstance.getClass()) @AT@ 740 @LENGTH@ 61
+------DEL SimpleName@@c @AT@ 740 @LENGTH@ 1
+------DEL MethodInvocation@@cls.getDeclaredConstructor(outerClassInstance.getClass()) @AT@ 744 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:getDeclaredConstructor:[outerClassInstance.getClass()] @AT@ 748 @LENGTH@ 53
+------------DEL MethodInvocation@@outerClassInstance.getClass() @AT@ 771 @LENGTH@ 29
+, INS EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @TO@ TryStatement@@try:[] @AT@ 762 @LENGTH@ 280
+---INS SingleVariableDeclaration@@Constructor<?> constructor @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 767 @LENGTH@ 26
+------INS ParameterizedType@@Constructor<?> @TO@ SingleVariableDeclaration@@Constructor<?> constructor @AT@ 767 @LENGTH@ 14
+---------MOV SimpleType@@Constructor @TO@ ParameterizedType@@Constructor<?> @AT@ 725 @LENGTH@ 11
+---------INS WildcardType@@? @TO@ ParameterizedType@@Constructor<?> @AT@ 779 @LENGTH@ 1
+------INS SimpleName@@constructor @TO@ SingleVariableDeclaration@@Constructor<?> constructor @AT@ 782 @LENGTH@ 11
+---INS MethodInvocation@@cls.getDeclaredConstructors() @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 796 @LENGTH@ 29
+------MOV SimpleName@@Name:cls @TO@ MethodInvocation@@cls.getDeclaredConstructors() @AT@ 744 @LENGTH@ 3
+------INS SimpleName@@MethodName:getDeclaredConstructors:[] @TO@ MethodInvocation@@cls.getDeclaredConstructors() @AT@ 800 @LENGTH@ 25
+---INS VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 845 @LENGTH@ 51
+------INS ArrayType@@Class<?>[] @TO@ VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @AT@ 845 @LENGTH@ 10
+---------INS ParameterizedType@@Class<?> @TO@ ArrayType@@Class<?>[] @AT@ 845 @LENGTH@ 8
+------------INS SimpleType@@Class @TO@ ParameterizedType@@Class<?> @AT@ 845 @LENGTH@ 5
+------------INS WildcardType@@? @TO@ ParameterizedType@@Class<?> @AT@ 851 @LENGTH@ 1
+------INS VariableDeclarationFragment@@types=constructor.getParameterTypes() @TO@ VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @AT@ 856 @LENGTH@ 39
+---------INS SimpleName@@types @TO@ VariableDeclarationFragment@@types=constructor.getParameterTypes() @AT@ 856 @LENGTH@ 5
+---------INS MethodInvocation@@constructor.getParameterTypes() @TO@ VariableDeclarationFragment@@types=constructor.getParameterTypes() @AT@ 864 @LENGTH@ 31
+------------MOV SimpleName@@Name:outerClassInstance @TO@ MethodInvocation@@constructor.getParameterTypes() @AT@ 771 @LENGTH@ 18
+------------MOV SimpleName@@MethodName:getClass:[] @TO@ MethodInvocation@@constructor.getParameterTypes() @AT@ 790 @LENGTH@ 10
+---INS IfStatement@@MethodInvocation:paramsMatch(types,params) @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 913 @LENGTH@ 115
+------INS MethodInvocation@@paramsMatch(types,params) @TO@ IfStatement@@MethodInvocation:paramsMatch(types,params) @AT@ 917 @LENGTH@ 26
+---------INS SimpleName@@MethodName:paramsMatch:[types, params] @TO@ MethodInvocation@@paramsMatch(types,params) @AT@ 917 @LENGTH@ 26
+------------INS SimpleName@@types @TO@ SimpleName@@MethodName:paramsMatch:[types, params] @AT@ 929 @LENGTH@ 5
+------------INS SimpleName@@params @TO@ SimpleName@@MethodName:paramsMatch:[types, params] @AT@ 936 @LENGTH@ 6
+------INS ReturnStatement@@CastExpression:(T)constructor.newInstance(params) @TO@ IfStatement@@MethodInvocation:paramsMatch(types,params) @AT@ 967 @LENGTH@ 43
+---------INS CastExpression@@(T)constructor.newInstance(params) @TO@ ReturnStatement@@CastExpression:(T)constructor.newInstance(params) @AT@ 974 @LENGTH@ 35
+------------INS SimpleType@@T @TO@ CastExpression@@(T)constructor.newInstance(params) @AT@ 975 @LENGTH@ 1
+------------INS MethodInvocation@@constructor.newInstance(params) @TO@ CastExpression@@(T)constructor.newInstance(params) @AT@ 978 @LENGTH@ 31
+---------------MOV SimpleName@@Name:c @TO@ MethodInvocation@@constructor.newInstance(params) @AT@ 822 @LENGTH@ 1
+---------------MOV SimpleName@@MethodName:newInstance:[outerClassInstance] @TO@ MethodInvocation@@constructor.newInstance(params) @AT@ 824 @LENGTH@ 31
+, DEL ReturnStatement@@MethodInvocation:c.newInstance(outerClassInstance) @AT@ 815 @LENGTH@ 41
+---DEL MethodInvocation@@c.newInstance(outerClassInstance) @AT@ 822 @LENGTH@ 33
+, INS MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @TO@ TypeDeclaration@@[public]ConstructorInstantiator, [Instantiator] @AT@ 1521 @LENGTH@ 334
+---INS Modifier@@private @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1521 @LENGTH@ 7
+---INS Modifier@@static @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1529 @LENGTH@ 6
+---INS PrimitiveType@@boolean @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1536 @LENGTH@ 7
+---INS SimpleName@@MethodName:paramsMatch @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1544 @LENGTH@ 11
+---INS SingleVariableDeclaration@@Class<?>[] types @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1556 @LENGTH@ 16
+------INS ArrayType@@Class<?>[] @TO@ SingleVariableDeclaration@@Class<?>[] types @AT@ 1556 @LENGTH@ 10
+---------INS ParameterizedType@@Class<?> @TO@ ArrayType@@Class<?>[] @AT@ 1556 @LENGTH@ 8
+------------INS SimpleType@@Class @TO@ ParameterizedType@@Class<?> @AT@ 1556 @LENGTH@ 5
+------------INS WildcardType@@? @TO@ ParameterizedType@@Class<?> @AT@ 1562 @LENGTH@ 1
+------INS SimpleName@@types @TO@ SingleVariableDeclaration@@Class<?>[] types @AT@ 1567 @LENGTH@ 5
+---INS SingleVariableDeclaration@@Object[] params @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1574 @LENGTH@ 15
+------INS ArrayType@@Object[] @TO@ SingleVariableDeclaration@@Object[] params @AT@ 1574 @LENGTH@ 8
+---------INS SimpleType@@Object @TO@ ArrayType@@Object[] @AT@ 1574 @LENGTH@ 6
+------INS SimpleName@@params @TO@ SingleVariableDeclaration@@Object[] params @AT@ 1583 @LENGTH@ 6
+---INS IfStatement@@InfixExpression:params.length != types.length @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1601 @LENGTH@ 72
+------INS InfixExpression@@params.length != types.length @TO@ IfStatement@@InfixExpression:params.length != types.length @AT@ 1605 @LENGTH@ 29
+---------INS QualifiedName@@params.length @TO@ InfixExpression@@params.length != types.length @AT@ 1605 @LENGTH@ 13
+------------INS SimpleName@@params @TO@ QualifiedName@@params.length @AT@ 1605 @LENGTH@ 6
+------------INS SimpleName@@length @TO@ QualifiedName@@params.length @AT@ 1612 @LENGTH@ 6
+---------INS Operator@@!= @TO@ InfixExpression@@params.length != types.length @AT@ 1618 @LENGTH@ 2
+---------INS QualifiedName@@types.length @TO@ InfixExpression@@params.length != types.length @AT@ 1622 @LENGTH@ 12
+------------INS SimpleName@@types @TO@ QualifiedName@@types.length @AT@ 1622 @LENGTH@ 5
+------------INS SimpleName@@length @TO@ QualifiedName@@types.length @AT@ 1628 @LENGTH@ 6
+------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:params.length != types.length @AT@ 1650 @LENGTH@ 13
+---------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 1657 @LENGTH@ 5
+---INS ForStatement@@[int i=0];i < params.length; [i++] @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1682 @LENGTH@ 146
+------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1687 @LENGTH@ 9
+---------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 1687 @LENGTH@ 3
+---------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 1691 @LENGTH@ 5
+------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 1691 @LENGTH@ 1
+------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 1695 @LENGTH@ 1
+------INS InfixExpression@@i < params.length @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1698 @LENGTH@ 17
+---------INS SimpleName@@i @TO@ InfixExpression@@i < params.length @AT@ 1698 @LENGTH@ 1
+---------INS Operator@@< @TO@ InfixExpression@@i < params.length @AT@ 1699 @LENGTH@ 1
+---------INS QualifiedName@@params.length @TO@ InfixExpression@@i < params.length @AT@ 1702 @LENGTH@ 13
+------------INS SimpleName@@params @TO@ QualifiedName@@params.length @AT@ 1702 @LENGTH@ 6
+------------INS SimpleName@@length @TO@ QualifiedName@@params.length @AT@ 1709 @LENGTH@ 6
+------INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1717 @LENGTH@ 3
+---------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 1717 @LENGTH@ 1
+---------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 1719 @LENGTH@ 2
+------INS IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1736 @LENGTH@ 82
+---------INS PrefixExpression@@!types[i].isInstance(params[i]) @TO@ IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @AT@ 1740 @LENGTH@ 31
+------------INS Operator@@! @TO@ PrefixExpression@@!types[i].isInstance(params[i]) @AT@ 1740 @LENGTH@ 1
+------------INS MethodInvocation@@types[i].isInstance(params[i]) @TO@ PrefixExpression@@!types[i].isInstance(params[i]) @AT@ 1741 @LENGTH@ 30
+---------------INS ArrayAccess@@types[i] @TO@ MethodInvocation@@types[i].isInstance(params[i]) @AT@ 1741 @LENGTH@ 8
+------------------INS SimpleName@@types @TO@ ArrayAccess@@types[i] @AT@ 1741 @LENGTH@ 5
+------------------INS SimpleName@@i @TO@ ArrayAccess@@types[i] @AT@ 1747 @LENGTH@ 1
+---------------INS SimpleName@@MethodName:isInstance:[params[i]] @TO@ MethodInvocation@@types[i].isInstance(params[i]) @AT@ 1750 @LENGTH@ 21
+------------------INS ArrayAccess@@params[i] @TO@ SimpleName@@MethodName:isInstance:[params[i]] @AT@ 1761 @LENGTH@ 9
+---------------------INS SimpleName@@params @TO@ ArrayAccess@@params[i] @AT@ 1761 @LENGTH@ 6
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@params[i] @AT@ 1768 @LENGTH@ 1
+---------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @AT@ 1791 @LENGTH@ 13
+------------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 1798 @LENGTH@ 5
+---INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1837 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 1844 @LENGTH@ 4
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (INS, SimpleName, OP3, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:withOuterClass(cls) @TO@ MethodInvocation:withParams(cls,outerClassInstance) @AT@ 470 @LENGTH@ 27
+---UPD MethodInvocation@@withOuterClass(cls) @TO@ withParams(cls,outerClassInstance) @AT@ 477 @LENGTH@ 19
+------UPD SimpleName@@MethodName:withOuterClass:[cls] @TO@ MethodName:withParams:[cls, outerClassInstance] @AT@ 477 @LENGTH@ 19
+---------INS SimpleName@@outerClassInstance @TO@ SimpleName@@MethodName:withOuterClass:[cls] @AT@ 493 @LENGTH@ 18
+, UPD MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @TO@ private, static, @@T, T, MethodName:withParams, @@Argus:Class<T>+cls+Object+params+ @AT@ 509 @LENGTH@ 438
+---UPD SimpleName@@MethodName:withOuterClass @TO@ MethodName:withParams @AT@ 523 @LENGTH@ 14
+---INS Modifier@@static @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 533 @LENGTH@ 6
+---INS SingleVariableDeclaration@@Object... params @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 571 @LENGTH@ 16
+------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object... params @AT@ 571 @LENGTH@ 6
+------INS SimpleName@@params @TO@ SingleVariableDeclaration@@Object... params @AT@ 581 @LENGTH@ 6
+---INS ThrowStatement@@MethodInvocation:paramsException(cls,null) @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 1136 @LENGTH@ 33
+------INS MethodInvocation@@paramsException(cls,null) @TO@ ThrowStatement@@MethodInvocation:paramsException(cls,null) @AT@ 1142 @LENGTH@ 26
+---------INS SimpleName@@MethodName:paramsException:[cls, null] @TO@ MethodInvocation@@paramsException(cls,null) @AT@ 1142 @LENGTH@ 26
+------------INS SimpleName@@cls @TO@ SimpleName@@MethodName:paramsException:[cls, null] @AT@ 1158 @LENGTH@ 3
+------------INS NullLiteral@@null @TO@ SimpleName@@MethodName:paramsException:[cls, null] @AT@ 1163 @LENGTH@ 4
+, DEL VariableDeclarationStatement@@Constructor<T> c=cls.getDeclaredConstructor(outerClassInstance.getClass()); @AT@ 725 @LENGTH@ 77
+---DEL ParameterizedType@@Constructor<T> @AT@ 725 @LENGTH@ 14
+------DEL SimpleType@@T @AT@ 737 @LENGTH@ 1
+---DEL VariableDeclarationFragment@@c=cls.getDeclaredConstructor(outerClassInstance.getClass()) @AT@ 740 @LENGTH@ 61
+------DEL SimpleName@@c @AT@ 740 @LENGTH@ 1
+------DEL MethodInvocation@@cls.getDeclaredConstructor(outerClassInstance.getClass()) @AT@ 744 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:getDeclaredConstructor:[outerClassInstance.getClass()] @AT@ 748 @LENGTH@ 53
+------------DEL MethodInvocation@@outerClassInstance.getClass() @AT@ 771 @LENGTH@ 29
+, INS EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @TO@ TryStatement@@try:[] @AT@ 762 @LENGTH@ 280
+---INS SingleVariableDeclaration@@Constructor<?> constructor @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 767 @LENGTH@ 26
+------INS ParameterizedType@@Constructor<?> @TO@ SingleVariableDeclaration@@Constructor<?> constructor @AT@ 767 @LENGTH@ 14
+---------MOV SimpleType@@Constructor @TO@ ParameterizedType@@Constructor<?> @AT@ 725 @LENGTH@ 11
+---------INS WildcardType@@? @TO@ ParameterizedType@@Constructor<?> @AT@ 779 @LENGTH@ 1
+------INS SimpleName@@constructor @TO@ SingleVariableDeclaration@@Constructor<?> constructor @AT@ 782 @LENGTH@ 11
+---INS MethodInvocation@@cls.getDeclaredConstructors() @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 796 @LENGTH@ 29
+------MOV SimpleName@@Name:cls @TO@ MethodInvocation@@cls.getDeclaredConstructors() @AT@ 744 @LENGTH@ 3
+------INS SimpleName@@MethodName:getDeclaredConstructors:[] @TO@ MethodInvocation@@cls.getDeclaredConstructors() @AT@ 800 @LENGTH@ 25
+---INS VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 845 @LENGTH@ 51
+------INS ArrayType@@Class<?>[] @TO@ VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @AT@ 845 @LENGTH@ 10
+---------INS ParameterizedType@@Class<?> @TO@ ArrayType@@Class<?>[] @AT@ 845 @LENGTH@ 8
+------------INS SimpleType@@Class @TO@ ParameterizedType@@Class<?> @AT@ 845 @LENGTH@ 5
+------------INS WildcardType@@? @TO@ ParameterizedType@@Class<?> @AT@ 851 @LENGTH@ 1
+------INS VariableDeclarationFragment@@types=constructor.getParameterTypes() @TO@ VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @AT@ 856 @LENGTH@ 39
+---------INS SimpleName@@types @TO@ VariableDeclarationFragment@@types=constructor.getParameterTypes() @AT@ 856 @LENGTH@ 5
+---------INS MethodInvocation@@constructor.getParameterTypes() @TO@ VariableDeclarationFragment@@types=constructor.getParameterTypes() @AT@ 864 @LENGTH@ 31
+------------MOV SimpleName@@Name:outerClassInstance @TO@ MethodInvocation@@constructor.getParameterTypes() @AT@ 771 @LENGTH@ 18
+------------MOV SimpleName@@MethodName:getClass:[] @TO@ MethodInvocation@@constructor.getParameterTypes() @AT@ 790 @LENGTH@ 10
+---INS IfStatement@@MethodInvocation:paramsMatch(types,params) @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 913 @LENGTH@ 115
+------INS MethodInvocation@@paramsMatch(types,params) @TO@ IfStatement@@MethodInvocation:paramsMatch(types,params) @AT@ 917 @LENGTH@ 26
+---------INS SimpleName@@MethodName:paramsMatch:[types, params] @TO@ MethodInvocation@@paramsMatch(types,params) @AT@ 917 @LENGTH@ 26
+------------INS SimpleName@@types @TO@ SimpleName@@MethodName:paramsMatch:[types, params] @AT@ 929 @LENGTH@ 5
+------------INS SimpleName@@params @TO@ SimpleName@@MethodName:paramsMatch:[types, params] @AT@ 936 @LENGTH@ 6
+------INS ReturnStatement@@CastExpression:(T)constructor.newInstance(params) @TO@ IfStatement@@MethodInvocation:paramsMatch(types,params) @AT@ 967 @LENGTH@ 43
+---------INS CastExpression@@(T)constructor.newInstance(params) @TO@ ReturnStatement@@CastExpression:(T)constructor.newInstance(params) @AT@ 974 @LENGTH@ 35
+------------INS SimpleType@@T @TO@ CastExpression@@(T)constructor.newInstance(params) @AT@ 975 @LENGTH@ 1
+------------INS MethodInvocation@@constructor.newInstance(params) @TO@ CastExpression@@(T)constructor.newInstance(params) @AT@ 978 @LENGTH@ 31
+---------------MOV SimpleName@@Name:c @TO@ MethodInvocation@@constructor.newInstance(params) @AT@ 822 @LENGTH@ 1
+---------------MOV SimpleName@@MethodName:newInstance:[outerClassInstance] @TO@ MethodInvocation@@constructor.newInstance(params) @AT@ 824 @LENGTH@ 31
+, DEL ReturnStatement@@MethodInvocation:c.newInstance(outerClassInstance) @AT@ 815 @LENGTH@ 41
+---DEL MethodInvocation@@c.newInstance(outerClassInstance) @AT@ 822 @LENGTH@ 33
+, INS MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @TO@ TypeDeclaration@@[public]ConstructorInstantiator, [Instantiator] @AT@ 1521 @LENGTH@ 334
+---INS Modifier@@private @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1521 @LENGTH@ 7
+---INS Modifier@@static @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1529 @LENGTH@ 6
+---INS PrimitiveType@@boolean @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1536 @LENGTH@ 7
+---INS SimpleName@@MethodName:paramsMatch @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1544 @LENGTH@ 11
+---INS SingleVariableDeclaration@@Class<?>[] types @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1556 @LENGTH@ 16
+------INS ArrayType@@Class<?>[] @TO@ SingleVariableDeclaration@@Class<?>[] types @AT@ 1556 @LENGTH@ 10
+---------INS ParameterizedType@@Class<?> @TO@ ArrayType@@Class<?>[] @AT@ 1556 @LENGTH@ 8
+------------INS SimpleType@@Class @TO@ ParameterizedType@@Class<?> @AT@ 1556 @LENGTH@ 5
+------------INS WildcardType@@? @TO@ ParameterizedType@@Class<?> @AT@ 1562 @LENGTH@ 1
+------INS SimpleName@@types @TO@ SingleVariableDeclaration@@Class<?>[] types @AT@ 1567 @LENGTH@ 5
+---INS SingleVariableDeclaration@@Object[] params @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1574 @LENGTH@ 15
+------INS ArrayType@@Object[] @TO@ SingleVariableDeclaration@@Object[] params @AT@ 1574 @LENGTH@ 8
+---------INS SimpleType@@Object @TO@ ArrayType@@Object[] @AT@ 1574 @LENGTH@ 6
+------INS SimpleName@@params @TO@ SingleVariableDeclaration@@Object[] params @AT@ 1583 @LENGTH@ 6
+---INS IfStatement@@InfixExpression:params.length != types.length @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1601 @LENGTH@ 72
+------INS InfixExpression@@params.length != types.length @TO@ IfStatement@@InfixExpression:params.length != types.length @AT@ 1605 @LENGTH@ 29
+---------INS QualifiedName@@params.length @TO@ InfixExpression@@params.length != types.length @AT@ 1605 @LENGTH@ 13
+------------INS SimpleName@@params @TO@ QualifiedName@@params.length @AT@ 1605 @LENGTH@ 6
+------------INS SimpleName@@length @TO@ QualifiedName@@params.length @AT@ 1612 @LENGTH@ 6
+---------INS Operator@@!= @TO@ InfixExpression@@params.length != types.length @AT@ 1618 @LENGTH@ 2
+---------INS QualifiedName@@types.length @TO@ InfixExpression@@params.length != types.length @AT@ 1622 @LENGTH@ 12
+------------INS SimpleName@@types @TO@ QualifiedName@@types.length @AT@ 1622 @LENGTH@ 5
+------------INS SimpleName@@length @TO@ QualifiedName@@types.length @AT@ 1628 @LENGTH@ 6
+------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:params.length != types.length @AT@ 1650 @LENGTH@ 13
+---------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 1657 @LENGTH@ 5
+---INS ForStatement@@[int i=0];i < params.length; [i++] @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1682 @LENGTH@ 146
+------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1687 @LENGTH@ 9
+---------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 1687 @LENGTH@ 3
+---------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 1691 @LENGTH@ 5
+------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 1691 @LENGTH@ 1
+------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 1695 @LENGTH@ 1
+------INS InfixExpression@@i < params.length @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1698 @LENGTH@ 17
+---------INS SimpleName@@i @TO@ InfixExpression@@i < params.length @AT@ 1698 @LENGTH@ 1
+---------INS Operator@@< @TO@ InfixExpression@@i < params.length @AT@ 1699 @LENGTH@ 1
+---------INS QualifiedName@@params.length @TO@ InfixExpression@@i < params.length @AT@ 1702 @LENGTH@ 13
+------------INS SimpleName@@params @TO@ QualifiedName@@params.length @AT@ 1702 @LENGTH@ 6
+------------INS SimpleName@@length @TO@ QualifiedName@@params.length @AT@ 1709 @LENGTH@ 6
+------INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1717 @LENGTH@ 3
+---------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 1717 @LENGTH@ 1
+---------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 1719 @LENGTH@ 2
+------INS IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1736 @LENGTH@ 82
+---------INS PrefixExpression@@!types[i].isInstance(params[i]) @TO@ IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @AT@ 1740 @LENGTH@ 31
+------------INS Operator@@! @TO@ PrefixExpression@@!types[i].isInstance(params[i]) @AT@ 1740 @LENGTH@ 1
+------------INS MethodInvocation@@types[i].isInstance(params[i]) @TO@ PrefixExpression@@!types[i].isInstance(params[i]) @AT@ 1741 @LENGTH@ 30
+---------------INS ArrayAccess@@types[i] @TO@ MethodInvocation@@types[i].isInstance(params[i]) @AT@ 1741 @LENGTH@ 8
+------------------INS SimpleName@@types @TO@ ArrayAccess@@types[i] @AT@ 1741 @LENGTH@ 5
+------------------INS SimpleName@@i @TO@ ArrayAccess@@types[i] @AT@ 1747 @LENGTH@ 1
+---------------INS SimpleName@@MethodName:isInstance:[params[i]] @TO@ MethodInvocation@@types[i].isInstance(params[i]) @AT@ 1750 @LENGTH@ 21
+------------------INS ArrayAccess@@params[i] @TO@ SimpleName@@MethodName:isInstance:[params[i]] @AT@ 1761 @LENGTH@ 9
+---------------------INS SimpleName@@params @TO@ ArrayAccess@@params[i] @AT@ 1761 @LENGTH@ 6
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@params[i] @AT@ 1768 @LENGTH@ 1
+---------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @AT@ 1791 @LENGTH@ 13
+------------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 1798 @LENGTH@ 5
+---INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1837 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 1844 @LENGTH@ 4
+]
+
+CII:
+OP1:(UPD, MethodDeclaration, null, OP2 OP3 OP4 OP7)
+OP2:   (UPD, SimpleName, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (INS, SingleVariableDeclaration, OP1, OP5 OP6)
+OP5:      (INS, SimpleType, OP4, null)
+OP6:      (INS, SimpleName, OP4, null)
+OP7:   (INS, ThrowStatement, OP1, OP8)
+OP8:      (INS, MethodInvocation, OP7, OP9)
+OP9:         (INS, SimpleName, OP8, OP10 OP11)
+OP10:            (INS, SimpleName, OP9, null)
+OP11:            (INS, NullLiteral, OP9, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:withOuterClass(cls) @TO@ MethodInvocation:withParams(cls,outerClassInstance) @AT@ 470 @LENGTH@ 27
+---UPD MethodInvocation@@withOuterClass(cls) @TO@ withParams(cls,outerClassInstance) @AT@ 477 @LENGTH@ 19
+------UPD SimpleName@@MethodName:withOuterClass:[cls] @TO@ MethodName:withParams:[cls, outerClassInstance] @AT@ 477 @LENGTH@ 19
+---------INS SimpleName@@outerClassInstance @TO@ SimpleName@@MethodName:withOuterClass:[cls] @AT@ 493 @LENGTH@ 18
+, UPD MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @TO@ private, static, @@T, T, MethodName:withParams, @@Argus:Class<T>+cls+Object+params+ @AT@ 509 @LENGTH@ 438
+---UPD SimpleName@@MethodName:withOuterClass @TO@ MethodName:withParams @AT@ 523 @LENGTH@ 14
+---INS Modifier@@static @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 533 @LENGTH@ 6
+---INS SingleVariableDeclaration@@Object... params @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 571 @LENGTH@ 16
+------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object... params @AT@ 571 @LENGTH@ 6
+------INS SimpleName@@params @TO@ SingleVariableDeclaration@@Object... params @AT@ 581 @LENGTH@ 6
+---INS ThrowStatement@@MethodInvocation:paramsException(cls,null) @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 1136 @LENGTH@ 33
+------INS MethodInvocation@@paramsException(cls,null) @TO@ ThrowStatement@@MethodInvocation:paramsException(cls,null) @AT@ 1142 @LENGTH@ 26
+---------INS SimpleName@@MethodName:paramsException:[cls, null] @TO@ MethodInvocation@@paramsException(cls,null) @AT@ 1142 @LENGTH@ 26
+------------INS SimpleName@@cls @TO@ SimpleName@@MethodName:paramsException:[cls, null] @AT@ 1158 @LENGTH@ 3
+------------INS NullLiteral@@null @TO@ SimpleName@@MethodName:paramsException:[cls, null] @AT@ 1163 @LENGTH@ 4
+, DEL VariableDeclarationStatement@@Constructor<T> c=cls.getDeclaredConstructor(outerClassInstance.getClass()); @AT@ 725 @LENGTH@ 77
+---DEL ParameterizedType@@Constructor<T> @AT@ 725 @LENGTH@ 14
+------DEL SimpleType@@T @AT@ 737 @LENGTH@ 1
+---DEL VariableDeclarationFragment@@c=cls.getDeclaredConstructor(outerClassInstance.getClass()) @AT@ 740 @LENGTH@ 61
+------DEL SimpleName@@c @AT@ 740 @LENGTH@ 1
+------DEL MethodInvocation@@cls.getDeclaredConstructor(outerClassInstance.getClass()) @AT@ 744 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:getDeclaredConstructor:[outerClassInstance.getClass()] @AT@ 748 @LENGTH@ 53
+------------DEL MethodInvocation@@outerClassInstance.getClass() @AT@ 771 @LENGTH@ 29
+, INS EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @TO@ TryStatement@@try:[] @AT@ 762 @LENGTH@ 280
+---INS SingleVariableDeclaration@@Constructor<?> constructor @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 767 @LENGTH@ 26
+------INS ParameterizedType@@Constructor<?> @TO@ SingleVariableDeclaration@@Constructor<?> constructor @AT@ 767 @LENGTH@ 14
+---------MOV SimpleType@@Constructor @TO@ ParameterizedType@@Constructor<?> @AT@ 725 @LENGTH@ 11
+---------INS WildcardType@@? @TO@ ParameterizedType@@Constructor<?> @AT@ 779 @LENGTH@ 1
+------INS SimpleName@@constructor @TO@ SingleVariableDeclaration@@Constructor<?> constructor @AT@ 782 @LENGTH@ 11
+---INS MethodInvocation@@cls.getDeclaredConstructors() @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 796 @LENGTH@ 29
+------MOV SimpleName@@Name:cls @TO@ MethodInvocation@@cls.getDeclaredConstructors() @AT@ 744 @LENGTH@ 3
+------INS SimpleName@@MethodName:getDeclaredConstructors:[] @TO@ MethodInvocation@@cls.getDeclaredConstructors() @AT@ 800 @LENGTH@ 25
+---INS VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 845 @LENGTH@ 51
+------INS ArrayType@@Class<?>[] @TO@ VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @AT@ 845 @LENGTH@ 10
+---------INS ParameterizedType@@Class<?> @TO@ ArrayType@@Class<?>[] @AT@ 845 @LENGTH@ 8
+------------INS SimpleType@@Class @TO@ ParameterizedType@@Class<?> @AT@ 845 @LENGTH@ 5
+------------INS WildcardType@@? @TO@ ParameterizedType@@Class<?> @AT@ 851 @LENGTH@ 1
+------INS VariableDeclarationFragment@@types=constructor.getParameterTypes() @TO@ VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @AT@ 856 @LENGTH@ 39
+---------INS SimpleName@@types @TO@ VariableDeclarationFragment@@types=constructor.getParameterTypes() @AT@ 856 @LENGTH@ 5
+---------INS MethodInvocation@@constructor.getParameterTypes() @TO@ VariableDeclarationFragment@@types=constructor.getParameterTypes() @AT@ 864 @LENGTH@ 31
+------------MOV SimpleName@@Name:outerClassInstance @TO@ MethodInvocation@@constructor.getParameterTypes() @AT@ 771 @LENGTH@ 18
+------------MOV SimpleName@@MethodName:getClass:[] @TO@ MethodInvocation@@constructor.getParameterTypes() @AT@ 790 @LENGTH@ 10
+---INS IfStatement@@MethodInvocation:paramsMatch(types,params) @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 913 @LENGTH@ 115
+------INS MethodInvocation@@paramsMatch(types,params) @TO@ IfStatement@@MethodInvocation:paramsMatch(types,params) @AT@ 917 @LENGTH@ 26
+---------INS SimpleName@@MethodName:paramsMatch:[types, params] @TO@ MethodInvocation@@paramsMatch(types,params) @AT@ 917 @LENGTH@ 26
+------------INS SimpleName@@types @TO@ SimpleName@@MethodName:paramsMatch:[types, params] @AT@ 929 @LENGTH@ 5
+------------INS SimpleName@@params @TO@ SimpleName@@MethodName:paramsMatch:[types, params] @AT@ 936 @LENGTH@ 6
+------INS ReturnStatement@@CastExpression:(T)constructor.newInstance(params) @TO@ IfStatement@@MethodInvocation:paramsMatch(types,params) @AT@ 967 @LENGTH@ 43
+---------INS CastExpression@@(T)constructor.newInstance(params) @TO@ ReturnStatement@@CastExpression:(T)constructor.newInstance(params) @AT@ 974 @LENGTH@ 35
+------------INS SimpleType@@T @TO@ CastExpression@@(T)constructor.newInstance(params) @AT@ 975 @LENGTH@ 1
+------------INS MethodInvocation@@constructor.newInstance(params) @TO@ CastExpression@@(T)constructor.newInstance(params) @AT@ 978 @LENGTH@ 31
+---------------MOV SimpleName@@Name:c @TO@ MethodInvocation@@constructor.newInstance(params) @AT@ 822 @LENGTH@ 1
+---------------MOV SimpleName@@MethodName:newInstance:[outerClassInstance] @TO@ MethodInvocation@@constructor.newInstance(params) @AT@ 824 @LENGTH@ 31
+, DEL ReturnStatement@@MethodInvocation:c.newInstance(outerClassInstance) @AT@ 815 @LENGTH@ 41
+---DEL MethodInvocation@@c.newInstance(outerClassInstance) @AT@ 822 @LENGTH@ 33
+, INS MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @TO@ TypeDeclaration@@[public]ConstructorInstantiator, [Instantiator] @AT@ 1521 @LENGTH@ 334
+---INS Modifier@@private @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1521 @LENGTH@ 7
+---INS Modifier@@static @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1529 @LENGTH@ 6
+---INS PrimitiveType@@boolean @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1536 @LENGTH@ 7
+---INS SimpleName@@MethodName:paramsMatch @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1544 @LENGTH@ 11
+---INS SingleVariableDeclaration@@Class<?>[] types @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1556 @LENGTH@ 16
+------INS ArrayType@@Class<?>[] @TO@ SingleVariableDeclaration@@Class<?>[] types @AT@ 1556 @LENGTH@ 10
+---------INS ParameterizedType@@Class<?> @TO@ ArrayType@@Class<?>[] @AT@ 1556 @LENGTH@ 8
+------------INS SimpleType@@Class @TO@ ParameterizedType@@Class<?> @AT@ 1556 @LENGTH@ 5
+------------INS WildcardType@@? @TO@ ParameterizedType@@Class<?> @AT@ 1562 @LENGTH@ 1
+------INS SimpleName@@types @TO@ SingleVariableDeclaration@@Class<?>[] types @AT@ 1567 @LENGTH@ 5
+---INS SingleVariableDeclaration@@Object[] params @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1574 @LENGTH@ 15
+------INS ArrayType@@Object[] @TO@ SingleVariableDeclaration@@Object[] params @AT@ 1574 @LENGTH@ 8
+---------INS SimpleType@@Object @TO@ ArrayType@@Object[] @AT@ 1574 @LENGTH@ 6
+------INS SimpleName@@params @TO@ SingleVariableDeclaration@@Object[] params @AT@ 1583 @LENGTH@ 6
+---INS IfStatement@@InfixExpression:params.length != types.length @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1601 @LENGTH@ 72
+------INS InfixExpression@@params.length != types.length @TO@ IfStatement@@InfixExpression:params.length != types.length @AT@ 1605 @LENGTH@ 29
+---------INS QualifiedName@@params.length @TO@ InfixExpression@@params.length != types.length @AT@ 1605 @LENGTH@ 13
+------------INS SimpleName@@params @TO@ QualifiedName@@params.length @AT@ 1605 @LENGTH@ 6
+------------INS SimpleName@@length @TO@ QualifiedName@@params.length @AT@ 1612 @LENGTH@ 6
+---------INS Operator@@!= @TO@ InfixExpression@@params.length != types.length @AT@ 1618 @LENGTH@ 2
+---------INS QualifiedName@@types.length @TO@ InfixExpression@@params.length != types.length @AT@ 1622 @LENGTH@ 12
+------------INS SimpleName@@types @TO@ QualifiedName@@types.length @AT@ 1622 @LENGTH@ 5
+------------INS SimpleName@@length @TO@ QualifiedName@@types.length @AT@ 1628 @LENGTH@ 6
+------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:params.length != types.length @AT@ 1650 @LENGTH@ 13
+---------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 1657 @LENGTH@ 5
+---INS ForStatement@@[int i=0];i < params.length; [i++] @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1682 @LENGTH@ 146
+------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1687 @LENGTH@ 9
+---------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 1687 @LENGTH@ 3
+---------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 1691 @LENGTH@ 5
+------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 1691 @LENGTH@ 1
+------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 1695 @LENGTH@ 1
+------INS InfixExpression@@i < params.length @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1698 @LENGTH@ 17
+---------INS SimpleName@@i @TO@ InfixExpression@@i < params.length @AT@ 1698 @LENGTH@ 1
+---------INS Operator@@< @TO@ InfixExpression@@i < params.length @AT@ 1699 @LENGTH@ 1
+---------INS QualifiedName@@params.length @TO@ InfixExpression@@i < params.length @AT@ 1702 @LENGTH@ 13
+------------INS SimpleName@@params @TO@ QualifiedName@@params.length @AT@ 1702 @LENGTH@ 6
+------------INS SimpleName@@length @TO@ QualifiedName@@params.length @AT@ 1709 @LENGTH@ 6
+------INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1717 @LENGTH@ 3
+---------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 1717 @LENGTH@ 1
+---------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 1719 @LENGTH@ 2
+------INS IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1736 @LENGTH@ 82
+---------INS PrefixExpression@@!types[i].isInstance(params[i]) @TO@ IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @AT@ 1740 @LENGTH@ 31
+------------INS Operator@@! @TO@ PrefixExpression@@!types[i].isInstance(params[i]) @AT@ 1740 @LENGTH@ 1
+------------INS MethodInvocation@@types[i].isInstance(params[i]) @TO@ PrefixExpression@@!types[i].isInstance(params[i]) @AT@ 1741 @LENGTH@ 30
+---------------INS ArrayAccess@@types[i] @TO@ MethodInvocation@@types[i].isInstance(params[i]) @AT@ 1741 @LENGTH@ 8
+------------------INS SimpleName@@types @TO@ ArrayAccess@@types[i] @AT@ 1741 @LENGTH@ 5
+------------------INS SimpleName@@i @TO@ ArrayAccess@@types[i] @AT@ 1747 @LENGTH@ 1
+---------------INS SimpleName@@MethodName:isInstance:[params[i]] @TO@ MethodInvocation@@types[i].isInstance(params[i]) @AT@ 1750 @LENGTH@ 21
+------------------INS ArrayAccess@@params[i] @TO@ SimpleName@@MethodName:isInstance:[params[i]] @AT@ 1761 @LENGTH@ 9
+---------------------INS SimpleName@@params @TO@ ArrayAccess@@params[i] @AT@ 1761 @LENGTH@ 6
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@params[i] @AT@ 1768 @LENGTH@ 1
+---------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @AT@ 1791 @LENGTH@ 13
+------------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 1798 @LENGTH@ 5
+---INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1837 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 1844 @LENGTH@ 4
+]
+
+CII:
+OP1:(DEL, VariableDeclarationStatement, null, OP2 OP4)
+OP2:   (DEL, ParameterizedType, OP1, OP3)
+OP3:      (DEL, SimpleType, OP2, null)
+OP4:   (DEL, VariableDeclarationFragment, OP1, OP5 OP6)
+OP5:      (DEL, SimpleName, OP4, null)
+OP6:      (DEL, MethodInvocation, OP4, OP7)
+OP7:         (DEL, SimpleName, OP6, OP8)
+OP8:            (DEL, MethodInvocation, OP7, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:withOuterClass(cls) @TO@ MethodInvocation:withParams(cls,outerClassInstance) @AT@ 470 @LENGTH@ 27
+---UPD MethodInvocation@@withOuterClass(cls) @TO@ withParams(cls,outerClassInstance) @AT@ 477 @LENGTH@ 19
+------UPD SimpleName@@MethodName:withOuterClass:[cls] @TO@ MethodName:withParams:[cls, outerClassInstance] @AT@ 477 @LENGTH@ 19
+---------INS SimpleName@@outerClassInstance @TO@ SimpleName@@MethodName:withOuterClass:[cls] @AT@ 493 @LENGTH@ 18
+, UPD MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @TO@ private, static, @@T, T, MethodName:withParams, @@Argus:Class<T>+cls+Object+params+ @AT@ 509 @LENGTH@ 438
+---UPD SimpleName@@MethodName:withOuterClass @TO@ MethodName:withParams @AT@ 523 @LENGTH@ 14
+---INS Modifier@@static @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 533 @LENGTH@ 6
+---INS SingleVariableDeclaration@@Object... params @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 571 @LENGTH@ 16
+------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object... params @AT@ 571 @LENGTH@ 6
+------INS SimpleName@@params @TO@ SingleVariableDeclaration@@Object... params @AT@ 581 @LENGTH@ 6
+---INS ThrowStatement@@MethodInvocation:paramsException(cls,null) @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 1136 @LENGTH@ 33
+------INS MethodInvocation@@paramsException(cls,null) @TO@ ThrowStatement@@MethodInvocation:paramsException(cls,null) @AT@ 1142 @LENGTH@ 26
+---------INS SimpleName@@MethodName:paramsException:[cls, null] @TO@ MethodInvocation@@paramsException(cls,null) @AT@ 1142 @LENGTH@ 26
+------------INS SimpleName@@cls @TO@ SimpleName@@MethodName:paramsException:[cls, null] @AT@ 1158 @LENGTH@ 3
+------------INS NullLiteral@@null @TO@ SimpleName@@MethodName:paramsException:[cls, null] @AT@ 1163 @LENGTH@ 4
+, DEL VariableDeclarationStatement@@Constructor<T> c=cls.getDeclaredConstructor(outerClassInstance.getClass()); @AT@ 725 @LENGTH@ 77
+---DEL ParameterizedType@@Constructor<T> @AT@ 725 @LENGTH@ 14
+------DEL SimpleType@@T @AT@ 737 @LENGTH@ 1
+---DEL VariableDeclarationFragment@@c=cls.getDeclaredConstructor(outerClassInstance.getClass()) @AT@ 740 @LENGTH@ 61
+------DEL SimpleName@@c @AT@ 740 @LENGTH@ 1
+------DEL MethodInvocation@@cls.getDeclaredConstructor(outerClassInstance.getClass()) @AT@ 744 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:getDeclaredConstructor:[outerClassInstance.getClass()] @AT@ 748 @LENGTH@ 53
+------------DEL MethodInvocation@@outerClassInstance.getClass() @AT@ 771 @LENGTH@ 29
+, INS EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @TO@ TryStatement@@try:[] @AT@ 762 @LENGTH@ 280
+---INS SingleVariableDeclaration@@Constructor<?> constructor @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 767 @LENGTH@ 26
+------INS ParameterizedType@@Constructor<?> @TO@ SingleVariableDeclaration@@Constructor<?> constructor @AT@ 767 @LENGTH@ 14
+---------MOV SimpleType@@Constructor @TO@ ParameterizedType@@Constructor<?> @AT@ 725 @LENGTH@ 11
+---------INS WildcardType@@? @TO@ ParameterizedType@@Constructor<?> @AT@ 779 @LENGTH@ 1
+------INS SimpleName@@constructor @TO@ SingleVariableDeclaration@@Constructor<?> constructor @AT@ 782 @LENGTH@ 11
+---INS MethodInvocation@@cls.getDeclaredConstructors() @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 796 @LENGTH@ 29
+------MOV SimpleName@@Name:cls @TO@ MethodInvocation@@cls.getDeclaredConstructors() @AT@ 744 @LENGTH@ 3
+------INS SimpleName@@MethodName:getDeclaredConstructors:[] @TO@ MethodInvocation@@cls.getDeclaredConstructors() @AT@ 800 @LENGTH@ 25
+---INS VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 845 @LENGTH@ 51
+------INS ArrayType@@Class<?>[] @TO@ VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @AT@ 845 @LENGTH@ 10
+---------INS ParameterizedType@@Class<?> @TO@ ArrayType@@Class<?>[] @AT@ 845 @LENGTH@ 8
+------------INS SimpleType@@Class @TO@ ParameterizedType@@Class<?> @AT@ 845 @LENGTH@ 5
+------------INS WildcardType@@? @TO@ ParameterizedType@@Class<?> @AT@ 851 @LENGTH@ 1
+------INS VariableDeclarationFragment@@types=constructor.getParameterTypes() @TO@ VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @AT@ 856 @LENGTH@ 39
+---------INS SimpleName@@types @TO@ VariableDeclarationFragment@@types=constructor.getParameterTypes() @AT@ 856 @LENGTH@ 5
+---------INS MethodInvocation@@constructor.getParameterTypes() @TO@ VariableDeclarationFragment@@types=constructor.getParameterTypes() @AT@ 864 @LENGTH@ 31
+------------MOV SimpleName@@Name:outerClassInstance @TO@ MethodInvocation@@constructor.getParameterTypes() @AT@ 771 @LENGTH@ 18
+------------MOV SimpleName@@MethodName:getClass:[] @TO@ MethodInvocation@@constructor.getParameterTypes() @AT@ 790 @LENGTH@ 10
+---INS IfStatement@@MethodInvocation:paramsMatch(types,params) @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 913 @LENGTH@ 115
+------INS MethodInvocation@@paramsMatch(types,params) @TO@ IfStatement@@MethodInvocation:paramsMatch(types,params) @AT@ 917 @LENGTH@ 26
+---------INS SimpleName@@MethodName:paramsMatch:[types, params] @TO@ MethodInvocation@@paramsMatch(types,params) @AT@ 917 @LENGTH@ 26
+------------INS SimpleName@@types @TO@ SimpleName@@MethodName:paramsMatch:[types, params] @AT@ 929 @LENGTH@ 5
+------------INS SimpleName@@params @TO@ SimpleName@@MethodName:paramsMatch:[types, params] @AT@ 936 @LENGTH@ 6
+------INS ReturnStatement@@CastExpression:(T)constructor.newInstance(params) @TO@ IfStatement@@MethodInvocation:paramsMatch(types,params) @AT@ 967 @LENGTH@ 43
+---------INS CastExpression@@(T)constructor.newInstance(params) @TO@ ReturnStatement@@CastExpression:(T)constructor.newInstance(params) @AT@ 974 @LENGTH@ 35
+------------INS SimpleType@@T @TO@ CastExpression@@(T)constructor.newInstance(params) @AT@ 975 @LENGTH@ 1
+------------INS MethodInvocation@@constructor.newInstance(params) @TO@ CastExpression@@(T)constructor.newInstance(params) @AT@ 978 @LENGTH@ 31
+---------------MOV SimpleName@@Name:c @TO@ MethodInvocation@@constructor.newInstance(params) @AT@ 822 @LENGTH@ 1
+---------------MOV SimpleName@@MethodName:newInstance:[outerClassInstance] @TO@ MethodInvocation@@constructor.newInstance(params) @AT@ 824 @LENGTH@ 31
+, DEL ReturnStatement@@MethodInvocation:c.newInstance(outerClassInstance) @AT@ 815 @LENGTH@ 41
+---DEL MethodInvocation@@c.newInstance(outerClassInstance) @AT@ 822 @LENGTH@ 33
+, INS MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @TO@ TypeDeclaration@@[public]ConstructorInstantiator, [Instantiator] @AT@ 1521 @LENGTH@ 334
+---INS Modifier@@private @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1521 @LENGTH@ 7
+---INS Modifier@@static @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1529 @LENGTH@ 6
+---INS PrimitiveType@@boolean @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1536 @LENGTH@ 7
+---INS SimpleName@@MethodName:paramsMatch @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1544 @LENGTH@ 11
+---INS SingleVariableDeclaration@@Class<?>[] types @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1556 @LENGTH@ 16
+------INS ArrayType@@Class<?>[] @TO@ SingleVariableDeclaration@@Class<?>[] types @AT@ 1556 @LENGTH@ 10
+---------INS ParameterizedType@@Class<?> @TO@ ArrayType@@Class<?>[] @AT@ 1556 @LENGTH@ 8
+------------INS SimpleType@@Class @TO@ ParameterizedType@@Class<?> @AT@ 1556 @LENGTH@ 5
+------------INS WildcardType@@? @TO@ ParameterizedType@@Class<?> @AT@ 1562 @LENGTH@ 1
+------INS SimpleName@@types @TO@ SingleVariableDeclaration@@Class<?>[] types @AT@ 1567 @LENGTH@ 5
+---INS SingleVariableDeclaration@@Object[] params @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1574 @LENGTH@ 15
+------INS ArrayType@@Object[] @TO@ SingleVariableDeclaration@@Object[] params @AT@ 1574 @LENGTH@ 8
+---------INS SimpleType@@Object @TO@ ArrayType@@Object[] @AT@ 1574 @LENGTH@ 6
+------INS SimpleName@@params @TO@ SingleVariableDeclaration@@Object[] params @AT@ 1583 @LENGTH@ 6
+---INS IfStatement@@InfixExpression:params.length != types.length @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1601 @LENGTH@ 72
+------INS InfixExpression@@params.length != types.length @TO@ IfStatement@@InfixExpression:params.length != types.length @AT@ 1605 @LENGTH@ 29
+---------INS QualifiedName@@params.length @TO@ InfixExpression@@params.length != types.length @AT@ 1605 @LENGTH@ 13
+------------INS SimpleName@@params @TO@ QualifiedName@@params.length @AT@ 1605 @LENGTH@ 6
+------------INS SimpleName@@length @TO@ QualifiedName@@params.length @AT@ 1612 @LENGTH@ 6
+---------INS Operator@@!= @TO@ InfixExpression@@params.length != types.length @AT@ 1618 @LENGTH@ 2
+---------INS QualifiedName@@types.length @TO@ InfixExpression@@params.length != types.length @AT@ 1622 @LENGTH@ 12
+------------INS SimpleName@@types @TO@ QualifiedName@@types.length @AT@ 1622 @LENGTH@ 5
+------------INS SimpleName@@length @TO@ QualifiedName@@types.length @AT@ 1628 @LENGTH@ 6
+------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:params.length != types.length @AT@ 1650 @LENGTH@ 13
+---------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 1657 @LENGTH@ 5
+---INS ForStatement@@[int i=0];i < params.length; [i++] @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1682 @LENGTH@ 146
+------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1687 @LENGTH@ 9
+---------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 1687 @LENGTH@ 3
+---------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 1691 @LENGTH@ 5
+------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 1691 @LENGTH@ 1
+------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 1695 @LENGTH@ 1
+------INS InfixExpression@@i < params.length @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1698 @LENGTH@ 17
+---------INS SimpleName@@i @TO@ InfixExpression@@i < params.length @AT@ 1698 @LENGTH@ 1
+---------INS Operator@@< @TO@ InfixExpression@@i < params.length @AT@ 1699 @LENGTH@ 1
+---------INS QualifiedName@@params.length @TO@ InfixExpression@@i < params.length @AT@ 1702 @LENGTH@ 13
+------------INS SimpleName@@params @TO@ QualifiedName@@params.length @AT@ 1702 @LENGTH@ 6
+------------INS SimpleName@@length @TO@ QualifiedName@@params.length @AT@ 1709 @LENGTH@ 6
+------INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1717 @LENGTH@ 3
+---------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 1717 @LENGTH@ 1
+---------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 1719 @LENGTH@ 2
+------INS IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1736 @LENGTH@ 82
+---------INS PrefixExpression@@!types[i].isInstance(params[i]) @TO@ IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @AT@ 1740 @LENGTH@ 31
+------------INS Operator@@! @TO@ PrefixExpression@@!types[i].isInstance(params[i]) @AT@ 1740 @LENGTH@ 1
+------------INS MethodInvocation@@types[i].isInstance(params[i]) @TO@ PrefixExpression@@!types[i].isInstance(params[i]) @AT@ 1741 @LENGTH@ 30
+---------------INS ArrayAccess@@types[i] @TO@ MethodInvocation@@types[i].isInstance(params[i]) @AT@ 1741 @LENGTH@ 8
+------------------INS SimpleName@@types @TO@ ArrayAccess@@types[i] @AT@ 1741 @LENGTH@ 5
+------------------INS SimpleName@@i @TO@ ArrayAccess@@types[i] @AT@ 1747 @LENGTH@ 1
+---------------INS SimpleName@@MethodName:isInstance:[params[i]] @TO@ MethodInvocation@@types[i].isInstance(params[i]) @AT@ 1750 @LENGTH@ 21
+------------------INS ArrayAccess@@params[i] @TO@ SimpleName@@MethodName:isInstance:[params[i]] @AT@ 1761 @LENGTH@ 9
+---------------------INS SimpleName@@params @TO@ ArrayAccess@@params[i] @AT@ 1761 @LENGTH@ 6
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@params[i] @AT@ 1768 @LENGTH@ 1
+---------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @AT@ 1791 @LENGTH@ 13
+------------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 1798 @LENGTH@ 5
+---INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1837 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 1844 @LENGTH@ 4
+]
+
+CII:
+OP1:(INS, EnhancedForStatement, null, OP2 OP7 OP10 OP20)
+OP2:   (INS, SingleVariableDeclaration, OP1, OP3 OP6)
+OP3:      (INS, ParameterizedType, OP2, OP4 OP5)
+OP4:         (MOV, SimpleType, OP3, null)
+OP5:         (INS, WildcardType, OP3, null)
+OP6:      (INS, SimpleName, OP2, null)
+OP7:   (INS, MethodInvocation, OP1, OP8 OP9)
+OP8:      (MOV, SimpleName, OP7, null)
+OP9:      (INS, SimpleName, OP7, null)
+OP10:   (INS, VariableDeclarationStatement, OP1, OP11 OP15)
+OP11:      (INS, ArrayType, OP10, OP12)
+OP12:         (INS, ParameterizedType, OP11, OP13 OP14)
+OP13:            (INS, SimpleType, OP12, null)
+OP14:            (INS, WildcardType, OP12, null)
+OP15:      (INS, VariableDeclarationFragment, OP10, OP16 OP17)
+OP16:         (INS, SimpleName, OP15, null)
+OP17:         (INS, MethodInvocation, OP15, OP18 OP19)
+OP18:            (MOV, SimpleName, OP17, null)
+OP19:            (MOV, SimpleName, OP17, null)
+OP20:   (INS, IfStatement, OP1, OP21 OP25)
+OP21:      (INS, MethodInvocation, OP20, OP22)
+OP22:         (INS, SimpleName, OP21, OP23 OP24)
+OP23:            (INS, SimpleName, OP22, null)
+OP24:            (INS, SimpleName, OP22, null)
+OP25:      (INS, ReturnStatement, OP20, OP26)
+OP26:         (INS, CastExpression, OP25, OP27 OP28)
+OP27:            (INS, SimpleType, OP26, null)
+OP28:            (INS, MethodInvocation, OP26, OP29 OP30)
+OP29:               (MOV, SimpleName, OP28, null)
+OP30:               (MOV, SimpleName, OP28, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:withOuterClass(cls) @TO@ MethodInvocation:withParams(cls,outerClassInstance) @AT@ 470 @LENGTH@ 27
+---UPD MethodInvocation@@withOuterClass(cls) @TO@ withParams(cls,outerClassInstance) @AT@ 477 @LENGTH@ 19
+------UPD SimpleName@@MethodName:withOuterClass:[cls] @TO@ MethodName:withParams:[cls, outerClassInstance] @AT@ 477 @LENGTH@ 19
+---------INS SimpleName@@outerClassInstance @TO@ SimpleName@@MethodName:withOuterClass:[cls] @AT@ 493 @LENGTH@ 18
+, UPD MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @TO@ private, static, @@T, T, MethodName:withParams, @@Argus:Class<T>+cls+Object+params+ @AT@ 509 @LENGTH@ 438
+---UPD SimpleName@@MethodName:withOuterClass @TO@ MethodName:withParams @AT@ 523 @LENGTH@ 14
+---INS Modifier@@static @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 533 @LENGTH@ 6
+---INS SingleVariableDeclaration@@Object... params @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 571 @LENGTH@ 16
+------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object... params @AT@ 571 @LENGTH@ 6
+------INS SimpleName@@params @TO@ SingleVariableDeclaration@@Object... params @AT@ 581 @LENGTH@ 6
+---INS ThrowStatement@@MethodInvocation:paramsException(cls,null) @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 1136 @LENGTH@ 33
+------INS MethodInvocation@@paramsException(cls,null) @TO@ ThrowStatement@@MethodInvocation:paramsException(cls,null) @AT@ 1142 @LENGTH@ 26
+---------INS SimpleName@@MethodName:paramsException:[cls, null] @TO@ MethodInvocation@@paramsException(cls,null) @AT@ 1142 @LENGTH@ 26
+------------INS SimpleName@@cls @TO@ SimpleName@@MethodName:paramsException:[cls, null] @AT@ 1158 @LENGTH@ 3
+------------INS NullLiteral@@null @TO@ SimpleName@@MethodName:paramsException:[cls, null] @AT@ 1163 @LENGTH@ 4
+, DEL VariableDeclarationStatement@@Constructor<T> c=cls.getDeclaredConstructor(outerClassInstance.getClass()); @AT@ 725 @LENGTH@ 77
+---DEL ParameterizedType@@Constructor<T> @AT@ 725 @LENGTH@ 14
+------DEL SimpleType@@T @AT@ 737 @LENGTH@ 1
+---DEL VariableDeclarationFragment@@c=cls.getDeclaredConstructor(outerClassInstance.getClass()) @AT@ 740 @LENGTH@ 61
+------DEL SimpleName@@c @AT@ 740 @LENGTH@ 1
+------DEL MethodInvocation@@cls.getDeclaredConstructor(outerClassInstance.getClass()) @AT@ 744 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:getDeclaredConstructor:[outerClassInstance.getClass()] @AT@ 748 @LENGTH@ 53
+------------DEL MethodInvocation@@outerClassInstance.getClass() @AT@ 771 @LENGTH@ 29
+, INS EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @TO@ TryStatement@@try:[] @AT@ 762 @LENGTH@ 280
+---INS SingleVariableDeclaration@@Constructor<?> constructor @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 767 @LENGTH@ 26
+------INS ParameterizedType@@Constructor<?> @TO@ SingleVariableDeclaration@@Constructor<?> constructor @AT@ 767 @LENGTH@ 14
+---------MOV SimpleType@@Constructor @TO@ ParameterizedType@@Constructor<?> @AT@ 725 @LENGTH@ 11
+---------INS WildcardType@@? @TO@ ParameterizedType@@Constructor<?> @AT@ 779 @LENGTH@ 1
+------INS SimpleName@@constructor @TO@ SingleVariableDeclaration@@Constructor<?> constructor @AT@ 782 @LENGTH@ 11
+---INS MethodInvocation@@cls.getDeclaredConstructors() @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 796 @LENGTH@ 29
+------MOV SimpleName@@Name:cls @TO@ MethodInvocation@@cls.getDeclaredConstructors() @AT@ 744 @LENGTH@ 3
+------INS SimpleName@@MethodName:getDeclaredConstructors:[] @TO@ MethodInvocation@@cls.getDeclaredConstructors() @AT@ 800 @LENGTH@ 25
+---INS VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 845 @LENGTH@ 51
+------INS ArrayType@@Class<?>[] @TO@ VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @AT@ 845 @LENGTH@ 10
+---------INS ParameterizedType@@Class<?> @TO@ ArrayType@@Class<?>[] @AT@ 845 @LENGTH@ 8
+------------INS SimpleType@@Class @TO@ ParameterizedType@@Class<?> @AT@ 845 @LENGTH@ 5
+------------INS WildcardType@@? @TO@ ParameterizedType@@Class<?> @AT@ 851 @LENGTH@ 1
+------INS VariableDeclarationFragment@@types=constructor.getParameterTypes() @TO@ VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @AT@ 856 @LENGTH@ 39
+---------INS SimpleName@@types @TO@ VariableDeclarationFragment@@types=constructor.getParameterTypes() @AT@ 856 @LENGTH@ 5
+---------INS MethodInvocation@@constructor.getParameterTypes() @TO@ VariableDeclarationFragment@@types=constructor.getParameterTypes() @AT@ 864 @LENGTH@ 31
+------------MOV SimpleName@@Name:outerClassInstance @TO@ MethodInvocation@@constructor.getParameterTypes() @AT@ 771 @LENGTH@ 18
+------------MOV SimpleName@@MethodName:getClass:[] @TO@ MethodInvocation@@constructor.getParameterTypes() @AT@ 790 @LENGTH@ 10
+---INS IfStatement@@MethodInvocation:paramsMatch(types,params) @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 913 @LENGTH@ 115
+------INS MethodInvocation@@paramsMatch(types,params) @TO@ IfStatement@@MethodInvocation:paramsMatch(types,params) @AT@ 917 @LENGTH@ 26
+---------INS SimpleName@@MethodName:paramsMatch:[types, params] @TO@ MethodInvocation@@paramsMatch(types,params) @AT@ 917 @LENGTH@ 26
+------------INS SimpleName@@types @TO@ SimpleName@@MethodName:paramsMatch:[types, params] @AT@ 929 @LENGTH@ 5
+------------INS SimpleName@@params @TO@ SimpleName@@MethodName:paramsMatch:[types, params] @AT@ 936 @LENGTH@ 6
+------INS ReturnStatement@@CastExpression:(T)constructor.newInstance(params) @TO@ IfStatement@@MethodInvocation:paramsMatch(types,params) @AT@ 967 @LENGTH@ 43
+---------INS CastExpression@@(T)constructor.newInstance(params) @TO@ ReturnStatement@@CastExpression:(T)constructor.newInstance(params) @AT@ 974 @LENGTH@ 35
+------------INS SimpleType@@T @TO@ CastExpression@@(T)constructor.newInstance(params) @AT@ 975 @LENGTH@ 1
+------------INS MethodInvocation@@constructor.newInstance(params) @TO@ CastExpression@@(T)constructor.newInstance(params) @AT@ 978 @LENGTH@ 31
+---------------MOV SimpleName@@Name:c @TO@ MethodInvocation@@constructor.newInstance(params) @AT@ 822 @LENGTH@ 1
+---------------MOV SimpleName@@MethodName:newInstance:[outerClassInstance] @TO@ MethodInvocation@@constructor.newInstance(params) @AT@ 824 @LENGTH@ 31
+, DEL ReturnStatement@@MethodInvocation:c.newInstance(outerClassInstance) @AT@ 815 @LENGTH@ 41
+---DEL MethodInvocation@@c.newInstance(outerClassInstance) @AT@ 822 @LENGTH@ 33
+, INS MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @TO@ TypeDeclaration@@[public]ConstructorInstantiator, [Instantiator] @AT@ 1521 @LENGTH@ 334
+---INS Modifier@@private @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1521 @LENGTH@ 7
+---INS Modifier@@static @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1529 @LENGTH@ 6
+---INS PrimitiveType@@boolean @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1536 @LENGTH@ 7
+---INS SimpleName@@MethodName:paramsMatch @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1544 @LENGTH@ 11
+---INS SingleVariableDeclaration@@Class<?>[] types @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1556 @LENGTH@ 16
+------INS ArrayType@@Class<?>[] @TO@ SingleVariableDeclaration@@Class<?>[] types @AT@ 1556 @LENGTH@ 10
+---------INS ParameterizedType@@Class<?> @TO@ ArrayType@@Class<?>[] @AT@ 1556 @LENGTH@ 8
+------------INS SimpleType@@Class @TO@ ParameterizedType@@Class<?> @AT@ 1556 @LENGTH@ 5
+------------INS WildcardType@@? @TO@ ParameterizedType@@Class<?> @AT@ 1562 @LENGTH@ 1
+------INS SimpleName@@types @TO@ SingleVariableDeclaration@@Class<?>[] types @AT@ 1567 @LENGTH@ 5
+---INS SingleVariableDeclaration@@Object[] params @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1574 @LENGTH@ 15
+------INS ArrayType@@Object[] @TO@ SingleVariableDeclaration@@Object[] params @AT@ 1574 @LENGTH@ 8
+---------INS SimpleType@@Object @TO@ ArrayType@@Object[] @AT@ 1574 @LENGTH@ 6
+------INS SimpleName@@params @TO@ SingleVariableDeclaration@@Object[] params @AT@ 1583 @LENGTH@ 6
+---INS IfStatement@@InfixExpression:params.length != types.length @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1601 @LENGTH@ 72
+------INS InfixExpression@@params.length != types.length @TO@ IfStatement@@InfixExpression:params.length != types.length @AT@ 1605 @LENGTH@ 29
+---------INS QualifiedName@@params.length @TO@ InfixExpression@@params.length != types.length @AT@ 1605 @LENGTH@ 13
+------------INS SimpleName@@params @TO@ QualifiedName@@params.length @AT@ 1605 @LENGTH@ 6
+------------INS SimpleName@@length @TO@ QualifiedName@@params.length @AT@ 1612 @LENGTH@ 6
+---------INS Operator@@!= @TO@ InfixExpression@@params.length != types.length @AT@ 1618 @LENGTH@ 2
+---------INS QualifiedName@@types.length @TO@ InfixExpression@@params.length != types.length @AT@ 1622 @LENGTH@ 12
+------------INS SimpleName@@types @TO@ QualifiedName@@types.length @AT@ 1622 @LENGTH@ 5
+------------INS SimpleName@@length @TO@ QualifiedName@@types.length @AT@ 1628 @LENGTH@ 6
+------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:params.length != types.length @AT@ 1650 @LENGTH@ 13
+---------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 1657 @LENGTH@ 5
+---INS ForStatement@@[int i=0];i < params.length; [i++] @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1682 @LENGTH@ 146
+------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1687 @LENGTH@ 9
+---------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 1687 @LENGTH@ 3
+---------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 1691 @LENGTH@ 5
+------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 1691 @LENGTH@ 1
+------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 1695 @LENGTH@ 1
+------INS InfixExpression@@i < params.length @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1698 @LENGTH@ 17
+---------INS SimpleName@@i @TO@ InfixExpression@@i < params.length @AT@ 1698 @LENGTH@ 1
+---------INS Operator@@< @TO@ InfixExpression@@i < params.length @AT@ 1699 @LENGTH@ 1
+---------INS QualifiedName@@params.length @TO@ InfixExpression@@i < params.length @AT@ 1702 @LENGTH@ 13
+------------INS SimpleName@@params @TO@ QualifiedName@@params.length @AT@ 1702 @LENGTH@ 6
+------------INS SimpleName@@length @TO@ QualifiedName@@params.length @AT@ 1709 @LENGTH@ 6
+------INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1717 @LENGTH@ 3
+---------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 1717 @LENGTH@ 1
+---------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 1719 @LENGTH@ 2
+------INS IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1736 @LENGTH@ 82
+---------INS PrefixExpression@@!types[i].isInstance(params[i]) @TO@ IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @AT@ 1740 @LENGTH@ 31
+------------INS Operator@@! @TO@ PrefixExpression@@!types[i].isInstance(params[i]) @AT@ 1740 @LENGTH@ 1
+------------INS MethodInvocation@@types[i].isInstance(params[i]) @TO@ PrefixExpression@@!types[i].isInstance(params[i]) @AT@ 1741 @LENGTH@ 30
+---------------INS ArrayAccess@@types[i] @TO@ MethodInvocation@@types[i].isInstance(params[i]) @AT@ 1741 @LENGTH@ 8
+------------------INS SimpleName@@types @TO@ ArrayAccess@@types[i] @AT@ 1741 @LENGTH@ 5
+------------------INS SimpleName@@i @TO@ ArrayAccess@@types[i] @AT@ 1747 @LENGTH@ 1
+---------------INS SimpleName@@MethodName:isInstance:[params[i]] @TO@ MethodInvocation@@types[i].isInstance(params[i]) @AT@ 1750 @LENGTH@ 21
+------------------INS ArrayAccess@@params[i] @TO@ SimpleName@@MethodName:isInstance:[params[i]] @AT@ 1761 @LENGTH@ 9
+---------------------INS SimpleName@@params @TO@ ArrayAccess@@params[i] @AT@ 1761 @LENGTH@ 6
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@params[i] @AT@ 1768 @LENGTH@ 1
+---------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @AT@ 1791 @LENGTH@ 13
+------------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 1798 @LENGTH@ 5
+---INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1837 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 1844 @LENGTH@ 4
+]
+
+CII:
+OP1:(DEL, ReturnStatement, null, OP2)
+OP2:   (DEL, MethodInvocation, OP1, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:withOuterClass(cls) @TO@ MethodInvocation:withParams(cls,outerClassInstance) @AT@ 470 @LENGTH@ 27
+---UPD MethodInvocation@@withOuterClass(cls) @TO@ withParams(cls,outerClassInstance) @AT@ 477 @LENGTH@ 19
+------UPD SimpleName@@MethodName:withOuterClass:[cls] @TO@ MethodName:withParams:[cls, outerClassInstance] @AT@ 477 @LENGTH@ 19
+---------INS SimpleName@@outerClassInstance @TO@ SimpleName@@MethodName:withOuterClass:[cls] @AT@ 493 @LENGTH@ 18
+, UPD MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @TO@ private, static, @@T, T, MethodName:withParams, @@Argus:Class<T>+cls+Object+params+ @AT@ 509 @LENGTH@ 438
+---UPD SimpleName@@MethodName:withOuterClass @TO@ MethodName:withParams @AT@ 523 @LENGTH@ 14
+---INS Modifier@@static @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 533 @LENGTH@ 6
+---INS SingleVariableDeclaration@@Object... params @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 571 @LENGTH@ 16
+------INS SimpleType@@Object @TO@ SingleVariableDeclaration@@Object... params @AT@ 571 @LENGTH@ 6
+------INS SimpleName@@params @TO@ SingleVariableDeclaration@@Object... params @AT@ 581 @LENGTH@ 6
+---INS ThrowStatement@@MethodInvocation:paramsException(cls,null) @TO@ MethodDeclaration@@private, @@T, T, MethodName:withOuterClass, @@Argus:Class<T>+cls+ @AT@ 1136 @LENGTH@ 33
+------INS MethodInvocation@@paramsException(cls,null) @TO@ ThrowStatement@@MethodInvocation:paramsException(cls,null) @AT@ 1142 @LENGTH@ 26
+---------INS SimpleName@@MethodName:paramsException:[cls, null] @TO@ MethodInvocation@@paramsException(cls,null) @AT@ 1142 @LENGTH@ 26
+------------INS SimpleName@@cls @TO@ SimpleName@@MethodName:paramsException:[cls, null] @AT@ 1158 @LENGTH@ 3
+------------INS NullLiteral@@null @TO@ SimpleName@@MethodName:paramsException:[cls, null] @AT@ 1163 @LENGTH@ 4
+, DEL VariableDeclarationStatement@@Constructor<T> c=cls.getDeclaredConstructor(outerClassInstance.getClass()); @AT@ 725 @LENGTH@ 77
+---DEL ParameterizedType@@Constructor<T> @AT@ 725 @LENGTH@ 14
+------DEL SimpleType@@T @AT@ 737 @LENGTH@ 1
+---DEL VariableDeclarationFragment@@c=cls.getDeclaredConstructor(outerClassInstance.getClass()) @AT@ 740 @LENGTH@ 61
+------DEL SimpleName@@c @AT@ 740 @LENGTH@ 1
+------DEL MethodInvocation@@cls.getDeclaredConstructor(outerClassInstance.getClass()) @AT@ 744 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:getDeclaredConstructor:[outerClassInstance.getClass()] @AT@ 748 @LENGTH@ 53
+------------DEL MethodInvocation@@outerClassInstance.getClass() @AT@ 771 @LENGTH@ 29
+, INS EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @TO@ TryStatement@@try:[] @AT@ 762 @LENGTH@ 280
+---INS SingleVariableDeclaration@@Constructor<?> constructor @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 767 @LENGTH@ 26
+------INS ParameterizedType@@Constructor<?> @TO@ SingleVariableDeclaration@@Constructor<?> constructor @AT@ 767 @LENGTH@ 14
+---------MOV SimpleType@@Constructor @TO@ ParameterizedType@@Constructor<?> @AT@ 725 @LENGTH@ 11
+---------INS WildcardType@@? @TO@ ParameterizedType@@Constructor<?> @AT@ 779 @LENGTH@ 1
+------INS SimpleName@@constructor @TO@ SingleVariableDeclaration@@Constructor<?> constructor @AT@ 782 @LENGTH@ 11
+---INS MethodInvocation@@cls.getDeclaredConstructors() @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 796 @LENGTH@ 29
+------MOV SimpleName@@Name:cls @TO@ MethodInvocation@@cls.getDeclaredConstructors() @AT@ 744 @LENGTH@ 3
+------INS SimpleName@@MethodName:getDeclaredConstructors:[] @TO@ MethodInvocation@@cls.getDeclaredConstructors() @AT@ 800 @LENGTH@ 25
+---INS VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 845 @LENGTH@ 51
+------INS ArrayType@@Class<?>[] @TO@ VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @AT@ 845 @LENGTH@ 10
+---------INS ParameterizedType@@Class<?> @TO@ ArrayType@@Class<?>[] @AT@ 845 @LENGTH@ 8
+------------INS SimpleType@@Class @TO@ ParameterizedType@@Class<?> @AT@ 845 @LENGTH@ 5
+------------INS WildcardType@@? @TO@ ParameterizedType@@Class<?> @AT@ 851 @LENGTH@ 1
+------INS VariableDeclarationFragment@@types=constructor.getParameterTypes() @TO@ VariableDeclarationStatement@@Class<?>[] types=constructor.getParameterTypes(); @AT@ 856 @LENGTH@ 39
+---------INS SimpleName@@types @TO@ VariableDeclarationFragment@@types=constructor.getParameterTypes() @AT@ 856 @LENGTH@ 5
+---------INS MethodInvocation@@constructor.getParameterTypes() @TO@ VariableDeclarationFragment@@types=constructor.getParameterTypes() @AT@ 864 @LENGTH@ 31
+------------MOV SimpleName@@Name:outerClassInstance @TO@ MethodInvocation@@constructor.getParameterTypes() @AT@ 771 @LENGTH@ 18
+------------MOV SimpleName@@MethodName:getClass:[] @TO@ MethodInvocation@@constructor.getParameterTypes() @AT@ 790 @LENGTH@ 10
+---INS IfStatement@@MethodInvocation:paramsMatch(types,params) @TO@ EnhancedForStatement@@Constructor<?> constructor, MethodInvocation:cls.getDeclaredConstructors() @AT@ 913 @LENGTH@ 115
+------INS MethodInvocation@@paramsMatch(types,params) @TO@ IfStatement@@MethodInvocation:paramsMatch(types,params) @AT@ 917 @LENGTH@ 26
+---------INS SimpleName@@MethodName:paramsMatch:[types, params] @TO@ MethodInvocation@@paramsMatch(types,params) @AT@ 917 @LENGTH@ 26
+------------INS SimpleName@@types @TO@ SimpleName@@MethodName:paramsMatch:[types, params] @AT@ 929 @LENGTH@ 5
+------------INS SimpleName@@params @TO@ SimpleName@@MethodName:paramsMatch:[types, params] @AT@ 936 @LENGTH@ 6
+------INS ReturnStatement@@CastExpression:(T)constructor.newInstance(params) @TO@ IfStatement@@MethodInvocation:paramsMatch(types,params) @AT@ 967 @LENGTH@ 43
+---------INS CastExpression@@(T)constructor.newInstance(params) @TO@ ReturnStatement@@CastExpression:(T)constructor.newInstance(params) @AT@ 974 @LENGTH@ 35
+------------INS SimpleType@@T @TO@ CastExpression@@(T)constructor.newInstance(params) @AT@ 975 @LENGTH@ 1
+------------INS MethodInvocation@@constructor.newInstance(params) @TO@ CastExpression@@(T)constructor.newInstance(params) @AT@ 978 @LENGTH@ 31
+---------------MOV SimpleName@@Name:c @TO@ MethodInvocation@@constructor.newInstance(params) @AT@ 822 @LENGTH@ 1
+---------------MOV SimpleName@@MethodName:newInstance:[outerClassInstance] @TO@ MethodInvocation@@constructor.newInstance(params) @AT@ 824 @LENGTH@ 31
+, DEL ReturnStatement@@MethodInvocation:c.newInstance(outerClassInstance) @AT@ 815 @LENGTH@ 41
+---DEL MethodInvocation@@c.newInstance(outerClassInstance) @AT@ 822 @LENGTH@ 33
+, INS MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @TO@ TypeDeclaration@@[public]ConstructorInstantiator, [Instantiator] @AT@ 1521 @LENGTH@ 334
+---INS Modifier@@private @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1521 @LENGTH@ 7
+---INS Modifier@@static @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1529 @LENGTH@ 6
+---INS PrimitiveType@@boolean @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1536 @LENGTH@ 7
+---INS SimpleName@@MethodName:paramsMatch @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1544 @LENGTH@ 11
+---INS SingleVariableDeclaration@@Class<?>[] types @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1556 @LENGTH@ 16
+------INS ArrayType@@Class<?>[] @TO@ SingleVariableDeclaration@@Class<?>[] types @AT@ 1556 @LENGTH@ 10
+---------INS ParameterizedType@@Class<?> @TO@ ArrayType@@Class<?>[] @AT@ 1556 @LENGTH@ 8
+------------INS SimpleType@@Class @TO@ ParameterizedType@@Class<?> @AT@ 1556 @LENGTH@ 5
+------------INS WildcardType@@? @TO@ ParameterizedType@@Class<?> @AT@ 1562 @LENGTH@ 1
+------INS SimpleName@@types @TO@ SingleVariableDeclaration@@Class<?>[] types @AT@ 1567 @LENGTH@ 5
+---INS SingleVariableDeclaration@@Object[] params @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1574 @LENGTH@ 15
+------INS ArrayType@@Object[] @TO@ SingleVariableDeclaration@@Object[] params @AT@ 1574 @LENGTH@ 8
+---------INS SimpleType@@Object @TO@ ArrayType@@Object[] @AT@ 1574 @LENGTH@ 6
+------INS SimpleName@@params @TO@ SingleVariableDeclaration@@Object[] params @AT@ 1583 @LENGTH@ 6
+---INS IfStatement@@InfixExpression:params.length != types.length @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1601 @LENGTH@ 72
+------INS InfixExpression@@params.length != types.length @TO@ IfStatement@@InfixExpression:params.length != types.length @AT@ 1605 @LENGTH@ 29
+---------INS QualifiedName@@params.length @TO@ InfixExpression@@params.length != types.length @AT@ 1605 @LENGTH@ 13
+------------INS SimpleName@@params @TO@ QualifiedName@@params.length @AT@ 1605 @LENGTH@ 6
+------------INS SimpleName@@length @TO@ QualifiedName@@params.length @AT@ 1612 @LENGTH@ 6
+---------INS Operator@@!= @TO@ InfixExpression@@params.length != types.length @AT@ 1618 @LENGTH@ 2
+---------INS QualifiedName@@types.length @TO@ InfixExpression@@params.length != types.length @AT@ 1622 @LENGTH@ 12
+------------INS SimpleName@@types @TO@ QualifiedName@@types.length @AT@ 1622 @LENGTH@ 5
+------------INS SimpleName@@length @TO@ QualifiedName@@types.length @AT@ 1628 @LENGTH@ 6
+------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:params.length != types.length @AT@ 1650 @LENGTH@ 13
+---------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 1657 @LENGTH@ 5
+---INS ForStatement@@[int i=0];i < params.length; [i++] @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1682 @LENGTH@ 146
+------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1687 @LENGTH@ 9
+---------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 1687 @LENGTH@ 3
+---------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 1691 @LENGTH@ 5
+------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 1691 @LENGTH@ 1
+------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 1695 @LENGTH@ 1
+------INS InfixExpression@@i < params.length @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1698 @LENGTH@ 17
+---------INS SimpleName@@i @TO@ InfixExpression@@i < params.length @AT@ 1698 @LENGTH@ 1
+---------INS Operator@@< @TO@ InfixExpression@@i < params.length @AT@ 1699 @LENGTH@ 1
+---------INS QualifiedName@@params.length @TO@ InfixExpression@@i < params.length @AT@ 1702 @LENGTH@ 13
+------------INS SimpleName@@params @TO@ QualifiedName@@params.length @AT@ 1702 @LENGTH@ 6
+------------INS SimpleName@@length @TO@ QualifiedName@@params.length @AT@ 1709 @LENGTH@ 6
+------INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1717 @LENGTH@ 3
+---------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 1717 @LENGTH@ 1
+---------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 1719 @LENGTH@ 2
+------INS IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @TO@ ForStatement@@[int i=0];i < params.length; [i++] @AT@ 1736 @LENGTH@ 82
+---------INS PrefixExpression@@!types[i].isInstance(params[i]) @TO@ IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @AT@ 1740 @LENGTH@ 31
+------------INS Operator@@! @TO@ PrefixExpression@@!types[i].isInstance(params[i]) @AT@ 1740 @LENGTH@ 1
+------------INS MethodInvocation@@types[i].isInstance(params[i]) @TO@ PrefixExpression@@!types[i].isInstance(params[i]) @AT@ 1741 @LENGTH@ 30
+---------------INS ArrayAccess@@types[i] @TO@ MethodInvocation@@types[i].isInstance(params[i]) @AT@ 1741 @LENGTH@ 8
+------------------INS SimpleName@@types @TO@ ArrayAccess@@types[i] @AT@ 1741 @LENGTH@ 5
+------------------INS SimpleName@@i @TO@ ArrayAccess@@types[i] @AT@ 1747 @LENGTH@ 1
+---------------INS SimpleName@@MethodName:isInstance:[params[i]] @TO@ MethodInvocation@@types[i].isInstance(params[i]) @AT@ 1750 @LENGTH@ 21
+------------------INS ArrayAccess@@params[i] @TO@ SimpleName@@MethodName:isInstance:[params[i]] @AT@ 1761 @LENGTH@ 9
+---------------------INS SimpleName@@params @TO@ ArrayAccess@@params[i] @AT@ 1761 @LENGTH@ 6
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@params[i] @AT@ 1768 @LENGTH@ 1
+---------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@PrefixExpression:!types[i].isInstance(params[i]) @AT@ 1791 @LENGTH@ 13
+------------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 1798 @LENGTH@ 5
+---INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@private, static, @@boolean, MethodName:paramsMatch, @@Argus:Class<?>[]+types+Object[]+params+ @AT@ 1837 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 1844 @LENGTH@ 4
+]
+
+CII:
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP6 OP12 OP16 OP27 OP55)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (INS, PrimitiveType, OP1, null)
+OP5:   (INS, SimpleName, OP1, null)
+OP6:   (INS, SingleVariableDeclaration, OP1, OP7 OP11)
+OP7:      (INS, ArrayType, OP6, OP8)
+OP8:         (INS, ParameterizedType, OP7, OP9 OP10)
+OP9:            (INS, SimpleType, OP8, null)
+OP10:            (INS, WildcardType, OP8, null)
+OP11:      (INS, SimpleName, OP6, null)
+OP12:   (INS, SingleVariableDeclaration, OP1, OP13 OP15)
+OP13:      (INS, ArrayType, OP12, OP14)
+OP14:         (INS, SimpleType, OP13, null)
+OP15:      (INS, SimpleName, OP12, null)
+OP16:   (INS, IfStatement, OP1, OP17 OP25)
+OP17:      (INS, InfixExpression, OP16, OP18 OP21 OP22)
+OP18:         (INS, QualifiedName, OP17, OP19 OP20)
+OP19:            (INS, SimpleName, OP18, null)
+OP20:            (INS, SimpleName, OP18, null)
+OP21:         (INS, Operator, OP17, null)
+OP22:         (INS, QualifiedName, OP17, OP23 OP24)
+OP23:            (INS, SimpleName, OP22, null)
+OP24:            (INS, SimpleName, OP22, null)
+OP25:      (INS, ReturnStatement, OP16, OP26)
+OP26:         (INS, BooleanLiteral, OP25, null)
+OP27:   (INS, ForStatement, OP1, OP28 OP33 OP39 OP42)
+OP28:      (INS, VariableDeclarationExpression, OP27, OP29 OP30)
+OP29:         (INS, PrimitiveType, OP28, null)
+OP30:         (INS, VariableDeclarationFragment, OP28, OP31 OP32)
+OP31:            (INS, SimpleName, OP30, null)
+OP32:            (INS, NumberLiteral, OP30, null)
+OP33:      (INS, InfixExpression, OP27, OP34 OP35 OP36)
+OP34:         (INS, SimpleName, OP33, null)
+OP35:         (INS, Operator, OP33, null)
+OP36:         (INS, QualifiedName, OP33, OP37 OP38)
+OP37:            (INS, SimpleName, OP36, null)
+OP38:            (INS, SimpleName, OP36, null)
+OP39:      (INS, PostfixExpression, OP27, OP40 OP41)
+OP40:         (INS, SimpleName, OP39, null)
+OP41:         (INS, Operator, OP39, null)
+OP42:      (INS, IfStatement, OP27, OP43 OP53)
+OP43:         (INS, PrefixExpression, OP42, OP44 OP45)
+OP44:            (INS, Operator, OP43, null)
+OP45:            (INS, MethodInvocation, OP43, OP46 OP49)
+OP46:               (INS, ArrayAccess, OP45, OP47 OP48)
+OP47:                  (INS, SimpleName, OP46, null)
+OP48:                  (INS, SimpleName, OP46, null)
+OP49:               (INS, SimpleName, OP45, OP50)
+OP50:                  (INS, ArrayAccess, OP49, OP51 OP52)
+OP51:                     (INS, SimpleName, OP50, null)
+OP52:                     (INS, SimpleName, OP50, null)
+OP53:         (INS, ReturnStatement, OP42, OP54)
+OP54:            (INS, BooleanLiteral, OP53, null)
+OP55:   (INS, ReturnStatement, OP1, OP56)
+OP56:      (INS, BooleanLiteral, OP55, null)
+
+
+

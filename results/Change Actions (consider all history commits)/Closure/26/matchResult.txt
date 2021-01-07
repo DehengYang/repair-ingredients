@@ -1,0 +1,15 @@
+No.0 CCI matched.
+freq: 14
+CommitIds: 86caf52b 530ed0ef 530ed0ef 530ed0ef 0593df4f c438dfd0 8f773e34 95ac6a7f 8666370e 49239b94 7647d956 ab9dfefc a36a61a9 cf968487 
+FreqRank:46
+
+No.1 CCI matched.
+freq: 1
+CommitIds: cc67733a 
+FreqRank:59
+
+No.2 CCI matched.
+freq: 49
+CommitIds: f203be41 78995bf9 78995bf9 b8086ea9 f203be41 ae5ae60f 2dc356a3 449fdd3c 449fdd3c b10e8c0b 0e47f1de 43859717 107c16a3 96844d11 96844d11 b306cef6 b306cef6 b306cef6 b306cef6 b306cef6 b306cef6 b306cef6 b306cef6 b306cef6 b306cef6 b306cef6 b306cef6 b306cef6 a9757e8c a90f4b4f 6e3eb4f7 b7d0c172 5818d174 f203be41 6e3eb4f7 6e3eb4f7 afc8fd66 c1f4a4cc 6dbca87c b21033c3 b4801b28 2dc356a3 27d9224e 043a352c ff9dc85e ff9dc85e 83d03ec5 98e48084 58c3e4ce 
+FreqRank:18
+

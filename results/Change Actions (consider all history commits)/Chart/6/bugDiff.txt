@@ -1,0 +1,20 @@
+
+diff -Naur ../d4j-repo/Chart/Chart_6/source/org/jfree/chart/util/ShapeList.java ../d4j-repo/fixed_bugs_dir/Chart/Chart_6/source/org/jfree/chart/util/ShapeList.java
+--- ../d4j-repo/Chart/Chart_6/source/org/jfree/chart/util/ShapeList.java	2021-01-03 07:19:55.656362193 -0800
++++ ../d4j-repo/fixed_bugs_dir/Chart/Chart_6/source/org/jfree/chart/util/ShapeList.java	2021-01-03 07:19:58.020449234 -0800
+@@ -108,7 +108,14 @@
+         if (!(obj instanceof ShapeList)) {
+             return false;
+         }
+-        return super.equals(obj);
++        ShapeList that = (ShapeList) obj;
++        int listSize = size();
++        for (int i = 0; i < listSize; i++) {
++           if (!ShapeUtilities.equal((Shape) get(i), (Shape) that.get(i))) {
++               return false;
++           }
++        }
++        return true;
+ 
+     }
+ 

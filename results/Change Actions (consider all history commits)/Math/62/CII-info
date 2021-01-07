@@ -1,0 +1,341 @@
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:optimize(f,goal,min,max,0) @TO@ MethodInvocation:optimize(f,goal,min,max,min + 0.5 * (max - min)) @AT@ 5957 @LENGTH@ 38
+---UPD MethodInvocation@@optimize(f,goal,min,max,0) @TO@ optimize(f,goal,min,max,min + 0.5 * (max - min)) @AT@ 5964 @LENGTH@ 30
+------UPD SimpleName@@MethodName:optimize:[f, goal, min, max, 0] @TO@ MethodName:optimize:[f, goal, min, max, min + 0.5 * (max - min)] @AT@ 5964 @LENGTH@ 30
+---------INS InfixExpression@@min + 0.5 * (max - min) @TO@ SimpleName@@MethodName:optimize:[f, goal, min, max, 0] @AT@ 5992 @LENGTH@ 23
+------------INS SimpleName@@min @TO@ InfixExpression@@min + 0.5 * (max - min) @AT@ 5992 @LENGTH@ 3
+------------INS Operator@@+ @TO@ InfixExpression@@min + 0.5 * (max - min) @AT@ 5995 @LENGTH@ 1
+------------INS InfixExpression@@0.5 * (max - min) @TO@ InfixExpression@@min + 0.5 * (max - min) @AT@ 5998 @LENGTH@ 17
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * (max - min) @AT@ 5998 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * (max - min) @AT@ 6001 @LENGTH@ 1
+---------------INS ParenthesizedExpression@@(max - min) @TO@ InfixExpression@@0.5 * (max - min) @AT@ 6004 @LENGTH@ 11
+------------------INS InfixExpression@@max - min @TO@ ParenthesizedExpression@@(max - min) @AT@ 6005 @LENGTH@ 9
+---------------------INS SimpleName@@max @TO@ InfixExpression@@max - min @AT@ 6005 @LENGTH@ 3
+---------------------INS Operator@@- @TO@ InfixExpression@@max - min @AT@ 6008 @LENGTH@ 1
+---------------------INS SimpleName@@min @TO@ InfixExpression@@max - min @AT@ 6011 @LENGTH@ 3
+---------DEL NumberLiteral@@0 @AT@ 5992 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@final double bound1=(i == 0) ? min : min + generator.nextDouble() * (max - min); @TO@ final double s=(i == 0) ? startValue : min + generator.nextDouble() * (max - min); @AT@ 6512 @LENGTH@ 82
+---UPD VariableDeclarationFragment@@bound1=(i == 0) ? min : min + generator.nextDouble() * (max - min) @TO@ s=(i == 0) ? startValue : min + generator.nextDouble() * (max - min) @AT@ 6525 @LENGTH@ 68
+------UPD SimpleName@@bound1 @TO@ s @AT@ 6525 @LENGTH@ 6
+------UPD ConditionalExpression@@(i == 0) ? min : min + generator.nextDouble() * (max - min) @TO@ (i == 0) ? startValue : min + generator.nextDouble() * (max - min) @AT@ 6534 @LENGTH@ 59
+---------UPD SimpleName@@min @TO@ startValue @AT@ 6545 @LENGTH@ 3
+, DEL VariableDeclarationStatement@@final double bound2=(i == 0) ? max : min + generator.nextDouble() * (max - min); @AT@ 6611 @LENGTH@ 82
+---DEL Modifier@@final @AT@ 6611 @LENGTH@ 5
+---DEL PrimitiveType@@double @AT@ 6617 @LENGTH@ 6
+---DEL VariableDeclarationFragment@@bound2=(i == 0) ? max : min + generator.nextDouble() * (max - min) @AT@ 6624 @LENGTH@ 68
+------DEL SimpleName@@bound2 @AT@ 6624 @LENGTH@ 6
+------DEL ConditionalExpression@@(i == 0) ? max : min + generator.nextDouble() * (max - min) @AT@ 6633 @LENGTH@ 59
+---------DEL ParenthesizedExpression@@(i == 0) @AT@ 6633 @LENGTH@ 8
+------------DEL InfixExpression@@i == 0 @AT@ 6634 @LENGTH@ 6
+---------------DEL SimpleName@@i @AT@ 6634 @LENGTH@ 1
+---------------DEL Operator@@== @AT@ 6635 @LENGTH@ 2
+---------------DEL NumberLiteral@@0 @AT@ 6639 @LENGTH@ 1
+---------DEL SimpleName@@max @AT@ 6644 @LENGTH@ 3
+---------DEL InfixExpression@@min + generator.nextDouble() * (max - min) @AT@ 6650 @LENGTH@ 42
+------------DEL SimpleName@@min @AT@ 6650 @LENGTH@ 3
+------------DEL Operator@@+ @AT@ 6653 @LENGTH@ 1
+------------DEL InfixExpression@@generator.nextDouble() * (max - min) @AT@ 6656 @LENGTH@ 36
+---------------DEL MethodInvocation@@generator.nextDouble() @AT@ 6656 @LENGTH@ 22
+------------------DEL SimpleName@@Name:generator @AT@ 6656 @LENGTH@ 9
+------------------DEL SimpleName@@MethodName:nextDouble:[] @AT@ 6666 @LENGTH@ 12
+---------------DEL Operator@@* @AT@ 6678 @LENGTH@ 1
+---------------DEL ParenthesizedExpression@@(max - min) @AT@ 6681 @LENGTH@ 11
+------------------DEL InfixExpression@@max - min @AT@ 6682 @LENGTH@ 9
+---------------------DEL SimpleName@@max @AT@ 6682 @LENGTH@ 3
+---------------------DEL Operator@@- @AT@ 6685 @LENGTH@ 1
+---------------------DEL SimpleName@@min @AT@ 6688 @LENGTH@ 3
+, UPD ExpressionStatement@@Assignment:optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2)) @TO@ Assignment:optima[i]=optimizer.optimize(f,goal,min,max,s) @AT@ 6710 @LENGTH@ 100
+---UPD Assignment@@optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2)) @TO@ optima[i]=optimizer.optimize(f,goal,min,max,s) @AT@ 6710 @LENGTH@ 99
+------UPD MethodInvocation@@optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2)) @TO@ optimizer.optimize(f,goal,min,max,s) @AT@ 6722 @LENGTH@ 87
+---------UPD SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @TO@ MethodName:optimize:[f, goal, min, max, s] @AT@ 6732 @LENGTH@ 77
+------------INS SimpleName@@min @TO@ SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @AT@ 6675 @LENGTH@ 3
+------------INS SimpleName@@max @TO@ SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @AT@ 6680 @LENGTH@ 3
+------------DEL MethodInvocation@@FastMath.min(bound1,bound2) @AT@ 6750 @LENGTH@ 28
+---------------DEL SimpleName@@Name:FastMath @AT@ 6750 @LENGTH@ 8
+---------------DEL SimpleName@@MethodName:min:[bound1, bound2] @AT@ 6759 @LENGTH@ 19
+------------------DEL SimpleName@@bound1 @AT@ 6763 @LENGTH@ 6
+------------------DEL SimpleName@@bound2 @AT@ 6771 @LENGTH@ 6
+------------DEL MethodInvocation@@FastMath.max(bound1,bound2) @AT@ 6780 @LENGTH@ 28
+---------------DEL SimpleName@@Name:FastMath @AT@ 6780 @LENGTH@ 8
+---------------DEL SimpleName@@MethodName:max:[bound1, bound2] @AT@ 6789 @LENGTH@ 19
+------------------DEL SimpleName@@bound2 @AT@ 6801 @LENGTH@ 6
+------------MOV SimpleName@@bound1 @TO@ SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @AT@ 6793 @LENGTH@ 6
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4 OP15)
+OP4:         (INS, InfixExpression, OP3, OP5 OP6 OP7)
+OP5:            (INS, SimpleName, OP4, null)
+OP6:            (INS, Operator, OP4, null)
+OP7:            (INS, InfixExpression, OP4, OP8 OP9 OP10)
+OP8:               (INS, NumberLiteral, OP7, null)
+OP9:               (INS, Operator, OP7, null)
+OP10:               (INS, ParenthesizedExpression, OP7, OP11)
+OP11:                  (INS, InfixExpression, OP10, OP12 OP13 OP14)
+OP12:                     (INS, SimpleName, OP11, null)
+OP13:                     (INS, Operator, OP11, null)
+OP14:                     (INS, SimpleName, OP11, null)
+OP15:         (DEL, NumberLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:optimize(f,goal,min,max,0) @TO@ MethodInvocation:optimize(f,goal,min,max,min + 0.5 * (max - min)) @AT@ 5957 @LENGTH@ 38
+---UPD MethodInvocation@@optimize(f,goal,min,max,0) @TO@ optimize(f,goal,min,max,min + 0.5 * (max - min)) @AT@ 5964 @LENGTH@ 30
+------UPD SimpleName@@MethodName:optimize:[f, goal, min, max, 0] @TO@ MethodName:optimize:[f, goal, min, max, min + 0.5 * (max - min)] @AT@ 5964 @LENGTH@ 30
+---------INS InfixExpression@@min + 0.5 * (max - min) @TO@ SimpleName@@MethodName:optimize:[f, goal, min, max, 0] @AT@ 5992 @LENGTH@ 23
+------------INS SimpleName@@min @TO@ InfixExpression@@min + 0.5 * (max - min) @AT@ 5992 @LENGTH@ 3
+------------INS Operator@@+ @TO@ InfixExpression@@min + 0.5 * (max - min) @AT@ 5995 @LENGTH@ 1
+------------INS InfixExpression@@0.5 * (max - min) @TO@ InfixExpression@@min + 0.5 * (max - min) @AT@ 5998 @LENGTH@ 17
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * (max - min) @AT@ 5998 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * (max - min) @AT@ 6001 @LENGTH@ 1
+---------------INS ParenthesizedExpression@@(max - min) @TO@ InfixExpression@@0.5 * (max - min) @AT@ 6004 @LENGTH@ 11
+------------------INS InfixExpression@@max - min @TO@ ParenthesizedExpression@@(max - min) @AT@ 6005 @LENGTH@ 9
+---------------------INS SimpleName@@max @TO@ InfixExpression@@max - min @AT@ 6005 @LENGTH@ 3
+---------------------INS Operator@@- @TO@ InfixExpression@@max - min @AT@ 6008 @LENGTH@ 1
+---------------------INS SimpleName@@min @TO@ InfixExpression@@max - min @AT@ 6011 @LENGTH@ 3
+---------DEL NumberLiteral@@0 @AT@ 5992 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@final double bound1=(i == 0) ? min : min + generator.nextDouble() * (max - min); @TO@ final double s=(i == 0) ? startValue : min + generator.nextDouble() * (max - min); @AT@ 6512 @LENGTH@ 82
+---UPD VariableDeclarationFragment@@bound1=(i == 0) ? min : min + generator.nextDouble() * (max - min) @TO@ s=(i == 0) ? startValue : min + generator.nextDouble() * (max - min) @AT@ 6525 @LENGTH@ 68
+------UPD SimpleName@@bound1 @TO@ s @AT@ 6525 @LENGTH@ 6
+------UPD ConditionalExpression@@(i == 0) ? min : min + generator.nextDouble() * (max - min) @TO@ (i == 0) ? startValue : min + generator.nextDouble() * (max - min) @AT@ 6534 @LENGTH@ 59
+---------UPD SimpleName@@min @TO@ startValue @AT@ 6545 @LENGTH@ 3
+, DEL VariableDeclarationStatement@@final double bound2=(i == 0) ? max : min + generator.nextDouble() * (max - min); @AT@ 6611 @LENGTH@ 82
+---DEL Modifier@@final @AT@ 6611 @LENGTH@ 5
+---DEL PrimitiveType@@double @AT@ 6617 @LENGTH@ 6
+---DEL VariableDeclarationFragment@@bound2=(i == 0) ? max : min + generator.nextDouble() * (max - min) @AT@ 6624 @LENGTH@ 68
+------DEL SimpleName@@bound2 @AT@ 6624 @LENGTH@ 6
+------DEL ConditionalExpression@@(i == 0) ? max : min + generator.nextDouble() * (max - min) @AT@ 6633 @LENGTH@ 59
+---------DEL ParenthesizedExpression@@(i == 0) @AT@ 6633 @LENGTH@ 8
+------------DEL InfixExpression@@i == 0 @AT@ 6634 @LENGTH@ 6
+---------------DEL SimpleName@@i @AT@ 6634 @LENGTH@ 1
+---------------DEL Operator@@== @AT@ 6635 @LENGTH@ 2
+---------------DEL NumberLiteral@@0 @AT@ 6639 @LENGTH@ 1
+---------DEL SimpleName@@max @AT@ 6644 @LENGTH@ 3
+---------DEL InfixExpression@@min + generator.nextDouble() * (max - min) @AT@ 6650 @LENGTH@ 42
+------------DEL SimpleName@@min @AT@ 6650 @LENGTH@ 3
+------------DEL Operator@@+ @AT@ 6653 @LENGTH@ 1
+------------DEL InfixExpression@@generator.nextDouble() * (max - min) @AT@ 6656 @LENGTH@ 36
+---------------DEL MethodInvocation@@generator.nextDouble() @AT@ 6656 @LENGTH@ 22
+------------------DEL SimpleName@@Name:generator @AT@ 6656 @LENGTH@ 9
+------------------DEL SimpleName@@MethodName:nextDouble:[] @AT@ 6666 @LENGTH@ 12
+---------------DEL Operator@@* @AT@ 6678 @LENGTH@ 1
+---------------DEL ParenthesizedExpression@@(max - min) @AT@ 6681 @LENGTH@ 11
+------------------DEL InfixExpression@@max - min @AT@ 6682 @LENGTH@ 9
+---------------------DEL SimpleName@@max @AT@ 6682 @LENGTH@ 3
+---------------------DEL Operator@@- @AT@ 6685 @LENGTH@ 1
+---------------------DEL SimpleName@@min @AT@ 6688 @LENGTH@ 3
+, UPD ExpressionStatement@@Assignment:optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2)) @TO@ Assignment:optima[i]=optimizer.optimize(f,goal,min,max,s) @AT@ 6710 @LENGTH@ 100
+---UPD Assignment@@optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2)) @TO@ optima[i]=optimizer.optimize(f,goal,min,max,s) @AT@ 6710 @LENGTH@ 99
+------UPD MethodInvocation@@optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2)) @TO@ optimizer.optimize(f,goal,min,max,s) @AT@ 6722 @LENGTH@ 87
+---------UPD SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @TO@ MethodName:optimize:[f, goal, min, max, s] @AT@ 6732 @LENGTH@ 77
+------------INS SimpleName@@min @TO@ SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @AT@ 6675 @LENGTH@ 3
+------------INS SimpleName@@max @TO@ SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @AT@ 6680 @LENGTH@ 3
+------------DEL MethodInvocation@@FastMath.min(bound1,bound2) @AT@ 6750 @LENGTH@ 28
+---------------DEL SimpleName@@Name:FastMath @AT@ 6750 @LENGTH@ 8
+---------------DEL SimpleName@@MethodName:min:[bound1, bound2] @AT@ 6759 @LENGTH@ 19
+------------------DEL SimpleName@@bound1 @AT@ 6763 @LENGTH@ 6
+------------------DEL SimpleName@@bound2 @AT@ 6771 @LENGTH@ 6
+------------DEL MethodInvocation@@FastMath.max(bound1,bound2) @AT@ 6780 @LENGTH@ 28
+---------------DEL SimpleName@@Name:FastMath @AT@ 6780 @LENGTH@ 8
+---------------DEL SimpleName@@MethodName:max:[bound1, bound2] @AT@ 6789 @LENGTH@ 19
+------------------DEL SimpleName@@bound2 @AT@ 6801 @LENGTH@ 6
+------------MOV SimpleName@@bound1 @TO@ SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @AT@ 6793 @LENGTH@ 6
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3 OP4)
+OP3:      (UPD, SimpleName, OP2, null)
+OP4:      (UPD, ConditionalExpression, OP2, OP5)
+OP5:         (UPD, SimpleName, OP4, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:optimize(f,goal,min,max,0) @TO@ MethodInvocation:optimize(f,goal,min,max,min + 0.5 * (max - min)) @AT@ 5957 @LENGTH@ 38
+---UPD MethodInvocation@@optimize(f,goal,min,max,0) @TO@ optimize(f,goal,min,max,min + 0.5 * (max - min)) @AT@ 5964 @LENGTH@ 30
+------UPD SimpleName@@MethodName:optimize:[f, goal, min, max, 0] @TO@ MethodName:optimize:[f, goal, min, max, min + 0.5 * (max - min)] @AT@ 5964 @LENGTH@ 30
+---------INS InfixExpression@@min + 0.5 * (max - min) @TO@ SimpleName@@MethodName:optimize:[f, goal, min, max, 0] @AT@ 5992 @LENGTH@ 23
+------------INS SimpleName@@min @TO@ InfixExpression@@min + 0.5 * (max - min) @AT@ 5992 @LENGTH@ 3
+------------INS Operator@@+ @TO@ InfixExpression@@min + 0.5 * (max - min) @AT@ 5995 @LENGTH@ 1
+------------INS InfixExpression@@0.5 * (max - min) @TO@ InfixExpression@@min + 0.5 * (max - min) @AT@ 5998 @LENGTH@ 17
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * (max - min) @AT@ 5998 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * (max - min) @AT@ 6001 @LENGTH@ 1
+---------------INS ParenthesizedExpression@@(max - min) @TO@ InfixExpression@@0.5 * (max - min) @AT@ 6004 @LENGTH@ 11
+------------------INS InfixExpression@@max - min @TO@ ParenthesizedExpression@@(max - min) @AT@ 6005 @LENGTH@ 9
+---------------------INS SimpleName@@max @TO@ InfixExpression@@max - min @AT@ 6005 @LENGTH@ 3
+---------------------INS Operator@@- @TO@ InfixExpression@@max - min @AT@ 6008 @LENGTH@ 1
+---------------------INS SimpleName@@min @TO@ InfixExpression@@max - min @AT@ 6011 @LENGTH@ 3
+---------DEL NumberLiteral@@0 @AT@ 5992 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@final double bound1=(i == 0) ? min : min + generator.nextDouble() * (max - min); @TO@ final double s=(i == 0) ? startValue : min + generator.nextDouble() * (max - min); @AT@ 6512 @LENGTH@ 82
+---UPD VariableDeclarationFragment@@bound1=(i == 0) ? min : min + generator.nextDouble() * (max - min) @TO@ s=(i == 0) ? startValue : min + generator.nextDouble() * (max - min) @AT@ 6525 @LENGTH@ 68
+------UPD SimpleName@@bound1 @TO@ s @AT@ 6525 @LENGTH@ 6
+------UPD ConditionalExpression@@(i == 0) ? min : min + generator.nextDouble() * (max - min) @TO@ (i == 0) ? startValue : min + generator.nextDouble() * (max - min) @AT@ 6534 @LENGTH@ 59
+---------UPD SimpleName@@min @TO@ startValue @AT@ 6545 @LENGTH@ 3
+, DEL VariableDeclarationStatement@@final double bound2=(i == 0) ? max : min + generator.nextDouble() * (max - min); @AT@ 6611 @LENGTH@ 82
+---DEL Modifier@@final @AT@ 6611 @LENGTH@ 5
+---DEL PrimitiveType@@double @AT@ 6617 @LENGTH@ 6
+---DEL VariableDeclarationFragment@@bound2=(i == 0) ? max : min + generator.nextDouble() * (max - min) @AT@ 6624 @LENGTH@ 68
+------DEL SimpleName@@bound2 @AT@ 6624 @LENGTH@ 6
+------DEL ConditionalExpression@@(i == 0) ? max : min + generator.nextDouble() * (max - min) @AT@ 6633 @LENGTH@ 59
+---------DEL ParenthesizedExpression@@(i == 0) @AT@ 6633 @LENGTH@ 8
+------------DEL InfixExpression@@i == 0 @AT@ 6634 @LENGTH@ 6
+---------------DEL SimpleName@@i @AT@ 6634 @LENGTH@ 1
+---------------DEL Operator@@== @AT@ 6635 @LENGTH@ 2
+---------------DEL NumberLiteral@@0 @AT@ 6639 @LENGTH@ 1
+---------DEL SimpleName@@max @AT@ 6644 @LENGTH@ 3
+---------DEL InfixExpression@@min + generator.nextDouble() * (max - min) @AT@ 6650 @LENGTH@ 42
+------------DEL SimpleName@@min @AT@ 6650 @LENGTH@ 3
+------------DEL Operator@@+ @AT@ 6653 @LENGTH@ 1
+------------DEL InfixExpression@@generator.nextDouble() * (max - min) @AT@ 6656 @LENGTH@ 36
+---------------DEL MethodInvocation@@generator.nextDouble() @AT@ 6656 @LENGTH@ 22
+------------------DEL SimpleName@@Name:generator @AT@ 6656 @LENGTH@ 9
+------------------DEL SimpleName@@MethodName:nextDouble:[] @AT@ 6666 @LENGTH@ 12
+---------------DEL Operator@@* @AT@ 6678 @LENGTH@ 1
+---------------DEL ParenthesizedExpression@@(max - min) @AT@ 6681 @LENGTH@ 11
+------------------DEL InfixExpression@@max - min @AT@ 6682 @LENGTH@ 9
+---------------------DEL SimpleName@@max @AT@ 6682 @LENGTH@ 3
+---------------------DEL Operator@@- @AT@ 6685 @LENGTH@ 1
+---------------------DEL SimpleName@@min @AT@ 6688 @LENGTH@ 3
+, UPD ExpressionStatement@@Assignment:optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2)) @TO@ Assignment:optima[i]=optimizer.optimize(f,goal,min,max,s) @AT@ 6710 @LENGTH@ 100
+---UPD Assignment@@optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2)) @TO@ optima[i]=optimizer.optimize(f,goal,min,max,s) @AT@ 6710 @LENGTH@ 99
+------UPD MethodInvocation@@optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2)) @TO@ optimizer.optimize(f,goal,min,max,s) @AT@ 6722 @LENGTH@ 87
+---------UPD SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @TO@ MethodName:optimize:[f, goal, min, max, s] @AT@ 6732 @LENGTH@ 77
+------------INS SimpleName@@min @TO@ SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @AT@ 6675 @LENGTH@ 3
+------------INS SimpleName@@max @TO@ SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @AT@ 6680 @LENGTH@ 3
+------------DEL MethodInvocation@@FastMath.min(bound1,bound2) @AT@ 6750 @LENGTH@ 28
+---------------DEL SimpleName@@Name:FastMath @AT@ 6750 @LENGTH@ 8
+---------------DEL SimpleName@@MethodName:min:[bound1, bound2] @AT@ 6759 @LENGTH@ 19
+------------------DEL SimpleName@@bound1 @AT@ 6763 @LENGTH@ 6
+------------------DEL SimpleName@@bound2 @AT@ 6771 @LENGTH@ 6
+------------DEL MethodInvocation@@FastMath.max(bound1,bound2) @AT@ 6780 @LENGTH@ 28
+---------------DEL SimpleName@@Name:FastMath @AT@ 6780 @LENGTH@ 8
+---------------DEL SimpleName@@MethodName:max:[bound1, bound2] @AT@ 6789 @LENGTH@ 19
+------------------DEL SimpleName@@bound2 @AT@ 6801 @LENGTH@ 6
+------------MOV SimpleName@@bound1 @TO@ SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @AT@ 6793 @LENGTH@ 6
+]
+
+CII:
+OP1:(DEL, VariableDeclarationStatement, null, OP2 OP3 OP4)
+OP2:   (DEL, Modifier, OP1, null)
+OP3:   (DEL, PrimitiveType, OP1, null)
+OP4:   (DEL, VariableDeclarationFragment, OP1, OP5 OP6)
+OP5:      (DEL, SimpleName, OP4, null)
+OP6:      (DEL, ConditionalExpression, OP4, OP7 OP12 OP13)
+OP7:         (DEL, ParenthesizedExpression, OP6, OP8)
+OP8:            (DEL, InfixExpression, OP7, OP9 OP10 OP11)
+OP9:               (DEL, SimpleName, OP8, null)
+OP10:               (DEL, Operator, OP8, null)
+OP11:               (DEL, NumberLiteral, OP8, null)
+OP12:         (DEL, SimpleName, OP6, null)
+OP13:         (DEL, InfixExpression, OP6, OP14 OP15 OP16)
+OP14:            (DEL, SimpleName, OP13, null)
+OP15:            (DEL, Operator, OP13, null)
+OP16:            (DEL, InfixExpression, OP13, OP17 OP20 OP21)
+OP17:               (DEL, MethodInvocation, OP16, OP18 OP19)
+OP18:                  (DEL, SimpleName, OP17, null)
+OP19:                  (DEL, SimpleName, OP17, null)
+OP20:               (DEL, Operator, OP16, null)
+OP21:               (DEL, ParenthesizedExpression, OP16, OP22)
+OP22:                  (DEL, InfixExpression, OP21, OP23 OP24 OP25)
+OP23:                     (DEL, SimpleName, OP22, null)
+OP24:                     (DEL, Operator, OP22, null)
+OP25:                     (DEL, SimpleName, OP22, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:optimize(f,goal,min,max,0) @TO@ MethodInvocation:optimize(f,goal,min,max,min + 0.5 * (max - min)) @AT@ 5957 @LENGTH@ 38
+---UPD MethodInvocation@@optimize(f,goal,min,max,0) @TO@ optimize(f,goal,min,max,min + 0.5 * (max - min)) @AT@ 5964 @LENGTH@ 30
+------UPD SimpleName@@MethodName:optimize:[f, goal, min, max, 0] @TO@ MethodName:optimize:[f, goal, min, max, min + 0.5 * (max - min)] @AT@ 5964 @LENGTH@ 30
+---------INS InfixExpression@@min + 0.5 * (max - min) @TO@ SimpleName@@MethodName:optimize:[f, goal, min, max, 0] @AT@ 5992 @LENGTH@ 23
+------------INS SimpleName@@min @TO@ InfixExpression@@min + 0.5 * (max - min) @AT@ 5992 @LENGTH@ 3
+------------INS Operator@@+ @TO@ InfixExpression@@min + 0.5 * (max - min) @AT@ 5995 @LENGTH@ 1
+------------INS InfixExpression@@0.5 * (max - min) @TO@ InfixExpression@@min + 0.5 * (max - min) @AT@ 5998 @LENGTH@ 17
+---------------INS NumberLiteral@@0.5 @TO@ InfixExpression@@0.5 * (max - min) @AT@ 5998 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@0.5 * (max - min) @AT@ 6001 @LENGTH@ 1
+---------------INS ParenthesizedExpression@@(max - min) @TO@ InfixExpression@@0.5 * (max - min) @AT@ 6004 @LENGTH@ 11
+------------------INS InfixExpression@@max - min @TO@ ParenthesizedExpression@@(max - min) @AT@ 6005 @LENGTH@ 9
+---------------------INS SimpleName@@max @TO@ InfixExpression@@max - min @AT@ 6005 @LENGTH@ 3
+---------------------INS Operator@@- @TO@ InfixExpression@@max - min @AT@ 6008 @LENGTH@ 1
+---------------------INS SimpleName@@min @TO@ InfixExpression@@max - min @AT@ 6011 @LENGTH@ 3
+---------DEL NumberLiteral@@0 @AT@ 5992 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@final double bound1=(i == 0) ? min : min + generator.nextDouble() * (max - min); @TO@ final double s=(i == 0) ? startValue : min + generator.nextDouble() * (max - min); @AT@ 6512 @LENGTH@ 82
+---UPD VariableDeclarationFragment@@bound1=(i == 0) ? min : min + generator.nextDouble() * (max - min) @TO@ s=(i == 0) ? startValue : min + generator.nextDouble() * (max - min) @AT@ 6525 @LENGTH@ 68
+------UPD SimpleName@@bound1 @TO@ s @AT@ 6525 @LENGTH@ 6
+------UPD ConditionalExpression@@(i == 0) ? min : min + generator.nextDouble() * (max - min) @TO@ (i == 0) ? startValue : min + generator.nextDouble() * (max - min) @AT@ 6534 @LENGTH@ 59
+---------UPD SimpleName@@min @TO@ startValue @AT@ 6545 @LENGTH@ 3
+, DEL VariableDeclarationStatement@@final double bound2=(i == 0) ? max : min + generator.nextDouble() * (max - min); @AT@ 6611 @LENGTH@ 82
+---DEL Modifier@@final @AT@ 6611 @LENGTH@ 5
+---DEL PrimitiveType@@double @AT@ 6617 @LENGTH@ 6
+---DEL VariableDeclarationFragment@@bound2=(i == 0) ? max : min + generator.nextDouble() * (max - min) @AT@ 6624 @LENGTH@ 68
+------DEL SimpleName@@bound2 @AT@ 6624 @LENGTH@ 6
+------DEL ConditionalExpression@@(i == 0) ? max : min + generator.nextDouble() * (max - min) @AT@ 6633 @LENGTH@ 59
+---------DEL ParenthesizedExpression@@(i == 0) @AT@ 6633 @LENGTH@ 8
+------------DEL InfixExpression@@i == 0 @AT@ 6634 @LENGTH@ 6
+---------------DEL SimpleName@@i @AT@ 6634 @LENGTH@ 1
+---------------DEL Operator@@== @AT@ 6635 @LENGTH@ 2
+---------------DEL NumberLiteral@@0 @AT@ 6639 @LENGTH@ 1
+---------DEL SimpleName@@max @AT@ 6644 @LENGTH@ 3
+---------DEL InfixExpression@@min + generator.nextDouble() * (max - min) @AT@ 6650 @LENGTH@ 42
+------------DEL SimpleName@@min @AT@ 6650 @LENGTH@ 3
+------------DEL Operator@@+ @AT@ 6653 @LENGTH@ 1
+------------DEL InfixExpression@@generator.nextDouble() * (max - min) @AT@ 6656 @LENGTH@ 36
+---------------DEL MethodInvocation@@generator.nextDouble() @AT@ 6656 @LENGTH@ 22
+------------------DEL SimpleName@@Name:generator @AT@ 6656 @LENGTH@ 9
+------------------DEL SimpleName@@MethodName:nextDouble:[] @AT@ 6666 @LENGTH@ 12
+---------------DEL Operator@@* @AT@ 6678 @LENGTH@ 1
+---------------DEL ParenthesizedExpression@@(max - min) @AT@ 6681 @LENGTH@ 11
+------------------DEL InfixExpression@@max - min @AT@ 6682 @LENGTH@ 9
+---------------------DEL SimpleName@@max @AT@ 6682 @LENGTH@ 3
+---------------------DEL Operator@@- @AT@ 6685 @LENGTH@ 1
+---------------------DEL SimpleName@@min @AT@ 6688 @LENGTH@ 3
+, UPD ExpressionStatement@@Assignment:optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2)) @TO@ Assignment:optima[i]=optimizer.optimize(f,goal,min,max,s) @AT@ 6710 @LENGTH@ 100
+---UPD Assignment@@optima[i]=optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2)) @TO@ optima[i]=optimizer.optimize(f,goal,min,max,s) @AT@ 6710 @LENGTH@ 99
+------UPD MethodInvocation@@optimizer.optimize(f,goal,FastMath.min(bound1,bound2),FastMath.max(bound1,bound2)) @TO@ optimizer.optimize(f,goal,min,max,s) @AT@ 6722 @LENGTH@ 87
+---------UPD SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @TO@ MethodName:optimize:[f, goal, min, max, s] @AT@ 6732 @LENGTH@ 77
+------------INS SimpleName@@min @TO@ SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @AT@ 6675 @LENGTH@ 3
+------------INS SimpleName@@max @TO@ SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @AT@ 6680 @LENGTH@ 3
+------------DEL MethodInvocation@@FastMath.min(bound1,bound2) @AT@ 6750 @LENGTH@ 28
+---------------DEL SimpleName@@Name:FastMath @AT@ 6750 @LENGTH@ 8
+---------------DEL SimpleName@@MethodName:min:[bound1, bound2] @AT@ 6759 @LENGTH@ 19
+------------------DEL SimpleName@@bound1 @AT@ 6763 @LENGTH@ 6
+------------------DEL SimpleName@@bound2 @AT@ 6771 @LENGTH@ 6
+------------DEL MethodInvocation@@FastMath.max(bound1,bound2) @AT@ 6780 @LENGTH@ 28
+---------------DEL SimpleName@@Name:FastMath @AT@ 6780 @LENGTH@ 8
+---------------DEL SimpleName@@MethodName:max:[bound1, bound2] @AT@ 6789 @LENGTH@ 19
+------------------DEL SimpleName@@bound2 @AT@ 6801 @LENGTH@ 6
+------------MOV SimpleName@@bound1 @TO@ SimpleName@@MethodName:optimize:[f, goal, FastMath.min(bound1,bound2), FastMath.max(bound1,bound2)] @AT@ 6793 @LENGTH@ 6
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, Assignment, OP1, OP3)
+OP3:      (UPD, MethodInvocation, OP2, OP4)
+OP4:         (UPD, SimpleName, OP3, OP5 OP6 OP7 OP12 OP16)
+OP5:            (INS, SimpleName, OP4, null)
+OP6:            (INS, SimpleName, OP4, null)
+OP7:            (DEL, MethodInvocation, OP4, OP8 OP9)
+OP8:               (DEL, SimpleName, OP7, null)
+OP9:               (DEL, SimpleName, OP7, OP10 OP11)
+OP10:                  (DEL, SimpleName, OP9, null)
+OP11:                  (DEL, SimpleName, OP9, null)
+OP12:            (DEL, MethodInvocation, OP4, OP13 OP14)
+OP13:               (DEL, SimpleName, OP12, null)
+OP14:               (DEL, SimpleName, OP12, OP15)
+OP15:                  (DEL, SimpleName, OP14, null)
+OP16:            (MOV, SimpleName, OP4, null)
+
+
+

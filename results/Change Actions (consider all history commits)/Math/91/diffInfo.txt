@@ -1,0 +1,15 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_91/src/java/org/apache/commons/math/fraction/Fraction.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_91/src/java/org/apache/commons/math/fraction/Fraction.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_91/src/java/org/apache/commons/math/fraction/Fraction.java	2020-01-05 06:40:19.033850876 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_91/src/java/org/apache/commons/math/fraction/Fraction.java	2020-01-05 06:40:22.505821878 -0800
+@@ -256,8 +256,8 @@
+      *         than <tt>object</tt>, 0 if they are equal.
+      */
+     public int compareTo(Fraction object) {
+-        double nOd = doubleValue();
+-        double dOn = object.doubleValue();
++        long nOd = ((long) numerator) * object.denominator;
++        long dOn = ((long) denominator) * object.numerator;
+         return (nOd < dOn) ? -1 : ((nOd > dOn) ? +1 : 0);
+     }
+     

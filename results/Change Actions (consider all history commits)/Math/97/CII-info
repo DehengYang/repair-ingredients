@@ -1,0 +1,216 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:sign > 0 @TO@ MethodDeclaration@@public, @@double, MethodName:solve, @@Argus:double+min+double+max+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 5327 @LENGTH@ 1052
+---INS InfixExpression@@sign > 0 @TO@ IfStatement@@InfixExpression:sign > 0 @AT@ 5331 @LENGTH@ 8
+------INS SimpleName@@sign @TO@ InfixExpression@@sign > 0 @AT@ 5331 @LENGTH@ 4
+------INS Operator@@> @TO@ InfixExpression@@sign > 0 @AT@ 5335 @LENGTH@ 1
+------INS NumberLiteral@@0 @TO@ InfixExpression@@sign > 0 @AT@ 5338 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:Math.abs(yMin) <= functionValueAccuracy @TO@ IfStatement@@InfixExpression:sign > 0 @AT@ 5411 @LENGTH@ 622
+------MOV IfStatement@@InfixExpression:sign >= 0 @TO@ IfStatement@@InfixExpression:Math.abs(yMin) <= functionValueAccuracy @AT@ 5327 @LENGTH@ 619
+------INS InfixExpression@@Math.abs(yMin) <= functionValueAccuracy @TO@ IfStatement@@InfixExpression:Math.abs(yMin) <= functionValueAccuracy @AT@ 5415 @LENGTH@ 39
+---------INS MethodInvocation@@Math.abs(yMin) @TO@ InfixExpression@@Math.abs(yMin) <= functionValueAccuracy @AT@ 5415 @LENGTH@ 14
+------------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(yMin) @AT@ 5415 @LENGTH@ 4
+------------INS SimpleName@@MethodName:abs:[yMin] @TO@ MethodInvocation@@Math.abs(yMin) @AT@ 5420 @LENGTH@ 9
+---------------INS SimpleName@@yMin @TO@ SimpleName@@MethodName:abs:[yMin] @AT@ 5424 @LENGTH@ 4
+---------INS Operator@@<= @TO@ InfixExpression@@Math.abs(yMin) <= functionValueAccuracy @AT@ 5429 @LENGTH@ 2
+---------INS SimpleName@@functionValueAccuracy @TO@ InfixExpression@@Math.abs(yMin) <= functionValueAccuracy @AT@ 5433 @LENGTH@ 21
+------INS ExpressionStatement@@MethodInvocation:setResult(min,0) @TO@ IfStatement@@InfixExpression:Math.abs(yMin) <= functionValueAccuracy @AT@ 5474 @LENGTH@ 18
+---------INS MethodInvocation@@setResult(min,0) @TO@ ExpressionStatement@@MethodInvocation:setResult(min,0) @AT@ 5474 @LENGTH@ 17
+------------INS SimpleName@@MethodName:setResult:[min, 0] @TO@ MethodInvocation@@setResult(min,0) @AT@ 5474 @LENGTH@ 17
+---------------INS SimpleName@@min @TO@ SimpleName@@MethodName:setResult:[min, 0] @AT@ 5484 @LENGTH@ 3
+---------------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:setResult:[min, 0] @AT@ 5489 @LENGTH@ 1
+------INS ExpressionStatement@@Assignment:ret=min @TO@ IfStatement@@InfixExpression:Math.abs(yMin) <= functionValueAccuracy @AT@ 5509 @LENGTH@ 10
+---------INS Assignment@@ret=min @TO@ ExpressionStatement@@Assignment:ret=min @AT@ 5509 @LENGTH@ 9
+------------INS SimpleName@@ret @TO@ Assignment@@ret=min @AT@ 5509 @LENGTH@ 3
+------------INS Operator@@= @TO@ Assignment@@ret=min @AT@ 5512 @LENGTH@ 1
+------------INS SimpleName@@min @TO@ Assignment@@ret=min @AT@ 5515 @LENGTH@ 3
+---INS IfStatement@@InfixExpression:sign < 0 @TO@ IfStatement@@InfixExpression:sign > 0 @AT@ 6049 @LENGTH@ 330
+------MOV ExpressionStatement@@Assignment:ret=solve(min,yMin,max,yMax,min,yMin) @TO@ IfStatement@@InfixExpression:sign < 0 @AT@ 5848 @LENGTH@ 45
+------INS InfixExpression@@sign < 0 @TO@ IfStatement@@InfixExpression:sign < 0 @AT@ 6053 @LENGTH@ 8
+---------INS SimpleName@@sign @TO@ InfixExpression@@sign < 0 @AT@ 6053 @LENGTH@ 4
+---------INS Operator@@< @TO@ InfixExpression@@sign < 0 @AT@ 6057 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@sign < 0 @AT@ 6060 @LENGTH@ 1
+------INS IfStatement@@InfixExpression:yMin == 0.0 @TO@ IfStatement@@InfixExpression:sign < 0 @AT@ 6262 @LENGTH@ 107
+---------INS InfixExpression@@yMin == 0.0 @TO@ IfStatement@@InfixExpression:yMin == 0.0 @AT@ 6266 @LENGTH@ 11
+------------INS SimpleName@@yMin @TO@ InfixExpression@@yMin == 0.0 @AT@ 6266 @LENGTH@ 4
+------------INS Operator@@== @TO@ InfixExpression@@yMin == 0.0 @AT@ 6270 @LENGTH@ 2
+------------INS NumberLiteral@@0.0 @TO@ InfixExpression@@yMin == 0.0 @AT@ 6274 @LENGTH@ 3
+---------INS ExpressionStatement@@Assignment:ret=min @TO@ IfStatement@@InfixExpression:yMin == 0.0 @AT@ 6297 @LENGTH@ 10
+------------INS Assignment@@ret=min @TO@ ExpressionStatement@@Assignment:ret=min @AT@ 6297 @LENGTH@ 9
+---------------INS SimpleName@@ret @TO@ Assignment@@ret=min @AT@ 6297 @LENGTH@ 3
+---------------INS Operator@@= @TO@ Assignment@@ret=min @AT@ 6300 @LENGTH@ 1
+---------------INS SimpleName@@min @TO@ Assignment@@ret=min @AT@ 6303 @LENGTH@ 3
+---------INS ExpressionStatement@@Assignment:ret=max @TO@ IfStatement@@InfixExpression:yMin == 0.0 @AT@ 6345 @LENGTH@ 10
+------------INS Assignment@@ret=max @TO@ ExpressionStatement@@Assignment:ret=max @AT@ 6345 @LENGTH@ 9
+---------------INS SimpleName@@ret @TO@ Assignment@@ret=max @AT@ 6345 @LENGTH@ 3
+---------------INS Operator@@= @TO@ Assignment@@ret=max @AT@ 6348 @LENGTH@ 1
+---------------INS SimpleName@@max @TO@ Assignment@@ret=max @AT@ 6351 @LENGTH@ 3
+, UPD IfStatement@@InfixExpression:sign >= 0 @TO@ InfixExpression:Math.abs(yMax) <= functionValueAccuracy @AT@ 5327 @LENGTH@ 619
+---DEL InfixExpression@@sign >= 0 @AT@ 5331 @LENGTH@ 9
+------DEL SimpleName@@sign @AT@ 5331 @LENGTH@ 4
+------DEL NumberLiteral@@0 @AT@ 5339 @LENGTH@ 1
+---INS InfixExpression@@Math.abs(yMax) <= functionValueAccuracy @TO@ IfStatement@@InfixExpression:sign >= 0 @AT@ 5543 @LENGTH@ 39
+------MOV Operator@@>= @TO@ InfixExpression@@Math.abs(yMax) <= functionValueAccuracy @AT@ 5335 @LENGTH@ 2
+------INS MethodInvocation@@Math.abs(yMax) @TO@ InfixExpression@@Math.abs(yMax) <= functionValueAccuracy @AT@ 5543 @LENGTH@ 14
+---------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(yMax) @AT@ 5543 @LENGTH@ 4
+---------INS SimpleName@@MethodName:abs:[yMax] @TO@ MethodInvocation@@Math.abs(yMax) @AT@ 5548 @LENGTH@ 9
+------------INS SimpleName@@yMax @TO@ SimpleName@@MethodName:abs:[yMax] @AT@ 5552 @LENGTH@ 4
+------INS SimpleName@@functionValueAccuracy @TO@ InfixExpression@@Math.abs(yMax) <= functionValueAccuracy @AT@ 5561 @LENGTH@ 21
+---INS ExpressionStatement@@MethodInvocation:setResult(max,0) @TO@ IfStatement@@InfixExpression:sign >= 0 @AT@ 5602 @LENGTH@ 18
+------INS MethodInvocation@@setResult(max,0) @TO@ ExpressionStatement@@MethodInvocation:setResult(max,0) @AT@ 5602 @LENGTH@ 17
+---------INS SimpleName@@MethodName:setResult:[max, 0] @TO@ MethodInvocation@@setResult(max,0) @AT@ 5602 @LENGTH@ 17
+------------INS SimpleName@@max @TO@ SimpleName@@MethodName:setResult:[max, 0] @AT@ 5612 @LENGTH@ 3
+------------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:setResult:[max, 0] @AT@ 5617 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:ret=max @TO@ IfStatement@@InfixExpression:sign >= 0 @AT@ 5637 @LENGTH@ 10
+------INS Assignment@@ret=max @TO@ ExpressionStatement@@Assignment:ret=max @AT@ 5637 @LENGTH@ 9
+---------INS SimpleName@@ret @TO@ Assignment@@ret=max @AT@ 5637 @LENGTH@ 3
+---------INS Operator@@= @TO@ Assignment@@ret=max @AT@ 5640 @LENGTH@ 1
+---------INS SimpleName@@max @TO@ Assignment@@ret=max @AT@ 5643 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6 OP25)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, NumberLiteral, OP2, null)
+OP6:   (INS, IfStatement, OP1, OP7 OP8 OP15 OP20)
+OP7:      (MOV, IfStatement, OP6, null)
+OP8:      (INS, InfixExpression, OP6, OP9 OP13 OP14)
+OP9:         (INS, MethodInvocation, OP8, OP10 OP11)
+OP10:            (INS, SimpleName, OP9, null)
+OP11:            (INS, SimpleName, OP9, OP12)
+OP12:               (INS, SimpleName, OP11, null)
+OP13:         (INS, Operator, OP8, null)
+OP14:         (INS, SimpleName, OP8, null)
+OP15:      (INS, ExpressionStatement, OP6, OP16)
+OP16:         (INS, MethodInvocation, OP15, OP17)
+OP17:            (INS, SimpleName, OP16, OP18 OP19)
+OP18:               (INS, SimpleName, OP17, null)
+OP19:               (INS, NumberLiteral, OP17, null)
+OP20:      (INS, ExpressionStatement, OP6, OP21)
+OP21:         (INS, Assignment, OP20, OP22 OP23 OP24)
+OP22:            (INS, SimpleName, OP21, null)
+OP23:            (INS, Operator, OP21, null)
+OP24:            (INS, SimpleName, OP21, null)
+OP25:   (INS, IfStatement, OP1, OP26 OP27 OP31)
+OP26:      (MOV, ExpressionStatement, OP25, null)
+OP27:      (INS, InfixExpression, OP25, OP28 OP29 OP30)
+OP28:         (INS, SimpleName, OP27, null)
+OP29:         (INS, Operator, OP27, null)
+OP30:         (INS, NumberLiteral, OP27, null)
+OP31:      (INS, IfStatement, OP25, OP32 OP36 OP41)
+OP32:         (INS, InfixExpression, OP31, OP33 OP34 OP35)
+OP33:            (INS, SimpleName, OP32, null)
+OP34:            (INS, Operator, OP32, null)
+OP35:            (INS, NumberLiteral, OP32, null)
+OP36:         (INS, ExpressionStatement, OP31, OP37)
+OP37:            (INS, Assignment, OP36, OP38 OP39 OP40)
+OP38:               (INS, SimpleName, OP37, null)
+OP39:               (INS, Operator, OP37, null)
+OP40:               (INS, SimpleName, OP37, null)
+OP41:         (INS, ExpressionStatement, OP31, OP42)
+OP42:            (INS, Assignment, OP41, OP43 OP44 OP45)
+OP43:               (INS, SimpleName, OP42, null)
+OP44:               (INS, Operator, OP42, null)
+OP45:               (INS, SimpleName, OP42, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:sign > 0 @TO@ MethodDeclaration@@public, @@double, MethodName:solve, @@Argus:double+min+double+max+MaxIterationsExceededException, FunctionEvaluationException,  @AT@ 5327 @LENGTH@ 1052
+---INS InfixExpression@@sign > 0 @TO@ IfStatement@@InfixExpression:sign > 0 @AT@ 5331 @LENGTH@ 8
+------INS SimpleName@@sign @TO@ InfixExpression@@sign > 0 @AT@ 5331 @LENGTH@ 4
+------INS Operator@@> @TO@ InfixExpression@@sign > 0 @AT@ 5335 @LENGTH@ 1
+------INS NumberLiteral@@0 @TO@ InfixExpression@@sign > 0 @AT@ 5338 @LENGTH@ 1
+---INS IfStatement@@InfixExpression:Math.abs(yMin) <= functionValueAccuracy @TO@ IfStatement@@InfixExpression:sign > 0 @AT@ 5411 @LENGTH@ 622
+------MOV IfStatement@@InfixExpression:sign >= 0 @TO@ IfStatement@@InfixExpression:Math.abs(yMin) <= functionValueAccuracy @AT@ 5327 @LENGTH@ 619
+------INS InfixExpression@@Math.abs(yMin) <= functionValueAccuracy @TO@ IfStatement@@InfixExpression:Math.abs(yMin) <= functionValueAccuracy @AT@ 5415 @LENGTH@ 39
+---------INS MethodInvocation@@Math.abs(yMin) @TO@ InfixExpression@@Math.abs(yMin) <= functionValueAccuracy @AT@ 5415 @LENGTH@ 14
+------------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(yMin) @AT@ 5415 @LENGTH@ 4
+------------INS SimpleName@@MethodName:abs:[yMin] @TO@ MethodInvocation@@Math.abs(yMin) @AT@ 5420 @LENGTH@ 9
+---------------INS SimpleName@@yMin @TO@ SimpleName@@MethodName:abs:[yMin] @AT@ 5424 @LENGTH@ 4
+---------INS Operator@@<= @TO@ InfixExpression@@Math.abs(yMin) <= functionValueAccuracy @AT@ 5429 @LENGTH@ 2
+---------INS SimpleName@@functionValueAccuracy @TO@ InfixExpression@@Math.abs(yMin) <= functionValueAccuracy @AT@ 5433 @LENGTH@ 21
+------INS ExpressionStatement@@MethodInvocation:setResult(min,0) @TO@ IfStatement@@InfixExpression:Math.abs(yMin) <= functionValueAccuracy @AT@ 5474 @LENGTH@ 18
+---------INS MethodInvocation@@setResult(min,0) @TO@ ExpressionStatement@@MethodInvocation:setResult(min,0) @AT@ 5474 @LENGTH@ 17
+------------INS SimpleName@@MethodName:setResult:[min, 0] @TO@ MethodInvocation@@setResult(min,0) @AT@ 5474 @LENGTH@ 17
+---------------INS SimpleName@@min @TO@ SimpleName@@MethodName:setResult:[min, 0] @AT@ 5484 @LENGTH@ 3
+---------------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:setResult:[min, 0] @AT@ 5489 @LENGTH@ 1
+------INS ExpressionStatement@@Assignment:ret=min @TO@ IfStatement@@InfixExpression:Math.abs(yMin) <= functionValueAccuracy @AT@ 5509 @LENGTH@ 10
+---------INS Assignment@@ret=min @TO@ ExpressionStatement@@Assignment:ret=min @AT@ 5509 @LENGTH@ 9
+------------INS SimpleName@@ret @TO@ Assignment@@ret=min @AT@ 5509 @LENGTH@ 3
+------------INS Operator@@= @TO@ Assignment@@ret=min @AT@ 5512 @LENGTH@ 1
+------------INS SimpleName@@min @TO@ Assignment@@ret=min @AT@ 5515 @LENGTH@ 3
+---INS IfStatement@@InfixExpression:sign < 0 @TO@ IfStatement@@InfixExpression:sign > 0 @AT@ 6049 @LENGTH@ 330
+------MOV ExpressionStatement@@Assignment:ret=solve(min,yMin,max,yMax,min,yMin) @TO@ IfStatement@@InfixExpression:sign < 0 @AT@ 5848 @LENGTH@ 45
+------INS InfixExpression@@sign < 0 @TO@ IfStatement@@InfixExpression:sign < 0 @AT@ 6053 @LENGTH@ 8
+---------INS SimpleName@@sign @TO@ InfixExpression@@sign < 0 @AT@ 6053 @LENGTH@ 4
+---------INS Operator@@< @TO@ InfixExpression@@sign < 0 @AT@ 6057 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@sign < 0 @AT@ 6060 @LENGTH@ 1
+------INS IfStatement@@InfixExpression:yMin == 0.0 @TO@ IfStatement@@InfixExpression:sign < 0 @AT@ 6262 @LENGTH@ 107
+---------INS InfixExpression@@yMin == 0.0 @TO@ IfStatement@@InfixExpression:yMin == 0.0 @AT@ 6266 @LENGTH@ 11
+------------INS SimpleName@@yMin @TO@ InfixExpression@@yMin == 0.0 @AT@ 6266 @LENGTH@ 4
+------------INS Operator@@== @TO@ InfixExpression@@yMin == 0.0 @AT@ 6270 @LENGTH@ 2
+------------INS NumberLiteral@@0.0 @TO@ InfixExpression@@yMin == 0.0 @AT@ 6274 @LENGTH@ 3
+---------INS ExpressionStatement@@Assignment:ret=min @TO@ IfStatement@@InfixExpression:yMin == 0.0 @AT@ 6297 @LENGTH@ 10
+------------INS Assignment@@ret=min @TO@ ExpressionStatement@@Assignment:ret=min @AT@ 6297 @LENGTH@ 9
+---------------INS SimpleName@@ret @TO@ Assignment@@ret=min @AT@ 6297 @LENGTH@ 3
+---------------INS Operator@@= @TO@ Assignment@@ret=min @AT@ 6300 @LENGTH@ 1
+---------------INS SimpleName@@min @TO@ Assignment@@ret=min @AT@ 6303 @LENGTH@ 3
+---------INS ExpressionStatement@@Assignment:ret=max @TO@ IfStatement@@InfixExpression:yMin == 0.0 @AT@ 6345 @LENGTH@ 10
+------------INS Assignment@@ret=max @TO@ ExpressionStatement@@Assignment:ret=max @AT@ 6345 @LENGTH@ 9
+---------------INS SimpleName@@ret @TO@ Assignment@@ret=max @AT@ 6345 @LENGTH@ 3
+---------------INS Operator@@= @TO@ Assignment@@ret=max @AT@ 6348 @LENGTH@ 1
+---------------INS SimpleName@@max @TO@ Assignment@@ret=max @AT@ 6351 @LENGTH@ 3
+, UPD IfStatement@@InfixExpression:sign >= 0 @TO@ InfixExpression:Math.abs(yMax) <= functionValueAccuracy @AT@ 5327 @LENGTH@ 619
+---DEL InfixExpression@@sign >= 0 @AT@ 5331 @LENGTH@ 9
+------DEL SimpleName@@sign @AT@ 5331 @LENGTH@ 4
+------DEL NumberLiteral@@0 @AT@ 5339 @LENGTH@ 1
+---INS InfixExpression@@Math.abs(yMax) <= functionValueAccuracy @TO@ IfStatement@@InfixExpression:sign >= 0 @AT@ 5543 @LENGTH@ 39
+------MOV Operator@@>= @TO@ InfixExpression@@Math.abs(yMax) <= functionValueAccuracy @AT@ 5335 @LENGTH@ 2
+------INS MethodInvocation@@Math.abs(yMax) @TO@ InfixExpression@@Math.abs(yMax) <= functionValueAccuracy @AT@ 5543 @LENGTH@ 14
+---------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(yMax) @AT@ 5543 @LENGTH@ 4
+---------INS SimpleName@@MethodName:abs:[yMax] @TO@ MethodInvocation@@Math.abs(yMax) @AT@ 5548 @LENGTH@ 9
+------------INS SimpleName@@yMax @TO@ SimpleName@@MethodName:abs:[yMax] @AT@ 5552 @LENGTH@ 4
+------INS SimpleName@@functionValueAccuracy @TO@ InfixExpression@@Math.abs(yMax) <= functionValueAccuracy @AT@ 5561 @LENGTH@ 21
+---INS ExpressionStatement@@MethodInvocation:setResult(max,0) @TO@ IfStatement@@InfixExpression:sign >= 0 @AT@ 5602 @LENGTH@ 18
+------INS MethodInvocation@@setResult(max,0) @TO@ ExpressionStatement@@MethodInvocation:setResult(max,0) @AT@ 5602 @LENGTH@ 17
+---------INS SimpleName@@MethodName:setResult:[max, 0] @TO@ MethodInvocation@@setResult(max,0) @AT@ 5602 @LENGTH@ 17
+------------INS SimpleName@@max @TO@ SimpleName@@MethodName:setResult:[max, 0] @AT@ 5612 @LENGTH@ 3
+------------INS NumberLiteral@@0 @TO@ SimpleName@@MethodName:setResult:[max, 0] @AT@ 5617 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:ret=max @TO@ IfStatement@@InfixExpression:sign >= 0 @AT@ 5637 @LENGTH@ 10
+------INS Assignment@@ret=max @TO@ ExpressionStatement@@Assignment:ret=max @AT@ 5637 @LENGTH@ 9
+---------INS SimpleName@@ret @TO@ Assignment@@ret=max @AT@ 5637 @LENGTH@ 3
+---------INS Operator@@= @TO@ Assignment@@ret=max @AT@ 5640 @LENGTH@ 1
+---------INS SimpleName@@max @TO@ Assignment@@ret=max @AT@ 5643 @LENGTH@ 3
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2 OP5 OP12 OP17)
+OP2:   (DEL, InfixExpression, OP1, OP3 OP4)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, NumberLiteral, OP2, null)
+OP5:   (INS, InfixExpression, OP1, OP6 OP7 OP11)
+OP6:      (MOV, Operator, OP5, null)
+OP7:      (INS, MethodInvocation, OP5, OP8 OP9)
+OP8:         (INS, SimpleName, OP7, null)
+OP9:         (INS, SimpleName, OP7, OP10)
+OP10:            (INS, SimpleName, OP9, null)
+OP11:      (INS, SimpleName, OP5, null)
+OP12:   (INS, ExpressionStatement, OP1, OP13)
+OP13:      (INS, MethodInvocation, OP12, OP14)
+OP14:         (INS, SimpleName, OP13, OP15 OP16)
+OP15:            (INS, SimpleName, OP14, null)
+OP16:            (INS, NumberLiteral, OP14, null)
+OP17:   (INS, ExpressionStatement, OP1, OP18)
+OP18:      (INS, Assignment, OP17, OP19 OP20 OP21)
+OP19:         (INS, SimpleName, OP18, null)
+OP20:         (INS, Operator, OP18, null)
+OP21:         (INS, SimpleName, OP18, null)
+
+
+

@@ -1,0 +1,30 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_37/src/com/google/javascript/jscomp/NodeTraversal.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_37/src/com/google/javascript/jscomp/NodeTraversal.java
+--- ../d4j-repo/Closure/Closure_37/src/com/google/javascript/jscomp/NodeTraversal.java	2021-01-06 03:42:32.225496905 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_37/src/com/google/javascript/jscomp/NodeTraversal.java	2021-01-06 03:42:34.253565971 -0800
+@@ -538,7 +538,7 @@
+ 
+     // Body
+     Preconditions.checkState(body.getNext() == null &&
+-            body.isBlock());
++            body.isBlock(), body);
+     traverseBranch(body, n);
+ 
+     popScope();
+diff -Naur ../d4j-repo/Closure/Closure_37/src/com/google/javascript/jscomp/parsing/IRFactory.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_37/src/com/google/javascript/jscomp/parsing/IRFactory.java
+--- ../d4j-repo/Closure/Closure_37/src/com/google/javascript/jscomp/parsing/IRFactory.java	2021-01-06 03:42:32.221496768 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_37/src/com/google/javascript/jscomp/parsing/IRFactory.java	2021-01-06 03:42:34.249565836 -0800
+@@ -664,9 +664,13 @@
+       node.addChildToBack(lp);
+ 
+       Node bodyNode = transform(functionNode.getBody());
++      if (!bodyNode.isBlock()) {
+         // When in ideMode Rhino tries to parse some constructs the compiler
+         // doesn't support, repair it here. see Rhino's
+         // Parser#parseFunctionBodyExpr.
++        Preconditions.checkState(config.isIdeMode);
++        bodyNode = IR.block();
++      }
+       parseDirectives(bodyNode);
+       node.addChildToBack(bodyNode);
+      return node;

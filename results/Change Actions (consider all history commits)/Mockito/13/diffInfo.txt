@@ -1,0 +1,20 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_13/src/org/mockito/internal/MockHandler.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_13/src/org/mockito/internal/MockHandler.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Mockito/Mockito_13/src/org/mockito/internal/MockHandler.java	2020-01-05 22:33:07.076550578 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Mockito/Mockito_13/src/org/mockito/internal/MockHandler.java	2020-01-05 22:33:09.848550567 -0800
+@@ -74,12 +74,14 @@
+         if (verificationMode != null) {
+             //We need to check if verification was started on the correct mock 
+             // - see VerifyingWithAnExtraCallToADifferentMockTest (bug 138)
+-            if (verificationMode instanceof MockAwareVerificationMode && ((MockAwareVerificationMode) verificationMode).getMock() == invocation.getMock()) {                
++            if (((MockAwareVerificationMode) verificationMode).getMock() == invocation.getMock()) {                
+                 VerificationDataImpl data = new VerificationDataImpl(invocationContainerImpl, invocationMatcher);            
+                 verificationMode.verify(data);
+                 return null;
++            } else {
+                 // this means there is an invocation on a different mock. Re-adding verification mode 
+                 // - see VerifyingWithAnExtraCallToADifferentMockTest (bug 138)
++                mockingProgress.verificationStarted(verificationMode);
+             }
+         }
+         

@@ -1,0 +1,22 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_46/src/main/java/org/apache/commons/math/complex/Complex.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_46/src/main/java/org/apache/commons/math/complex/Complex.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_46/src/main/java/org/apache/commons/math/complex/Complex.java	2020-01-05 06:35:46.704125402 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_46/src/main/java/org/apache/commons/math/complex/Complex.java	2020-01-05 06:35:50.208096137 -0800
+@@ -257,7 +257,7 @@
+ 
+         if (divisor.isZero) {
+             // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            return NaN;
+         }
+ 
+         if (divisor.isInfinite() && !isInfinite()) {
+@@ -294,7 +294,7 @@
+         }
+         if (divisor == 0d) {
+             // return isZero ? NaN : INF; // See MATH-657
+-            return isZero ? NaN : INF;
++            return NaN;
+         }
+         if (Double.isInfinite(divisor)) {
+             return !isInfinite() ? ZERO : NaN;

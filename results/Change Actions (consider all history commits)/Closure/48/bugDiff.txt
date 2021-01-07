@@ -1,0 +1,23 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_48/src/com/google/javascript/jscomp/TypedScopeCreator.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_48/src/com/google/javascript/jscomp/TypedScopeCreator.java
+--- ../d4j-repo/Closure/Closure_48/src/com/google/javascript/jscomp/TypedScopeCreator.java	2021-01-06 03:43:16.262996643 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_48/src/com/google/javascript/jscomp/TypedScopeCreator.java	2021-01-06 03:43:18.199062579 -0800
+@@ -1518,11 +1518,14 @@
+             || FunctionTypeBuilder.isFunctionTypeDeclaration(info));
+       }
+ 
+-      if (inferred) {
++      if (inferred && rhsValue != null && rhsValue.isFunction()) {
+         // Determining declaration for #2
+-        inferred = !(rhsValue != null &&
+-            rhsValue.isFunction() &&
+-            (info != null || !scope.isDeclared(qName, false)));
++        if (info != null) {
++          inferred = false;
++        } else if (!scope.isDeclared(qName, false) &&
++                   n.isUnscopedQualifiedName()) {
++          inferred = false;
++        }
+       }
+ 
+       if (!inferred) {

@@ -1,0 +1,12 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_43/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_43/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_43/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java	2020-01-05 05:29:33.637308863 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_43/src/java/org/apache/commons/lang/text/ExtendedMessageFormat.java	2020-01-05 05:29:37.057280299 -0800
+@@ -419,6 +419,7 @@
+         int start = pos.getIndex();
+         char[] c = pattern.toCharArray();
+         if (escapingOn && c[start] == QUOTE) {
++            next(pos);
+             return appendTo == null ? null : appendTo.append(QUOTE);
+         }
+         int lastHold = start;

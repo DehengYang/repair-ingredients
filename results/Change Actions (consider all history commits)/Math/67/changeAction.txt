@@ -1,0 +1,18 @@
+OP1:(UPD, ReturnStatement, null, OP2 OP5)
+OP2:   (INS, ArrayAccess, OP1, OP3 OP4)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, NumberLiteral, OP2, null)
+OP5:   (DEL, MethodInvocation, OP1, OP6 OP7)
+OP6:      (DEL, SimpleName, OP5, null)
+OP7:      (DEL, SimpleName, OP5, null)
+
+
+OP1:(UPD, ReturnStatement, null, OP2 OP5)
+OP2:   (INS, ArrayAccess, OP1, OP3 OP4)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, NumberLiteral, OP2, null)
+OP5:   (DEL, MethodInvocation, OP1, OP6 OP7)
+OP6:      (DEL, SimpleName, OP5, null)
+OP7:      (DEL, SimpleName, OP5, null)
+
+

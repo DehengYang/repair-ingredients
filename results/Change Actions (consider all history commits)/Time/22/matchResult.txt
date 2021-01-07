@@ -1,0 +1,15 @@
+No.0 CCI matched.
+freq: 8
+CommitIds: e1927ec8 157fe66c 2c4229d0 2c4229d0 2c4229d0 2c4229d0 2c4229d0 2c4229d0 
+FreqRank:37
+
+No.2 CCI matched.
+freq: 2
+CommitIds: 638abee3 6291c8bf 
+FreqRank:43
+
+No.4 CCI matched.
+freq: 2
+CommitIds: 638abee3 6291c8bf 
+FreqRank:43
+

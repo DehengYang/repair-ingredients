@@ -1,0 +1,25 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_62/src/main/java/org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_62/src/main/java/org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_62/src/main/java/org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java	2020-01-05 06:37:18.495358753 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_62/src/main/java/org/apache/commons/math/optimization/univariate/MultiStartUnivariateRealOptimizer.java	2020-01-05 06:37:20.975338039 -0800
+@@ -143,7 +143,7 @@
+                                                  final GoalType goal,
+                                                  final double min, final double max)
+         throws FunctionEvaluationException {
+-        return optimize(f, goal, min, max, 0);
++        return optimize(f, goal, min, max, min + 0.5 * (max - min));
+     }
+ 
+     /** {@inheritDoc} */
+@@ -157,9 +157,8 @@
+         // Multi-start loop.
+         for (int i = 0; i < starts; ++i) {
+             try {
+-                final double bound1 = (i == 0) ? min : min + generator.nextDouble() * (max - min);
+-                final double bound2 = (i == 0) ? max : min + generator.nextDouble() * (max - min);
+-                optima[i] = optimizer.optimize(f, goal, FastMath.min(bound1, bound2), FastMath.max(bound1, bound2));
++                final double s = (i == 0) ? startValue : min + generator.nextDouble() * (max - min);
++                optima[i] = optimizer.optimize(f, goal, min, max, s);
+             } catch (FunctionEvaluationException fee) {
+                 optima[i] = null;
+             } catch (ConvergenceException ce) {

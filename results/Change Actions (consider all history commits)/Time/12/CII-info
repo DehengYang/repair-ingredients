@@ -1,0 +1,446 @@
+
+
+hASList: 
+[INS VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @TO@ MethodDeclaration@@public, static, @@LocalDate, MethodName:fromCalendarFields, @@Argus:Calendar+calendar+ @AT@ 7728 @LENGTH@ 37
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @AT@ 7728 @LENGTH@ 3
+---INS VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @TO@ VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @AT@ 7732 @LENGTH@ 32
+------INS SimpleName@@era @TO@ VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @AT@ 7732 @LENGTH@ 3
+------INS MethodInvocation@@calendar.get(Calendar.ERA) @TO@ VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @AT@ 7738 @LENGTH@ 26
+---------INS SimpleName@@Name:calendar @TO@ MethodInvocation@@calendar.get(Calendar.ERA) @AT@ 7738 @LENGTH@ 8
+---------INS SimpleName@@MethodName:get:[Calendar.ERA] @TO@ MethodInvocation@@calendar.get(Calendar.ERA) @AT@ 7747 @LENGTH@ 17
+------------INS QualifiedName@@Calendar.ERA @TO@ SimpleName@@MethodName:get:[Calendar.ERA] @AT@ 7751 @LENGTH@ 12
+---------------INS SimpleName@@Calendar @TO@ QualifiedName@@Calendar.ERA @AT@ 7751 @LENGTH@ 8
+---------------INS SimpleName@@ERA @TO@ QualifiedName@@Calendar.ERA @AT@ 7760 @LENGTH@ 3
+, UPD ReturnStatement@@ClassInstanceCreation:new LocalDate(yearOfEra,calendar.get(Calendar.MONTH) + 1,calendar.get(Calendar.DAY_OF_MONTH)) @TO@ ClassInstanceCreation:new LocalDate((era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra),calendar.get(Calendar.MONTH) + 1,calendar.get(Calendar.DAY_OF_MONTH)) @AT@ 7781 @LENGTH@ 149
+---UPD ClassInstanceCreation@@LocalDate[yearOfEra, calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH)] @TO@ LocalDate[(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH)] @AT@ 7788 @LENGTH@ 141
+------DEL SimpleName@@yearOfEra @AT@ 7815 @LENGTH@ 9
+------INS ParenthesizedExpression@@(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra) @TO@ ClassInstanceCreation@@LocalDate[yearOfEra, calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH)] @AT@ 7861 @LENGTH@ 57
+---------INS ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @TO@ ParenthesizedExpression@@(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra) @AT@ 7862 @LENGTH@ 55
+------------INS InfixExpression@@era == GregorianCalendar.AD @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7862 @LENGTH@ 27
+---------------INS SimpleName@@era @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7862 @LENGTH@ 3
+---------------INS Operator@@== @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7865 @LENGTH@ 2
+---------------INS QualifiedName@@GregorianCalendar.AD @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7869 @LENGTH@ 20
+------------------INS SimpleName@@GregorianCalendar @TO@ QualifiedName@@GregorianCalendar.AD @AT@ 7869 @LENGTH@ 17
+------------------INS SimpleName@@AD @TO@ QualifiedName@@GregorianCalendar.AD @AT@ 7887 @LENGTH@ 2
+------------INS SimpleName@@yearOfEra @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7892 @LENGTH@ 9
+------------INS InfixExpression@@1 - yearOfEra @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7904 @LENGTH@ 13
+---------------INS NumberLiteral@@1 @TO@ InfixExpression@@1 - yearOfEra @AT@ 7904 @LENGTH@ 1
+---------------INS Operator@@- @TO@ InfixExpression@@1 - yearOfEra @AT@ 7905 @LENGTH@ 1
+---------------INS SimpleName@@yearOfEra @TO@ InfixExpression@@1 - yearOfEra @AT@ 7908 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:date.getTime() < 0 @TO@ MethodDeclaration@@public, static, @@LocalDate, MethodName:fromDateFields, @@Argus:Date+date+ @AT@ 9230 @LENGTH@ 209
+---INS InfixExpression@@date.getTime() < 0 @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9234 @LENGTH@ 18
+------INS MethodInvocation@@date.getTime() @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9234 @LENGTH@ 14
+---------INS SimpleName@@Name:date @TO@ MethodInvocation@@date.getTime() @AT@ 9234 @LENGTH@ 4
+---------INS SimpleName@@MethodName:getTime:[] @TO@ MethodInvocation@@date.getTime() @AT@ 9239 @LENGTH@ 9
+------INS Operator@@< @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9248 @LENGTH@ 1
+------INS NumberLiteral@@0 @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9251 @LENGTH@ 1
+---INS VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9306 @LENGTH@ 48
+------INS SimpleType@@GregorianCalendar @TO@ VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @AT@ 9306 @LENGTH@ 17
+------INS VariableDeclarationFragment@@cal=new GregorianCalendar() @TO@ VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @AT@ 9324 @LENGTH@ 29
+---------INS SimpleName@@cal @TO@ VariableDeclarationFragment@@cal=new GregorianCalendar() @AT@ 9324 @LENGTH@ 3
+---------INS ClassInstanceCreation@@GregorianCalendar[] @TO@ VariableDeclarationFragment@@cal=new GregorianCalendar() @AT@ 9330 @LENGTH@ 23
+------------INS New@@new @TO@ ClassInstanceCreation@@GregorianCalendar[] @AT@ 9330 @LENGTH@ 3
+------------INS SimpleType@@GregorianCalendar @TO@ ClassInstanceCreation@@GregorianCalendar[] @AT@ 9334 @LENGTH@ 17
+---INS ExpressionStatement@@MethodInvocation:cal.setTime(date) @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9367 @LENGTH@ 18
+------INS MethodInvocation@@cal.setTime(date) @TO@ ExpressionStatement@@MethodInvocation:cal.setTime(date) @AT@ 9367 @LENGTH@ 17
+---------INS SimpleName@@Name:cal @TO@ MethodInvocation@@cal.setTime(date) @AT@ 9367 @LENGTH@ 3
+---------INS SimpleName@@MethodName:setTime:[date] @TO@ MethodInvocation@@cal.setTime(date) @AT@ 9371 @LENGTH@ 13
+------------INS SimpleName@@date @TO@ SimpleName@@MethodName:setTime:[date] @AT@ 9379 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:fromCalendarFields(cal) @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9398 @LENGTH@ 31
+------INS MethodInvocation@@fromCalendarFields(cal) @TO@ ReturnStatement@@MethodInvocation:fromCalendarFields(cal) @AT@ 9405 @LENGTH@ 23
+---------INS SimpleName@@MethodName:fromCalendarFields:[cal] @TO@ MethodInvocation@@fromCalendarFields(cal) @AT@ 9405 @LENGTH@ 23
+------------INS SimpleName@@cal @TO@ SimpleName@@MethodName:fromCalendarFields:[cal] @AT@ 9424 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, OP8)
+OP8:            (INS, QualifiedName, OP7, OP9 OP10)
+OP9:               (INS, SimpleName, OP8, null)
+OP10:               (INS, SimpleName, OP8, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @TO@ MethodDeclaration@@public, static, @@LocalDate, MethodName:fromCalendarFields, @@Argus:Calendar+calendar+ @AT@ 7728 @LENGTH@ 37
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @AT@ 7728 @LENGTH@ 3
+---INS VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @TO@ VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @AT@ 7732 @LENGTH@ 32
+------INS SimpleName@@era @TO@ VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @AT@ 7732 @LENGTH@ 3
+------INS MethodInvocation@@calendar.get(Calendar.ERA) @TO@ VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @AT@ 7738 @LENGTH@ 26
+---------INS SimpleName@@Name:calendar @TO@ MethodInvocation@@calendar.get(Calendar.ERA) @AT@ 7738 @LENGTH@ 8
+---------INS SimpleName@@MethodName:get:[Calendar.ERA] @TO@ MethodInvocation@@calendar.get(Calendar.ERA) @AT@ 7747 @LENGTH@ 17
+------------INS QualifiedName@@Calendar.ERA @TO@ SimpleName@@MethodName:get:[Calendar.ERA] @AT@ 7751 @LENGTH@ 12
+---------------INS SimpleName@@Calendar @TO@ QualifiedName@@Calendar.ERA @AT@ 7751 @LENGTH@ 8
+---------------INS SimpleName@@ERA @TO@ QualifiedName@@Calendar.ERA @AT@ 7760 @LENGTH@ 3
+, UPD ReturnStatement@@ClassInstanceCreation:new LocalDate(yearOfEra,calendar.get(Calendar.MONTH) + 1,calendar.get(Calendar.DAY_OF_MONTH)) @TO@ ClassInstanceCreation:new LocalDate((era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra),calendar.get(Calendar.MONTH) + 1,calendar.get(Calendar.DAY_OF_MONTH)) @AT@ 7781 @LENGTH@ 149
+---UPD ClassInstanceCreation@@LocalDate[yearOfEra, calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH)] @TO@ LocalDate[(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH)] @AT@ 7788 @LENGTH@ 141
+------DEL SimpleName@@yearOfEra @AT@ 7815 @LENGTH@ 9
+------INS ParenthesizedExpression@@(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra) @TO@ ClassInstanceCreation@@LocalDate[yearOfEra, calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH)] @AT@ 7861 @LENGTH@ 57
+---------INS ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @TO@ ParenthesizedExpression@@(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra) @AT@ 7862 @LENGTH@ 55
+------------INS InfixExpression@@era == GregorianCalendar.AD @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7862 @LENGTH@ 27
+---------------INS SimpleName@@era @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7862 @LENGTH@ 3
+---------------INS Operator@@== @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7865 @LENGTH@ 2
+---------------INS QualifiedName@@GregorianCalendar.AD @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7869 @LENGTH@ 20
+------------------INS SimpleName@@GregorianCalendar @TO@ QualifiedName@@GregorianCalendar.AD @AT@ 7869 @LENGTH@ 17
+------------------INS SimpleName@@AD @TO@ QualifiedName@@GregorianCalendar.AD @AT@ 7887 @LENGTH@ 2
+------------INS SimpleName@@yearOfEra @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7892 @LENGTH@ 9
+------------INS InfixExpression@@1 - yearOfEra @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7904 @LENGTH@ 13
+---------------INS NumberLiteral@@1 @TO@ InfixExpression@@1 - yearOfEra @AT@ 7904 @LENGTH@ 1
+---------------INS Operator@@- @TO@ InfixExpression@@1 - yearOfEra @AT@ 7905 @LENGTH@ 1
+---------------INS SimpleName@@yearOfEra @TO@ InfixExpression@@1 - yearOfEra @AT@ 7908 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:date.getTime() < 0 @TO@ MethodDeclaration@@public, static, @@LocalDate, MethodName:fromDateFields, @@Argus:Date+date+ @AT@ 9230 @LENGTH@ 209
+---INS InfixExpression@@date.getTime() < 0 @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9234 @LENGTH@ 18
+------INS MethodInvocation@@date.getTime() @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9234 @LENGTH@ 14
+---------INS SimpleName@@Name:date @TO@ MethodInvocation@@date.getTime() @AT@ 9234 @LENGTH@ 4
+---------INS SimpleName@@MethodName:getTime:[] @TO@ MethodInvocation@@date.getTime() @AT@ 9239 @LENGTH@ 9
+------INS Operator@@< @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9248 @LENGTH@ 1
+------INS NumberLiteral@@0 @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9251 @LENGTH@ 1
+---INS VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9306 @LENGTH@ 48
+------INS SimpleType@@GregorianCalendar @TO@ VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @AT@ 9306 @LENGTH@ 17
+------INS VariableDeclarationFragment@@cal=new GregorianCalendar() @TO@ VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @AT@ 9324 @LENGTH@ 29
+---------INS SimpleName@@cal @TO@ VariableDeclarationFragment@@cal=new GregorianCalendar() @AT@ 9324 @LENGTH@ 3
+---------INS ClassInstanceCreation@@GregorianCalendar[] @TO@ VariableDeclarationFragment@@cal=new GregorianCalendar() @AT@ 9330 @LENGTH@ 23
+------------INS New@@new @TO@ ClassInstanceCreation@@GregorianCalendar[] @AT@ 9330 @LENGTH@ 3
+------------INS SimpleType@@GregorianCalendar @TO@ ClassInstanceCreation@@GregorianCalendar[] @AT@ 9334 @LENGTH@ 17
+---INS ExpressionStatement@@MethodInvocation:cal.setTime(date) @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9367 @LENGTH@ 18
+------INS MethodInvocation@@cal.setTime(date) @TO@ ExpressionStatement@@MethodInvocation:cal.setTime(date) @AT@ 9367 @LENGTH@ 17
+---------INS SimpleName@@Name:cal @TO@ MethodInvocation@@cal.setTime(date) @AT@ 9367 @LENGTH@ 3
+---------INS SimpleName@@MethodName:setTime:[date] @TO@ MethodInvocation@@cal.setTime(date) @AT@ 9371 @LENGTH@ 13
+------------INS SimpleName@@date @TO@ SimpleName@@MethodName:setTime:[date] @AT@ 9379 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:fromCalendarFields(cal) @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9398 @LENGTH@ 31
+------INS MethodInvocation@@fromCalendarFields(cal) @TO@ ReturnStatement@@MethodInvocation:fromCalendarFields(cal) @AT@ 9405 @LENGTH@ 23
+---------INS SimpleName@@MethodName:fromCalendarFields:[cal] @TO@ MethodInvocation@@fromCalendarFields(cal) @AT@ 9405 @LENGTH@ 23
+------------INS SimpleName@@cal @TO@ SimpleName@@MethodName:fromCalendarFields:[cal] @AT@ 9424 @LENGTH@ 3
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, ClassInstanceCreation, OP1, OP3 OP4)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (INS, ParenthesizedExpression, OP2, OP5)
+OP5:         (INS, ConditionalExpression, OP4, OP6 OP12 OP13)
+OP6:            (INS, InfixExpression, OP5, OP7 OP8 OP9)
+OP7:               (INS, SimpleName, OP6, null)
+OP8:               (INS, Operator, OP6, null)
+OP9:               (INS, QualifiedName, OP6, OP10 OP11)
+OP10:                  (INS, SimpleName, OP9, null)
+OP11:                  (INS, SimpleName, OP9, null)
+OP12:            (INS, SimpleName, OP5, null)
+OP13:            (INS, InfixExpression, OP5, OP14 OP15 OP16)
+OP14:               (INS, NumberLiteral, OP13, null)
+OP15:               (INS, Operator, OP13, null)
+OP16:               (INS, SimpleName, OP13, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @TO@ MethodDeclaration@@public, static, @@LocalDate, MethodName:fromCalendarFields, @@Argus:Calendar+calendar+ @AT@ 7728 @LENGTH@ 37
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @AT@ 7728 @LENGTH@ 3
+---INS VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @TO@ VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @AT@ 7732 @LENGTH@ 32
+------INS SimpleName@@era @TO@ VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @AT@ 7732 @LENGTH@ 3
+------INS MethodInvocation@@calendar.get(Calendar.ERA) @TO@ VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @AT@ 7738 @LENGTH@ 26
+---------INS SimpleName@@Name:calendar @TO@ MethodInvocation@@calendar.get(Calendar.ERA) @AT@ 7738 @LENGTH@ 8
+---------INS SimpleName@@MethodName:get:[Calendar.ERA] @TO@ MethodInvocation@@calendar.get(Calendar.ERA) @AT@ 7747 @LENGTH@ 17
+------------INS QualifiedName@@Calendar.ERA @TO@ SimpleName@@MethodName:get:[Calendar.ERA] @AT@ 7751 @LENGTH@ 12
+---------------INS SimpleName@@Calendar @TO@ QualifiedName@@Calendar.ERA @AT@ 7751 @LENGTH@ 8
+---------------INS SimpleName@@ERA @TO@ QualifiedName@@Calendar.ERA @AT@ 7760 @LENGTH@ 3
+, UPD ReturnStatement@@ClassInstanceCreation:new LocalDate(yearOfEra,calendar.get(Calendar.MONTH) + 1,calendar.get(Calendar.DAY_OF_MONTH)) @TO@ ClassInstanceCreation:new LocalDate((era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra),calendar.get(Calendar.MONTH) + 1,calendar.get(Calendar.DAY_OF_MONTH)) @AT@ 7781 @LENGTH@ 149
+---UPD ClassInstanceCreation@@LocalDate[yearOfEra, calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH)] @TO@ LocalDate[(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH)] @AT@ 7788 @LENGTH@ 141
+------DEL SimpleName@@yearOfEra @AT@ 7815 @LENGTH@ 9
+------INS ParenthesizedExpression@@(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra) @TO@ ClassInstanceCreation@@LocalDate[yearOfEra, calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH)] @AT@ 7861 @LENGTH@ 57
+---------INS ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @TO@ ParenthesizedExpression@@(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra) @AT@ 7862 @LENGTH@ 55
+------------INS InfixExpression@@era == GregorianCalendar.AD @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7862 @LENGTH@ 27
+---------------INS SimpleName@@era @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7862 @LENGTH@ 3
+---------------INS Operator@@== @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7865 @LENGTH@ 2
+---------------INS QualifiedName@@GregorianCalendar.AD @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7869 @LENGTH@ 20
+------------------INS SimpleName@@GregorianCalendar @TO@ QualifiedName@@GregorianCalendar.AD @AT@ 7869 @LENGTH@ 17
+------------------INS SimpleName@@AD @TO@ QualifiedName@@GregorianCalendar.AD @AT@ 7887 @LENGTH@ 2
+------------INS SimpleName@@yearOfEra @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7892 @LENGTH@ 9
+------------INS InfixExpression@@1 - yearOfEra @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7904 @LENGTH@ 13
+---------------INS NumberLiteral@@1 @TO@ InfixExpression@@1 - yearOfEra @AT@ 7904 @LENGTH@ 1
+---------------INS Operator@@- @TO@ InfixExpression@@1 - yearOfEra @AT@ 7905 @LENGTH@ 1
+---------------INS SimpleName@@yearOfEra @TO@ InfixExpression@@1 - yearOfEra @AT@ 7908 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:date.getTime() < 0 @TO@ MethodDeclaration@@public, static, @@LocalDate, MethodName:fromDateFields, @@Argus:Date+date+ @AT@ 9230 @LENGTH@ 209
+---INS InfixExpression@@date.getTime() < 0 @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9234 @LENGTH@ 18
+------INS MethodInvocation@@date.getTime() @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9234 @LENGTH@ 14
+---------INS SimpleName@@Name:date @TO@ MethodInvocation@@date.getTime() @AT@ 9234 @LENGTH@ 4
+---------INS SimpleName@@MethodName:getTime:[] @TO@ MethodInvocation@@date.getTime() @AT@ 9239 @LENGTH@ 9
+------INS Operator@@< @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9248 @LENGTH@ 1
+------INS NumberLiteral@@0 @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9251 @LENGTH@ 1
+---INS VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9306 @LENGTH@ 48
+------INS SimpleType@@GregorianCalendar @TO@ VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @AT@ 9306 @LENGTH@ 17
+------INS VariableDeclarationFragment@@cal=new GregorianCalendar() @TO@ VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @AT@ 9324 @LENGTH@ 29
+---------INS SimpleName@@cal @TO@ VariableDeclarationFragment@@cal=new GregorianCalendar() @AT@ 9324 @LENGTH@ 3
+---------INS ClassInstanceCreation@@GregorianCalendar[] @TO@ VariableDeclarationFragment@@cal=new GregorianCalendar() @AT@ 9330 @LENGTH@ 23
+------------INS New@@new @TO@ ClassInstanceCreation@@GregorianCalendar[] @AT@ 9330 @LENGTH@ 3
+------------INS SimpleType@@GregorianCalendar @TO@ ClassInstanceCreation@@GregorianCalendar[] @AT@ 9334 @LENGTH@ 17
+---INS ExpressionStatement@@MethodInvocation:cal.setTime(date) @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9367 @LENGTH@ 18
+------INS MethodInvocation@@cal.setTime(date) @TO@ ExpressionStatement@@MethodInvocation:cal.setTime(date) @AT@ 9367 @LENGTH@ 17
+---------INS SimpleName@@Name:cal @TO@ MethodInvocation@@cal.setTime(date) @AT@ 9367 @LENGTH@ 3
+---------INS SimpleName@@MethodName:setTime:[date] @TO@ MethodInvocation@@cal.setTime(date) @AT@ 9371 @LENGTH@ 13
+------------INS SimpleName@@date @TO@ SimpleName@@MethodName:setTime:[date] @AT@ 9379 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:fromCalendarFields(cal) @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9398 @LENGTH@ 31
+------INS MethodInvocation@@fromCalendarFields(cal) @TO@ ReturnStatement@@MethodInvocation:fromCalendarFields(cal) @AT@ 9405 @LENGTH@ 23
+---------INS SimpleName@@MethodName:fromCalendarFields:[cal] @TO@ MethodInvocation@@fromCalendarFields(cal) @AT@ 9405 @LENGTH@ 23
+------------INS SimpleName@@cal @TO@ SimpleName@@MethodName:fromCalendarFields:[cal] @AT@ 9424 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP8 OP15 OP20)
+OP2:   (INS, InfixExpression, OP1, OP3 OP6 OP7)
+OP3:      (INS, MethodInvocation, OP2, OP4 OP5)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, SimpleName, OP3, null)
+OP6:      (INS, Operator, OP2, null)
+OP7:      (INS, NumberLiteral, OP2, null)
+OP8:   (INS, VariableDeclarationStatement, OP1, OP9 OP10)
+OP9:      (INS, SimpleType, OP8, null)
+OP10:      (INS, VariableDeclarationFragment, OP8, OP11 OP12)
+OP11:         (INS, SimpleName, OP10, null)
+OP12:         (INS, ClassInstanceCreation, OP10, OP13 OP14)
+OP13:            (INS, New, OP12, null)
+OP14:            (INS, SimpleType, OP12, null)
+OP15:   (INS, ExpressionStatement, OP1, OP16)
+OP16:      (INS, MethodInvocation, OP15, OP17 OP18)
+OP17:         (INS, SimpleName, OP16, null)
+OP18:         (INS, SimpleName, OP16, OP19)
+OP19:            (INS, SimpleName, OP18, null)
+OP20:   (INS, ReturnStatement, OP1, OP21)
+OP21:      (INS, MethodInvocation, OP20, OP22)
+OP22:         (INS, SimpleName, OP21, OP23)
+OP23:            (INS, SimpleName, OP22, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @TO@ MethodDeclaration@@public, static, @@LocalDateTime, MethodName:fromCalendarFields, @@Argus:Calendar+calendar+ @AT@ 7312 @LENGTH@ 37
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @AT@ 7312 @LENGTH@ 3
+---INS VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @TO@ VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @AT@ 7316 @LENGTH@ 32
+------INS SimpleName@@era @TO@ VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @AT@ 7316 @LENGTH@ 3
+------INS MethodInvocation@@calendar.get(Calendar.ERA) @TO@ VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @AT@ 7322 @LENGTH@ 26
+---------INS SimpleName@@Name:calendar @TO@ MethodInvocation@@calendar.get(Calendar.ERA) @AT@ 7322 @LENGTH@ 8
+---------INS SimpleName@@MethodName:get:[Calendar.ERA] @TO@ MethodInvocation@@calendar.get(Calendar.ERA) @AT@ 7331 @LENGTH@ 17
+------------INS QualifiedName@@Calendar.ERA @TO@ SimpleName@@MethodName:get:[Calendar.ERA] @AT@ 7335 @LENGTH@ 12
+---------------INS SimpleName@@Calendar @TO@ QualifiedName@@Calendar.ERA @AT@ 7335 @LENGTH@ 8
+---------------INS SimpleName@@ERA @TO@ QualifiedName@@Calendar.ERA @AT@ 7344 @LENGTH@ 3
+, UPD ReturnStatement@@ClassInstanceCreation:new LocalDateTime(yearOfEra,calendar.get(Calendar.MONTH) + 1,calendar.get(Calendar.DAY_OF_MONTH),calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),calendar.get(Calendar.SECOND),calendar.get(Calendar.MILLISECOND)) @TO@ ClassInstanceCreation:new LocalDateTime((era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra),calendar.get(Calendar.MONTH) + 1,calendar.get(Calendar.DAY_OF_MONTH),calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),calendar.get(Calendar.SECOND),calendar.get(Calendar.MILLISECOND)) @AT@ 7365 @LENGTH@ 335
+---UPD ClassInstanceCreation@@LocalDateTime[yearOfEra, calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND), calendar.get(Calendar.MILLISECOND)] @TO@ LocalDateTime[(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND), calendar.get(Calendar.MILLISECOND)] @AT@ 7372 @LENGTH@ 327
+------DEL SimpleName@@yearOfEra @AT@ 7403 @LENGTH@ 9
+------INS ParenthesizedExpression@@(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra) @TO@ ClassInstanceCreation@@LocalDateTime[yearOfEra, calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND), calendar.get(Calendar.MILLISECOND)] @AT@ 7449 @LENGTH@ 57
+---------INS ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @TO@ ParenthesizedExpression@@(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra) @AT@ 7450 @LENGTH@ 55
+------------INS InfixExpression@@era == GregorianCalendar.AD @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7450 @LENGTH@ 27
+---------------INS SimpleName@@era @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7450 @LENGTH@ 3
+---------------INS Operator@@== @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7453 @LENGTH@ 2
+---------------INS QualifiedName@@GregorianCalendar.AD @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7457 @LENGTH@ 20
+------------------INS SimpleName@@GregorianCalendar @TO@ QualifiedName@@GregorianCalendar.AD @AT@ 7457 @LENGTH@ 17
+------------------INS SimpleName@@AD @TO@ QualifiedName@@GregorianCalendar.AD @AT@ 7475 @LENGTH@ 2
+------------INS SimpleName@@yearOfEra @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7480 @LENGTH@ 9
+------------INS InfixExpression@@1 - yearOfEra @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7492 @LENGTH@ 13
+---------------INS NumberLiteral@@1 @TO@ InfixExpression@@1 - yearOfEra @AT@ 7492 @LENGTH@ 1
+---------------INS Operator@@- @TO@ InfixExpression@@1 - yearOfEra @AT@ 7493 @LENGTH@ 1
+---------------INS SimpleName@@yearOfEra @TO@ InfixExpression@@1 - yearOfEra @AT@ 7496 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:date.getTime() < 0 @TO@ MethodDeclaration@@public, static, @@LocalDateTime, MethodName:fromDateFields, @@Argus:Date+date+ @AT@ 9021 @LENGTH@ 209
+---INS InfixExpression@@date.getTime() < 0 @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9025 @LENGTH@ 18
+------INS MethodInvocation@@date.getTime() @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9025 @LENGTH@ 14
+---------INS SimpleName@@Name:date @TO@ MethodInvocation@@date.getTime() @AT@ 9025 @LENGTH@ 4
+---------INS SimpleName@@MethodName:getTime:[] @TO@ MethodInvocation@@date.getTime() @AT@ 9030 @LENGTH@ 9
+------INS Operator@@< @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9039 @LENGTH@ 1
+------INS NumberLiteral@@0 @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9042 @LENGTH@ 1
+---INS VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9097 @LENGTH@ 48
+------INS SimpleType@@GregorianCalendar @TO@ VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @AT@ 9097 @LENGTH@ 17
+------INS VariableDeclarationFragment@@cal=new GregorianCalendar() @TO@ VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @AT@ 9115 @LENGTH@ 29
+---------INS SimpleName@@cal @TO@ VariableDeclarationFragment@@cal=new GregorianCalendar() @AT@ 9115 @LENGTH@ 3
+---------INS ClassInstanceCreation@@GregorianCalendar[] @TO@ VariableDeclarationFragment@@cal=new GregorianCalendar() @AT@ 9121 @LENGTH@ 23
+------------INS New@@new @TO@ ClassInstanceCreation@@GregorianCalendar[] @AT@ 9121 @LENGTH@ 3
+------------INS SimpleType@@GregorianCalendar @TO@ ClassInstanceCreation@@GregorianCalendar[] @AT@ 9125 @LENGTH@ 17
+---INS ExpressionStatement@@MethodInvocation:cal.setTime(date) @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9158 @LENGTH@ 18
+------INS MethodInvocation@@cal.setTime(date) @TO@ ExpressionStatement@@MethodInvocation:cal.setTime(date) @AT@ 9158 @LENGTH@ 17
+---------INS SimpleName@@Name:cal @TO@ MethodInvocation@@cal.setTime(date) @AT@ 9158 @LENGTH@ 3
+---------INS SimpleName@@MethodName:setTime:[date] @TO@ MethodInvocation@@cal.setTime(date) @AT@ 9162 @LENGTH@ 13
+------------INS SimpleName@@date @TO@ SimpleName@@MethodName:setTime:[date] @AT@ 9170 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:fromCalendarFields(cal) @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9189 @LENGTH@ 31
+------INS MethodInvocation@@fromCalendarFields(cal) @TO@ ReturnStatement@@MethodInvocation:fromCalendarFields(cal) @AT@ 9196 @LENGTH@ 23
+---------INS SimpleName@@MethodName:fromCalendarFields:[cal] @TO@ MethodInvocation@@fromCalendarFields(cal) @AT@ 9196 @LENGTH@ 23
+------------INS SimpleName@@cal @TO@ SimpleName@@MethodName:fromCalendarFields:[cal] @AT@ 9215 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, OP8)
+OP8:            (INS, QualifiedName, OP7, OP9 OP10)
+OP9:               (INS, SimpleName, OP8, null)
+OP10:               (INS, SimpleName, OP8, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @TO@ MethodDeclaration@@public, static, @@LocalDateTime, MethodName:fromCalendarFields, @@Argus:Calendar+calendar+ @AT@ 7312 @LENGTH@ 37
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @AT@ 7312 @LENGTH@ 3
+---INS VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @TO@ VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @AT@ 7316 @LENGTH@ 32
+------INS SimpleName@@era @TO@ VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @AT@ 7316 @LENGTH@ 3
+------INS MethodInvocation@@calendar.get(Calendar.ERA) @TO@ VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @AT@ 7322 @LENGTH@ 26
+---------INS SimpleName@@Name:calendar @TO@ MethodInvocation@@calendar.get(Calendar.ERA) @AT@ 7322 @LENGTH@ 8
+---------INS SimpleName@@MethodName:get:[Calendar.ERA] @TO@ MethodInvocation@@calendar.get(Calendar.ERA) @AT@ 7331 @LENGTH@ 17
+------------INS QualifiedName@@Calendar.ERA @TO@ SimpleName@@MethodName:get:[Calendar.ERA] @AT@ 7335 @LENGTH@ 12
+---------------INS SimpleName@@Calendar @TO@ QualifiedName@@Calendar.ERA @AT@ 7335 @LENGTH@ 8
+---------------INS SimpleName@@ERA @TO@ QualifiedName@@Calendar.ERA @AT@ 7344 @LENGTH@ 3
+, UPD ReturnStatement@@ClassInstanceCreation:new LocalDateTime(yearOfEra,calendar.get(Calendar.MONTH) + 1,calendar.get(Calendar.DAY_OF_MONTH),calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),calendar.get(Calendar.SECOND),calendar.get(Calendar.MILLISECOND)) @TO@ ClassInstanceCreation:new LocalDateTime((era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra),calendar.get(Calendar.MONTH) + 1,calendar.get(Calendar.DAY_OF_MONTH),calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),calendar.get(Calendar.SECOND),calendar.get(Calendar.MILLISECOND)) @AT@ 7365 @LENGTH@ 335
+---UPD ClassInstanceCreation@@LocalDateTime[yearOfEra, calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND), calendar.get(Calendar.MILLISECOND)] @TO@ LocalDateTime[(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND), calendar.get(Calendar.MILLISECOND)] @AT@ 7372 @LENGTH@ 327
+------DEL SimpleName@@yearOfEra @AT@ 7403 @LENGTH@ 9
+------INS ParenthesizedExpression@@(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra) @TO@ ClassInstanceCreation@@LocalDateTime[yearOfEra, calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND), calendar.get(Calendar.MILLISECOND)] @AT@ 7449 @LENGTH@ 57
+---------INS ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @TO@ ParenthesizedExpression@@(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra) @AT@ 7450 @LENGTH@ 55
+------------INS InfixExpression@@era == GregorianCalendar.AD @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7450 @LENGTH@ 27
+---------------INS SimpleName@@era @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7450 @LENGTH@ 3
+---------------INS Operator@@== @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7453 @LENGTH@ 2
+---------------INS QualifiedName@@GregorianCalendar.AD @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7457 @LENGTH@ 20
+------------------INS SimpleName@@GregorianCalendar @TO@ QualifiedName@@GregorianCalendar.AD @AT@ 7457 @LENGTH@ 17
+------------------INS SimpleName@@AD @TO@ QualifiedName@@GregorianCalendar.AD @AT@ 7475 @LENGTH@ 2
+------------INS SimpleName@@yearOfEra @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7480 @LENGTH@ 9
+------------INS InfixExpression@@1 - yearOfEra @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7492 @LENGTH@ 13
+---------------INS NumberLiteral@@1 @TO@ InfixExpression@@1 - yearOfEra @AT@ 7492 @LENGTH@ 1
+---------------INS Operator@@- @TO@ InfixExpression@@1 - yearOfEra @AT@ 7493 @LENGTH@ 1
+---------------INS SimpleName@@yearOfEra @TO@ InfixExpression@@1 - yearOfEra @AT@ 7496 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:date.getTime() < 0 @TO@ MethodDeclaration@@public, static, @@LocalDateTime, MethodName:fromDateFields, @@Argus:Date+date+ @AT@ 9021 @LENGTH@ 209
+---INS InfixExpression@@date.getTime() < 0 @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9025 @LENGTH@ 18
+------INS MethodInvocation@@date.getTime() @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9025 @LENGTH@ 14
+---------INS SimpleName@@Name:date @TO@ MethodInvocation@@date.getTime() @AT@ 9025 @LENGTH@ 4
+---------INS SimpleName@@MethodName:getTime:[] @TO@ MethodInvocation@@date.getTime() @AT@ 9030 @LENGTH@ 9
+------INS Operator@@< @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9039 @LENGTH@ 1
+------INS NumberLiteral@@0 @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9042 @LENGTH@ 1
+---INS VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9097 @LENGTH@ 48
+------INS SimpleType@@GregorianCalendar @TO@ VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @AT@ 9097 @LENGTH@ 17
+------INS VariableDeclarationFragment@@cal=new GregorianCalendar() @TO@ VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @AT@ 9115 @LENGTH@ 29
+---------INS SimpleName@@cal @TO@ VariableDeclarationFragment@@cal=new GregorianCalendar() @AT@ 9115 @LENGTH@ 3
+---------INS ClassInstanceCreation@@GregorianCalendar[] @TO@ VariableDeclarationFragment@@cal=new GregorianCalendar() @AT@ 9121 @LENGTH@ 23
+------------INS New@@new @TO@ ClassInstanceCreation@@GregorianCalendar[] @AT@ 9121 @LENGTH@ 3
+------------INS SimpleType@@GregorianCalendar @TO@ ClassInstanceCreation@@GregorianCalendar[] @AT@ 9125 @LENGTH@ 17
+---INS ExpressionStatement@@MethodInvocation:cal.setTime(date) @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9158 @LENGTH@ 18
+------INS MethodInvocation@@cal.setTime(date) @TO@ ExpressionStatement@@MethodInvocation:cal.setTime(date) @AT@ 9158 @LENGTH@ 17
+---------INS SimpleName@@Name:cal @TO@ MethodInvocation@@cal.setTime(date) @AT@ 9158 @LENGTH@ 3
+---------INS SimpleName@@MethodName:setTime:[date] @TO@ MethodInvocation@@cal.setTime(date) @AT@ 9162 @LENGTH@ 13
+------------INS SimpleName@@date @TO@ SimpleName@@MethodName:setTime:[date] @AT@ 9170 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:fromCalendarFields(cal) @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9189 @LENGTH@ 31
+------INS MethodInvocation@@fromCalendarFields(cal) @TO@ ReturnStatement@@MethodInvocation:fromCalendarFields(cal) @AT@ 9196 @LENGTH@ 23
+---------INS SimpleName@@MethodName:fromCalendarFields:[cal] @TO@ MethodInvocation@@fromCalendarFields(cal) @AT@ 9196 @LENGTH@ 23
+------------INS SimpleName@@cal @TO@ SimpleName@@MethodName:fromCalendarFields:[cal] @AT@ 9215 @LENGTH@ 3
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, ClassInstanceCreation, OP1, OP3 OP4)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (INS, ParenthesizedExpression, OP2, OP5)
+OP5:         (INS, ConditionalExpression, OP4, OP6 OP12 OP13)
+OP6:            (INS, InfixExpression, OP5, OP7 OP8 OP9)
+OP7:               (INS, SimpleName, OP6, null)
+OP8:               (INS, Operator, OP6, null)
+OP9:               (INS, QualifiedName, OP6, OP10 OP11)
+OP10:                  (INS, SimpleName, OP9, null)
+OP11:                  (INS, SimpleName, OP9, null)
+OP12:            (INS, SimpleName, OP5, null)
+OP13:            (INS, InfixExpression, OP5, OP14 OP15 OP16)
+OP14:               (INS, NumberLiteral, OP13, null)
+OP15:               (INS, Operator, OP13, null)
+OP16:               (INS, SimpleName, OP13, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @TO@ MethodDeclaration@@public, static, @@LocalDateTime, MethodName:fromCalendarFields, @@Argus:Calendar+calendar+ @AT@ 7312 @LENGTH@ 37
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @AT@ 7312 @LENGTH@ 3
+---INS VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @TO@ VariableDeclarationStatement@@int era=calendar.get(Calendar.ERA); @AT@ 7316 @LENGTH@ 32
+------INS SimpleName@@era @TO@ VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @AT@ 7316 @LENGTH@ 3
+------INS MethodInvocation@@calendar.get(Calendar.ERA) @TO@ VariableDeclarationFragment@@era=calendar.get(Calendar.ERA) @AT@ 7322 @LENGTH@ 26
+---------INS SimpleName@@Name:calendar @TO@ MethodInvocation@@calendar.get(Calendar.ERA) @AT@ 7322 @LENGTH@ 8
+---------INS SimpleName@@MethodName:get:[Calendar.ERA] @TO@ MethodInvocation@@calendar.get(Calendar.ERA) @AT@ 7331 @LENGTH@ 17
+------------INS QualifiedName@@Calendar.ERA @TO@ SimpleName@@MethodName:get:[Calendar.ERA] @AT@ 7335 @LENGTH@ 12
+---------------INS SimpleName@@Calendar @TO@ QualifiedName@@Calendar.ERA @AT@ 7335 @LENGTH@ 8
+---------------INS SimpleName@@ERA @TO@ QualifiedName@@Calendar.ERA @AT@ 7344 @LENGTH@ 3
+, UPD ReturnStatement@@ClassInstanceCreation:new LocalDateTime(yearOfEra,calendar.get(Calendar.MONTH) + 1,calendar.get(Calendar.DAY_OF_MONTH),calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),calendar.get(Calendar.SECOND),calendar.get(Calendar.MILLISECOND)) @TO@ ClassInstanceCreation:new LocalDateTime((era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra),calendar.get(Calendar.MONTH) + 1,calendar.get(Calendar.DAY_OF_MONTH),calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE),calendar.get(Calendar.SECOND),calendar.get(Calendar.MILLISECOND)) @AT@ 7365 @LENGTH@ 335
+---UPD ClassInstanceCreation@@LocalDateTime[yearOfEra, calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND), calendar.get(Calendar.MILLISECOND)] @TO@ LocalDateTime[(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra), calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND), calendar.get(Calendar.MILLISECOND)] @AT@ 7372 @LENGTH@ 327
+------DEL SimpleName@@yearOfEra @AT@ 7403 @LENGTH@ 9
+------INS ParenthesizedExpression@@(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra) @TO@ ClassInstanceCreation@@LocalDateTime[yearOfEra, calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DAY_OF_MONTH), calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND), calendar.get(Calendar.MILLISECOND)] @AT@ 7449 @LENGTH@ 57
+---------INS ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @TO@ ParenthesizedExpression@@(era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra) @AT@ 7450 @LENGTH@ 55
+------------INS InfixExpression@@era == GregorianCalendar.AD @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7450 @LENGTH@ 27
+---------------INS SimpleName@@era @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7450 @LENGTH@ 3
+---------------INS Operator@@== @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7453 @LENGTH@ 2
+---------------INS QualifiedName@@GregorianCalendar.AD @TO@ InfixExpression@@era == GregorianCalendar.AD @AT@ 7457 @LENGTH@ 20
+------------------INS SimpleName@@GregorianCalendar @TO@ QualifiedName@@GregorianCalendar.AD @AT@ 7457 @LENGTH@ 17
+------------------INS SimpleName@@AD @TO@ QualifiedName@@GregorianCalendar.AD @AT@ 7475 @LENGTH@ 2
+------------INS SimpleName@@yearOfEra @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7480 @LENGTH@ 9
+------------INS InfixExpression@@1 - yearOfEra @TO@ ConditionalExpression@@era == GregorianCalendar.AD ? yearOfEra : 1 - yearOfEra @AT@ 7492 @LENGTH@ 13
+---------------INS NumberLiteral@@1 @TO@ InfixExpression@@1 - yearOfEra @AT@ 7492 @LENGTH@ 1
+---------------INS Operator@@- @TO@ InfixExpression@@1 - yearOfEra @AT@ 7493 @LENGTH@ 1
+---------------INS SimpleName@@yearOfEra @TO@ InfixExpression@@1 - yearOfEra @AT@ 7496 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:date.getTime() < 0 @TO@ MethodDeclaration@@public, static, @@LocalDateTime, MethodName:fromDateFields, @@Argus:Date+date+ @AT@ 9021 @LENGTH@ 209
+---INS InfixExpression@@date.getTime() < 0 @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9025 @LENGTH@ 18
+------INS MethodInvocation@@date.getTime() @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9025 @LENGTH@ 14
+---------INS SimpleName@@Name:date @TO@ MethodInvocation@@date.getTime() @AT@ 9025 @LENGTH@ 4
+---------INS SimpleName@@MethodName:getTime:[] @TO@ MethodInvocation@@date.getTime() @AT@ 9030 @LENGTH@ 9
+------INS Operator@@< @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9039 @LENGTH@ 1
+------INS NumberLiteral@@0 @TO@ InfixExpression@@date.getTime() < 0 @AT@ 9042 @LENGTH@ 1
+---INS VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9097 @LENGTH@ 48
+------INS SimpleType@@GregorianCalendar @TO@ VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @AT@ 9097 @LENGTH@ 17
+------INS VariableDeclarationFragment@@cal=new GregorianCalendar() @TO@ VariableDeclarationStatement@@GregorianCalendar cal=new GregorianCalendar(); @AT@ 9115 @LENGTH@ 29
+---------INS SimpleName@@cal @TO@ VariableDeclarationFragment@@cal=new GregorianCalendar() @AT@ 9115 @LENGTH@ 3
+---------INS ClassInstanceCreation@@GregorianCalendar[] @TO@ VariableDeclarationFragment@@cal=new GregorianCalendar() @AT@ 9121 @LENGTH@ 23
+------------INS New@@new @TO@ ClassInstanceCreation@@GregorianCalendar[] @AT@ 9121 @LENGTH@ 3
+------------INS SimpleType@@GregorianCalendar @TO@ ClassInstanceCreation@@GregorianCalendar[] @AT@ 9125 @LENGTH@ 17
+---INS ExpressionStatement@@MethodInvocation:cal.setTime(date) @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9158 @LENGTH@ 18
+------INS MethodInvocation@@cal.setTime(date) @TO@ ExpressionStatement@@MethodInvocation:cal.setTime(date) @AT@ 9158 @LENGTH@ 17
+---------INS SimpleName@@Name:cal @TO@ MethodInvocation@@cal.setTime(date) @AT@ 9158 @LENGTH@ 3
+---------INS SimpleName@@MethodName:setTime:[date] @TO@ MethodInvocation@@cal.setTime(date) @AT@ 9162 @LENGTH@ 13
+------------INS SimpleName@@date @TO@ SimpleName@@MethodName:setTime:[date] @AT@ 9170 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:fromCalendarFields(cal) @TO@ IfStatement@@InfixExpression:date.getTime() < 0 @AT@ 9189 @LENGTH@ 31
+------INS MethodInvocation@@fromCalendarFields(cal) @TO@ ReturnStatement@@MethodInvocation:fromCalendarFields(cal) @AT@ 9196 @LENGTH@ 23
+---------INS SimpleName@@MethodName:fromCalendarFields:[cal] @TO@ MethodInvocation@@fromCalendarFields(cal) @AT@ 9196 @LENGTH@ 23
+------------INS SimpleName@@cal @TO@ SimpleName@@MethodName:fromCalendarFields:[cal] @AT@ 9215 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP8 OP15 OP20)
+OP2:   (INS, InfixExpression, OP1, OP3 OP6 OP7)
+OP3:      (INS, MethodInvocation, OP2, OP4 OP5)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, SimpleName, OP3, null)
+OP6:      (INS, Operator, OP2, null)
+OP7:      (INS, NumberLiteral, OP2, null)
+OP8:   (INS, VariableDeclarationStatement, OP1, OP9 OP10)
+OP9:      (INS, SimpleType, OP8, null)
+OP10:      (INS, VariableDeclarationFragment, OP8, OP11 OP12)
+OP11:         (INS, SimpleName, OP10, null)
+OP12:         (INS, ClassInstanceCreation, OP10, OP13 OP14)
+OP13:            (INS, New, OP12, null)
+OP14:            (INS, SimpleType, OP12, null)
+OP15:   (INS, ExpressionStatement, OP1, OP16)
+OP16:      (INS, MethodInvocation, OP15, OP17 OP18)
+OP17:         (INS, SimpleName, OP16, null)
+OP18:         (INS, SimpleName, OP16, OP19)
+OP19:            (INS, SimpleName, OP18, null)
+OP20:   (INS, ReturnStatement, OP1, OP21)
+OP21:      (INS, MethodInvocation, OP20, OP22)
+OP22:         (INS, SimpleName, OP21, OP23)
+OP23:            (INS, SimpleName, OP22, null)
+
+
+

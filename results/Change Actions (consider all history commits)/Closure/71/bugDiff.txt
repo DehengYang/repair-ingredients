@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_71/src/com/google/javascript/jscomp/CheckAccessControls.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_71/src/com/google/javascript/jscomp/CheckAccessControls.java
+--- ../d4j-repo/Closure/Closure_71/src/com/google/javascript/jscomp/CheckAccessControls.java	2021-01-06 03:44:48.166126625 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_71/src/com/google/javascript/jscomp/CheckAccessControls.java	2021-01-06 03:44:50.142193926 -0800
+@@ -413,7 +413,7 @@
+     if (objectType != null) {
+       // Is this a normal property access, or are we trying to override
+       // an existing property?
+-      boolean isOverride = t.inGlobalScope() &&
++      boolean isOverride = parent.getJSDocInfo() != null &&
+           parent.getType() == Token.ASSIGN &&
+           parent.getFirstChild() == getprop;
+ 

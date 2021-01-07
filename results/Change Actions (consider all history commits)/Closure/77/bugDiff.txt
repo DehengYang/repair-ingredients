@@ -1,0 +1,12 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_77/src/com/google/javascript/jscomp/CodeGenerator.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_77/src/com/google/javascript/jscomp/CodeGenerator.java
+--- ../d4j-repo/Closure/Closure_77/src/com/google/javascript/jscomp/CodeGenerator.java	2021-01-06 03:45:12.174944332 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_77/src/com/google/javascript/jscomp/CodeGenerator.java	2021-01-06 03:45:14.143011362 -0800
+@@ -963,6 +963,7 @@
+     for (int i = 0; i < s.length(); i++) {
+       char c = s.charAt(i);
+       switch (c) {
++        case '\0': sb.append("\\0"); break;
+         case '\n': sb.append("\\n"); break;
+         case '\r': sb.append("\\r"); break;
+         case '\t': sb.append("\\t"); break;

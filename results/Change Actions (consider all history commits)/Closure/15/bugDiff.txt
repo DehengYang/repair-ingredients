@@ -1,0 +1,14 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_15/src/com/google/javascript/jscomp/FlowSensitiveInlineVariables.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_15/src/com/google/javascript/jscomp/FlowSensitiveInlineVariables.java
+--- ../d4j-repo/Closure/Closure_15/src/com/google/javascript/jscomp/FlowSensitiveInlineVariables.java	2021-01-06 03:41:04.218499868 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_15/src/com/google/javascript/jscomp/FlowSensitiveInlineVariables.java	2021-01-06 03:41:06.138565253 -0800
+@@ -99,6 +99,9 @@
+           return true;
+         }
+ 
++        if (n.isDelProp()) {
++          return true;
++        }
+ 
+         for (Node c = n.getFirstChild(); c != null; c = c.getNext()) {
+           if (!ControlFlowGraph.isEnteringNewCfgNode(c) && apply(c)) {

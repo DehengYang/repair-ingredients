@@ -1,0 +1,959 @@
+
+
+hASList: 
+[INS VariableDeclarationStatement@@double sumExpected=0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 2936 @LENGTH@ 24
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double sumExpected=0d; @AT@ 2936 @LENGTH@ 6
+---INS VariableDeclarationFragment@@sumExpected=0d @TO@ VariableDeclarationStatement@@double sumExpected=0d; @AT@ 2943 @LENGTH@ 16
+------INS SimpleName@@sumExpected @TO@ VariableDeclarationFragment@@sumExpected=0d @AT@ 2943 @LENGTH@ 11
+------INS NumberLiteral@@0d @TO@ VariableDeclarationFragment@@sumExpected=0d @AT@ 2957 @LENGTH@ 2
+, INS VariableDeclarationStatement@@double sumObserved=0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 2969 @LENGTH@ 24
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double sumObserved=0d; @AT@ 2969 @LENGTH@ 6
+---INS VariableDeclarationFragment@@sumObserved=0d @TO@ VariableDeclarationStatement@@double sumObserved=0d; @AT@ 2976 @LENGTH@ 16
+------INS SimpleName@@sumObserved @TO@ VariableDeclarationFragment@@sumObserved=0d @AT@ 2976 @LENGTH@ 11
+------INS NumberLiteral@@0d @TO@ VariableDeclarationFragment@@sumObserved=0d @AT@ 2990 @LENGTH@ 2
+, INS ForStatement@@[int i=0];i < observed.length; [i++] @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3002 @LENGTH@ 133
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3007 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3007 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3011 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3011 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3015 @LENGTH@ 1
+---INS InfixExpression@@i < observed.length @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3018 @LENGTH@ 19
+------INS SimpleName@@i @TO@ InfixExpression@@i < observed.length @AT@ 3018 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < observed.length @AT@ 3019 @LENGTH@ 1
+------INS QualifiedName@@observed.length @TO@ InfixExpression@@i < observed.length @AT@ 3022 @LENGTH@ 15
+---------INS SimpleName@@observed @TO@ QualifiedName@@observed.length @AT@ 3022 @LENGTH@ 8
+---------INS SimpleName@@length @TO@ QualifiedName@@observed.length @AT@ 3031 @LENGTH@ 6
+---INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3039 @LENGTH@ 3
+------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3039 @LENGTH@ 1
+------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3041 @LENGTH@ 2
+---INS ExpressionStatement@@Assignment:sumExpected+=expected[i] @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3058 @LENGTH@ 27
+------INS Assignment@@sumExpected+=expected[i] @TO@ ExpressionStatement@@Assignment:sumExpected+=expected[i] @AT@ 3058 @LENGTH@ 26
+---------INS SimpleName@@sumExpected @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3058 @LENGTH@ 11
+---------INS Operator@@+= @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3069 @LENGTH@ 2
+---------INS ArrayAccess@@expected[i] @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3073 @LENGTH@ 11
+------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3073 @LENGTH@ 8
+------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3082 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:sumObserved+=observed[i] @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3098 @LENGTH@ 27
+------INS Assignment@@sumObserved+=observed[i] @TO@ ExpressionStatement@@Assignment:sumObserved+=observed[i] @AT@ 3098 @LENGTH@ 26
+---------INS SimpleName@@sumObserved @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3098 @LENGTH@ 11
+---------INS Operator@@+= @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3109 @LENGTH@ 2
+---------INS ArrayAccess@@observed[i] @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3113 @LENGTH@ 11
+------------INS SimpleName@@observed @TO@ ArrayAccess@@observed[i] @AT@ 3113 @LENGTH@ 8
+------------INS SimpleName@@i @TO@ ArrayAccess@@observed[i] @AT@ 3122 @LENGTH@ 1
+, INS VariableDeclarationStatement@@double ratio=1.0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3144 @LENGTH@ 20
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double ratio=1.0d; @AT@ 3144 @LENGTH@ 6
+---INS VariableDeclarationFragment@@ratio=1.0d @TO@ VariableDeclarationStatement@@double ratio=1.0d; @AT@ 3151 @LENGTH@ 12
+------INS SimpleName@@ratio @TO@ VariableDeclarationFragment@@ratio=1.0d @AT@ 3151 @LENGTH@ 5
+------INS NumberLiteral@@1.0d @TO@ VariableDeclarationFragment@@ratio=1.0d @AT@ 3159 @LENGTH@ 4
+, INS VariableDeclarationStatement@@boolean rescale=false; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3173 @LENGTH@ 24
+---INS PrimitiveType@@boolean @TO@ VariableDeclarationStatement@@boolean rescale=false; @AT@ 3173 @LENGTH@ 7
+---INS VariableDeclarationFragment@@rescale=false @TO@ VariableDeclarationStatement@@boolean rescale=false; @AT@ 3181 @LENGTH@ 15
+------INS SimpleName@@rescale @TO@ VariableDeclarationFragment@@rescale=false @AT@ 3181 @LENGTH@ 7
+------INS BooleanLiteral@@false @TO@ VariableDeclarationFragment@@rescale=false @AT@ 3191 @LENGTH@ 5
+, INS IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3206 @LENGTH@ 135
+---INS InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3210 @LENGTH@ 43
+------INS MethodInvocation@@Math.abs(sumExpected - sumObserved) @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3210 @LENGTH@ 35
+---------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(sumExpected - sumObserved) @AT@ 3210 @LENGTH@ 4
+---------INS SimpleName@@MethodName:abs:[sumExpected - sumObserved] @TO@ MethodInvocation@@Math.abs(sumExpected - sumObserved) @AT@ 3215 @LENGTH@ 30
+------------INS InfixExpression@@sumExpected - sumObserved @TO@ SimpleName@@MethodName:abs:[sumExpected - sumObserved] @AT@ 3219 @LENGTH@ 25
+---------------INS SimpleName@@sumExpected @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3219 @LENGTH@ 11
+---------------INS Operator@@- @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3230 @LENGTH@ 1
+---------------INS SimpleName@@sumObserved @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3233 @LENGTH@ 11
+------INS Operator@@> @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3245 @LENGTH@ 1
+------INS NumberLiteral@@10E-6 @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3248 @LENGTH@ 5
+---INS ExpressionStatement@@Assignment:ratio=sumObserved / sumExpected @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3269 @LENGTH@ 34
+------INS Assignment@@ratio=sumObserved / sumExpected @TO@ ExpressionStatement@@Assignment:ratio=sumObserved / sumExpected @AT@ 3269 @LENGTH@ 33
+---------INS SimpleName@@ratio @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3269 @LENGTH@ 5
+---------INS Operator@@= @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3274 @LENGTH@ 1
+---------INS InfixExpression@@sumObserved / sumExpected @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3277 @LENGTH@ 25
+------------INS SimpleName@@sumObserved @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3277 @LENGTH@ 11
+------------INS Operator@@/ @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3288 @LENGTH@ 1
+------------INS SimpleName@@sumExpected @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3291 @LENGTH@ 11
+---INS ExpressionStatement@@Assignment:rescale=true @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3316 @LENGTH@ 15
+------INS Assignment@@rescale=true @TO@ ExpressionStatement@@Assignment:rescale=true @AT@ 3316 @LENGTH@ 14
+---------INS SimpleName@@rescale @TO@ Assignment@@rescale=true @AT@ 3316 @LENGTH@ 7
+---------INS Operator@@= @TO@ Assignment@@rescale=true @AT@ 3323 @LENGTH@ 1
+---------INS BooleanLiteral@@true @TO@ Assignment@@rescale=true @AT@ 3326 @LENGTH@ 4
+, INS IfStatement@@SimpleName:rescale @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3462 @LENGTH@ 287
+---MOV ExpressionStatement@@Assignment:dev=((double)observed[i] - expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3052 @LENGTH@ 43
+---MOV ExpressionStatement@@Assignment:sumSq+=dev * dev / expected[i] @TO@ IfStatement@@SimpleName:rescale @AT@ 3112 @LENGTH@ 33
+---INS SimpleName@@rescale @TO@ IfStatement@@SimpleName:rescale @AT@ 3466 @LENGTH@ 7
+---INS ExpressionStatement@@Assignment:dev=((double)observed[i] - ratio * expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3493 @LENGTH@ 51
+------INS Assignment@@dev=((double)observed[i] - ratio * expected[i]) @TO@ ExpressionStatement@@Assignment:dev=((double)observed[i] - ratio * expected[i]) @AT@ 3493 @LENGTH@ 50
+---------INS SimpleName@@dev @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3493 @LENGTH@ 3
+---------INS Operator@@= @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3496 @LENGTH@ 1
+---------INS ParenthesizedExpression@@((double)observed[i] - ratio * expected[i]) @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3499 @LENGTH@ 44
+------------INS InfixExpression@@(double)observed[i] - ratio * expected[i] @TO@ ParenthesizedExpression@@((double)observed[i] - ratio * expected[i]) @AT@ 3500 @LENGTH@ 42
+---------------INS CastExpression@@(double)observed[i] @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3500 @LENGTH@ 20
+------------------INS PrimitiveType@@double @TO@ CastExpression@@(double)observed[i] @AT@ 3501 @LENGTH@ 6
+------------------INS ArrayAccess@@observed[i] @TO@ CastExpression@@(double)observed[i] @AT@ 3509 @LENGTH@ 11
+---------------------INS SimpleName@@observed @TO@ ArrayAccess@@observed[i] @AT@ 3509 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@observed[i] @AT@ 3518 @LENGTH@ 1
+---------------INS Operator@@- @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3520 @LENGTH@ 1
+---------------INS InfixExpression@@ratio * expected[i] @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3523 @LENGTH@ 19
+------------------INS SimpleName@@ratio @TO@ InfixExpression@@ratio * expected[i] @AT@ 3523 @LENGTH@ 5
+------------------INS Operator@@* @TO@ InfixExpression@@ratio * expected[i] @AT@ 3528 @LENGTH@ 1
+------------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@ratio * expected[i] @AT@ 3531 @LENGTH@ 11
+---------------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3531 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3540 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:sumSq+=dev * dev / (ratio * expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3561 @LENGTH@ 43
+------INS Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @TO@ ExpressionStatement@@Assignment:sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3561 @LENGTH@ 42
+---------INS SimpleName@@sumSq @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3561 @LENGTH@ 5
+---------INS Operator@@+= @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3566 @LENGTH@ 2
+---------INS InfixExpression@@dev * dev / (ratio * expected[i]) @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3570 @LENGTH@ 33
+------------INS InfixExpression@@dev * dev @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3570 @LENGTH@ 9
+---------------INS SimpleName@@dev @TO@ InfixExpression@@dev * dev @AT@ 3570 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@dev * dev @AT@ 3573 @LENGTH@ 1
+---------------INS SimpleName@@dev @TO@ InfixExpression@@dev * dev @AT@ 3576 @LENGTH@ 3
+------------INS Operator@@/ @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3579 @LENGTH@ 1
+------------INS ParenthesizedExpression@@(ratio * expected[i]) @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3582 @LENGTH@ 21
+---------------INS InfixExpression@@ratio * expected[i] @TO@ ParenthesizedExpression@@(ratio * expected[i]) @AT@ 3583 @LENGTH@ 19
+------------------INS SimpleName@@ratio @TO@ InfixExpression@@ratio * expected[i] @AT@ 3583 @LENGTH@ 5
+------------------INS Operator@@* @TO@ InfixExpression@@ratio * expected[i] @AT@ 3588 @LENGTH@ 1
+------------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@ratio * expected[i] @AT@ 3591 @LENGTH@ 11
+---------------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3591 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3600 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, NumberLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@double sumExpected=0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 2936 @LENGTH@ 24
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double sumExpected=0d; @AT@ 2936 @LENGTH@ 6
+---INS VariableDeclarationFragment@@sumExpected=0d @TO@ VariableDeclarationStatement@@double sumExpected=0d; @AT@ 2943 @LENGTH@ 16
+------INS SimpleName@@sumExpected @TO@ VariableDeclarationFragment@@sumExpected=0d @AT@ 2943 @LENGTH@ 11
+------INS NumberLiteral@@0d @TO@ VariableDeclarationFragment@@sumExpected=0d @AT@ 2957 @LENGTH@ 2
+, INS VariableDeclarationStatement@@double sumObserved=0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 2969 @LENGTH@ 24
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double sumObserved=0d; @AT@ 2969 @LENGTH@ 6
+---INS VariableDeclarationFragment@@sumObserved=0d @TO@ VariableDeclarationStatement@@double sumObserved=0d; @AT@ 2976 @LENGTH@ 16
+------INS SimpleName@@sumObserved @TO@ VariableDeclarationFragment@@sumObserved=0d @AT@ 2976 @LENGTH@ 11
+------INS NumberLiteral@@0d @TO@ VariableDeclarationFragment@@sumObserved=0d @AT@ 2990 @LENGTH@ 2
+, INS ForStatement@@[int i=0];i < observed.length; [i++] @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3002 @LENGTH@ 133
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3007 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3007 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3011 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3011 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3015 @LENGTH@ 1
+---INS InfixExpression@@i < observed.length @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3018 @LENGTH@ 19
+------INS SimpleName@@i @TO@ InfixExpression@@i < observed.length @AT@ 3018 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < observed.length @AT@ 3019 @LENGTH@ 1
+------INS QualifiedName@@observed.length @TO@ InfixExpression@@i < observed.length @AT@ 3022 @LENGTH@ 15
+---------INS SimpleName@@observed @TO@ QualifiedName@@observed.length @AT@ 3022 @LENGTH@ 8
+---------INS SimpleName@@length @TO@ QualifiedName@@observed.length @AT@ 3031 @LENGTH@ 6
+---INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3039 @LENGTH@ 3
+------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3039 @LENGTH@ 1
+------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3041 @LENGTH@ 2
+---INS ExpressionStatement@@Assignment:sumExpected+=expected[i] @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3058 @LENGTH@ 27
+------INS Assignment@@sumExpected+=expected[i] @TO@ ExpressionStatement@@Assignment:sumExpected+=expected[i] @AT@ 3058 @LENGTH@ 26
+---------INS SimpleName@@sumExpected @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3058 @LENGTH@ 11
+---------INS Operator@@+= @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3069 @LENGTH@ 2
+---------INS ArrayAccess@@expected[i] @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3073 @LENGTH@ 11
+------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3073 @LENGTH@ 8
+------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3082 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:sumObserved+=observed[i] @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3098 @LENGTH@ 27
+------INS Assignment@@sumObserved+=observed[i] @TO@ ExpressionStatement@@Assignment:sumObserved+=observed[i] @AT@ 3098 @LENGTH@ 26
+---------INS SimpleName@@sumObserved @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3098 @LENGTH@ 11
+---------INS Operator@@+= @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3109 @LENGTH@ 2
+---------INS ArrayAccess@@observed[i] @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3113 @LENGTH@ 11
+------------INS SimpleName@@observed @TO@ ArrayAccess@@observed[i] @AT@ 3113 @LENGTH@ 8
+------------INS SimpleName@@i @TO@ ArrayAccess@@observed[i] @AT@ 3122 @LENGTH@ 1
+, INS VariableDeclarationStatement@@double ratio=1.0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3144 @LENGTH@ 20
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double ratio=1.0d; @AT@ 3144 @LENGTH@ 6
+---INS VariableDeclarationFragment@@ratio=1.0d @TO@ VariableDeclarationStatement@@double ratio=1.0d; @AT@ 3151 @LENGTH@ 12
+------INS SimpleName@@ratio @TO@ VariableDeclarationFragment@@ratio=1.0d @AT@ 3151 @LENGTH@ 5
+------INS NumberLiteral@@1.0d @TO@ VariableDeclarationFragment@@ratio=1.0d @AT@ 3159 @LENGTH@ 4
+, INS VariableDeclarationStatement@@boolean rescale=false; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3173 @LENGTH@ 24
+---INS PrimitiveType@@boolean @TO@ VariableDeclarationStatement@@boolean rescale=false; @AT@ 3173 @LENGTH@ 7
+---INS VariableDeclarationFragment@@rescale=false @TO@ VariableDeclarationStatement@@boolean rescale=false; @AT@ 3181 @LENGTH@ 15
+------INS SimpleName@@rescale @TO@ VariableDeclarationFragment@@rescale=false @AT@ 3181 @LENGTH@ 7
+------INS BooleanLiteral@@false @TO@ VariableDeclarationFragment@@rescale=false @AT@ 3191 @LENGTH@ 5
+, INS IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3206 @LENGTH@ 135
+---INS InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3210 @LENGTH@ 43
+------INS MethodInvocation@@Math.abs(sumExpected - sumObserved) @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3210 @LENGTH@ 35
+---------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(sumExpected - sumObserved) @AT@ 3210 @LENGTH@ 4
+---------INS SimpleName@@MethodName:abs:[sumExpected - sumObserved] @TO@ MethodInvocation@@Math.abs(sumExpected - sumObserved) @AT@ 3215 @LENGTH@ 30
+------------INS InfixExpression@@sumExpected - sumObserved @TO@ SimpleName@@MethodName:abs:[sumExpected - sumObserved] @AT@ 3219 @LENGTH@ 25
+---------------INS SimpleName@@sumExpected @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3219 @LENGTH@ 11
+---------------INS Operator@@- @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3230 @LENGTH@ 1
+---------------INS SimpleName@@sumObserved @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3233 @LENGTH@ 11
+------INS Operator@@> @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3245 @LENGTH@ 1
+------INS NumberLiteral@@10E-6 @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3248 @LENGTH@ 5
+---INS ExpressionStatement@@Assignment:ratio=sumObserved / sumExpected @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3269 @LENGTH@ 34
+------INS Assignment@@ratio=sumObserved / sumExpected @TO@ ExpressionStatement@@Assignment:ratio=sumObserved / sumExpected @AT@ 3269 @LENGTH@ 33
+---------INS SimpleName@@ratio @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3269 @LENGTH@ 5
+---------INS Operator@@= @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3274 @LENGTH@ 1
+---------INS InfixExpression@@sumObserved / sumExpected @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3277 @LENGTH@ 25
+------------INS SimpleName@@sumObserved @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3277 @LENGTH@ 11
+------------INS Operator@@/ @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3288 @LENGTH@ 1
+------------INS SimpleName@@sumExpected @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3291 @LENGTH@ 11
+---INS ExpressionStatement@@Assignment:rescale=true @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3316 @LENGTH@ 15
+------INS Assignment@@rescale=true @TO@ ExpressionStatement@@Assignment:rescale=true @AT@ 3316 @LENGTH@ 14
+---------INS SimpleName@@rescale @TO@ Assignment@@rescale=true @AT@ 3316 @LENGTH@ 7
+---------INS Operator@@= @TO@ Assignment@@rescale=true @AT@ 3323 @LENGTH@ 1
+---------INS BooleanLiteral@@true @TO@ Assignment@@rescale=true @AT@ 3326 @LENGTH@ 4
+, INS IfStatement@@SimpleName:rescale @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3462 @LENGTH@ 287
+---MOV ExpressionStatement@@Assignment:dev=((double)observed[i] - expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3052 @LENGTH@ 43
+---MOV ExpressionStatement@@Assignment:sumSq+=dev * dev / expected[i] @TO@ IfStatement@@SimpleName:rescale @AT@ 3112 @LENGTH@ 33
+---INS SimpleName@@rescale @TO@ IfStatement@@SimpleName:rescale @AT@ 3466 @LENGTH@ 7
+---INS ExpressionStatement@@Assignment:dev=((double)observed[i] - ratio * expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3493 @LENGTH@ 51
+------INS Assignment@@dev=((double)observed[i] - ratio * expected[i]) @TO@ ExpressionStatement@@Assignment:dev=((double)observed[i] - ratio * expected[i]) @AT@ 3493 @LENGTH@ 50
+---------INS SimpleName@@dev @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3493 @LENGTH@ 3
+---------INS Operator@@= @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3496 @LENGTH@ 1
+---------INS ParenthesizedExpression@@((double)observed[i] - ratio * expected[i]) @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3499 @LENGTH@ 44
+------------INS InfixExpression@@(double)observed[i] - ratio * expected[i] @TO@ ParenthesizedExpression@@((double)observed[i] - ratio * expected[i]) @AT@ 3500 @LENGTH@ 42
+---------------INS CastExpression@@(double)observed[i] @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3500 @LENGTH@ 20
+------------------INS PrimitiveType@@double @TO@ CastExpression@@(double)observed[i] @AT@ 3501 @LENGTH@ 6
+------------------INS ArrayAccess@@observed[i] @TO@ CastExpression@@(double)observed[i] @AT@ 3509 @LENGTH@ 11
+---------------------INS SimpleName@@observed @TO@ ArrayAccess@@observed[i] @AT@ 3509 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@observed[i] @AT@ 3518 @LENGTH@ 1
+---------------INS Operator@@- @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3520 @LENGTH@ 1
+---------------INS InfixExpression@@ratio * expected[i] @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3523 @LENGTH@ 19
+------------------INS SimpleName@@ratio @TO@ InfixExpression@@ratio * expected[i] @AT@ 3523 @LENGTH@ 5
+------------------INS Operator@@* @TO@ InfixExpression@@ratio * expected[i] @AT@ 3528 @LENGTH@ 1
+------------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@ratio * expected[i] @AT@ 3531 @LENGTH@ 11
+---------------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3531 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3540 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:sumSq+=dev * dev / (ratio * expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3561 @LENGTH@ 43
+------INS Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @TO@ ExpressionStatement@@Assignment:sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3561 @LENGTH@ 42
+---------INS SimpleName@@sumSq @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3561 @LENGTH@ 5
+---------INS Operator@@+= @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3566 @LENGTH@ 2
+---------INS InfixExpression@@dev * dev / (ratio * expected[i]) @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3570 @LENGTH@ 33
+------------INS InfixExpression@@dev * dev @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3570 @LENGTH@ 9
+---------------INS SimpleName@@dev @TO@ InfixExpression@@dev * dev @AT@ 3570 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@dev * dev @AT@ 3573 @LENGTH@ 1
+---------------INS SimpleName@@dev @TO@ InfixExpression@@dev * dev @AT@ 3576 @LENGTH@ 3
+------------INS Operator@@/ @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3579 @LENGTH@ 1
+------------INS ParenthesizedExpression@@(ratio * expected[i]) @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3582 @LENGTH@ 21
+---------------INS InfixExpression@@ratio * expected[i] @TO@ ParenthesizedExpression@@(ratio * expected[i]) @AT@ 3583 @LENGTH@ 19
+------------------INS SimpleName@@ratio @TO@ InfixExpression@@ratio * expected[i] @AT@ 3583 @LENGTH@ 5
+------------------INS Operator@@* @TO@ InfixExpression@@ratio * expected[i] @AT@ 3588 @LENGTH@ 1
+------------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@ratio * expected[i] @AT@ 3591 @LENGTH@ 11
+---------------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3591 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3600 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, NumberLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@double sumExpected=0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 2936 @LENGTH@ 24
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double sumExpected=0d; @AT@ 2936 @LENGTH@ 6
+---INS VariableDeclarationFragment@@sumExpected=0d @TO@ VariableDeclarationStatement@@double sumExpected=0d; @AT@ 2943 @LENGTH@ 16
+------INS SimpleName@@sumExpected @TO@ VariableDeclarationFragment@@sumExpected=0d @AT@ 2943 @LENGTH@ 11
+------INS NumberLiteral@@0d @TO@ VariableDeclarationFragment@@sumExpected=0d @AT@ 2957 @LENGTH@ 2
+, INS VariableDeclarationStatement@@double sumObserved=0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 2969 @LENGTH@ 24
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double sumObserved=0d; @AT@ 2969 @LENGTH@ 6
+---INS VariableDeclarationFragment@@sumObserved=0d @TO@ VariableDeclarationStatement@@double sumObserved=0d; @AT@ 2976 @LENGTH@ 16
+------INS SimpleName@@sumObserved @TO@ VariableDeclarationFragment@@sumObserved=0d @AT@ 2976 @LENGTH@ 11
+------INS NumberLiteral@@0d @TO@ VariableDeclarationFragment@@sumObserved=0d @AT@ 2990 @LENGTH@ 2
+, INS ForStatement@@[int i=0];i < observed.length; [i++] @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3002 @LENGTH@ 133
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3007 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3007 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3011 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3011 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3015 @LENGTH@ 1
+---INS InfixExpression@@i < observed.length @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3018 @LENGTH@ 19
+------INS SimpleName@@i @TO@ InfixExpression@@i < observed.length @AT@ 3018 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < observed.length @AT@ 3019 @LENGTH@ 1
+------INS QualifiedName@@observed.length @TO@ InfixExpression@@i < observed.length @AT@ 3022 @LENGTH@ 15
+---------INS SimpleName@@observed @TO@ QualifiedName@@observed.length @AT@ 3022 @LENGTH@ 8
+---------INS SimpleName@@length @TO@ QualifiedName@@observed.length @AT@ 3031 @LENGTH@ 6
+---INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3039 @LENGTH@ 3
+------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3039 @LENGTH@ 1
+------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3041 @LENGTH@ 2
+---INS ExpressionStatement@@Assignment:sumExpected+=expected[i] @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3058 @LENGTH@ 27
+------INS Assignment@@sumExpected+=expected[i] @TO@ ExpressionStatement@@Assignment:sumExpected+=expected[i] @AT@ 3058 @LENGTH@ 26
+---------INS SimpleName@@sumExpected @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3058 @LENGTH@ 11
+---------INS Operator@@+= @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3069 @LENGTH@ 2
+---------INS ArrayAccess@@expected[i] @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3073 @LENGTH@ 11
+------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3073 @LENGTH@ 8
+------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3082 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:sumObserved+=observed[i] @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3098 @LENGTH@ 27
+------INS Assignment@@sumObserved+=observed[i] @TO@ ExpressionStatement@@Assignment:sumObserved+=observed[i] @AT@ 3098 @LENGTH@ 26
+---------INS SimpleName@@sumObserved @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3098 @LENGTH@ 11
+---------INS Operator@@+= @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3109 @LENGTH@ 2
+---------INS ArrayAccess@@observed[i] @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3113 @LENGTH@ 11
+------------INS SimpleName@@observed @TO@ ArrayAccess@@observed[i] @AT@ 3113 @LENGTH@ 8
+------------INS SimpleName@@i @TO@ ArrayAccess@@observed[i] @AT@ 3122 @LENGTH@ 1
+, INS VariableDeclarationStatement@@double ratio=1.0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3144 @LENGTH@ 20
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double ratio=1.0d; @AT@ 3144 @LENGTH@ 6
+---INS VariableDeclarationFragment@@ratio=1.0d @TO@ VariableDeclarationStatement@@double ratio=1.0d; @AT@ 3151 @LENGTH@ 12
+------INS SimpleName@@ratio @TO@ VariableDeclarationFragment@@ratio=1.0d @AT@ 3151 @LENGTH@ 5
+------INS NumberLiteral@@1.0d @TO@ VariableDeclarationFragment@@ratio=1.0d @AT@ 3159 @LENGTH@ 4
+, INS VariableDeclarationStatement@@boolean rescale=false; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3173 @LENGTH@ 24
+---INS PrimitiveType@@boolean @TO@ VariableDeclarationStatement@@boolean rescale=false; @AT@ 3173 @LENGTH@ 7
+---INS VariableDeclarationFragment@@rescale=false @TO@ VariableDeclarationStatement@@boolean rescale=false; @AT@ 3181 @LENGTH@ 15
+------INS SimpleName@@rescale @TO@ VariableDeclarationFragment@@rescale=false @AT@ 3181 @LENGTH@ 7
+------INS BooleanLiteral@@false @TO@ VariableDeclarationFragment@@rescale=false @AT@ 3191 @LENGTH@ 5
+, INS IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3206 @LENGTH@ 135
+---INS InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3210 @LENGTH@ 43
+------INS MethodInvocation@@Math.abs(sumExpected - sumObserved) @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3210 @LENGTH@ 35
+---------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(sumExpected - sumObserved) @AT@ 3210 @LENGTH@ 4
+---------INS SimpleName@@MethodName:abs:[sumExpected - sumObserved] @TO@ MethodInvocation@@Math.abs(sumExpected - sumObserved) @AT@ 3215 @LENGTH@ 30
+------------INS InfixExpression@@sumExpected - sumObserved @TO@ SimpleName@@MethodName:abs:[sumExpected - sumObserved] @AT@ 3219 @LENGTH@ 25
+---------------INS SimpleName@@sumExpected @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3219 @LENGTH@ 11
+---------------INS Operator@@- @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3230 @LENGTH@ 1
+---------------INS SimpleName@@sumObserved @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3233 @LENGTH@ 11
+------INS Operator@@> @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3245 @LENGTH@ 1
+------INS NumberLiteral@@10E-6 @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3248 @LENGTH@ 5
+---INS ExpressionStatement@@Assignment:ratio=sumObserved / sumExpected @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3269 @LENGTH@ 34
+------INS Assignment@@ratio=sumObserved / sumExpected @TO@ ExpressionStatement@@Assignment:ratio=sumObserved / sumExpected @AT@ 3269 @LENGTH@ 33
+---------INS SimpleName@@ratio @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3269 @LENGTH@ 5
+---------INS Operator@@= @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3274 @LENGTH@ 1
+---------INS InfixExpression@@sumObserved / sumExpected @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3277 @LENGTH@ 25
+------------INS SimpleName@@sumObserved @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3277 @LENGTH@ 11
+------------INS Operator@@/ @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3288 @LENGTH@ 1
+------------INS SimpleName@@sumExpected @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3291 @LENGTH@ 11
+---INS ExpressionStatement@@Assignment:rescale=true @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3316 @LENGTH@ 15
+------INS Assignment@@rescale=true @TO@ ExpressionStatement@@Assignment:rescale=true @AT@ 3316 @LENGTH@ 14
+---------INS SimpleName@@rescale @TO@ Assignment@@rescale=true @AT@ 3316 @LENGTH@ 7
+---------INS Operator@@= @TO@ Assignment@@rescale=true @AT@ 3323 @LENGTH@ 1
+---------INS BooleanLiteral@@true @TO@ Assignment@@rescale=true @AT@ 3326 @LENGTH@ 4
+, INS IfStatement@@SimpleName:rescale @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3462 @LENGTH@ 287
+---MOV ExpressionStatement@@Assignment:dev=((double)observed[i] - expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3052 @LENGTH@ 43
+---MOV ExpressionStatement@@Assignment:sumSq+=dev * dev / expected[i] @TO@ IfStatement@@SimpleName:rescale @AT@ 3112 @LENGTH@ 33
+---INS SimpleName@@rescale @TO@ IfStatement@@SimpleName:rescale @AT@ 3466 @LENGTH@ 7
+---INS ExpressionStatement@@Assignment:dev=((double)observed[i] - ratio * expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3493 @LENGTH@ 51
+------INS Assignment@@dev=((double)observed[i] - ratio * expected[i]) @TO@ ExpressionStatement@@Assignment:dev=((double)observed[i] - ratio * expected[i]) @AT@ 3493 @LENGTH@ 50
+---------INS SimpleName@@dev @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3493 @LENGTH@ 3
+---------INS Operator@@= @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3496 @LENGTH@ 1
+---------INS ParenthesizedExpression@@((double)observed[i] - ratio * expected[i]) @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3499 @LENGTH@ 44
+------------INS InfixExpression@@(double)observed[i] - ratio * expected[i] @TO@ ParenthesizedExpression@@((double)observed[i] - ratio * expected[i]) @AT@ 3500 @LENGTH@ 42
+---------------INS CastExpression@@(double)observed[i] @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3500 @LENGTH@ 20
+------------------INS PrimitiveType@@double @TO@ CastExpression@@(double)observed[i] @AT@ 3501 @LENGTH@ 6
+------------------INS ArrayAccess@@observed[i] @TO@ CastExpression@@(double)observed[i] @AT@ 3509 @LENGTH@ 11
+---------------------INS SimpleName@@observed @TO@ ArrayAccess@@observed[i] @AT@ 3509 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@observed[i] @AT@ 3518 @LENGTH@ 1
+---------------INS Operator@@- @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3520 @LENGTH@ 1
+---------------INS InfixExpression@@ratio * expected[i] @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3523 @LENGTH@ 19
+------------------INS SimpleName@@ratio @TO@ InfixExpression@@ratio * expected[i] @AT@ 3523 @LENGTH@ 5
+------------------INS Operator@@* @TO@ InfixExpression@@ratio * expected[i] @AT@ 3528 @LENGTH@ 1
+------------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@ratio * expected[i] @AT@ 3531 @LENGTH@ 11
+---------------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3531 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3540 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:sumSq+=dev * dev / (ratio * expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3561 @LENGTH@ 43
+------INS Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @TO@ ExpressionStatement@@Assignment:sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3561 @LENGTH@ 42
+---------INS SimpleName@@sumSq @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3561 @LENGTH@ 5
+---------INS Operator@@+= @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3566 @LENGTH@ 2
+---------INS InfixExpression@@dev * dev / (ratio * expected[i]) @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3570 @LENGTH@ 33
+------------INS InfixExpression@@dev * dev @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3570 @LENGTH@ 9
+---------------INS SimpleName@@dev @TO@ InfixExpression@@dev * dev @AT@ 3570 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@dev * dev @AT@ 3573 @LENGTH@ 1
+---------------INS SimpleName@@dev @TO@ InfixExpression@@dev * dev @AT@ 3576 @LENGTH@ 3
+------------INS Operator@@/ @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3579 @LENGTH@ 1
+------------INS ParenthesizedExpression@@(ratio * expected[i]) @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3582 @LENGTH@ 21
+---------------INS InfixExpression@@ratio * expected[i] @TO@ ParenthesizedExpression@@(ratio * expected[i]) @AT@ 3583 @LENGTH@ 19
+------------------INS SimpleName@@ratio @TO@ InfixExpression@@ratio * expected[i] @AT@ 3583 @LENGTH@ 5
+------------------INS Operator@@* @TO@ InfixExpression@@ratio * expected[i] @AT@ 3588 @LENGTH@ 1
+------------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@ratio * expected[i] @AT@ 3591 @LENGTH@ 11
+---------------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3591 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3600 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, ForStatement, null, OP2 OP7 OP13 OP16 OP23)
+OP2:   (INS, VariableDeclarationExpression, OP1, OP3 OP4)
+OP3:      (INS, PrimitiveType, OP2, null)
+OP4:      (INS, VariableDeclarationFragment, OP2, OP5 OP6)
+OP5:         (INS, SimpleName, OP4, null)
+OP6:         (INS, NumberLiteral, OP4, null)
+OP7:   (INS, InfixExpression, OP1, OP8 OP9 OP10)
+OP8:      (INS, SimpleName, OP7, null)
+OP9:      (INS, Operator, OP7, null)
+OP10:      (INS, QualifiedName, OP7, OP11 OP12)
+OP11:         (INS, SimpleName, OP10, null)
+OP12:         (INS, SimpleName, OP10, null)
+OP13:   (INS, PostfixExpression, OP1, OP14 OP15)
+OP14:      (INS, SimpleName, OP13, null)
+OP15:      (INS, Operator, OP13, null)
+OP16:   (INS, ExpressionStatement, OP1, OP17)
+OP17:      (INS, Assignment, OP16, OP18 OP19 OP20)
+OP18:         (INS, SimpleName, OP17, null)
+OP19:         (INS, Operator, OP17, null)
+OP20:         (INS, ArrayAccess, OP17, OP21 OP22)
+OP21:            (INS, SimpleName, OP20, null)
+OP22:            (INS, SimpleName, OP20, null)
+OP23:   (INS, ExpressionStatement, OP1, OP24)
+OP24:      (INS, Assignment, OP23, OP25 OP26 OP27)
+OP25:         (INS, SimpleName, OP24, null)
+OP26:         (INS, Operator, OP24, null)
+OP27:         (INS, ArrayAccess, OP24, OP28 OP29)
+OP28:            (INS, SimpleName, OP27, null)
+OP29:            (INS, SimpleName, OP27, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@double sumExpected=0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 2936 @LENGTH@ 24
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double sumExpected=0d; @AT@ 2936 @LENGTH@ 6
+---INS VariableDeclarationFragment@@sumExpected=0d @TO@ VariableDeclarationStatement@@double sumExpected=0d; @AT@ 2943 @LENGTH@ 16
+------INS SimpleName@@sumExpected @TO@ VariableDeclarationFragment@@sumExpected=0d @AT@ 2943 @LENGTH@ 11
+------INS NumberLiteral@@0d @TO@ VariableDeclarationFragment@@sumExpected=0d @AT@ 2957 @LENGTH@ 2
+, INS VariableDeclarationStatement@@double sumObserved=0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 2969 @LENGTH@ 24
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double sumObserved=0d; @AT@ 2969 @LENGTH@ 6
+---INS VariableDeclarationFragment@@sumObserved=0d @TO@ VariableDeclarationStatement@@double sumObserved=0d; @AT@ 2976 @LENGTH@ 16
+------INS SimpleName@@sumObserved @TO@ VariableDeclarationFragment@@sumObserved=0d @AT@ 2976 @LENGTH@ 11
+------INS NumberLiteral@@0d @TO@ VariableDeclarationFragment@@sumObserved=0d @AT@ 2990 @LENGTH@ 2
+, INS ForStatement@@[int i=0];i < observed.length; [i++] @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3002 @LENGTH@ 133
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3007 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3007 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3011 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3011 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3015 @LENGTH@ 1
+---INS InfixExpression@@i < observed.length @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3018 @LENGTH@ 19
+------INS SimpleName@@i @TO@ InfixExpression@@i < observed.length @AT@ 3018 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < observed.length @AT@ 3019 @LENGTH@ 1
+------INS QualifiedName@@observed.length @TO@ InfixExpression@@i < observed.length @AT@ 3022 @LENGTH@ 15
+---------INS SimpleName@@observed @TO@ QualifiedName@@observed.length @AT@ 3022 @LENGTH@ 8
+---------INS SimpleName@@length @TO@ QualifiedName@@observed.length @AT@ 3031 @LENGTH@ 6
+---INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3039 @LENGTH@ 3
+------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3039 @LENGTH@ 1
+------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3041 @LENGTH@ 2
+---INS ExpressionStatement@@Assignment:sumExpected+=expected[i] @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3058 @LENGTH@ 27
+------INS Assignment@@sumExpected+=expected[i] @TO@ ExpressionStatement@@Assignment:sumExpected+=expected[i] @AT@ 3058 @LENGTH@ 26
+---------INS SimpleName@@sumExpected @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3058 @LENGTH@ 11
+---------INS Operator@@+= @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3069 @LENGTH@ 2
+---------INS ArrayAccess@@expected[i] @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3073 @LENGTH@ 11
+------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3073 @LENGTH@ 8
+------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3082 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:sumObserved+=observed[i] @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3098 @LENGTH@ 27
+------INS Assignment@@sumObserved+=observed[i] @TO@ ExpressionStatement@@Assignment:sumObserved+=observed[i] @AT@ 3098 @LENGTH@ 26
+---------INS SimpleName@@sumObserved @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3098 @LENGTH@ 11
+---------INS Operator@@+= @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3109 @LENGTH@ 2
+---------INS ArrayAccess@@observed[i] @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3113 @LENGTH@ 11
+------------INS SimpleName@@observed @TO@ ArrayAccess@@observed[i] @AT@ 3113 @LENGTH@ 8
+------------INS SimpleName@@i @TO@ ArrayAccess@@observed[i] @AT@ 3122 @LENGTH@ 1
+, INS VariableDeclarationStatement@@double ratio=1.0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3144 @LENGTH@ 20
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double ratio=1.0d; @AT@ 3144 @LENGTH@ 6
+---INS VariableDeclarationFragment@@ratio=1.0d @TO@ VariableDeclarationStatement@@double ratio=1.0d; @AT@ 3151 @LENGTH@ 12
+------INS SimpleName@@ratio @TO@ VariableDeclarationFragment@@ratio=1.0d @AT@ 3151 @LENGTH@ 5
+------INS NumberLiteral@@1.0d @TO@ VariableDeclarationFragment@@ratio=1.0d @AT@ 3159 @LENGTH@ 4
+, INS VariableDeclarationStatement@@boolean rescale=false; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3173 @LENGTH@ 24
+---INS PrimitiveType@@boolean @TO@ VariableDeclarationStatement@@boolean rescale=false; @AT@ 3173 @LENGTH@ 7
+---INS VariableDeclarationFragment@@rescale=false @TO@ VariableDeclarationStatement@@boolean rescale=false; @AT@ 3181 @LENGTH@ 15
+------INS SimpleName@@rescale @TO@ VariableDeclarationFragment@@rescale=false @AT@ 3181 @LENGTH@ 7
+------INS BooleanLiteral@@false @TO@ VariableDeclarationFragment@@rescale=false @AT@ 3191 @LENGTH@ 5
+, INS IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3206 @LENGTH@ 135
+---INS InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3210 @LENGTH@ 43
+------INS MethodInvocation@@Math.abs(sumExpected - sumObserved) @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3210 @LENGTH@ 35
+---------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(sumExpected - sumObserved) @AT@ 3210 @LENGTH@ 4
+---------INS SimpleName@@MethodName:abs:[sumExpected - sumObserved] @TO@ MethodInvocation@@Math.abs(sumExpected - sumObserved) @AT@ 3215 @LENGTH@ 30
+------------INS InfixExpression@@sumExpected - sumObserved @TO@ SimpleName@@MethodName:abs:[sumExpected - sumObserved] @AT@ 3219 @LENGTH@ 25
+---------------INS SimpleName@@sumExpected @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3219 @LENGTH@ 11
+---------------INS Operator@@- @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3230 @LENGTH@ 1
+---------------INS SimpleName@@sumObserved @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3233 @LENGTH@ 11
+------INS Operator@@> @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3245 @LENGTH@ 1
+------INS NumberLiteral@@10E-6 @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3248 @LENGTH@ 5
+---INS ExpressionStatement@@Assignment:ratio=sumObserved / sumExpected @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3269 @LENGTH@ 34
+------INS Assignment@@ratio=sumObserved / sumExpected @TO@ ExpressionStatement@@Assignment:ratio=sumObserved / sumExpected @AT@ 3269 @LENGTH@ 33
+---------INS SimpleName@@ratio @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3269 @LENGTH@ 5
+---------INS Operator@@= @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3274 @LENGTH@ 1
+---------INS InfixExpression@@sumObserved / sumExpected @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3277 @LENGTH@ 25
+------------INS SimpleName@@sumObserved @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3277 @LENGTH@ 11
+------------INS Operator@@/ @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3288 @LENGTH@ 1
+------------INS SimpleName@@sumExpected @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3291 @LENGTH@ 11
+---INS ExpressionStatement@@Assignment:rescale=true @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3316 @LENGTH@ 15
+------INS Assignment@@rescale=true @TO@ ExpressionStatement@@Assignment:rescale=true @AT@ 3316 @LENGTH@ 14
+---------INS SimpleName@@rescale @TO@ Assignment@@rescale=true @AT@ 3316 @LENGTH@ 7
+---------INS Operator@@= @TO@ Assignment@@rescale=true @AT@ 3323 @LENGTH@ 1
+---------INS BooleanLiteral@@true @TO@ Assignment@@rescale=true @AT@ 3326 @LENGTH@ 4
+, INS IfStatement@@SimpleName:rescale @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3462 @LENGTH@ 287
+---MOV ExpressionStatement@@Assignment:dev=((double)observed[i] - expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3052 @LENGTH@ 43
+---MOV ExpressionStatement@@Assignment:sumSq+=dev * dev / expected[i] @TO@ IfStatement@@SimpleName:rescale @AT@ 3112 @LENGTH@ 33
+---INS SimpleName@@rescale @TO@ IfStatement@@SimpleName:rescale @AT@ 3466 @LENGTH@ 7
+---INS ExpressionStatement@@Assignment:dev=((double)observed[i] - ratio * expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3493 @LENGTH@ 51
+------INS Assignment@@dev=((double)observed[i] - ratio * expected[i]) @TO@ ExpressionStatement@@Assignment:dev=((double)observed[i] - ratio * expected[i]) @AT@ 3493 @LENGTH@ 50
+---------INS SimpleName@@dev @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3493 @LENGTH@ 3
+---------INS Operator@@= @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3496 @LENGTH@ 1
+---------INS ParenthesizedExpression@@((double)observed[i] - ratio * expected[i]) @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3499 @LENGTH@ 44
+------------INS InfixExpression@@(double)observed[i] - ratio * expected[i] @TO@ ParenthesizedExpression@@((double)observed[i] - ratio * expected[i]) @AT@ 3500 @LENGTH@ 42
+---------------INS CastExpression@@(double)observed[i] @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3500 @LENGTH@ 20
+------------------INS PrimitiveType@@double @TO@ CastExpression@@(double)observed[i] @AT@ 3501 @LENGTH@ 6
+------------------INS ArrayAccess@@observed[i] @TO@ CastExpression@@(double)observed[i] @AT@ 3509 @LENGTH@ 11
+---------------------INS SimpleName@@observed @TO@ ArrayAccess@@observed[i] @AT@ 3509 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@observed[i] @AT@ 3518 @LENGTH@ 1
+---------------INS Operator@@- @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3520 @LENGTH@ 1
+---------------INS InfixExpression@@ratio * expected[i] @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3523 @LENGTH@ 19
+------------------INS SimpleName@@ratio @TO@ InfixExpression@@ratio * expected[i] @AT@ 3523 @LENGTH@ 5
+------------------INS Operator@@* @TO@ InfixExpression@@ratio * expected[i] @AT@ 3528 @LENGTH@ 1
+------------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@ratio * expected[i] @AT@ 3531 @LENGTH@ 11
+---------------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3531 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3540 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:sumSq+=dev * dev / (ratio * expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3561 @LENGTH@ 43
+------INS Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @TO@ ExpressionStatement@@Assignment:sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3561 @LENGTH@ 42
+---------INS SimpleName@@sumSq @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3561 @LENGTH@ 5
+---------INS Operator@@+= @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3566 @LENGTH@ 2
+---------INS InfixExpression@@dev * dev / (ratio * expected[i]) @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3570 @LENGTH@ 33
+------------INS InfixExpression@@dev * dev @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3570 @LENGTH@ 9
+---------------INS SimpleName@@dev @TO@ InfixExpression@@dev * dev @AT@ 3570 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@dev * dev @AT@ 3573 @LENGTH@ 1
+---------------INS SimpleName@@dev @TO@ InfixExpression@@dev * dev @AT@ 3576 @LENGTH@ 3
+------------INS Operator@@/ @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3579 @LENGTH@ 1
+------------INS ParenthesizedExpression@@(ratio * expected[i]) @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3582 @LENGTH@ 21
+---------------INS InfixExpression@@ratio * expected[i] @TO@ ParenthesizedExpression@@(ratio * expected[i]) @AT@ 3583 @LENGTH@ 19
+------------------INS SimpleName@@ratio @TO@ InfixExpression@@ratio * expected[i] @AT@ 3583 @LENGTH@ 5
+------------------INS Operator@@* @TO@ InfixExpression@@ratio * expected[i] @AT@ 3588 @LENGTH@ 1
+------------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@ratio * expected[i] @AT@ 3591 @LENGTH@ 11
+---------------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3591 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3600 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, NumberLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@double sumExpected=0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 2936 @LENGTH@ 24
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double sumExpected=0d; @AT@ 2936 @LENGTH@ 6
+---INS VariableDeclarationFragment@@sumExpected=0d @TO@ VariableDeclarationStatement@@double sumExpected=0d; @AT@ 2943 @LENGTH@ 16
+------INS SimpleName@@sumExpected @TO@ VariableDeclarationFragment@@sumExpected=0d @AT@ 2943 @LENGTH@ 11
+------INS NumberLiteral@@0d @TO@ VariableDeclarationFragment@@sumExpected=0d @AT@ 2957 @LENGTH@ 2
+, INS VariableDeclarationStatement@@double sumObserved=0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 2969 @LENGTH@ 24
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double sumObserved=0d; @AT@ 2969 @LENGTH@ 6
+---INS VariableDeclarationFragment@@sumObserved=0d @TO@ VariableDeclarationStatement@@double sumObserved=0d; @AT@ 2976 @LENGTH@ 16
+------INS SimpleName@@sumObserved @TO@ VariableDeclarationFragment@@sumObserved=0d @AT@ 2976 @LENGTH@ 11
+------INS NumberLiteral@@0d @TO@ VariableDeclarationFragment@@sumObserved=0d @AT@ 2990 @LENGTH@ 2
+, INS ForStatement@@[int i=0];i < observed.length; [i++] @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3002 @LENGTH@ 133
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3007 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3007 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3011 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3011 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3015 @LENGTH@ 1
+---INS InfixExpression@@i < observed.length @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3018 @LENGTH@ 19
+------INS SimpleName@@i @TO@ InfixExpression@@i < observed.length @AT@ 3018 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < observed.length @AT@ 3019 @LENGTH@ 1
+------INS QualifiedName@@observed.length @TO@ InfixExpression@@i < observed.length @AT@ 3022 @LENGTH@ 15
+---------INS SimpleName@@observed @TO@ QualifiedName@@observed.length @AT@ 3022 @LENGTH@ 8
+---------INS SimpleName@@length @TO@ QualifiedName@@observed.length @AT@ 3031 @LENGTH@ 6
+---INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3039 @LENGTH@ 3
+------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3039 @LENGTH@ 1
+------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3041 @LENGTH@ 2
+---INS ExpressionStatement@@Assignment:sumExpected+=expected[i] @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3058 @LENGTH@ 27
+------INS Assignment@@sumExpected+=expected[i] @TO@ ExpressionStatement@@Assignment:sumExpected+=expected[i] @AT@ 3058 @LENGTH@ 26
+---------INS SimpleName@@sumExpected @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3058 @LENGTH@ 11
+---------INS Operator@@+= @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3069 @LENGTH@ 2
+---------INS ArrayAccess@@expected[i] @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3073 @LENGTH@ 11
+------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3073 @LENGTH@ 8
+------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3082 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:sumObserved+=observed[i] @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3098 @LENGTH@ 27
+------INS Assignment@@sumObserved+=observed[i] @TO@ ExpressionStatement@@Assignment:sumObserved+=observed[i] @AT@ 3098 @LENGTH@ 26
+---------INS SimpleName@@sumObserved @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3098 @LENGTH@ 11
+---------INS Operator@@+= @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3109 @LENGTH@ 2
+---------INS ArrayAccess@@observed[i] @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3113 @LENGTH@ 11
+------------INS SimpleName@@observed @TO@ ArrayAccess@@observed[i] @AT@ 3113 @LENGTH@ 8
+------------INS SimpleName@@i @TO@ ArrayAccess@@observed[i] @AT@ 3122 @LENGTH@ 1
+, INS VariableDeclarationStatement@@double ratio=1.0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3144 @LENGTH@ 20
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double ratio=1.0d; @AT@ 3144 @LENGTH@ 6
+---INS VariableDeclarationFragment@@ratio=1.0d @TO@ VariableDeclarationStatement@@double ratio=1.0d; @AT@ 3151 @LENGTH@ 12
+------INS SimpleName@@ratio @TO@ VariableDeclarationFragment@@ratio=1.0d @AT@ 3151 @LENGTH@ 5
+------INS NumberLiteral@@1.0d @TO@ VariableDeclarationFragment@@ratio=1.0d @AT@ 3159 @LENGTH@ 4
+, INS VariableDeclarationStatement@@boolean rescale=false; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3173 @LENGTH@ 24
+---INS PrimitiveType@@boolean @TO@ VariableDeclarationStatement@@boolean rescale=false; @AT@ 3173 @LENGTH@ 7
+---INS VariableDeclarationFragment@@rescale=false @TO@ VariableDeclarationStatement@@boolean rescale=false; @AT@ 3181 @LENGTH@ 15
+------INS SimpleName@@rescale @TO@ VariableDeclarationFragment@@rescale=false @AT@ 3181 @LENGTH@ 7
+------INS BooleanLiteral@@false @TO@ VariableDeclarationFragment@@rescale=false @AT@ 3191 @LENGTH@ 5
+, INS IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3206 @LENGTH@ 135
+---INS InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3210 @LENGTH@ 43
+------INS MethodInvocation@@Math.abs(sumExpected - sumObserved) @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3210 @LENGTH@ 35
+---------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(sumExpected - sumObserved) @AT@ 3210 @LENGTH@ 4
+---------INS SimpleName@@MethodName:abs:[sumExpected - sumObserved] @TO@ MethodInvocation@@Math.abs(sumExpected - sumObserved) @AT@ 3215 @LENGTH@ 30
+------------INS InfixExpression@@sumExpected - sumObserved @TO@ SimpleName@@MethodName:abs:[sumExpected - sumObserved] @AT@ 3219 @LENGTH@ 25
+---------------INS SimpleName@@sumExpected @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3219 @LENGTH@ 11
+---------------INS Operator@@- @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3230 @LENGTH@ 1
+---------------INS SimpleName@@sumObserved @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3233 @LENGTH@ 11
+------INS Operator@@> @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3245 @LENGTH@ 1
+------INS NumberLiteral@@10E-6 @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3248 @LENGTH@ 5
+---INS ExpressionStatement@@Assignment:ratio=sumObserved / sumExpected @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3269 @LENGTH@ 34
+------INS Assignment@@ratio=sumObserved / sumExpected @TO@ ExpressionStatement@@Assignment:ratio=sumObserved / sumExpected @AT@ 3269 @LENGTH@ 33
+---------INS SimpleName@@ratio @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3269 @LENGTH@ 5
+---------INS Operator@@= @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3274 @LENGTH@ 1
+---------INS InfixExpression@@sumObserved / sumExpected @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3277 @LENGTH@ 25
+------------INS SimpleName@@sumObserved @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3277 @LENGTH@ 11
+------------INS Operator@@/ @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3288 @LENGTH@ 1
+------------INS SimpleName@@sumExpected @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3291 @LENGTH@ 11
+---INS ExpressionStatement@@Assignment:rescale=true @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3316 @LENGTH@ 15
+------INS Assignment@@rescale=true @TO@ ExpressionStatement@@Assignment:rescale=true @AT@ 3316 @LENGTH@ 14
+---------INS SimpleName@@rescale @TO@ Assignment@@rescale=true @AT@ 3316 @LENGTH@ 7
+---------INS Operator@@= @TO@ Assignment@@rescale=true @AT@ 3323 @LENGTH@ 1
+---------INS BooleanLiteral@@true @TO@ Assignment@@rescale=true @AT@ 3326 @LENGTH@ 4
+, INS IfStatement@@SimpleName:rescale @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3462 @LENGTH@ 287
+---MOV ExpressionStatement@@Assignment:dev=((double)observed[i] - expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3052 @LENGTH@ 43
+---MOV ExpressionStatement@@Assignment:sumSq+=dev * dev / expected[i] @TO@ IfStatement@@SimpleName:rescale @AT@ 3112 @LENGTH@ 33
+---INS SimpleName@@rescale @TO@ IfStatement@@SimpleName:rescale @AT@ 3466 @LENGTH@ 7
+---INS ExpressionStatement@@Assignment:dev=((double)observed[i] - ratio * expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3493 @LENGTH@ 51
+------INS Assignment@@dev=((double)observed[i] - ratio * expected[i]) @TO@ ExpressionStatement@@Assignment:dev=((double)observed[i] - ratio * expected[i]) @AT@ 3493 @LENGTH@ 50
+---------INS SimpleName@@dev @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3493 @LENGTH@ 3
+---------INS Operator@@= @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3496 @LENGTH@ 1
+---------INS ParenthesizedExpression@@((double)observed[i] - ratio * expected[i]) @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3499 @LENGTH@ 44
+------------INS InfixExpression@@(double)observed[i] - ratio * expected[i] @TO@ ParenthesizedExpression@@((double)observed[i] - ratio * expected[i]) @AT@ 3500 @LENGTH@ 42
+---------------INS CastExpression@@(double)observed[i] @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3500 @LENGTH@ 20
+------------------INS PrimitiveType@@double @TO@ CastExpression@@(double)observed[i] @AT@ 3501 @LENGTH@ 6
+------------------INS ArrayAccess@@observed[i] @TO@ CastExpression@@(double)observed[i] @AT@ 3509 @LENGTH@ 11
+---------------------INS SimpleName@@observed @TO@ ArrayAccess@@observed[i] @AT@ 3509 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@observed[i] @AT@ 3518 @LENGTH@ 1
+---------------INS Operator@@- @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3520 @LENGTH@ 1
+---------------INS InfixExpression@@ratio * expected[i] @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3523 @LENGTH@ 19
+------------------INS SimpleName@@ratio @TO@ InfixExpression@@ratio * expected[i] @AT@ 3523 @LENGTH@ 5
+------------------INS Operator@@* @TO@ InfixExpression@@ratio * expected[i] @AT@ 3528 @LENGTH@ 1
+------------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@ratio * expected[i] @AT@ 3531 @LENGTH@ 11
+---------------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3531 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3540 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:sumSq+=dev * dev / (ratio * expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3561 @LENGTH@ 43
+------INS Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @TO@ ExpressionStatement@@Assignment:sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3561 @LENGTH@ 42
+---------INS SimpleName@@sumSq @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3561 @LENGTH@ 5
+---------INS Operator@@+= @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3566 @LENGTH@ 2
+---------INS InfixExpression@@dev * dev / (ratio * expected[i]) @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3570 @LENGTH@ 33
+------------INS InfixExpression@@dev * dev @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3570 @LENGTH@ 9
+---------------INS SimpleName@@dev @TO@ InfixExpression@@dev * dev @AT@ 3570 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@dev * dev @AT@ 3573 @LENGTH@ 1
+---------------INS SimpleName@@dev @TO@ InfixExpression@@dev * dev @AT@ 3576 @LENGTH@ 3
+------------INS Operator@@/ @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3579 @LENGTH@ 1
+------------INS ParenthesizedExpression@@(ratio * expected[i]) @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3582 @LENGTH@ 21
+---------------INS InfixExpression@@ratio * expected[i] @TO@ ParenthesizedExpression@@(ratio * expected[i]) @AT@ 3583 @LENGTH@ 19
+------------------INS SimpleName@@ratio @TO@ InfixExpression@@ratio * expected[i] @AT@ 3583 @LENGTH@ 5
+------------------INS Operator@@* @TO@ InfixExpression@@ratio * expected[i] @AT@ 3588 @LENGTH@ 1
+------------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@ratio * expected[i] @AT@ 3591 @LENGTH@ 11
+---------------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3591 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3600 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, BooleanLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@double sumExpected=0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 2936 @LENGTH@ 24
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double sumExpected=0d; @AT@ 2936 @LENGTH@ 6
+---INS VariableDeclarationFragment@@sumExpected=0d @TO@ VariableDeclarationStatement@@double sumExpected=0d; @AT@ 2943 @LENGTH@ 16
+------INS SimpleName@@sumExpected @TO@ VariableDeclarationFragment@@sumExpected=0d @AT@ 2943 @LENGTH@ 11
+------INS NumberLiteral@@0d @TO@ VariableDeclarationFragment@@sumExpected=0d @AT@ 2957 @LENGTH@ 2
+, INS VariableDeclarationStatement@@double sumObserved=0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 2969 @LENGTH@ 24
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double sumObserved=0d; @AT@ 2969 @LENGTH@ 6
+---INS VariableDeclarationFragment@@sumObserved=0d @TO@ VariableDeclarationStatement@@double sumObserved=0d; @AT@ 2976 @LENGTH@ 16
+------INS SimpleName@@sumObserved @TO@ VariableDeclarationFragment@@sumObserved=0d @AT@ 2976 @LENGTH@ 11
+------INS NumberLiteral@@0d @TO@ VariableDeclarationFragment@@sumObserved=0d @AT@ 2990 @LENGTH@ 2
+, INS ForStatement@@[int i=0];i < observed.length; [i++] @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3002 @LENGTH@ 133
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3007 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3007 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3011 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3011 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3015 @LENGTH@ 1
+---INS InfixExpression@@i < observed.length @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3018 @LENGTH@ 19
+------INS SimpleName@@i @TO@ InfixExpression@@i < observed.length @AT@ 3018 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < observed.length @AT@ 3019 @LENGTH@ 1
+------INS QualifiedName@@observed.length @TO@ InfixExpression@@i < observed.length @AT@ 3022 @LENGTH@ 15
+---------INS SimpleName@@observed @TO@ QualifiedName@@observed.length @AT@ 3022 @LENGTH@ 8
+---------INS SimpleName@@length @TO@ QualifiedName@@observed.length @AT@ 3031 @LENGTH@ 6
+---INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3039 @LENGTH@ 3
+------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3039 @LENGTH@ 1
+------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3041 @LENGTH@ 2
+---INS ExpressionStatement@@Assignment:sumExpected+=expected[i] @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3058 @LENGTH@ 27
+------INS Assignment@@sumExpected+=expected[i] @TO@ ExpressionStatement@@Assignment:sumExpected+=expected[i] @AT@ 3058 @LENGTH@ 26
+---------INS SimpleName@@sumExpected @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3058 @LENGTH@ 11
+---------INS Operator@@+= @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3069 @LENGTH@ 2
+---------INS ArrayAccess@@expected[i] @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3073 @LENGTH@ 11
+------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3073 @LENGTH@ 8
+------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3082 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:sumObserved+=observed[i] @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3098 @LENGTH@ 27
+------INS Assignment@@sumObserved+=observed[i] @TO@ ExpressionStatement@@Assignment:sumObserved+=observed[i] @AT@ 3098 @LENGTH@ 26
+---------INS SimpleName@@sumObserved @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3098 @LENGTH@ 11
+---------INS Operator@@+= @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3109 @LENGTH@ 2
+---------INS ArrayAccess@@observed[i] @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3113 @LENGTH@ 11
+------------INS SimpleName@@observed @TO@ ArrayAccess@@observed[i] @AT@ 3113 @LENGTH@ 8
+------------INS SimpleName@@i @TO@ ArrayAccess@@observed[i] @AT@ 3122 @LENGTH@ 1
+, INS VariableDeclarationStatement@@double ratio=1.0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3144 @LENGTH@ 20
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double ratio=1.0d; @AT@ 3144 @LENGTH@ 6
+---INS VariableDeclarationFragment@@ratio=1.0d @TO@ VariableDeclarationStatement@@double ratio=1.0d; @AT@ 3151 @LENGTH@ 12
+------INS SimpleName@@ratio @TO@ VariableDeclarationFragment@@ratio=1.0d @AT@ 3151 @LENGTH@ 5
+------INS NumberLiteral@@1.0d @TO@ VariableDeclarationFragment@@ratio=1.0d @AT@ 3159 @LENGTH@ 4
+, INS VariableDeclarationStatement@@boolean rescale=false; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3173 @LENGTH@ 24
+---INS PrimitiveType@@boolean @TO@ VariableDeclarationStatement@@boolean rescale=false; @AT@ 3173 @LENGTH@ 7
+---INS VariableDeclarationFragment@@rescale=false @TO@ VariableDeclarationStatement@@boolean rescale=false; @AT@ 3181 @LENGTH@ 15
+------INS SimpleName@@rescale @TO@ VariableDeclarationFragment@@rescale=false @AT@ 3181 @LENGTH@ 7
+------INS BooleanLiteral@@false @TO@ VariableDeclarationFragment@@rescale=false @AT@ 3191 @LENGTH@ 5
+, INS IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3206 @LENGTH@ 135
+---INS InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3210 @LENGTH@ 43
+------INS MethodInvocation@@Math.abs(sumExpected - sumObserved) @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3210 @LENGTH@ 35
+---------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(sumExpected - sumObserved) @AT@ 3210 @LENGTH@ 4
+---------INS SimpleName@@MethodName:abs:[sumExpected - sumObserved] @TO@ MethodInvocation@@Math.abs(sumExpected - sumObserved) @AT@ 3215 @LENGTH@ 30
+------------INS InfixExpression@@sumExpected - sumObserved @TO@ SimpleName@@MethodName:abs:[sumExpected - sumObserved] @AT@ 3219 @LENGTH@ 25
+---------------INS SimpleName@@sumExpected @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3219 @LENGTH@ 11
+---------------INS Operator@@- @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3230 @LENGTH@ 1
+---------------INS SimpleName@@sumObserved @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3233 @LENGTH@ 11
+------INS Operator@@> @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3245 @LENGTH@ 1
+------INS NumberLiteral@@10E-6 @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3248 @LENGTH@ 5
+---INS ExpressionStatement@@Assignment:ratio=sumObserved / sumExpected @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3269 @LENGTH@ 34
+------INS Assignment@@ratio=sumObserved / sumExpected @TO@ ExpressionStatement@@Assignment:ratio=sumObserved / sumExpected @AT@ 3269 @LENGTH@ 33
+---------INS SimpleName@@ratio @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3269 @LENGTH@ 5
+---------INS Operator@@= @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3274 @LENGTH@ 1
+---------INS InfixExpression@@sumObserved / sumExpected @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3277 @LENGTH@ 25
+------------INS SimpleName@@sumObserved @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3277 @LENGTH@ 11
+------------INS Operator@@/ @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3288 @LENGTH@ 1
+------------INS SimpleName@@sumExpected @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3291 @LENGTH@ 11
+---INS ExpressionStatement@@Assignment:rescale=true @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3316 @LENGTH@ 15
+------INS Assignment@@rescale=true @TO@ ExpressionStatement@@Assignment:rescale=true @AT@ 3316 @LENGTH@ 14
+---------INS SimpleName@@rescale @TO@ Assignment@@rescale=true @AT@ 3316 @LENGTH@ 7
+---------INS Operator@@= @TO@ Assignment@@rescale=true @AT@ 3323 @LENGTH@ 1
+---------INS BooleanLiteral@@true @TO@ Assignment@@rescale=true @AT@ 3326 @LENGTH@ 4
+, INS IfStatement@@SimpleName:rescale @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3462 @LENGTH@ 287
+---MOV ExpressionStatement@@Assignment:dev=((double)observed[i] - expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3052 @LENGTH@ 43
+---MOV ExpressionStatement@@Assignment:sumSq+=dev * dev / expected[i] @TO@ IfStatement@@SimpleName:rescale @AT@ 3112 @LENGTH@ 33
+---INS SimpleName@@rescale @TO@ IfStatement@@SimpleName:rescale @AT@ 3466 @LENGTH@ 7
+---INS ExpressionStatement@@Assignment:dev=((double)observed[i] - ratio * expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3493 @LENGTH@ 51
+------INS Assignment@@dev=((double)observed[i] - ratio * expected[i]) @TO@ ExpressionStatement@@Assignment:dev=((double)observed[i] - ratio * expected[i]) @AT@ 3493 @LENGTH@ 50
+---------INS SimpleName@@dev @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3493 @LENGTH@ 3
+---------INS Operator@@= @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3496 @LENGTH@ 1
+---------INS ParenthesizedExpression@@((double)observed[i] - ratio * expected[i]) @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3499 @LENGTH@ 44
+------------INS InfixExpression@@(double)observed[i] - ratio * expected[i] @TO@ ParenthesizedExpression@@((double)observed[i] - ratio * expected[i]) @AT@ 3500 @LENGTH@ 42
+---------------INS CastExpression@@(double)observed[i] @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3500 @LENGTH@ 20
+------------------INS PrimitiveType@@double @TO@ CastExpression@@(double)observed[i] @AT@ 3501 @LENGTH@ 6
+------------------INS ArrayAccess@@observed[i] @TO@ CastExpression@@(double)observed[i] @AT@ 3509 @LENGTH@ 11
+---------------------INS SimpleName@@observed @TO@ ArrayAccess@@observed[i] @AT@ 3509 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@observed[i] @AT@ 3518 @LENGTH@ 1
+---------------INS Operator@@- @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3520 @LENGTH@ 1
+---------------INS InfixExpression@@ratio * expected[i] @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3523 @LENGTH@ 19
+------------------INS SimpleName@@ratio @TO@ InfixExpression@@ratio * expected[i] @AT@ 3523 @LENGTH@ 5
+------------------INS Operator@@* @TO@ InfixExpression@@ratio * expected[i] @AT@ 3528 @LENGTH@ 1
+------------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@ratio * expected[i] @AT@ 3531 @LENGTH@ 11
+---------------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3531 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3540 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:sumSq+=dev * dev / (ratio * expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3561 @LENGTH@ 43
+------INS Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @TO@ ExpressionStatement@@Assignment:sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3561 @LENGTH@ 42
+---------INS SimpleName@@sumSq @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3561 @LENGTH@ 5
+---------INS Operator@@+= @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3566 @LENGTH@ 2
+---------INS InfixExpression@@dev * dev / (ratio * expected[i]) @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3570 @LENGTH@ 33
+------------INS InfixExpression@@dev * dev @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3570 @LENGTH@ 9
+---------------INS SimpleName@@dev @TO@ InfixExpression@@dev * dev @AT@ 3570 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@dev * dev @AT@ 3573 @LENGTH@ 1
+---------------INS SimpleName@@dev @TO@ InfixExpression@@dev * dev @AT@ 3576 @LENGTH@ 3
+------------INS Operator@@/ @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3579 @LENGTH@ 1
+------------INS ParenthesizedExpression@@(ratio * expected[i]) @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3582 @LENGTH@ 21
+---------------INS InfixExpression@@ratio * expected[i] @TO@ ParenthesizedExpression@@(ratio * expected[i]) @AT@ 3583 @LENGTH@ 19
+------------------INS SimpleName@@ratio @TO@ InfixExpression@@ratio * expected[i] @AT@ 3583 @LENGTH@ 5
+------------------INS Operator@@* @TO@ InfixExpression@@ratio * expected[i] @AT@ 3588 @LENGTH@ 1
+------------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@ratio * expected[i] @AT@ 3591 @LENGTH@ 11
+---------------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3591 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3600 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP12 OP20)
+OP2:   (INS, InfixExpression, OP1, OP3 OP10 OP11)
+OP3:      (INS, MethodInvocation, OP2, OP4 OP5)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, SimpleName, OP3, OP6)
+OP6:            (INS, InfixExpression, OP5, OP7 OP8 OP9)
+OP7:               (INS, SimpleName, OP6, null)
+OP8:               (INS, Operator, OP6, null)
+OP9:               (INS, SimpleName, OP6, null)
+OP10:      (INS, Operator, OP2, null)
+OP11:      (INS, NumberLiteral, OP2, null)
+OP12:   (INS, ExpressionStatement, OP1, OP13)
+OP13:      (INS, Assignment, OP12, OP14 OP15 OP16)
+OP14:         (INS, SimpleName, OP13, null)
+OP15:         (INS, Operator, OP13, null)
+OP16:         (INS, InfixExpression, OP13, OP17 OP18 OP19)
+OP17:            (INS, SimpleName, OP16, null)
+OP18:            (INS, Operator, OP16, null)
+OP19:            (INS, SimpleName, OP16, null)
+OP20:   (INS, ExpressionStatement, OP1, OP21)
+OP21:      (INS, Assignment, OP20, OP22 OP23 OP24)
+OP22:         (INS, SimpleName, OP21, null)
+OP23:         (INS, Operator, OP21, null)
+OP24:         (INS, BooleanLiteral, OP21, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@double sumExpected=0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 2936 @LENGTH@ 24
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double sumExpected=0d; @AT@ 2936 @LENGTH@ 6
+---INS VariableDeclarationFragment@@sumExpected=0d @TO@ VariableDeclarationStatement@@double sumExpected=0d; @AT@ 2943 @LENGTH@ 16
+------INS SimpleName@@sumExpected @TO@ VariableDeclarationFragment@@sumExpected=0d @AT@ 2943 @LENGTH@ 11
+------INS NumberLiteral@@0d @TO@ VariableDeclarationFragment@@sumExpected=0d @AT@ 2957 @LENGTH@ 2
+, INS VariableDeclarationStatement@@double sumObserved=0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 2969 @LENGTH@ 24
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double sumObserved=0d; @AT@ 2969 @LENGTH@ 6
+---INS VariableDeclarationFragment@@sumObserved=0d @TO@ VariableDeclarationStatement@@double sumObserved=0d; @AT@ 2976 @LENGTH@ 16
+------INS SimpleName@@sumObserved @TO@ VariableDeclarationFragment@@sumObserved=0d @AT@ 2976 @LENGTH@ 11
+------INS NumberLiteral@@0d @TO@ VariableDeclarationFragment@@sumObserved=0d @AT@ 2990 @LENGTH@ 2
+, INS ForStatement@@[int i=0];i < observed.length; [i++] @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3002 @LENGTH@ 133
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3007 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3007 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3011 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3011 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3015 @LENGTH@ 1
+---INS InfixExpression@@i < observed.length @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3018 @LENGTH@ 19
+------INS SimpleName@@i @TO@ InfixExpression@@i < observed.length @AT@ 3018 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < observed.length @AT@ 3019 @LENGTH@ 1
+------INS QualifiedName@@observed.length @TO@ InfixExpression@@i < observed.length @AT@ 3022 @LENGTH@ 15
+---------INS SimpleName@@observed @TO@ QualifiedName@@observed.length @AT@ 3022 @LENGTH@ 8
+---------INS SimpleName@@length @TO@ QualifiedName@@observed.length @AT@ 3031 @LENGTH@ 6
+---INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3039 @LENGTH@ 3
+------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3039 @LENGTH@ 1
+------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3041 @LENGTH@ 2
+---INS ExpressionStatement@@Assignment:sumExpected+=expected[i] @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3058 @LENGTH@ 27
+------INS Assignment@@sumExpected+=expected[i] @TO@ ExpressionStatement@@Assignment:sumExpected+=expected[i] @AT@ 3058 @LENGTH@ 26
+---------INS SimpleName@@sumExpected @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3058 @LENGTH@ 11
+---------INS Operator@@+= @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3069 @LENGTH@ 2
+---------INS ArrayAccess@@expected[i] @TO@ Assignment@@sumExpected+=expected[i] @AT@ 3073 @LENGTH@ 11
+------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3073 @LENGTH@ 8
+------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3082 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:sumObserved+=observed[i] @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3098 @LENGTH@ 27
+------INS Assignment@@sumObserved+=observed[i] @TO@ ExpressionStatement@@Assignment:sumObserved+=observed[i] @AT@ 3098 @LENGTH@ 26
+---------INS SimpleName@@sumObserved @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3098 @LENGTH@ 11
+---------INS Operator@@+= @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3109 @LENGTH@ 2
+---------INS ArrayAccess@@observed[i] @TO@ Assignment@@sumObserved+=observed[i] @AT@ 3113 @LENGTH@ 11
+------------INS SimpleName@@observed @TO@ ArrayAccess@@observed[i] @AT@ 3113 @LENGTH@ 8
+------------INS SimpleName@@i @TO@ ArrayAccess@@observed[i] @AT@ 3122 @LENGTH@ 1
+, INS VariableDeclarationStatement@@double ratio=1.0d; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3144 @LENGTH@ 20
+---INS PrimitiveType@@double @TO@ VariableDeclarationStatement@@double ratio=1.0d; @AT@ 3144 @LENGTH@ 6
+---INS VariableDeclarationFragment@@ratio=1.0d @TO@ VariableDeclarationStatement@@double ratio=1.0d; @AT@ 3151 @LENGTH@ 12
+------INS SimpleName@@ratio @TO@ VariableDeclarationFragment@@ratio=1.0d @AT@ 3151 @LENGTH@ 5
+------INS NumberLiteral@@1.0d @TO@ VariableDeclarationFragment@@ratio=1.0d @AT@ 3159 @LENGTH@ 4
+, INS VariableDeclarationStatement@@boolean rescale=false; @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3173 @LENGTH@ 24
+---INS PrimitiveType@@boolean @TO@ VariableDeclarationStatement@@boolean rescale=false; @AT@ 3173 @LENGTH@ 7
+---INS VariableDeclarationFragment@@rescale=false @TO@ VariableDeclarationStatement@@boolean rescale=false; @AT@ 3181 @LENGTH@ 15
+------INS SimpleName@@rescale @TO@ VariableDeclarationFragment@@rescale=false @AT@ 3181 @LENGTH@ 7
+------INS BooleanLiteral@@false @TO@ VariableDeclarationFragment@@rescale=false @AT@ 3191 @LENGTH@ 5
+, INS IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @TO@ MethodDeclaration@@public, @@double, MethodName:chiSquare, @@Argus:double[]+expected+long[]+observed+IllegalArgumentException,  @AT@ 3206 @LENGTH@ 135
+---INS InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3210 @LENGTH@ 43
+------INS MethodInvocation@@Math.abs(sumExpected - sumObserved) @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3210 @LENGTH@ 35
+---------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.abs(sumExpected - sumObserved) @AT@ 3210 @LENGTH@ 4
+---------INS SimpleName@@MethodName:abs:[sumExpected - sumObserved] @TO@ MethodInvocation@@Math.abs(sumExpected - sumObserved) @AT@ 3215 @LENGTH@ 30
+------------INS InfixExpression@@sumExpected - sumObserved @TO@ SimpleName@@MethodName:abs:[sumExpected - sumObserved] @AT@ 3219 @LENGTH@ 25
+---------------INS SimpleName@@sumExpected @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3219 @LENGTH@ 11
+---------------INS Operator@@- @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3230 @LENGTH@ 1
+---------------INS SimpleName@@sumObserved @TO@ InfixExpression@@sumExpected - sumObserved @AT@ 3233 @LENGTH@ 11
+------INS Operator@@> @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3245 @LENGTH@ 1
+------INS NumberLiteral@@10E-6 @TO@ InfixExpression@@Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3248 @LENGTH@ 5
+---INS ExpressionStatement@@Assignment:ratio=sumObserved / sumExpected @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3269 @LENGTH@ 34
+------INS Assignment@@ratio=sumObserved / sumExpected @TO@ ExpressionStatement@@Assignment:ratio=sumObserved / sumExpected @AT@ 3269 @LENGTH@ 33
+---------INS SimpleName@@ratio @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3269 @LENGTH@ 5
+---------INS Operator@@= @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3274 @LENGTH@ 1
+---------INS InfixExpression@@sumObserved / sumExpected @TO@ Assignment@@ratio=sumObserved / sumExpected @AT@ 3277 @LENGTH@ 25
+------------INS SimpleName@@sumObserved @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3277 @LENGTH@ 11
+------------INS Operator@@/ @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3288 @LENGTH@ 1
+------------INS SimpleName@@sumExpected @TO@ InfixExpression@@sumObserved / sumExpected @AT@ 3291 @LENGTH@ 11
+---INS ExpressionStatement@@Assignment:rescale=true @TO@ IfStatement@@InfixExpression:Math.abs(sumExpected - sumObserved) > 10E-6 @AT@ 3316 @LENGTH@ 15
+------INS Assignment@@rescale=true @TO@ ExpressionStatement@@Assignment:rescale=true @AT@ 3316 @LENGTH@ 14
+---------INS SimpleName@@rescale @TO@ Assignment@@rescale=true @AT@ 3316 @LENGTH@ 7
+---------INS Operator@@= @TO@ Assignment@@rescale=true @AT@ 3323 @LENGTH@ 1
+---------INS BooleanLiteral@@true @TO@ Assignment@@rescale=true @AT@ 3326 @LENGTH@ 4
+, INS IfStatement@@SimpleName:rescale @TO@ ForStatement@@[int i=0];i < observed.length; [i++] @AT@ 3462 @LENGTH@ 287
+---MOV ExpressionStatement@@Assignment:dev=((double)observed[i] - expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3052 @LENGTH@ 43
+---MOV ExpressionStatement@@Assignment:sumSq+=dev * dev / expected[i] @TO@ IfStatement@@SimpleName:rescale @AT@ 3112 @LENGTH@ 33
+---INS SimpleName@@rescale @TO@ IfStatement@@SimpleName:rescale @AT@ 3466 @LENGTH@ 7
+---INS ExpressionStatement@@Assignment:dev=((double)observed[i] - ratio * expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3493 @LENGTH@ 51
+------INS Assignment@@dev=((double)observed[i] - ratio * expected[i]) @TO@ ExpressionStatement@@Assignment:dev=((double)observed[i] - ratio * expected[i]) @AT@ 3493 @LENGTH@ 50
+---------INS SimpleName@@dev @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3493 @LENGTH@ 3
+---------INS Operator@@= @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3496 @LENGTH@ 1
+---------INS ParenthesizedExpression@@((double)observed[i] - ratio * expected[i]) @TO@ Assignment@@dev=((double)observed[i] - ratio * expected[i]) @AT@ 3499 @LENGTH@ 44
+------------INS InfixExpression@@(double)observed[i] - ratio * expected[i] @TO@ ParenthesizedExpression@@((double)observed[i] - ratio * expected[i]) @AT@ 3500 @LENGTH@ 42
+---------------INS CastExpression@@(double)observed[i] @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3500 @LENGTH@ 20
+------------------INS PrimitiveType@@double @TO@ CastExpression@@(double)observed[i] @AT@ 3501 @LENGTH@ 6
+------------------INS ArrayAccess@@observed[i] @TO@ CastExpression@@(double)observed[i] @AT@ 3509 @LENGTH@ 11
+---------------------INS SimpleName@@observed @TO@ ArrayAccess@@observed[i] @AT@ 3509 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@observed[i] @AT@ 3518 @LENGTH@ 1
+---------------INS Operator@@- @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3520 @LENGTH@ 1
+---------------INS InfixExpression@@ratio * expected[i] @TO@ InfixExpression@@(double)observed[i] - ratio * expected[i] @AT@ 3523 @LENGTH@ 19
+------------------INS SimpleName@@ratio @TO@ InfixExpression@@ratio * expected[i] @AT@ 3523 @LENGTH@ 5
+------------------INS Operator@@* @TO@ InfixExpression@@ratio * expected[i] @AT@ 3528 @LENGTH@ 1
+------------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@ratio * expected[i] @AT@ 3531 @LENGTH@ 11
+---------------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3531 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3540 @LENGTH@ 1
+---INS ExpressionStatement@@Assignment:sumSq+=dev * dev / (ratio * expected[i]) @TO@ IfStatement@@SimpleName:rescale @AT@ 3561 @LENGTH@ 43
+------INS Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @TO@ ExpressionStatement@@Assignment:sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3561 @LENGTH@ 42
+---------INS SimpleName@@sumSq @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3561 @LENGTH@ 5
+---------INS Operator@@+= @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3566 @LENGTH@ 2
+---------INS InfixExpression@@dev * dev / (ratio * expected[i]) @TO@ Assignment@@sumSq+=dev * dev / (ratio * expected[i]) @AT@ 3570 @LENGTH@ 33
+------------INS InfixExpression@@dev * dev @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3570 @LENGTH@ 9
+---------------INS SimpleName@@dev @TO@ InfixExpression@@dev * dev @AT@ 3570 @LENGTH@ 3
+---------------INS Operator@@* @TO@ InfixExpression@@dev * dev @AT@ 3573 @LENGTH@ 1
+---------------INS SimpleName@@dev @TO@ InfixExpression@@dev * dev @AT@ 3576 @LENGTH@ 3
+------------INS Operator@@/ @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3579 @LENGTH@ 1
+------------INS ParenthesizedExpression@@(ratio * expected[i]) @TO@ InfixExpression@@dev * dev / (ratio * expected[i]) @AT@ 3582 @LENGTH@ 21
+---------------INS InfixExpression@@ratio * expected[i] @TO@ ParenthesizedExpression@@(ratio * expected[i]) @AT@ 3583 @LENGTH@ 19
+------------------INS SimpleName@@ratio @TO@ InfixExpression@@ratio * expected[i] @AT@ 3583 @LENGTH@ 5
+------------------INS Operator@@* @TO@ InfixExpression@@ratio * expected[i] @AT@ 3588 @LENGTH@ 1
+------------------INS ArrayAccess@@expected[i] @TO@ InfixExpression@@ratio * expected[i] @AT@ 3591 @LENGTH@ 11
+---------------------INS SimpleName@@expected @TO@ ArrayAccess@@expected[i] @AT@ 3591 @LENGTH@ 8
+---------------------INS SimpleName@@i @TO@ ArrayAccess@@expected[i] @AT@ 3600 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3 OP4 OP5 OP23)
+OP2:   (MOV, ExpressionStatement, OP1, null)
+OP3:   (MOV, ExpressionStatement, OP1, null)
+OP4:   (INS, SimpleName, OP1, null)
+OP5:   (INS, ExpressionStatement, OP1, OP6)
+OP6:      (INS, Assignment, OP5, OP7 OP8 OP9)
+OP7:         (INS, SimpleName, OP6, null)
+OP8:         (INS, Operator, OP6, null)
+OP9:         (INS, ParenthesizedExpression, OP6, OP10)
+OP10:            (INS, InfixExpression, OP9, OP11 OP16 OP17)
+OP11:               (INS, CastExpression, OP10, OP12 OP13)
+OP12:                  (INS, PrimitiveType, OP11, null)
+OP13:                  (INS, ArrayAccess, OP11, OP14 OP15)
+OP14:                     (INS, SimpleName, OP13, null)
+OP15:                     (INS, SimpleName, OP13, null)
+OP16:               (INS, Operator, OP10, null)
+OP17:               (INS, InfixExpression, OP10, OP18 OP19 OP20)
+OP18:                  (INS, SimpleName, OP17, null)
+OP19:                  (INS, Operator, OP17, null)
+OP20:                  (INS, ArrayAccess, OP17, OP21 OP22)
+OP21:                     (INS, SimpleName, OP20, null)
+OP22:                     (INS, SimpleName, OP20, null)
+OP23:   (INS, ExpressionStatement, OP1, OP24)
+OP24:      (INS, Assignment, OP23, OP25 OP26 OP27)
+OP25:         (INS, SimpleName, OP24, null)
+OP26:         (INS, Operator, OP24, null)
+OP27:         (INS, InfixExpression, OP24, OP28 OP32 OP33)
+OP28:            (INS, InfixExpression, OP27, OP29 OP30 OP31)
+OP29:               (INS, SimpleName, OP28, null)
+OP30:               (INS, Operator, OP28, null)
+OP31:               (INS, SimpleName, OP28, null)
+OP32:            (INS, Operator, OP27, null)
+OP33:            (INS, ParenthesizedExpression, OP27, OP34)
+OP34:               (INS, InfixExpression, OP33, OP35 OP36 OP37)
+OP35:                  (INS, SimpleName, OP34, null)
+OP36:                  (INS, Operator, OP34, null)
+OP37:                  (INS, ArrayAccess, OP34, OP38 OP39)
+OP38:                     (INS, SimpleName, OP37, null)
+OP39:                     (INS, SimpleName, OP37, null)
+
+
+

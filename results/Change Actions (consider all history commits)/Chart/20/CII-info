@@ -1,0 +1,17 @@
+
+
+hASList: 
+[UPD SuperConstructorInvocation@@super(paint,stroke,paint,stroke,alpha);
+ @TO@ super(paint,stroke,outlinePaint,outlineStroke,alpha);
+ @AT@ 3343 @LENGTH@ 43
+---UPD SimpleName@@paint @TO@ outlinePaint @AT@ 3364 @LENGTH@ 5
+---UPD SimpleName@@stroke @TO@ outlineStroke @AT@ 3371 @LENGTH@ 6
+]
+
+CII:
+OP1:(UPD, SuperConstructorInvocation, null, OP2 OP3)
+OP2:   (UPD, SimpleName, OP1, null)
+OP3:   (UPD, SimpleName, OP1, null)
+
+
+

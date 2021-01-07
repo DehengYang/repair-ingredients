@@ -1,0 +1,14 @@
+
+diff -Naur ../d4j-repo/Lang/Lang_55/src/java/org/apache/commons/lang/time/StopWatch.java ../d4j-repo/fixed_bugs_dir/Lang/Lang_55/src/java/org/apache/commons/lang/time/StopWatch.java
+--- ../d4j-repo/Lang/Lang_55/src/java/org/apache/commons/lang/time/StopWatch.java	2021-01-04 13:18:34.011137064 -0800
++++ ../d4j-repo/fixed_bugs_dir/Lang/Lang_55/src/java/org/apache/commons/lang/time/StopWatch.java	2021-01-04 13:18:37.619272538 -0800
+@@ -115,7 +115,9 @@
+         if(this.runningState != STATE_RUNNING && this.runningState != STATE_SUSPENDED) {
+             throw new IllegalStateException("Stopwatch is not running. ");
+         }
++        if(this.runningState == STATE_RUNNING) {
+             stopTime = System.currentTimeMillis();
++        }
+         this.runningState = STATE_STOPPED;
+     }
+ 

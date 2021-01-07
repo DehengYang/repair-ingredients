@@ -1,0 +1,12 @@
+
+diff -Naur ../d4j-repo/Mockito/Mockito_7/src/org/mockito/internal/util/reflection/GenericMetadataSupport.java ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_7/src/org/mockito/internal/util/reflection/GenericMetadataSupport.java
+--- ../d4j-repo/Mockito/Mockito_7/src/org/mockito/internal/util/reflection/GenericMetadataSupport.java	2021-01-06 03:34:15.584586329 -0800
++++ ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_7/src/org/mockito/internal/util/reflection/GenericMetadataSupport.java	2021-01-06 03:34:19.180708756 -0800
+@@ -376,6 +376,7 @@
+             for (Type type : typeVariable.getBounds()) {
+                 registerTypeVariablesOn(type);
+             }
++            registerTypeParametersOn(new TypeVariable[] { typeVariable });
+             registerTypeVariablesOn(getActualTypeArgumentFor(typeVariable));
+         }
+ 

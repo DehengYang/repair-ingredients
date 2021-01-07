@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Math/Math_85/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java ../d4j-repo/fixed_bugs_dir/Math/Math_85/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java
+--- ../d4j-repo/Math/Math_85/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java	2021-01-04 23:06:18.180386247 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_85/src/java/org/apache/commons/math/analysis/solvers/UnivariateRealSolverUtils.java	2021-01-04 23:06:21.800521872 -0800
+@@ -195,7 +195,7 @@
+         } while ((fa * fb > 0.0) && (numIterations < maximumIterations) && 
+                 ((a > lowerBound) || (b < upperBound)));
+    
+-        if (fa * fb >= 0.0 ) {
++        if (fa * fb > 0.0 ) {
+             throw new ConvergenceException(
+                       "number of iterations={0}, maximum iterations={1}, " +
+                       "initial={2}, lower bound={3}, upper bound={4}, final a value={5}, " +

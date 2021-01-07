@@ -1,0 +1,19 @@
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@Partial newPartial=new Partial(iChronology,newTypes,newValues); @TO@ Partial newPartial=new Partial(newTypes,newValues,iChronology); @AT@ 18532 @LENGTH@ 67
+---UPD VariableDeclarationFragment@@newPartial=new Partial(iChronology,newTypes,newValues) @TO@ newPartial=new Partial(newTypes,newValues,iChronology) @AT@ 18540 @LENGTH@ 58
+------UPD ClassInstanceCreation@@Partial[iChronology, newTypes, newValues] @TO@ Partial[newTypes, newValues, iChronology] @AT@ 18553 @LENGTH@ 45
+---------DEL SimpleName@@iChronology @AT@ 18565 @LENGTH@ 11
+---------INS SimpleName@@iChronology @TO@ ClassInstanceCreation@@Partial[iChronology, newTypes, newValues] @AT@ 18586 @LENGTH@ 11
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, ClassInstanceCreation, OP2, OP4 OP5)
+OP4:         (DEL, SimpleName, OP3, null)
+OP5:         (INS, SimpleName, OP3, null)
+
+
+

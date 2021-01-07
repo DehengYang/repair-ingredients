@@ -1,0 +1,83 @@
+
+
+hASList: 
+[DEL IfStatement@@InfixExpression:x == x1 @AT@ 7235 @LENGTH@ 184
+---DEL InfixExpression@@x == x1 @AT@ 7239 @LENGTH@ 7
+------DEL SimpleName@@x @AT@ 7239 @LENGTH@ 1
+------DEL Operator@@== @AT@ 7240 @LENGTH@ 2
+------DEL SimpleName@@x1 @AT@ 7244 @LENGTH@ 2
+---DEL ExpressionStatement@@Assignment:x0=0.5 * (x0 + x1 - FastMath.max(rtol * FastMath.abs(x1),atol)) @AT@ 7274 @LENGTH@ 67
+------DEL Assignment@@x0=0.5 * (x0 + x1 - FastMath.max(rtol * FastMath.abs(x1),atol)) @AT@ 7274 @LENGTH@ 66
+---------DEL SimpleName@@x0 @AT@ 7274 @LENGTH@ 2
+---------DEL Operator@@= @AT@ 7276 @LENGTH@ 1
+---------DEL InfixExpression@@0.5 * (x0 + x1 - FastMath.max(rtol * FastMath.abs(x1),atol)) @AT@ 7279 @LENGTH@ 61
+------------DEL NumberLiteral@@0.5 @AT@ 7279 @LENGTH@ 3
+------------DEL Operator@@* @AT@ 7282 @LENGTH@ 1
+------------DEL ParenthesizedExpression@@(x0 + x1 - FastMath.max(rtol * FastMath.abs(x1),atol)) @AT@ 7285 @LENGTH@ 55
+---------------DEL InfixExpression@@x0 + x1 - FastMath.max(rtol * FastMath.abs(x1),atol) @AT@ 7286 @LENGTH@ 53
+------------------DEL InfixExpression@@x0 + x1 @AT@ 7286 @LENGTH@ 7
+---------------------DEL SimpleName@@x0 @AT@ 7286 @LENGTH@ 2
+---------------------DEL Operator@@+ @AT@ 7288 @LENGTH@ 1
+---------------------DEL SimpleName@@x1 @AT@ 7291 @LENGTH@ 2
+------------------DEL Operator@@- @AT@ 7293 @LENGTH@ 1
+------------------DEL MethodInvocation@@FastMath.max(rtol * FastMath.abs(x1),atol) @AT@ 7296 @LENGTH@ 43
+---------------------DEL SimpleName@@Name:FastMath @AT@ 7296 @LENGTH@ 8
+---------------------DEL SimpleName@@MethodName:max:[rtol * FastMath.abs(x1), atol] @AT@ 7305 @LENGTH@ 34
+------------------------DEL InfixExpression@@rtol * FastMath.abs(x1) @AT@ 7309 @LENGTH@ 23
+---------------------------DEL SimpleName@@rtol @AT@ 7309 @LENGTH@ 4
+---------------------------DEL Operator@@* @AT@ 7313 @LENGTH@ 1
+---------------------------DEL MethodInvocation@@FastMath.abs(x1) @AT@ 7316 @LENGTH@ 16
+------------------------------DEL SimpleName@@Name:FastMath @AT@ 7316 @LENGTH@ 8
+------------------------------DEL SimpleName@@MethodName:abs:[x1] @AT@ 7325 @LENGTH@ 7
+---------------------------------DEL SimpleName@@x1 @AT@ 7329 @LENGTH@ 2
+------------------------DEL SimpleName@@atol @AT@ 7334 @LENGTH@ 4
+---DEL ExpressionStatement@@Assignment:f0=computeObjectiveValue(x0) @AT@ 7366 @LENGTH@ 31
+------DEL Assignment@@f0=computeObjectiveValue(x0) @AT@ 7366 @LENGTH@ 30
+---------DEL SimpleName@@f0 @AT@ 7366 @LENGTH@ 2
+---------DEL Operator@@= @AT@ 7368 @LENGTH@ 1
+---------DEL MethodInvocation@@computeObjectiveValue(x0) @AT@ 7371 @LENGTH@ 25
+------------DEL SimpleName@@MethodName:computeObjectiveValue:[x0] @AT@ 7371 @LENGTH@ 25
+---------------DEL SimpleName@@x0 @AT@ 7393 @LENGTH@ 2
+]
+
+CII:
+OP1:(DEL, IfStatement, null, OP2 OP6 OP31)
+OP2:   (DEL, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, SimpleName, OP2, null)
+OP6:   (DEL, ExpressionStatement, OP1, OP7)
+OP7:      (DEL, Assignment, OP6, OP8 OP9 OP10)
+OP8:         (DEL, SimpleName, OP7, null)
+OP9:         (DEL, Operator, OP7, null)
+OP10:         (DEL, InfixExpression, OP7, OP11 OP12 OP13)
+OP11:            (DEL, NumberLiteral, OP10, null)
+OP12:            (DEL, Operator, OP10, null)
+OP13:            (DEL, ParenthesizedExpression, OP10, OP14)
+OP14:               (DEL, InfixExpression, OP13, OP15 OP19 OP20)
+OP15:                  (DEL, InfixExpression, OP14, OP16 OP17 OP18)
+OP16:                     (DEL, SimpleName, OP15, null)
+OP17:                     (DEL, Operator, OP15, null)
+OP18:                     (DEL, SimpleName, OP15, null)
+OP19:                  (DEL, Operator, OP14, null)
+OP20:                  (DEL, MethodInvocation, OP14, OP21 OP22)
+OP21:                     (DEL, SimpleName, OP20, null)
+OP22:                     (DEL, SimpleName, OP20, OP23 OP30)
+OP23:                        (DEL, InfixExpression, OP22, OP24 OP25 OP26)
+OP24:                           (DEL, SimpleName, OP23, null)
+OP25:                           (DEL, Operator, OP23, null)
+OP26:                           (DEL, MethodInvocation, OP23, OP27 OP28)
+OP27:                              (DEL, SimpleName, OP26, null)
+OP28:                              (DEL, SimpleName, OP26, OP29)
+OP29:                                 (DEL, SimpleName, OP28, null)
+OP30:                        (DEL, SimpleName, OP22, null)
+OP31:   (DEL, ExpressionStatement, OP1, OP32)
+OP32:      (DEL, Assignment, OP31, OP33 OP34 OP35)
+OP33:         (DEL, SimpleName, OP32, null)
+OP34:         (DEL, Operator, OP32, null)
+OP35:         (DEL, MethodInvocation, OP32, OP36)
+OP36:            (DEL, SimpleName, OP35, OP37)
+OP37:               (DEL, SimpleName, OP36, null)
+
+
+

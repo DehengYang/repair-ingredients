@@ -1,0 +1,10 @@
+No.1 CCI matched.
+freq: 1
+CommitIds: 06484fee 
+FreqRank:59
+
+No.2 CCI matched.
+freq: 20
+CommitIds: bd59bbcf d366b6e3 58eb2f51 df632b1e df632b1e df632b1e df632b1e df632b1e df632b1e df632b1e df632b1e df632b1e df632b1e df632b1e df632b1e df632b1e 7ab44a5f 9adfc806 11e74627 643bd643 
+FreqRank:40
+

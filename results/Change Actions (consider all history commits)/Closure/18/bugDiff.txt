@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_18/src/com/google/javascript/jscomp/Compiler.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_18/src/com/google/javascript/jscomp/Compiler.java
+--- ../d4j-repo/Closure/Closure_18/src/com/google/javascript/jscomp/Compiler.java	2021-01-06 03:41:16.178907164 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_18/src/com/google/javascript/jscomp/Compiler.java	2021-01-06 03:41:18.230977045 -0800
+@@ -1285,7 +1285,7 @@
+ 
+       // Check if the sources need to be re-ordered.
+       boolean staleInputs = false;
+-      if (options.dependencyOptions.needsManagement() && options.closurePass) {
++      if (options.dependencyOptions.needsManagement()) {
+         for (CompilerInput input : inputs) {
+           // Forward-declare all the provided types, so that they
+           // are not flagged even if they are dropped from the process.

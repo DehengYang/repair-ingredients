@@ -1,0 +1,7 @@
+OP1:(INS, WhileStatement, null, OP2 OP3)
+OP2:   (MOV, ExpressionStatement, OP1, null)
+OP3:   (INS, MethodInvocation, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, SimpleName, OP3, null)
+
+

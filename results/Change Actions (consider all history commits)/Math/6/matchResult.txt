@@ -1,0 +1,50 @@
+No.0 CCI matched.
+freq: 5
+CommitIds: 72779b23 46dfce79 67b86d4c 5dadec87 22072e00 
+FreqRank:73
+
+No.1 CCI matched.
+freq: 1
+CommitIds: 2295b7c2 
+FreqRank:77
+
+No.3 CCI matched.
+freq: 5
+CommitIds: 72779b23 46dfce79 67b86d4c 5dadec87 22072e00 
+FreqRank:73
+
+No.4 CCI matched.
+freq: 1
+CommitIds: 2295b7c2 
+FreqRank:77
+
+No.7 CCI matched.
+freq: 5
+CommitIds: 72779b23 46dfce79 67b86d4c 5dadec87 22072e00 
+FreqRank:73
+
+No.8 CCI matched.
+freq: 1
+CommitIds: 2295b7c2 
+FreqRank:77
+
+No.10 CCI matched.
+freq: 41
+CommitIds: f237f93e f237f93e 90e428dd 67b86d4c 67b86d4c f237f93e f237f93e f237f93e f237f93e 652c6220 f237f93e f237f93e f237f93e f237f93e f237f93e f237f93e 87c0ddbc 1352a70f 481a0911 0b24467e 67b86d4c f237f93e f237f93e f237f93e f237f93e 9ca170c6 f237f93e f237f93e cc7d2ff3 cc7d2ff3 90e428dd 0b24467e cc7d2ff3 f237f93e f237f93e f237f93e f237f93e 67b86d4c f237f93e f237f93e f237f93e 
+FreqRank:38
+
+No.12 CCI matched.
+freq: 5
+CommitIds: 72779b23 46dfce79 67b86d4c 5dadec87 22072e00 
+FreqRank:73
+
+No.13 CCI matched.
+freq: 1
+CommitIds: 2295b7c2 
+FreqRank:77
+
+No.15 CCI matched.
+freq: 1
+CommitIds: a7d60be7 
+FreqRank:77
+

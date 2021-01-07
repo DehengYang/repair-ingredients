@@ -1,0 +1,334 @@
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@int len=Character.codePointCount(input,0,input.length()); @TO@ int len=input.length(); @AT@ 3267 @LENGTH@ 61
+---UPD VariableDeclarationFragment@@len=Character.codePointCount(input,0,input.length()) @TO@ len=input.length() @AT@ 3271 @LENGTH@ 56
+------INS MethodInvocation@@input.length() @TO@ VariableDeclarationFragment@@len=Character.codePointCount(input,0,input.length()) @AT@ 3277 @LENGTH@ 14
+---------MOV SimpleName@@Name:input @TO@ MethodInvocation@@input.length() @AT@ 3312 @LENGTH@ 5
+---------MOV SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@input.length() @AT@ 3318 @LENGTH@ 8
+------DEL MethodInvocation@@Character.codePointCount(input,0,input.length()) @AT@ 3277 @LENGTH@ 50
+---------DEL SimpleName@@Name:Character @AT@ 3277 @LENGTH@ 9
+---------DEL SimpleName@@MethodName:codePointCount:[input, 0, input.length()] @AT@ 3287 @LENGTH@ 40
+------------DEL SimpleName@@input @AT@ 3302 @LENGTH@ 5
+------------DEL NumberLiteral@@0 @AT@ 3309 @LENGTH@ 1
+------------DEL MethodInvocation@@input.length() @AT@ 3312 @LENGTH@ 14
+, INS ContinueStatement@@ @TO@ IfStatement@@InfixExpression:consumed == 0 @AT@ 3568 @LENGTH@ 9
+, MOV ForStatement@@[int pt=0];pt < consumed; [pt++] @TO@ WhileStatement@@InfixExpression:pos < len @AT@ 3745 @LENGTH@ 259
+---MOV ExpressionStatement@@Assignment:pos+=Character.charCount(Character.codePointAt(input,pos)) @TO@ ForStatement@@[int pt=0];pt < consumed; [pt++] @AT@ 3842 @LENGTH@ 62
+, DEL IfStatement@@InfixExpression:pos < len - 2 @AT@ 3805 @LENGTH@ 181
+---DEL InfixExpression@@pos < len - 2 @AT@ 3809 @LENGTH@ 13
+------DEL SimpleName@@pos @AT@ 3809 @LENGTH@ 3
+------DEL Operator@@< @AT@ 3812 @LENGTH@ 1
+------DEL InfixExpression@@len - 2 @AT@ 3815 @LENGTH@ 7
+---------DEL SimpleName@@len @AT@ 3815 @LENGTH@ 3
+---------DEL Operator@@- @AT@ 3818 @LENGTH@ 1
+---------DEL NumberLiteral@@2 @AT@ 3821 @LENGTH@ 1
+---DEL ExpressionStatement@@PostfixExpression:pos++ @AT@ 3958 @LENGTH@ 6
+------DEL PostfixExpression@@pos++ @AT@ 3958 @LENGTH@ 5
+---------DEL SimpleName@@pos @AT@ 3958 @LENGTH@ 3
+---------DEL Operator@@++ @AT@ 3962 @LENGTH@ 2
+, UPD ExpressionStatement@@PostfixExpression:pos-- @TO@ Assignment:pos+=c.length @AT@ 4021 @LENGTH@ 6
+---INS Assignment@@pos+=c.length @TO@ ExpressionStatement@@PostfixExpression:pos-- @AT@ 3536 @LENGTH@ 14
+------INS SimpleName@@pos @TO@ Assignment@@pos+=c.length @AT@ 3536 @LENGTH@ 3
+------INS Operator@@+= @TO@ Assignment@@pos+=c.length @AT@ 3539 @LENGTH@ 2
+------INS QualifiedName@@c.length @TO@ Assignment@@pos+=c.length @AT@ 3542 @LENGTH@ 8
+---------INS SimpleName@@c @TO@ QualifiedName@@c.length @AT@ 3542 @LENGTH@ 1
+---------INS SimpleName@@length @TO@ QualifiedName@@c.length @AT@ 3544 @LENGTH@ 6
+---DEL PostfixExpression@@pos-- @AT@ 4021 @LENGTH@ 5
+------DEL SimpleName@@pos @AT@ 4021 @LENGTH@ 3
+------DEL Operator@@-- @AT@ 4025 @LENGTH@ 2
+, DEL ExpressionStatement@@PostfixExpression:pos++ @AT@ 4054 @LENGTH@ 6
+---DEL PostfixExpression@@pos++ @AT@ 4054 @LENGTH@ 5
+------DEL SimpleName@@pos @AT@ 4054 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 4058 @LENGTH@ 2
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3 OP6)
+OP3:      (INS, MethodInvocation, OP2, OP4 OP5)
+OP4:         (MOV, SimpleName, OP3, null)
+OP5:         (MOV, SimpleName, OP3, null)
+OP6:      (DEL, MethodInvocation, OP2, OP7 OP8)
+OP7:         (DEL, SimpleName, OP6, null)
+OP8:         (DEL, SimpleName, OP6, OP9 OP10 OP11)
+OP9:            (DEL, SimpleName, OP8, null)
+OP10:            (DEL, NumberLiteral, OP8, null)
+OP11:            (DEL, MethodInvocation, OP8, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@int len=Character.codePointCount(input,0,input.length()); @TO@ int len=input.length(); @AT@ 3267 @LENGTH@ 61
+---UPD VariableDeclarationFragment@@len=Character.codePointCount(input,0,input.length()) @TO@ len=input.length() @AT@ 3271 @LENGTH@ 56
+------INS MethodInvocation@@input.length() @TO@ VariableDeclarationFragment@@len=Character.codePointCount(input,0,input.length()) @AT@ 3277 @LENGTH@ 14
+---------MOV SimpleName@@Name:input @TO@ MethodInvocation@@input.length() @AT@ 3312 @LENGTH@ 5
+---------MOV SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@input.length() @AT@ 3318 @LENGTH@ 8
+------DEL MethodInvocation@@Character.codePointCount(input,0,input.length()) @AT@ 3277 @LENGTH@ 50
+---------DEL SimpleName@@Name:Character @AT@ 3277 @LENGTH@ 9
+---------DEL SimpleName@@MethodName:codePointCount:[input, 0, input.length()] @AT@ 3287 @LENGTH@ 40
+------------DEL SimpleName@@input @AT@ 3302 @LENGTH@ 5
+------------DEL NumberLiteral@@0 @AT@ 3309 @LENGTH@ 1
+------------DEL MethodInvocation@@input.length() @AT@ 3312 @LENGTH@ 14
+, INS ContinueStatement@@ @TO@ IfStatement@@InfixExpression:consumed == 0 @AT@ 3568 @LENGTH@ 9
+, MOV ForStatement@@[int pt=0];pt < consumed; [pt++] @TO@ WhileStatement@@InfixExpression:pos < len @AT@ 3745 @LENGTH@ 259
+---MOV ExpressionStatement@@Assignment:pos+=Character.charCount(Character.codePointAt(input,pos)) @TO@ ForStatement@@[int pt=0];pt < consumed; [pt++] @AT@ 3842 @LENGTH@ 62
+, DEL IfStatement@@InfixExpression:pos < len - 2 @AT@ 3805 @LENGTH@ 181
+---DEL InfixExpression@@pos < len - 2 @AT@ 3809 @LENGTH@ 13
+------DEL SimpleName@@pos @AT@ 3809 @LENGTH@ 3
+------DEL Operator@@< @AT@ 3812 @LENGTH@ 1
+------DEL InfixExpression@@len - 2 @AT@ 3815 @LENGTH@ 7
+---------DEL SimpleName@@len @AT@ 3815 @LENGTH@ 3
+---------DEL Operator@@- @AT@ 3818 @LENGTH@ 1
+---------DEL NumberLiteral@@2 @AT@ 3821 @LENGTH@ 1
+---DEL ExpressionStatement@@PostfixExpression:pos++ @AT@ 3958 @LENGTH@ 6
+------DEL PostfixExpression@@pos++ @AT@ 3958 @LENGTH@ 5
+---------DEL SimpleName@@pos @AT@ 3958 @LENGTH@ 3
+---------DEL Operator@@++ @AT@ 3962 @LENGTH@ 2
+, UPD ExpressionStatement@@PostfixExpression:pos-- @TO@ Assignment:pos+=c.length @AT@ 4021 @LENGTH@ 6
+---INS Assignment@@pos+=c.length @TO@ ExpressionStatement@@PostfixExpression:pos-- @AT@ 3536 @LENGTH@ 14
+------INS SimpleName@@pos @TO@ Assignment@@pos+=c.length @AT@ 3536 @LENGTH@ 3
+------INS Operator@@+= @TO@ Assignment@@pos+=c.length @AT@ 3539 @LENGTH@ 2
+------INS QualifiedName@@c.length @TO@ Assignment@@pos+=c.length @AT@ 3542 @LENGTH@ 8
+---------INS SimpleName@@c @TO@ QualifiedName@@c.length @AT@ 3542 @LENGTH@ 1
+---------INS SimpleName@@length @TO@ QualifiedName@@c.length @AT@ 3544 @LENGTH@ 6
+---DEL PostfixExpression@@pos-- @AT@ 4021 @LENGTH@ 5
+------DEL SimpleName@@pos @AT@ 4021 @LENGTH@ 3
+------DEL Operator@@-- @AT@ 4025 @LENGTH@ 2
+, DEL ExpressionStatement@@PostfixExpression:pos++ @AT@ 4054 @LENGTH@ 6
+---DEL PostfixExpression@@pos++ @AT@ 4054 @LENGTH@ 5
+------DEL SimpleName@@pos @AT@ 4054 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 4058 @LENGTH@ 2
+]
+
+CII:
+OP1:(INS, ContinueStatement, null, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@int len=Character.codePointCount(input,0,input.length()); @TO@ int len=input.length(); @AT@ 3267 @LENGTH@ 61
+---UPD VariableDeclarationFragment@@len=Character.codePointCount(input,0,input.length()) @TO@ len=input.length() @AT@ 3271 @LENGTH@ 56
+------INS MethodInvocation@@input.length() @TO@ VariableDeclarationFragment@@len=Character.codePointCount(input,0,input.length()) @AT@ 3277 @LENGTH@ 14
+---------MOV SimpleName@@Name:input @TO@ MethodInvocation@@input.length() @AT@ 3312 @LENGTH@ 5
+---------MOV SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@input.length() @AT@ 3318 @LENGTH@ 8
+------DEL MethodInvocation@@Character.codePointCount(input,0,input.length()) @AT@ 3277 @LENGTH@ 50
+---------DEL SimpleName@@Name:Character @AT@ 3277 @LENGTH@ 9
+---------DEL SimpleName@@MethodName:codePointCount:[input, 0, input.length()] @AT@ 3287 @LENGTH@ 40
+------------DEL SimpleName@@input @AT@ 3302 @LENGTH@ 5
+------------DEL NumberLiteral@@0 @AT@ 3309 @LENGTH@ 1
+------------DEL MethodInvocation@@input.length() @AT@ 3312 @LENGTH@ 14
+, INS ContinueStatement@@ @TO@ IfStatement@@InfixExpression:consumed == 0 @AT@ 3568 @LENGTH@ 9
+, MOV ForStatement@@[int pt=0];pt < consumed; [pt++] @TO@ WhileStatement@@InfixExpression:pos < len @AT@ 3745 @LENGTH@ 259
+---MOV ExpressionStatement@@Assignment:pos+=Character.charCount(Character.codePointAt(input,pos)) @TO@ ForStatement@@[int pt=0];pt < consumed; [pt++] @AT@ 3842 @LENGTH@ 62
+, DEL IfStatement@@InfixExpression:pos < len - 2 @AT@ 3805 @LENGTH@ 181
+---DEL InfixExpression@@pos < len - 2 @AT@ 3809 @LENGTH@ 13
+------DEL SimpleName@@pos @AT@ 3809 @LENGTH@ 3
+------DEL Operator@@< @AT@ 3812 @LENGTH@ 1
+------DEL InfixExpression@@len - 2 @AT@ 3815 @LENGTH@ 7
+---------DEL SimpleName@@len @AT@ 3815 @LENGTH@ 3
+---------DEL Operator@@- @AT@ 3818 @LENGTH@ 1
+---------DEL NumberLiteral@@2 @AT@ 3821 @LENGTH@ 1
+---DEL ExpressionStatement@@PostfixExpression:pos++ @AT@ 3958 @LENGTH@ 6
+------DEL PostfixExpression@@pos++ @AT@ 3958 @LENGTH@ 5
+---------DEL SimpleName@@pos @AT@ 3958 @LENGTH@ 3
+---------DEL Operator@@++ @AT@ 3962 @LENGTH@ 2
+, UPD ExpressionStatement@@PostfixExpression:pos-- @TO@ Assignment:pos+=c.length @AT@ 4021 @LENGTH@ 6
+---INS Assignment@@pos+=c.length @TO@ ExpressionStatement@@PostfixExpression:pos-- @AT@ 3536 @LENGTH@ 14
+------INS SimpleName@@pos @TO@ Assignment@@pos+=c.length @AT@ 3536 @LENGTH@ 3
+------INS Operator@@+= @TO@ Assignment@@pos+=c.length @AT@ 3539 @LENGTH@ 2
+------INS QualifiedName@@c.length @TO@ Assignment@@pos+=c.length @AT@ 3542 @LENGTH@ 8
+---------INS SimpleName@@c @TO@ QualifiedName@@c.length @AT@ 3542 @LENGTH@ 1
+---------INS SimpleName@@length @TO@ QualifiedName@@c.length @AT@ 3544 @LENGTH@ 6
+---DEL PostfixExpression@@pos-- @AT@ 4021 @LENGTH@ 5
+------DEL SimpleName@@pos @AT@ 4021 @LENGTH@ 3
+------DEL Operator@@-- @AT@ 4025 @LENGTH@ 2
+, DEL ExpressionStatement@@PostfixExpression:pos++ @AT@ 4054 @LENGTH@ 6
+---DEL PostfixExpression@@pos++ @AT@ 4054 @LENGTH@ 5
+------DEL SimpleName@@pos @AT@ 4054 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 4058 @LENGTH@ 2
+]
+
+CII:
+OP1:(MOV, ForStatement, null, OP2)
+OP2:   (MOV, ExpressionStatement, OP1, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@int len=Character.codePointCount(input,0,input.length()); @TO@ int len=input.length(); @AT@ 3267 @LENGTH@ 61
+---UPD VariableDeclarationFragment@@len=Character.codePointCount(input,0,input.length()) @TO@ len=input.length() @AT@ 3271 @LENGTH@ 56
+------INS MethodInvocation@@input.length() @TO@ VariableDeclarationFragment@@len=Character.codePointCount(input,0,input.length()) @AT@ 3277 @LENGTH@ 14
+---------MOV SimpleName@@Name:input @TO@ MethodInvocation@@input.length() @AT@ 3312 @LENGTH@ 5
+---------MOV SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@input.length() @AT@ 3318 @LENGTH@ 8
+------DEL MethodInvocation@@Character.codePointCount(input,0,input.length()) @AT@ 3277 @LENGTH@ 50
+---------DEL SimpleName@@Name:Character @AT@ 3277 @LENGTH@ 9
+---------DEL SimpleName@@MethodName:codePointCount:[input, 0, input.length()] @AT@ 3287 @LENGTH@ 40
+------------DEL SimpleName@@input @AT@ 3302 @LENGTH@ 5
+------------DEL NumberLiteral@@0 @AT@ 3309 @LENGTH@ 1
+------------DEL MethodInvocation@@input.length() @AT@ 3312 @LENGTH@ 14
+, INS ContinueStatement@@ @TO@ IfStatement@@InfixExpression:consumed == 0 @AT@ 3568 @LENGTH@ 9
+, MOV ForStatement@@[int pt=0];pt < consumed; [pt++] @TO@ WhileStatement@@InfixExpression:pos < len @AT@ 3745 @LENGTH@ 259
+---MOV ExpressionStatement@@Assignment:pos+=Character.charCount(Character.codePointAt(input,pos)) @TO@ ForStatement@@[int pt=0];pt < consumed; [pt++] @AT@ 3842 @LENGTH@ 62
+, DEL IfStatement@@InfixExpression:pos < len - 2 @AT@ 3805 @LENGTH@ 181
+---DEL InfixExpression@@pos < len - 2 @AT@ 3809 @LENGTH@ 13
+------DEL SimpleName@@pos @AT@ 3809 @LENGTH@ 3
+------DEL Operator@@< @AT@ 3812 @LENGTH@ 1
+------DEL InfixExpression@@len - 2 @AT@ 3815 @LENGTH@ 7
+---------DEL SimpleName@@len @AT@ 3815 @LENGTH@ 3
+---------DEL Operator@@- @AT@ 3818 @LENGTH@ 1
+---------DEL NumberLiteral@@2 @AT@ 3821 @LENGTH@ 1
+---DEL ExpressionStatement@@PostfixExpression:pos++ @AT@ 3958 @LENGTH@ 6
+------DEL PostfixExpression@@pos++ @AT@ 3958 @LENGTH@ 5
+---------DEL SimpleName@@pos @AT@ 3958 @LENGTH@ 3
+---------DEL Operator@@++ @AT@ 3962 @LENGTH@ 2
+, UPD ExpressionStatement@@PostfixExpression:pos-- @TO@ Assignment:pos+=c.length @AT@ 4021 @LENGTH@ 6
+---INS Assignment@@pos+=c.length @TO@ ExpressionStatement@@PostfixExpression:pos-- @AT@ 3536 @LENGTH@ 14
+------INS SimpleName@@pos @TO@ Assignment@@pos+=c.length @AT@ 3536 @LENGTH@ 3
+------INS Operator@@+= @TO@ Assignment@@pos+=c.length @AT@ 3539 @LENGTH@ 2
+------INS QualifiedName@@c.length @TO@ Assignment@@pos+=c.length @AT@ 3542 @LENGTH@ 8
+---------INS SimpleName@@c @TO@ QualifiedName@@c.length @AT@ 3542 @LENGTH@ 1
+---------INS SimpleName@@length @TO@ QualifiedName@@c.length @AT@ 3544 @LENGTH@ 6
+---DEL PostfixExpression@@pos-- @AT@ 4021 @LENGTH@ 5
+------DEL SimpleName@@pos @AT@ 4021 @LENGTH@ 3
+------DEL Operator@@-- @AT@ 4025 @LENGTH@ 2
+, DEL ExpressionStatement@@PostfixExpression:pos++ @AT@ 4054 @LENGTH@ 6
+---DEL PostfixExpression@@pos++ @AT@ 4054 @LENGTH@ 5
+------DEL SimpleName@@pos @AT@ 4054 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 4058 @LENGTH@ 2
+]
+
+CII:
+OP1:(DEL, IfStatement, null, OP2 OP9)
+OP2:   (DEL, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, InfixExpression, OP2, OP6 OP7 OP8)
+OP6:         (DEL, SimpleName, OP5, null)
+OP7:         (DEL, Operator, OP5, null)
+OP8:         (DEL, NumberLiteral, OP5, null)
+OP9:   (DEL, ExpressionStatement, OP1, OP10)
+OP10:      (DEL, PostfixExpression, OP9, OP11 OP12)
+OP11:         (DEL, SimpleName, OP10, null)
+OP12:         (DEL, Operator, OP10, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@int len=Character.codePointCount(input,0,input.length()); @TO@ int len=input.length(); @AT@ 3267 @LENGTH@ 61
+---UPD VariableDeclarationFragment@@len=Character.codePointCount(input,0,input.length()) @TO@ len=input.length() @AT@ 3271 @LENGTH@ 56
+------INS MethodInvocation@@input.length() @TO@ VariableDeclarationFragment@@len=Character.codePointCount(input,0,input.length()) @AT@ 3277 @LENGTH@ 14
+---------MOV SimpleName@@Name:input @TO@ MethodInvocation@@input.length() @AT@ 3312 @LENGTH@ 5
+---------MOV SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@input.length() @AT@ 3318 @LENGTH@ 8
+------DEL MethodInvocation@@Character.codePointCount(input,0,input.length()) @AT@ 3277 @LENGTH@ 50
+---------DEL SimpleName@@Name:Character @AT@ 3277 @LENGTH@ 9
+---------DEL SimpleName@@MethodName:codePointCount:[input, 0, input.length()] @AT@ 3287 @LENGTH@ 40
+------------DEL SimpleName@@input @AT@ 3302 @LENGTH@ 5
+------------DEL NumberLiteral@@0 @AT@ 3309 @LENGTH@ 1
+------------DEL MethodInvocation@@input.length() @AT@ 3312 @LENGTH@ 14
+, INS ContinueStatement@@ @TO@ IfStatement@@InfixExpression:consumed == 0 @AT@ 3568 @LENGTH@ 9
+, MOV ForStatement@@[int pt=0];pt < consumed; [pt++] @TO@ WhileStatement@@InfixExpression:pos < len @AT@ 3745 @LENGTH@ 259
+---MOV ExpressionStatement@@Assignment:pos+=Character.charCount(Character.codePointAt(input,pos)) @TO@ ForStatement@@[int pt=0];pt < consumed; [pt++] @AT@ 3842 @LENGTH@ 62
+, DEL IfStatement@@InfixExpression:pos < len - 2 @AT@ 3805 @LENGTH@ 181
+---DEL InfixExpression@@pos < len - 2 @AT@ 3809 @LENGTH@ 13
+------DEL SimpleName@@pos @AT@ 3809 @LENGTH@ 3
+------DEL Operator@@< @AT@ 3812 @LENGTH@ 1
+------DEL InfixExpression@@len - 2 @AT@ 3815 @LENGTH@ 7
+---------DEL SimpleName@@len @AT@ 3815 @LENGTH@ 3
+---------DEL Operator@@- @AT@ 3818 @LENGTH@ 1
+---------DEL NumberLiteral@@2 @AT@ 3821 @LENGTH@ 1
+---DEL ExpressionStatement@@PostfixExpression:pos++ @AT@ 3958 @LENGTH@ 6
+------DEL PostfixExpression@@pos++ @AT@ 3958 @LENGTH@ 5
+---------DEL SimpleName@@pos @AT@ 3958 @LENGTH@ 3
+---------DEL Operator@@++ @AT@ 3962 @LENGTH@ 2
+, UPD ExpressionStatement@@PostfixExpression:pos-- @TO@ Assignment:pos+=c.length @AT@ 4021 @LENGTH@ 6
+---INS Assignment@@pos+=c.length @TO@ ExpressionStatement@@PostfixExpression:pos-- @AT@ 3536 @LENGTH@ 14
+------INS SimpleName@@pos @TO@ Assignment@@pos+=c.length @AT@ 3536 @LENGTH@ 3
+------INS Operator@@+= @TO@ Assignment@@pos+=c.length @AT@ 3539 @LENGTH@ 2
+------INS QualifiedName@@c.length @TO@ Assignment@@pos+=c.length @AT@ 3542 @LENGTH@ 8
+---------INS SimpleName@@c @TO@ QualifiedName@@c.length @AT@ 3542 @LENGTH@ 1
+---------INS SimpleName@@length @TO@ QualifiedName@@c.length @AT@ 3544 @LENGTH@ 6
+---DEL PostfixExpression@@pos-- @AT@ 4021 @LENGTH@ 5
+------DEL SimpleName@@pos @AT@ 4021 @LENGTH@ 3
+------DEL Operator@@-- @AT@ 4025 @LENGTH@ 2
+, DEL ExpressionStatement@@PostfixExpression:pos++ @AT@ 4054 @LENGTH@ 6
+---DEL PostfixExpression@@pos++ @AT@ 4054 @LENGTH@ 5
+------DEL SimpleName@@pos @AT@ 4054 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 4058 @LENGTH@ 2
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2 OP8)
+OP2:   (INS, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, QualifiedName, OP2, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, null)
+OP8:   (DEL, PostfixExpression, OP1, OP9 OP10)
+OP9:      (DEL, SimpleName, OP8, null)
+OP10:      (DEL, Operator, OP8, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@int len=Character.codePointCount(input,0,input.length()); @TO@ int len=input.length(); @AT@ 3267 @LENGTH@ 61
+---UPD VariableDeclarationFragment@@len=Character.codePointCount(input,0,input.length()) @TO@ len=input.length() @AT@ 3271 @LENGTH@ 56
+------INS MethodInvocation@@input.length() @TO@ VariableDeclarationFragment@@len=Character.codePointCount(input,0,input.length()) @AT@ 3277 @LENGTH@ 14
+---------MOV SimpleName@@Name:input @TO@ MethodInvocation@@input.length() @AT@ 3312 @LENGTH@ 5
+---------MOV SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@input.length() @AT@ 3318 @LENGTH@ 8
+------DEL MethodInvocation@@Character.codePointCount(input,0,input.length()) @AT@ 3277 @LENGTH@ 50
+---------DEL SimpleName@@Name:Character @AT@ 3277 @LENGTH@ 9
+---------DEL SimpleName@@MethodName:codePointCount:[input, 0, input.length()] @AT@ 3287 @LENGTH@ 40
+------------DEL SimpleName@@input @AT@ 3302 @LENGTH@ 5
+------------DEL NumberLiteral@@0 @AT@ 3309 @LENGTH@ 1
+------------DEL MethodInvocation@@input.length() @AT@ 3312 @LENGTH@ 14
+, INS ContinueStatement@@ @TO@ IfStatement@@InfixExpression:consumed == 0 @AT@ 3568 @LENGTH@ 9
+, MOV ForStatement@@[int pt=0];pt < consumed; [pt++] @TO@ WhileStatement@@InfixExpression:pos < len @AT@ 3745 @LENGTH@ 259
+---MOV ExpressionStatement@@Assignment:pos+=Character.charCount(Character.codePointAt(input,pos)) @TO@ ForStatement@@[int pt=0];pt < consumed; [pt++] @AT@ 3842 @LENGTH@ 62
+, DEL IfStatement@@InfixExpression:pos < len - 2 @AT@ 3805 @LENGTH@ 181
+---DEL InfixExpression@@pos < len - 2 @AT@ 3809 @LENGTH@ 13
+------DEL SimpleName@@pos @AT@ 3809 @LENGTH@ 3
+------DEL Operator@@< @AT@ 3812 @LENGTH@ 1
+------DEL InfixExpression@@len - 2 @AT@ 3815 @LENGTH@ 7
+---------DEL SimpleName@@len @AT@ 3815 @LENGTH@ 3
+---------DEL Operator@@- @AT@ 3818 @LENGTH@ 1
+---------DEL NumberLiteral@@2 @AT@ 3821 @LENGTH@ 1
+---DEL ExpressionStatement@@PostfixExpression:pos++ @AT@ 3958 @LENGTH@ 6
+------DEL PostfixExpression@@pos++ @AT@ 3958 @LENGTH@ 5
+---------DEL SimpleName@@pos @AT@ 3958 @LENGTH@ 3
+---------DEL Operator@@++ @AT@ 3962 @LENGTH@ 2
+, UPD ExpressionStatement@@PostfixExpression:pos-- @TO@ Assignment:pos+=c.length @AT@ 4021 @LENGTH@ 6
+---INS Assignment@@pos+=c.length @TO@ ExpressionStatement@@PostfixExpression:pos-- @AT@ 3536 @LENGTH@ 14
+------INS SimpleName@@pos @TO@ Assignment@@pos+=c.length @AT@ 3536 @LENGTH@ 3
+------INS Operator@@+= @TO@ Assignment@@pos+=c.length @AT@ 3539 @LENGTH@ 2
+------INS QualifiedName@@c.length @TO@ Assignment@@pos+=c.length @AT@ 3542 @LENGTH@ 8
+---------INS SimpleName@@c @TO@ QualifiedName@@c.length @AT@ 3542 @LENGTH@ 1
+---------INS SimpleName@@length @TO@ QualifiedName@@c.length @AT@ 3544 @LENGTH@ 6
+---DEL PostfixExpression@@pos-- @AT@ 4021 @LENGTH@ 5
+------DEL SimpleName@@pos @AT@ 4021 @LENGTH@ 3
+------DEL Operator@@-- @AT@ 4025 @LENGTH@ 2
+, DEL ExpressionStatement@@PostfixExpression:pos++ @AT@ 4054 @LENGTH@ 6
+---DEL PostfixExpression@@pos++ @AT@ 4054 @LENGTH@ 5
+------DEL SimpleName@@pos @AT@ 4054 @LENGTH@ 3
+------DEL Operator@@++ @AT@ 4058 @LENGTH@ 2
+]
+
+CII:
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, PostfixExpression, OP1, OP3 OP4)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+
+
+

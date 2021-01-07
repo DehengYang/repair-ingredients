@@ -1,0 +1,31 @@
+
+diff -Naur ../d4j-repo/Time/Time_13/src/main/java/org/joda/time/format/PeriodFormatterBuilder.java ../d4j-repo/fixed_bugs_dir/Time/Time_13/src/main/java/org/joda/time/format/PeriodFormatterBuilder.java
+--- ../d4j-repo/Time/Time_13/src/main/java/org/joda/time/format/PeriodFormatterBuilder.java	2021-01-06 03:38:41.253631633 -0800
++++ ../d4j-repo/fixed_bugs_dir/Time/Time_13/src/main/java/org/joda/time/format/PeriodFormatterBuilder.java	2021-01-06 03:38:42.581676853 -0800
+@@ -1095,7 +1095,7 @@
+             if (iFieldType >= SECONDS_MILLIS) {
+                 // valueLong contains the seconds and millis fields
+                 // the minimum output is 0.000, which is 4 or 5 digits with a negative
+-                sum = Math.max(sum, 4);
++                sum = (valueLong < 0 ? Math.max(sum, 5) : Math.max(sum, 4));
+                 // plus one for the decimal point
+                 sum++;
+                 if (iFieldType == SECONDS_OPTIONAL_MILLIS &&
+@@ -1130,6 +1130,7 @@
+             if (iPrefix != null) {
+                 iPrefix.printTo(buf, value);
+             }
++            int bufLen = buf.length();
+             int minDigits = iMinPrintedDigits;
+             if (minDigits <= 1) {
+                 FormatUtils.appendUnpaddedInteger(buf, value);
+@@ -1139,6 +1140,9 @@
+             if (iFieldType >= SECONDS_MILLIS) {
+                 int dp = (int) (Math.abs(valueLong) % DateTimeConstants.MILLIS_PER_SECOND);
+                 if (iFieldType == SECONDS_MILLIS || dp > 0) {
++                    if (valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND) {
++                        buf.insert(bufLen, '-');
++                    }
+                     buf.append('.');
+                     FormatUtils.appendPaddedInteger(buf, dp, 3);
+                 }

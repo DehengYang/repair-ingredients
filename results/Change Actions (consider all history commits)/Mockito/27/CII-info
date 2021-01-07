@@ -1,0 +1,93 @@
+
+
+hASList: 
+[DEL VariableDeclarationStatement@@MockHandler<T> newMockHandler=new MockHandler<T>(oldMockHandler); @AT@ 2375 @LENGTH@ 67
+---DEL ParameterizedType@@MockHandler<T> @AT@ 2375 @LENGTH@ 14
+------DEL SimpleType@@MockHandler @AT@ 2375 @LENGTH@ 11
+------DEL SimpleType@@T @AT@ 2387 @LENGTH@ 1
+---DEL VariableDeclarationFragment@@newMockHandler=new MockHandler<T>(oldMockHandler) @AT@ 2390 @LENGTH@ 51
+------DEL SimpleName@@newMockHandler @AT@ 2390 @LENGTH@ 14
+------DEL ClassInstanceCreation@@MockHandler<T>[oldMockHandler] @AT@ 2407 @LENGTH@ 34
+---------DEL New@@new @AT@ 2407 @LENGTH@ 3
+---------DEL ParameterizedType@@MockHandler<T> @AT@ 2411 @LENGTH@ 14
+------------DEL SimpleType@@MockHandler @AT@ 2411 @LENGTH@ 11
+------------DEL SimpleType@@T @AT@ 2423 @LENGTH@ 1
+---------DEL SimpleName@@oldMockHandler @AT@ 2426 @LENGTH@ 14
+, UPD VariableDeclarationStatement@@MethodInterceptorFilter newFilter=new MethodInterceptorFilter(newMockHandler,(MockSettingsImpl)org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS)); @TO@ MethodInterceptorFilter newFilter=newMethodInterceptorFilter(oldMockHandler.getMockSettings()); @AT@ 2452 @LENGTH@ 187
+---UPD VariableDeclarationFragment@@newFilter=new MethodInterceptorFilter(newMockHandler,(MockSettingsImpl)org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS)) @TO@ newFilter=newMethodInterceptorFilter(oldMockHandler.getMockSettings()) @AT@ 2476 @LENGTH@ 162
+------INS MethodInvocation@@newMethodInterceptorFilter(oldMockHandler.getMockSettings()) @TO@ VariableDeclarationFragment@@newFilter=new MethodInterceptorFilter(newMockHandler,(MockSettingsImpl)org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS)) @AT@ 2411 @LENGTH@ 60
+---------MOV SimpleName@@MethodName:defaultAnswer:[org.mockito.Mockito.RETURNS_DEFAULTS] @TO@ MethodInvocation@@newMethodInterceptorFilter(oldMockHandler.getMockSettings()) @AT@ 2586 @LENGTH@ 51
+------DEL ClassInstanceCreation@@MethodInterceptorFilter[newMockHandler, (MockSettingsImpl)org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS)] @AT@ 2488 @LENGTH@ 150
+---------DEL New@@new @AT@ 2488 @LENGTH@ 3
+---------DEL SimpleType@@MethodInterceptorFilter @AT@ 2492 @LENGTH@ 23
+---------DEL SimpleName@@newMockHandler @AT@ 2516 @LENGTH@ 14
+---------DEL CastExpression@@(MockSettingsImpl)org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS) @AT@ 2532 @LENGTH@ 105
+------------DEL SimpleType@@MockSettingsImpl @AT@ 2533 @LENGTH@ 16
+------------DEL MethodInvocation@@org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS) @AT@ 2551 @LENGTH@ 86
+---------------DEL QualifiedName@@Name:org.mockito.Mockito @AT@ 2551 @LENGTH@ 19
+---------------DEL MethodInvocation@@MethodName:withSettings:[] @AT@ 2551 @LENGTH@ 34
+]
+
+CII:
+OP1:(DEL, VariableDeclarationStatement, null, OP2 OP5)
+OP2:   (DEL, ParameterizedType, OP1, OP3 OP4)
+OP3:      (DEL, SimpleType, OP2, null)
+OP4:      (DEL, SimpleType, OP2, null)
+OP5:   (DEL, VariableDeclarationFragment, OP1, OP6 OP7)
+OP6:      (DEL, SimpleName, OP5, null)
+OP7:      (DEL, ClassInstanceCreation, OP5, OP8 OP9 OP12)
+OP8:         (DEL, New, OP7, null)
+OP9:         (DEL, ParameterizedType, OP7, OP10 OP11)
+OP10:            (DEL, SimpleType, OP9, null)
+OP11:            (DEL, SimpleType, OP9, null)
+OP12:         (DEL, SimpleName, OP7, null)
+
+
+
+
+
+hASList: 
+[DEL VariableDeclarationStatement@@MockHandler<T> newMockHandler=new MockHandler<T>(oldMockHandler); @AT@ 2375 @LENGTH@ 67
+---DEL ParameterizedType@@MockHandler<T> @AT@ 2375 @LENGTH@ 14
+------DEL SimpleType@@MockHandler @AT@ 2375 @LENGTH@ 11
+------DEL SimpleType@@T @AT@ 2387 @LENGTH@ 1
+---DEL VariableDeclarationFragment@@newMockHandler=new MockHandler<T>(oldMockHandler) @AT@ 2390 @LENGTH@ 51
+------DEL SimpleName@@newMockHandler @AT@ 2390 @LENGTH@ 14
+------DEL ClassInstanceCreation@@MockHandler<T>[oldMockHandler] @AT@ 2407 @LENGTH@ 34
+---------DEL New@@new @AT@ 2407 @LENGTH@ 3
+---------DEL ParameterizedType@@MockHandler<T> @AT@ 2411 @LENGTH@ 14
+------------DEL SimpleType@@MockHandler @AT@ 2411 @LENGTH@ 11
+------------DEL SimpleType@@T @AT@ 2423 @LENGTH@ 1
+---------DEL SimpleName@@oldMockHandler @AT@ 2426 @LENGTH@ 14
+, UPD VariableDeclarationStatement@@MethodInterceptorFilter newFilter=new MethodInterceptorFilter(newMockHandler,(MockSettingsImpl)org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS)); @TO@ MethodInterceptorFilter newFilter=newMethodInterceptorFilter(oldMockHandler.getMockSettings()); @AT@ 2452 @LENGTH@ 187
+---UPD VariableDeclarationFragment@@newFilter=new MethodInterceptorFilter(newMockHandler,(MockSettingsImpl)org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS)) @TO@ newFilter=newMethodInterceptorFilter(oldMockHandler.getMockSettings()) @AT@ 2476 @LENGTH@ 162
+------INS MethodInvocation@@newMethodInterceptorFilter(oldMockHandler.getMockSettings()) @TO@ VariableDeclarationFragment@@newFilter=new MethodInterceptorFilter(newMockHandler,(MockSettingsImpl)org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS)) @AT@ 2411 @LENGTH@ 60
+---------MOV SimpleName@@MethodName:defaultAnswer:[org.mockito.Mockito.RETURNS_DEFAULTS] @TO@ MethodInvocation@@newMethodInterceptorFilter(oldMockHandler.getMockSettings()) @AT@ 2586 @LENGTH@ 51
+------DEL ClassInstanceCreation@@MethodInterceptorFilter[newMockHandler, (MockSettingsImpl)org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS)] @AT@ 2488 @LENGTH@ 150
+---------DEL New@@new @AT@ 2488 @LENGTH@ 3
+---------DEL SimpleType@@MethodInterceptorFilter @AT@ 2492 @LENGTH@ 23
+---------DEL SimpleName@@newMockHandler @AT@ 2516 @LENGTH@ 14
+---------DEL CastExpression@@(MockSettingsImpl)org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS) @AT@ 2532 @LENGTH@ 105
+------------DEL SimpleType@@MockSettingsImpl @AT@ 2533 @LENGTH@ 16
+------------DEL MethodInvocation@@org.mockito.Mockito.withSettings().defaultAnswer(org.mockito.Mockito.RETURNS_DEFAULTS) @AT@ 2551 @LENGTH@ 86
+---------------DEL QualifiedName@@Name:org.mockito.Mockito @AT@ 2551 @LENGTH@ 19
+---------------DEL MethodInvocation@@MethodName:withSettings:[] @AT@ 2551 @LENGTH@ 34
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3 OP5)
+OP3:      (INS, MethodInvocation, OP2, OP4)
+OP4:         (MOV, SimpleName, OP3, null)
+OP5:      (DEL, ClassInstanceCreation, OP2, OP6 OP7 OP8 OP9)
+OP6:         (DEL, New, OP5, null)
+OP7:         (DEL, SimpleType, OP5, null)
+OP8:         (DEL, SimpleName, OP5, null)
+OP9:         (DEL, CastExpression, OP5, OP10 OP11)
+OP10:            (DEL, SimpleType, OP9, null)
+OP11:            (DEL, MethodInvocation, OP9, OP12 OP13)
+OP12:               (DEL, QualifiedName, OP11, null)
+OP13:               (DEL, MethodInvocation, OP11, null)
+
+
+

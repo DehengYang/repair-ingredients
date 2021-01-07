@@ -1,0 +1,13 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_33/src/main/java/org/apache/commons/lang3/ClassUtils.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_33/src/main/java/org/apache/commons/lang3/ClassUtils.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_33/src/main/java/org/apache/commons/lang3/ClassUtils.java	2020-01-05 05:28:24.589885555 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_33/src/main/java/org/apache/commons/lang3/ClassUtils.java	2020-01-05 05:28:28.077856423 -0800
+@@ -907,7 +907,7 @@
+         }
+         Class<?>[] classes = new Class[array.length];
+         for (int i = 0; i < array.length; i++) {
+-            classes[i] = array[i].getClass();
++            classes[i] = array[i] == null ? null : array[i].getClass();
+         }
+         return classes;
+     }

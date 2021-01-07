@@ -1,0 +1,1762 @@
+
+
+hASList: 
+[INS WhileStatement@@InfixExpression:days < 0 @TO@ MethodDeclaration@@public, static, @@String, MethodName:formatPeriod, @@Argus:long+startMillis+long+endMillis+String+format+boolean+padWithZeros+TimeZone+timezone+ @AT@ 12514 @LENGTH@ 561
+---MOV InfixExpression@@days < 0 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12521 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12545 @LENGTH@ 28
+------INS MethodInvocation@@end.add(Calendar.MONTH,-1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 27
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 3
+---------INS SimpleName@@MethodName:add:[Calendar.MONTH, -1] @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12549 @LENGTH@ 23
+------------INS PrefixExpression@@-1 @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 12569 @LENGTH@ 2
+---------------INS Operator@@- @TO@ PrefixExpression@@-1 @AT@ 12569 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ PrefixExpression@@-1 @AT@ 12570 @LENGTH@ 1
+------------MOV QualifiedName@@Calendar.MINUTE @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 13256 @LENGTH@ 15
+---INS ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12586 @LENGTH@ 52
+------MOV Assignment@@days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @TO@ ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @AT@ 13367 @LENGTH@ 65
+---MOV ExpressionStatement@@Assignment:months-=1 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12931 @LENGTH@ 12
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 13038 @LENGTH@ 27
+------INS MethodInvocation@@end.add(Calendar.MONTH,1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 26
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 3
+---------MOV SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MONTH, months] @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13452 @LENGTH@ 52
+, DEL WhileStatement@@InfixExpression:days < 0 @AT@ 12514 @LENGTH@ 439
+---DEL ExpressionStatement@@Assignment:days+=31 @AT@ 12545 @LENGTH@ 11
+------DEL Assignment@@days+=31 @AT@ 12545 @LENGTH@ 10
+---------DEL SimpleName@@days @AT@ 12545 @LENGTH@ 4
+---------DEL Operator@@+= @AT@ 12549 @LENGTH@ 2
+---------DEL NumberLiteral@@31 @AT@ 12553 @LENGTH@ 2
+, DEL ExpressionStatement@@Assignment:milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 81
+---DEL Assignment@@milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 80
+------DEL SimpleName@@milliseconds @AT@ 13051 @LENGTH@ 12
+------DEL Operator@@-= @AT@ 13063 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13067 @LENGTH@ 64
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MILLISECOND, milliseconds] @AT@ 13067 @LENGTH@ 64
+------------DEL SimpleName@@start @AT@ 13084 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13091 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.MILLISECOND @AT@ 13096 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13096 @LENGTH@ 8
+---------------DEL SimpleName@@MILLISECOND @AT@ 13105 @LENGTH@ 11
+------------DEL SimpleName@@milliseconds @AT@ 13118 @LENGTH@ 12
+, DEL ExpressionStatement@@Assignment:seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 66
+---DEL Assignment@@seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 65
+------DEL SimpleName@@seconds @AT@ 13141 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13148 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13152 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.SECOND, seconds] @AT@ 13152 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13169 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13176 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.SECOND @AT@ 13181 @LENGTH@ 15
+---------------DEL SimpleName@@Calendar @AT@ 13181 @LENGTH@ 8
+---------------DEL SimpleName@@SECOND @AT@ 13190 @LENGTH@ 6
+------------DEL SimpleName@@seconds @AT@ 13198 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 66
+---DEL Assignment@@minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 65
+------DEL SimpleName@@minutes @AT@ 13216 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13223 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13227 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MINUTE, minutes] @AT@ 13227 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13244 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13251 @LENGTH@ 3
+------------DEL SimpleName@@minutes @AT@ 13273 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 67
+---DEL Assignment@@hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 66
+------DEL SimpleName@@hours @AT@ 13291 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13296 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13300 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.HOUR_OF_DAY, hours] @AT@ 13300 @LENGTH@ 57
+------------DEL SimpleName@@start @AT@ 13317 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13324 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.HOUR_OF_DAY @AT@ 13329 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13329 @LENGTH@ 8
+---------------DEL SimpleName@@HOUR_OF_DAY @AT@ 13338 @LENGTH@ 11
+------------DEL SimpleName@@hours @AT@ 13351 @LENGTH@ 5
+, DEL ExpressionStatement@@Assignment:days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @AT@ 13367 @LENGTH@ 66
+, DEL ExpressionStatement@@Assignment:months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 63
+---DEL Assignment@@months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 62
+------DEL SimpleName@@months @AT@ 13442 @LENGTH@ 6
+------DEL Operator@@-= @AT@ 13448 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13452 @LENGTH@ 52
+, DEL ExpressionStatement@@Assignment:years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 60
+---DEL Assignment@@years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 59
+------DEL SimpleName@@years @AT@ 13514 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13519 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13523 @LENGTH@ 50
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.YEAR, years] @AT@ 13523 @LENGTH@ 50
+------------DEL SimpleName@@start @AT@ 13540 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13547 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.YEAR @AT@ 13552 @LENGTH@ 13
+---------------DEL SimpleName@@Calendar @AT@ 13552 @LENGTH@ 8
+---------------DEL SimpleName@@YEAR @AT@ 13561 @LENGTH@ 4
+------------DEL SimpleName@@years @AT@ 13567 @LENGTH@ 5
+, DEL MethodDeclaration@@static, @@int, MethodName:reduceAndCorrect, @@Argus:Calendar+start+Calendar+end+int+field+int+difference+ @AT@ 18388 @LENGTH@ 419
+---DEL Modifier@@static @AT@ 18388 @LENGTH@ 6
+---DEL PrimitiveType@@int @AT@ 18395 @LENGTH@ 3
+---DEL SimpleName@@MethodName:reduceAndCorrect @AT@ 18399 @LENGTH@ 16
+---DEL SingleVariableDeclaration@@Calendar start @AT@ 18416 @LENGTH@ 14
+------DEL SimpleType@@Calendar @AT@ 18416 @LENGTH@ 8
+------DEL SimpleName@@start @AT@ 18425 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@Calendar end @AT@ 18432 @LENGTH@ 12
+------DEL SimpleType@@Calendar @AT@ 18432 @LENGTH@ 8
+------DEL SimpleName@@end @AT@ 18441 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@int field @AT@ 18446 @LENGTH@ 9
+------DEL PrimitiveType@@int @AT@ 18446 @LENGTH@ 3
+------DEL SimpleName@@field @AT@ 18450 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@int difference @AT@ 18457 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 18457 @LENGTH@ 3
+------DEL SimpleName@@difference @AT@ 18461 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 34
+------DEL MethodInvocation@@end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 33
+---------DEL SimpleName@@Name:end @AT@ 18483 @LENGTH@ 3
+---------DEL SimpleName@@MethodName:add:[field, -1 * difference] @AT@ 18487 @LENGTH@ 29
+------------DEL SimpleName@@field @AT@ 18492 @LENGTH@ 5
+------------DEL InfixExpression@@-1 * difference @AT@ 18499 @LENGTH@ 15
+---------------DEL PrefixExpression@@-1 @AT@ 18499 @LENGTH@ 2
+------------------DEL Operator@@- @AT@ 18499 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 18500 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 18501 @LENGTH@ 1
+---------------DEL SimpleName@@difference @AT@ 18504 @LENGTH@ 10
+---DEL VariableDeclarationStatement@@int endValue=end.get(field); @AT@ 18526 @LENGTH@ 30
+------DEL PrimitiveType@@int @AT@ 18526 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@endValue=end.get(field) @AT@ 18530 @LENGTH@ 25
+---------DEL SimpleName@@endValue @AT@ 18530 @LENGTH@ 8
+---------DEL MethodInvocation@@end.get(field) @AT@ 18541 @LENGTH@ 14
+------------DEL SimpleName@@Name:end @AT@ 18541 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18545 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18549 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@int startValue=start.get(field); @AT@ 18565 @LENGTH@ 34
+------DEL PrimitiveType@@int @AT@ 18565 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@startValue=start.get(field) @AT@ 18569 @LENGTH@ 29
+---------DEL SimpleName@@startValue @AT@ 18569 @LENGTH@ 10
+---------DEL MethodInvocation@@start.get(field) @AT@ 18582 @LENGTH@ 16
+------------DEL SimpleName@@Name:start @AT@ 18582 @LENGTH@ 5
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18588 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18592 @LENGTH@ 5
+---DEL IfStatement@@InfixExpression:endValue < startValue @AT@ 18608 @LENGTH@ 193
+------DEL InfixExpression@@endValue < startValue @AT@ 18612 @LENGTH@ 21
+---------DEL SimpleName@@endValue @AT@ 18612 @LENGTH@ 8
+---------DEL Operator@@< @AT@ 18620 @LENGTH@ 1
+---------DEL SimpleName@@startValue @AT@ 18623 @LENGTH@ 10
+------DEL VariableDeclarationStatement@@int newdiff=startValue - endValue; @AT@ 18649 @LENGTH@ 36
+---------DEL PrimitiveType@@int @AT@ 18649 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@newdiff=startValue - endValue @AT@ 18653 @LENGTH@ 31
+------------DEL SimpleName@@newdiff @AT@ 18653 @LENGTH@ 7
+------------DEL InfixExpression@@startValue - endValue @AT@ 18663 @LENGTH@ 21
+---------------DEL SimpleName@@startValue @AT@ 18663 @LENGTH@ 10
+---------------DEL Operator@@- @AT@ 18673 @LENGTH@ 1
+---------------DEL SimpleName@@endValue @AT@ 18676 @LENGTH@ 8
+------DEL ExpressionStatement@@MethodInvocation:end.add(field,newdiff) @AT@ 18698 @LENGTH@ 26
+---------DEL MethodInvocation@@end.add(field,newdiff) @AT@ 18698 @LENGTH@ 25
+------------DEL SimpleName@@Name:end @AT@ 18698 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:add:[field, newdiff] @AT@ 18702 @LENGTH@ 21
+---------------DEL SimpleName@@field @AT@ 18707 @LENGTH@ 5
+---------------DEL SimpleName@@newdiff @AT@ 18714 @LENGTH@ 7
+------DEL ReturnStatement@@SimpleName:newdiff @AT@ 18737 @LENGTH@ 15
+---------DEL SimpleName@@newdiff @AT@ 18744 @LENGTH@ 7
+------DEL ReturnStatement@@NumberLiteral:0 @AT@ 18782 @LENGTH@ 9
+---------DEL NumberLiteral@@0 @AT@ 18789 @LENGTH@ 1
+]
+
+CII:
+OP1:(INS, WhileStatement, null, OP2 OP3 OP11 OP13 OP14)
+OP2:   (MOV, InfixExpression, OP1, null)
+OP3:   (INS, ExpressionStatement, OP1, OP4)
+OP4:      (INS, MethodInvocation, OP3, OP5 OP6)
+OP5:         (INS, SimpleName, OP4, null)
+OP6:         (INS, SimpleName, OP4, OP7 OP10)
+OP7:            (INS, PrefixExpression, OP6, OP8 OP9)
+OP8:               (INS, Operator, OP7, null)
+OP9:               (INS, NumberLiteral, OP7, null)
+OP10:            (MOV, QualifiedName, OP6, null)
+OP11:   (INS, ExpressionStatement, OP1, OP12)
+OP12:      (MOV, Assignment, OP11, null)
+OP13:   (MOV, ExpressionStatement, OP1, null)
+OP14:   (INS, ExpressionStatement, OP1, OP15)
+OP15:      (INS, MethodInvocation, OP14, OP16 OP17)
+OP16:         (INS, SimpleName, OP15, null)
+OP17:         (MOV, SimpleName, OP15, null)
+
+
+
+
+
+hASList: 
+[INS WhileStatement@@InfixExpression:days < 0 @TO@ MethodDeclaration@@public, static, @@String, MethodName:formatPeriod, @@Argus:long+startMillis+long+endMillis+String+format+boolean+padWithZeros+TimeZone+timezone+ @AT@ 12514 @LENGTH@ 561
+---MOV InfixExpression@@days < 0 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12521 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12545 @LENGTH@ 28
+------INS MethodInvocation@@end.add(Calendar.MONTH,-1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 27
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 3
+---------INS SimpleName@@MethodName:add:[Calendar.MONTH, -1] @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12549 @LENGTH@ 23
+------------INS PrefixExpression@@-1 @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 12569 @LENGTH@ 2
+---------------INS Operator@@- @TO@ PrefixExpression@@-1 @AT@ 12569 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ PrefixExpression@@-1 @AT@ 12570 @LENGTH@ 1
+------------MOV QualifiedName@@Calendar.MINUTE @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 13256 @LENGTH@ 15
+---INS ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12586 @LENGTH@ 52
+------MOV Assignment@@days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @TO@ ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @AT@ 13367 @LENGTH@ 65
+---MOV ExpressionStatement@@Assignment:months-=1 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12931 @LENGTH@ 12
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 13038 @LENGTH@ 27
+------INS MethodInvocation@@end.add(Calendar.MONTH,1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 26
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 3
+---------MOV SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MONTH, months] @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13452 @LENGTH@ 52
+, DEL WhileStatement@@InfixExpression:days < 0 @AT@ 12514 @LENGTH@ 439
+---DEL ExpressionStatement@@Assignment:days+=31 @AT@ 12545 @LENGTH@ 11
+------DEL Assignment@@days+=31 @AT@ 12545 @LENGTH@ 10
+---------DEL SimpleName@@days @AT@ 12545 @LENGTH@ 4
+---------DEL Operator@@+= @AT@ 12549 @LENGTH@ 2
+---------DEL NumberLiteral@@31 @AT@ 12553 @LENGTH@ 2
+, DEL ExpressionStatement@@Assignment:milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 81
+---DEL Assignment@@milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 80
+------DEL SimpleName@@milliseconds @AT@ 13051 @LENGTH@ 12
+------DEL Operator@@-= @AT@ 13063 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13067 @LENGTH@ 64
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MILLISECOND, milliseconds] @AT@ 13067 @LENGTH@ 64
+------------DEL SimpleName@@start @AT@ 13084 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13091 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.MILLISECOND @AT@ 13096 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13096 @LENGTH@ 8
+---------------DEL SimpleName@@MILLISECOND @AT@ 13105 @LENGTH@ 11
+------------DEL SimpleName@@milliseconds @AT@ 13118 @LENGTH@ 12
+, DEL ExpressionStatement@@Assignment:seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 66
+---DEL Assignment@@seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 65
+------DEL SimpleName@@seconds @AT@ 13141 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13148 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13152 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.SECOND, seconds] @AT@ 13152 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13169 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13176 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.SECOND @AT@ 13181 @LENGTH@ 15
+---------------DEL SimpleName@@Calendar @AT@ 13181 @LENGTH@ 8
+---------------DEL SimpleName@@SECOND @AT@ 13190 @LENGTH@ 6
+------------DEL SimpleName@@seconds @AT@ 13198 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 66
+---DEL Assignment@@minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 65
+------DEL SimpleName@@minutes @AT@ 13216 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13223 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13227 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MINUTE, minutes] @AT@ 13227 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13244 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13251 @LENGTH@ 3
+------------DEL SimpleName@@minutes @AT@ 13273 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 67
+---DEL Assignment@@hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 66
+------DEL SimpleName@@hours @AT@ 13291 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13296 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13300 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.HOUR_OF_DAY, hours] @AT@ 13300 @LENGTH@ 57
+------------DEL SimpleName@@start @AT@ 13317 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13324 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.HOUR_OF_DAY @AT@ 13329 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13329 @LENGTH@ 8
+---------------DEL SimpleName@@HOUR_OF_DAY @AT@ 13338 @LENGTH@ 11
+------------DEL SimpleName@@hours @AT@ 13351 @LENGTH@ 5
+, DEL ExpressionStatement@@Assignment:days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @AT@ 13367 @LENGTH@ 66
+, DEL ExpressionStatement@@Assignment:months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 63
+---DEL Assignment@@months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 62
+------DEL SimpleName@@months @AT@ 13442 @LENGTH@ 6
+------DEL Operator@@-= @AT@ 13448 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13452 @LENGTH@ 52
+, DEL ExpressionStatement@@Assignment:years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 60
+---DEL Assignment@@years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 59
+------DEL SimpleName@@years @AT@ 13514 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13519 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13523 @LENGTH@ 50
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.YEAR, years] @AT@ 13523 @LENGTH@ 50
+------------DEL SimpleName@@start @AT@ 13540 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13547 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.YEAR @AT@ 13552 @LENGTH@ 13
+---------------DEL SimpleName@@Calendar @AT@ 13552 @LENGTH@ 8
+---------------DEL SimpleName@@YEAR @AT@ 13561 @LENGTH@ 4
+------------DEL SimpleName@@years @AT@ 13567 @LENGTH@ 5
+, DEL MethodDeclaration@@static, @@int, MethodName:reduceAndCorrect, @@Argus:Calendar+start+Calendar+end+int+field+int+difference+ @AT@ 18388 @LENGTH@ 419
+---DEL Modifier@@static @AT@ 18388 @LENGTH@ 6
+---DEL PrimitiveType@@int @AT@ 18395 @LENGTH@ 3
+---DEL SimpleName@@MethodName:reduceAndCorrect @AT@ 18399 @LENGTH@ 16
+---DEL SingleVariableDeclaration@@Calendar start @AT@ 18416 @LENGTH@ 14
+------DEL SimpleType@@Calendar @AT@ 18416 @LENGTH@ 8
+------DEL SimpleName@@start @AT@ 18425 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@Calendar end @AT@ 18432 @LENGTH@ 12
+------DEL SimpleType@@Calendar @AT@ 18432 @LENGTH@ 8
+------DEL SimpleName@@end @AT@ 18441 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@int field @AT@ 18446 @LENGTH@ 9
+------DEL PrimitiveType@@int @AT@ 18446 @LENGTH@ 3
+------DEL SimpleName@@field @AT@ 18450 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@int difference @AT@ 18457 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 18457 @LENGTH@ 3
+------DEL SimpleName@@difference @AT@ 18461 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 34
+------DEL MethodInvocation@@end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 33
+---------DEL SimpleName@@Name:end @AT@ 18483 @LENGTH@ 3
+---------DEL SimpleName@@MethodName:add:[field, -1 * difference] @AT@ 18487 @LENGTH@ 29
+------------DEL SimpleName@@field @AT@ 18492 @LENGTH@ 5
+------------DEL InfixExpression@@-1 * difference @AT@ 18499 @LENGTH@ 15
+---------------DEL PrefixExpression@@-1 @AT@ 18499 @LENGTH@ 2
+------------------DEL Operator@@- @AT@ 18499 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 18500 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 18501 @LENGTH@ 1
+---------------DEL SimpleName@@difference @AT@ 18504 @LENGTH@ 10
+---DEL VariableDeclarationStatement@@int endValue=end.get(field); @AT@ 18526 @LENGTH@ 30
+------DEL PrimitiveType@@int @AT@ 18526 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@endValue=end.get(field) @AT@ 18530 @LENGTH@ 25
+---------DEL SimpleName@@endValue @AT@ 18530 @LENGTH@ 8
+---------DEL MethodInvocation@@end.get(field) @AT@ 18541 @LENGTH@ 14
+------------DEL SimpleName@@Name:end @AT@ 18541 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18545 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18549 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@int startValue=start.get(field); @AT@ 18565 @LENGTH@ 34
+------DEL PrimitiveType@@int @AT@ 18565 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@startValue=start.get(field) @AT@ 18569 @LENGTH@ 29
+---------DEL SimpleName@@startValue @AT@ 18569 @LENGTH@ 10
+---------DEL MethodInvocation@@start.get(field) @AT@ 18582 @LENGTH@ 16
+------------DEL SimpleName@@Name:start @AT@ 18582 @LENGTH@ 5
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18588 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18592 @LENGTH@ 5
+---DEL IfStatement@@InfixExpression:endValue < startValue @AT@ 18608 @LENGTH@ 193
+------DEL InfixExpression@@endValue < startValue @AT@ 18612 @LENGTH@ 21
+---------DEL SimpleName@@endValue @AT@ 18612 @LENGTH@ 8
+---------DEL Operator@@< @AT@ 18620 @LENGTH@ 1
+---------DEL SimpleName@@startValue @AT@ 18623 @LENGTH@ 10
+------DEL VariableDeclarationStatement@@int newdiff=startValue - endValue; @AT@ 18649 @LENGTH@ 36
+---------DEL PrimitiveType@@int @AT@ 18649 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@newdiff=startValue - endValue @AT@ 18653 @LENGTH@ 31
+------------DEL SimpleName@@newdiff @AT@ 18653 @LENGTH@ 7
+------------DEL InfixExpression@@startValue - endValue @AT@ 18663 @LENGTH@ 21
+---------------DEL SimpleName@@startValue @AT@ 18663 @LENGTH@ 10
+---------------DEL Operator@@- @AT@ 18673 @LENGTH@ 1
+---------------DEL SimpleName@@endValue @AT@ 18676 @LENGTH@ 8
+------DEL ExpressionStatement@@MethodInvocation:end.add(field,newdiff) @AT@ 18698 @LENGTH@ 26
+---------DEL MethodInvocation@@end.add(field,newdiff) @AT@ 18698 @LENGTH@ 25
+------------DEL SimpleName@@Name:end @AT@ 18698 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:add:[field, newdiff] @AT@ 18702 @LENGTH@ 21
+---------------DEL SimpleName@@field @AT@ 18707 @LENGTH@ 5
+---------------DEL SimpleName@@newdiff @AT@ 18714 @LENGTH@ 7
+------DEL ReturnStatement@@SimpleName:newdiff @AT@ 18737 @LENGTH@ 15
+---------DEL SimpleName@@newdiff @AT@ 18744 @LENGTH@ 7
+------DEL ReturnStatement@@NumberLiteral:0 @AT@ 18782 @LENGTH@ 9
+---------DEL NumberLiteral@@0 @AT@ 18789 @LENGTH@ 1
+]
+
+CII:
+OP1:(DEL, WhileStatement, null, OP2)
+OP2:   (DEL, ExpressionStatement, OP1, OP3)
+OP3:      (DEL, Assignment, OP2, OP4 OP5 OP6)
+OP4:         (DEL, SimpleName, OP3, null)
+OP5:         (DEL, Operator, OP3, null)
+OP6:         (DEL, NumberLiteral, OP3, null)
+
+
+
+
+
+hASList: 
+[INS WhileStatement@@InfixExpression:days < 0 @TO@ MethodDeclaration@@public, static, @@String, MethodName:formatPeriod, @@Argus:long+startMillis+long+endMillis+String+format+boolean+padWithZeros+TimeZone+timezone+ @AT@ 12514 @LENGTH@ 561
+---MOV InfixExpression@@days < 0 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12521 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12545 @LENGTH@ 28
+------INS MethodInvocation@@end.add(Calendar.MONTH,-1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 27
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 3
+---------INS SimpleName@@MethodName:add:[Calendar.MONTH, -1] @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12549 @LENGTH@ 23
+------------INS PrefixExpression@@-1 @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 12569 @LENGTH@ 2
+---------------INS Operator@@- @TO@ PrefixExpression@@-1 @AT@ 12569 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ PrefixExpression@@-1 @AT@ 12570 @LENGTH@ 1
+------------MOV QualifiedName@@Calendar.MINUTE @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 13256 @LENGTH@ 15
+---INS ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12586 @LENGTH@ 52
+------MOV Assignment@@days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @TO@ ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @AT@ 13367 @LENGTH@ 65
+---MOV ExpressionStatement@@Assignment:months-=1 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12931 @LENGTH@ 12
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 13038 @LENGTH@ 27
+------INS MethodInvocation@@end.add(Calendar.MONTH,1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 26
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 3
+---------MOV SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MONTH, months] @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13452 @LENGTH@ 52
+, DEL WhileStatement@@InfixExpression:days < 0 @AT@ 12514 @LENGTH@ 439
+---DEL ExpressionStatement@@Assignment:days+=31 @AT@ 12545 @LENGTH@ 11
+------DEL Assignment@@days+=31 @AT@ 12545 @LENGTH@ 10
+---------DEL SimpleName@@days @AT@ 12545 @LENGTH@ 4
+---------DEL Operator@@+= @AT@ 12549 @LENGTH@ 2
+---------DEL NumberLiteral@@31 @AT@ 12553 @LENGTH@ 2
+, DEL ExpressionStatement@@Assignment:milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 81
+---DEL Assignment@@milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 80
+------DEL SimpleName@@milliseconds @AT@ 13051 @LENGTH@ 12
+------DEL Operator@@-= @AT@ 13063 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13067 @LENGTH@ 64
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MILLISECOND, milliseconds] @AT@ 13067 @LENGTH@ 64
+------------DEL SimpleName@@start @AT@ 13084 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13091 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.MILLISECOND @AT@ 13096 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13096 @LENGTH@ 8
+---------------DEL SimpleName@@MILLISECOND @AT@ 13105 @LENGTH@ 11
+------------DEL SimpleName@@milliseconds @AT@ 13118 @LENGTH@ 12
+, DEL ExpressionStatement@@Assignment:seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 66
+---DEL Assignment@@seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 65
+------DEL SimpleName@@seconds @AT@ 13141 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13148 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13152 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.SECOND, seconds] @AT@ 13152 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13169 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13176 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.SECOND @AT@ 13181 @LENGTH@ 15
+---------------DEL SimpleName@@Calendar @AT@ 13181 @LENGTH@ 8
+---------------DEL SimpleName@@SECOND @AT@ 13190 @LENGTH@ 6
+------------DEL SimpleName@@seconds @AT@ 13198 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 66
+---DEL Assignment@@minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 65
+------DEL SimpleName@@minutes @AT@ 13216 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13223 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13227 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MINUTE, minutes] @AT@ 13227 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13244 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13251 @LENGTH@ 3
+------------DEL SimpleName@@minutes @AT@ 13273 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 67
+---DEL Assignment@@hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 66
+------DEL SimpleName@@hours @AT@ 13291 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13296 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13300 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.HOUR_OF_DAY, hours] @AT@ 13300 @LENGTH@ 57
+------------DEL SimpleName@@start @AT@ 13317 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13324 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.HOUR_OF_DAY @AT@ 13329 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13329 @LENGTH@ 8
+---------------DEL SimpleName@@HOUR_OF_DAY @AT@ 13338 @LENGTH@ 11
+------------DEL SimpleName@@hours @AT@ 13351 @LENGTH@ 5
+, DEL ExpressionStatement@@Assignment:days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @AT@ 13367 @LENGTH@ 66
+, DEL ExpressionStatement@@Assignment:months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 63
+---DEL Assignment@@months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 62
+------DEL SimpleName@@months @AT@ 13442 @LENGTH@ 6
+------DEL Operator@@-= @AT@ 13448 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13452 @LENGTH@ 52
+, DEL ExpressionStatement@@Assignment:years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 60
+---DEL Assignment@@years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 59
+------DEL SimpleName@@years @AT@ 13514 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13519 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13523 @LENGTH@ 50
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.YEAR, years] @AT@ 13523 @LENGTH@ 50
+------------DEL SimpleName@@start @AT@ 13540 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13547 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.YEAR @AT@ 13552 @LENGTH@ 13
+---------------DEL SimpleName@@Calendar @AT@ 13552 @LENGTH@ 8
+---------------DEL SimpleName@@YEAR @AT@ 13561 @LENGTH@ 4
+------------DEL SimpleName@@years @AT@ 13567 @LENGTH@ 5
+, DEL MethodDeclaration@@static, @@int, MethodName:reduceAndCorrect, @@Argus:Calendar+start+Calendar+end+int+field+int+difference+ @AT@ 18388 @LENGTH@ 419
+---DEL Modifier@@static @AT@ 18388 @LENGTH@ 6
+---DEL PrimitiveType@@int @AT@ 18395 @LENGTH@ 3
+---DEL SimpleName@@MethodName:reduceAndCorrect @AT@ 18399 @LENGTH@ 16
+---DEL SingleVariableDeclaration@@Calendar start @AT@ 18416 @LENGTH@ 14
+------DEL SimpleType@@Calendar @AT@ 18416 @LENGTH@ 8
+------DEL SimpleName@@start @AT@ 18425 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@Calendar end @AT@ 18432 @LENGTH@ 12
+------DEL SimpleType@@Calendar @AT@ 18432 @LENGTH@ 8
+------DEL SimpleName@@end @AT@ 18441 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@int field @AT@ 18446 @LENGTH@ 9
+------DEL PrimitiveType@@int @AT@ 18446 @LENGTH@ 3
+------DEL SimpleName@@field @AT@ 18450 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@int difference @AT@ 18457 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 18457 @LENGTH@ 3
+------DEL SimpleName@@difference @AT@ 18461 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 34
+------DEL MethodInvocation@@end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 33
+---------DEL SimpleName@@Name:end @AT@ 18483 @LENGTH@ 3
+---------DEL SimpleName@@MethodName:add:[field, -1 * difference] @AT@ 18487 @LENGTH@ 29
+------------DEL SimpleName@@field @AT@ 18492 @LENGTH@ 5
+------------DEL InfixExpression@@-1 * difference @AT@ 18499 @LENGTH@ 15
+---------------DEL PrefixExpression@@-1 @AT@ 18499 @LENGTH@ 2
+------------------DEL Operator@@- @AT@ 18499 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 18500 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 18501 @LENGTH@ 1
+---------------DEL SimpleName@@difference @AT@ 18504 @LENGTH@ 10
+---DEL VariableDeclarationStatement@@int endValue=end.get(field); @AT@ 18526 @LENGTH@ 30
+------DEL PrimitiveType@@int @AT@ 18526 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@endValue=end.get(field) @AT@ 18530 @LENGTH@ 25
+---------DEL SimpleName@@endValue @AT@ 18530 @LENGTH@ 8
+---------DEL MethodInvocation@@end.get(field) @AT@ 18541 @LENGTH@ 14
+------------DEL SimpleName@@Name:end @AT@ 18541 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18545 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18549 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@int startValue=start.get(field); @AT@ 18565 @LENGTH@ 34
+------DEL PrimitiveType@@int @AT@ 18565 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@startValue=start.get(field) @AT@ 18569 @LENGTH@ 29
+---------DEL SimpleName@@startValue @AT@ 18569 @LENGTH@ 10
+---------DEL MethodInvocation@@start.get(field) @AT@ 18582 @LENGTH@ 16
+------------DEL SimpleName@@Name:start @AT@ 18582 @LENGTH@ 5
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18588 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18592 @LENGTH@ 5
+---DEL IfStatement@@InfixExpression:endValue < startValue @AT@ 18608 @LENGTH@ 193
+------DEL InfixExpression@@endValue < startValue @AT@ 18612 @LENGTH@ 21
+---------DEL SimpleName@@endValue @AT@ 18612 @LENGTH@ 8
+---------DEL Operator@@< @AT@ 18620 @LENGTH@ 1
+---------DEL SimpleName@@startValue @AT@ 18623 @LENGTH@ 10
+------DEL VariableDeclarationStatement@@int newdiff=startValue - endValue; @AT@ 18649 @LENGTH@ 36
+---------DEL PrimitiveType@@int @AT@ 18649 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@newdiff=startValue - endValue @AT@ 18653 @LENGTH@ 31
+------------DEL SimpleName@@newdiff @AT@ 18653 @LENGTH@ 7
+------------DEL InfixExpression@@startValue - endValue @AT@ 18663 @LENGTH@ 21
+---------------DEL SimpleName@@startValue @AT@ 18663 @LENGTH@ 10
+---------------DEL Operator@@- @AT@ 18673 @LENGTH@ 1
+---------------DEL SimpleName@@endValue @AT@ 18676 @LENGTH@ 8
+------DEL ExpressionStatement@@MethodInvocation:end.add(field,newdiff) @AT@ 18698 @LENGTH@ 26
+---------DEL MethodInvocation@@end.add(field,newdiff) @AT@ 18698 @LENGTH@ 25
+------------DEL SimpleName@@Name:end @AT@ 18698 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:add:[field, newdiff] @AT@ 18702 @LENGTH@ 21
+---------------DEL SimpleName@@field @AT@ 18707 @LENGTH@ 5
+---------------DEL SimpleName@@newdiff @AT@ 18714 @LENGTH@ 7
+------DEL ReturnStatement@@SimpleName:newdiff @AT@ 18737 @LENGTH@ 15
+---------DEL SimpleName@@newdiff @AT@ 18744 @LENGTH@ 7
+------DEL ReturnStatement@@NumberLiteral:0 @AT@ 18782 @LENGTH@ 9
+---------DEL NumberLiteral@@0 @AT@ 18789 @LENGTH@ 1
+]
+
+CII:
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, MethodInvocation, OP2, OP6)
+OP6:         (DEL, SimpleName, OP5, OP7 OP8 OP9 OP12)
+OP7:            (DEL, SimpleName, OP6, null)
+OP8:            (DEL, SimpleName, OP6, null)
+OP9:            (DEL, QualifiedName, OP6, OP10 OP11)
+OP10:               (DEL, SimpleName, OP9, null)
+OP11:               (DEL, SimpleName, OP9, null)
+OP12:            (DEL, SimpleName, OP6, null)
+
+
+
+
+
+hASList: 
+[INS WhileStatement@@InfixExpression:days < 0 @TO@ MethodDeclaration@@public, static, @@String, MethodName:formatPeriod, @@Argus:long+startMillis+long+endMillis+String+format+boolean+padWithZeros+TimeZone+timezone+ @AT@ 12514 @LENGTH@ 561
+---MOV InfixExpression@@days < 0 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12521 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12545 @LENGTH@ 28
+------INS MethodInvocation@@end.add(Calendar.MONTH,-1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 27
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 3
+---------INS SimpleName@@MethodName:add:[Calendar.MONTH, -1] @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12549 @LENGTH@ 23
+------------INS PrefixExpression@@-1 @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 12569 @LENGTH@ 2
+---------------INS Operator@@- @TO@ PrefixExpression@@-1 @AT@ 12569 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ PrefixExpression@@-1 @AT@ 12570 @LENGTH@ 1
+------------MOV QualifiedName@@Calendar.MINUTE @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 13256 @LENGTH@ 15
+---INS ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12586 @LENGTH@ 52
+------MOV Assignment@@days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @TO@ ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @AT@ 13367 @LENGTH@ 65
+---MOV ExpressionStatement@@Assignment:months-=1 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12931 @LENGTH@ 12
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 13038 @LENGTH@ 27
+------INS MethodInvocation@@end.add(Calendar.MONTH,1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 26
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 3
+---------MOV SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MONTH, months] @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13452 @LENGTH@ 52
+, DEL WhileStatement@@InfixExpression:days < 0 @AT@ 12514 @LENGTH@ 439
+---DEL ExpressionStatement@@Assignment:days+=31 @AT@ 12545 @LENGTH@ 11
+------DEL Assignment@@days+=31 @AT@ 12545 @LENGTH@ 10
+---------DEL SimpleName@@days @AT@ 12545 @LENGTH@ 4
+---------DEL Operator@@+= @AT@ 12549 @LENGTH@ 2
+---------DEL NumberLiteral@@31 @AT@ 12553 @LENGTH@ 2
+, DEL ExpressionStatement@@Assignment:milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 81
+---DEL Assignment@@milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 80
+------DEL SimpleName@@milliseconds @AT@ 13051 @LENGTH@ 12
+------DEL Operator@@-= @AT@ 13063 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13067 @LENGTH@ 64
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MILLISECOND, milliseconds] @AT@ 13067 @LENGTH@ 64
+------------DEL SimpleName@@start @AT@ 13084 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13091 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.MILLISECOND @AT@ 13096 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13096 @LENGTH@ 8
+---------------DEL SimpleName@@MILLISECOND @AT@ 13105 @LENGTH@ 11
+------------DEL SimpleName@@milliseconds @AT@ 13118 @LENGTH@ 12
+, DEL ExpressionStatement@@Assignment:seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 66
+---DEL Assignment@@seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 65
+------DEL SimpleName@@seconds @AT@ 13141 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13148 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13152 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.SECOND, seconds] @AT@ 13152 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13169 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13176 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.SECOND @AT@ 13181 @LENGTH@ 15
+---------------DEL SimpleName@@Calendar @AT@ 13181 @LENGTH@ 8
+---------------DEL SimpleName@@SECOND @AT@ 13190 @LENGTH@ 6
+------------DEL SimpleName@@seconds @AT@ 13198 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 66
+---DEL Assignment@@minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 65
+------DEL SimpleName@@minutes @AT@ 13216 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13223 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13227 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MINUTE, minutes] @AT@ 13227 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13244 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13251 @LENGTH@ 3
+------------DEL SimpleName@@minutes @AT@ 13273 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 67
+---DEL Assignment@@hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 66
+------DEL SimpleName@@hours @AT@ 13291 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13296 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13300 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.HOUR_OF_DAY, hours] @AT@ 13300 @LENGTH@ 57
+------------DEL SimpleName@@start @AT@ 13317 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13324 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.HOUR_OF_DAY @AT@ 13329 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13329 @LENGTH@ 8
+---------------DEL SimpleName@@HOUR_OF_DAY @AT@ 13338 @LENGTH@ 11
+------------DEL SimpleName@@hours @AT@ 13351 @LENGTH@ 5
+, DEL ExpressionStatement@@Assignment:days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @AT@ 13367 @LENGTH@ 66
+, DEL ExpressionStatement@@Assignment:months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 63
+---DEL Assignment@@months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 62
+------DEL SimpleName@@months @AT@ 13442 @LENGTH@ 6
+------DEL Operator@@-= @AT@ 13448 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13452 @LENGTH@ 52
+, DEL ExpressionStatement@@Assignment:years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 60
+---DEL Assignment@@years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 59
+------DEL SimpleName@@years @AT@ 13514 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13519 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13523 @LENGTH@ 50
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.YEAR, years] @AT@ 13523 @LENGTH@ 50
+------------DEL SimpleName@@start @AT@ 13540 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13547 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.YEAR @AT@ 13552 @LENGTH@ 13
+---------------DEL SimpleName@@Calendar @AT@ 13552 @LENGTH@ 8
+---------------DEL SimpleName@@YEAR @AT@ 13561 @LENGTH@ 4
+------------DEL SimpleName@@years @AT@ 13567 @LENGTH@ 5
+, DEL MethodDeclaration@@static, @@int, MethodName:reduceAndCorrect, @@Argus:Calendar+start+Calendar+end+int+field+int+difference+ @AT@ 18388 @LENGTH@ 419
+---DEL Modifier@@static @AT@ 18388 @LENGTH@ 6
+---DEL PrimitiveType@@int @AT@ 18395 @LENGTH@ 3
+---DEL SimpleName@@MethodName:reduceAndCorrect @AT@ 18399 @LENGTH@ 16
+---DEL SingleVariableDeclaration@@Calendar start @AT@ 18416 @LENGTH@ 14
+------DEL SimpleType@@Calendar @AT@ 18416 @LENGTH@ 8
+------DEL SimpleName@@start @AT@ 18425 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@Calendar end @AT@ 18432 @LENGTH@ 12
+------DEL SimpleType@@Calendar @AT@ 18432 @LENGTH@ 8
+------DEL SimpleName@@end @AT@ 18441 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@int field @AT@ 18446 @LENGTH@ 9
+------DEL PrimitiveType@@int @AT@ 18446 @LENGTH@ 3
+------DEL SimpleName@@field @AT@ 18450 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@int difference @AT@ 18457 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 18457 @LENGTH@ 3
+------DEL SimpleName@@difference @AT@ 18461 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 34
+------DEL MethodInvocation@@end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 33
+---------DEL SimpleName@@Name:end @AT@ 18483 @LENGTH@ 3
+---------DEL SimpleName@@MethodName:add:[field, -1 * difference] @AT@ 18487 @LENGTH@ 29
+------------DEL SimpleName@@field @AT@ 18492 @LENGTH@ 5
+------------DEL InfixExpression@@-1 * difference @AT@ 18499 @LENGTH@ 15
+---------------DEL PrefixExpression@@-1 @AT@ 18499 @LENGTH@ 2
+------------------DEL Operator@@- @AT@ 18499 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 18500 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 18501 @LENGTH@ 1
+---------------DEL SimpleName@@difference @AT@ 18504 @LENGTH@ 10
+---DEL VariableDeclarationStatement@@int endValue=end.get(field); @AT@ 18526 @LENGTH@ 30
+------DEL PrimitiveType@@int @AT@ 18526 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@endValue=end.get(field) @AT@ 18530 @LENGTH@ 25
+---------DEL SimpleName@@endValue @AT@ 18530 @LENGTH@ 8
+---------DEL MethodInvocation@@end.get(field) @AT@ 18541 @LENGTH@ 14
+------------DEL SimpleName@@Name:end @AT@ 18541 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18545 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18549 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@int startValue=start.get(field); @AT@ 18565 @LENGTH@ 34
+------DEL PrimitiveType@@int @AT@ 18565 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@startValue=start.get(field) @AT@ 18569 @LENGTH@ 29
+---------DEL SimpleName@@startValue @AT@ 18569 @LENGTH@ 10
+---------DEL MethodInvocation@@start.get(field) @AT@ 18582 @LENGTH@ 16
+------------DEL SimpleName@@Name:start @AT@ 18582 @LENGTH@ 5
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18588 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18592 @LENGTH@ 5
+---DEL IfStatement@@InfixExpression:endValue < startValue @AT@ 18608 @LENGTH@ 193
+------DEL InfixExpression@@endValue < startValue @AT@ 18612 @LENGTH@ 21
+---------DEL SimpleName@@endValue @AT@ 18612 @LENGTH@ 8
+---------DEL Operator@@< @AT@ 18620 @LENGTH@ 1
+---------DEL SimpleName@@startValue @AT@ 18623 @LENGTH@ 10
+------DEL VariableDeclarationStatement@@int newdiff=startValue - endValue; @AT@ 18649 @LENGTH@ 36
+---------DEL PrimitiveType@@int @AT@ 18649 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@newdiff=startValue - endValue @AT@ 18653 @LENGTH@ 31
+------------DEL SimpleName@@newdiff @AT@ 18653 @LENGTH@ 7
+------------DEL InfixExpression@@startValue - endValue @AT@ 18663 @LENGTH@ 21
+---------------DEL SimpleName@@startValue @AT@ 18663 @LENGTH@ 10
+---------------DEL Operator@@- @AT@ 18673 @LENGTH@ 1
+---------------DEL SimpleName@@endValue @AT@ 18676 @LENGTH@ 8
+------DEL ExpressionStatement@@MethodInvocation:end.add(field,newdiff) @AT@ 18698 @LENGTH@ 26
+---------DEL MethodInvocation@@end.add(field,newdiff) @AT@ 18698 @LENGTH@ 25
+------------DEL SimpleName@@Name:end @AT@ 18698 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:add:[field, newdiff] @AT@ 18702 @LENGTH@ 21
+---------------DEL SimpleName@@field @AT@ 18707 @LENGTH@ 5
+---------------DEL SimpleName@@newdiff @AT@ 18714 @LENGTH@ 7
+------DEL ReturnStatement@@SimpleName:newdiff @AT@ 18737 @LENGTH@ 15
+---------DEL SimpleName@@newdiff @AT@ 18744 @LENGTH@ 7
+------DEL ReturnStatement@@NumberLiteral:0 @AT@ 18782 @LENGTH@ 9
+---------DEL NumberLiteral@@0 @AT@ 18789 @LENGTH@ 1
+]
+
+CII:
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, MethodInvocation, OP2, OP6)
+OP6:         (DEL, SimpleName, OP5, OP7 OP8 OP9 OP12)
+OP7:            (DEL, SimpleName, OP6, null)
+OP8:            (DEL, SimpleName, OP6, null)
+OP9:            (DEL, QualifiedName, OP6, OP10 OP11)
+OP10:               (DEL, SimpleName, OP9, null)
+OP11:               (DEL, SimpleName, OP9, null)
+OP12:            (DEL, SimpleName, OP6, null)
+
+
+
+
+
+hASList: 
+[INS WhileStatement@@InfixExpression:days < 0 @TO@ MethodDeclaration@@public, static, @@String, MethodName:formatPeriod, @@Argus:long+startMillis+long+endMillis+String+format+boolean+padWithZeros+TimeZone+timezone+ @AT@ 12514 @LENGTH@ 561
+---MOV InfixExpression@@days < 0 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12521 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12545 @LENGTH@ 28
+------INS MethodInvocation@@end.add(Calendar.MONTH,-1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 27
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 3
+---------INS SimpleName@@MethodName:add:[Calendar.MONTH, -1] @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12549 @LENGTH@ 23
+------------INS PrefixExpression@@-1 @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 12569 @LENGTH@ 2
+---------------INS Operator@@- @TO@ PrefixExpression@@-1 @AT@ 12569 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ PrefixExpression@@-1 @AT@ 12570 @LENGTH@ 1
+------------MOV QualifiedName@@Calendar.MINUTE @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 13256 @LENGTH@ 15
+---INS ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12586 @LENGTH@ 52
+------MOV Assignment@@days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @TO@ ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @AT@ 13367 @LENGTH@ 65
+---MOV ExpressionStatement@@Assignment:months-=1 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12931 @LENGTH@ 12
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 13038 @LENGTH@ 27
+------INS MethodInvocation@@end.add(Calendar.MONTH,1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 26
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 3
+---------MOV SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MONTH, months] @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13452 @LENGTH@ 52
+, DEL WhileStatement@@InfixExpression:days < 0 @AT@ 12514 @LENGTH@ 439
+---DEL ExpressionStatement@@Assignment:days+=31 @AT@ 12545 @LENGTH@ 11
+------DEL Assignment@@days+=31 @AT@ 12545 @LENGTH@ 10
+---------DEL SimpleName@@days @AT@ 12545 @LENGTH@ 4
+---------DEL Operator@@+= @AT@ 12549 @LENGTH@ 2
+---------DEL NumberLiteral@@31 @AT@ 12553 @LENGTH@ 2
+, DEL ExpressionStatement@@Assignment:milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 81
+---DEL Assignment@@milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 80
+------DEL SimpleName@@milliseconds @AT@ 13051 @LENGTH@ 12
+------DEL Operator@@-= @AT@ 13063 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13067 @LENGTH@ 64
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MILLISECOND, milliseconds] @AT@ 13067 @LENGTH@ 64
+------------DEL SimpleName@@start @AT@ 13084 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13091 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.MILLISECOND @AT@ 13096 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13096 @LENGTH@ 8
+---------------DEL SimpleName@@MILLISECOND @AT@ 13105 @LENGTH@ 11
+------------DEL SimpleName@@milliseconds @AT@ 13118 @LENGTH@ 12
+, DEL ExpressionStatement@@Assignment:seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 66
+---DEL Assignment@@seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 65
+------DEL SimpleName@@seconds @AT@ 13141 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13148 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13152 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.SECOND, seconds] @AT@ 13152 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13169 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13176 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.SECOND @AT@ 13181 @LENGTH@ 15
+---------------DEL SimpleName@@Calendar @AT@ 13181 @LENGTH@ 8
+---------------DEL SimpleName@@SECOND @AT@ 13190 @LENGTH@ 6
+------------DEL SimpleName@@seconds @AT@ 13198 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 66
+---DEL Assignment@@minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 65
+------DEL SimpleName@@minutes @AT@ 13216 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13223 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13227 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MINUTE, minutes] @AT@ 13227 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13244 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13251 @LENGTH@ 3
+------------DEL SimpleName@@minutes @AT@ 13273 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 67
+---DEL Assignment@@hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 66
+------DEL SimpleName@@hours @AT@ 13291 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13296 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13300 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.HOUR_OF_DAY, hours] @AT@ 13300 @LENGTH@ 57
+------------DEL SimpleName@@start @AT@ 13317 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13324 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.HOUR_OF_DAY @AT@ 13329 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13329 @LENGTH@ 8
+---------------DEL SimpleName@@HOUR_OF_DAY @AT@ 13338 @LENGTH@ 11
+------------DEL SimpleName@@hours @AT@ 13351 @LENGTH@ 5
+, DEL ExpressionStatement@@Assignment:days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @AT@ 13367 @LENGTH@ 66
+, DEL ExpressionStatement@@Assignment:months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 63
+---DEL Assignment@@months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 62
+------DEL SimpleName@@months @AT@ 13442 @LENGTH@ 6
+------DEL Operator@@-= @AT@ 13448 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13452 @LENGTH@ 52
+, DEL ExpressionStatement@@Assignment:years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 60
+---DEL Assignment@@years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 59
+------DEL SimpleName@@years @AT@ 13514 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13519 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13523 @LENGTH@ 50
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.YEAR, years] @AT@ 13523 @LENGTH@ 50
+------------DEL SimpleName@@start @AT@ 13540 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13547 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.YEAR @AT@ 13552 @LENGTH@ 13
+---------------DEL SimpleName@@Calendar @AT@ 13552 @LENGTH@ 8
+---------------DEL SimpleName@@YEAR @AT@ 13561 @LENGTH@ 4
+------------DEL SimpleName@@years @AT@ 13567 @LENGTH@ 5
+, DEL MethodDeclaration@@static, @@int, MethodName:reduceAndCorrect, @@Argus:Calendar+start+Calendar+end+int+field+int+difference+ @AT@ 18388 @LENGTH@ 419
+---DEL Modifier@@static @AT@ 18388 @LENGTH@ 6
+---DEL PrimitiveType@@int @AT@ 18395 @LENGTH@ 3
+---DEL SimpleName@@MethodName:reduceAndCorrect @AT@ 18399 @LENGTH@ 16
+---DEL SingleVariableDeclaration@@Calendar start @AT@ 18416 @LENGTH@ 14
+------DEL SimpleType@@Calendar @AT@ 18416 @LENGTH@ 8
+------DEL SimpleName@@start @AT@ 18425 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@Calendar end @AT@ 18432 @LENGTH@ 12
+------DEL SimpleType@@Calendar @AT@ 18432 @LENGTH@ 8
+------DEL SimpleName@@end @AT@ 18441 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@int field @AT@ 18446 @LENGTH@ 9
+------DEL PrimitiveType@@int @AT@ 18446 @LENGTH@ 3
+------DEL SimpleName@@field @AT@ 18450 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@int difference @AT@ 18457 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 18457 @LENGTH@ 3
+------DEL SimpleName@@difference @AT@ 18461 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 34
+------DEL MethodInvocation@@end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 33
+---------DEL SimpleName@@Name:end @AT@ 18483 @LENGTH@ 3
+---------DEL SimpleName@@MethodName:add:[field, -1 * difference] @AT@ 18487 @LENGTH@ 29
+------------DEL SimpleName@@field @AT@ 18492 @LENGTH@ 5
+------------DEL InfixExpression@@-1 * difference @AT@ 18499 @LENGTH@ 15
+---------------DEL PrefixExpression@@-1 @AT@ 18499 @LENGTH@ 2
+------------------DEL Operator@@- @AT@ 18499 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 18500 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 18501 @LENGTH@ 1
+---------------DEL SimpleName@@difference @AT@ 18504 @LENGTH@ 10
+---DEL VariableDeclarationStatement@@int endValue=end.get(field); @AT@ 18526 @LENGTH@ 30
+------DEL PrimitiveType@@int @AT@ 18526 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@endValue=end.get(field) @AT@ 18530 @LENGTH@ 25
+---------DEL SimpleName@@endValue @AT@ 18530 @LENGTH@ 8
+---------DEL MethodInvocation@@end.get(field) @AT@ 18541 @LENGTH@ 14
+------------DEL SimpleName@@Name:end @AT@ 18541 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18545 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18549 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@int startValue=start.get(field); @AT@ 18565 @LENGTH@ 34
+------DEL PrimitiveType@@int @AT@ 18565 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@startValue=start.get(field) @AT@ 18569 @LENGTH@ 29
+---------DEL SimpleName@@startValue @AT@ 18569 @LENGTH@ 10
+---------DEL MethodInvocation@@start.get(field) @AT@ 18582 @LENGTH@ 16
+------------DEL SimpleName@@Name:start @AT@ 18582 @LENGTH@ 5
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18588 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18592 @LENGTH@ 5
+---DEL IfStatement@@InfixExpression:endValue < startValue @AT@ 18608 @LENGTH@ 193
+------DEL InfixExpression@@endValue < startValue @AT@ 18612 @LENGTH@ 21
+---------DEL SimpleName@@endValue @AT@ 18612 @LENGTH@ 8
+---------DEL Operator@@< @AT@ 18620 @LENGTH@ 1
+---------DEL SimpleName@@startValue @AT@ 18623 @LENGTH@ 10
+------DEL VariableDeclarationStatement@@int newdiff=startValue - endValue; @AT@ 18649 @LENGTH@ 36
+---------DEL PrimitiveType@@int @AT@ 18649 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@newdiff=startValue - endValue @AT@ 18653 @LENGTH@ 31
+------------DEL SimpleName@@newdiff @AT@ 18653 @LENGTH@ 7
+------------DEL InfixExpression@@startValue - endValue @AT@ 18663 @LENGTH@ 21
+---------------DEL SimpleName@@startValue @AT@ 18663 @LENGTH@ 10
+---------------DEL Operator@@- @AT@ 18673 @LENGTH@ 1
+---------------DEL SimpleName@@endValue @AT@ 18676 @LENGTH@ 8
+------DEL ExpressionStatement@@MethodInvocation:end.add(field,newdiff) @AT@ 18698 @LENGTH@ 26
+---------DEL MethodInvocation@@end.add(field,newdiff) @AT@ 18698 @LENGTH@ 25
+------------DEL SimpleName@@Name:end @AT@ 18698 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:add:[field, newdiff] @AT@ 18702 @LENGTH@ 21
+---------------DEL SimpleName@@field @AT@ 18707 @LENGTH@ 5
+---------------DEL SimpleName@@newdiff @AT@ 18714 @LENGTH@ 7
+------DEL ReturnStatement@@SimpleName:newdiff @AT@ 18737 @LENGTH@ 15
+---------DEL SimpleName@@newdiff @AT@ 18744 @LENGTH@ 7
+------DEL ReturnStatement@@NumberLiteral:0 @AT@ 18782 @LENGTH@ 9
+---------DEL NumberLiteral@@0 @AT@ 18789 @LENGTH@ 1
+]
+
+CII:
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, MethodInvocation, OP2, OP6)
+OP6:         (DEL, SimpleName, OP5, OP7 OP8 OP9)
+OP7:            (DEL, SimpleName, OP6, null)
+OP8:            (DEL, SimpleName, OP6, null)
+OP9:            (DEL, SimpleName, OP6, null)
+
+
+
+
+
+hASList: 
+[INS WhileStatement@@InfixExpression:days < 0 @TO@ MethodDeclaration@@public, static, @@String, MethodName:formatPeriod, @@Argus:long+startMillis+long+endMillis+String+format+boolean+padWithZeros+TimeZone+timezone+ @AT@ 12514 @LENGTH@ 561
+---MOV InfixExpression@@days < 0 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12521 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12545 @LENGTH@ 28
+------INS MethodInvocation@@end.add(Calendar.MONTH,-1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 27
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 3
+---------INS SimpleName@@MethodName:add:[Calendar.MONTH, -1] @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12549 @LENGTH@ 23
+------------INS PrefixExpression@@-1 @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 12569 @LENGTH@ 2
+---------------INS Operator@@- @TO@ PrefixExpression@@-1 @AT@ 12569 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ PrefixExpression@@-1 @AT@ 12570 @LENGTH@ 1
+------------MOV QualifiedName@@Calendar.MINUTE @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 13256 @LENGTH@ 15
+---INS ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12586 @LENGTH@ 52
+------MOV Assignment@@days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @TO@ ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @AT@ 13367 @LENGTH@ 65
+---MOV ExpressionStatement@@Assignment:months-=1 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12931 @LENGTH@ 12
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 13038 @LENGTH@ 27
+------INS MethodInvocation@@end.add(Calendar.MONTH,1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 26
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 3
+---------MOV SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MONTH, months] @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13452 @LENGTH@ 52
+, DEL WhileStatement@@InfixExpression:days < 0 @AT@ 12514 @LENGTH@ 439
+---DEL ExpressionStatement@@Assignment:days+=31 @AT@ 12545 @LENGTH@ 11
+------DEL Assignment@@days+=31 @AT@ 12545 @LENGTH@ 10
+---------DEL SimpleName@@days @AT@ 12545 @LENGTH@ 4
+---------DEL Operator@@+= @AT@ 12549 @LENGTH@ 2
+---------DEL NumberLiteral@@31 @AT@ 12553 @LENGTH@ 2
+, DEL ExpressionStatement@@Assignment:milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 81
+---DEL Assignment@@milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 80
+------DEL SimpleName@@milliseconds @AT@ 13051 @LENGTH@ 12
+------DEL Operator@@-= @AT@ 13063 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13067 @LENGTH@ 64
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MILLISECOND, milliseconds] @AT@ 13067 @LENGTH@ 64
+------------DEL SimpleName@@start @AT@ 13084 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13091 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.MILLISECOND @AT@ 13096 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13096 @LENGTH@ 8
+---------------DEL SimpleName@@MILLISECOND @AT@ 13105 @LENGTH@ 11
+------------DEL SimpleName@@milliseconds @AT@ 13118 @LENGTH@ 12
+, DEL ExpressionStatement@@Assignment:seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 66
+---DEL Assignment@@seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 65
+------DEL SimpleName@@seconds @AT@ 13141 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13148 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13152 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.SECOND, seconds] @AT@ 13152 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13169 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13176 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.SECOND @AT@ 13181 @LENGTH@ 15
+---------------DEL SimpleName@@Calendar @AT@ 13181 @LENGTH@ 8
+---------------DEL SimpleName@@SECOND @AT@ 13190 @LENGTH@ 6
+------------DEL SimpleName@@seconds @AT@ 13198 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 66
+---DEL Assignment@@minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 65
+------DEL SimpleName@@minutes @AT@ 13216 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13223 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13227 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MINUTE, minutes] @AT@ 13227 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13244 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13251 @LENGTH@ 3
+------------DEL SimpleName@@minutes @AT@ 13273 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 67
+---DEL Assignment@@hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 66
+------DEL SimpleName@@hours @AT@ 13291 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13296 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13300 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.HOUR_OF_DAY, hours] @AT@ 13300 @LENGTH@ 57
+------------DEL SimpleName@@start @AT@ 13317 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13324 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.HOUR_OF_DAY @AT@ 13329 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13329 @LENGTH@ 8
+---------------DEL SimpleName@@HOUR_OF_DAY @AT@ 13338 @LENGTH@ 11
+------------DEL SimpleName@@hours @AT@ 13351 @LENGTH@ 5
+, DEL ExpressionStatement@@Assignment:days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @AT@ 13367 @LENGTH@ 66
+, DEL ExpressionStatement@@Assignment:months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 63
+---DEL Assignment@@months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 62
+------DEL SimpleName@@months @AT@ 13442 @LENGTH@ 6
+------DEL Operator@@-= @AT@ 13448 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13452 @LENGTH@ 52
+, DEL ExpressionStatement@@Assignment:years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 60
+---DEL Assignment@@years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 59
+------DEL SimpleName@@years @AT@ 13514 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13519 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13523 @LENGTH@ 50
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.YEAR, years] @AT@ 13523 @LENGTH@ 50
+------------DEL SimpleName@@start @AT@ 13540 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13547 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.YEAR @AT@ 13552 @LENGTH@ 13
+---------------DEL SimpleName@@Calendar @AT@ 13552 @LENGTH@ 8
+---------------DEL SimpleName@@YEAR @AT@ 13561 @LENGTH@ 4
+------------DEL SimpleName@@years @AT@ 13567 @LENGTH@ 5
+, DEL MethodDeclaration@@static, @@int, MethodName:reduceAndCorrect, @@Argus:Calendar+start+Calendar+end+int+field+int+difference+ @AT@ 18388 @LENGTH@ 419
+---DEL Modifier@@static @AT@ 18388 @LENGTH@ 6
+---DEL PrimitiveType@@int @AT@ 18395 @LENGTH@ 3
+---DEL SimpleName@@MethodName:reduceAndCorrect @AT@ 18399 @LENGTH@ 16
+---DEL SingleVariableDeclaration@@Calendar start @AT@ 18416 @LENGTH@ 14
+------DEL SimpleType@@Calendar @AT@ 18416 @LENGTH@ 8
+------DEL SimpleName@@start @AT@ 18425 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@Calendar end @AT@ 18432 @LENGTH@ 12
+------DEL SimpleType@@Calendar @AT@ 18432 @LENGTH@ 8
+------DEL SimpleName@@end @AT@ 18441 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@int field @AT@ 18446 @LENGTH@ 9
+------DEL PrimitiveType@@int @AT@ 18446 @LENGTH@ 3
+------DEL SimpleName@@field @AT@ 18450 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@int difference @AT@ 18457 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 18457 @LENGTH@ 3
+------DEL SimpleName@@difference @AT@ 18461 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 34
+------DEL MethodInvocation@@end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 33
+---------DEL SimpleName@@Name:end @AT@ 18483 @LENGTH@ 3
+---------DEL SimpleName@@MethodName:add:[field, -1 * difference] @AT@ 18487 @LENGTH@ 29
+------------DEL SimpleName@@field @AT@ 18492 @LENGTH@ 5
+------------DEL InfixExpression@@-1 * difference @AT@ 18499 @LENGTH@ 15
+---------------DEL PrefixExpression@@-1 @AT@ 18499 @LENGTH@ 2
+------------------DEL Operator@@- @AT@ 18499 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 18500 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 18501 @LENGTH@ 1
+---------------DEL SimpleName@@difference @AT@ 18504 @LENGTH@ 10
+---DEL VariableDeclarationStatement@@int endValue=end.get(field); @AT@ 18526 @LENGTH@ 30
+------DEL PrimitiveType@@int @AT@ 18526 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@endValue=end.get(field) @AT@ 18530 @LENGTH@ 25
+---------DEL SimpleName@@endValue @AT@ 18530 @LENGTH@ 8
+---------DEL MethodInvocation@@end.get(field) @AT@ 18541 @LENGTH@ 14
+------------DEL SimpleName@@Name:end @AT@ 18541 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18545 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18549 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@int startValue=start.get(field); @AT@ 18565 @LENGTH@ 34
+------DEL PrimitiveType@@int @AT@ 18565 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@startValue=start.get(field) @AT@ 18569 @LENGTH@ 29
+---------DEL SimpleName@@startValue @AT@ 18569 @LENGTH@ 10
+---------DEL MethodInvocation@@start.get(field) @AT@ 18582 @LENGTH@ 16
+------------DEL SimpleName@@Name:start @AT@ 18582 @LENGTH@ 5
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18588 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18592 @LENGTH@ 5
+---DEL IfStatement@@InfixExpression:endValue < startValue @AT@ 18608 @LENGTH@ 193
+------DEL InfixExpression@@endValue < startValue @AT@ 18612 @LENGTH@ 21
+---------DEL SimpleName@@endValue @AT@ 18612 @LENGTH@ 8
+---------DEL Operator@@< @AT@ 18620 @LENGTH@ 1
+---------DEL SimpleName@@startValue @AT@ 18623 @LENGTH@ 10
+------DEL VariableDeclarationStatement@@int newdiff=startValue - endValue; @AT@ 18649 @LENGTH@ 36
+---------DEL PrimitiveType@@int @AT@ 18649 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@newdiff=startValue - endValue @AT@ 18653 @LENGTH@ 31
+------------DEL SimpleName@@newdiff @AT@ 18653 @LENGTH@ 7
+------------DEL InfixExpression@@startValue - endValue @AT@ 18663 @LENGTH@ 21
+---------------DEL SimpleName@@startValue @AT@ 18663 @LENGTH@ 10
+---------------DEL Operator@@- @AT@ 18673 @LENGTH@ 1
+---------------DEL SimpleName@@endValue @AT@ 18676 @LENGTH@ 8
+------DEL ExpressionStatement@@MethodInvocation:end.add(field,newdiff) @AT@ 18698 @LENGTH@ 26
+---------DEL MethodInvocation@@end.add(field,newdiff) @AT@ 18698 @LENGTH@ 25
+------------DEL SimpleName@@Name:end @AT@ 18698 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:add:[field, newdiff] @AT@ 18702 @LENGTH@ 21
+---------------DEL SimpleName@@field @AT@ 18707 @LENGTH@ 5
+---------------DEL SimpleName@@newdiff @AT@ 18714 @LENGTH@ 7
+------DEL ReturnStatement@@SimpleName:newdiff @AT@ 18737 @LENGTH@ 15
+---------DEL SimpleName@@newdiff @AT@ 18744 @LENGTH@ 7
+------DEL ReturnStatement@@NumberLiteral:0 @AT@ 18782 @LENGTH@ 9
+---------DEL NumberLiteral@@0 @AT@ 18789 @LENGTH@ 1
+]
+
+CII:
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, MethodInvocation, OP2, OP6)
+OP6:         (DEL, SimpleName, OP5, OP7 OP8 OP9 OP12)
+OP7:            (DEL, SimpleName, OP6, null)
+OP8:            (DEL, SimpleName, OP6, null)
+OP9:            (DEL, QualifiedName, OP6, OP10 OP11)
+OP10:               (DEL, SimpleName, OP9, null)
+OP11:               (DEL, SimpleName, OP9, null)
+OP12:            (DEL, SimpleName, OP6, null)
+
+
+
+
+
+hASList: 
+[INS WhileStatement@@InfixExpression:days < 0 @TO@ MethodDeclaration@@public, static, @@String, MethodName:formatPeriod, @@Argus:long+startMillis+long+endMillis+String+format+boolean+padWithZeros+TimeZone+timezone+ @AT@ 12514 @LENGTH@ 561
+---MOV InfixExpression@@days < 0 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12521 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12545 @LENGTH@ 28
+------INS MethodInvocation@@end.add(Calendar.MONTH,-1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 27
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 3
+---------INS SimpleName@@MethodName:add:[Calendar.MONTH, -1] @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12549 @LENGTH@ 23
+------------INS PrefixExpression@@-1 @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 12569 @LENGTH@ 2
+---------------INS Operator@@- @TO@ PrefixExpression@@-1 @AT@ 12569 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ PrefixExpression@@-1 @AT@ 12570 @LENGTH@ 1
+------------MOV QualifiedName@@Calendar.MINUTE @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 13256 @LENGTH@ 15
+---INS ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12586 @LENGTH@ 52
+------MOV Assignment@@days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @TO@ ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @AT@ 13367 @LENGTH@ 65
+---MOV ExpressionStatement@@Assignment:months-=1 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12931 @LENGTH@ 12
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 13038 @LENGTH@ 27
+------INS MethodInvocation@@end.add(Calendar.MONTH,1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 26
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 3
+---------MOV SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MONTH, months] @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13452 @LENGTH@ 52
+, DEL WhileStatement@@InfixExpression:days < 0 @AT@ 12514 @LENGTH@ 439
+---DEL ExpressionStatement@@Assignment:days+=31 @AT@ 12545 @LENGTH@ 11
+------DEL Assignment@@days+=31 @AT@ 12545 @LENGTH@ 10
+---------DEL SimpleName@@days @AT@ 12545 @LENGTH@ 4
+---------DEL Operator@@+= @AT@ 12549 @LENGTH@ 2
+---------DEL NumberLiteral@@31 @AT@ 12553 @LENGTH@ 2
+, DEL ExpressionStatement@@Assignment:milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 81
+---DEL Assignment@@milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 80
+------DEL SimpleName@@milliseconds @AT@ 13051 @LENGTH@ 12
+------DEL Operator@@-= @AT@ 13063 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13067 @LENGTH@ 64
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MILLISECOND, milliseconds] @AT@ 13067 @LENGTH@ 64
+------------DEL SimpleName@@start @AT@ 13084 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13091 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.MILLISECOND @AT@ 13096 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13096 @LENGTH@ 8
+---------------DEL SimpleName@@MILLISECOND @AT@ 13105 @LENGTH@ 11
+------------DEL SimpleName@@milliseconds @AT@ 13118 @LENGTH@ 12
+, DEL ExpressionStatement@@Assignment:seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 66
+---DEL Assignment@@seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 65
+------DEL SimpleName@@seconds @AT@ 13141 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13148 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13152 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.SECOND, seconds] @AT@ 13152 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13169 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13176 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.SECOND @AT@ 13181 @LENGTH@ 15
+---------------DEL SimpleName@@Calendar @AT@ 13181 @LENGTH@ 8
+---------------DEL SimpleName@@SECOND @AT@ 13190 @LENGTH@ 6
+------------DEL SimpleName@@seconds @AT@ 13198 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 66
+---DEL Assignment@@minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 65
+------DEL SimpleName@@minutes @AT@ 13216 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13223 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13227 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MINUTE, minutes] @AT@ 13227 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13244 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13251 @LENGTH@ 3
+------------DEL SimpleName@@minutes @AT@ 13273 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 67
+---DEL Assignment@@hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 66
+------DEL SimpleName@@hours @AT@ 13291 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13296 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13300 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.HOUR_OF_DAY, hours] @AT@ 13300 @LENGTH@ 57
+------------DEL SimpleName@@start @AT@ 13317 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13324 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.HOUR_OF_DAY @AT@ 13329 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13329 @LENGTH@ 8
+---------------DEL SimpleName@@HOUR_OF_DAY @AT@ 13338 @LENGTH@ 11
+------------DEL SimpleName@@hours @AT@ 13351 @LENGTH@ 5
+, DEL ExpressionStatement@@Assignment:days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @AT@ 13367 @LENGTH@ 66
+, DEL ExpressionStatement@@Assignment:months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 63
+---DEL Assignment@@months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 62
+------DEL SimpleName@@months @AT@ 13442 @LENGTH@ 6
+------DEL Operator@@-= @AT@ 13448 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13452 @LENGTH@ 52
+, DEL ExpressionStatement@@Assignment:years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 60
+---DEL Assignment@@years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 59
+------DEL SimpleName@@years @AT@ 13514 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13519 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13523 @LENGTH@ 50
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.YEAR, years] @AT@ 13523 @LENGTH@ 50
+------------DEL SimpleName@@start @AT@ 13540 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13547 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.YEAR @AT@ 13552 @LENGTH@ 13
+---------------DEL SimpleName@@Calendar @AT@ 13552 @LENGTH@ 8
+---------------DEL SimpleName@@YEAR @AT@ 13561 @LENGTH@ 4
+------------DEL SimpleName@@years @AT@ 13567 @LENGTH@ 5
+, DEL MethodDeclaration@@static, @@int, MethodName:reduceAndCorrect, @@Argus:Calendar+start+Calendar+end+int+field+int+difference+ @AT@ 18388 @LENGTH@ 419
+---DEL Modifier@@static @AT@ 18388 @LENGTH@ 6
+---DEL PrimitiveType@@int @AT@ 18395 @LENGTH@ 3
+---DEL SimpleName@@MethodName:reduceAndCorrect @AT@ 18399 @LENGTH@ 16
+---DEL SingleVariableDeclaration@@Calendar start @AT@ 18416 @LENGTH@ 14
+------DEL SimpleType@@Calendar @AT@ 18416 @LENGTH@ 8
+------DEL SimpleName@@start @AT@ 18425 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@Calendar end @AT@ 18432 @LENGTH@ 12
+------DEL SimpleType@@Calendar @AT@ 18432 @LENGTH@ 8
+------DEL SimpleName@@end @AT@ 18441 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@int field @AT@ 18446 @LENGTH@ 9
+------DEL PrimitiveType@@int @AT@ 18446 @LENGTH@ 3
+------DEL SimpleName@@field @AT@ 18450 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@int difference @AT@ 18457 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 18457 @LENGTH@ 3
+------DEL SimpleName@@difference @AT@ 18461 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 34
+------DEL MethodInvocation@@end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 33
+---------DEL SimpleName@@Name:end @AT@ 18483 @LENGTH@ 3
+---------DEL SimpleName@@MethodName:add:[field, -1 * difference] @AT@ 18487 @LENGTH@ 29
+------------DEL SimpleName@@field @AT@ 18492 @LENGTH@ 5
+------------DEL InfixExpression@@-1 * difference @AT@ 18499 @LENGTH@ 15
+---------------DEL PrefixExpression@@-1 @AT@ 18499 @LENGTH@ 2
+------------------DEL Operator@@- @AT@ 18499 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 18500 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 18501 @LENGTH@ 1
+---------------DEL SimpleName@@difference @AT@ 18504 @LENGTH@ 10
+---DEL VariableDeclarationStatement@@int endValue=end.get(field); @AT@ 18526 @LENGTH@ 30
+------DEL PrimitiveType@@int @AT@ 18526 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@endValue=end.get(field) @AT@ 18530 @LENGTH@ 25
+---------DEL SimpleName@@endValue @AT@ 18530 @LENGTH@ 8
+---------DEL MethodInvocation@@end.get(field) @AT@ 18541 @LENGTH@ 14
+------------DEL SimpleName@@Name:end @AT@ 18541 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18545 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18549 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@int startValue=start.get(field); @AT@ 18565 @LENGTH@ 34
+------DEL PrimitiveType@@int @AT@ 18565 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@startValue=start.get(field) @AT@ 18569 @LENGTH@ 29
+---------DEL SimpleName@@startValue @AT@ 18569 @LENGTH@ 10
+---------DEL MethodInvocation@@start.get(field) @AT@ 18582 @LENGTH@ 16
+------------DEL SimpleName@@Name:start @AT@ 18582 @LENGTH@ 5
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18588 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18592 @LENGTH@ 5
+---DEL IfStatement@@InfixExpression:endValue < startValue @AT@ 18608 @LENGTH@ 193
+------DEL InfixExpression@@endValue < startValue @AT@ 18612 @LENGTH@ 21
+---------DEL SimpleName@@endValue @AT@ 18612 @LENGTH@ 8
+---------DEL Operator@@< @AT@ 18620 @LENGTH@ 1
+---------DEL SimpleName@@startValue @AT@ 18623 @LENGTH@ 10
+------DEL VariableDeclarationStatement@@int newdiff=startValue - endValue; @AT@ 18649 @LENGTH@ 36
+---------DEL PrimitiveType@@int @AT@ 18649 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@newdiff=startValue - endValue @AT@ 18653 @LENGTH@ 31
+------------DEL SimpleName@@newdiff @AT@ 18653 @LENGTH@ 7
+------------DEL InfixExpression@@startValue - endValue @AT@ 18663 @LENGTH@ 21
+---------------DEL SimpleName@@startValue @AT@ 18663 @LENGTH@ 10
+---------------DEL Operator@@- @AT@ 18673 @LENGTH@ 1
+---------------DEL SimpleName@@endValue @AT@ 18676 @LENGTH@ 8
+------DEL ExpressionStatement@@MethodInvocation:end.add(field,newdiff) @AT@ 18698 @LENGTH@ 26
+---------DEL MethodInvocation@@end.add(field,newdiff) @AT@ 18698 @LENGTH@ 25
+------------DEL SimpleName@@Name:end @AT@ 18698 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:add:[field, newdiff] @AT@ 18702 @LENGTH@ 21
+---------------DEL SimpleName@@field @AT@ 18707 @LENGTH@ 5
+---------------DEL SimpleName@@newdiff @AT@ 18714 @LENGTH@ 7
+------DEL ReturnStatement@@SimpleName:newdiff @AT@ 18737 @LENGTH@ 15
+---------DEL SimpleName@@newdiff @AT@ 18744 @LENGTH@ 7
+------DEL ReturnStatement@@NumberLiteral:0 @AT@ 18782 @LENGTH@ 9
+---------DEL NumberLiteral@@0 @AT@ 18789 @LENGTH@ 1
+]
+
+CII:
+OP1:(DEL, ExpressionStatement, null, null)
+
+
+
+
+
+hASList: 
+[INS WhileStatement@@InfixExpression:days < 0 @TO@ MethodDeclaration@@public, static, @@String, MethodName:formatPeriod, @@Argus:long+startMillis+long+endMillis+String+format+boolean+padWithZeros+TimeZone+timezone+ @AT@ 12514 @LENGTH@ 561
+---MOV InfixExpression@@days < 0 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12521 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12545 @LENGTH@ 28
+------INS MethodInvocation@@end.add(Calendar.MONTH,-1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 27
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 3
+---------INS SimpleName@@MethodName:add:[Calendar.MONTH, -1] @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12549 @LENGTH@ 23
+------------INS PrefixExpression@@-1 @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 12569 @LENGTH@ 2
+---------------INS Operator@@- @TO@ PrefixExpression@@-1 @AT@ 12569 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ PrefixExpression@@-1 @AT@ 12570 @LENGTH@ 1
+------------MOV QualifiedName@@Calendar.MINUTE @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 13256 @LENGTH@ 15
+---INS ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12586 @LENGTH@ 52
+------MOV Assignment@@days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @TO@ ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @AT@ 13367 @LENGTH@ 65
+---MOV ExpressionStatement@@Assignment:months-=1 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12931 @LENGTH@ 12
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 13038 @LENGTH@ 27
+------INS MethodInvocation@@end.add(Calendar.MONTH,1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 26
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 3
+---------MOV SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MONTH, months] @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13452 @LENGTH@ 52
+, DEL WhileStatement@@InfixExpression:days < 0 @AT@ 12514 @LENGTH@ 439
+---DEL ExpressionStatement@@Assignment:days+=31 @AT@ 12545 @LENGTH@ 11
+------DEL Assignment@@days+=31 @AT@ 12545 @LENGTH@ 10
+---------DEL SimpleName@@days @AT@ 12545 @LENGTH@ 4
+---------DEL Operator@@+= @AT@ 12549 @LENGTH@ 2
+---------DEL NumberLiteral@@31 @AT@ 12553 @LENGTH@ 2
+, DEL ExpressionStatement@@Assignment:milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 81
+---DEL Assignment@@milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 80
+------DEL SimpleName@@milliseconds @AT@ 13051 @LENGTH@ 12
+------DEL Operator@@-= @AT@ 13063 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13067 @LENGTH@ 64
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MILLISECOND, milliseconds] @AT@ 13067 @LENGTH@ 64
+------------DEL SimpleName@@start @AT@ 13084 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13091 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.MILLISECOND @AT@ 13096 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13096 @LENGTH@ 8
+---------------DEL SimpleName@@MILLISECOND @AT@ 13105 @LENGTH@ 11
+------------DEL SimpleName@@milliseconds @AT@ 13118 @LENGTH@ 12
+, DEL ExpressionStatement@@Assignment:seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 66
+---DEL Assignment@@seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 65
+------DEL SimpleName@@seconds @AT@ 13141 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13148 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13152 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.SECOND, seconds] @AT@ 13152 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13169 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13176 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.SECOND @AT@ 13181 @LENGTH@ 15
+---------------DEL SimpleName@@Calendar @AT@ 13181 @LENGTH@ 8
+---------------DEL SimpleName@@SECOND @AT@ 13190 @LENGTH@ 6
+------------DEL SimpleName@@seconds @AT@ 13198 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 66
+---DEL Assignment@@minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 65
+------DEL SimpleName@@minutes @AT@ 13216 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13223 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13227 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MINUTE, minutes] @AT@ 13227 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13244 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13251 @LENGTH@ 3
+------------DEL SimpleName@@minutes @AT@ 13273 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 67
+---DEL Assignment@@hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 66
+------DEL SimpleName@@hours @AT@ 13291 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13296 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13300 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.HOUR_OF_DAY, hours] @AT@ 13300 @LENGTH@ 57
+------------DEL SimpleName@@start @AT@ 13317 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13324 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.HOUR_OF_DAY @AT@ 13329 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13329 @LENGTH@ 8
+---------------DEL SimpleName@@HOUR_OF_DAY @AT@ 13338 @LENGTH@ 11
+------------DEL SimpleName@@hours @AT@ 13351 @LENGTH@ 5
+, DEL ExpressionStatement@@Assignment:days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @AT@ 13367 @LENGTH@ 66
+, DEL ExpressionStatement@@Assignment:months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 63
+---DEL Assignment@@months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 62
+------DEL SimpleName@@months @AT@ 13442 @LENGTH@ 6
+------DEL Operator@@-= @AT@ 13448 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13452 @LENGTH@ 52
+, DEL ExpressionStatement@@Assignment:years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 60
+---DEL Assignment@@years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 59
+------DEL SimpleName@@years @AT@ 13514 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13519 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13523 @LENGTH@ 50
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.YEAR, years] @AT@ 13523 @LENGTH@ 50
+------------DEL SimpleName@@start @AT@ 13540 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13547 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.YEAR @AT@ 13552 @LENGTH@ 13
+---------------DEL SimpleName@@Calendar @AT@ 13552 @LENGTH@ 8
+---------------DEL SimpleName@@YEAR @AT@ 13561 @LENGTH@ 4
+------------DEL SimpleName@@years @AT@ 13567 @LENGTH@ 5
+, DEL MethodDeclaration@@static, @@int, MethodName:reduceAndCorrect, @@Argus:Calendar+start+Calendar+end+int+field+int+difference+ @AT@ 18388 @LENGTH@ 419
+---DEL Modifier@@static @AT@ 18388 @LENGTH@ 6
+---DEL PrimitiveType@@int @AT@ 18395 @LENGTH@ 3
+---DEL SimpleName@@MethodName:reduceAndCorrect @AT@ 18399 @LENGTH@ 16
+---DEL SingleVariableDeclaration@@Calendar start @AT@ 18416 @LENGTH@ 14
+------DEL SimpleType@@Calendar @AT@ 18416 @LENGTH@ 8
+------DEL SimpleName@@start @AT@ 18425 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@Calendar end @AT@ 18432 @LENGTH@ 12
+------DEL SimpleType@@Calendar @AT@ 18432 @LENGTH@ 8
+------DEL SimpleName@@end @AT@ 18441 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@int field @AT@ 18446 @LENGTH@ 9
+------DEL PrimitiveType@@int @AT@ 18446 @LENGTH@ 3
+------DEL SimpleName@@field @AT@ 18450 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@int difference @AT@ 18457 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 18457 @LENGTH@ 3
+------DEL SimpleName@@difference @AT@ 18461 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 34
+------DEL MethodInvocation@@end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 33
+---------DEL SimpleName@@Name:end @AT@ 18483 @LENGTH@ 3
+---------DEL SimpleName@@MethodName:add:[field, -1 * difference] @AT@ 18487 @LENGTH@ 29
+------------DEL SimpleName@@field @AT@ 18492 @LENGTH@ 5
+------------DEL InfixExpression@@-1 * difference @AT@ 18499 @LENGTH@ 15
+---------------DEL PrefixExpression@@-1 @AT@ 18499 @LENGTH@ 2
+------------------DEL Operator@@- @AT@ 18499 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 18500 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 18501 @LENGTH@ 1
+---------------DEL SimpleName@@difference @AT@ 18504 @LENGTH@ 10
+---DEL VariableDeclarationStatement@@int endValue=end.get(field); @AT@ 18526 @LENGTH@ 30
+------DEL PrimitiveType@@int @AT@ 18526 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@endValue=end.get(field) @AT@ 18530 @LENGTH@ 25
+---------DEL SimpleName@@endValue @AT@ 18530 @LENGTH@ 8
+---------DEL MethodInvocation@@end.get(field) @AT@ 18541 @LENGTH@ 14
+------------DEL SimpleName@@Name:end @AT@ 18541 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18545 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18549 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@int startValue=start.get(field); @AT@ 18565 @LENGTH@ 34
+------DEL PrimitiveType@@int @AT@ 18565 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@startValue=start.get(field) @AT@ 18569 @LENGTH@ 29
+---------DEL SimpleName@@startValue @AT@ 18569 @LENGTH@ 10
+---------DEL MethodInvocation@@start.get(field) @AT@ 18582 @LENGTH@ 16
+------------DEL SimpleName@@Name:start @AT@ 18582 @LENGTH@ 5
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18588 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18592 @LENGTH@ 5
+---DEL IfStatement@@InfixExpression:endValue < startValue @AT@ 18608 @LENGTH@ 193
+------DEL InfixExpression@@endValue < startValue @AT@ 18612 @LENGTH@ 21
+---------DEL SimpleName@@endValue @AT@ 18612 @LENGTH@ 8
+---------DEL Operator@@< @AT@ 18620 @LENGTH@ 1
+---------DEL SimpleName@@startValue @AT@ 18623 @LENGTH@ 10
+------DEL VariableDeclarationStatement@@int newdiff=startValue - endValue; @AT@ 18649 @LENGTH@ 36
+---------DEL PrimitiveType@@int @AT@ 18649 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@newdiff=startValue - endValue @AT@ 18653 @LENGTH@ 31
+------------DEL SimpleName@@newdiff @AT@ 18653 @LENGTH@ 7
+------------DEL InfixExpression@@startValue - endValue @AT@ 18663 @LENGTH@ 21
+---------------DEL SimpleName@@startValue @AT@ 18663 @LENGTH@ 10
+---------------DEL Operator@@- @AT@ 18673 @LENGTH@ 1
+---------------DEL SimpleName@@endValue @AT@ 18676 @LENGTH@ 8
+------DEL ExpressionStatement@@MethodInvocation:end.add(field,newdiff) @AT@ 18698 @LENGTH@ 26
+---------DEL MethodInvocation@@end.add(field,newdiff) @AT@ 18698 @LENGTH@ 25
+------------DEL SimpleName@@Name:end @AT@ 18698 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:add:[field, newdiff] @AT@ 18702 @LENGTH@ 21
+---------------DEL SimpleName@@field @AT@ 18707 @LENGTH@ 5
+---------------DEL SimpleName@@newdiff @AT@ 18714 @LENGTH@ 7
+------DEL ReturnStatement@@SimpleName:newdiff @AT@ 18737 @LENGTH@ 15
+---------DEL SimpleName@@newdiff @AT@ 18744 @LENGTH@ 7
+------DEL ReturnStatement@@NumberLiteral:0 @AT@ 18782 @LENGTH@ 9
+---------DEL NumberLiteral@@0 @AT@ 18789 @LENGTH@ 1
+]
+
+CII:
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, MethodInvocation, OP2, null)
+
+
+
+
+
+hASList: 
+[INS WhileStatement@@InfixExpression:days < 0 @TO@ MethodDeclaration@@public, static, @@String, MethodName:formatPeriod, @@Argus:long+startMillis+long+endMillis+String+format+boolean+padWithZeros+TimeZone+timezone+ @AT@ 12514 @LENGTH@ 561
+---MOV InfixExpression@@days < 0 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12521 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12545 @LENGTH@ 28
+------INS MethodInvocation@@end.add(Calendar.MONTH,-1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 27
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 3
+---------INS SimpleName@@MethodName:add:[Calendar.MONTH, -1] @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12549 @LENGTH@ 23
+------------INS PrefixExpression@@-1 @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 12569 @LENGTH@ 2
+---------------INS Operator@@- @TO@ PrefixExpression@@-1 @AT@ 12569 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ PrefixExpression@@-1 @AT@ 12570 @LENGTH@ 1
+------------MOV QualifiedName@@Calendar.MINUTE @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 13256 @LENGTH@ 15
+---INS ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12586 @LENGTH@ 52
+------MOV Assignment@@days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @TO@ ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @AT@ 13367 @LENGTH@ 65
+---MOV ExpressionStatement@@Assignment:months-=1 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12931 @LENGTH@ 12
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 13038 @LENGTH@ 27
+------INS MethodInvocation@@end.add(Calendar.MONTH,1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 26
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 3
+---------MOV SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MONTH, months] @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13452 @LENGTH@ 52
+, DEL WhileStatement@@InfixExpression:days < 0 @AT@ 12514 @LENGTH@ 439
+---DEL ExpressionStatement@@Assignment:days+=31 @AT@ 12545 @LENGTH@ 11
+------DEL Assignment@@days+=31 @AT@ 12545 @LENGTH@ 10
+---------DEL SimpleName@@days @AT@ 12545 @LENGTH@ 4
+---------DEL Operator@@+= @AT@ 12549 @LENGTH@ 2
+---------DEL NumberLiteral@@31 @AT@ 12553 @LENGTH@ 2
+, DEL ExpressionStatement@@Assignment:milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 81
+---DEL Assignment@@milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 80
+------DEL SimpleName@@milliseconds @AT@ 13051 @LENGTH@ 12
+------DEL Operator@@-= @AT@ 13063 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13067 @LENGTH@ 64
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MILLISECOND, milliseconds] @AT@ 13067 @LENGTH@ 64
+------------DEL SimpleName@@start @AT@ 13084 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13091 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.MILLISECOND @AT@ 13096 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13096 @LENGTH@ 8
+---------------DEL SimpleName@@MILLISECOND @AT@ 13105 @LENGTH@ 11
+------------DEL SimpleName@@milliseconds @AT@ 13118 @LENGTH@ 12
+, DEL ExpressionStatement@@Assignment:seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 66
+---DEL Assignment@@seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 65
+------DEL SimpleName@@seconds @AT@ 13141 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13148 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13152 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.SECOND, seconds] @AT@ 13152 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13169 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13176 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.SECOND @AT@ 13181 @LENGTH@ 15
+---------------DEL SimpleName@@Calendar @AT@ 13181 @LENGTH@ 8
+---------------DEL SimpleName@@SECOND @AT@ 13190 @LENGTH@ 6
+------------DEL SimpleName@@seconds @AT@ 13198 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 66
+---DEL Assignment@@minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 65
+------DEL SimpleName@@minutes @AT@ 13216 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13223 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13227 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MINUTE, minutes] @AT@ 13227 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13244 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13251 @LENGTH@ 3
+------------DEL SimpleName@@minutes @AT@ 13273 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 67
+---DEL Assignment@@hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 66
+------DEL SimpleName@@hours @AT@ 13291 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13296 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13300 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.HOUR_OF_DAY, hours] @AT@ 13300 @LENGTH@ 57
+------------DEL SimpleName@@start @AT@ 13317 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13324 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.HOUR_OF_DAY @AT@ 13329 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13329 @LENGTH@ 8
+---------------DEL SimpleName@@HOUR_OF_DAY @AT@ 13338 @LENGTH@ 11
+------------DEL SimpleName@@hours @AT@ 13351 @LENGTH@ 5
+, DEL ExpressionStatement@@Assignment:days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @AT@ 13367 @LENGTH@ 66
+, DEL ExpressionStatement@@Assignment:months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 63
+---DEL Assignment@@months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 62
+------DEL SimpleName@@months @AT@ 13442 @LENGTH@ 6
+------DEL Operator@@-= @AT@ 13448 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13452 @LENGTH@ 52
+, DEL ExpressionStatement@@Assignment:years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 60
+---DEL Assignment@@years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 59
+------DEL SimpleName@@years @AT@ 13514 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13519 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13523 @LENGTH@ 50
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.YEAR, years] @AT@ 13523 @LENGTH@ 50
+------------DEL SimpleName@@start @AT@ 13540 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13547 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.YEAR @AT@ 13552 @LENGTH@ 13
+---------------DEL SimpleName@@Calendar @AT@ 13552 @LENGTH@ 8
+---------------DEL SimpleName@@YEAR @AT@ 13561 @LENGTH@ 4
+------------DEL SimpleName@@years @AT@ 13567 @LENGTH@ 5
+, DEL MethodDeclaration@@static, @@int, MethodName:reduceAndCorrect, @@Argus:Calendar+start+Calendar+end+int+field+int+difference+ @AT@ 18388 @LENGTH@ 419
+---DEL Modifier@@static @AT@ 18388 @LENGTH@ 6
+---DEL PrimitiveType@@int @AT@ 18395 @LENGTH@ 3
+---DEL SimpleName@@MethodName:reduceAndCorrect @AT@ 18399 @LENGTH@ 16
+---DEL SingleVariableDeclaration@@Calendar start @AT@ 18416 @LENGTH@ 14
+------DEL SimpleType@@Calendar @AT@ 18416 @LENGTH@ 8
+------DEL SimpleName@@start @AT@ 18425 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@Calendar end @AT@ 18432 @LENGTH@ 12
+------DEL SimpleType@@Calendar @AT@ 18432 @LENGTH@ 8
+------DEL SimpleName@@end @AT@ 18441 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@int field @AT@ 18446 @LENGTH@ 9
+------DEL PrimitiveType@@int @AT@ 18446 @LENGTH@ 3
+------DEL SimpleName@@field @AT@ 18450 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@int difference @AT@ 18457 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 18457 @LENGTH@ 3
+------DEL SimpleName@@difference @AT@ 18461 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 34
+------DEL MethodInvocation@@end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 33
+---------DEL SimpleName@@Name:end @AT@ 18483 @LENGTH@ 3
+---------DEL SimpleName@@MethodName:add:[field, -1 * difference] @AT@ 18487 @LENGTH@ 29
+------------DEL SimpleName@@field @AT@ 18492 @LENGTH@ 5
+------------DEL InfixExpression@@-1 * difference @AT@ 18499 @LENGTH@ 15
+---------------DEL PrefixExpression@@-1 @AT@ 18499 @LENGTH@ 2
+------------------DEL Operator@@- @AT@ 18499 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 18500 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 18501 @LENGTH@ 1
+---------------DEL SimpleName@@difference @AT@ 18504 @LENGTH@ 10
+---DEL VariableDeclarationStatement@@int endValue=end.get(field); @AT@ 18526 @LENGTH@ 30
+------DEL PrimitiveType@@int @AT@ 18526 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@endValue=end.get(field) @AT@ 18530 @LENGTH@ 25
+---------DEL SimpleName@@endValue @AT@ 18530 @LENGTH@ 8
+---------DEL MethodInvocation@@end.get(field) @AT@ 18541 @LENGTH@ 14
+------------DEL SimpleName@@Name:end @AT@ 18541 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18545 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18549 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@int startValue=start.get(field); @AT@ 18565 @LENGTH@ 34
+------DEL PrimitiveType@@int @AT@ 18565 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@startValue=start.get(field) @AT@ 18569 @LENGTH@ 29
+---------DEL SimpleName@@startValue @AT@ 18569 @LENGTH@ 10
+---------DEL MethodInvocation@@start.get(field) @AT@ 18582 @LENGTH@ 16
+------------DEL SimpleName@@Name:start @AT@ 18582 @LENGTH@ 5
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18588 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18592 @LENGTH@ 5
+---DEL IfStatement@@InfixExpression:endValue < startValue @AT@ 18608 @LENGTH@ 193
+------DEL InfixExpression@@endValue < startValue @AT@ 18612 @LENGTH@ 21
+---------DEL SimpleName@@endValue @AT@ 18612 @LENGTH@ 8
+---------DEL Operator@@< @AT@ 18620 @LENGTH@ 1
+---------DEL SimpleName@@startValue @AT@ 18623 @LENGTH@ 10
+------DEL VariableDeclarationStatement@@int newdiff=startValue - endValue; @AT@ 18649 @LENGTH@ 36
+---------DEL PrimitiveType@@int @AT@ 18649 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@newdiff=startValue - endValue @AT@ 18653 @LENGTH@ 31
+------------DEL SimpleName@@newdiff @AT@ 18653 @LENGTH@ 7
+------------DEL InfixExpression@@startValue - endValue @AT@ 18663 @LENGTH@ 21
+---------------DEL SimpleName@@startValue @AT@ 18663 @LENGTH@ 10
+---------------DEL Operator@@- @AT@ 18673 @LENGTH@ 1
+---------------DEL SimpleName@@endValue @AT@ 18676 @LENGTH@ 8
+------DEL ExpressionStatement@@MethodInvocation:end.add(field,newdiff) @AT@ 18698 @LENGTH@ 26
+---------DEL MethodInvocation@@end.add(field,newdiff) @AT@ 18698 @LENGTH@ 25
+------------DEL SimpleName@@Name:end @AT@ 18698 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:add:[field, newdiff] @AT@ 18702 @LENGTH@ 21
+---------------DEL SimpleName@@field @AT@ 18707 @LENGTH@ 5
+---------------DEL SimpleName@@newdiff @AT@ 18714 @LENGTH@ 7
+------DEL ReturnStatement@@SimpleName:newdiff @AT@ 18737 @LENGTH@ 15
+---------DEL SimpleName@@newdiff @AT@ 18744 @LENGTH@ 7
+------DEL ReturnStatement@@NumberLiteral:0 @AT@ 18782 @LENGTH@ 9
+---------DEL NumberLiteral@@0 @AT@ 18789 @LENGTH@ 1
+]
+
+CII:
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, MethodInvocation, OP2, OP6)
+OP6:         (DEL, SimpleName, OP5, OP7 OP8 OP9 OP12)
+OP7:            (DEL, SimpleName, OP6, null)
+OP8:            (DEL, SimpleName, OP6, null)
+OP9:            (DEL, QualifiedName, OP6, OP10 OP11)
+OP10:               (DEL, SimpleName, OP9, null)
+OP11:               (DEL, SimpleName, OP9, null)
+OP12:            (DEL, SimpleName, OP6, null)
+
+
+
+
+
+hASList: 
+[INS WhileStatement@@InfixExpression:days < 0 @TO@ MethodDeclaration@@public, static, @@String, MethodName:formatPeriod, @@Argus:long+startMillis+long+endMillis+String+format+boolean+padWithZeros+TimeZone+timezone+ @AT@ 12514 @LENGTH@ 561
+---MOV InfixExpression@@days < 0 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12521 @LENGTH@ 8
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12545 @LENGTH@ 28
+------INS MethodInvocation@@end.add(Calendar.MONTH,-1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 27
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12545 @LENGTH@ 3
+---------INS SimpleName@@MethodName:add:[Calendar.MONTH, -1] @TO@ MethodInvocation@@end.add(Calendar.MONTH,-1) @AT@ 12549 @LENGTH@ 23
+------------INS PrefixExpression@@-1 @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 12569 @LENGTH@ 2
+---------------INS Operator@@- @TO@ PrefixExpression@@-1 @AT@ 12569 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ PrefixExpression@@-1 @AT@ 12570 @LENGTH@ 1
+------------MOV QualifiedName@@Calendar.MINUTE @TO@ SimpleName@@MethodName:add:[Calendar.MONTH, -1] @AT@ 13256 @LENGTH@ 15
+---INS ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12586 @LENGTH@ 52
+------MOV Assignment@@days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @TO@ ExpressionStatement@@Assignment:days+=end.getActualMaximum(Calendar.DAY_OF_MONTH) @AT@ 13367 @LENGTH@ 65
+---MOV ExpressionStatement@@Assignment:months-=1 @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 12931 @LENGTH@ 12
+---INS ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @TO@ WhileStatement@@InfixExpression:days < 0 @AT@ 13038 @LENGTH@ 27
+------INS MethodInvocation@@end.add(Calendar.MONTH,1) @TO@ ExpressionStatement@@MethodInvocation:end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 26
+---------INS SimpleName@@Name:end @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13038 @LENGTH@ 3
+---------MOV SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MONTH, months] @TO@ MethodInvocation@@end.add(Calendar.MONTH,1) @AT@ 13452 @LENGTH@ 52
+, DEL WhileStatement@@InfixExpression:days < 0 @AT@ 12514 @LENGTH@ 439
+---DEL ExpressionStatement@@Assignment:days+=31 @AT@ 12545 @LENGTH@ 11
+------DEL Assignment@@days+=31 @AT@ 12545 @LENGTH@ 10
+---------DEL SimpleName@@days @AT@ 12545 @LENGTH@ 4
+---------DEL Operator@@+= @AT@ 12549 @LENGTH@ 2
+---------DEL NumberLiteral@@31 @AT@ 12553 @LENGTH@ 2
+, DEL ExpressionStatement@@Assignment:milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 81
+---DEL Assignment@@milliseconds-=reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13051 @LENGTH@ 80
+------DEL SimpleName@@milliseconds @AT@ 13051 @LENGTH@ 12
+------DEL Operator@@-= @AT@ 13063 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MILLISECOND,milliseconds) @AT@ 13067 @LENGTH@ 64
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MILLISECOND, milliseconds] @AT@ 13067 @LENGTH@ 64
+------------DEL SimpleName@@start @AT@ 13084 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13091 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.MILLISECOND @AT@ 13096 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13096 @LENGTH@ 8
+---------------DEL SimpleName@@MILLISECOND @AT@ 13105 @LENGTH@ 11
+------------DEL SimpleName@@milliseconds @AT@ 13118 @LENGTH@ 12
+, DEL ExpressionStatement@@Assignment:seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 66
+---DEL Assignment@@seconds-=reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13141 @LENGTH@ 65
+------DEL SimpleName@@seconds @AT@ 13141 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13148 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.SECOND,seconds) @AT@ 13152 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.SECOND, seconds] @AT@ 13152 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13169 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13176 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.SECOND @AT@ 13181 @LENGTH@ 15
+---------------DEL SimpleName@@Calendar @AT@ 13181 @LENGTH@ 8
+---------------DEL SimpleName@@SECOND @AT@ 13190 @LENGTH@ 6
+------------DEL SimpleName@@seconds @AT@ 13198 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 66
+---DEL Assignment@@minutes-=reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13216 @LENGTH@ 65
+------DEL SimpleName@@minutes @AT@ 13216 @LENGTH@ 7
+------DEL Operator@@-= @AT@ 13223 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MINUTE,minutes) @AT@ 13227 @LENGTH@ 54
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.MINUTE, minutes] @AT@ 13227 @LENGTH@ 54
+------------DEL SimpleName@@start @AT@ 13244 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13251 @LENGTH@ 3
+------------DEL SimpleName@@minutes @AT@ 13273 @LENGTH@ 7
+, DEL ExpressionStatement@@Assignment:hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 67
+---DEL Assignment@@hours-=reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13291 @LENGTH@ 66
+------DEL SimpleName@@hours @AT@ 13291 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13296 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.HOUR_OF_DAY,hours) @AT@ 13300 @LENGTH@ 57
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.HOUR_OF_DAY, hours] @AT@ 13300 @LENGTH@ 57
+------------DEL SimpleName@@start @AT@ 13317 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13324 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.HOUR_OF_DAY @AT@ 13329 @LENGTH@ 20
+---------------DEL SimpleName@@Calendar @AT@ 13329 @LENGTH@ 8
+---------------DEL SimpleName@@HOUR_OF_DAY @AT@ 13338 @LENGTH@ 11
+------------DEL SimpleName@@hours @AT@ 13351 @LENGTH@ 5
+, DEL ExpressionStatement@@Assignment:days-=reduceAndCorrect(start,end,Calendar.DAY_OF_MONTH,days) @AT@ 13367 @LENGTH@ 66
+, DEL ExpressionStatement@@Assignment:months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 63
+---DEL Assignment@@months-=reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13442 @LENGTH@ 62
+------DEL SimpleName@@months @AT@ 13442 @LENGTH@ 6
+------DEL Operator@@-= @AT@ 13448 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.MONTH,months) @AT@ 13452 @LENGTH@ 52
+, DEL ExpressionStatement@@Assignment:years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 60
+---DEL Assignment@@years-=reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13514 @LENGTH@ 59
+------DEL SimpleName@@years @AT@ 13514 @LENGTH@ 5
+------DEL Operator@@-= @AT@ 13519 @LENGTH@ 2
+------DEL MethodInvocation@@reduceAndCorrect(start,end,Calendar.YEAR,years) @AT@ 13523 @LENGTH@ 50
+---------DEL SimpleName@@MethodName:reduceAndCorrect:[start, end, Calendar.YEAR, years] @AT@ 13523 @LENGTH@ 50
+------------DEL SimpleName@@start @AT@ 13540 @LENGTH@ 5
+------------DEL SimpleName@@end @AT@ 13547 @LENGTH@ 3
+------------DEL QualifiedName@@Calendar.YEAR @AT@ 13552 @LENGTH@ 13
+---------------DEL SimpleName@@Calendar @AT@ 13552 @LENGTH@ 8
+---------------DEL SimpleName@@YEAR @AT@ 13561 @LENGTH@ 4
+------------DEL SimpleName@@years @AT@ 13567 @LENGTH@ 5
+, DEL MethodDeclaration@@static, @@int, MethodName:reduceAndCorrect, @@Argus:Calendar+start+Calendar+end+int+field+int+difference+ @AT@ 18388 @LENGTH@ 419
+---DEL Modifier@@static @AT@ 18388 @LENGTH@ 6
+---DEL PrimitiveType@@int @AT@ 18395 @LENGTH@ 3
+---DEL SimpleName@@MethodName:reduceAndCorrect @AT@ 18399 @LENGTH@ 16
+---DEL SingleVariableDeclaration@@Calendar start @AT@ 18416 @LENGTH@ 14
+------DEL SimpleType@@Calendar @AT@ 18416 @LENGTH@ 8
+------DEL SimpleName@@start @AT@ 18425 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@Calendar end @AT@ 18432 @LENGTH@ 12
+------DEL SimpleType@@Calendar @AT@ 18432 @LENGTH@ 8
+------DEL SimpleName@@end @AT@ 18441 @LENGTH@ 3
+---DEL SingleVariableDeclaration@@int field @AT@ 18446 @LENGTH@ 9
+------DEL PrimitiveType@@int @AT@ 18446 @LENGTH@ 3
+------DEL SimpleName@@field @AT@ 18450 @LENGTH@ 5
+---DEL SingleVariableDeclaration@@int difference @AT@ 18457 @LENGTH@ 14
+------DEL PrimitiveType@@int @AT@ 18457 @LENGTH@ 3
+------DEL SimpleName@@difference @AT@ 18461 @LENGTH@ 10
+---DEL ExpressionStatement@@MethodInvocation:end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 34
+------DEL MethodInvocation@@end.add(field,-1 * difference) @AT@ 18483 @LENGTH@ 33
+---------DEL SimpleName@@Name:end @AT@ 18483 @LENGTH@ 3
+---------DEL SimpleName@@MethodName:add:[field, -1 * difference] @AT@ 18487 @LENGTH@ 29
+------------DEL SimpleName@@field @AT@ 18492 @LENGTH@ 5
+------------DEL InfixExpression@@-1 * difference @AT@ 18499 @LENGTH@ 15
+---------------DEL PrefixExpression@@-1 @AT@ 18499 @LENGTH@ 2
+------------------DEL Operator@@- @AT@ 18499 @LENGTH@ 1
+------------------DEL NumberLiteral@@1 @AT@ 18500 @LENGTH@ 1
+---------------DEL Operator@@* @AT@ 18501 @LENGTH@ 1
+---------------DEL SimpleName@@difference @AT@ 18504 @LENGTH@ 10
+---DEL VariableDeclarationStatement@@int endValue=end.get(field); @AT@ 18526 @LENGTH@ 30
+------DEL PrimitiveType@@int @AT@ 18526 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@endValue=end.get(field) @AT@ 18530 @LENGTH@ 25
+---------DEL SimpleName@@endValue @AT@ 18530 @LENGTH@ 8
+---------DEL MethodInvocation@@end.get(field) @AT@ 18541 @LENGTH@ 14
+------------DEL SimpleName@@Name:end @AT@ 18541 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18545 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18549 @LENGTH@ 5
+---DEL VariableDeclarationStatement@@int startValue=start.get(field); @AT@ 18565 @LENGTH@ 34
+------DEL PrimitiveType@@int @AT@ 18565 @LENGTH@ 3
+------DEL VariableDeclarationFragment@@startValue=start.get(field) @AT@ 18569 @LENGTH@ 29
+---------DEL SimpleName@@startValue @AT@ 18569 @LENGTH@ 10
+---------DEL MethodInvocation@@start.get(field) @AT@ 18582 @LENGTH@ 16
+------------DEL SimpleName@@Name:start @AT@ 18582 @LENGTH@ 5
+------------DEL SimpleName@@MethodName:get:[field] @AT@ 18588 @LENGTH@ 10
+---------------DEL SimpleName@@field @AT@ 18592 @LENGTH@ 5
+---DEL IfStatement@@InfixExpression:endValue < startValue @AT@ 18608 @LENGTH@ 193
+------DEL InfixExpression@@endValue < startValue @AT@ 18612 @LENGTH@ 21
+---------DEL SimpleName@@endValue @AT@ 18612 @LENGTH@ 8
+---------DEL Operator@@< @AT@ 18620 @LENGTH@ 1
+---------DEL SimpleName@@startValue @AT@ 18623 @LENGTH@ 10
+------DEL VariableDeclarationStatement@@int newdiff=startValue - endValue; @AT@ 18649 @LENGTH@ 36
+---------DEL PrimitiveType@@int @AT@ 18649 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@newdiff=startValue - endValue @AT@ 18653 @LENGTH@ 31
+------------DEL SimpleName@@newdiff @AT@ 18653 @LENGTH@ 7
+------------DEL InfixExpression@@startValue - endValue @AT@ 18663 @LENGTH@ 21
+---------------DEL SimpleName@@startValue @AT@ 18663 @LENGTH@ 10
+---------------DEL Operator@@- @AT@ 18673 @LENGTH@ 1
+---------------DEL SimpleName@@endValue @AT@ 18676 @LENGTH@ 8
+------DEL ExpressionStatement@@MethodInvocation:end.add(field,newdiff) @AT@ 18698 @LENGTH@ 26
+---------DEL MethodInvocation@@end.add(field,newdiff) @AT@ 18698 @LENGTH@ 25
+------------DEL SimpleName@@Name:end @AT@ 18698 @LENGTH@ 3
+------------DEL SimpleName@@MethodName:add:[field, newdiff] @AT@ 18702 @LENGTH@ 21
+---------------DEL SimpleName@@field @AT@ 18707 @LENGTH@ 5
+---------------DEL SimpleName@@newdiff @AT@ 18714 @LENGTH@ 7
+------DEL ReturnStatement@@SimpleName:newdiff @AT@ 18737 @LENGTH@ 15
+---------DEL SimpleName@@newdiff @AT@ 18744 @LENGTH@ 7
+------DEL ReturnStatement@@NumberLiteral:0 @AT@ 18782 @LENGTH@ 9
+---------DEL NumberLiteral@@0 @AT@ 18789 @LENGTH@ 1
+]
+
+CII:
+OP1:(DEL, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP8 OP11 OP14 OP17 OP28 OP36 OP44)
+OP2:   (DEL, Modifier, OP1, null)
+OP3:   (DEL, PrimitiveType, OP1, null)
+OP4:   (DEL, SimpleName, OP1, null)
+OP5:   (DEL, SingleVariableDeclaration, OP1, OP6 OP7)
+OP6:      (DEL, SimpleType, OP5, null)
+OP7:      (DEL, SimpleName, OP5, null)
+OP8:   (DEL, SingleVariableDeclaration, OP1, OP9 OP10)
+OP9:      (DEL, SimpleType, OP8, null)
+OP10:      (DEL, SimpleName, OP8, null)
+OP11:   (DEL, SingleVariableDeclaration, OP1, OP12 OP13)
+OP12:      (DEL, PrimitiveType, OP11, null)
+OP13:      (DEL, SimpleName, OP11, null)
+OP14:   (DEL, SingleVariableDeclaration, OP1, OP15 OP16)
+OP15:      (DEL, PrimitiveType, OP14, null)
+OP16:      (DEL, SimpleName, OP14, null)
+OP17:   (DEL, ExpressionStatement, OP1, OP18)
+OP18:      (DEL, MethodInvocation, OP17, OP19 OP20)
+OP19:         (DEL, SimpleName, OP18, null)
+OP20:         (DEL, SimpleName, OP18, OP21 OP22)
+OP21:            (DEL, SimpleName, OP20, null)
+OP22:            (DEL, InfixExpression, OP20, OP23 OP26 OP27)
+OP23:               (DEL, PrefixExpression, OP22, OP24 OP25)
+OP24:                  (DEL, Operator, OP23, null)
+OP25:                  (DEL, NumberLiteral, OP23, null)
+OP26:               (DEL, Operator, OP22, null)
+OP27:               (DEL, SimpleName, OP22, null)
+OP28:   (DEL, VariableDeclarationStatement, OP1, OP29 OP30)
+OP29:      (DEL, PrimitiveType, OP28, null)
+OP30:      (DEL, VariableDeclarationFragment, OP28, OP31 OP32)
+OP31:         (DEL, SimpleName, OP30, null)
+OP32:         (DEL, MethodInvocation, OP30, OP33 OP34)
+OP33:            (DEL, SimpleName, OP32, null)
+OP34:            (DEL, SimpleName, OP32, OP35)
+OP35:               (DEL, SimpleName, OP34, null)
+OP36:   (DEL, VariableDeclarationStatement, OP1, OP37 OP38)
+OP37:      (DEL, PrimitiveType, OP36, null)
+OP38:      (DEL, VariableDeclarationFragment, OP36, OP39 OP40)
+OP39:         (DEL, SimpleName, OP38, null)
+OP40:         (DEL, MethodInvocation, OP38, OP41 OP42)
+OP41:            (DEL, SimpleName, OP40, null)
+OP42:            (DEL, SimpleName, OP40, OP43)
+OP43:               (DEL, SimpleName, OP42, null)
+OP44:   (DEL, IfStatement, OP1, OP45 OP49 OP57 OP63 OP65)
+OP45:      (DEL, InfixExpression, OP44, OP46 OP47 OP48)
+OP46:         (DEL, SimpleName, OP45, null)
+OP47:         (DEL, Operator, OP45, null)
+OP48:         (DEL, SimpleName, OP45, null)
+OP49:      (DEL, VariableDeclarationStatement, OP44, OP50 OP51)
+OP50:         (DEL, PrimitiveType, OP49, null)
+OP51:         (DEL, VariableDeclarationFragment, OP49, OP52 OP53)
+OP52:            (DEL, SimpleName, OP51, null)
+OP53:            (DEL, InfixExpression, OP51, OP54 OP55 OP56)
+OP54:               (DEL, SimpleName, OP53, null)
+OP55:               (DEL, Operator, OP53, null)
+OP56:               (DEL, SimpleName, OP53, null)
+OP57:      (DEL, ExpressionStatement, OP44, OP58)
+OP58:         (DEL, MethodInvocation, OP57, OP59 OP60)
+OP59:            (DEL, SimpleName, OP58, null)
+OP60:            (DEL, SimpleName, OP58, OP61 OP62)
+OP61:               (DEL, SimpleName, OP60, null)
+OP62:               (DEL, SimpleName, OP60, null)
+OP63:      (DEL, ReturnStatement, OP44, OP64)
+OP64:         (DEL, SimpleName, OP63, null)
+OP65:      (DEL, ReturnStatement, OP44, OP66)
+OP66:         (DEL, NumberLiteral, OP65, null)
+
+
+

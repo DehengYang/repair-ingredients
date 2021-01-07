@@ -1,0 +1,23 @@
+
+diff -Naur ../d4j-repo/Lang/Lang_27/src/main/java/org/apache/commons/lang3/math/NumberUtils.java ../d4j-repo/fixed_bugs_dir/Lang/Lang_27/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+--- ../d4j-repo/Lang/Lang_27/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2021-01-04 13:15:04.343266315 -0800
++++ ../d4j-repo/fixed_bugs_dir/Lang/Lang_27/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2021-01-04 13:15:07.911400151 -0800
+@@ -476,7 +476,7 @@
+         if (decPos > -1) {
+ 
+             if (expPos > -1) {
+-                if (expPos < decPos) {
++                if (expPos < decPos || expPos > str.length()) {
+                     throw new NumberFormatException(str + " is not a valid number.");
+                 }
+                 dec = str.substring(decPos + 1, expPos);
+@@ -486,6 +486,9 @@
+             mant = str.substring(0, decPos);
+         } else {
+             if (expPos > -1) {
++                if (expPos > str.length()) {
++                    throw new NumberFormatException(str + " is not a valid number.");
++                }
+                 mant = str.substring(0, expPos);
+             } else {
+                 mant = str;

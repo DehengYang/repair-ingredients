@@ -1,0 +1,29 @@
+
+diff -Naur ../d4j-repo/Mockito/Mockito_30/src/org/mockito/exceptions/Reporter.java ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_30/src/org/mockito/exceptions/Reporter.java
+--- ../d4j-repo/Mockito/Mockito_30/src/org/mockito/exceptions/Reporter.java	2021-01-06 03:36:48.785802208 -0800
++++ ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_30/src/org/mockito/exceptions/Reporter.java	2021-01-06 03:36:52.361923967 -0800
+@@ -435,10 +435,11 @@
+                 ));
+     }
+ 
+-    public void smartNullPointerException(Location location) {
++    public void smartNullPointerException(Object obj, Location location) {
+         throw new SmartNullPointerException(join(
+                 "You have a NullPointerException here:",
+                 new Location(),
++                obj,
+                 "Because this method was *not* stubbed correctly:",
+                 location,
+                 ""
+diff -Naur ../d4j-repo/Mockito/Mockito_30/src/org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_30/src/org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java
+--- ../d4j-repo/Mockito/Mockito_30/src/org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java	2021-01-06 03:36:48.785802208 -0800
++++ ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_30/src/org/mockito/internal/stubbing/defaultanswers/ReturnsSmartNulls.java	2021-01-06 03:36:52.357923831 -0800
+@@ -53,7 +53,7 @@
+                 return "SmartNull returned by unstubbed " + formatMethodCall()  + " method on mock";
+             }
+ 
+-            new Reporter().smartNullPointerException(location);
++            new Reporter().smartNullPointerException(obj, location);
+             return null;
+         }
+ 

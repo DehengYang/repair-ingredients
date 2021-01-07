@@ -1,0 +1,32 @@
+OP1:(INS, ThrowStatement, null, OP2)
+OP2:   (INS, ClassInstanceCreation, OP1, OP3 OP4 OP5)
+OP3:      (INS, New, OP2, null)
+OP4:      (INS, SimpleType, OP2, null)
+OP5:      (INS, StringLiteral, OP2, null)
+
+
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, TypeLiteral, OP2, null)
+
+
+OP1:(DEL, ReturnStatement, null, OP2)
+OP2:   (DEL, CastExpression, OP1, OP3 OP5)
+OP3:      (DEL, ArrayType, OP2, OP4)
+OP4:         (DEL, SimpleType, OP3, null)
+OP5:      (DEL, ArrayCreation, OP2, OP6 OP8)
+OP6:         (DEL, ArrayType, OP5, OP7)
+OP7:            (DEL, SimpleType, OP6, null)
+OP8:         (DEL, ArrayInitializer, OP5, OP9)
+OP9:            (DEL, NullLiteral, OP8, null)
+
+
+OP1:(INS, ThrowStatement, null, OP2)
+OP2:   (INS, ClassInstanceCreation, OP1, OP3 OP4 OP5)
+OP3:      (INS, New, OP2, null)
+OP4:      (INS, SimpleType, OP2, null)
+OP5:      (INS, StringLiteral, OP2, null)
+
+

@@ -1,0 +1,29 @@
+
+
+hASList: 
+[UPD IfStatement@@CastExpression:(Boolean)tree.getAttribute() @TO@ InfixExpression:tree.getCut() == null && (Boolean)tree.getAttribute() @AT@ 5922 @LENGTH@ 301
+---INS InfixExpression@@tree.getCut() == null && (Boolean)tree.getAttribute() @TO@ IfStatement@@CastExpression:(Boolean)tree.getAttribute() @AT@ 5926 @LENGTH@ 54
+------INS InfixExpression@@tree.getCut() == null @TO@ InfixExpression@@tree.getCut() == null && (Boolean)tree.getAttribute() @AT@ 5926 @LENGTH@ 21
+---------INS MethodInvocation@@tree.getCut() @TO@ InfixExpression@@tree.getCut() == null @AT@ 5926 @LENGTH@ 13
+------------INS SimpleName@@Name:tree @TO@ MethodInvocation@@tree.getCut() @AT@ 5926 @LENGTH@ 4
+------------INS SimpleName@@MethodName:getCut:[] @TO@ MethodInvocation@@tree.getCut() @AT@ 5931 @LENGTH@ 8
+---------INS Operator@@== @TO@ InfixExpression@@tree.getCut() == null @AT@ 5939 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@tree.getCut() == null @AT@ 5943 @LENGTH@ 4
+------MOV CastExpression@@(Boolean)tree.getAttribute() @TO@ InfixExpression@@tree.getCut() == null && (Boolean)tree.getAttribute() @AT@ 5926 @LENGTH@ 29
+------INS Operator@@&& @TO@ InfixExpression@@tree.getCut() == null && (Boolean)tree.getAttribute() @AT@ 5947 @LENGTH@ 2
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (INS, InfixExpression, OP1, OP3 OP9 OP10)
+OP3:      (INS, InfixExpression, OP2, OP4 OP7 OP8)
+OP4:         (INS, MethodInvocation, OP3, OP5 OP6)
+OP5:            (INS, SimpleName, OP4, null)
+OP6:            (INS, SimpleName, OP4, null)
+OP7:         (INS, Operator, OP3, null)
+OP8:         (INS, NullLiteral, OP3, null)
+OP9:      (MOV, CastExpression, OP2, null)
+OP10:      (INS, Operator, OP2, null)
+
+
+

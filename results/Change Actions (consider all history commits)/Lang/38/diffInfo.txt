@@ -1,0 +1,12 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_38/src/java/org/apache/commons/lang3/time/FastDateFormat.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_38/src/java/org/apache/commons/lang3/time/FastDateFormat.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_38/src/java/org/apache/commons/lang3/time/FastDateFormat.java	2020-01-05 05:28:59.161596808 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_38/src/java/org/apache/commons/lang3/time/FastDateFormat.java	2020-01-05 05:29:02.601568077 -0800
+@@ -869,6 +869,7 @@
+      */
+     public StringBuffer format(Calendar calendar, StringBuffer buf) {
+         if (mTimeZoneForced) {
++            calendar.getTime(); /// LANG-538
+             calendar = (Calendar) calendar.clone();
+             calendar.setTimeZone(mTimeZone);
+         }

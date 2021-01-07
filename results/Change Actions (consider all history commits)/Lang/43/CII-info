@@ -1,0 +1,17 @@
+
+
+hASList: 
+[INS ExpressionStatement@@MethodInvocation:next(pos) @TO@ IfStatement@@InfixExpression:escapingOn && c[start] == QUOTE @AT@ 15240 @LENGTH@ 10
+---INS MethodInvocation@@next(pos) @TO@ ExpressionStatement@@MethodInvocation:next(pos) @AT@ 15240 @LENGTH@ 9
+------INS SimpleName@@MethodName:next:[pos] @TO@ MethodInvocation@@next(pos) @AT@ 15240 @LENGTH@ 9
+---------INS SimpleName@@pos @TO@ SimpleName@@MethodName:next:[pos] @AT@ 15245 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, OP3)
+OP3:      (INS, SimpleName, OP2, OP4)
+OP4:         (INS, SimpleName, OP3, null)
+
+
+

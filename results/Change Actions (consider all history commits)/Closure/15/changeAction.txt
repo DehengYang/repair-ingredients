@@ -1,0 +1,12 @@
+OP1:(UPD, FieldDeclaration, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, null)
+
+
+OP1:(INS, IfStatement, null, OP2 OP5)
+OP2:   (INS, MethodInvocation, OP1, OP3 OP4)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, SimpleName, OP2, null)
+OP5:   (INS, ReturnStatement, OP1, OP6)
+OP6:      (INS, BooleanLiteral, OP5, null)
+
+

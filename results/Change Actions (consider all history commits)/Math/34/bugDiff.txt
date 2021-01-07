@@ -1,0 +1,12 @@
+
+diff -Naur ../d4j-repo/Math/Math_34/src/main/java/org/apache/commons/math3/genetics/ListPopulation.java ../d4j-repo/fixed_bugs_dir/Math/Math_34/src/main/java/org/apache/commons/math3/genetics/ListPopulation.java
+--- ../d4j-repo/Math/Math_34/src/main/java/org/apache/commons/math3/genetics/ListPopulation.java	2021-01-04 23:00:39.075680400 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_34/src/main/java/org/apache/commons/math3/genetics/ListPopulation.java	2021-01-04 23:00:42.727817258 -0800
+@@ -206,6 +206,6 @@
+      * @return chromosome iterator
+      */
+     public Iterator<Chromosome> iterator() {
+-        return chromosomes.iterator();
++        return getChromosomes().iterator();
+     }
+ }

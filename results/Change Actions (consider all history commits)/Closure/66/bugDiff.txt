@@ -1,0 +1,14 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_66/src/com/google/javascript/jscomp/TypeCheck.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_66/src/com/google/javascript/jscomp/TypeCheck.java
+--- ../d4j-repo/Closure/Closure_66/src/com/google/javascript/jscomp/TypeCheck.java	2021-01-06 03:44:28.185446120 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_66/src/com/google/javascript/jscomp/TypeCheck.java	2021-01-06 03:44:30.201514783 -0800
+@@ -513,7 +513,9 @@
+         // Object literal keys are handled with OBJECTLIT
+         if (!NodeUtil.isObjectLitKey(n, n.getParent())) {
+           ensureTyped(t, n, STRING_TYPE);
++        } else {
+           // Object literal keys are not typeable
++          typeable = false;
+         }
+         break;
+ 

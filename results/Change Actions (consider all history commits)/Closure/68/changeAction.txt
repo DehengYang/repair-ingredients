@@ -1,0 +1,15 @@
+OP1:(MOV, ExpressionStatement, null, null)
+
+
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, OP3)
+OP3:      (INS, SimpleName, OP2, OP4)
+OP4:         (INS, SimpleName, OP3, null)
+
+
+OP1:(INS, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, OP3)
+OP3:      (INS, SimpleName, OP2, OP4)
+OP4:         (INS, SimpleName, OP3, null)
+
+

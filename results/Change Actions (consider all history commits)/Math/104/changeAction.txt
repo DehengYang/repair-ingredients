@@ -1,0 +1,5 @@
+OP1:(UPD, FieldDeclaration, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, NumberLiteral, OP2, null)
+
+

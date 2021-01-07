@@ -1,0 +1,115 @@
+
+
+hASList: 
+[INS VariableDeclarationStatement@@Instantiator instantiator=new InstantiatorProvider().getInstantiator(settings); @TO@ MethodDeclaration@@public, @@T, T, MethodName:createMock, @@Argus:MockCreationSettings<T>+settings+MockHandler+handler+ @AT@ 1381 @LENGTH@ 81
+---INS SimpleType@@Instantiator @TO@ VariableDeclarationStatement@@Instantiator instantiator=new InstantiatorProvider().getInstantiator(settings); @AT@ 1381 @LENGTH@ 12
+---INS VariableDeclarationFragment@@instantiator=new InstantiatorProvider().getInstantiator(settings) @TO@ VariableDeclarationStatement@@Instantiator instantiator=new InstantiatorProvider().getInstantiator(settings); @AT@ 1394 @LENGTH@ 67
+------INS SimpleName@@instantiator @TO@ VariableDeclarationFragment@@instantiator=new InstantiatorProvider().getInstantiator(settings) @AT@ 1394 @LENGTH@ 12
+------INS MethodInvocation@@new InstantiatorProvider().getInstantiator(settings) @TO@ VariableDeclarationFragment@@instantiator=new InstantiatorProvider().getInstantiator(settings) @AT@ 1409 @LENGTH@ 52
+---------INS ClassInstanceCreation@@InstantiatorProvider[] @TO@ MethodInvocation@@new InstantiatorProvider().getInstantiator(settings) @AT@ 1409 @LENGTH@ 26
+------------INS New@@new @TO@ ClassInstanceCreation@@InstantiatorProvider[] @AT@ 1409 @LENGTH@ 3
+------------INS SimpleType@@InstantiatorProvider @TO@ ClassInstanceCreation@@InstantiatorProvider[] @AT@ 1413 @LENGTH@ 20
+---------INS SimpleName@@MethodName:getInstantiator:[settings] @TO@ MethodInvocation@@new InstantiatorProvider().getInstantiator(settings) @AT@ 1436 @LENGTH@ 25
+------------INS SimpleName@@settings @TO@ SimpleName@@MethodName:getInstantiator:[settings] @AT@ 1452 @LENGTH@ 8
+, UPD ExpressionStatement@@Assignment:mockInstance=classInstantiator.instantiate(mockedProxyType) @TO@ Assignment:mockInstance=instantiator.newInstance(mockedProxyType) @AT@ 1430 @LENGTH@ 62
+---UPD Assignment@@mockInstance=classInstantiator.instantiate(mockedProxyType) @TO@ mockInstance=instantiator.newInstance(mockedProxyType) @AT@ 1430 @LENGTH@ 61
+------UPD MethodInvocation@@classInstantiator.instantiate(mockedProxyType) @TO@ instantiator.newInstance(mockedProxyType) @AT@ 1445 @LENGTH@ 46
+---------UPD SimpleName@@Name:classInstantiator @TO@ Name:instantiator @AT@ 1445 @LENGTH@ 17
+---------UPD SimpleName@@MethodName:instantiate:[mockedProxyType] @TO@ MethodName:newInstance:[mockedProxyType] @AT@ 1463 @LENGTH@ 28
+, UPD ThrowStatement@@ClassInstanceCreation:new MockitoException(join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + classInstantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.",""),cce) @TO@ ClassInstanceCreation:new MockitoException(join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + instantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.",""),cce) @AT@ 1850 @LENGTH@ 620
+---UPD ClassInstanceCreation@@MockitoException[join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + classInstantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.",""), cce] @TO@ MockitoException[join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + instantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.",""), cce] @AT@ 1856 @LENGTH@ 613
+------UPD MethodInvocation@@join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + classInstantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.","") @TO@ join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + instantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.","") @AT@ 1877 @LENGTH@ 587
+---------UPD SimpleName@@MethodName:join:["ClassCastException occurred while creating the mockito mock :", "  class to mock : " + describeClass(mockedProxyType), "  created class : " + describeClass(settings.getTypeToMock()), "  proxy instance class : " + describeClass(mockInstance), "  instance creation by : " + classInstantiator.getClass().getSimpleName(), "", "You might experience classloading issues, please ask the mockito mailing-list.", ""] @TO@ MethodName:join:["ClassCastException occurred while creating the mockito mock :", "  class to mock : " + describeClass(mockedProxyType), "  created class : " + describeClass(settings.getTypeToMock()), "  proxy instance class : " + describeClass(mockInstance), "  instance creation by : " + instantiator.getClass().getSimpleName(), "", "You might experience classloading issues, please ask the mockito mailing-list.", ""] @AT@ 1877 @LENGTH@ 587
+------------UPD InfixExpression@@"  instance creation by : " + classInstantiator.getClass().getSimpleName() @TO@ "  instance creation by : " + instantiator.getClass().getSimpleName() @AT@ 2226 @LENGTH@ 74
+---------------UPD MethodInvocation@@classInstantiator.getClass().getSimpleName() @TO@ instantiator.getClass().getSimpleName() @AT@ 2256 @LENGTH@ 44
+------------------UPD SimpleName@@Name:classInstantiator @TO@ Name:instantiator @AT@ 2256 @LENGTH@ 17
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, SimpleType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, OP6 OP9)
+OP6:         (INS, ClassInstanceCreation, OP5, OP7 OP8)
+OP7:            (INS, New, OP6, null)
+OP8:            (INS, SimpleType, OP6, null)
+OP9:         (INS, SimpleName, OP5, OP10)
+OP10:            (INS, SimpleName, OP9, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@Instantiator instantiator=new InstantiatorProvider().getInstantiator(settings); @TO@ MethodDeclaration@@public, @@T, T, MethodName:createMock, @@Argus:MockCreationSettings<T>+settings+MockHandler+handler+ @AT@ 1381 @LENGTH@ 81
+---INS SimpleType@@Instantiator @TO@ VariableDeclarationStatement@@Instantiator instantiator=new InstantiatorProvider().getInstantiator(settings); @AT@ 1381 @LENGTH@ 12
+---INS VariableDeclarationFragment@@instantiator=new InstantiatorProvider().getInstantiator(settings) @TO@ VariableDeclarationStatement@@Instantiator instantiator=new InstantiatorProvider().getInstantiator(settings); @AT@ 1394 @LENGTH@ 67
+------INS SimpleName@@instantiator @TO@ VariableDeclarationFragment@@instantiator=new InstantiatorProvider().getInstantiator(settings) @AT@ 1394 @LENGTH@ 12
+------INS MethodInvocation@@new InstantiatorProvider().getInstantiator(settings) @TO@ VariableDeclarationFragment@@instantiator=new InstantiatorProvider().getInstantiator(settings) @AT@ 1409 @LENGTH@ 52
+---------INS ClassInstanceCreation@@InstantiatorProvider[] @TO@ MethodInvocation@@new InstantiatorProvider().getInstantiator(settings) @AT@ 1409 @LENGTH@ 26
+------------INS New@@new @TO@ ClassInstanceCreation@@InstantiatorProvider[] @AT@ 1409 @LENGTH@ 3
+------------INS SimpleType@@InstantiatorProvider @TO@ ClassInstanceCreation@@InstantiatorProvider[] @AT@ 1413 @LENGTH@ 20
+---------INS SimpleName@@MethodName:getInstantiator:[settings] @TO@ MethodInvocation@@new InstantiatorProvider().getInstantiator(settings) @AT@ 1436 @LENGTH@ 25
+------------INS SimpleName@@settings @TO@ SimpleName@@MethodName:getInstantiator:[settings] @AT@ 1452 @LENGTH@ 8
+, UPD ExpressionStatement@@Assignment:mockInstance=classInstantiator.instantiate(mockedProxyType) @TO@ Assignment:mockInstance=instantiator.newInstance(mockedProxyType) @AT@ 1430 @LENGTH@ 62
+---UPD Assignment@@mockInstance=classInstantiator.instantiate(mockedProxyType) @TO@ mockInstance=instantiator.newInstance(mockedProxyType) @AT@ 1430 @LENGTH@ 61
+------UPD MethodInvocation@@classInstantiator.instantiate(mockedProxyType) @TO@ instantiator.newInstance(mockedProxyType) @AT@ 1445 @LENGTH@ 46
+---------UPD SimpleName@@Name:classInstantiator @TO@ Name:instantiator @AT@ 1445 @LENGTH@ 17
+---------UPD SimpleName@@MethodName:instantiate:[mockedProxyType] @TO@ MethodName:newInstance:[mockedProxyType] @AT@ 1463 @LENGTH@ 28
+, UPD ThrowStatement@@ClassInstanceCreation:new MockitoException(join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + classInstantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.",""),cce) @TO@ ClassInstanceCreation:new MockitoException(join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + instantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.",""),cce) @AT@ 1850 @LENGTH@ 620
+---UPD ClassInstanceCreation@@MockitoException[join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + classInstantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.",""), cce] @TO@ MockitoException[join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + instantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.",""), cce] @AT@ 1856 @LENGTH@ 613
+------UPD MethodInvocation@@join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + classInstantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.","") @TO@ join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + instantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.","") @AT@ 1877 @LENGTH@ 587
+---------UPD SimpleName@@MethodName:join:["ClassCastException occurred while creating the mockito mock :", "  class to mock : " + describeClass(mockedProxyType), "  created class : " + describeClass(settings.getTypeToMock()), "  proxy instance class : " + describeClass(mockInstance), "  instance creation by : " + classInstantiator.getClass().getSimpleName(), "", "You might experience classloading issues, please ask the mockito mailing-list.", ""] @TO@ MethodName:join:["ClassCastException occurred while creating the mockito mock :", "  class to mock : " + describeClass(mockedProxyType), "  created class : " + describeClass(settings.getTypeToMock()), "  proxy instance class : " + describeClass(mockInstance), "  instance creation by : " + instantiator.getClass().getSimpleName(), "", "You might experience classloading issues, please ask the mockito mailing-list.", ""] @AT@ 1877 @LENGTH@ 587
+------------UPD InfixExpression@@"  instance creation by : " + classInstantiator.getClass().getSimpleName() @TO@ "  instance creation by : " + instantiator.getClass().getSimpleName() @AT@ 2226 @LENGTH@ 74
+---------------UPD MethodInvocation@@classInstantiator.getClass().getSimpleName() @TO@ instantiator.getClass().getSimpleName() @AT@ 2256 @LENGTH@ 44
+------------------UPD SimpleName@@Name:classInstantiator @TO@ Name:instantiator @AT@ 2256 @LENGTH@ 17
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, Assignment, OP1, OP3)
+OP3:      (UPD, MethodInvocation, OP2, OP4 OP5)
+OP4:         (UPD, SimpleName, OP3, null)
+OP5:         (UPD, SimpleName, OP3, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@Instantiator instantiator=new InstantiatorProvider().getInstantiator(settings); @TO@ MethodDeclaration@@public, @@T, T, MethodName:createMock, @@Argus:MockCreationSettings<T>+settings+MockHandler+handler+ @AT@ 1381 @LENGTH@ 81
+---INS SimpleType@@Instantiator @TO@ VariableDeclarationStatement@@Instantiator instantiator=new InstantiatorProvider().getInstantiator(settings); @AT@ 1381 @LENGTH@ 12
+---INS VariableDeclarationFragment@@instantiator=new InstantiatorProvider().getInstantiator(settings) @TO@ VariableDeclarationStatement@@Instantiator instantiator=new InstantiatorProvider().getInstantiator(settings); @AT@ 1394 @LENGTH@ 67
+------INS SimpleName@@instantiator @TO@ VariableDeclarationFragment@@instantiator=new InstantiatorProvider().getInstantiator(settings) @AT@ 1394 @LENGTH@ 12
+------INS MethodInvocation@@new InstantiatorProvider().getInstantiator(settings) @TO@ VariableDeclarationFragment@@instantiator=new InstantiatorProvider().getInstantiator(settings) @AT@ 1409 @LENGTH@ 52
+---------INS ClassInstanceCreation@@InstantiatorProvider[] @TO@ MethodInvocation@@new InstantiatorProvider().getInstantiator(settings) @AT@ 1409 @LENGTH@ 26
+------------INS New@@new @TO@ ClassInstanceCreation@@InstantiatorProvider[] @AT@ 1409 @LENGTH@ 3
+------------INS SimpleType@@InstantiatorProvider @TO@ ClassInstanceCreation@@InstantiatorProvider[] @AT@ 1413 @LENGTH@ 20
+---------INS SimpleName@@MethodName:getInstantiator:[settings] @TO@ MethodInvocation@@new InstantiatorProvider().getInstantiator(settings) @AT@ 1436 @LENGTH@ 25
+------------INS SimpleName@@settings @TO@ SimpleName@@MethodName:getInstantiator:[settings] @AT@ 1452 @LENGTH@ 8
+, UPD ExpressionStatement@@Assignment:mockInstance=classInstantiator.instantiate(mockedProxyType) @TO@ Assignment:mockInstance=instantiator.newInstance(mockedProxyType) @AT@ 1430 @LENGTH@ 62
+---UPD Assignment@@mockInstance=classInstantiator.instantiate(mockedProxyType) @TO@ mockInstance=instantiator.newInstance(mockedProxyType) @AT@ 1430 @LENGTH@ 61
+------UPD MethodInvocation@@classInstantiator.instantiate(mockedProxyType) @TO@ instantiator.newInstance(mockedProxyType) @AT@ 1445 @LENGTH@ 46
+---------UPD SimpleName@@Name:classInstantiator @TO@ Name:instantiator @AT@ 1445 @LENGTH@ 17
+---------UPD SimpleName@@MethodName:instantiate:[mockedProxyType] @TO@ MethodName:newInstance:[mockedProxyType] @AT@ 1463 @LENGTH@ 28
+, UPD ThrowStatement@@ClassInstanceCreation:new MockitoException(join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + classInstantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.",""),cce) @TO@ ClassInstanceCreation:new MockitoException(join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + instantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.",""),cce) @AT@ 1850 @LENGTH@ 620
+---UPD ClassInstanceCreation@@MockitoException[join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + classInstantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.",""), cce] @TO@ MockitoException[join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + instantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.",""), cce] @AT@ 1856 @LENGTH@ 613
+------UPD MethodInvocation@@join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + classInstantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.","") @TO@ join("ClassCastException occurred while creating the mockito mock :","  class to mock : " + describeClass(mockedProxyType),"  created class : " + describeClass(settings.getTypeToMock()),"  proxy instance class : " + describeClass(mockInstance),"  instance creation by : " + instantiator.getClass().getSimpleName(),"","You might experience classloading issues, please ask the mockito mailing-list.","") @AT@ 1877 @LENGTH@ 587
+---------UPD SimpleName@@MethodName:join:["ClassCastException occurred while creating the mockito mock :", "  class to mock : " + describeClass(mockedProxyType), "  created class : " + describeClass(settings.getTypeToMock()), "  proxy instance class : " + describeClass(mockInstance), "  instance creation by : " + classInstantiator.getClass().getSimpleName(), "", "You might experience classloading issues, please ask the mockito mailing-list.", ""] @TO@ MethodName:join:["ClassCastException occurred while creating the mockito mock :", "  class to mock : " + describeClass(mockedProxyType), "  created class : " + describeClass(settings.getTypeToMock()), "  proxy instance class : " + describeClass(mockInstance), "  instance creation by : " + instantiator.getClass().getSimpleName(), "", "You might experience classloading issues, please ask the mockito mailing-list.", ""] @AT@ 1877 @LENGTH@ 587
+------------UPD InfixExpression@@"  instance creation by : " + classInstantiator.getClass().getSimpleName() @TO@ "  instance creation by : " + instantiator.getClass().getSimpleName() @AT@ 2226 @LENGTH@ 74
+---------------UPD MethodInvocation@@classInstantiator.getClass().getSimpleName() @TO@ instantiator.getClass().getSimpleName() @AT@ 2256 @LENGTH@ 44
+------------------UPD SimpleName@@Name:classInstantiator @TO@ Name:instantiator @AT@ 2256 @LENGTH@ 17
+]
+
+CII:
+OP1:(UPD, ThrowStatement, null, OP2)
+OP2:   (UPD, ClassInstanceCreation, OP1, OP3)
+OP3:      (UPD, MethodInvocation, OP2, OP4)
+OP4:         (UPD, SimpleName, OP3, OP5)
+OP5:            (UPD, InfixExpression, OP4, OP6)
+OP6:               (UPD, MethodInvocation, OP5, OP7)
+OP7:                  (UPD, SimpleName, OP6, null)
+
+
+

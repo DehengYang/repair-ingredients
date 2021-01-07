@@ -1,0 +1,275 @@
+
+
+hASList: 
+[INS VariableDeclarationStatement@@int csLastIndex=csLength - 1; @TO@ MethodDeclaration@@public, static, @@boolean, MethodName:containsAny, @@Argus:CharSequence+cs+char[]+searchChars+ @AT@ 57413 @LENGTH@ 31
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int csLastIndex=csLength - 1; @AT@ 57413 @LENGTH@ 3
+---INS VariableDeclarationFragment@@csLastIndex=csLength - 1 @TO@ VariableDeclarationStatement@@int csLastIndex=csLength - 1; @AT@ 57417 @LENGTH@ 26
+------INS SimpleName@@csLastIndex @TO@ VariableDeclarationFragment@@csLastIndex=csLength - 1 @AT@ 57417 @LENGTH@ 11
+------INS InfixExpression@@csLength - 1 @TO@ VariableDeclarationFragment@@csLastIndex=csLength - 1 @AT@ 57431 @LENGTH@ 12
+---------INS SimpleName@@csLength @TO@ InfixExpression@@csLength - 1 @AT@ 57431 @LENGTH@ 8
+---------INS Operator@@- @TO@ InfixExpression@@csLength - 1 @AT@ 57439 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@csLength - 1 @AT@ 57442 @LENGTH@ 1
+, INS VariableDeclarationStatement@@int searchLastIndex=searchLength - 1; @TO@ MethodDeclaration@@public, static, @@boolean, MethodName:containsAny, @@Argus:CharSequence+cs+char[]+searchChars+ @AT@ 57447 @LENGTH@ 39
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int searchLastIndex=searchLength - 1; @AT@ 57447 @LENGTH@ 3
+---INS VariableDeclarationFragment@@searchLastIndex=searchLength - 1 @TO@ VariableDeclarationStatement@@int searchLastIndex=searchLength - 1; @AT@ 57451 @LENGTH@ 34
+------INS SimpleName@@searchLastIndex @TO@ VariableDeclarationFragment@@searchLastIndex=searchLength - 1 @AT@ 57451 @LENGTH@ 15
+------INS InfixExpression@@searchLength - 1 @TO@ VariableDeclarationFragment@@searchLastIndex=searchLength - 1 @AT@ 57469 @LENGTH@ 16
+---------INS SimpleName@@searchLength @TO@ InfixExpression@@searchLength - 1 @AT@ 57469 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@searchLength - 1 @AT@ 57481 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@searchLength - 1 @AT@ 57484 @LENGTH@ 1
+, INS IfStatement@@InfixExpression:i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @TO@ IfStatement@@InfixExpression:searchChars[j] == ch @AT@ 57634 @LENGTH@ 329
+---INS InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @TO@ IfStatement@@InfixExpression:i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57638 @LENGTH@ 114
+------INS InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57638 @LENGTH@ 76
+---------INS InfixExpression@@i < csLastIndex && j < searchLastIndex @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE @AT@ 57638 @LENGTH@ 38
+------------INS InfixExpression@@i < csLastIndex @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex @AT@ 57638 @LENGTH@ 15
+---------------INS SimpleName@@i @TO@ InfixExpression@@i < csLastIndex @AT@ 57638 @LENGTH@ 1
+---------------INS Operator@@< @TO@ InfixExpression@@i < csLastIndex @AT@ 57639 @LENGTH@ 1
+---------------INS SimpleName@@csLastIndex @TO@ InfixExpression@@i < csLastIndex @AT@ 57642 @LENGTH@ 11
+------------INS Operator@@&& @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex @AT@ 57653 @LENGTH@ 2
+------------INS InfixExpression@@j < searchLastIndex @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex @AT@ 57657 @LENGTH@ 19
+---------------INS SimpleName@@j @TO@ InfixExpression@@j < searchLastIndex @AT@ 57657 @LENGTH@ 1
+---------------INS Operator@@< @TO@ InfixExpression@@j < searchLastIndex @AT@ 57658 @LENGTH@ 1
+---------------INS SimpleName@@searchLastIndex @TO@ InfixExpression@@j < searchLastIndex @AT@ 57661 @LENGTH@ 15
+---------INS Operator@@&& @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE @AT@ 57676 @LENGTH@ 2
+---------INS InfixExpression@@ch >= Character.MIN_HIGH_SURROGATE @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE @AT@ 57680 @LENGTH@ 34
+------------INS SimpleName@@ch @TO@ InfixExpression@@ch >= Character.MIN_HIGH_SURROGATE @AT@ 57680 @LENGTH@ 2
+------------INS Operator@@>= @TO@ InfixExpression@@ch >= Character.MIN_HIGH_SURROGATE @AT@ 57682 @LENGTH@ 2
+------------INS QualifiedName@@Character.MIN_HIGH_SURROGATE @TO@ InfixExpression@@ch >= Character.MIN_HIGH_SURROGATE @AT@ 57686 @LENGTH@ 28
+---------------INS SimpleName@@Character @TO@ QualifiedName@@Character.MIN_HIGH_SURROGATE @AT@ 57686 @LENGTH@ 9
+---------------INS SimpleName@@MIN_HIGH_SURROGATE @TO@ QualifiedName@@Character.MIN_HIGH_SURROGATE @AT@ 57696 @LENGTH@ 18
+------INS Operator@@&& @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57714 @LENGTH@ 2
+------INS InfixExpression@@ch <= Character.MAX_HIGH_SURROGATE @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57718 @LENGTH@ 34
+---------INS SimpleName@@ch @TO@ InfixExpression@@ch <= Character.MAX_HIGH_SURROGATE @AT@ 57718 @LENGTH@ 2
+---------INS Operator@@<= @TO@ InfixExpression@@ch <= Character.MAX_HIGH_SURROGATE @AT@ 57720 @LENGTH@ 2
+---------INS QualifiedName@@Character.MAX_HIGH_SURROGATE @TO@ InfixExpression@@ch <= Character.MAX_HIGH_SURROGATE @AT@ 57724 @LENGTH@ 28
+------------INS SimpleName@@Character @TO@ QualifiedName@@Character.MAX_HIGH_SURROGATE @AT@ 57724 @LENGTH@ 9
+------------INS SimpleName@@MAX_HIGH_SURROGATE @TO@ QualifiedName@@Character.MAX_HIGH_SURROGATE @AT@ 57734 @LENGTH@ 18
+---INS IfStatement@@InfixExpression:searchChars[j + 1] == cs.charAt(i + 1) @TO@ IfStatement@@InfixExpression:i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57803 @LENGTH@ 73
+------MOV ReturnStatement@@BooleanLiteral:true @TO@ IfStatement@@InfixExpression:searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57647 @LENGTH@ 12
+------INS InfixExpression@@searchChars[j + 1] == cs.charAt(i + 1) @TO@ IfStatement@@InfixExpression:searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57807 @LENGTH@ 38
+---------INS ArrayAccess@@searchChars[j + 1] @TO@ InfixExpression@@searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57807 @LENGTH@ 18
+------------INS SimpleName@@searchChars @TO@ ArrayAccess@@searchChars[j + 1] @AT@ 57807 @LENGTH@ 11
+------------INS InfixExpression@@j + 1 @TO@ ArrayAccess@@searchChars[j + 1] @AT@ 57819 @LENGTH@ 5
+---------------INS SimpleName@@j @TO@ InfixExpression@@j + 1 @AT@ 57819 @LENGTH@ 1
+---------------INS Operator@@+ @TO@ InfixExpression@@j + 1 @AT@ 57820 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ InfixExpression@@j + 1 @AT@ 57823 @LENGTH@ 1
+---------INS Operator@@== @TO@ InfixExpression@@searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57825 @LENGTH@ 2
+---------INS MethodInvocation@@cs.charAt(i + 1) @TO@ InfixExpression@@searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57829 @LENGTH@ 16
+------------INS SimpleName@@Name:cs @TO@ MethodInvocation@@cs.charAt(i + 1) @AT@ 57829 @LENGTH@ 2
+------------INS SimpleName@@MethodName:charAt:[i + 1] @TO@ MethodInvocation@@cs.charAt(i + 1) @AT@ 57832 @LENGTH@ 13
+---------------INS InfixExpression@@i + 1 @TO@ SimpleName@@MethodName:charAt:[i + 1] @AT@ 57839 @LENGTH@ 5
+------------------INS SimpleName@@i @TO@ InfixExpression@@i + 1 @AT@ 57839 @LENGTH@ 1
+------------------INS Operator@@+ @TO@ InfixExpression@@i + 1 @AT@ 57840 @LENGTH@ 1
+------------------INS NumberLiteral@@1 @TO@ InfixExpression@@i + 1 @AT@ 57843 @LENGTH@ 1
+---INS ReturnStatement@@BooleanLiteral:true @TO@ IfStatement@@InfixExpression:i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57944 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 57951 @LENGTH@ 4
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, InfixExpression, OP3, OP6 OP7 OP8)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, Operator, OP5, null)
+OP8:         (INS, NumberLiteral, OP5, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@int csLastIndex=csLength - 1; @TO@ MethodDeclaration@@public, static, @@boolean, MethodName:containsAny, @@Argus:CharSequence+cs+char[]+searchChars+ @AT@ 57413 @LENGTH@ 31
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int csLastIndex=csLength - 1; @AT@ 57413 @LENGTH@ 3
+---INS VariableDeclarationFragment@@csLastIndex=csLength - 1 @TO@ VariableDeclarationStatement@@int csLastIndex=csLength - 1; @AT@ 57417 @LENGTH@ 26
+------INS SimpleName@@csLastIndex @TO@ VariableDeclarationFragment@@csLastIndex=csLength - 1 @AT@ 57417 @LENGTH@ 11
+------INS InfixExpression@@csLength - 1 @TO@ VariableDeclarationFragment@@csLastIndex=csLength - 1 @AT@ 57431 @LENGTH@ 12
+---------INS SimpleName@@csLength @TO@ InfixExpression@@csLength - 1 @AT@ 57431 @LENGTH@ 8
+---------INS Operator@@- @TO@ InfixExpression@@csLength - 1 @AT@ 57439 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@csLength - 1 @AT@ 57442 @LENGTH@ 1
+, INS VariableDeclarationStatement@@int searchLastIndex=searchLength - 1; @TO@ MethodDeclaration@@public, static, @@boolean, MethodName:containsAny, @@Argus:CharSequence+cs+char[]+searchChars+ @AT@ 57447 @LENGTH@ 39
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int searchLastIndex=searchLength - 1; @AT@ 57447 @LENGTH@ 3
+---INS VariableDeclarationFragment@@searchLastIndex=searchLength - 1 @TO@ VariableDeclarationStatement@@int searchLastIndex=searchLength - 1; @AT@ 57451 @LENGTH@ 34
+------INS SimpleName@@searchLastIndex @TO@ VariableDeclarationFragment@@searchLastIndex=searchLength - 1 @AT@ 57451 @LENGTH@ 15
+------INS InfixExpression@@searchLength - 1 @TO@ VariableDeclarationFragment@@searchLastIndex=searchLength - 1 @AT@ 57469 @LENGTH@ 16
+---------INS SimpleName@@searchLength @TO@ InfixExpression@@searchLength - 1 @AT@ 57469 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@searchLength - 1 @AT@ 57481 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@searchLength - 1 @AT@ 57484 @LENGTH@ 1
+, INS IfStatement@@InfixExpression:i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @TO@ IfStatement@@InfixExpression:searchChars[j] == ch @AT@ 57634 @LENGTH@ 329
+---INS InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @TO@ IfStatement@@InfixExpression:i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57638 @LENGTH@ 114
+------INS InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57638 @LENGTH@ 76
+---------INS InfixExpression@@i < csLastIndex && j < searchLastIndex @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE @AT@ 57638 @LENGTH@ 38
+------------INS InfixExpression@@i < csLastIndex @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex @AT@ 57638 @LENGTH@ 15
+---------------INS SimpleName@@i @TO@ InfixExpression@@i < csLastIndex @AT@ 57638 @LENGTH@ 1
+---------------INS Operator@@< @TO@ InfixExpression@@i < csLastIndex @AT@ 57639 @LENGTH@ 1
+---------------INS SimpleName@@csLastIndex @TO@ InfixExpression@@i < csLastIndex @AT@ 57642 @LENGTH@ 11
+------------INS Operator@@&& @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex @AT@ 57653 @LENGTH@ 2
+------------INS InfixExpression@@j < searchLastIndex @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex @AT@ 57657 @LENGTH@ 19
+---------------INS SimpleName@@j @TO@ InfixExpression@@j < searchLastIndex @AT@ 57657 @LENGTH@ 1
+---------------INS Operator@@< @TO@ InfixExpression@@j < searchLastIndex @AT@ 57658 @LENGTH@ 1
+---------------INS SimpleName@@searchLastIndex @TO@ InfixExpression@@j < searchLastIndex @AT@ 57661 @LENGTH@ 15
+---------INS Operator@@&& @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE @AT@ 57676 @LENGTH@ 2
+---------INS InfixExpression@@ch >= Character.MIN_HIGH_SURROGATE @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE @AT@ 57680 @LENGTH@ 34
+------------INS SimpleName@@ch @TO@ InfixExpression@@ch >= Character.MIN_HIGH_SURROGATE @AT@ 57680 @LENGTH@ 2
+------------INS Operator@@>= @TO@ InfixExpression@@ch >= Character.MIN_HIGH_SURROGATE @AT@ 57682 @LENGTH@ 2
+------------INS QualifiedName@@Character.MIN_HIGH_SURROGATE @TO@ InfixExpression@@ch >= Character.MIN_HIGH_SURROGATE @AT@ 57686 @LENGTH@ 28
+---------------INS SimpleName@@Character @TO@ QualifiedName@@Character.MIN_HIGH_SURROGATE @AT@ 57686 @LENGTH@ 9
+---------------INS SimpleName@@MIN_HIGH_SURROGATE @TO@ QualifiedName@@Character.MIN_HIGH_SURROGATE @AT@ 57696 @LENGTH@ 18
+------INS Operator@@&& @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57714 @LENGTH@ 2
+------INS InfixExpression@@ch <= Character.MAX_HIGH_SURROGATE @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57718 @LENGTH@ 34
+---------INS SimpleName@@ch @TO@ InfixExpression@@ch <= Character.MAX_HIGH_SURROGATE @AT@ 57718 @LENGTH@ 2
+---------INS Operator@@<= @TO@ InfixExpression@@ch <= Character.MAX_HIGH_SURROGATE @AT@ 57720 @LENGTH@ 2
+---------INS QualifiedName@@Character.MAX_HIGH_SURROGATE @TO@ InfixExpression@@ch <= Character.MAX_HIGH_SURROGATE @AT@ 57724 @LENGTH@ 28
+------------INS SimpleName@@Character @TO@ QualifiedName@@Character.MAX_HIGH_SURROGATE @AT@ 57724 @LENGTH@ 9
+------------INS SimpleName@@MAX_HIGH_SURROGATE @TO@ QualifiedName@@Character.MAX_HIGH_SURROGATE @AT@ 57734 @LENGTH@ 18
+---INS IfStatement@@InfixExpression:searchChars[j + 1] == cs.charAt(i + 1) @TO@ IfStatement@@InfixExpression:i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57803 @LENGTH@ 73
+------MOV ReturnStatement@@BooleanLiteral:true @TO@ IfStatement@@InfixExpression:searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57647 @LENGTH@ 12
+------INS InfixExpression@@searchChars[j + 1] == cs.charAt(i + 1) @TO@ IfStatement@@InfixExpression:searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57807 @LENGTH@ 38
+---------INS ArrayAccess@@searchChars[j + 1] @TO@ InfixExpression@@searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57807 @LENGTH@ 18
+------------INS SimpleName@@searchChars @TO@ ArrayAccess@@searchChars[j + 1] @AT@ 57807 @LENGTH@ 11
+------------INS InfixExpression@@j + 1 @TO@ ArrayAccess@@searchChars[j + 1] @AT@ 57819 @LENGTH@ 5
+---------------INS SimpleName@@j @TO@ InfixExpression@@j + 1 @AT@ 57819 @LENGTH@ 1
+---------------INS Operator@@+ @TO@ InfixExpression@@j + 1 @AT@ 57820 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ InfixExpression@@j + 1 @AT@ 57823 @LENGTH@ 1
+---------INS Operator@@== @TO@ InfixExpression@@searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57825 @LENGTH@ 2
+---------INS MethodInvocation@@cs.charAt(i + 1) @TO@ InfixExpression@@searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57829 @LENGTH@ 16
+------------INS SimpleName@@Name:cs @TO@ MethodInvocation@@cs.charAt(i + 1) @AT@ 57829 @LENGTH@ 2
+------------INS SimpleName@@MethodName:charAt:[i + 1] @TO@ MethodInvocation@@cs.charAt(i + 1) @AT@ 57832 @LENGTH@ 13
+---------------INS InfixExpression@@i + 1 @TO@ SimpleName@@MethodName:charAt:[i + 1] @AT@ 57839 @LENGTH@ 5
+------------------INS SimpleName@@i @TO@ InfixExpression@@i + 1 @AT@ 57839 @LENGTH@ 1
+------------------INS Operator@@+ @TO@ InfixExpression@@i + 1 @AT@ 57840 @LENGTH@ 1
+------------------INS NumberLiteral@@1 @TO@ InfixExpression@@i + 1 @AT@ 57843 @LENGTH@ 1
+---INS ReturnStatement@@BooleanLiteral:true @TO@ IfStatement@@InfixExpression:i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57944 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 57951 @LENGTH@ 4
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, InfixExpression, OP3, OP6 OP7 OP8)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, Operator, OP5, null)
+OP8:         (INS, NumberLiteral, OP5, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@int csLastIndex=csLength - 1; @TO@ MethodDeclaration@@public, static, @@boolean, MethodName:containsAny, @@Argus:CharSequence+cs+char[]+searchChars+ @AT@ 57413 @LENGTH@ 31
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int csLastIndex=csLength - 1; @AT@ 57413 @LENGTH@ 3
+---INS VariableDeclarationFragment@@csLastIndex=csLength - 1 @TO@ VariableDeclarationStatement@@int csLastIndex=csLength - 1; @AT@ 57417 @LENGTH@ 26
+------INS SimpleName@@csLastIndex @TO@ VariableDeclarationFragment@@csLastIndex=csLength - 1 @AT@ 57417 @LENGTH@ 11
+------INS InfixExpression@@csLength - 1 @TO@ VariableDeclarationFragment@@csLastIndex=csLength - 1 @AT@ 57431 @LENGTH@ 12
+---------INS SimpleName@@csLength @TO@ InfixExpression@@csLength - 1 @AT@ 57431 @LENGTH@ 8
+---------INS Operator@@- @TO@ InfixExpression@@csLength - 1 @AT@ 57439 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@csLength - 1 @AT@ 57442 @LENGTH@ 1
+, INS VariableDeclarationStatement@@int searchLastIndex=searchLength - 1; @TO@ MethodDeclaration@@public, static, @@boolean, MethodName:containsAny, @@Argus:CharSequence+cs+char[]+searchChars+ @AT@ 57447 @LENGTH@ 39
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int searchLastIndex=searchLength - 1; @AT@ 57447 @LENGTH@ 3
+---INS VariableDeclarationFragment@@searchLastIndex=searchLength - 1 @TO@ VariableDeclarationStatement@@int searchLastIndex=searchLength - 1; @AT@ 57451 @LENGTH@ 34
+------INS SimpleName@@searchLastIndex @TO@ VariableDeclarationFragment@@searchLastIndex=searchLength - 1 @AT@ 57451 @LENGTH@ 15
+------INS InfixExpression@@searchLength - 1 @TO@ VariableDeclarationFragment@@searchLastIndex=searchLength - 1 @AT@ 57469 @LENGTH@ 16
+---------INS SimpleName@@searchLength @TO@ InfixExpression@@searchLength - 1 @AT@ 57469 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@searchLength - 1 @AT@ 57481 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@searchLength - 1 @AT@ 57484 @LENGTH@ 1
+, INS IfStatement@@InfixExpression:i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @TO@ IfStatement@@InfixExpression:searchChars[j] == ch @AT@ 57634 @LENGTH@ 329
+---INS InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @TO@ IfStatement@@InfixExpression:i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57638 @LENGTH@ 114
+------INS InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57638 @LENGTH@ 76
+---------INS InfixExpression@@i < csLastIndex && j < searchLastIndex @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE @AT@ 57638 @LENGTH@ 38
+------------INS InfixExpression@@i < csLastIndex @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex @AT@ 57638 @LENGTH@ 15
+---------------INS SimpleName@@i @TO@ InfixExpression@@i < csLastIndex @AT@ 57638 @LENGTH@ 1
+---------------INS Operator@@< @TO@ InfixExpression@@i < csLastIndex @AT@ 57639 @LENGTH@ 1
+---------------INS SimpleName@@csLastIndex @TO@ InfixExpression@@i < csLastIndex @AT@ 57642 @LENGTH@ 11
+------------INS Operator@@&& @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex @AT@ 57653 @LENGTH@ 2
+------------INS InfixExpression@@j < searchLastIndex @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex @AT@ 57657 @LENGTH@ 19
+---------------INS SimpleName@@j @TO@ InfixExpression@@j < searchLastIndex @AT@ 57657 @LENGTH@ 1
+---------------INS Operator@@< @TO@ InfixExpression@@j < searchLastIndex @AT@ 57658 @LENGTH@ 1
+---------------INS SimpleName@@searchLastIndex @TO@ InfixExpression@@j < searchLastIndex @AT@ 57661 @LENGTH@ 15
+---------INS Operator@@&& @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE @AT@ 57676 @LENGTH@ 2
+---------INS InfixExpression@@ch >= Character.MIN_HIGH_SURROGATE @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE @AT@ 57680 @LENGTH@ 34
+------------INS SimpleName@@ch @TO@ InfixExpression@@ch >= Character.MIN_HIGH_SURROGATE @AT@ 57680 @LENGTH@ 2
+------------INS Operator@@>= @TO@ InfixExpression@@ch >= Character.MIN_HIGH_SURROGATE @AT@ 57682 @LENGTH@ 2
+------------INS QualifiedName@@Character.MIN_HIGH_SURROGATE @TO@ InfixExpression@@ch >= Character.MIN_HIGH_SURROGATE @AT@ 57686 @LENGTH@ 28
+---------------INS SimpleName@@Character @TO@ QualifiedName@@Character.MIN_HIGH_SURROGATE @AT@ 57686 @LENGTH@ 9
+---------------INS SimpleName@@MIN_HIGH_SURROGATE @TO@ QualifiedName@@Character.MIN_HIGH_SURROGATE @AT@ 57696 @LENGTH@ 18
+------INS Operator@@&& @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57714 @LENGTH@ 2
+------INS InfixExpression@@ch <= Character.MAX_HIGH_SURROGATE @TO@ InfixExpression@@i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57718 @LENGTH@ 34
+---------INS SimpleName@@ch @TO@ InfixExpression@@ch <= Character.MAX_HIGH_SURROGATE @AT@ 57718 @LENGTH@ 2
+---------INS Operator@@<= @TO@ InfixExpression@@ch <= Character.MAX_HIGH_SURROGATE @AT@ 57720 @LENGTH@ 2
+---------INS QualifiedName@@Character.MAX_HIGH_SURROGATE @TO@ InfixExpression@@ch <= Character.MAX_HIGH_SURROGATE @AT@ 57724 @LENGTH@ 28
+------------INS SimpleName@@Character @TO@ QualifiedName@@Character.MAX_HIGH_SURROGATE @AT@ 57724 @LENGTH@ 9
+------------INS SimpleName@@MAX_HIGH_SURROGATE @TO@ QualifiedName@@Character.MAX_HIGH_SURROGATE @AT@ 57734 @LENGTH@ 18
+---INS IfStatement@@InfixExpression:searchChars[j + 1] == cs.charAt(i + 1) @TO@ IfStatement@@InfixExpression:i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57803 @LENGTH@ 73
+------MOV ReturnStatement@@BooleanLiteral:true @TO@ IfStatement@@InfixExpression:searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57647 @LENGTH@ 12
+------INS InfixExpression@@searchChars[j + 1] == cs.charAt(i + 1) @TO@ IfStatement@@InfixExpression:searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57807 @LENGTH@ 38
+---------INS ArrayAccess@@searchChars[j + 1] @TO@ InfixExpression@@searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57807 @LENGTH@ 18
+------------INS SimpleName@@searchChars @TO@ ArrayAccess@@searchChars[j + 1] @AT@ 57807 @LENGTH@ 11
+------------INS InfixExpression@@j + 1 @TO@ ArrayAccess@@searchChars[j + 1] @AT@ 57819 @LENGTH@ 5
+---------------INS SimpleName@@j @TO@ InfixExpression@@j + 1 @AT@ 57819 @LENGTH@ 1
+---------------INS Operator@@+ @TO@ InfixExpression@@j + 1 @AT@ 57820 @LENGTH@ 1
+---------------INS NumberLiteral@@1 @TO@ InfixExpression@@j + 1 @AT@ 57823 @LENGTH@ 1
+---------INS Operator@@== @TO@ InfixExpression@@searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57825 @LENGTH@ 2
+---------INS MethodInvocation@@cs.charAt(i + 1) @TO@ InfixExpression@@searchChars[j + 1] == cs.charAt(i + 1) @AT@ 57829 @LENGTH@ 16
+------------INS SimpleName@@Name:cs @TO@ MethodInvocation@@cs.charAt(i + 1) @AT@ 57829 @LENGTH@ 2
+------------INS SimpleName@@MethodName:charAt:[i + 1] @TO@ MethodInvocation@@cs.charAt(i + 1) @AT@ 57832 @LENGTH@ 13
+---------------INS InfixExpression@@i + 1 @TO@ SimpleName@@MethodName:charAt:[i + 1] @AT@ 57839 @LENGTH@ 5
+------------------INS SimpleName@@i @TO@ InfixExpression@@i + 1 @AT@ 57839 @LENGTH@ 1
+------------------INS Operator@@+ @TO@ InfixExpression@@i + 1 @AT@ 57840 @LENGTH@ 1
+------------------INS NumberLiteral@@1 @TO@ InfixExpression@@i + 1 @AT@ 57843 @LENGTH@ 1
+---INS ReturnStatement@@BooleanLiteral:true @TO@ IfStatement@@InfixExpression:i < csLastIndex && j < searchLastIndex && ch >= Character.MIN_HIGH_SURROGATE && ch <= Character.MAX_HIGH_SURROGATE @AT@ 57944 @LENGTH@ 12
+------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 57951 @LENGTH@ 4
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP28 OP45)
+OP2:   (INS, InfixExpression, OP1, OP3 OP21 OP22)
+OP3:      (INS, InfixExpression, OP2, OP4 OP14 OP15)
+OP4:         (INS, InfixExpression, OP3, OP5 OP9 OP10)
+OP5:            (INS, InfixExpression, OP4, OP6 OP7 OP8)
+OP6:               (INS, SimpleName, OP5, null)
+OP7:               (INS, Operator, OP5, null)
+OP8:               (INS, SimpleName, OP5, null)
+OP9:            (INS, Operator, OP4, null)
+OP10:            (INS, InfixExpression, OP4, OP11 OP12 OP13)
+OP11:               (INS, SimpleName, OP10, null)
+OP12:               (INS, Operator, OP10, null)
+OP13:               (INS, SimpleName, OP10, null)
+OP14:         (INS, Operator, OP3, null)
+OP15:         (INS, InfixExpression, OP3, OP16 OP17 OP18)
+OP16:            (INS, SimpleName, OP15, null)
+OP17:            (INS, Operator, OP15, null)
+OP18:            (INS, QualifiedName, OP15, OP19 OP20)
+OP19:               (INS, SimpleName, OP18, null)
+OP20:               (INS, SimpleName, OP18, null)
+OP21:      (INS, Operator, OP2, null)
+OP22:      (INS, InfixExpression, OP2, OP23 OP24 OP25)
+OP23:         (INS, SimpleName, OP22, null)
+OP24:         (INS, Operator, OP22, null)
+OP25:         (INS, QualifiedName, OP22, OP26 OP27)
+OP26:            (INS, SimpleName, OP25, null)
+OP27:            (INS, SimpleName, OP25, null)
+OP28:   (INS, IfStatement, OP1, OP29 OP30)
+OP29:      (MOV, ReturnStatement, OP28, null)
+OP30:      (INS, InfixExpression, OP28, OP31 OP37 OP38)
+OP31:         (INS, ArrayAccess, OP30, OP32 OP33)
+OP32:            (INS, SimpleName, OP31, null)
+OP33:            (INS, InfixExpression, OP31, OP34 OP35 OP36)
+OP34:               (INS, SimpleName, OP33, null)
+OP35:               (INS, Operator, OP33, null)
+OP36:               (INS, NumberLiteral, OP33, null)
+OP37:         (INS, Operator, OP30, null)
+OP38:         (INS, MethodInvocation, OP30, OP39 OP40)
+OP39:            (INS, SimpleName, OP38, null)
+OP40:            (INS, SimpleName, OP38, OP41)
+OP41:               (INS, InfixExpression, OP40, OP42 OP43 OP44)
+OP42:                  (INS, SimpleName, OP41, null)
+OP43:                  (INS, Operator, OP41, null)
+OP44:                  (INS, NumberLiteral, OP41, null)
+OP45:   (INS, ReturnStatement, OP1, OP46)
+OP46:      (INS, BooleanLiteral, OP45, null)
+
+
+

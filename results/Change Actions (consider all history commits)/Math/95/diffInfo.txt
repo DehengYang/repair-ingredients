@@ -1,0 +1,18 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_95/src/java/org/apache/commons/math/distribution/FDistributionImpl.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_95/src/java/org/apache/commons/math/distribution/FDistributionImpl.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_95/src/java/org/apache/commons/math/distribution/FDistributionImpl.java	2020-01-05 06:40:46.969617554 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_95/src/java/org/apache/commons/math/distribution/FDistributionImpl.java	2020-01-05 06:40:50.421588723 -0800
+@@ -141,10 +141,12 @@
+      * @return initial domain value
+      */
+     protected double getInitialDomain(double p) {
+-        double ret;
++        double ret = 1.0;
+         double d = getDenominatorDegreesOfFreedom();
++        if (d > 2.0) {
+             // use mean
+             ret = d / (d - 2.0);
++        }
+         return ret;
+     }
+     

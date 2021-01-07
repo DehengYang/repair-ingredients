@@ -1,0 +1,10 @@
+No.1 CCI matched.
+freq: 10
+CommitIds: 27c1eb72 27c1eb72 27c1eb72 233420ee d8931052 d8931052 c7a13bc6 c7a13bc6 fd07147f fd07147f 
+FreqRank:33
+
+No.2 CCI matched.
+freq: 10
+CommitIds: 27c1eb72 27c1eb72 27c1eb72 233420ee d8931052 d8931052 c7a13bc6 c7a13bc6 fd07147f fd07147f 
+FreqRank:33
+

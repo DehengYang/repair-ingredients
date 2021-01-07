@@ -1,0 +1,114 @@
+
+
+hASList: 
+[INS IfStatement@@InstanceofExpression:answer instanceof CallsRealMethods @TO@ MethodDeclaration@@public, @@void, MethodName:validate, @@Argus:Answer<?>+answer+Invocation+invocation+ @AT@ 874 @LENGTH@ 134
+---INS InstanceofExpression@@answer instanceof CallsRealMethods @TO@ IfStatement@@InstanceofExpression:answer instanceof CallsRealMethods @AT@ 878 @LENGTH@ 34
+------INS SimpleName@@answer @TO@ InstanceofExpression@@answer instanceof CallsRealMethods @AT@ 878 @LENGTH@ 6
+------INS Instanceof@@instanceof @TO@ InstanceofExpression@@answer instanceof CallsRealMethods @AT@ 885 @LENGTH@ 10
+------INS SimpleType@@CallsRealMethods @TO@ InstanceofExpression@@answer instanceof CallsRealMethods @AT@ 896 @LENGTH@ 16
+---INS ExpressionStatement@@MethodInvocation:validateMockingConcreteClass((CallsRealMethods)answer,invocation) @TO@ IfStatement@@InstanceofExpression:answer instanceof CallsRealMethods @AT@ 929 @LENGTH@ 68
+------INS MethodInvocation@@validateMockingConcreteClass((CallsRealMethods)answer,invocation) @TO@ ExpressionStatement@@MethodInvocation:validateMockingConcreteClass((CallsRealMethods)answer,invocation) @AT@ 929 @LENGTH@ 67
+---------INS SimpleName@@MethodName:validateMockingConcreteClass:[(CallsRealMethods)answer, invocation] @TO@ MethodInvocation@@validateMockingConcreteClass((CallsRealMethods)answer,invocation) @AT@ 929 @LENGTH@ 67
+------------INS CastExpression@@(CallsRealMethods)answer @TO@ SimpleName@@MethodName:validateMockingConcreteClass:[(CallsRealMethods)answer, invocation] @AT@ 958 @LENGTH@ 25
+---------------INS SimpleType@@CallsRealMethods @TO@ CastExpression@@(CallsRealMethods)answer @AT@ 959 @LENGTH@ 16
+---------------INS SimpleName@@answer @TO@ CastExpression@@(CallsRealMethods)answer @AT@ 977 @LENGTH@ 6
+------------INS SimpleName@@invocation @TO@ SimpleName@@MethodName:validateMockingConcreteClass:[(CallsRealMethods)answer, invocation] @AT@ 985 @LENGTH@ 10
+, INS MethodDeclaration@@private, @@void, MethodName:validateMockingConcreteClass, @@Argus:CallsRealMethods+answer+Invocation+invocation+ @TO@ TypeDeclaration@@[public]AnswersValidator,  @AT@ 1023 @LENGTH@ 239
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@void, MethodName:validateMockingConcreteClass, @@Argus:CallsRealMethods+answer+Invocation+invocation+ @AT@ 1023 @LENGTH@ 7
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, @@void, MethodName:validateMockingConcreteClass, @@Argus:CallsRealMethods+answer+Invocation+invocation+ @AT@ 1031 @LENGTH@ 4
+---INS SimpleName@@MethodName:validateMockingConcreteClass @TO@ MethodDeclaration@@private, @@void, MethodName:validateMockingConcreteClass, @@Argus:CallsRealMethods+answer+Invocation+invocation+ @AT@ 1036 @LENGTH@ 28
+---INS SingleVariableDeclaration@@CallsRealMethods answer @TO@ MethodDeclaration@@private, @@void, MethodName:validateMockingConcreteClass, @@Argus:CallsRealMethods+answer+Invocation+invocation+ @AT@ 1065 @LENGTH@ 23
+------INS SimpleType@@CallsRealMethods @TO@ SingleVariableDeclaration@@CallsRealMethods answer @AT@ 1065 @LENGTH@ 16
+------INS SimpleName@@answer @TO@ SingleVariableDeclaration@@CallsRealMethods answer @AT@ 1082 @LENGTH@ 6
+---INS SingleVariableDeclaration@@Invocation invocation @TO@ MethodDeclaration@@private, @@void, MethodName:validateMockingConcreteClass, @@Argus:CallsRealMethods+answer+Invocation+invocation+ @AT@ 1090 @LENGTH@ 21
+------INS SimpleType@@Invocation @TO@ SingleVariableDeclaration@@Invocation invocation @AT@ 1090 @LENGTH@ 10
+------INS SimpleName@@invocation @TO@ SingleVariableDeclaration@@Invocation invocation @AT@ 1101 @LENGTH@ 10
+---INS IfStatement@@MethodInvocation:invocation.getMethod().getDeclaringClass().isInterface() @TO@ MethodDeclaration@@private, @@void, MethodName:validateMockingConcreteClass, @@Argus:CallsRealMethods+answer+Invocation+invocation+ @AT@ 1124 @LENGTH@ 131
+------INS MethodInvocation@@invocation.getMethod().getDeclaringClass().isInterface() @TO@ IfStatement@@MethodInvocation:invocation.getMethod().getDeclaringClass().isInterface() @AT@ 1128 @LENGTH@ 56
+---------INS SimpleName@@Name:invocation @TO@ MethodInvocation@@invocation.getMethod().getDeclaringClass().isInterface() @AT@ 1128 @LENGTH@ 10
+---------INS MethodInvocation@@MethodName:getMethod:[] @TO@ MethodInvocation@@invocation.getMethod().getDeclaringClass().isInterface() @AT@ 1128 @LENGTH@ 22
+---------INS MethodInvocation@@MethodName:getDeclaringClass:[] @TO@ MethodInvocation@@invocation.getMethod().getDeclaringClass().isInterface() @AT@ 1128 @LENGTH@ 42
+---------INS SimpleName@@MethodName:isInterface:[] @TO@ MethodInvocation@@invocation.getMethod().getDeclaringClass().isInterface() @AT@ 1171 @LENGTH@ 13
+------INS ExpressionStatement@@MethodInvocation:reporter.cannotCallRealMethodOnInterface() @TO@ IfStatement@@MethodInvocation:invocation.getMethod().getDeclaringClass().isInterface() @AT@ 1201 @LENGTH@ 43
+---------INS MethodInvocation@@reporter.cannotCallRealMethodOnInterface() @TO@ ExpressionStatement@@MethodInvocation:reporter.cannotCallRealMethodOnInterface() @AT@ 1201 @LENGTH@ 42
+------------INS SimpleName@@Name:reporter @TO@ MethodInvocation@@reporter.cannotCallRealMethodOnInterface() @AT@ 1201 @LENGTH@ 8
+------------INS SimpleName@@MethodName:cannotCallRealMethodOnInterface:[] @TO@ MethodInvocation@@reporter.cannotCallRealMethodOnInterface() @AT@ 1210 @LENGTH@ 33
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6)
+OP2:   (INS, InstanceofExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Instanceof, OP2, null)
+OP5:      (INS, SimpleType, OP2, null)
+OP6:   (INS, ExpressionStatement, OP1, OP7)
+OP7:      (INS, MethodInvocation, OP6, OP8)
+OP8:         (INS, SimpleName, OP7, OP9 OP12)
+OP9:            (INS, CastExpression, OP8, OP10 OP11)
+OP10:               (INS, SimpleType, OP9, null)
+OP11:               (INS, SimpleName, OP9, null)
+OP12:            (INS, SimpleName, OP8, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InstanceofExpression:answer instanceof CallsRealMethods @TO@ MethodDeclaration@@public, @@void, MethodName:validate, @@Argus:Answer<?>+answer+Invocation+invocation+ @AT@ 874 @LENGTH@ 134
+---INS InstanceofExpression@@answer instanceof CallsRealMethods @TO@ IfStatement@@InstanceofExpression:answer instanceof CallsRealMethods @AT@ 878 @LENGTH@ 34
+------INS SimpleName@@answer @TO@ InstanceofExpression@@answer instanceof CallsRealMethods @AT@ 878 @LENGTH@ 6
+------INS Instanceof@@instanceof @TO@ InstanceofExpression@@answer instanceof CallsRealMethods @AT@ 885 @LENGTH@ 10
+------INS SimpleType@@CallsRealMethods @TO@ InstanceofExpression@@answer instanceof CallsRealMethods @AT@ 896 @LENGTH@ 16
+---INS ExpressionStatement@@MethodInvocation:validateMockingConcreteClass((CallsRealMethods)answer,invocation) @TO@ IfStatement@@InstanceofExpression:answer instanceof CallsRealMethods @AT@ 929 @LENGTH@ 68
+------INS MethodInvocation@@validateMockingConcreteClass((CallsRealMethods)answer,invocation) @TO@ ExpressionStatement@@MethodInvocation:validateMockingConcreteClass((CallsRealMethods)answer,invocation) @AT@ 929 @LENGTH@ 67
+---------INS SimpleName@@MethodName:validateMockingConcreteClass:[(CallsRealMethods)answer, invocation] @TO@ MethodInvocation@@validateMockingConcreteClass((CallsRealMethods)answer,invocation) @AT@ 929 @LENGTH@ 67
+------------INS CastExpression@@(CallsRealMethods)answer @TO@ SimpleName@@MethodName:validateMockingConcreteClass:[(CallsRealMethods)answer, invocation] @AT@ 958 @LENGTH@ 25
+---------------INS SimpleType@@CallsRealMethods @TO@ CastExpression@@(CallsRealMethods)answer @AT@ 959 @LENGTH@ 16
+---------------INS SimpleName@@answer @TO@ CastExpression@@(CallsRealMethods)answer @AT@ 977 @LENGTH@ 6
+------------INS SimpleName@@invocation @TO@ SimpleName@@MethodName:validateMockingConcreteClass:[(CallsRealMethods)answer, invocation] @AT@ 985 @LENGTH@ 10
+, INS MethodDeclaration@@private, @@void, MethodName:validateMockingConcreteClass, @@Argus:CallsRealMethods+answer+Invocation+invocation+ @TO@ TypeDeclaration@@[public]AnswersValidator,  @AT@ 1023 @LENGTH@ 239
+---INS Modifier@@private @TO@ MethodDeclaration@@private, @@void, MethodName:validateMockingConcreteClass, @@Argus:CallsRealMethods+answer+Invocation+invocation+ @AT@ 1023 @LENGTH@ 7
+---INS PrimitiveType@@void @TO@ MethodDeclaration@@private, @@void, MethodName:validateMockingConcreteClass, @@Argus:CallsRealMethods+answer+Invocation+invocation+ @AT@ 1031 @LENGTH@ 4
+---INS SimpleName@@MethodName:validateMockingConcreteClass @TO@ MethodDeclaration@@private, @@void, MethodName:validateMockingConcreteClass, @@Argus:CallsRealMethods+answer+Invocation+invocation+ @AT@ 1036 @LENGTH@ 28
+---INS SingleVariableDeclaration@@CallsRealMethods answer @TO@ MethodDeclaration@@private, @@void, MethodName:validateMockingConcreteClass, @@Argus:CallsRealMethods+answer+Invocation+invocation+ @AT@ 1065 @LENGTH@ 23
+------INS SimpleType@@CallsRealMethods @TO@ SingleVariableDeclaration@@CallsRealMethods answer @AT@ 1065 @LENGTH@ 16
+------INS SimpleName@@answer @TO@ SingleVariableDeclaration@@CallsRealMethods answer @AT@ 1082 @LENGTH@ 6
+---INS SingleVariableDeclaration@@Invocation invocation @TO@ MethodDeclaration@@private, @@void, MethodName:validateMockingConcreteClass, @@Argus:CallsRealMethods+answer+Invocation+invocation+ @AT@ 1090 @LENGTH@ 21
+------INS SimpleType@@Invocation @TO@ SingleVariableDeclaration@@Invocation invocation @AT@ 1090 @LENGTH@ 10
+------INS SimpleName@@invocation @TO@ SingleVariableDeclaration@@Invocation invocation @AT@ 1101 @LENGTH@ 10
+---INS IfStatement@@MethodInvocation:invocation.getMethod().getDeclaringClass().isInterface() @TO@ MethodDeclaration@@private, @@void, MethodName:validateMockingConcreteClass, @@Argus:CallsRealMethods+answer+Invocation+invocation+ @AT@ 1124 @LENGTH@ 131
+------INS MethodInvocation@@invocation.getMethod().getDeclaringClass().isInterface() @TO@ IfStatement@@MethodInvocation:invocation.getMethod().getDeclaringClass().isInterface() @AT@ 1128 @LENGTH@ 56
+---------INS SimpleName@@Name:invocation @TO@ MethodInvocation@@invocation.getMethod().getDeclaringClass().isInterface() @AT@ 1128 @LENGTH@ 10
+---------INS MethodInvocation@@MethodName:getMethod:[] @TO@ MethodInvocation@@invocation.getMethod().getDeclaringClass().isInterface() @AT@ 1128 @LENGTH@ 22
+---------INS MethodInvocation@@MethodName:getDeclaringClass:[] @TO@ MethodInvocation@@invocation.getMethod().getDeclaringClass().isInterface() @AT@ 1128 @LENGTH@ 42
+---------INS SimpleName@@MethodName:isInterface:[] @TO@ MethodInvocation@@invocation.getMethod().getDeclaringClass().isInterface() @AT@ 1171 @LENGTH@ 13
+------INS ExpressionStatement@@MethodInvocation:reporter.cannotCallRealMethodOnInterface() @TO@ IfStatement@@MethodInvocation:invocation.getMethod().getDeclaringClass().isInterface() @AT@ 1201 @LENGTH@ 43
+---------INS MethodInvocation@@reporter.cannotCallRealMethodOnInterface() @TO@ ExpressionStatement@@MethodInvocation:reporter.cannotCallRealMethodOnInterface() @AT@ 1201 @LENGTH@ 42
+------------INS SimpleName@@Name:reporter @TO@ MethodInvocation@@reporter.cannotCallRealMethodOnInterface() @AT@ 1201 @LENGTH@ 8
+------------INS SimpleName@@MethodName:cannotCallRealMethodOnInterface:[] @TO@ MethodInvocation@@reporter.cannotCallRealMethodOnInterface() @AT@ 1210 @LENGTH@ 33
+]
+
+CII:
+OP1:(INS, MethodDeclaration, null, OP2 OP3 OP4 OP5 OP8 OP11)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, PrimitiveType, OP1, null)
+OP4:   (INS, SimpleName, OP1, null)
+OP5:   (INS, SingleVariableDeclaration, OP1, OP6 OP7)
+OP6:      (INS, SimpleType, OP5, null)
+OP7:      (INS, SimpleName, OP5, null)
+OP8:   (INS, SingleVariableDeclaration, OP1, OP9 OP10)
+OP9:      (INS, SimpleType, OP8, null)
+OP10:      (INS, SimpleName, OP8, null)
+OP11:   (INS, IfStatement, OP1, OP12 OP17)
+OP12:      (INS, MethodInvocation, OP11, OP13 OP14 OP15 OP16)
+OP13:         (INS, SimpleName, OP12, null)
+OP14:         (INS, MethodInvocation, OP12, null)
+OP15:         (INS, MethodInvocation, OP12, null)
+OP16:         (INS, SimpleName, OP12, null)
+OP17:      (INS, ExpressionStatement, OP11, OP18)
+OP18:         (INS, MethodInvocation, OP17, OP19 OP20)
+OP19:            (INS, SimpleName, OP18, null)
+OP20:            (INS, SimpleName, OP18, null)
+
+
+

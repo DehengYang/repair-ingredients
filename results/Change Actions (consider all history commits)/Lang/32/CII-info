@@ -1,0 +1,605 @@
+
+
+hASList: 
+[UPD FieldDeclaration@@private, static, final, ThreadLocal<Set<IDKey>>, [REGISTRY=new ThreadLocal<Set<IDKey>>(){
+  @Override protected Set<IDKey> initialValue(){
+    return new HashSet<IDKey>();
+  }
+}
+] @TO@ private, static, final, ThreadLocal<Set<IDKey>>, [REGISTRY=new ThreadLocal<Set<IDKey>>()] @AT@ 3335 @LENGTH@ 209
+---UPD VariableDeclarationFragment@@REGISTRY=new ThreadLocal<Set<IDKey>>(){
+  @Override protected Set<IDKey> initialValue(){
+    return new HashSet<IDKey>();
+  }
+}
+ @TO@ REGISTRY=new ThreadLocal<Set<IDKey>>() @AT@ 3380 @LENGTH@ 163
+, INS VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @TO@ MethodDeclaration@@static, @@boolean, MethodName:isRegistered, @@Argus:Object+value+ @AT@ 4955 @LENGTH@ 36
+---INS ParameterizedType@@Set<IDKey> @TO@ VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @AT@ 4955 @LENGTH@ 10
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<IDKey> @AT@ 4955 @LENGTH@ 3
+------INS SimpleType@@IDKey @TO@ ParameterizedType@@Set<IDKey> @AT@ 4959 @LENGTH@ 5
+---INS VariableDeclarationFragment@@registry=getRegistry() @TO@ VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @AT@ 4966 @LENGTH@ 24
+------INS SimpleName@@registry @TO@ VariableDeclarationFragment@@registry=getRegistry() @AT@ 4966 @LENGTH@ 8
+------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ VariableDeclarationFragment@@registry=getRegistry() @AT@ 4977 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:getRegistry().contains(new IDKey(value)) @TO@ InfixExpression:registry != null && registry.contains(new IDKey(value)) @AT@ 5078 @LENGTH@ 48
+---INS InfixExpression@@registry != null && registry.contains(new IDKey(value)) @TO@ ReturnStatement@@MethodInvocation:getRegistry().contains(new IDKey(value)) @AT@ 5007 @LENGTH@ 55
+------INS InfixExpression@@registry != null @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5007 @LENGTH@ 16
+---------INS SimpleName@@registry @TO@ InfixExpression@@registry != null @AT@ 5007 @LENGTH@ 8
+---------INS Operator@@!= @TO@ InfixExpression@@registry != null @AT@ 5015 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@registry != null @AT@ 5019 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5023 @LENGTH@ 2
+------MOV MethodInvocation@@getRegistry().contains(new IDKey(value)) @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5085 @LENGTH@ 40
+---UPD MethodInvocation@@getRegistry().contains(new IDKey(value)) @TO@ registry.contains(new IDKey(value)) @AT@ 5085 @LENGTH@ 40
+------INS SimpleName@@Name:registry @TO@ MethodInvocation@@getRegistry().contains(new IDKey(value)) @AT@ 5027 @LENGTH@ 8
+------DEL MethodInvocation@@MethodName:getRegistry:[] @AT@ 5085 @LENGTH@ 13
+, INS SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @TO@ MethodDeclaration@@static, @@void, MethodName:register, @@Argus:Object+value+ @AT@ 20039 @LENGTH@ 155
+---INS TypeLiteral@@HashCodeBuilder.class @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20053 @LENGTH@ 21
+---INS IfStatement@@InfixExpression:getRegistry() == null @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20090 @LENGTH@ 94
+------INS InfixExpression@@getRegistry() == null @TO@ IfStatement@@InfixExpression:getRegistry() == null @AT@ 20094 @LENGTH@ 21
+---------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ InfixExpression@@getRegistry() == null @AT@ 20094 @LENGTH@ 13
+---------INS Operator@@== @TO@ InfixExpression@@getRegistry() == null @AT@ 20107 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@getRegistry() == null @AT@ 20111 @LENGTH@ 4
+------INS ExpressionStatement@@MethodInvocation:REGISTRY.set(new HashSet<IDKey>()) @TO@ IfStatement@@InfixExpression:getRegistry() == null @AT@ 20135 @LENGTH@ 35
+---------INS MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @TO@ ExpressionStatement@@MethodInvocation:REGISTRY.set(new HashSet<IDKey>()) @AT@ 20135 @LENGTH@ 34
+------------INS SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @AT@ 20135 @LENGTH@ 8
+------------INS SimpleName@@MethodName:set:[new HashSet<IDKey>()] @TO@ MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @AT@ 20144 @LENGTH@ 25
+---------------MOV ClassInstanceCreation@@HashSet<IDKey>[] @TO@ SimpleName@@MethodName:set:[new HashSet<IDKey>()] @AT@ 3506 @LENGTH@ 20
+, UPD ExpressionStatement@@MethodInvocation:getRegistry().remove(new IDKey(value)) @TO@ MethodInvocation:s.remove(new IDKey(value)) @AT@ 20445 @LENGTH@ 39
+---UPD MethodInvocation@@getRegistry().remove(new IDKey(value)) @TO@ s.remove(new IDKey(value)) @AT@ 20445 @LENGTH@ 38
+------DEL MethodInvocation@@MethodName:getRegistry:[] @AT@ 20445 @LENGTH@ 13
+------INS SimpleName@@Name:s @TO@ MethodInvocation@@getRegistry().remove(new IDKey(value)) @AT@ 20613 @LENGTH@ 1
+, INS VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @TO@ MethodDeclaration@@static, @@void, MethodName:unregister, @@Argus:Object+value+ @AT@ 20546 @LENGTH@ 29
+---INS ParameterizedType@@Set<IDKey> @TO@ VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @AT@ 20546 @LENGTH@ 10
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<IDKey> @AT@ 20546 @LENGTH@ 3
+------INS SimpleType@@IDKey @TO@ ParameterizedType@@Set<IDKey> @AT@ 20550 @LENGTH@ 5
+---INS VariableDeclarationFragment@@s=getRegistry() @TO@ VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @AT@ 20557 @LENGTH@ 17
+------INS SimpleName@@s @TO@ VariableDeclarationFragment@@s=getRegistry() @AT@ 20557 @LENGTH@ 1
+------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ VariableDeclarationFragment@@s=getRegistry() @AT@ 20561 @LENGTH@ 13
+, INS IfStatement@@InfixExpression:s != null @TO@ MethodDeclaration@@static, @@void, MethodName:unregister, @@Argus:Object+value+ @AT@ 20584 @LENGTH@ 223
+---MOV ExpressionStatement@@MethodInvocation:getRegistry().remove(new IDKey(value)) @TO@ IfStatement@@InfixExpression:s != null @AT@ 20445 @LENGTH@ 39
+---INS InfixExpression@@s != null @TO@ IfStatement@@InfixExpression:s != null @AT@ 20588 @LENGTH@ 9
+------INS SimpleName@@s @TO@ InfixExpression@@s != null @AT@ 20588 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@s != null @AT@ 20589 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@s != null @AT@ 20593 @LENGTH@ 4
+---INS SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @TO@ IfStatement@@InfixExpression:s != null @AT@ 20653 @LENGTH@ 144
+------INS TypeLiteral@@HashCodeBuilder.class @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20667 @LENGTH@ 21
+------INS IfStatement@@MethodInvocation:s.isEmpty() @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20708 @LENGTH@ 75
+---------INS MethodInvocation@@s.isEmpty() @TO@ IfStatement@@MethodInvocation:s.isEmpty() @AT@ 20712 @LENGTH@ 11
+------------INS SimpleName@@Name:s @TO@ MethodInvocation@@s.isEmpty() @AT@ 20712 @LENGTH@ 1
+------------INS SimpleName@@MethodName:isEmpty:[] @TO@ MethodInvocation@@s.isEmpty() @AT@ 20714 @LENGTH@ 9
+---------INS ExpressionStatement@@MethodInvocation:REGISTRY.remove() @TO@ IfStatement@@MethodInvocation:s.isEmpty() @AT@ 20747 @LENGTH@ 18
+------------INS MethodInvocation@@REGISTRY.remove() @TO@ ExpressionStatement@@MethodInvocation:REGISTRY.remove() @AT@ 20747 @LENGTH@ 17
+---------------INS SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.remove() @AT@ 20747 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:remove:[] @TO@ MethodInvocation@@REGISTRY.remove() @AT@ 20756 @LENGTH@ 8
+]
+
+CII:
+OP1:(UPD, FieldDeclaration, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, null)
+
+
+
+
+
+hASList: 
+[UPD FieldDeclaration@@private, static, final, ThreadLocal<Set<IDKey>>, [REGISTRY=new ThreadLocal<Set<IDKey>>(){
+  @Override protected Set<IDKey> initialValue(){
+    return new HashSet<IDKey>();
+  }
+}
+] @TO@ private, static, final, ThreadLocal<Set<IDKey>>, [REGISTRY=new ThreadLocal<Set<IDKey>>()] @AT@ 3335 @LENGTH@ 209
+---UPD VariableDeclarationFragment@@REGISTRY=new ThreadLocal<Set<IDKey>>(){
+  @Override protected Set<IDKey> initialValue(){
+    return new HashSet<IDKey>();
+  }
+}
+ @TO@ REGISTRY=new ThreadLocal<Set<IDKey>>() @AT@ 3380 @LENGTH@ 163
+, INS VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @TO@ MethodDeclaration@@static, @@boolean, MethodName:isRegistered, @@Argus:Object+value+ @AT@ 4955 @LENGTH@ 36
+---INS ParameterizedType@@Set<IDKey> @TO@ VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @AT@ 4955 @LENGTH@ 10
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<IDKey> @AT@ 4955 @LENGTH@ 3
+------INS SimpleType@@IDKey @TO@ ParameterizedType@@Set<IDKey> @AT@ 4959 @LENGTH@ 5
+---INS VariableDeclarationFragment@@registry=getRegistry() @TO@ VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @AT@ 4966 @LENGTH@ 24
+------INS SimpleName@@registry @TO@ VariableDeclarationFragment@@registry=getRegistry() @AT@ 4966 @LENGTH@ 8
+------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ VariableDeclarationFragment@@registry=getRegistry() @AT@ 4977 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:getRegistry().contains(new IDKey(value)) @TO@ InfixExpression:registry != null && registry.contains(new IDKey(value)) @AT@ 5078 @LENGTH@ 48
+---INS InfixExpression@@registry != null && registry.contains(new IDKey(value)) @TO@ ReturnStatement@@MethodInvocation:getRegistry().contains(new IDKey(value)) @AT@ 5007 @LENGTH@ 55
+------INS InfixExpression@@registry != null @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5007 @LENGTH@ 16
+---------INS SimpleName@@registry @TO@ InfixExpression@@registry != null @AT@ 5007 @LENGTH@ 8
+---------INS Operator@@!= @TO@ InfixExpression@@registry != null @AT@ 5015 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@registry != null @AT@ 5019 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5023 @LENGTH@ 2
+------MOV MethodInvocation@@getRegistry().contains(new IDKey(value)) @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5085 @LENGTH@ 40
+---UPD MethodInvocation@@getRegistry().contains(new IDKey(value)) @TO@ registry.contains(new IDKey(value)) @AT@ 5085 @LENGTH@ 40
+------INS SimpleName@@Name:registry @TO@ MethodInvocation@@getRegistry().contains(new IDKey(value)) @AT@ 5027 @LENGTH@ 8
+------DEL MethodInvocation@@MethodName:getRegistry:[] @AT@ 5085 @LENGTH@ 13
+, INS SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @TO@ MethodDeclaration@@static, @@void, MethodName:register, @@Argus:Object+value+ @AT@ 20039 @LENGTH@ 155
+---INS TypeLiteral@@HashCodeBuilder.class @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20053 @LENGTH@ 21
+---INS IfStatement@@InfixExpression:getRegistry() == null @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20090 @LENGTH@ 94
+------INS InfixExpression@@getRegistry() == null @TO@ IfStatement@@InfixExpression:getRegistry() == null @AT@ 20094 @LENGTH@ 21
+---------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ InfixExpression@@getRegistry() == null @AT@ 20094 @LENGTH@ 13
+---------INS Operator@@== @TO@ InfixExpression@@getRegistry() == null @AT@ 20107 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@getRegistry() == null @AT@ 20111 @LENGTH@ 4
+------INS ExpressionStatement@@MethodInvocation:REGISTRY.set(new HashSet<IDKey>()) @TO@ IfStatement@@InfixExpression:getRegistry() == null @AT@ 20135 @LENGTH@ 35
+---------INS MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @TO@ ExpressionStatement@@MethodInvocation:REGISTRY.set(new HashSet<IDKey>()) @AT@ 20135 @LENGTH@ 34
+------------INS SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @AT@ 20135 @LENGTH@ 8
+------------INS SimpleName@@MethodName:set:[new HashSet<IDKey>()] @TO@ MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @AT@ 20144 @LENGTH@ 25
+---------------MOV ClassInstanceCreation@@HashSet<IDKey>[] @TO@ SimpleName@@MethodName:set:[new HashSet<IDKey>()] @AT@ 3506 @LENGTH@ 20
+, UPD ExpressionStatement@@MethodInvocation:getRegistry().remove(new IDKey(value)) @TO@ MethodInvocation:s.remove(new IDKey(value)) @AT@ 20445 @LENGTH@ 39
+---UPD MethodInvocation@@getRegistry().remove(new IDKey(value)) @TO@ s.remove(new IDKey(value)) @AT@ 20445 @LENGTH@ 38
+------DEL MethodInvocation@@MethodName:getRegistry:[] @AT@ 20445 @LENGTH@ 13
+------INS SimpleName@@Name:s @TO@ MethodInvocation@@getRegistry().remove(new IDKey(value)) @AT@ 20613 @LENGTH@ 1
+, INS VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @TO@ MethodDeclaration@@static, @@void, MethodName:unregister, @@Argus:Object+value+ @AT@ 20546 @LENGTH@ 29
+---INS ParameterizedType@@Set<IDKey> @TO@ VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @AT@ 20546 @LENGTH@ 10
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<IDKey> @AT@ 20546 @LENGTH@ 3
+------INS SimpleType@@IDKey @TO@ ParameterizedType@@Set<IDKey> @AT@ 20550 @LENGTH@ 5
+---INS VariableDeclarationFragment@@s=getRegistry() @TO@ VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @AT@ 20557 @LENGTH@ 17
+------INS SimpleName@@s @TO@ VariableDeclarationFragment@@s=getRegistry() @AT@ 20557 @LENGTH@ 1
+------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ VariableDeclarationFragment@@s=getRegistry() @AT@ 20561 @LENGTH@ 13
+, INS IfStatement@@InfixExpression:s != null @TO@ MethodDeclaration@@static, @@void, MethodName:unregister, @@Argus:Object+value+ @AT@ 20584 @LENGTH@ 223
+---MOV ExpressionStatement@@MethodInvocation:getRegistry().remove(new IDKey(value)) @TO@ IfStatement@@InfixExpression:s != null @AT@ 20445 @LENGTH@ 39
+---INS InfixExpression@@s != null @TO@ IfStatement@@InfixExpression:s != null @AT@ 20588 @LENGTH@ 9
+------INS SimpleName@@s @TO@ InfixExpression@@s != null @AT@ 20588 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@s != null @AT@ 20589 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@s != null @AT@ 20593 @LENGTH@ 4
+---INS SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @TO@ IfStatement@@InfixExpression:s != null @AT@ 20653 @LENGTH@ 144
+------INS TypeLiteral@@HashCodeBuilder.class @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20667 @LENGTH@ 21
+------INS IfStatement@@MethodInvocation:s.isEmpty() @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20708 @LENGTH@ 75
+---------INS MethodInvocation@@s.isEmpty() @TO@ IfStatement@@MethodInvocation:s.isEmpty() @AT@ 20712 @LENGTH@ 11
+------------INS SimpleName@@Name:s @TO@ MethodInvocation@@s.isEmpty() @AT@ 20712 @LENGTH@ 1
+------------INS SimpleName@@MethodName:isEmpty:[] @TO@ MethodInvocation@@s.isEmpty() @AT@ 20714 @LENGTH@ 9
+---------INS ExpressionStatement@@MethodInvocation:REGISTRY.remove() @TO@ IfStatement@@MethodInvocation:s.isEmpty() @AT@ 20747 @LENGTH@ 18
+------------INS MethodInvocation@@REGISTRY.remove() @TO@ ExpressionStatement@@MethodInvocation:REGISTRY.remove() @AT@ 20747 @LENGTH@ 17
+---------------INS SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.remove() @AT@ 20747 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:remove:[] @TO@ MethodInvocation@@REGISTRY.remove() @AT@ 20756 @LENGTH@ 8
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP5)
+OP2:   (INS, ParameterizedType, OP1, OP3 OP4)
+OP3:      (INS, SimpleType, OP2, null)
+OP4:      (INS, SimpleType, OP2, null)
+OP5:   (INS, VariableDeclarationFragment, OP1, OP6 OP7)
+OP6:      (INS, SimpleName, OP5, null)
+OP7:      (INS, MethodInvocation, OP5, null)
+
+
+
+
+
+hASList: 
+[UPD FieldDeclaration@@private, static, final, ThreadLocal<Set<IDKey>>, [REGISTRY=new ThreadLocal<Set<IDKey>>(){
+  @Override protected Set<IDKey> initialValue(){
+    return new HashSet<IDKey>();
+  }
+}
+] @TO@ private, static, final, ThreadLocal<Set<IDKey>>, [REGISTRY=new ThreadLocal<Set<IDKey>>()] @AT@ 3335 @LENGTH@ 209
+---UPD VariableDeclarationFragment@@REGISTRY=new ThreadLocal<Set<IDKey>>(){
+  @Override protected Set<IDKey> initialValue(){
+    return new HashSet<IDKey>();
+  }
+}
+ @TO@ REGISTRY=new ThreadLocal<Set<IDKey>>() @AT@ 3380 @LENGTH@ 163
+, INS VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @TO@ MethodDeclaration@@static, @@boolean, MethodName:isRegistered, @@Argus:Object+value+ @AT@ 4955 @LENGTH@ 36
+---INS ParameterizedType@@Set<IDKey> @TO@ VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @AT@ 4955 @LENGTH@ 10
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<IDKey> @AT@ 4955 @LENGTH@ 3
+------INS SimpleType@@IDKey @TO@ ParameterizedType@@Set<IDKey> @AT@ 4959 @LENGTH@ 5
+---INS VariableDeclarationFragment@@registry=getRegistry() @TO@ VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @AT@ 4966 @LENGTH@ 24
+------INS SimpleName@@registry @TO@ VariableDeclarationFragment@@registry=getRegistry() @AT@ 4966 @LENGTH@ 8
+------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ VariableDeclarationFragment@@registry=getRegistry() @AT@ 4977 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:getRegistry().contains(new IDKey(value)) @TO@ InfixExpression:registry != null && registry.contains(new IDKey(value)) @AT@ 5078 @LENGTH@ 48
+---INS InfixExpression@@registry != null && registry.contains(new IDKey(value)) @TO@ ReturnStatement@@MethodInvocation:getRegistry().contains(new IDKey(value)) @AT@ 5007 @LENGTH@ 55
+------INS InfixExpression@@registry != null @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5007 @LENGTH@ 16
+---------INS SimpleName@@registry @TO@ InfixExpression@@registry != null @AT@ 5007 @LENGTH@ 8
+---------INS Operator@@!= @TO@ InfixExpression@@registry != null @AT@ 5015 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@registry != null @AT@ 5019 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5023 @LENGTH@ 2
+------MOV MethodInvocation@@getRegistry().contains(new IDKey(value)) @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5085 @LENGTH@ 40
+---UPD MethodInvocation@@getRegistry().contains(new IDKey(value)) @TO@ registry.contains(new IDKey(value)) @AT@ 5085 @LENGTH@ 40
+------INS SimpleName@@Name:registry @TO@ MethodInvocation@@getRegistry().contains(new IDKey(value)) @AT@ 5027 @LENGTH@ 8
+------DEL MethodInvocation@@MethodName:getRegistry:[] @AT@ 5085 @LENGTH@ 13
+, INS SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @TO@ MethodDeclaration@@static, @@void, MethodName:register, @@Argus:Object+value+ @AT@ 20039 @LENGTH@ 155
+---INS TypeLiteral@@HashCodeBuilder.class @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20053 @LENGTH@ 21
+---INS IfStatement@@InfixExpression:getRegistry() == null @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20090 @LENGTH@ 94
+------INS InfixExpression@@getRegistry() == null @TO@ IfStatement@@InfixExpression:getRegistry() == null @AT@ 20094 @LENGTH@ 21
+---------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ InfixExpression@@getRegistry() == null @AT@ 20094 @LENGTH@ 13
+---------INS Operator@@== @TO@ InfixExpression@@getRegistry() == null @AT@ 20107 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@getRegistry() == null @AT@ 20111 @LENGTH@ 4
+------INS ExpressionStatement@@MethodInvocation:REGISTRY.set(new HashSet<IDKey>()) @TO@ IfStatement@@InfixExpression:getRegistry() == null @AT@ 20135 @LENGTH@ 35
+---------INS MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @TO@ ExpressionStatement@@MethodInvocation:REGISTRY.set(new HashSet<IDKey>()) @AT@ 20135 @LENGTH@ 34
+------------INS SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @AT@ 20135 @LENGTH@ 8
+------------INS SimpleName@@MethodName:set:[new HashSet<IDKey>()] @TO@ MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @AT@ 20144 @LENGTH@ 25
+---------------MOV ClassInstanceCreation@@HashSet<IDKey>[] @TO@ SimpleName@@MethodName:set:[new HashSet<IDKey>()] @AT@ 3506 @LENGTH@ 20
+, UPD ExpressionStatement@@MethodInvocation:getRegistry().remove(new IDKey(value)) @TO@ MethodInvocation:s.remove(new IDKey(value)) @AT@ 20445 @LENGTH@ 39
+---UPD MethodInvocation@@getRegistry().remove(new IDKey(value)) @TO@ s.remove(new IDKey(value)) @AT@ 20445 @LENGTH@ 38
+------DEL MethodInvocation@@MethodName:getRegistry:[] @AT@ 20445 @LENGTH@ 13
+------INS SimpleName@@Name:s @TO@ MethodInvocation@@getRegistry().remove(new IDKey(value)) @AT@ 20613 @LENGTH@ 1
+, INS VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @TO@ MethodDeclaration@@static, @@void, MethodName:unregister, @@Argus:Object+value+ @AT@ 20546 @LENGTH@ 29
+---INS ParameterizedType@@Set<IDKey> @TO@ VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @AT@ 20546 @LENGTH@ 10
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<IDKey> @AT@ 20546 @LENGTH@ 3
+------INS SimpleType@@IDKey @TO@ ParameterizedType@@Set<IDKey> @AT@ 20550 @LENGTH@ 5
+---INS VariableDeclarationFragment@@s=getRegistry() @TO@ VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @AT@ 20557 @LENGTH@ 17
+------INS SimpleName@@s @TO@ VariableDeclarationFragment@@s=getRegistry() @AT@ 20557 @LENGTH@ 1
+------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ VariableDeclarationFragment@@s=getRegistry() @AT@ 20561 @LENGTH@ 13
+, INS IfStatement@@InfixExpression:s != null @TO@ MethodDeclaration@@static, @@void, MethodName:unregister, @@Argus:Object+value+ @AT@ 20584 @LENGTH@ 223
+---MOV ExpressionStatement@@MethodInvocation:getRegistry().remove(new IDKey(value)) @TO@ IfStatement@@InfixExpression:s != null @AT@ 20445 @LENGTH@ 39
+---INS InfixExpression@@s != null @TO@ IfStatement@@InfixExpression:s != null @AT@ 20588 @LENGTH@ 9
+------INS SimpleName@@s @TO@ InfixExpression@@s != null @AT@ 20588 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@s != null @AT@ 20589 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@s != null @AT@ 20593 @LENGTH@ 4
+---INS SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @TO@ IfStatement@@InfixExpression:s != null @AT@ 20653 @LENGTH@ 144
+------INS TypeLiteral@@HashCodeBuilder.class @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20667 @LENGTH@ 21
+------INS IfStatement@@MethodInvocation:s.isEmpty() @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20708 @LENGTH@ 75
+---------INS MethodInvocation@@s.isEmpty() @TO@ IfStatement@@MethodInvocation:s.isEmpty() @AT@ 20712 @LENGTH@ 11
+------------INS SimpleName@@Name:s @TO@ MethodInvocation@@s.isEmpty() @AT@ 20712 @LENGTH@ 1
+------------INS SimpleName@@MethodName:isEmpty:[] @TO@ MethodInvocation@@s.isEmpty() @AT@ 20714 @LENGTH@ 9
+---------INS ExpressionStatement@@MethodInvocation:REGISTRY.remove() @TO@ IfStatement@@MethodInvocation:s.isEmpty() @AT@ 20747 @LENGTH@ 18
+------------INS MethodInvocation@@REGISTRY.remove() @TO@ ExpressionStatement@@MethodInvocation:REGISTRY.remove() @AT@ 20747 @LENGTH@ 17
+---------------INS SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.remove() @AT@ 20747 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:remove:[] @TO@ MethodInvocation@@REGISTRY.remove() @AT@ 20756 @LENGTH@ 8
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2 OP9)
+OP2:   (INS, InfixExpression, OP1, OP3 OP7 OP8)
+OP3:      (INS, InfixExpression, OP2, OP4 OP5 OP6)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, Operator, OP3, null)
+OP6:         (INS, NullLiteral, OP3, null)
+OP7:      (INS, Operator, OP2, null)
+OP8:      (MOV, MethodInvocation, OP2, null)
+OP9:   (UPD, MethodInvocation, OP1, OP10 OP11)
+OP10:      (INS, SimpleName, OP9, null)
+OP11:      (DEL, MethodInvocation, OP9, null)
+
+
+
+
+
+hASList: 
+[UPD FieldDeclaration@@private, static, final, ThreadLocal<Set<IDKey>>, [REGISTRY=new ThreadLocal<Set<IDKey>>(){
+  @Override protected Set<IDKey> initialValue(){
+    return new HashSet<IDKey>();
+  }
+}
+] @TO@ private, static, final, ThreadLocal<Set<IDKey>>, [REGISTRY=new ThreadLocal<Set<IDKey>>()] @AT@ 3335 @LENGTH@ 209
+---UPD VariableDeclarationFragment@@REGISTRY=new ThreadLocal<Set<IDKey>>(){
+  @Override protected Set<IDKey> initialValue(){
+    return new HashSet<IDKey>();
+  }
+}
+ @TO@ REGISTRY=new ThreadLocal<Set<IDKey>>() @AT@ 3380 @LENGTH@ 163
+, INS VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @TO@ MethodDeclaration@@static, @@boolean, MethodName:isRegistered, @@Argus:Object+value+ @AT@ 4955 @LENGTH@ 36
+---INS ParameterizedType@@Set<IDKey> @TO@ VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @AT@ 4955 @LENGTH@ 10
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<IDKey> @AT@ 4955 @LENGTH@ 3
+------INS SimpleType@@IDKey @TO@ ParameterizedType@@Set<IDKey> @AT@ 4959 @LENGTH@ 5
+---INS VariableDeclarationFragment@@registry=getRegistry() @TO@ VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @AT@ 4966 @LENGTH@ 24
+------INS SimpleName@@registry @TO@ VariableDeclarationFragment@@registry=getRegistry() @AT@ 4966 @LENGTH@ 8
+------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ VariableDeclarationFragment@@registry=getRegistry() @AT@ 4977 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:getRegistry().contains(new IDKey(value)) @TO@ InfixExpression:registry != null && registry.contains(new IDKey(value)) @AT@ 5078 @LENGTH@ 48
+---INS InfixExpression@@registry != null && registry.contains(new IDKey(value)) @TO@ ReturnStatement@@MethodInvocation:getRegistry().contains(new IDKey(value)) @AT@ 5007 @LENGTH@ 55
+------INS InfixExpression@@registry != null @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5007 @LENGTH@ 16
+---------INS SimpleName@@registry @TO@ InfixExpression@@registry != null @AT@ 5007 @LENGTH@ 8
+---------INS Operator@@!= @TO@ InfixExpression@@registry != null @AT@ 5015 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@registry != null @AT@ 5019 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5023 @LENGTH@ 2
+------MOV MethodInvocation@@getRegistry().contains(new IDKey(value)) @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5085 @LENGTH@ 40
+---UPD MethodInvocation@@getRegistry().contains(new IDKey(value)) @TO@ registry.contains(new IDKey(value)) @AT@ 5085 @LENGTH@ 40
+------INS SimpleName@@Name:registry @TO@ MethodInvocation@@getRegistry().contains(new IDKey(value)) @AT@ 5027 @LENGTH@ 8
+------DEL MethodInvocation@@MethodName:getRegistry:[] @AT@ 5085 @LENGTH@ 13
+, INS SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @TO@ MethodDeclaration@@static, @@void, MethodName:register, @@Argus:Object+value+ @AT@ 20039 @LENGTH@ 155
+---INS TypeLiteral@@HashCodeBuilder.class @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20053 @LENGTH@ 21
+---INS IfStatement@@InfixExpression:getRegistry() == null @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20090 @LENGTH@ 94
+------INS InfixExpression@@getRegistry() == null @TO@ IfStatement@@InfixExpression:getRegistry() == null @AT@ 20094 @LENGTH@ 21
+---------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ InfixExpression@@getRegistry() == null @AT@ 20094 @LENGTH@ 13
+---------INS Operator@@== @TO@ InfixExpression@@getRegistry() == null @AT@ 20107 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@getRegistry() == null @AT@ 20111 @LENGTH@ 4
+------INS ExpressionStatement@@MethodInvocation:REGISTRY.set(new HashSet<IDKey>()) @TO@ IfStatement@@InfixExpression:getRegistry() == null @AT@ 20135 @LENGTH@ 35
+---------INS MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @TO@ ExpressionStatement@@MethodInvocation:REGISTRY.set(new HashSet<IDKey>()) @AT@ 20135 @LENGTH@ 34
+------------INS SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @AT@ 20135 @LENGTH@ 8
+------------INS SimpleName@@MethodName:set:[new HashSet<IDKey>()] @TO@ MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @AT@ 20144 @LENGTH@ 25
+---------------MOV ClassInstanceCreation@@HashSet<IDKey>[] @TO@ SimpleName@@MethodName:set:[new HashSet<IDKey>()] @AT@ 3506 @LENGTH@ 20
+, UPD ExpressionStatement@@MethodInvocation:getRegistry().remove(new IDKey(value)) @TO@ MethodInvocation:s.remove(new IDKey(value)) @AT@ 20445 @LENGTH@ 39
+---UPD MethodInvocation@@getRegistry().remove(new IDKey(value)) @TO@ s.remove(new IDKey(value)) @AT@ 20445 @LENGTH@ 38
+------DEL MethodInvocation@@MethodName:getRegistry:[] @AT@ 20445 @LENGTH@ 13
+------INS SimpleName@@Name:s @TO@ MethodInvocation@@getRegistry().remove(new IDKey(value)) @AT@ 20613 @LENGTH@ 1
+, INS VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @TO@ MethodDeclaration@@static, @@void, MethodName:unregister, @@Argus:Object+value+ @AT@ 20546 @LENGTH@ 29
+---INS ParameterizedType@@Set<IDKey> @TO@ VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @AT@ 20546 @LENGTH@ 10
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<IDKey> @AT@ 20546 @LENGTH@ 3
+------INS SimpleType@@IDKey @TO@ ParameterizedType@@Set<IDKey> @AT@ 20550 @LENGTH@ 5
+---INS VariableDeclarationFragment@@s=getRegistry() @TO@ VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @AT@ 20557 @LENGTH@ 17
+------INS SimpleName@@s @TO@ VariableDeclarationFragment@@s=getRegistry() @AT@ 20557 @LENGTH@ 1
+------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ VariableDeclarationFragment@@s=getRegistry() @AT@ 20561 @LENGTH@ 13
+, INS IfStatement@@InfixExpression:s != null @TO@ MethodDeclaration@@static, @@void, MethodName:unregister, @@Argus:Object+value+ @AT@ 20584 @LENGTH@ 223
+---MOV ExpressionStatement@@MethodInvocation:getRegistry().remove(new IDKey(value)) @TO@ IfStatement@@InfixExpression:s != null @AT@ 20445 @LENGTH@ 39
+---INS InfixExpression@@s != null @TO@ IfStatement@@InfixExpression:s != null @AT@ 20588 @LENGTH@ 9
+------INS SimpleName@@s @TO@ InfixExpression@@s != null @AT@ 20588 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@s != null @AT@ 20589 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@s != null @AT@ 20593 @LENGTH@ 4
+---INS SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @TO@ IfStatement@@InfixExpression:s != null @AT@ 20653 @LENGTH@ 144
+------INS TypeLiteral@@HashCodeBuilder.class @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20667 @LENGTH@ 21
+------INS IfStatement@@MethodInvocation:s.isEmpty() @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20708 @LENGTH@ 75
+---------INS MethodInvocation@@s.isEmpty() @TO@ IfStatement@@MethodInvocation:s.isEmpty() @AT@ 20712 @LENGTH@ 11
+------------INS SimpleName@@Name:s @TO@ MethodInvocation@@s.isEmpty() @AT@ 20712 @LENGTH@ 1
+------------INS SimpleName@@MethodName:isEmpty:[] @TO@ MethodInvocation@@s.isEmpty() @AT@ 20714 @LENGTH@ 9
+---------INS ExpressionStatement@@MethodInvocation:REGISTRY.remove() @TO@ IfStatement@@MethodInvocation:s.isEmpty() @AT@ 20747 @LENGTH@ 18
+------------INS MethodInvocation@@REGISTRY.remove() @TO@ ExpressionStatement@@MethodInvocation:REGISTRY.remove() @AT@ 20747 @LENGTH@ 17
+---------------INS SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.remove() @AT@ 20747 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:remove:[] @TO@ MethodInvocation@@REGISTRY.remove() @AT@ 20756 @LENGTH@ 8
+]
+
+CII:
+OP1:(INS, SynchronizedStatement, null, OP2 OP3)
+OP2:   (INS, TypeLiteral, OP1, null)
+OP3:   (INS, IfStatement, OP1, OP4 OP8)
+OP4:      (INS, InfixExpression, OP3, OP5 OP6 OP7)
+OP5:         (INS, MethodInvocation, OP4, null)
+OP6:         (INS, Operator, OP4, null)
+OP7:         (INS, NullLiteral, OP4, null)
+OP8:      (INS, ExpressionStatement, OP3, OP9)
+OP9:         (INS, MethodInvocation, OP8, OP10 OP11)
+OP10:            (INS, SimpleName, OP9, null)
+OP11:            (INS, SimpleName, OP9, OP12)
+OP12:               (MOV, ClassInstanceCreation, OP11, null)
+
+
+
+
+
+hASList: 
+[UPD FieldDeclaration@@private, static, final, ThreadLocal<Set<IDKey>>, [REGISTRY=new ThreadLocal<Set<IDKey>>(){
+  @Override protected Set<IDKey> initialValue(){
+    return new HashSet<IDKey>();
+  }
+}
+] @TO@ private, static, final, ThreadLocal<Set<IDKey>>, [REGISTRY=new ThreadLocal<Set<IDKey>>()] @AT@ 3335 @LENGTH@ 209
+---UPD VariableDeclarationFragment@@REGISTRY=new ThreadLocal<Set<IDKey>>(){
+  @Override protected Set<IDKey> initialValue(){
+    return new HashSet<IDKey>();
+  }
+}
+ @TO@ REGISTRY=new ThreadLocal<Set<IDKey>>() @AT@ 3380 @LENGTH@ 163
+, INS VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @TO@ MethodDeclaration@@static, @@boolean, MethodName:isRegistered, @@Argus:Object+value+ @AT@ 4955 @LENGTH@ 36
+---INS ParameterizedType@@Set<IDKey> @TO@ VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @AT@ 4955 @LENGTH@ 10
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<IDKey> @AT@ 4955 @LENGTH@ 3
+------INS SimpleType@@IDKey @TO@ ParameterizedType@@Set<IDKey> @AT@ 4959 @LENGTH@ 5
+---INS VariableDeclarationFragment@@registry=getRegistry() @TO@ VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @AT@ 4966 @LENGTH@ 24
+------INS SimpleName@@registry @TO@ VariableDeclarationFragment@@registry=getRegistry() @AT@ 4966 @LENGTH@ 8
+------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ VariableDeclarationFragment@@registry=getRegistry() @AT@ 4977 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:getRegistry().contains(new IDKey(value)) @TO@ InfixExpression:registry != null && registry.contains(new IDKey(value)) @AT@ 5078 @LENGTH@ 48
+---INS InfixExpression@@registry != null && registry.contains(new IDKey(value)) @TO@ ReturnStatement@@MethodInvocation:getRegistry().contains(new IDKey(value)) @AT@ 5007 @LENGTH@ 55
+------INS InfixExpression@@registry != null @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5007 @LENGTH@ 16
+---------INS SimpleName@@registry @TO@ InfixExpression@@registry != null @AT@ 5007 @LENGTH@ 8
+---------INS Operator@@!= @TO@ InfixExpression@@registry != null @AT@ 5015 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@registry != null @AT@ 5019 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5023 @LENGTH@ 2
+------MOV MethodInvocation@@getRegistry().contains(new IDKey(value)) @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5085 @LENGTH@ 40
+---UPD MethodInvocation@@getRegistry().contains(new IDKey(value)) @TO@ registry.contains(new IDKey(value)) @AT@ 5085 @LENGTH@ 40
+------INS SimpleName@@Name:registry @TO@ MethodInvocation@@getRegistry().contains(new IDKey(value)) @AT@ 5027 @LENGTH@ 8
+------DEL MethodInvocation@@MethodName:getRegistry:[] @AT@ 5085 @LENGTH@ 13
+, INS SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @TO@ MethodDeclaration@@static, @@void, MethodName:register, @@Argus:Object+value+ @AT@ 20039 @LENGTH@ 155
+---INS TypeLiteral@@HashCodeBuilder.class @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20053 @LENGTH@ 21
+---INS IfStatement@@InfixExpression:getRegistry() == null @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20090 @LENGTH@ 94
+------INS InfixExpression@@getRegistry() == null @TO@ IfStatement@@InfixExpression:getRegistry() == null @AT@ 20094 @LENGTH@ 21
+---------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ InfixExpression@@getRegistry() == null @AT@ 20094 @LENGTH@ 13
+---------INS Operator@@== @TO@ InfixExpression@@getRegistry() == null @AT@ 20107 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@getRegistry() == null @AT@ 20111 @LENGTH@ 4
+------INS ExpressionStatement@@MethodInvocation:REGISTRY.set(new HashSet<IDKey>()) @TO@ IfStatement@@InfixExpression:getRegistry() == null @AT@ 20135 @LENGTH@ 35
+---------INS MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @TO@ ExpressionStatement@@MethodInvocation:REGISTRY.set(new HashSet<IDKey>()) @AT@ 20135 @LENGTH@ 34
+------------INS SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @AT@ 20135 @LENGTH@ 8
+------------INS SimpleName@@MethodName:set:[new HashSet<IDKey>()] @TO@ MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @AT@ 20144 @LENGTH@ 25
+---------------MOV ClassInstanceCreation@@HashSet<IDKey>[] @TO@ SimpleName@@MethodName:set:[new HashSet<IDKey>()] @AT@ 3506 @LENGTH@ 20
+, UPD ExpressionStatement@@MethodInvocation:getRegistry().remove(new IDKey(value)) @TO@ MethodInvocation:s.remove(new IDKey(value)) @AT@ 20445 @LENGTH@ 39
+---UPD MethodInvocation@@getRegistry().remove(new IDKey(value)) @TO@ s.remove(new IDKey(value)) @AT@ 20445 @LENGTH@ 38
+------DEL MethodInvocation@@MethodName:getRegistry:[] @AT@ 20445 @LENGTH@ 13
+------INS SimpleName@@Name:s @TO@ MethodInvocation@@getRegistry().remove(new IDKey(value)) @AT@ 20613 @LENGTH@ 1
+, INS VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @TO@ MethodDeclaration@@static, @@void, MethodName:unregister, @@Argus:Object+value+ @AT@ 20546 @LENGTH@ 29
+---INS ParameterizedType@@Set<IDKey> @TO@ VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @AT@ 20546 @LENGTH@ 10
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<IDKey> @AT@ 20546 @LENGTH@ 3
+------INS SimpleType@@IDKey @TO@ ParameterizedType@@Set<IDKey> @AT@ 20550 @LENGTH@ 5
+---INS VariableDeclarationFragment@@s=getRegistry() @TO@ VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @AT@ 20557 @LENGTH@ 17
+------INS SimpleName@@s @TO@ VariableDeclarationFragment@@s=getRegistry() @AT@ 20557 @LENGTH@ 1
+------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ VariableDeclarationFragment@@s=getRegistry() @AT@ 20561 @LENGTH@ 13
+, INS IfStatement@@InfixExpression:s != null @TO@ MethodDeclaration@@static, @@void, MethodName:unregister, @@Argus:Object+value+ @AT@ 20584 @LENGTH@ 223
+---MOV ExpressionStatement@@MethodInvocation:getRegistry().remove(new IDKey(value)) @TO@ IfStatement@@InfixExpression:s != null @AT@ 20445 @LENGTH@ 39
+---INS InfixExpression@@s != null @TO@ IfStatement@@InfixExpression:s != null @AT@ 20588 @LENGTH@ 9
+------INS SimpleName@@s @TO@ InfixExpression@@s != null @AT@ 20588 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@s != null @AT@ 20589 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@s != null @AT@ 20593 @LENGTH@ 4
+---INS SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @TO@ IfStatement@@InfixExpression:s != null @AT@ 20653 @LENGTH@ 144
+------INS TypeLiteral@@HashCodeBuilder.class @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20667 @LENGTH@ 21
+------INS IfStatement@@MethodInvocation:s.isEmpty() @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20708 @LENGTH@ 75
+---------INS MethodInvocation@@s.isEmpty() @TO@ IfStatement@@MethodInvocation:s.isEmpty() @AT@ 20712 @LENGTH@ 11
+------------INS SimpleName@@Name:s @TO@ MethodInvocation@@s.isEmpty() @AT@ 20712 @LENGTH@ 1
+------------INS SimpleName@@MethodName:isEmpty:[] @TO@ MethodInvocation@@s.isEmpty() @AT@ 20714 @LENGTH@ 9
+---------INS ExpressionStatement@@MethodInvocation:REGISTRY.remove() @TO@ IfStatement@@MethodInvocation:s.isEmpty() @AT@ 20747 @LENGTH@ 18
+------------INS MethodInvocation@@REGISTRY.remove() @TO@ ExpressionStatement@@MethodInvocation:REGISTRY.remove() @AT@ 20747 @LENGTH@ 17
+---------------INS SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.remove() @AT@ 20747 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:remove:[] @TO@ MethodInvocation@@REGISTRY.remove() @AT@ 20756 @LENGTH@ 8
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3 OP4)
+OP3:      (DEL, MethodInvocation, OP2, null)
+OP4:      (INS, SimpleName, OP2, null)
+
+
+
+
+
+hASList: 
+[UPD FieldDeclaration@@private, static, final, ThreadLocal<Set<IDKey>>, [REGISTRY=new ThreadLocal<Set<IDKey>>(){
+  @Override protected Set<IDKey> initialValue(){
+    return new HashSet<IDKey>();
+  }
+}
+] @TO@ private, static, final, ThreadLocal<Set<IDKey>>, [REGISTRY=new ThreadLocal<Set<IDKey>>()] @AT@ 3335 @LENGTH@ 209
+---UPD VariableDeclarationFragment@@REGISTRY=new ThreadLocal<Set<IDKey>>(){
+  @Override protected Set<IDKey> initialValue(){
+    return new HashSet<IDKey>();
+  }
+}
+ @TO@ REGISTRY=new ThreadLocal<Set<IDKey>>() @AT@ 3380 @LENGTH@ 163
+, INS VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @TO@ MethodDeclaration@@static, @@boolean, MethodName:isRegistered, @@Argus:Object+value+ @AT@ 4955 @LENGTH@ 36
+---INS ParameterizedType@@Set<IDKey> @TO@ VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @AT@ 4955 @LENGTH@ 10
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<IDKey> @AT@ 4955 @LENGTH@ 3
+------INS SimpleType@@IDKey @TO@ ParameterizedType@@Set<IDKey> @AT@ 4959 @LENGTH@ 5
+---INS VariableDeclarationFragment@@registry=getRegistry() @TO@ VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @AT@ 4966 @LENGTH@ 24
+------INS SimpleName@@registry @TO@ VariableDeclarationFragment@@registry=getRegistry() @AT@ 4966 @LENGTH@ 8
+------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ VariableDeclarationFragment@@registry=getRegistry() @AT@ 4977 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:getRegistry().contains(new IDKey(value)) @TO@ InfixExpression:registry != null && registry.contains(new IDKey(value)) @AT@ 5078 @LENGTH@ 48
+---INS InfixExpression@@registry != null && registry.contains(new IDKey(value)) @TO@ ReturnStatement@@MethodInvocation:getRegistry().contains(new IDKey(value)) @AT@ 5007 @LENGTH@ 55
+------INS InfixExpression@@registry != null @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5007 @LENGTH@ 16
+---------INS SimpleName@@registry @TO@ InfixExpression@@registry != null @AT@ 5007 @LENGTH@ 8
+---------INS Operator@@!= @TO@ InfixExpression@@registry != null @AT@ 5015 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@registry != null @AT@ 5019 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5023 @LENGTH@ 2
+------MOV MethodInvocation@@getRegistry().contains(new IDKey(value)) @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5085 @LENGTH@ 40
+---UPD MethodInvocation@@getRegistry().contains(new IDKey(value)) @TO@ registry.contains(new IDKey(value)) @AT@ 5085 @LENGTH@ 40
+------INS SimpleName@@Name:registry @TO@ MethodInvocation@@getRegistry().contains(new IDKey(value)) @AT@ 5027 @LENGTH@ 8
+------DEL MethodInvocation@@MethodName:getRegistry:[] @AT@ 5085 @LENGTH@ 13
+, INS SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @TO@ MethodDeclaration@@static, @@void, MethodName:register, @@Argus:Object+value+ @AT@ 20039 @LENGTH@ 155
+---INS TypeLiteral@@HashCodeBuilder.class @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20053 @LENGTH@ 21
+---INS IfStatement@@InfixExpression:getRegistry() == null @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20090 @LENGTH@ 94
+------INS InfixExpression@@getRegistry() == null @TO@ IfStatement@@InfixExpression:getRegistry() == null @AT@ 20094 @LENGTH@ 21
+---------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ InfixExpression@@getRegistry() == null @AT@ 20094 @LENGTH@ 13
+---------INS Operator@@== @TO@ InfixExpression@@getRegistry() == null @AT@ 20107 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@getRegistry() == null @AT@ 20111 @LENGTH@ 4
+------INS ExpressionStatement@@MethodInvocation:REGISTRY.set(new HashSet<IDKey>()) @TO@ IfStatement@@InfixExpression:getRegistry() == null @AT@ 20135 @LENGTH@ 35
+---------INS MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @TO@ ExpressionStatement@@MethodInvocation:REGISTRY.set(new HashSet<IDKey>()) @AT@ 20135 @LENGTH@ 34
+------------INS SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @AT@ 20135 @LENGTH@ 8
+------------INS SimpleName@@MethodName:set:[new HashSet<IDKey>()] @TO@ MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @AT@ 20144 @LENGTH@ 25
+---------------MOV ClassInstanceCreation@@HashSet<IDKey>[] @TO@ SimpleName@@MethodName:set:[new HashSet<IDKey>()] @AT@ 3506 @LENGTH@ 20
+, UPD ExpressionStatement@@MethodInvocation:getRegistry().remove(new IDKey(value)) @TO@ MethodInvocation:s.remove(new IDKey(value)) @AT@ 20445 @LENGTH@ 39
+---UPD MethodInvocation@@getRegistry().remove(new IDKey(value)) @TO@ s.remove(new IDKey(value)) @AT@ 20445 @LENGTH@ 38
+------DEL MethodInvocation@@MethodName:getRegistry:[] @AT@ 20445 @LENGTH@ 13
+------INS SimpleName@@Name:s @TO@ MethodInvocation@@getRegistry().remove(new IDKey(value)) @AT@ 20613 @LENGTH@ 1
+, INS VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @TO@ MethodDeclaration@@static, @@void, MethodName:unregister, @@Argus:Object+value+ @AT@ 20546 @LENGTH@ 29
+---INS ParameterizedType@@Set<IDKey> @TO@ VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @AT@ 20546 @LENGTH@ 10
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<IDKey> @AT@ 20546 @LENGTH@ 3
+------INS SimpleType@@IDKey @TO@ ParameterizedType@@Set<IDKey> @AT@ 20550 @LENGTH@ 5
+---INS VariableDeclarationFragment@@s=getRegistry() @TO@ VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @AT@ 20557 @LENGTH@ 17
+------INS SimpleName@@s @TO@ VariableDeclarationFragment@@s=getRegistry() @AT@ 20557 @LENGTH@ 1
+------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ VariableDeclarationFragment@@s=getRegistry() @AT@ 20561 @LENGTH@ 13
+, INS IfStatement@@InfixExpression:s != null @TO@ MethodDeclaration@@static, @@void, MethodName:unregister, @@Argus:Object+value+ @AT@ 20584 @LENGTH@ 223
+---MOV ExpressionStatement@@MethodInvocation:getRegistry().remove(new IDKey(value)) @TO@ IfStatement@@InfixExpression:s != null @AT@ 20445 @LENGTH@ 39
+---INS InfixExpression@@s != null @TO@ IfStatement@@InfixExpression:s != null @AT@ 20588 @LENGTH@ 9
+------INS SimpleName@@s @TO@ InfixExpression@@s != null @AT@ 20588 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@s != null @AT@ 20589 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@s != null @AT@ 20593 @LENGTH@ 4
+---INS SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @TO@ IfStatement@@InfixExpression:s != null @AT@ 20653 @LENGTH@ 144
+------INS TypeLiteral@@HashCodeBuilder.class @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20667 @LENGTH@ 21
+------INS IfStatement@@MethodInvocation:s.isEmpty() @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20708 @LENGTH@ 75
+---------INS MethodInvocation@@s.isEmpty() @TO@ IfStatement@@MethodInvocation:s.isEmpty() @AT@ 20712 @LENGTH@ 11
+------------INS SimpleName@@Name:s @TO@ MethodInvocation@@s.isEmpty() @AT@ 20712 @LENGTH@ 1
+------------INS SimpleName@@MethodName:isEmpty:[] @TO@ MethodInvocation@@s.isEmpty() @AT@ 20714 @LENGTH@ 9
+---------INS ExpressionStatement@@MethodInvocation:REGISTRY.remove() @TO@ IfStatement@@MethodInvocation:s.isEmpty() @AT@ 20747 @LENGTH@ 18
+------------INS MethodInvocation@@REGISTRY.remove() @TO@ ExpressionStatement@@MethodInvocation:REGISTRY.remove() @AT@ 20747 @LENGTH@ 17
+---------------INS SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.remove() @AT@ 20747 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:remove:[] @TO@ MethodInvocation@@REGISTRY.remove() @AT@ 20756 @LENGTH@ 8
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP5)
+OP2:   (INS, ParameterizedType, OP1, OP3 OP4)
+OP3:      (INS, SimpleType, OP2, null)
+OP4:      (INS, SimpleType, OP2, null)
+OP5:   (INS, VariableDeclarationFragment, OP1, OP6 OP7)
+OP6:      (INS, SimpleName, OP5, null)
+OP7:      (INS, MethodInvocation, OP5, null)
+
+
+
+
+
+hASList: 
+[UPD FieldDeclaration@@private, static, final, ThreadLocal<Set<IDKey>>, [REGISTRY=new ThreadLocal<Set<IDKey>>(){
+  @Override protected Set<IDKey> initialValue(){
+    return new HashSet<IDKey>();
+  }
+}
+] @TO@ private, static, final, ThreadLocal<Set<IDKey>>, [REGISTRY=new ThreadLocal<Set<IDKey>>()] @AT@ 3335 @LENGTH@ 209
+---UPD VariableDeclarationFragment@@REGISTRY=new ThreadLocal<Set<IDKey>>(){
+  @Override protected Set<IDKey> initialValue(){
+    return new HashSet<IDKey>();
+  }
+}
+ @TO@ REGISTRY=new ThreadLocal<Set<IDKey>>() @AT@ 3380 @LENGTH@ 163
+, INS VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @TO@ MethodDeclaration@@static, @@boolean, MethodName:isRegistered, @@Argus:Object+value+ @AT@ 4955 @LENGTH@ 36
+---INS ParameterizedType@@Set<IDKey> @TO@ VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @AT@ 4955 @LENGTH@ 10
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<IDKey> @AT@ 4955 @LENGTH@ 3
+------INS SimpleType@@IDKey @TO@ ParameterizedType@@Set<IDKey> @AT@ 4959 @LENGTH@ 5
+---INS VariableDeclarationFragment@@registry=getRegistry() @TO@ VariableDeclarationStatement@@Set<IDKey> registry=getRegistry(); @AT@ 4966 @LENGTH@ 24
+------INS SimpleName@@registry @TO@ VariableDeclarationFragment@@registry=getRegistry() @AT@ 4966 @LENGTH@ 8
+------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ VariableDeclarationFragment@@registry=getRegistry() @AT@ 4977 @LENGTH@ 13
+, UPD ReturnStatement@@MethodInvocation:getRegistry().contains(new IDKey(value)) @TO@ InfixExpression:registry != null && registry.contains(new IDKey(value)) @AT@ 5078 @LENGTH@ 48
+---INS InfixExpression@@registry != null && registry.contains(new IDKey(value)) @TO@ ReturnStatement@@MethodInvocation:getRegistry().contains(new IDKey(value)) @AT@ 5007 @LENGTH@ 55
+------INS InfixExpression@@registry != null @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5007 @LENGTH@ 16
+---------INS SimpleName@@registry @TO@ InfixExpression@@registry != null @AT@ 5007 @LENGTH@ 8
+---------INS Operator@@!= @TO@ InfixExpression@@registry != null @AT@ 5015 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@registry != null @AT@ 5019 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5023 @LENGTH@ 2
+------MOV MethodInvocation@@getRegistry().contains(new IDKey(value)) @TO@ InfixExpression@@registry != null && registry.contains(new IDKey(value)) @AT@ 5085 @LENGTH@ 40
+---UPD MethodInvocation@@getRegistry().contains(new IDKey(value)) @TO@ registry.contains(new IDKey(value)) @AT@ 5085 @LENGTH@ 40
+------INS SimpleName@@Name:registry @TO@ MethodInvocation@@getRegistry().contains(new IDKey(value)) @AT@ 5027 @LENGTH@ 8
+------DEL MethodInvocation@@MethodName:getRegistry:[] @AT@ 5085 @LENGTH@ 13
+, INS SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @TO@ MethodDeclaration@@static, @@void, MethodName:register, @@Argus:Object+value+ @AT@ 20039 @LENGTH@ 155
+---INS TypeLiteral@@HashCodeBuilder.class @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20053 @LENGTH@ 21
+---INS IfStatement@@InfixExpression:getRegistry() == null @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20090 @LENGTH@ 94
+------INS InfixExpression@@getRegistry() == null @TO@ IfStatement@@InfixExpression:getRegistry() == null @AT@ 20094 @LENGTH@ 21
+---------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ InfixExpression@@getRegistry() == null @AT@ 20094 @LENGTH@ 13
+---------INS Operator@@== @TO@ InfixExpression@@getRegistry() == null @AT@ 20107 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@getRegistry() == null @AT@ 20111 @LENGTH@ 4
+------INS ExpressionStatement@@MethodInvocation:REGISTRY.set(new HashSet<IDKey>()) @TO@ IfStatement@@InfixExpression:getRegistry() == null @AT@ 20135 @LENGTH@ 35
+---------INS MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @TO@ ExpressionStatement@@MethodInvocation:REGISTRY.set(new HashSet<IDKey>()) @AT@ 20135 @LENGTH@ 34
+------------INS SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @AT@ 20135 @LENGTH@ 8
+------------INS SimpleName@@MethodName:set:[new HashSet<IDKey>()] @TO@ MethodInvocation@@REGISTRY.set(new HashSet<IDKey>()) @AT@ 20144 @LENGTH@ 25
+---------------MOV ClassInstanceCreation@@HashSet<IDKey>[] @TO@ SimpleName@@MethodName:set:[new HashSet<IDKey>()] @AT@ 3506 @LENGTH@ 20
+, UPD ExpressionStatement@@MethodInvocation:getRegistry().remove(new IDKey(value)) @TO@ MethodInvocation:s.remove(new IDKey(value)) @AT@ 20445 @LENGTH@ 39
+---UPD MethodInvocation@@getRegistry().remove(new IDKey(value)) @TO@ s.remove(new IDKey(value)) @AT@ 20445 @LENGTH@ 38
+------DEL MethodInvocation@@MethodName:getRegistry:[] @AT@ 20445 @LENGTH@ 13
+------INS SimpleName@@Name:s @TO@ MethodInvocation@@getRegistry().remove(new IDKey(value)) @AT@ 20613 @LENGTH@ 1
+, INS VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @TO@ MethodDeclaration@@static, @@void, MethodName:unregister, @@Argus:Object+value+ @AT@ 20546 @LENGTH@ 29
+---INS ParameterizedType@@Set<IDKey> @TO@ VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @AT@ 20546 @LENGTH@ 10
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<IDKey> @AT@ 20546 @LENGTH@ 3
+------INS SimpleType@@IDKey @TO@ ParameterizedType@@Set<IDKey> @AT@ 20550 @LENGTH@ 5
+---INS VariableDeclarationFragment@@s=getRegistry() @TO@ VariableDeclarationStatement@@Set<IDKey> s=getRegistry(); @AT@ 20557 @LENGTH@ 17
+------INS SimpleName@@s @TO@ VariableDeclarationFragment@@s=getRegistry() @AT@ 20557 @LENGTH@ 1
+------INS MethodInvocation@@MethodName:getRegistry:[] @TO@ VariableDeclarationFragment@@s=getRegistry() @AT@ 20561 @LENGTH@ 13
+, INS IfStatement@@InfixExpression:s != null @TO@ MethodDeclaration@@static, @@void, MethodName:unregister, @@Argus:Object+value+ @AT@ 20584 @LENGTH@ 223
+---MOV ExpressionStatement@@MethodInvocation:getRegistry().remove(new IDKey(value)) @TO@ IfStatement@@InfixExpression:s != null @AT@ 20445 @LENGTH@ 39
+---INS InfixExpression@@s != null @TO@ IfStatement@@InfixExpression:s != null @AT@ 20588 @LENGTH@ 9
+------INS SimpleName@@s @TO@ InfixExpression@@s != null @AT@ 20588 @LENGTH@ 1
+------INS Operator@@!= @TO@ InfixExpression@@s != null @AT@ 20589 @LENGTH@ 2
+------INS NullLiteral@@null @TO@ InfixExpression@@s != null @AT@ 20593 @LENGTH@ 4
+---INS SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @TO@ IfStatement@@InfixExpression:s != null @AT@ 20653 @LENGTH@ 144
+------INS TypeLiteral@@HashCodeBuilder.class @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20667 @LENGTH@ 21
+------INS IfStatement@@MethodInvocation:s.isEmpty() @TO@ SynchronizedStatement@@TypeLiteral:HashCodeBuilder.class @AT@ 20708 @LENGTH@ 75
+---------INS MethodInvocation@@s.isEmpty() @TO@ IfStatement@@MethodInvocation:s.isEmpty() @AT@ 20712 @LENGTH@ 11
+------------INS SimpleName@@Name:s @TO@ MethodInvocation@@s.isEmpty() @AT@ 20712 @LENGTH@ 1
+------------INS SimpleName@@MethodName:isEmpty:[] @TO@ MethodInvocation@@s.isEmpty() @AT@ 20714 @LENGTH@ 9
+---------INS ExpressionStatement@@MethodInvocation:REGISTRY.remove() @TO@ IfStatement@@MethodInvocation:s.isEmpty() @AT@ 20747 @LENGTH@ 18
+------------INS MethodInvocation@@REGISTRY.remove() @TO@ ExpressionStatement@@MethodInvocation:REGISTRY.remove() @AT@ 20747 @LENGTH@ 17
+---------------INS SimpleName@@Name:REGISTRY @TO@ MethodInvocation@@REGISTRY.remove() @AT@ 20747 @LENGTH@ 8
+---------------INS SimpleName@@MethodName:remove:[] @TO@ MethodInvocation@@REGISTRY.remove() @AT@ 20756 @LENGTH@ 8
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3 OP7)
+OP2:   (MOV, ExpressionStatement, OP1, null)
+OP3:   (INS, InfixExpression, OP1, OP4 OP5 OP6)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, Operator, OP3, null)
+OP6:      (INS, NullLiteral, OP3, null)
+OP7:   (INS, SynchronizedStatement, OP1, OP8 OP9)
+OP8:      (INS, TypeLiteral, OP7, null)
+OP9:      (INS, IfStatement, OP7, OP10 OP13)
+OP10:         (INS, MethodInvocation, OP9, OP11 OP12)
+OP11:            (INS, SimpleName, OP10, null)
+OP12:            (INS, SimpleName, OP10, null)
+OP13:         (INS, ExpressionStatement, OP9, OP14)
+OP14:            (INS, MethodInvocation, OP13, OP15 OP16)
+OP15:               (INS, SimpleName, OP14, null)
+OP16:               (INS, SimpleName, OP14, null)
+
+
+

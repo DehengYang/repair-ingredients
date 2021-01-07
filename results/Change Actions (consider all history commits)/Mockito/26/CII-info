@@ -1,0 +1,17 @@
+
+
+hASList: 
+[UPD ExpressionStatement@@MethodInvocation:primitiveValues.put(double.class,0) @TO@ MethodInvocation:primitiveValues.put(double.class,0D) @AT@ 2546 @LENGTH@ 37
+---UPD MethodInvocation@@primitiveValues.put(double.class,0) @TO@ primitiveValues.put(double.class,0D) @AT@ 2546 @LENGTH@ 36
+------UPD SimpleName@@MethodName:put:[double.class, 0] @TO@ MethodName:put:[double.class, 0D] @AT@ 2562 @LENGTH@ 20
+---------UPD NumberLiteral@@0 @TO@ 0D @AT@ 2580 @LENGTH@ 1
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (UPD, NumberLiteral, OP3, null)
+
+
+

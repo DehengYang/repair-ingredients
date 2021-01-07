@@ -1,0 +1,134 @@
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3 OP5)
+OP3:      (DEL, MethodInvocation, OP2, OP4)
+OP4:         (DEL, SimpleName, OP3, null)
+OP5:      (MOV, InfixExpression, OP2, null)
+
+
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3 OP5)
+OP3:      (DEL, MethodInvocation, OP2, OP4)
+OP4:         (DEL, SimpleName, OP3, null)
+OP5:      (MOV, InfixExpression, OP2, null)
+
+
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, OP6)
+OP6:         (INS, SimpleName, OP5, OP7)
+OP7:            (INS, SimpleName, OP6, null)
+
+
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (UPD, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (UPD, SimpleName, OP2, null)
+OP4:      (UPD, Operator, OP2, null)
+OP5:      (UPD, SimpleName, OP2, null)
+
+
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, OP6)
+OP6:         (INS, SimpleName, OP5, OP7)
+OP7:            (INS, SimpleName, OP6, null)
+
+
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3 OP4)
+OP3:      (UPD, SimpleName, OP2, null)
+OP4:      (UPD, MethodInvocation, OP2, OP5)
+OP5:         (UPD, SimpleName, OP4, OP6)
+OP6:            (UPD, SimpleName, OP5, null)
+
+
+OP1:(DEL, ReturnStatement, null, OP2)
+OP2:   (DEL, MethodInvocation, OP1, OP3)
+OP3:      (DEL, SimpleName, OP2, OP4 OP5 OP6)
+OP4:         (DEL, SimpleName, OP3, null)
+OP5:         (DEL, BooleanLiteral, OP3, null)
+OP6:         (DEL, ConditionalExpression, OP3, OP7)
+OP7:            (DEL, SimpleName, OP6, null)
+
+
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, InfixExpression, OP3, OP6 OP7 OP8)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, Operator, OP5, null)
+OP8:         (INS, SimpleName, OP5, null)
+
+
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, InfixExpression, OP3, OP6 OP7 OP8)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, Operator, OP5, null)
+OP8:         (INS, SimpleName, OP5, null)
+
+
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, InfixExpression, OP3, OP6 OP7 OP8)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, Operator, OP5, null)
+OP8:         (INS, SimpleName, OP5, null)
+
+
+OP1:(INS, IfStatement, null, OP2 OP12)
+OP2:   (INS, InfixExpression, OP1, OP3 OP7 OP8)
+OP3:      (INS, InfixExpression, OP2, OP4 OP5 OP6)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, Operator, OP3, null)
+OP6:         (INS, SimpleName, OP3, null)
+OP7:      (INS, Operator, OP2, null)
+OP8:      (INS, InfixExpression, OP2, OP9 OP10 OP11)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, Operator, OP8, null)
+OP11:         (INS, SimpleName, OP8, null)
+OP12:   (INS, ReturnStatement, OP1, OP13)
+OP13:      (INS, SimpleName, OP12, null)
+
+
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, InfixExpression, OP3, OP6 OP7 OP8)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, Operator, OP5, null)
+OP8:         (INS, SimpleName, OP5, null)
+
+
+OP1:(INS, IfStatement, null, OP2 OP6 OP14)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, SimpleName, OP2, null)
+OP6:   (INS, ReturnStatement, OP1, OP7)
+OP7:      (INS, ConditionalExpression, OP6, OP8 OP9 OP10)
+OP8:         (MOV, SimpleName, OP7, null)
+OP9:         (MOV, SimpleName, OP7, null)
+OP10:         (INS, InfixExpression, OP7, OP11 OP12 OP13)
+OP11:            (INS, SimpleName, OP10, null)
+OP12:            (INS, Operator, OP10, null)
+OP13:            (INS, SimpleName, OP10, null)
+OP14:   (INS, ReturnStatement, OP1, OP15)
+OP15:      (INS, ConditionalExpression, OP14, OP16 OP17 OP21)
+OP16:         (INS, SimpleName, OP15, null)
+OP17:         (INS, InfixExpression, OP15, OP18 OP19 OP20)
+OP18:            (INS, SimpleName, OP17, null)
+OP19:            (INS, Operator, OP17, null)
+OP20:            (INS, SimpleName, OP17, null)
+OP21:         (INS, SimpleName, OP15, null)
+
+

@@ -1,0 +1,10 @@
+No.0 CCI matched.
+freq: 8
+CommitIds: 87c0ddbc 67b86d4c 67b86d4c 935eec02 67b86d4c 67b86d4c 67b86d4c 67b86d4c 
+FreqRank:40
+
+No.1 CCI matched.
+freq: 8
+CommitIds: 87c0ddbc 67b86d4c 67b86d4c 935eec02 67b86d4c 67b86d4c 67b86d4c 67b86d4c 
+FreqRank:40
+

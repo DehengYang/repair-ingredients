@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Math/Math_63/src/main/java/org/apache/commons/math/util/MathUtils.java ../d4j-repo/fixed_bugs_dir/Math/Math_63/src/main/java/org/apache/commons/math/util/MathUtils.java
+--- ../d4j-repo/Math/Math_63/src/main/java/org/apache/commons/math/util/MathUtils.java	2021-01-04 23:03:55.387036334 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_63/src/main/java/org/apache/commons/math/util/MathUtils.java	2021-01-04 23:03:58.231142897 -0800
+@@ -414,7 +414,7 @@
+      * @return {@code true} if the values are equal.
+      */
+     public static boolean equals(double x, double y) {
+-        return (Double.isNaN(x) && Double.isNaN(y)) || x == y;
++        return equals(x, y, 1);
+     }
+ 
+     /**

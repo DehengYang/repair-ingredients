@@ -1,0 +1,345 @@
+
+
+hASList: 
+[INS VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3125 @LENGTH@ 33
+---INS SimpleType@@ShapeList @TO@ VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @AT@ 3125 @LENGTH@ 9
+---INS VariableDeclarationFragment@@that=(ShapeList)obj @TO@ VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @AT@ 3135 @LENGTH@ 22
+------INS SimpleName@@that @TO@ VariableDeclarationFragment@@that=(ShapeList)obj @AT@ 3135 @LENGTH@ 4
+------INS CastExpression@@(ShapeList)obj @TO@ VariableDeclarationFragment@@that=(ShapeList)obj @AT@ 3142 @LENGTH@ 15
+---------INS SimpleType@@ShapeList @TO@ CastExpression@@(ShapeList)obj @AT@ 3143 @LENGTH@ 9
+---------INS SimpleName@@obj @TO@ CastExpression@@(ShapeList)obj @AT@ 3154 @LENGTH@ 3
+, DEL ReturnStatement@@SuperMethodInvocation:super.equals(obj) @AT@ 3125 @LENGTH@ 25
+---DEL SuperMethodInvocation@@super.equals(obj) @AT@ 3132 @LENGTH@ 17
+------DEL SimpleName@@MethodName:equals:[obj] @AT@ 3138 @LENGTH@ 6
+------DEL SimpleName@@obj @AT@ 3145 @LENGTH@ 3
+, INS VariableDeclarationStatement@@int listSize=size(); @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3167 @LENGTH@ 22
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int listSize=size(); @AT@ 3167 @LENGTH@ 3
+---INS VariableDeclarationFragment@@listSize=size() @TO@ VariableDeclarationStatement@@int listSize=size(); @AT@ 3171 @LENGTH@ 17
+------INS SimpleName@@listSize @TO@ VariableDeclarationFragment@@listSize=size() @AT@ 3171 @LENGTH@ 8
+------INS MethodInvocation@@MethodName:size:[] @TO@ VariableDeclarationFragment@@listSize=size() @AT@ 3182 @LENGTH@ 6
+, INS ForStatement@@[int i=0];i < listSize; [i++] @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3198 @LENGTH@ 165
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3203 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3203 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3207 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3207 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3211 @LENGTH@ 1
+---INS InfixExpression@@i < listSize @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3214 @LENGTH@ 12
+------INS SimpleName@@i @TO@ InfixExpression@@i < listSize @AT@ 3214 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < listSize @AT@ 3215 @LENGTH@ 1
+------INS SimpleName@@listSize @TO@ InfixExpression@@i < listSize @AT@ 3218 @LENGTH@ 8
+---INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3228 @LENGTH@ 3
+------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3228 @LENGTH@ 1
+------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3230 @LENGTH@ 2
+---INS IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3246 @LENGTH@ 107
+------INS PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3250 @LENGTH@ 58
+---------INS Operator@@! @TO@ PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3250 @LENGTH@ 1
+---------INS MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3251 @LENGTH@ 57
+------------INS SimpleName@@Name:ShapeUtilities @TO@ MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3251 @LENGTH@ 14
+------------INS SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @TO@ MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3266 @LENGTH@ 42
+---------------INS CastExpression@@(Shape)get(i) @TO@ SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @AT@ 3272 @LENGTH@ 14
+------------------INS SimpleType@@Shape @TO@ CastExpression@@(Shape)get(i) @AT@ 3273 @LENGTH@ 5
+------------------INS MethodInvocation@@get(i) @TO@ CastExpression@@(Shape)get(i) @AT@ 3280 @LENGTH@ 6
+---------------------INS SimpleName@@MethodName:get:[i] @TO@ MethodInvocation@@get(i) @AT@ 3280 @LENGTH@ 6
+------------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:get:[i] @AT@ 3284 @LENGTH@ 1
+---------------INS CastExpression@@(Shape)that.get(i) @TO@ SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @AT@ 3288 @LENGTH@ 19
+------------------INS SimpleType@@Shape @TO@ CastExpression@@(Shape)that.get(i) @AT@ 3289 @LENGTH@ 5
+------------------INS MethodInvocation@@that.get(i) @TO@ CastExpression@@(Shape)that.get(i) @AT@ 3296 @LENGTH@ 11
+---------------------INS SimpleName@@Name:that @TO@ MethodInvocation@@that.get(i) @AT@ 3296 @LENGTH@ 4
+---------------------INS SimpleName@@MethodName:get:[i] @TO@ MethodInvocation@@that.get(i) @AT@ 3301 @LENGTH@ 6
+------------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:get:[i] @AT@ 3305 @LENGTH@ 1
+------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3327 @LENGTH@ 13
+---------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 3334 @LENGTH@ 5
+, INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3372 @LENGTH@ 12
+---INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 3379 @LENGTH@ 4
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, SimpleType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, CastExpression, OP3, OP6 OP7)
+OP6:         (INS, SimpleType, OP5, null)
+OP7:         (INS, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3125 @LENGTH@ 33
+---INS SimpleType@@ShapeList @TO@ VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @AT@ 3125 @LENGTH@ 9
+---INS VariableDeclarationFragment@@that=(ShapeList)obj @TO@ VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @AT@ 3135 @LENGTH@ 22
+------INS SimpleName@@that @TO@ VariableDeclarationFragment@@that=(ShapeList)obj @AT@ 3135 @LENGTH@ 4
+------INS CastExpression@@(ShapeList)obj @TO@ VariableDeclarationFragment@@that=(ShapeList)obj @AT@ 3142 @LENGTH@ 15
+---------INS SimpleType@@ShapeList @TO@ CastExpression@@(ShapeList)obj @AT@ 3143 @LENGTH@ 9
+---------INS SimpleName@@obj @TO@ CastExpression@@(ShapeList)obj @AT@ 3154 @LENGTH@ 3
+, DEL ReturnStatement@@SuperMethodInvocation:super.equals(obj) @AT@ 3125 @LENGTH@ 25
+---DEL SuperMethodInvocation@@super.equals(obj) @AT@ 3132 @LENGTH@ 17
+------DEL SimpleName@@MethodName:equals:[obj] @AT@ 3138 @LENGTH@ 6
+------DEL SimpleName@@obj @AT@ 3145 @LENGTH@ 3
+, INS VariableDeclarationStatement@@int listSize=size(); @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3167 @LENGTH@ 22
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int listSize=size(); @AT@ 3167 @LENGTH@ 3
+---INS VariableDeclarationFragment@@listSize=size() @TO@ VariableDeclarationStatement@@int listSize=size(); @AT@ 3171 @LENGTH@ 17
+------INS SimpleName@@listSize @TO@ VariableDeclarationFragment@@listSize=size() @AT@ 3171 @LENGTH@ 8
+------INS MethodInvocation@@MethodName:size:[] @TO@ VariableDeclarationFragment@@listSize=size() @AT@ 3182 @LENGTH@ 6
+, INS ForStatement@@[int i=0];i < listSize; [i++] @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3198 @LENGTH@ 165
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3203 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3203 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3207 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3207 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3211 @LENGTH@ 1
+---INS InfixExpression@@i < listSize @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3214 @LENGTH@ 12
+------INS SimpleName@@i @TO@ InfixExpression@@i < listSize @AT@ 3214 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < listSize @AT@ 3215 @LENGTH@ 1
+------INS SimpleName@@listSize @TO@ InfixExpression@@i < listSize @AT@ 3218 @LENGTH@ 8
+---INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3228 @LENGTH@ 3
+------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3228 @LENGTH@ 1
+------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3230 @LENGTH@ 2
+---INS IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3246 @LENGTH@ 107
+------INS PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3250 @LENGTH@ 58
+---------INS Operator@@! @TO@ PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3250 @LENGTH@ 1
+---------INS MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3251 @LENGTH@ 57
+------------INS SimpleName@@Name:ShapeUtilities @TO@ MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3251 @LENGTH@ 14
+------------INS SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @TO@ MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3266 @LENGTH@ 42
+---------------INS CastExpression@@(Shape)get(i) @TO@ SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @AT@ 3272 @LENGTH@ 14
+------------------INS SimpleType@@Shape @TO@ CastExpression@@(Shape)get(i) @AT@ 3273 @LENGTH@ 5
+------------------INS MethodInvocation@@get(i) @TO@ CastExpression@@(Shape)get(i) @AT@ 3280 @LENGTH@ 6
+---------------------INS SimpleName@@MethodName:get:[i] @TO@ MethodInvocation@@get(i) @AT@ 3280 @LENGTH@ 6
+------------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:get:[i] @AT@ 3284 @LENGTH@ 1
+---------------INS CastExpression@@(Shape)that.get(i) @TO@ SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @AT@ 3288 @LENGTH@ 19
+------------------INS SimpleType@@Shape @TO@ CastExpression@@(Shape)that.get(i) @AT@ 3289 @LENGTH@ 5
+------------------INS MethodInvocation@@that.get(i) @TO@ CastExpression@@(Shape)that.get(i) @AT@ 3296 @LENGTH@ 11
+---------------------INS SimpleName@@Name:that @TO@ MethodInvocation@@that.get(i) @AT@ 3296 @LENGTH@ 4
+---------------------INS SimpleName@@MethodName:get:[i] @TO@ MethodInvocation@@that.get(i) @AT@ 3301 @LENGTH@ 6
+------------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:get:[i] @AT@ 3305 @LENGTH@ 1
+------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3327 @LENGTH@ 13
+---------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 3334 @LENGTH@ 5
+, INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3372 @LENGTH@ 12
+---INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 3379 @LENGTH@ 4
+]
+
+CII:
+OP1:(DEL, ReturnStatement, null, OP2)
+OP2:   (DEL, SuperMethodInvocation, OP1, OP3 OP4)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, SimpleName, OP2, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3125 @LENGTH@ 33
+---INS SimpleType@@ShapeList @TO@ VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @AT@ 3125 @LENGTH@ 9
+---INS VariableDeclarationFragment@@that=(ShapeList)obj @TO@ VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @AT@ 3135 @LENGTH@ 22
+------INS SimpleName@@that @TO@ VariableDeclarationFragment@@that=(ShapeList)obj @AT@ 3135 @LENGTH@ 4
+------INS CastExpression@@(ShapeList)obj @TO@ VariableDeclarationFragment@@that=(ShapeList)obj @AT@ 3142 @LENGTH@ 15
+---------INS SimpleType@@ShapeList @TO@ CastExpression@@(ShapeList)obj @AT@ 3143 @LENGTH@ 9
+---------INS SimpleName@@obj @TO@ CastExpression@@(ShapeList)obj @AT@ 3154 @LENGTH@ 3
+, DEL ReturnStatement@@SuperMethodInvocation:super.equals(obj) @AT@ 3125 @LENGTH@ 25
+---DEL SuperMethodInvocation@@super.equals(obj) @AT@ 3132 @LENGTH@ 17
+------DEL SimpleName@@MethodName:equals:[obj] @AT@ 3138 @LENGTH@ 6
+------DEL SimpleName@@obj @AT@ 3145 @LENGTH@ 3
+, INS VariableDeclarationStatement@@int listSize=size(); @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3167 @LENGTH@ 22
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int listSize=size(); @AT@ 3167 @LENGTH@ 3
+---INS VariableDeclarationFragment@@listSize=size() @TO@ VariableDeclarationStatement@@int listSize=size(); @AT@ 3171 @LENGTH@ 17
+------INS SimpleName@@listSize @TO@ VariableDeclarationFragment@@listSize=size() @AT@ 3171 @LENGTH@ 8
+------INS MethodInvocation@@MethodName:size:[] @TO@ VariableDeclarationFragment@@listSize=size() @AT@ 3182 @LENGTH@ 6
+, INS ForStatement@@[int i=0];i < listSize; [i++] @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3198 @LENGTH@ 165
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3203 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3203 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3207 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3207 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3211 @LENGTH@ 1
+---INS InfixExpression@@i < listSize @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3214 @LENGTH@ 12
+------INS SimpleName@@i @TO@ InfixExpression@@i < listSize @AT@ 3214 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < listSize @AT@ 3215 @LENGTH@ 1
+------INS SimpleName@@listSize @TO@ InfixExpression@@i < listSize @AT@ 3218 @LENGTH@ 8
+---INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3228 @LENGTH@ 3
+------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3228 @LENGTH@ 1
+------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3230 @LENGTH@ 2
+---INS IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3246 @LENGTH@ 107
+------INS PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3250 @LENGTH@ 58
+---------INS Operator@@! @TO@ PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3250 @LENGTH@ 1
+---------INS MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3251 @LENGTH@ 57
+------------INS SimpleName@@Name:ShapeUtilities @TO@ MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3251 @LENGTH@ 14
+------------INS SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @TO@ MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3266 @LENGTH@ 42
+---------------INS CastExpression@@(Shape)get(i) @TO@ SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @AT@ 3272 @LENGTH@ 14
+------------------INS SimpleType@@Shape @TO@ CastExpression@@(Shape)get(i) @AT@ 3273 @LENGTH@ 5
+------------------INS MethodInvocation@@get(i) @TO@ CastExpression@@(Shape)get(i) @AT@ 3280 @LENGTH@ 6
+---------------------INS SimpleName@@MethodName:get:[i] @TO@ MethodInvocation@@get(i) @AT@ 3280 @LENGTH@ 6
+------------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:get:[i] @AT@ 3284 @LENGTH@ 1
+---------------INS CastExpression@@(Shape)that.get(i) @TO@ SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @AT@ 3288 @LENGTH@ 19
+------------------INS SimpleType@@Shape @TO@ CastExpression@@(Shape)that.get(i) @AT@ 3289 @LENGTH@ 5
+------------------INS MethodInvocation@@that.get(i) @TO@ CastExpression@@(Shape)that.get(i) @AT@ 3296 @LENGTH@ 11
+---------------------INS SimpleName@@Name:that @TO@ MethodInvocation@@that.get(i) @AT@ 3296 @LENGTH@ 4
+---------------------INS SimpleName@@MethodName:get:[i] @TO@ MethodInvocation@@that.get(i) @AT@ 3301 @LENGTH@ 6
+------------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:get:[i] @AT@ 3305 @LENGTH@ 1
+------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3327 @LENGTH@ 13
+---------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 3334 @LENGTH@ 5
+, INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3372 @LENGTH@ 12
+---INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 3379 @LENGTH@ 4
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3125 @LENGTH@ 33
+---INS SimpleType@@ShapeList @TO@ VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @AT@ 3125 @LENGTH@ 9
+---INS VariableDeclarationFragment@@that=(ShapeList)obj @TO@ VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @AT@ 3135 @LENGTH@ 22
+------INS SimpleName@@that @TO@ VariableDeclarationFragment@@that=(ShapeList)obj @AT@ 3135 @LENGTH@ 4
+------INS CastExpression@@(ShapeList)obj @TO@ VariableDeclarationFragment@@that=(ShapeList)obj @AT@ 3142 @LENGTH@ 15
+---------INS SimpleType@@ShapeList @TO@ CastExpression@@(ShapeList)obj @AT@ 3143 @LENGTH@ 9
+---------INS SimpleName@@obj @TO@ CastExpression@@(ShapeList)obj @AT@ 3154 @LENGTH@ 3
+, DEL ReturnStatement@@SuperMethodInvocation:super.equals(obj) @AT@ 3125 @LENGTH@ 25
+---DEL SuperMethodInvocation@@super.equals(obj) @AT@ 3132 @LENGTH@ 17
+------DEL SimpleName@@MethodName:equals:[obj] @AT@ 3138 @LENGTH@ 6
+------DEL SimpleName@@obj @AT@ 3145 @LENGTH@ 3
+, INS VariableDeclarationStatement@@int listSize=size(); @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3167 @LENGTH@ 22
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int listSize=size(); @AT@ 3167 @LENGTH@ 3
+---INS VariableDeclarationFragment@@listSize=size() @TO@ VariableDeclarationStatement@@int listSize=size(); @AT@ 3171 @LENGTH@ 17
+------INS SimpleName@@listSize @TO@ VariableDeclarationFragment@@listSize=size() @AT@ 3171 @LENGTH@ 8
+------INS MethodInvocation@@MethodName:size:[] @TO@ VariableDeclarationFragment@@listSize=size() @AT@ 3182 @LENGTH@ 6
+, INS ForStatement@@[int i=0];i < listSize; [i++] @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3198 @LENGTH@ 165
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3203 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3203 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3207 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3207 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3211 @LENGTH@ 1
+---INS InfixExpression@@i < listSize @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3214 @LENGTH@ 12
+------INS SimpleName@@i @TO@ InfixExpression@@i < listSize @AT@ 3214 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < listSize @AT@ 3215 @LENGTH@ 1
+------INS SimpleName@@listSize @TO@ InfixExpression@@i < listSize @AT@ 3218 @LENGTH@ 8
+---INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3228 @LENGTH@ 3
+------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3228 @LENGTH@ 1
+------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3230 @LENGTH@ 2
+---INS IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3246 @LENGTH@ 107
+------INS PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3250 @LENGTH@ 58
+---------INS Operator@@! @TO@ PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3250 @LENGTH@ 1
+---------INS MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3251 @LENGTH@ 57
+------------INS SimpleName@@Name:ShapeUtilities @TO@ MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3251 @LENGTH@ 14
+------------INS SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @TO@ MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3266 @LENGTH@ 42
+---------------INS CastExpression@@(Shape)get(i) @TO@ SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @AT@ 3272 @LENGTH@ 14
+------------------INS SimpleType@@Shape @TO@ CastExpression@@(Shape)get(i) @AT@ 3273 @LENGTH@ 5
+------------------INS MethodInvocation@@get(i) @TO@ CastExpression@@(Shape)get(i) @AT@ 3280 @LENGTH@ 6
+---------------------INS SimpleName@@MethodName:get:[i] @TO@ MethodInvocation@@get(i) @AT@ 3280 @LENGTH@ 6
+------------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:get:[i] @AT@ 3284 @LENGTH@ 1
+---------------INS CastExpression@@(Shape)that.get(i) @TO@ SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @AT@ 3288 @LENGTH@ 19
+------------------INS SimpleType@@Shape @TO@ CastExpression@@(Shape)that.get(i) @AT@ 3289 @LENGTH@ 5
+------------------INS MethodInvocation@@that.get(i) @TO@ CastExpression@@(Shape)that.get(i) @AT@ 3296 @LENGTH@ 11
+---------------------INS SimpleName@@Name:that @TO@ MethodInvocation@@that.get(i) @AT@ 3296 @LENGTH@ 4
+---------------------INS SimpleName@@MethodName:get:[i] @TO@ MethodInvocation@@that.get(i) @AT@ 3301 @LENGTH@ 6
+------------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:get:[i] @AT@ 3305 @LENGTH@ 1
+------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3327 @LENGTH@ 13
+---------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 3334 @LENGTH@ 5
+, INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3372 @LENGTH@ 12
+---INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 3379 @LENGTH@ 4
+]
+
+CII:
+OP1:(INS, ForStatement, null, OP2 OP7 OP11 OP14)
+OP2:   (INS, VariableDeclarationExpression, OP1, OP3 OP4)
+OP3:      (INS, PrimitiveType, OP2, null)
+OP4:      (INS, VariableDeclarationFragment, OP2, OP5 OP6)
+OP5:         (INS, SimpleName, OP4, null)
+OP6:         (INS, NumberLiteral, OP4, null)
+OP7:   (INS, InfixExpression, OP1, OP8 OP9 OP10)
+OP8:      (INS, SimpleName, OP7, null)
+OP9:      (INS, Operator, OP7, null)
+OP10:      (INS, SimpleName, OP7, null)
+OP11:   (INS, PostfixExpression, OP1, OP12 OP13)
+OP12:      (INS, SimpleName, OP11, null)
+OP13:      (INS, Operator, OP11, null)
+OP14:   (INS, IfStatement, OP1, OP15 OP31)
+OP15:      (INS, PrefixExpression, OP14, OP16 OP17)
+OP16:         (INS, Operator, OP15, null)
+OP17:         (INS, MethodInvocation, OP15, OP18 OP19)
+OP18:            (INS, SimpleName, OP17, null)
+OP19:            (INS, SimpleName, OP17, OP20 OP25)
+OP20:               (INS, CastExpression, OP19, OP21 OP22)
+OP21:                  (INS, SimpleType, OP20, null)
+OP22:                  (INS, MethodInvocation, OP20, OP23)
+OP23:                     (INS, SimpleName, OP22, OP24)
+OP24:                        (INS, SimpleName, OP23, null)
+OP25:               (INS, CastExpression, OP19, OP26 OP27)
+OP26:                  (INS, SimpleType, OP25, null)
+OP27:                  (INS, MethodInvocation, OP25, OP28 OP29)
+OP28:                     (INS, SimpleName, OP27, null)
+OP29:                     (INS, SimpleName, OP27, OP30)
+OP30:                        (INS, SimpleName, OP29, null)
+OP31:      (INS, ReturnStatement, OP14, OP32)
+OP32:         (INS, BooleanLiteral, OP31, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3125 @LENGTH@ 33
+---INS SimpleType@@ShapeList @TO@ VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @AT@ 3125 @LENGTH@ 9
+---INS VariableDeclarationFragment@@that=(ShapeList)obj @TO@ VariableDeclarationStatement@@ShapeList that=(ShapeList)obj; @AT@ 3135 @LENGTH@ 22
+------INS SimpleName@@that @TO@ VariableDeclarationFragment@@that=(ShapeList)obj @AT@ 3135 @LENGTH@ 4
+------INS CastExpression@@(ShapeList)obj @TO@ VariableDeclarationFragment@@that=(ShapeList)obj @AT@ 3142 @LENGTH@ 15
+---------INS SimpleType@@ShapeList @TO@ CastExpression@@(ShapeList)obj @AT@ 3143 @LENGTH@ 9
+---------INS SimpleName@@obj @TO@ CastExpression@@(ShapeList)obj @AT@ 3154 @LENGTH@ 3
+, DEL ReturnStatement@@SuperMethodInvocation:super.equals(obj) @AT@ 3125 @LENGTH@ 25
+---DEL SuperMethodInvocation@@super.equals(obj) @AT@ 3132 @LENGTH@ 17
+------DEL SimpleName@@MethodName:equals:[obj] @AT@ 3138 @LENGTH@ 6
+------DEL SimpleName@@obj @AT@ 3145 @LENGTH@ 3
+, INS VariableDeclarationStatement@@int listSize=size(); @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3167 @LENGTH@ 22
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int listSize=size(); @AT@ 3167 @LENGTH@ 3
+---INS VariableDeclarationFragment@@listSize=size() @TO@ VariableDeclarationStatement@@int listSize=size(); @AT@ 3171 @LENGTH@ 17
+------INS SimpleName@@listSize @TO@ VariableDeclarationFragment@@listSize=size() @AT@ 3171 @LENGTH@ 8
+------INS MethodInvocation@@MethodName:size:[] @TO@ VariableDeclarationFragment@@listSize=size() @AT@ 3182 @LENGTH@ 6
+, INS ForStatement@@[int i=0];i < listSize; [i++] @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3198 @LENGTH@ 165
+---INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3203 @LENGTH@ 9
+------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3203 @LENGTH@ 3
+------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3207 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3207 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3211 @LENGTH@ 1
+---INS InfixExpression@@i < listSize @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3214 @LENGTH@ 12
+------INS SimpleName@@i @TO@ InfixExpression@@i < listSize @AT@ 3214 @LENGTH@ 1
+------INS Operator@@< @TO@ InfixExpression@@i < listSize @AT@ 3215 @LENGTH@ 1
+------INS SimpleName@@listSize @TO@ InfixExpression@@i < listSize @AT@ 3218 @LENGTH@ 8
+---INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3228 @LENGTH@ 3
+------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3228 @LENGTH@ 1
+------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3230 @LENGTH@ 2
+---INS IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ ForStatement@@[int i=0];i < listSize; [i++] @AT@ 3246 @LENGTH@ 107
+------INS PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3250 @LENGTH@ 58
+---------INS Operator@@! @TO@ PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3250 @LENGTH@ 1
+---------INS MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @TO@ PrefixExpression@@!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3251 @LENGTH@ 57
+------------INS SimpleName@@Name:ShapeUtilities @TO@ MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3251 @LENGTH@ 14
+------------INS SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @TO@ MethodInvocation@@ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3266 @LENGTH@ 42
+---------------INS CastExpression@@(Shape)get(i) @TO@ SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @AT@ 3272 @LENGTH@ 14
+------------------INS SimpleType@@Shape @TO@ CastExpression@@(Shape)get(i) @AT@ 3273 @LENGTH@ 5
+------------------INS MethodInvocation@@get(i) @TO@ CastExpression@@(Shape)get(i) @AT@ 3280 @LENGTH@ 6
+---------------------INS SimpleName@@MethodName:get:[i] @TO@ MethodInvocation@@get(i) @AT@ 3280 @LENGTH@ 6
+------------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:get:[i] @AT@ 3284 @LENGTH@ 1
+---------------INS CastExpression@@(Shape)that.get(i) @TO@ SimpleName@@MethodName:equal:[(Shape)get(i), (Shape)that.get(i)] @AT@ 3288 @LENGTH@ 19
+------------------INS SimpleType@@Shape @TO@ CastExpression@@(Shape)that.get(i) @AT@ 3289 @LENGTH@ 5
+------------------INS MethodInvocation@@that.get(i) @TO@ CastExpression@@(Shape)that.get(i) @AT@ 3296 @LENGTH@ 11
+---------------------INS SimpleName@@Name:that @TO@ MethodInvocation@@that.get(i) @AT@ 3296 @LENGTH@ 4
+---------------------INS SimpleName@@MethodName:get:[i] @TO@ MethodInvocation@@that.get(i) @AT@ 3301 @LENGTH@ 6
+------------------------INS SimpleName@@i @TO@ SimpleName@@MethodName:get:[i] @AT@ 3305 @LENGTH@ 1
+------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@PrefixExpression:!ShapeUtilities.equal((Shape)get(i),(Shape)that.get(i)) @AT@ 3327 @LENGTH@ 13
+---------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 3334 @LENGTH@ 5
+, INS ReturnStatement@@BooleanLiteral:true @TO@ MethodDeclaration@@public, @@boolean, MethodName:equals, @@Argus:Object+obj+ @AT@ 3372 @LENGTH@ 12
+---INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 3379 @LENGTH@ 4
+]
+
+CII:
+OP1:(INS, ReturnStatement, null, OP2)
+OP2:   (INS, BooleanLiteral, OP1, null)
+
+
+

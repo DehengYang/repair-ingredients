@@ -1,0 +1,127 @@
+
+
+hASList: 
+[UPD IfStatement@@PrefixExpression:!Character.isDigit(lastChar) @TO@ InfixExpression:!Character.isDigit(lastChar) && lastChar != '.' @AT@ 17361 @LENGTH@ 4240
+---INS InfixExpression@@!Character.isDigit(lastChar) && lastChar != '.' @TO@ IfStatement@@PrefixExpression:!Character.isDigit(lastChar) @AT@ 17365 @LENGTH@ 47
+------MOV PrefixExpression@@!Character.isDigit(lastChar) @TO@ InfixExpression@@!Character.isDigit(lastChar) && lastChar != '.' @AT@ 17365 @LENGTH@ 28
+------INS Operator@@&& @TO@ InfixExpression@@!Character.isDigit(lastChar) && lastChar != '.' @AT@ 17393 @LENGTH@ 2
+------INS InfixExpression@@lastChar != '.' @TO@ InfixExpression@@!Character.isDigit(lastChar) && lastChar != '.' @AT@ 17397 @LENGTH@ 15
+---------INS SimpleName@@lastChar @TO@ InfixExpression@@lastChar != '.' @AT@ 17397 @LENGTH@ 8
+---------INS Operator@@!= @TO@ InfixExpression@@lastChar != '.' @AT@ 17405 @LENGTH@ 2
+---------INS CharacterLiteral@@'.' @TO@ InfixExpression@@lastChar != '.' @AT@ 17409 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:chars[i] == '.' @TO@ IfStatement@@InfixExpression:i < chars.length @AT@ 46702 @LENGTH@ 303
+---INS InfixExpression@@chars[i] == '.' @TO@ IfStatement@@InfixExpression:chars[i] == '.' @AT@ 46706 @LENGTH@ 15
+------INS ArrayAccess@@chars[i] @TO@ InfixExpression@@chars[i] == '.' @AT@ 46706 @LENGTH@ 8
+---------INS SimpleName@@chars @TO@ ArrayAccess@@chars[i] @AT@ 46706 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ ArrayAccess@@chars[i] @AT@ 46712 @LENGTH@ 1
+------INS Operator@@== @TO@ InfixExpression@@chars[i] == '.' @AT@ 46714 @LENGTH@ 2
+------INS CharacterLiteral@@'.' @TO@ InfixExpression@@chars[i] == '.' @AT@ 46718 @LENGTH@ 3
+---INS IfStatement@@InfixExpression:hasDecPoint || hasExp @TO@ IfStatement@@InfixExpression:chars[i] == '.' @AT@ 46741 @LENGTH@ 141
+------INS InfixExpression@@hasDecPoint || hasExp @TO@ IfStatement@@InfixExpression:hasDecPoint || hasExp @AT@ 46745 @LENGTH@ 21
+---------INS SimpleName@@hasDecPoint @TO@ InfixExpression@@hasDecPoint || hasExp @AT@ 46745 @LENGTH@ 11
+---------INS Operator@@|| @TO@ InfixExpression@@hasDecPoint || hasExp @AT@ 46756 @LENGTH@ 2
+---------INS SimpleName@@hasExp @TO@ InfixExpression@@hasDecPoint || hasExp @AT@ 46760 @LENGTH@ 6
+------MOV ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:hasDecPoint || hasExp @AT@ 47139 @LENGTH@ 13
+---INS ReturnStatement@@SimpleName:foundDigit @TO@ IfStatement@@InfixExpression:chars[i] == '.' @AT@ 46973 @LENGTH@ 18
+------INS SimpleName@@foundDigit @TO@ ReturnStatement@@SimpleName:foundDigit @AT@ 46980 @LENGTH@ 10
+, INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:i < chars.length @AT@ 47474 @LENGTH@ 13
+---INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 47481 @LENGTH@ 5
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (MOV, PrefixExpression, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, InfixExpression, OP2, OP6 OP7 OP8)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, Operator, OP5, null)
+OP8:         (INS, CharacterLiteral, OP5, null)
+
+
+
+
+
+hASList: 
+[UPD IfStatement@@PrefixExpression:!Character.isDigit(lastChar) @TO@ InfixExpression:!Character.isDigit(lastChar) && lastChar != '.' @AT@ 17361 @LENGTH@ 4240
+---INS InfixExpression@@!Character.isDigit(lastChar) && lastChar != '.' @TO@ IfStatement@@PrefixExpression:!Character.isDigit(lastChar) @AT@ 17365 @LENGTH@ 47
+------MOV PrefixExpression@@!Character.isDigit(lastChar) @TO@ InfixExpression@@!Character.isDigit(lastChar) && lastChar != '.' @AT@ 17365 @LENGTH@ 28
+------INS Operator@@&& @TO@ InfixExpression@@!Character.isDigit(lastChar) && lastChar != '.' @AT@ 17393 @LENGTH@ 2
+------INS InfixExpression@@lastChar != '.' @TO@ InfixExpression@@!Character.isDigit(lastChar) && lastChar != '.' @AT@ 17397 @LENGTH@ 15
+---------INS SimpleName@@lastChar @TO@ InfixExpression@@lastChar != '.' @AT@ 17397 @LENGTH@ 8
+---------INS Operator@@!= @TO@ InfixExpression@@lastChar != '.' @AT@ 17405 @LENGTH@ 2
+---------INS CharacterLiteral@@'.' @TO@ InfixExpression@@lastChar != '.' @AT@ 17409 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:chars[i] == '.' @TO@ IfStatement@@InfixExpression:i < chars.length @AT@ 46702 @LENGTH@ 303
+---INS InfixExpression@@chars[i] == '.' @TO@ IfStatement@@InfixExpression:chars[i] == '.' @AT@ 46706 @LENGTH@ 15
+------INS ArrayAccess@@chars[i] @TO@ InfixExpression@@chars[i] == '.' @AT@ 46706 @LENGTH@ 8
+---------INS SimpleName@@chars @TO@ ArrayAccess@@chars[i] @AT@ 46706 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ ArrayAccess@@chars[i] @AT@ 46712 @LENGTH@ 1
+------INS Operator@@== @TO@ InfixExpression@@chars[i] == '.' @AT@ 46714 @LENGTH@ 2
+------INS CharacterLiteral@@'.' @TO@ InfixExpression@@chars[i] == '.' @AT@ 46718 @LENGTH@ 3
+---INS IfStatement@@InfixExpression:hasDecPoint || hasExp @TO@ IfStatement@@InfixExpression:chars[i] == '.' @AT@ 46741 @LENGTH@ 141
+------INS InfixExpression@@hasDecPoint || hasExp @TO@ IfStatement@@InfixExpression:hasDecPoint || hasExp @AT@ 46745 @LENGTH@ 21
+---------INS SimpleName@@hasDecPoint @TO@ InfixExpression@@hasDecPoint || hasExp @AT@ 46745 @LENGTH@ 11
+---------INS Operator@@|| @TO@ InfixExpression@@hasDecPoint || hasExp @AT@ 46756 @LENGTH@ 2
+---------INS SimpleName@@hasExp @TO@ InfixExpression@@hasDecPoint || hasExp @AT@ 46760 @LENGTH@ 6
+------MOV ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:hasDecPoint || hasExp @AT@ 47139 @LENGTH@ 13
+---INS ReturnStatement@@SimpleName:foundDigit @TO@ IfStatement@@InfixExpression:chars[i] == '.' @AT@ 46973 @LENGTH@ 18
+------INS SimpleName@@foundDigit @TO@ ReturnStatement@@SimpleName:foundDigit @AT@ 46980 @LENGTH@ 10
+, INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:i < chars.length @AT@ 47474 @LENGTH@ 13
+---INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 47481 @LENGTH@ 5
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP8 OP14)
+OP2:   (INS, InfixExpression, OP1, OP3 OP6 OP7)
+OP3:      (INS, ArrayAccess, OP2, OP4 OP5)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, SimpleName, OP3, null)
+OP6:      (INS, Operator, OP2, null)
+OP7:      (INS, CharacterLiteral, OP2, null)
+OP8:   (INS, IfStatement, OP1, OP9 OP13)
+OP9:      (INS, InfixExpression, OP8, OP10 OP11 OP12)
+OP10:         (INS, SimpleName, OP9, null)
+OP11:         (INS, Operator, OP9, null)
+OP12:         (INS, SimpleName, OP9, null)
+OP13:      (MOV, ReturnStatement, OP8, null)
+OP14:   (INS, ReturnStatement, OP1, OP15)
+OP15:      (INS, SimpleName, OP14, null)
+
+
+
+
+
+hASList: 
+[UPD IfStatement@@PrefixExpression:!Character.isDigit(lastChar) @TO@ InfixExpression:!Character.isDigit(lastChar) && lastChar != '.' @AT@ 17361 @LENGTH@ 4240
+---INS InfixExpression@@!Character.isDigit(lastChar) && lastChar != '.' @TO@ IfStatement@@PrefixExpression:!Character.isDigit(lastChar) @AT@ 17365 @LENGTH@ 47
+------MOV PrefixExpression@@!Character.isDigit(lastChar) @TO@ InfixExpression@@!Character.isDigit(lastChar) && lastChar != '.' @AT@ 17365 @LENGTH@ 28
+------INS Operator@@&& @TO@ InfixExpression@@!Character.isDigit(lastChar) && lastChar != '.' @AT@ 17393 @LENGTH@ 2
+------INS InfixExpression@@lastChar != '.' @TO@ InfixExpression@@!Character.isDigit(lastChar) && lastChar != '.' @AT@ 17397 @LENGTH@ 15
+---------INS SimpleName@@lastChar @TO@ InfixExpression@@lastChar != '.' @AT@ 17397 @LENGTH@ 8
+---------INS Operator@@!= @TO@ InfixExpression@@lastChar != '.' @AT@ 17405 @LENGTH@ 2
+---------INS CharacterLiteral@@'.' @TO@ InfixExpression@@lastChar != '.' @AT@ 17409 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:chars[i] == '.' @TO@ IfStatement@@InfixExpression:i < chars.length @AT@ 46702 @LENGTH@ 303
+---INS InfixExpression@@chars[i] == '.' @TO@ IfStatement@@InfixExpression:chars[i] == '.' @AT@ 46706 @LENGTH@ 15
+------INS ArrayAccess@@chars[i] @TO@ InfixExpression@@chars[i] == '.' @AT@ 46706 @LENGTH@ 8
+---------INS SimpleName@@chars @TO@ ArrayAccess@@chars[i] @AT@ 46706 @LENGTH@ 5
+---------INS SimpleName@@i @TO@ ArrayAccess@@chars[i] @AT@ 46712 @LENGTH@ 1
+------INS Operator@@== @TO@ InfixExpression@@chars[i] == '.' @AT@ 46714 @LENGTH@ 2
+------INS CharacterLiteral@@'.' @TO@ InfixExpression@@chars[i] == '.' @AT@ 46718 @LENGTH@ 3
+---INS IfStatement@@InfixExpression:hasDecPoint || hasExp @TO@ IfStatement@@InfixExpression:chars[i] == '.' @AT@ 46741 @LENGTH@ 141
+------INS InfixExpression@@hasDecPoint || hasExp @TO@ IfStatement@@InfixExpression:hasDecPoint || hasExp @AT@ 46745 @LENGTH@ 21
+---------INS SimpleName@@hasDecPoint @TO@ InfixExpression@@hasDecPoint || hasExp @AT@ 46745 @LENGTH@ 11
+---------INS Operator@@|| @TO@ InfixExpression@@hasDecPoint || hasExp @AT@ 46756 @LENGTH@ 2
+---------INS SimpleName@@hasExp @TO@ InfixExpression@@hasDecPoint || hasExp @AT@ 46760 @LENGTH@ 6
+------MOV ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:hasDecPoint || hasExp @AT@ 47139 @LENGTH@ 13
+---INS ReturnStatement@@SimpleName:foundDigit @TO@ IfStatement@@InfixExpression:chars[i] == '.' @AT@ 46973 @LENGTH@ 18
+------INS SimpleName@@foundDigit @TO@ ReturnStatement@@SimpleName:foundDigit @AT@ 46980 @LENGTH@ 10
+, INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:i < chars.length @AT@ 47474 @LENGTH@ 13
+---INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 47481 @LENGTH@ 5
+]
+
+CII:
+OP1:(INS, ReturnStatement, null, OP2)
+OP2:   (INS, BooleanLiteral, OP1, null)
+
+
+

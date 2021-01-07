@@ -1,0 +1,13 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_58/src/main/java/org/apache/commons/math/optimization/fitting/GaussianFitter.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_58/src/main/java/org/apache/commons/math/optimization/fitting/GaussianFitter.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_58/src/main/java/org/apache/commons/math/optimization/fitting/GaussianFitter.java	2020-01-05 06:36:58.427526361 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_58/src/main/java/org/apache/commons/math/optimization/fitting/GaussianFitter.java	2020-01-05 06:37:00.903505681 -0800
+@@ -118,7 +118,7 @@
+      */
+     public double[] fit() {
+         final double[] guess = (new ParameterGuesser(getObservations())).guess();
+-        return fit(new Gaussian.Parametric(), guess);
++        return fit(guess);
+     }
+ 
+     /**

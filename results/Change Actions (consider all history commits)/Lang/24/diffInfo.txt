@@ -1,0 +1,13 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_24/src/main/java/org/apache/commons/lang3/math/NumberUtils.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_24/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_24/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2020-01-05 05:27:22.574403514 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_24/src/main/java/org/apache/commons/lang3/math/NumberUtils.java	2020-01-05 05:27:26.022374717 -0800
+@@ -1410,7 +1410,7 @@
+             if (chars[i] == 'l'
+                 || chars[i] == 'L') {
+                 // not allowing L with an exponent or decimal point
+-                return foundDigit && !hasExp;
++                return foundDigit && !hasExp && !hasDecPoint;
+             }
+             // last character is illegal
+             return false;

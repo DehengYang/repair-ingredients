@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Math/Math_70/src/main/java/org/apache/commons/math/analysis/solvers/BisectionSolver.java ../d4j-repo/fixed_bugs_dir/Math/Math_70/src/main/java/org/apache/commons/math/analysis/solvers/BisectionSolver.java
+--- ../d4j-repo/Math/Math_70/src/main/java/org/apache/commons/math/analysis/solvers/BisectionSolver.java	2021-01-04 23:04:37.828626513 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_70/src/main/java/org/apache/commons/math/analysis/solvers/BisectionSolver.java	2021-01-04 23:04:41.368759151 -0800
+@@ -69,7 +69,7 @@
+     /** {@inheritDoc} */
+     public double solve(final UnivariateRealFunction f, double min, double max, double initial)
+         throws MaxIterationsExceededException, FunctionEvaluationException {
+-        return solve(min, max);
++        return solve(f, min, max);
+     }
+ 
+     /** {@inheritDoc} */

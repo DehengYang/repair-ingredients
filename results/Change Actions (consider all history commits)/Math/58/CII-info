@@ -1,0 +1,21 @@
+
+
+hASList: 
+[UPD ReturnStatement@@MethodInvocation:fit(new Gaussian.Parametric(),guess) @TO@ MethodInvocation:fit(guess) @AT@ 4789 @LENGTH@ 45
+---UPD MethodInvocation@@fit(new Gaussian.Parametric(),guess) @TO@ fit(guess) @AT@ 4796 @LENGTH@ 37
+------UPD SimpleName@@MethodName:fit:[new Gaussian.Parametric(), guess] @TO@ MethodName:fit:[guess] @AT@ 4796 @LENGTH@ 37
+---------DEL ClassInstanceCreation@@Gaussian.Parametric[] @AT@ 4800 @LENGTH@ 25
+------------DEL New@@new @AT@ 4800 @LENGTH@ 3
+------------DEL SimpleType@@Gaussian.Parametric @AT@ 4804 @LENGTH@ 19
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, OP2)
+OP2:   (UPD, MethodInvocation, OP1, OP3)
+OP3:      (UPD, SimpleName, OP2, OP4)
+OP4:         (DEL, ClassInstanceCreation, OP3, OP5 OP6)
+OP5:            (DEL, New, OP4, null)
+OP6:            (DEL, SimpleType, OP4, null)
+
+
+

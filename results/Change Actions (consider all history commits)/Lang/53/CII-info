@@ -1,0 +1,24 @@
+
+
+hASList: 
+[MOV IfStatement@@InfixExpression:field == Calendar.SECOND @TO@ MethodDeclaration@@private, static, @@void, MethodName:modify, @@Argus:Calendar+val+int+field+boolean+round+ @AT@ 25454 @LENGTH@ 70
+, MOV IfStatement@@InfixExpression:field == Calendar.MINUTE @TO@ MethodDeclaration@@private, static, @@void, MethodName:modify, @@Argus:Calendar+val+int+field+boolean+round+ @AT@ 25714 @LENGTH@ 70
+]
+
+CII:
+OP1:(MOV, IfStatement, null, null)
+
+
+
+
+
+hASList: 
+[MOV IfStatement@@InfixExpression:field == Calendar.SECOND @TO@ MethodDeclaration@@private, static, @@void, MethodName:modify, @@Argus:Calendar+val+int+field+boolean+round+ @AT@ 25454 @LENGTH@ 70
+, MOV IfStatement@@InfixExpression:field == Calendar.MINUTE @TO@ MethodDeclaration@@private, static, @@void, MethodName:modify, @@Argus:Calendar+val+int+field+boolean+round+ @AT@ 25714 @LENGTH@ 70
+]
+
+CII:
+OP1:(MOV, IfStatement, null, null)
+
+
+

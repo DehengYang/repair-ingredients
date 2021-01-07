@@ -1,0 +1,99 @@
+
+
+hASList: 
+[DEL FieldDeclaration@@private, final, TimeZone, [zone] @AT@ 33589 @LENGTH@ 28
+---DEL Modifier@@private @AT@ 33589 @LENGTH@ 7
+---DEL Modifier@@final @AT@ 33597 @LENGTH@ 5
+---DEL SimpleType@@TimeZone @AT@ 33603 @LENGTH@ 8
+---DEL VariableDeclarationFragment@@zone @AT@ 33612 @LENGTH@ 4
+------DEL SimpleName@@zone @AT@ 33612 @LENGTH@ 4
+, DEL ExpressionStatement@@Assignment:zone=timeZone @AT@ 34080 @LENGTH@ 16
+---DEL Assignment@@zone=timeZone @AT@ 34080 @LENGTH@ 15
+------DEL SimpleName@@zone @AT@ 34080 @LENGTH@ 4
+------DEL Operator@@= @AT@ 34084 @LENGTH@ 1
+------DEL SimpleName@@timeZone @AT@ 34087 @LENGTH@ 8
+, INS VariableDeclarationStatement@@TimeZone zone=calendar.getTimeZone(); @TO@ MethodDeclaration@@public, @@void, MethodName:appendTo, @@Argus:StringBuffer+buffer+Calendar+calendar+ @AT@ 34718 @LENGTH@ 39
+---INS SimpleType@@TimeZone @TO@ VariableDeclarationStatement@@TimeZone zone=calendar.getTimeZone(); @AT@ 34718 @LENGTH@ 8
+---INS VariableDeclarationFragment@@zone=calendar.getTimeZone() @TO@ VariableDeclarationStatement@@TimeZone zone=calendar.getTimeZone(); @AT@ 34727 @LENGTH@ 29
+------INS SimpleName@@zone @TO@ VariableDeclarationFragment@@zone=calendar.getTimeZone() @AT@ 34727 @LENGTH@ 4
+------INS MethodInvocation@@calendar.getTimeZone() @TO@ VariableDeclarationFragment@@zone=calendar.getTimeZone() @AT@ 34734 @LENGTH@ 22
+---------INS SimpleName@@Name:calendar @TO@ MethodInvocation@@calendar.getTimeZone() @AT@ 34734 @LENGTH@ 8
+---------INS SimpleName@@MethodName:getTimeZone:[] @TO@ MethodInvocation@@calendar.getTimeZone() @AT@ 34743 @LENGTH@ 13
+]
+
+CII:
+OP1:(DEL, FieldDeclaration, null, OP2 OP3 OP4 OP5)
+OP2:   (DEL, Modifier, OP1, null)
+OP3:   (DEL, Modifier, OP1, null)
+OP4:   (DEL, SimpleType, OP1, null)
+OP5:   (DEL, VariableDeclarationFragment, OP1, OP6)
+OP6:      (DEL, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[DEL FieldDeclaration@@private, final, TimeZone, [zone] @AT@ 33589 @LENGTH@ 28
+---DEL Modifier@@private @AT@ 33589 @LENGTH@ 7
+---DEL Modifier@@final @AT@ 33597 @LENGTH@ 5
+---DEL SimpleType@@TimeZone @AT@ 33603 @LENGTH@ 8
+---DEL VariableDeclarationFragment@@zone @AT@ 33612 @LENGTH@ 4
+------DEL SimpleName@@zone @AT@ 33612 @LENGTH@ 4
+, DEL ExpressionStatement@@Assignment:zone=timeZone @AT@ 34080 @LENGTH@ 16
+---DEL Assignment@@zone=timeZone @AT@ 34080 @LENGTH@ 15
+------DEL SimpleName@@zone @AT@ 34080 @LENGTH@ 4
+------DEL Operator@@= @AT@ 34084 @LENGTH@ 1
+------DEL SimpleName@@timeZone @AT@ 34087 @LENGTH@ 8
+, INS VariableDeclarationStatement@@TimeZone zone=calendar.getTimeZone(); @TO@ MethodDeclaration@@public, @@void, MethodName:appendTo, @@Argus:StringBuffer+buffer+Calendar+calendar+ @AT@ 34718 @LENGTH@ 39
+---INS SimpleType@@TimeZone @TO@ VariableDeclarationStatement@@TimeZone zone=calendar.getTimeZone(); @AT@ 34718 @LENGTH@ 8
+---INS VariableDeclarationFragment@@zone=calendar.getTimeZone() @TO@ VariableDeclarationStatement@@TimeZone zone=calendar.getTimeZone(); @AT@ 34727 @LENGTH@ 29
+------INS SimpleName@@zone @TO@ VariableDeclarationFragment@@zone=calendar.getTimeZone() @AT@ 34727 @LENGTH@ 4
+------INS MethodInvocation@@calendar.getTimeZone() @TO@ VariableDeclarationFragment@@zone=calendar.getTimeZone() @AT@ 34734 @LENGTH@ 22
+---------INS SimpleName@@Name:calendar @TO@ MethodInvocation@@calendar.getTimeZone() @AT@ 34734 @LENGTH@ 8
+---------INS SimpleName@@MethodName:getTimeZone:[] @TO@ MethodInvocation@@calendar.getTimeZone() @AT@ 34743 @LENGTH@ 13
+]
+
+CII:
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, Assignment, OP1, OP3 OP4 OP5)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, Operator, OP2, null)
+OP5:      (DEL, SimpleName, OP2, null)
+
+
+
+
+
+hASList: 
+[DEL FieldDeclaration@@private, final, TimeZone, [zone] @AT@ 33589 @LENGTH@ 28
+---DEL Modifier@@private @AT@ 33589 @LENGTH@ 7
+---DEL Modifier@@final @AT@ 33597 @LENGTH@ 5
+---DEL SimpleType@@TimeZone @AT@ 33603 @LENGTH@ 8
+---DEL VariableDeclarationFragment@@zone @AT@ 33612 @LENGTH@ 4
+------DEL SimpleName@@zone @AT@ 33612 @LENGTH@ 4
+, DEL ExpressionStatement@@Assignment:zone=timeZone @AT@ 34080 @LENGTH@ 16
+---DEL Assignment@@zone=timeZone @AT@ 34080 @LENGTH@ 15
+------DEL SimpleName@@zone @AT@ 34080 @LENGTH@ 4
+------DEL Operator@@= @AT@ 34084 @LENGTH@ 1
+------DEL SimpleName@@timeZone @AT@ 34087 @LENGTH@ 8
+, INS VariableDeclarationStatement@@TimeZone zone=calendar.getTimeZone(); @TO@ MethodDeclaration@@public, @@void, MethodName:appendTo, @@Argus:StringBuffer+buffer+Calendar+calendar+ @AT@ 34718 @LENGTH@ 39
+---INS SimpleType@@TimeZone @TO@ VariableDeclarationStatement@@TimeZone zone=calendar.getTimeZone(); @AT@ 34718 @LENGTH@ 8
+---INS VariableDeclarationFragment@@zone=calendar.getTimeZone() @TO@ VariableDeclarationStatement@@TimeZone zone=calendar.getTimeZone(); @AT@ 34727 @LENGTH@ 29
+------INS SimpleName@@zone @TO@ VariableDeclarationFragment@@zone=calendar.getTimeZone() @AT@ 34727 @LENGTH@ 4
+------INS MethodInvocation@@calendar.getTimeZone() @TO@ VariableDeclarationFragment@@zone=calendar.getTimeZone() @AT@ 34734 @LENGTH@ 22
+---------INS SimpleName@@Name:calendar @TO@ MethodInvocation@@calendar.getTimeZone() @AT@ 34734 @LENGTH@ 8
+---------INS SimpleName@@MethodName:getTimeZone:[] @TO@ MethodInvocation@@calendar.getTimeZone() @AT@ 34743 @LENGTH@ 13
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, SimpleType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, null)
+
+
+

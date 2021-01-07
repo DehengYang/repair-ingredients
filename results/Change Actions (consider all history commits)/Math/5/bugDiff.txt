@@ -1,0 +1,13 @@
+
+diff -Naur ../d4j-repo/Math/Math_5/src/main/java/org/apache/commons/math3/complex/Complex.java ../d4j-repo/fixed_bugs_dir/Math/Math_5/src/main/java/org/apache/commons/math3/complex/Complex.java
+--- ../d4j-repo/Math/Math_5/src/main/java/org/apache/commons/math3/complex/Complex.java	2021-01-04 22:56:57.339367302 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_5/src/main/java/org/apache/commons/math3/complex/Complex.java	2021-01-04 22:57:01.087507844 -0800
+@@ -302,7 +302,7 @@
+         }
+ 
+         if (real == 0.0 && imaginary == 0.0) {
+-            return NaN;
++            return INF;
+         }
+ 
+         if (isInfinite) {

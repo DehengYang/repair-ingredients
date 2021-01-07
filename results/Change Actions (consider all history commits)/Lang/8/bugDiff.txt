@@ -1,0 +1,28 @@
+
+diff -Naur ../d4j-repo/Lang/Lang_8/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java ../d4j-repo/fixed_bugs_dir/Lang/Lang_8/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
+--- ../d4j-repo/Lang/Lang_8/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java	2021-01-04 13:12:42.829957823 -0800
++++ ../d4j-repo/fixed_bugs_dir/Lang/Lang_8/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java	2021-01-04 13:12:46.478094685 -0800
+@@ -1095,7 +1095,6 @@
+     private static class TimeZoneNameRule implements Rule {
+         private final Locale mLocale;
+         private final int mStyle;
+-        private final TimeZone zone;
+         private final String mStandard;
+         private final String mDaylight;
+ 
+@@ -1109,7 +1108,6 @@
+         TimeZoneNameRule(TimeZone timeZone, Locale locale, int style) {
+             mLocale = locale;
+             mStyle = style;
+-            zone = timeZone;
+             
+             mStandard = getTimeZoneDisplay(timeZone, false, style, locale);
+             mDaylight = getTimeZoneDisplay(timeZone, true, style, locale);
+@@ -1131,6 +1129,7 @@
+          */
+         @Override
+         public void appendTo(StringBuffer buffer, Calendar calendar) {
++            TimeZone zone = calendar.getTimeZone();
+             if (zone.useDaylightTime()
+                     && calendar.get(Calendar.DST_OFFSET) != 0) {
+                 buffer.append(getTimeZoneDisplay(zone, true, mStyle, mLocale));

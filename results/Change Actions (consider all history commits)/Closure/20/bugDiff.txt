@@ -1,0 +1,14 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_20/src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_20/src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java
+--- ../d4j-repo/Closure/Closure_20/src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java	2021-01-06 03:41:24.259182329 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_20/src/com/google/javascript/jscomp/PeepholeSubstituteAlternateSyntax.java	2021-01-06 03:41:26.191248124 -0800
+@@ -217,7 +217,8 @@
+       // slightly different semantics than '' + (a). See
+       // http://code.google.com/p/closure-compiler/issues/detail?id=759
+       Node value = callTarget.getNext();
+-      if (value != null) {
++      if (value != null && value.getNext() == null &&
++          NodeUtil.isImmutableValue(value)) {
+         Node addition = IR.add(
+             IR.string("").srcref(callTarget),
+             value.detachFromParent());

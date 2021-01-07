@@ -1,0 +1,22 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_20/src/main/java/org/apache/commons/lang3/StringUtils.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_20/src/main/java/org/apache/commons/lang3/StringUtils.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_20/src/main/java/org/apache/commons/lang3/StringUtils.java	2020-01-05 05:26:54.894634698 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_20/src/main/java/org/apache/commons/lang3/StringUtils.java	2020-01-05 05:26:58.446605032 -0800
+@@ -3295,7 +3295,7 @@
+             return EMPTY;
+         }
+         
+-        StringBuilder buf = new StringBuilder((array[startIndex] == null ? 16 : array[startIndex].toString().length()) + 1);
++        StringBuilder buf = new StringBuilder(noOfItems * 16);
+ 
+         for (int i = startIndex; i < endIndex; i++) {
+             if (i > startIndex) {
+@@ -3380,7 +3380,7 @@
+             return EMPTY;
+         }
+ 
+-        StringBuilder buf = new StringBuilder((array[startIndex] == null ? 16 : array[startIndex].toString().length()) + separator.length());
++        StringBuilder buf = new StringBuilder(noOfItems * 16);
+ 
+         for (int i = startIndex; i < endIndex; i++) {
+             if (i > startIndex) {

@@ -1,0 +1,7 @@
+OP1:(UPD, ConstructorInvocation, null, OP2 OP3)
+OP2:   (INS, SimpleName, OP1, null)
+OP3:   (DEL, QualifiedName, OP1, OP4 OP5)
+OP4:      (DEL, SimpleName, OP3, null)
+OP5:      (DEL, SimpleName, OP3, null)
+
+

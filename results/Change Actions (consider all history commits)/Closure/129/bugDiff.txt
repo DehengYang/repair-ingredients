@@ -1,0 +1,14 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_129/src/com/google/javascript/jscomp/PrepareAst.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_129/src/com/google/javascript/jscomp/PrepareAst.java
+--- ../d4j-repo/Closure/Closure_129/src/com/google/javascript/jscomp/PrepareAst.java	2021-01-06 03:49:43.172174933 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_129/src/com/google/javascript/jscomp/PrepareAst.java	2021-01-06 03:49:46.196277948 -0800
+@@ -163,6 +163,9 @@
+       Node first = n.getFirstChild();
+ 
+       // ignore cast nodes.
++      while (first.isCast()) {
++        first = first.getFirstChild();
++      }
+ 
+       if (!NodeUtil.isGet(first)) {
+         n.putBooleanProp(Node.FREE_CALL, true);

@@ -1,0 +1,14 @@
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, SimpleType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (MOV, MethodInvocation, OP3, null)
+OP5:      (INS, SimpleName, OP3, null)
+
+
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (INS, MethodInvocation, OP1, OP3 OP4)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, SimpleName, OP2, OP5)
+OP5:         (INS, SimpleName, OP4, null)
+
+

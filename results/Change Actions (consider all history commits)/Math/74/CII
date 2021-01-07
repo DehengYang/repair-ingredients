@@ -1,0 +1,57 @@
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (MOV, ArrayCreation, OP2, null)
+
+
+OP1:(DEL, ExpressionStatement, null, null)
+
+
+OP1:(INS, ForStatement, null, OP2 OP7 OP13 OP16)
+OP2:   (INS, VariableDeclarationExpression, OP1, OP3 OP4)
+OP3:      (INS, PrimitiveType, OP2, null)
+OP4:      (INS, VariableDeclarationFragment, OP2, OP5 OP6)
+OP5:         (INS, SimpleName, OP4, null)
+OP6:         (INS, NumberLiteral, OP4, null)
+OP7:   (INS, InfixExpression, OP1, OP8 OP9 OP10)
+OP8:      (INS, SimpleName, OP7, null)
+OP9:      (INS, Operator, OP7, null)
+OP10:      (INS, QualifiedName, OP7, OP11 OP12)
+OP11:         (INS, SimpleName, OP10, null)
+OP12:         (INS, SimpleName, OP10, null)
+OP13:   (INS, PrefixExpression, OP1, OP14 OP15)
+OP14:      (INS, Operator, OP13, null)
+OP15:      (INS, SimpleName, OP13, null)
+OP16:   (INS, ExpressionStatement, OP1, OP17)
+OP17:      (MOV, Assignment, OP16, null)
+
+
+OP1:(DEL, ExpressionStatement, null, OP2)
+OP2:   (DEL, MethodInvocation, OP1, OP3 OP4)
+OP3:      (DEL, QualifiedName, OP2, null)
+OP4:      (DEL, SimpleName, OP2, OP5 OP6)
+OP5:         (DEL, SimpleName, OP4, null)
+OP6:         (DEL, SimpleName, OP4, null)
+
+
+OP1:(DEL, ExpressionStatement, null, null)
+
+
+OP1:(INS, ForStatement, null, OP2 OP7 OP13 OP16)
+OP2:   (INS, VariableDeclarationExpression, OP1, OP3 OP4)
+OP3:      (INS, PrimitiveType, OP2, null)
+OP4:      (INS, VariableDeclarationFragment, OP2, OP5 OP6)
+OP5:         (INS, SimpleName, OP4, null)
+OP6:         (INS, NumberLiteral, OP4, null)
+OP7:   (INS, InfixExpression, OP1, OP8 OP9 OP10)
+OP8:      (INS, SimpleName, OP7, null)
+OP9:      (INS, Operator, OP7, null)
+OP10:      (INS, QualifiedName, OP7, OP11 OP12)
+OP11:         (INS, SimpleName, OP10, null)
+OP12:         (INS, SimpleName, OP10, null)
+OP13:   (INS, PrefixExpression, OP1, OP14 OP15)
+OP14:      (INS, Operator, OP13, null)
+OP15:      (INS, SimpleName, OP13, null)
+OP16:   (INS, ExpressionStatement, OP1, OP17)
+OP17:      (MOV, Assignment, OP16, null)
+
+

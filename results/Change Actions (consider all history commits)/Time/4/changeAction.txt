@@ -1,0 +1,7 @@
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, ClassInstanceCreation, OP2, OP4 OP5)
+OP4:         (DEL, SimpleName, OP3, null)
+OP5:         (INS, SimpleName, OP3, null)
+
+

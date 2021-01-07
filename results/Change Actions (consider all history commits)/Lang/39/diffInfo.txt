@@ -1,0 +1,14 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_39/src/java/org/apache/commons/lang3/StringUtils.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_39/src/java/org/apache/commons/lang3/StringUtils.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Lang/Lang_39/src/java/org/apache/commons/lang3/StringUtils.java	2020-01-05 05:29:05.985539814 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Lang/Lang_39/src/java/org/apache/commons/lang3/StringUtils.java	2020-01-05 05:29:09.449510882 -0800
+@@ -3673,6 +3673,9 @@
+ 
+         // count the replacement text elements that are larger than their corresponding text being replaced
+         for (int i = 0; i < searchList.length; i++) {
++            if (searchList[i] == null || replacementList[i] == null) {
++                continue;
++            }
+             int greater = replacementList[i].length() - searchList[i].length();
+             if (greater > 0) {
+                 increase += 3 * greater; // assume 3 matches

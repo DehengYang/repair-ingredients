@@ -1,0 +1,48 @@
+
+
+hASList: 
+[UPD TypeDeclaration@@[public, abstract]BitsStreamGenerator, [RandomGenerator] @TO@ [public, abstract]BitsStreamGenerator, [RandomGenerator, Serializable] @AT@ 1077 @LENGTH@ 4363
+---INS SimpleType@@Serializable @TO@ TypeDeclaration@@[public, abstract]BitsStreamGenerator, [RandomGenerator] @AT@ 1195 @LENGTH@ 12
+, INS FieldDeclaration@@private, static, final, long, [serialVersionUID=20130104L] @TO@ TypeDeclaration@@[public, abstract]BitsStreamGenerator, [RandomGenerator] @AT@ 1257 @LENGTH@ 55
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=20130104L] @AT@ 1257 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=20130104L] @AT@ 1265 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=20130104L] @AT@ 1272 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=20130104L] @AT@ 1278 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=20130104L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=20130104L] @AT@ 1283 @LENGTH@ 28
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=20130104L @AT@ 1283 @LENGTH@ 16
+------INS NumberLiteral@@20130104L @TO@ VariableDeclarationFragment@@serialVersionUID=20130104L @AT@ 1302 @LENGTH@ 9
+]
+
+CII:
+OP1:(UPD, TypeDeclaration, null, OP2)
+OP2:   (INS, SimpleType, OP1, null)
+
+
+
+
+
+hASList: 
+[UPD TypeDeclaration@@[public, abstract]BitsStreamGenerator, [RandomGenerator] @TO@ [public, abstract]BitsStreamGenerator, [RandomGenerator, Serializable] @AT@ 1077 @LENGTH@ 4363
+---INS SimpleType@@Serializable @TO@ TypeDeclaration@@[public, abstract]BitsStreamGenerator, [RandomGenerator] @AT@ 1195 @LENGTH@ 12
+, INS FieldDeclaration@@private, static, final, long, [serialVersionUID=20130104L] @TO@ TypeDeclaration@@[public, abstract]BitsStreamGenerator, [RandomGenerator] @AT@ 1257 @LENGTH@ 55
+---INS Modifier@@private @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=20130104L] @AT@ 1257 @LENGTH@ 7
+---INS Modifier@@static @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=20130104L] @AT@ 1265 @LENGTH@ 6
+---INS Modifier@@final @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=20130104L] @AT@ 1272 @LENGTH@ 5
+---INS PrimitiveType@@long @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=20130104L] @AT@ 1278 @LENGTH@ 4
+---INS VariableDeclarationFragment@@serialVersionUID=20130104L @TO@ FieldDeclaration@@private, static, final, long, [serialVersionUID=20130104L] @AT@ 1283 @LENGTH@ 28
+------INS SimpleName@@serialVersionUID @TO@ VariableDeclarationFragment@@serialVersionUID=20130104L @AT@ 1283 @LENGTH@ 16
+------INS NumberLiteral@@20130104L @TO@ VariableDeclarationFragment@@serialVersionUID=20130104L @AT@ 1302 @LENGTH@ 9
+]
+
+CII:
+OP1:(INS, FieldDeclaration, null, OP2 OP3 OP4 OP5 OP6)
+OP2:   (INS, Modifier, OP1, null)
+OP3:   (INS, Modifier, OP1, null)
+OP4:   (INS, Modifier, OP1, null)
+OP5:   (INS, PrimitiveType, OP1, null)
+OP6:   (INS, VariableDeclarationFragment, OP1, OP7 OP8)
+OP7:      (INS, SimpleName, OP6, null)
+OP8:      (INS, NumberLiteral, OP6, null)
+
+
+

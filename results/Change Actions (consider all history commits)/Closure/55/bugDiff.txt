@@ -1,0 +1,14 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_55/src/com/google/javascript/jscomp/FunctionRewriter.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_55/src/com/google/javascript/jscomp/FunctionRewriter.java
+--- ../d4j-repo/Closure/Closure_55/src/com/google/javascript/jscomp/FunctionRewriter.java	2021-01-06 03:43:44.223948902 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_55/src/com/google/javascript/jscomp/FunctionRewriter.java	2021-01-06 03:43:46.244017699 -0800
+@@ -114,7 +114,8 @@
+   }
+ 
+   private static boolean isReduceableFunctionExpression(Node n) {
+-    return NodeUtil.isFunctionExpression(n);
++    return NodeUtil.isFunctionExpression(n)
++        && !NodeUtil.isGetOrSetKey(n.getParent());
+   }
+ 
+   /**

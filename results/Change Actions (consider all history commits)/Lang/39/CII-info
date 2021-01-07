@@ -1,0 +1,41 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:searchList[i] == null || replacementList[i] == null @TO@ ForStatement@@[int i=0];i < searchList.length; [i++] @AT@ 149033 @LENGTH@ 98
+---INS InfixExpression@@searchList[i] == null || replacementList[i] == null @TO@ IfStatement@@InfixExpression:searchList[i] == null || replacementList[i] == null @AT@ 149037 @LENGTH@ 51
+------INS InfixExpression@@searchList[i] == null @TO@ InfixExpression@@searchList[i] == null || replacementList[i] == null @AT@ 149037 @LENGTH@ 21
+---------INS ArrayAccess@@searchList[i] @TO@ InfixExpression@@searchList[i] == null @AT@ 149037 @LENGTH@ 13
+------------INS SimpleName@@searchList @TO@ ArrayAccess@@searchList[i] @AT@ 149037 @LENGTH@ 10
+------------INS SimpleName@@i @TO@ ArrayAccess@@searchList[i] @AT@ 149048 @LENGTH@ 1
+---------INS Operator@@== @TO@ InfixExpression@@searchList[i] == null @AT@ 149050 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@searchList[i] == null @AT@ 149054 @LENGTH@ 4
+------INS Operator@@|| @TO@ InfixExpression@@searchList[i] == null || replacementList[i] == null @AT@ 149058 @LENGTH@ 2
+------INS InfixExpression@@replacementList[i] == null @TO@ InfixExpression@@searchList[i] == null || replacementList[i] == null @AT@ 149062 @LENGTH@ 26
+---------INS ArrayAccess@@replacementList[i] @TO@ InfixExpression@@replacementList[i] == null @AT@ 149062 @LENGTH@ 18
+------------INS SimpleName@@replacementList @TO@ ArrayAccess@@replacementList[i] @AT@ 149062 @LENGTH@ 15
+------------INS SimpleName@@i @TO@ ArrayAccess@@replacementList[i] @AT@ 149078 @LENGTH@ 1
+---------INS Operator@@== @TO@ InfixExpression@@replacementList[i] == null @AT@ 149080 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@replacementList[i] == null @AT@ 149084 @LENGTH@ 4
+---INS ContinueStatement@@ @TO@ IfStatement@@InfixExpression:searchList[i] == null || replacementList[i] == null @AT@ 149108 @LENGTH@ 9
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP16)
+OP2:   (INS, InfixExpression, OP1, OP3 OP9 OP10)
+OP3:      (INS, InfixExpression, OP2, OP4 OP7 OP8)
+OP4:         (INS, ArrayAccess, OP3, OP5 OP6)
+OP5:            (INS, SimpleName, OP4, null)
+OP6:            (INS, SimpleName, OP4, null)
+OP7:         (INS, Operator, OP3, null)
+OP8:         (INS, NullLiteral, OP3, null)
+OP9:      (INS, Operator, OP2, null)
+OP10:      (INS, InfixExpression, OP2, OP11 OP14 OP15)
+OP11:         (INS, ArrayAccess, OP10, OP12 OP13)
+OP12:            (INS, SimpleName, OP11, null)
+OP13:            (INS, SimpleName, OP11, null)
+OP14:         (INS, Operator, OP10, null)
+OP15:         (INS, NullLiteral, OP10, null)
+OP16:   (INS, ContinueStatement, OP1, null)
+
+
+

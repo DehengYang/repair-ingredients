@@ -1,0 +1,195 @@
+
+
+hASList: 
+[UPD ExpressionStatement@@Assignment:sum=Math.max(sum,4) @TO@ Assignment:sum=(valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4)) @AT@ 39909 @LENGTH@ 23
+---UPD Assignment@@sum=Math.max(sum,4) @TO@ sum=(valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4)) @AT@ 39909 @LENGTH@ 22
+------INS ParenthesizedExpression@@(valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4)) @TO@ Assignment@@sum=Math.max(sum,4) @AT@ 39915 @LENGTH@ 53
+---------INS ConditionalExpression@@valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4) @TO@ ParenthesizedExpression@@(valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4)) @AT@ 39916 @LENGTH@ 51
+------------MOV MethodInvocation@@Math.max(sum,4) @TO@ ConditionalExpression@@valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4) @AT@ 39915 @LENGTH@ 16
+------------INS InfixExpression@@valueLong < 0 @TO@ ConditionalExpression@@valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4) @AT@ 39916 @LENGTH@ 13
+---------------INS SimpleName@@valueLong @TO@ InfixExpression@@valueLong < 0 @AT@ 39916 @LENGTH@ 9
+---------------INS Operator@@< @TO@ InfixExpression@@valueLong < 0 @AT@ 39925 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ InfixExpression@@valueLong < 0 @AT@ 39928 @LENGTH@ 1
+------------INS MethodInvocation@@Math.max(sum,5) @TO@ ConditionalExpression@@valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4) @AT@ 39932 @LENGTH@ 16
+---------------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.max(sum,5) @AT@ 39932 @LENGTH@ 4
+---------------INS SimpleName@@MethodName:max:[sum, 5] @TO@ MethodInvocation@@Math.max(sum,5) @AT@ 39937 @LENGTH@ 11
+------------------INS SimpleName@@sum @TO@ SimpleName@@MethodName:max:[sum, 5] @AT@ 39941 @LENGTH@ 3
+------------------INS NumberLiteral@@5 @TO@ SimpleName@@MethodName:max:[sum, 5] @AT@ 39946 @LENGTH@ 1
+, INS VariableDeclarationStatement@@int bufLen=buf.length(); @TO@ MethodDeclaration@@public, @@void, MethodName:printTo, @@Argus:StringBuffer+buf+ReadablePeriod+period+Locale+locale+ @AT@ 41296 @LENGTH@ 26
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int bufLen=buf.length(); @AT@ 41296 @LENGTH@ 3
+---INS VariableDeclarationFragment@@bufLen=buf.length() @TO@ VariableDeclarationStatement@@int bufLen=buf.length(); @AT@ 41300 @LENGTH@ 21
+------INS SimpleName@@bufLen @TO@ VariableDeclarationFragment@@bufLen=buf.length() @AT@ 41300 @LENGTH@ 6
+------INS MethodInvocation@@buf.length() @TO@ VariableDeclarationFragment@@bufLen=buf.length() @AT@ 41309 @LENGTH@ 12
+---------INS SimpleName@@Name:buf @TO@ MethodInvocation@@buf.length() @AT@ 41309 @LENGTH@ 3
+---------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@buf.length() @AT@ 41313 @LENGTH@ 8
+, INS IfStatement@@InfixExpression:valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @TO@ IfStatement@@InfixExpression:iFieldType == SECONDS_MILLIS || dp > 0 @AT@ 41796 @LENGTH@ 143
+---INS InfixExpression@@valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @TO@ IfStatement@@InfixExpression:valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41800 @LENGTH@ 65
+------INS InfixExpression@@valueLong < 0 @TO@ InfixExpression@@valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41800 @LENGTH@ 13
+---------INS SimpleName@@valueLong @TO@ InfixExpression@@valueLong < 0 @AT@ 41800 @LENGTH@ 9
+---------INS Operator@@< @TO@ InfixExpression@@valueLong < 0 @AT@ 41809 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@valueLong < 0 @AT@ 41812 @LENGTH@ 1
+------INS Operator@@&& @TO@ InfixExpression@@valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41813 @LENGTH@ 2
+------INS InfixExpression@@valueLong > -DateTimeConstants.MILLIS_PER_SECOND @TO@ InfixExpression@@valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41817 @LENGTH@ 48
+---------INS SimpleName@@valueLong @TO@ InfixExpression@@valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41817 @LENGTH@ 9
+---------INS Operator@@> @TO@ InfixExpression@@valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41826 @LENGTH@ 1
+---------INS PrefixExpression@@-DateTimeConstants.MILLIS_PER_SECOND @TO@ InfixExpression@@valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41829 @LENGTH@ 36
+------------INS Operator@@- @TO@ PrefixExpression@@-DateTimeConstants.MILLIS_PER_SECOND @AT@ 41829 @LENGTH@ 1
+------------INS QualifiedName@@DateTimeConstants.MILLIS_PER_SECOND @TO@ PrefixExpression@@-DateTimeConstants.MILLIS_PER_SECOND @AT@ 41830 @LENGTH@ 35
+---------------INS SimpleName@@DateTimeConstants @TO@ QualifiedName@@DateTimeConstants.MILLIS_PER_SECOND @AT@ 41830 @LENGTH@ 17
+---------------INS SimpleName@@MILLIS_PER_SECOND @TO@ QualifiedName@@DateTimeConstants.MILLIS_PER_SECOND @AT@ 41848 @LENGTH@ 17
+---INS ExpressionStatement@@MethodInvocation:buf.insert(bufLen,'-') @TO@ IfStatement@@InfixExpression:valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41893 @LENGTH@ 24
+------INS MethodInvocation@@buf.insert(bufLen,'-') @TO@ ExpressionStatement@@MethodInvocation:buf.insert(bufLen,'-') @AT@ 41893 @LENGTH@ 23
+---------INS SimpleName@@Name:buf @TO@ MethodInvocation@@buf.insert(bufLen,'-') @AT@ 41893 @LENGTH@ 3
+---------INS SimpleName@@MethodName:insert:[bufLen, '-'] @TO@ MethodInvocation@@buf.insert(bufLen,'-') @AT@ 41897 @LENGTH@ 19
+------------INS SimpleName@@bufLen @TO@ SimpleName@@MethodName:insert:[bufLen, '-'] @AT@ 41904 @LENGTH@ 6
+------------INS CharacterLiteral@@'-' @TO@ SimpleName@@MethodName:insert:[bufLen, '-'] @AT@ 41912 @LENGTH@ 3
+]
+
+CII:
+OP1:(UPD, ExpressionStatement, null, OP2)
+OP2:   (UPD, Assignment, OP1, OP3)
+OP3:      (INS, ParenthesizedExpression, OP2, OP4)
+OP4:         (INS, ConditionalExpression, OP3, OP5 OP6 OP10)
+OP5:            (MOV, MethodInvocation, OP4, null)
+OP6:            (INS, InfixExpression, OP4, OP7 OP8 OP9)
+OP7:               (INS, SimpleName, OP6, null)
+OP8:               (INS, Operator, OP6, null)
+OP9:               (INS, NumberLiteral, OP6, null)
+OP10:            (INS, MethodInvocation, OP4, OP11 OP12)
+OP11:               (INS, SimpleName, OP10, null)
+OP12:               (INS, SimpleName, OP10, OP13 OP14)
+OP13:                  (INS, SimpleName, OP12, null)
+OP14:                  (INS, NumberLiteral, OP12, null)
+
+
+
+
+
+hASList: 
+[UPD ExpressionStatement@@Assignment:sum=Math.max(sum,4) @TO@ Assignment:sum=(valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4)) @AT@ 39909 @LENGTH@ 23
+---UPD Assignment@@sum=Math.max(sum,4) @TO@ sum=(valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4)) @AT@ 39909 @LENGTH@ 22
+------INS ParenthesizedExpression@@(valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4)) @TO@ Assignment@@sum=Math.max(sum,4) @AT@ 39915 @LENGTH@ 53
+---------INS ConditionalExpression@@valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4) @TO@ ParenthesizedExpression@@(valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4)) @AT@ 39916 @LENGTH@ 51
+------------MOV MethodInvocation@@Math.max(sum,4) @TO@ ConditionalExpression@@valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4) @AT@ 39915 @LENGTH@ 16
+------------INS InfixExpression@@valueLong < 0 @TO@ ConditionalExpression@@valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4) @AT@ 39916 @LENGTH@ 13
+---------------INS SimpleName@@valueLong @TO@ InfixExpression@@valueLong < 0 @AT@ 39916 @LENGTH@ 9
+---------------INS Operator@@< @TO@ InfixExpression@@valueLong < 0 @AT@ 39925 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ InfixExpression@@valueLong < 0 @AT@ 39928 @LENGTH@ 1
+------------INS MethodInvocation@@Math.max(sum,5) @TO@ ConditionalExpression@@valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4) @AT@ 39932 @LENGTH@ 16
+---------------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.max(sum,5) @AT@ 39932 @LENGTH@ 4
+---------------INS SimpleName@@MethodName:max:[sum, 5] @TO@ MethodInvocation@@Math.max(sum,5) @AT@ 39937 @LENGTH@ 11
+------------------INS SimpleName@@sum @TO@ SimpleName@@MethodName:max:[sum, 5] @AT@ 39941 @LENGTH@ 3
+------------------INS NumberLiteral@@5 @TO@ SimpleName@@MethodName:max:[sum, 5] @AT@ 39946 @LENGTH@ 1
+, INS VariableDeclarationStatement@@int bufLen=buf.length(); @TO@ MethodDeclaration@@public, @@void, MethodName:printTo, @@Argus:StringBuffer+buf+ReadablePeriod+period+Locale+locale+ @AT@ 41296 @LENGTH@ 26
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int bufLen=buf.length(); @AT@ 41296 @LENGTH@ 3
+---INS VariableDeclarationFragment@@bufLen=buf.length() @TO@ VariableDeclarationStatement@@int bufLen=buf.length(); @AT@ 41300 @LENGTH@ 21
+------INS SimpleName@@bufLen @TO@ VariableDeclarationFragment@@bufLen=buf.length() @AT@ 41300 @LENGTH@ 6
+------INS MethodInvocation@@buf.length() @TO@ VariableDeclarationFragment@@bufLen=buf.length() @AT@ 41309 @LENGTH@ 12
+---------INS SimpleName@@Name:buf @TO@ MethodInvocation@@buf.length() @AT@ 41309 @LENGTH@ 3
+---------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@buf.length() @AT@ 41313 @LENGTH@ 8
+, INS IfStatement@@InfixExpression:valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @TO@ IfStatement@@InfixExpression:iFieldType == SECONDS_MILLIS || dp > 0 @AT@ 41796 @LENGTH@ 143
+---INS InfixExpression@@valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @TO@ IfStatement@@InfixExpression:valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41800 @LENGTH@ 65
+------INS InfixExpression@@valueLong < 0 @TO@ InfixExpression@@valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41800 @LENGTH@ 13
+---------INS SimpleName@@valueLong @TO@ InfixExpression@@valueLong < 0 @AT@ 41800 @LENGTH@ 9
+---------INS Operator@@< @TO@ InfixExpression@@valueLong < 0 @AT@ 41809 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@valueLong < 0 @AT@ 41812 @LENGTH@ 1
+------INS Operator@@&& @TO@ InfixExpression@@valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41813 @LENGTH@ 2
+------INS InfixExpression@@valueLong > -DateTimeConstants.MILLIS_PER_SECOND @TO@ InfixExpression@@valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41817 @LENGTH@ 48
+---------INS SimpleName@@valueLong @TO@ InfixExpression@@valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41817 @LENGTH@ 9
+---------INS Operator@@> @TO@ InfixExpression@@valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41826 @LENGTH@ 1
+---------INS PrefixExpression@@-DateTimeConstants.MILLIS_PER_SECOND @TO@ InfixExpression@@valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41829 @LENGTH@ 36
+------------INS Operator@@- @TO@ PrefixExpression@@-DateTimeConstants.MILLIS_PER_SECOND @AT@ 41829 @LENGTH@ 1
+------------INS QualifiedName@@DateTimeConstants.MILLIS_PER_SECOND @TO@ PrefixExpression@@-DateTimeConstants.MILLIS_PER_SECOND @AT@ 41830 @LENGTH@ 35
+---------------INS SimpleName@@DateTimeConstants @TO@ QualifiedName@@DateTimeConstants.MILLIS_PER_SECOND @AT@ 41830 @LENGTH@ 17
+---------------INS SimpleName@@MILLIS_PER_SECOND @TO@ QualifiedName@@DateTimeConstants.MILLIS_PER_SECOND @AT@ 41848 @LENGTH@ 17
+---INS ExpressionStatement@@MethodInvocation:buf.insert(bufLen,'-') @TO@ IfStatement@@InfixExpression:valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41893 @LENGTH@ 24
+------INS MethodInvocation@@buf.insert(bufLen,'-') @TO@ ExpressionStatement@@MethodInvocation:buf.insert(bufLen,'-') @AT@ 41893 @LENGTH@ 23
+---------INS SimpleName@@Name:buf @TO@ MethodInvocation@@buf.insert(bufLen,'-') @AT@ 41893 @LENGTH@ 3
+---------INS SimpleName@@MethodName:insert:[bufLen, '-'] @TO@ MethodInvocation@@buf.insert(bufLen,'-') @AT@ 41897 @LENGTH@ 19
+------------INS SimpleName@@bufLen @TO@ SimpleName@@MethodName:insert:[bufLen, '-'] @AT@ 41904 @LENGTH@ 6
+------------INS CharacterLiteral@@'-' @TO@ SimpleName@@MethodName:insert:[bufLen, '-'] @AT@ 41912 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[UPD ExpressionStatement@@Assignment:sum=Math.max(sum,4) @TO@ Assignment:sum=(valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4)) @AT@ 39909 @LENGTH@ 23
+---UPD Assignment@@sum=Math.max(sum,4) @TO@ sum=(valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4)) @AT@ 39909 @LENGTH@ 22
+------INS ParenthesizedExpression@@(valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4)) @TO@ Assignment@@sum=Math.max(sum,4) @AT@ 39915 @LENGTH@ 53
+---------INS ConditionalExpression@@valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4) @TO@ ParenthesizedExpression@@(valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4)) @AT@ 39916 @LENGTH@ 51
+------------MOV MethodInvocation@@Math.max(sum,4) @TO@ ConditionalExpression@@valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4) @AT@ 39915 @LENGTH@ 16
+------------INS InfixExpression@@valueLong < 0 @TO@ ConditionalExpression@@valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4) @AT@ 39916 @LENGTH@ 13
+---------------INS SimpleName@@valueLong @TO@ InfixExpression@@valueLong < 0 @AT@ 39916 @LENGTH@ 9
+---------------INS Operator@@< @TO@ InfixExpression@@valueLong < 0 @AT@ 39925 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ InfixExpression@@valueLong < 0 @AT@ 39928 @LENGTH@ 1
+------------INS MethodInvocation@@Math.max(sum,5) @TO@ ConditionalExpression@@valueLong < 0 ? Math.max(sum,5) : Math.max(sum,4) @AT@ 39932 @LENGTH@ 16
+---------------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.max(sum,5) @AT@ 39932 @LENGTH@ 4
+---------------INS SimpleName@@MethodName:max:[sum, 5] @TO@ MethodInvocation@@Math.max(sum,5) @AT@ 39937 @LENGTH@ 11
+------------------INS SimpleName@@sum @TO@ SimpleName@@MethodName:max:[sum, 5] @AT@ 39941 @LENGTH@ 3
+------------------INS NumberLiteral@@5 @TO@ SimpleName@@MethodName:max:[sum, 5] @AT@ 39946 @LENGTH@ 1
+, INS VariableDeclarationStatement@@int bufLen=buf.length(); @TO@ MethodDeclaration@@public, @@void, MethodName:printTo, @@Argus:StringBuffer+buf+ReadablePeriod+period+Locale+locale+ @AT@ 41296 @LENGTH@ 26
+---INS PrimitiveType@@int @TO@ VariableDeclarationStatement@@int bufLen=buf.length(); @AT@ 41296 @LENGTH@ 3
+---INS VariableDeclarationFragment@@bufLen=buf.length() @TO@ VariableDeclarationStatement@@int bufLen=buf.length(); @AT@ 41300 @LENGTH@ 21
+------INS SimpleName@@bufLen @TO@ VariableDeclarationFragment@@bufLen=buf.length() @AT@ 41300 @LENGTH@ 6
+------INS MethodInvocation@@buf.length() @TO@ VariableDeclarationFragment@@bufLen=buf.length() @AT@ 41309 @LENGTH@ 12
+---------INS SimpleName@@Name:buf @TO@ MethodInvocation@@buf.length() @AT@ 41309 @LENGTH@ 3
+---------INS SimpleName@@MethodName:length:[] @TO@ MethodInvocation@@buf.length() @AT@ 41313 @LENGTH@ 8
+, INS IfStatement@@InfixExpression:valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @TO@ IfStatement@@InfixExpression:iFieldType == SECONDS_MILLIS || dp > 0 @AT@ 41796 @LENGTH@ 143
+---INS InfixExpression@@valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @TO@ IfStatement@@InfixExpression:valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41800 @LENGTH@ 65
+------INS InfixExpression@@valueLong < 0 @TO@ InfixExpression@@valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41800 @LENGTH@ 13
+---------INS SimpleName@@valueLong @TO@ InfixExpression@@valueLong < 0 @AT@ 41800 @LENGTH@ 9
+---------INS Operator@@< @TO@ InfixExpression@@valueLong < 0 @AT@ 41809 @LENGTH@ 1
+---------INS NumberLiteral@@0 @TO@ InfixExpression@@valueLong < 0 @AT@ 41812 @LENGTH@ 1
+------INS Operator@@&& @TO@ InfixExpression@@valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41813 @LENGTH@ 2
+------INS InfixExpression@@valueLong > -DateTimeConstants.MILLIS_PER_SECOND @TO@ InfixExpression@@valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41817 @LENGTH@ 48
+---------INS SimpleName@@valueLong @TO@ InfixExpression@@valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41817 @LENGTH@ 9
+---------INS Operator@@> @TO@ InfixExpression@@valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41826 @LENGTH@ 1
+---------INS PrefixExpression@@-DateTimeConstants.MILLIS_PER_SECOND @TO@ InfixExpression@@valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41829 @LENGTH@ 36
+------------INS Operator@@- @TO@ PrefixExpression@@-DateTimeConstants.MILLIS_PER_SECOND @AT@ 41829 @LENGTH@ 1
+------------INS QualifiedName@@DateTimeConstants.MILLIS_PER_SECOND @TO@ PrefixExpression@@-DateTimeConstants.MILLIS_PER_SECOND @AT@ 41830 @LENGTH@ 35
+---------------INS SimpleName@@DateTimeConstants @TO@ QualifiedName@@DateTimeConstants.MILLIS_PER_SECOND @AT@ 41830 @LENGTH@ 17
+---------------INS SimpleName@@MILLIS_PER_SECOND @TO@ QualifiedName@@DateTimeConstants.MILLIS_PER_SECOND @AT@ 41848 @LENGTH@ 17
+---INS ExpressionStatement@@MethodInvocation:buf.insert(bufLen,'-') @TO@ IfStatement@@InfixExpression:valueLong < 0 && valueLong > -DateTimeConstants.MILLIS_PER_SECOND @AT@ 41893 @LENGTH@ 24
+------INS MethodInvocation@@buf.insert(bufLen,'-') @TO@ ExpressionStatement@@MethodInvocation:buf.insert(bufLen,'-') @AT@ 41893 @LENGTH@ 23
+---------INS SimpleName@@Name:buf @TO@ MethodInvocation@@buf.insert(bufLen,'-') @AT@ 41893 @LENGTH@ 3
+---------INS SimpleName@@MethodName:insert:[bufLen, '-'] @TO@ MethodInvocation@@buf.insert(bufLen,'-') @AT@ 41897 @LENGTH@ 19
+------------INS SimpleName@@bufLen @TO@ SimpleName@@MethodName:insert:[bufLen, '-'] @AT@ 41904 @LENGTH@ 6
+------------INS CharacterLiteral@@'-' @TO@ SimpleName@@MethodName:insert:[bufLen, '-'] @AT@ 41912 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP16)
+OP2:   (INS, InfixExpression, OP1, OP3 OP7 OP8)
+OP3:      (INS, InfixExpression, OP2, OP4 OP5 OP6)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, Operator, OP3, null)
+OP6:         (INS, NumberLiteral, OP3, null)
+OP7:      (INS, Operator, OP2, null)
+OP8:      (INS, InfixExpression, OP2, OP9 OP10 OP11)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, Operator, OP8, null)
+OP11:         (INS, PrefixExpression, OP8, OP12 OP13)
+OP12:            (INS, Operator, OP11, null)
+OP13:            (INS, QualifiedName, OP11, OP14 OP15)
+OP14:               (INS, SimpleName, OP13, null)
+OP15:               (INS, SimpleName, OP13, null)
+OP16:   (INS, ExpressionStatement, OP1, OP17)
+OP17:      (INS, MethodInvocation, OP16, OP18 OP19)
+OP18:         (INS, SimpleName, OP17, null)
+OP19:         (INS, SimpleName, OP17, OP20 OP21)
+OP20:            (INS, SimpleName, OP19, null)
+OP21:            (INS, CharacterLiteral, OP19, null)
+
+
+

@@ -1,0 +1,24 @@
+
+diff -Naur ../d4j-repo/Math/Math_51/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java ../d4j-repo/fixed_bugs_dir/Math/Math_51/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java
+--- ../d4j-repo/Math/Math_51/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java	2021-01-04 23:02:48.888544705 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_51/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java	2021-01-04 23:02:52.540681550 -0800
+@@ -182,10 +182,19 @@
+                 case PEGASUS:
+                     f0 *= f1 / (f1 + fx);
+                     break;
++                case REGULA_FALSI:
++                    if (x == x1) {
++                        final double delta = FastMath.max(rtol * FastMath.abs(x1),
++                                                          atol);
+                         // Update formula cannot make any progress: Update the
+                         // search interval.
++                        x0 = 0.5 * (x0 + x1 - delta);
++                        f0 = computeObjectiveValue(x0);
++                    }
++                    break;
+                 default:
+                     // Should never happen.
++                    throw new MathInternalError();
+                 }
+             }
+             // Update from [x0, x1] to [x0, x].

@@ -1,0 +1,19 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_78/src/com/google/javascript/jscomp/PeepholeFoldConstants.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_78/src/com/google/javascript/jscomp/PeepholeFoldConstants.java
+--- ../d4j-repo/Closure/Closure_78/src/com/google/javascript/jscomp/PeepholeFoldConstants.java	2021-01-06 03:45:16.107078256 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_78/src/com/google/javascript/jscomp/PeepholeFoldConstants.java	2021-01-06 03:45:18.159148147 -0800
+@@ -708,14 +708,12 @@
+         break;
+       case Token.MOD:
+         if (rval == 0) {
+-          error(DiagnosticType.error("JSC_DIVIDE_BY_0_ERROR", "Divide by 0"), right);
+           return null;
+         }
+         result = lval % rval;
+         break;
+       case Token.DIV:
+         if (rval == 0) {
+-          error(DiagnosticType.error("JSC_DIVIDE_BY_0_ERROR", "Divide by 0"), right);
+           return null;
+         }
+         result = lval / rval;

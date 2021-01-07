@@ -1,0 +1,27 @@
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@RectangleConstraint c4=new RectangleConstraint(0.0,new Range(0.0,constraint.getWidth() - w[2]),LengthConstraintType.RANGE,h[2],null,LengthConstraintType.FIXED); @TO@ RectangleConstraint c4=new RectangleConstraint(0.0,new Range(0.0,Math.max(constraint.getWidth() - w[2],0.0)),LengthConstraintType.RANGE,h[2],null,LengthConstraintType.FIXED); @AT@ 17794 @LENGTH@ 231
+---UPD VariableDeclarationFragment@@c4=new RectangleConstraint(0.0,new Range(0.0,constraint.getWidth() - w[2]),LengthConstraintType.RANGE,h[2],null,LengthConstraintType.FIXED) @TO@ c4=new RectangleConstraint(0.0,new Range(0.0,Math.max(constraint.getWidth() - w[2],0.0)),LengthConstraintType.RANGE,h[2],null,LengthConstraintType.FIXED) @AT@ 17814 @LENGTH@ 210
+------UPD ClassInstanceCreation@@RectangleConstraint[0.0, new Range(0.0,constraint.getWidth() - w[2]), LengthConstraintType.RANGE, h[2], null, LengthConstraintType.FIXED] @TO@ RectangleConstraint[0.0, new Range(0.0,Math.max(constraint.getWidth() - w[2],0.0)), LengthConstraintType.RANGE, h[2], null, LengthConstraintType.FIXED] @AT@ 17819 @LENGTH@ 205
+---------UPD ClassInstanceCreation@@Range[0.0, constraint.getWidth() - w[2]] @TO@ Range[0.0, Math.max(constraint.getWidth() - w[2],0.0)] @AT@ 17869 @LENGTH@ 44
+------------INS MethodInvocation@@Math.max(constraint.getWidth() - w[2],0.0) @TO@ ClassInstanceCreation@@Range[0.0, constraint.getWidth() - w[2]] @AT@ 17884 @LENGTH@ 43
+---------------INS SimpleName@@Name:Math @TO@ MethodInvocation@@Math.max(constraint.getWidth() - w[2],0.0) @AT@ 17884 @LENGTH@ 4
+---------------INS SimpleName@@MethodName:max:[constraint.getWidth() - w[2], 0.0] @TO@ MethodInvocation@@Math.max(constraint.getWidth() - w[2],0.0) @AT@ 17889 @LENGTH@ 38
+------------------MOV InfixExpression@@constraint.getWidth() - w[2] @TO@ SimpleName@@MethodName:max:[constraint.getWidth() - w[2], 0.0] @AT@ 17884 @LENGTH@ 28
+------------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:max:[constraint.getWidth() - w[2], 0.0] @AT@ 17923 @LENGTH@ 3
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, ClassInstanceCreation, OP2, OP4)
+OP4:         (UPD, ClassInstanceCreation, OP3, OP5)
+OP5:            (INS, MethodInvocation, OP4, OP6 OP7)
+OP6:               (INS, SimpleName, OP5, null)
+OP7:               (INS, SimpleName, OP5, OP8 OP9)
+OP8:                  (MOV, InfixExpression, OP7, null)
+OP9:                  (INS, NumberLiteral, OP7, null)
+
+
+

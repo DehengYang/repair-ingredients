@@ -1,0 +1,159 @@
+
+
+hASList: 
+[INS VariableDeclarationStatement@@Set<Integer> basicRows=new HashSet<Integer>(); @TO@ MethodDeclaration@@protected, @@RealPointValuePair, MethodName:getSolution, @@Argus:null @AT@ 12960 @LENGTH@ 48
+---INS ParameterizedType@@Set<Integer> @TO@ VariableDeclarationStatement@@Set<Integer> basicRows=new HashSet<Integer>(); @AT@ 12960 @LENGTH@ 12
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<Integer> @AT@ 12960 @LENGTH@ 3
+------INS SimpleType@@Integer @TO@ ParameterizedType@@Set<Integer> @AT@ 12964 @LENGTH@ 7
+---INS VariableDeclarationFragment@@basicRows=new HashSet<Integer>() @TO@ VariableDeclarationStatement@@Set<Integer> basicRows=new HashSet<Integer>(); @AT@ 12973 @LENGTH@ 34
+------INS SimpleName@@basicRows @TO@ VariableDeclarationFragment@@basicRows=new HashSet<Integer>() @AT@ 12973 @LENGTH@ 9
+------INS ClassInstanceCreation@@HashSet<Integer>[] @TO@ VariableDeclarationFragment@@basicRows=new HashSet<Integer>() @AT@ 12985 @LENGTH@ 22
+---------INS New@@new @TO@ ClassInstanceCreation@@HashSet<Integer>[] @AT@ 12985 @LENGTH@ 3
+---------INS ParameterizedType@@HashSet<Integer> @TO@ ClassInstanceCreation@@HashSet<Integer>[] @AT@ 12989 @LENGTH@ 16
+------------INS SimpleType@@HashSet @TO@ ParameterizedType@@HashSet<Integer> @AT@ 12989 @LENGTH@ 7
+------------INS SimpleType@@Integer @TO@ ParameterizedType@@HashSet<Integer> @AT@ 12997 @LENGTH@ 7
+, UPD IfStatement@@InfixExpression:basicRow != null @TO@ MethodInvocation:basicRows.contains(basicRow) @AT@ 13405 @LENGTH@ 285
+---INS MethodInvocation@@basicRows.contains(basicRow) @TO@ IfStatement@@InfixExpression:basicRow != null @AT@ 13149 @LENGTH@ 28
+------INS SimpleName@@Name:basicRows @TO@ MethodInvocation@@basicRows.contains(basicRow) @AT@ 13149 @LENGTH@ 9
+------INS SimpleName@@MethodName:contains:[basicRow] @TO@ MethodInvocation@@basicRows.contains(basicRow) @AT@ 13159 @LENGTH@ 18
+---------INS SimpleName@@basicRow @TO@ SimpleName@@MethodName:contains:[basicRow] @AT@ 13168 @LENGTH@ 8
+---MOV ExpressionStatement@@Assignment:coefficients[i]=(basicRow == null ? 0 : getEntry(basicRow,getRhsOffset())) - (restrictToNonNegative ? 0 : mostNegative) @TO@ IfStatement@@InfixExpression:basicRow != null @AT@ 13229 @LENGTH@ 163
+---INS ExpressionStatement@@MethodInvocation:basicRows.add(basicRow) @TO@ IfStatement@@InfixExpression:basicRow != null @AT@ 13392 @LENGTH@ 24
+------INS MethodInvocation@@basicRows.add(basicRow) @TO@ ExpressionStatement@@MethodInvocation:basicRows.add(basicRow) @AT@ 13392 @LENGTH@ 23
+---------MOV SimpleName@@Name:tableau @TO@ MethodInvocation@@basicRows.add(basicRow) @AT@ 13553 @LENGTH@ 7
+---------MOV SimpleName@@MethodName:getEntry:[basicRow, j] @TO@ MethodInvocation@@basicRows.add(basicRow) @AT@ 13561 @LENGTH@ 21
+---DEL InfixExpression@@basicRow != null @AT@ 13409 @LENGTH@ 16
+------DEL SimpleName@@basicRow @AT@ 13409 @LENGTH@ 8
+------DEL Operator@@!= @AT@ 13417 @LENGTH@ 2
+------DEL NullLiteral@@null @AT@ 13421 @LENGTH@ 4
+---DEL ForStatement@@[int j=getNumObjectiveFunctions()];j < getNumObjectiveFunctions() + i; [j++] @AT@ 13445 @LENGTH@ 231
+------DEL VariableDeclarationExpression@@int j=getNumObjectiveFunctions() @AT@ 13450 @LENGTH@ 34
+---------DEL PrimitiveType@@int @AT@ 13450 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@j=getNumObjectiveFunctions() @AT@ 13454 @LENGTH@ 30
+------------DEL SimpleName@@j @AT@ 13454 @LENGTH@ 1
+------------DEL MethodInvocation@@MethodName:getNumObjectiveFunctions:[] @AT@ 13458 @LENGTH@ 26
+------DEL InfixExpression@@j < getNumObjectiveFunctions() + i @AT@ 13486 @LENGTH@ 34
+---------DEL SimpleName@@j @AT@ 13486 @LENGTH@ 1
+---------DEL Operator@@< @AT@ 13487 @LENGTH@ 1
+---------DEL InfixExpression@@getNumObjectiveFunctions() + i @AT@ 13490 @LENGTH@ 30
+------------DEL MethodInvocation@@MethodName:getNumObjectiveFunctions:[] @AT@ 13490 @LENGTH@ 26
+------------DEL Operator@@+ @AT@ 13516 @LENGTH@ 1
+------------DEL SimpleName@@i @AT@ 13519 @LENGTH@ 1
+------DEL PostfixExpression@@j++ @AT@ 13522 @LENGTH@ 3
+---------DEL SimpleName@@j @AT@ 13522 @LENGTH@ 1
+---------DEL Operator@@++ @AT@ 13524 @LENGTH@ 2
+------DEL IfStatement@@InfixExpression:tableau.getEntry(basicRow,j) == 1 @AT@ 13549 @LENGTH@ 109
+---------DEL InfixExpression@@tableau.getEntry(basicRow,j) == 1 @AT@ 13553 @LENGTH@ 34
+------------DEL MethodInvocation@@tableau.getEntry(basicRow,j) @AT@ 13553 @LENGTH@ 29
+------------DEL Operator@@== @AT@ 13582 @LENGTH@ 2
+------------DEL NumberLiteral@@1 @AT@ 13586 @LENGTH@ 1
+---MOV ExpressionStatement@@Assignment:coefficients[i]=0 @TO@ IfStatement@@InfixExpression:basicRow != null @AT@ 13616 @LENGTH@ 20
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP5)
+OP2:   (INS, ParameterizedType, OP1, OP3 OP4)
+OP3:      (INS, SimpleType, OP2, null)
+OP4:      (INS, SimpleType, OP2, null)
+OP5:   (INS, VariableDeclarationFragment, OP1, OP6 OP7)
+OP6:      (INS, SimpleName, OP5, null)
+OP7:      (INS, ClassInstanceCreation, OP5, OP8 OP9)
+OP8:         (INS, New, OP7, null)
+OP9:         (INS, ParameterizedType, OP7, OP10 OP11)
+OP10:            (INS, SimpleType, OP9, null)
+OP11:            (INS, SimpleType, OP9, null)
+
+
+
+
+
+hASList: 
+[INS VariableDeclarationStatement@@Set<Integer> basicRows=new HashSet<Integer>(); @TO@ MethodDeclaration@@protected, @@RealPointValuePair, MethodName:getSolution, @@Argus:null @AT@ 12960 @LENGTH@ 48
+---INS ParameterizedType@@Set<Integer> @TO@ VariableDeclarationStatement@@Set<Integer> basicRows=new HashSet<Integer>(); @AT@ 12960 @LENGTH@ 12
+------INS SimpleType@@Set @TO@ ParameterizedType@@Set<Integer> @AT@ 12960 @LENGTH@ 3
+------INS SimpleType@@Integer @TO@ ParameterizedType@@Set<Integer> @AT@ 12964 @LENGTH@ 7
+---INS VariableDeclarationFragment@@basicRows=new HashSet<Integer>() @TO@ VariableDeclarationStatement@@Set<Integer> basicRows=new HashSet<Integer>(); @AT@ 12973 @LENGTH@ 34
+------INS SimpleName@@basicRows @TO@ VariableDeclarationFragment@@basicRows=new HashSet<Integer>() @AT@ 12973 @LENGTH@ 9
+------INS ClassInstanceCreation@@HashSet<Integer>[] @TO@ VariableDeclarationFragment@@basicRows=new HashSet<Integer>() @AT@ 12985 @LENGTH@ 22
+---------INS New@@new @TO@ ClassInstanceCreation@@HashSet<Integer>[] @AT@ 12985 @LENGTH@ 3
+---------INS ParameterizedType@@HashSet<Integer> @TO@ ClassInstanceCreation@@HashSet<Integer>[] @AT@ 12989 @LENGTH@ 16
+------------INS SimpleType@@HashSet @TO@ ParameterizedType@@HashSet<Integer> @AT@ 12989 @LENGTH@ 7
+------------INS SimpleType@@Integer @TO@ ParameterizedType@@HashSet<Integer> @AT@ 12997 @LENGTH@ 7
+, UPD IfStatement@@InfixExpression:basicRow != null @TO@ MethodInvocation:basicRows.contains(basicRow) @AT@ 13405 @LENGTH@ 285
+---INS MethodInvocation@@basicRows.contains(basicRow) @TO@ IfStatement@@InfixExpression:basicRow != null @AT@ 13149 @LENGTH@ 28
+------INS SimpleName@@Name:basicRows @TO@ MethodInvocation@@basicRows.contains(basicRow) @AT@ 13149 @LENGTH@ 9
+------INS SimpleName@@MethodName:contains:[basicRow] @TO@ MethodInvocation@@basicRows.contains(basicRow) @AT@ 13159 @LENGTH@ 18
+---------INS SimpleName@@basicRow @TO@ SimpleName@@MethodName:contains:[basicRow] @AT@ 13168 @LENGTH@ 8
+---MOV ExpressionStatement@@Assignment:coefficients[i]=(basicRow == null ? 0 : getEntry(basicRow,getRhsOffset())) - (restrictToNonNegative ? 0 : mostNegative) @TO@ IfStatement@@InfixExpression:basicRow != null @AT@ 13229 @LENGTH@ 163
+---INS ExpressionStatement@@MethodInvocation:basicRows.add(basicRow) @TO@ IfStatement@@InfixExpression:basicRow != null @AT@ 13392 @LENGTH@ 24
+------INS MethodInvocation@@basicRows.add(basicRow) @TO@ ExpressionStatement@@MethodInvocation:basicRows.add(basicRow) @AT@ 13392 @LENGTH@ 23
+---------MOV SimpleName@@Name:tableau @TO@ MethodInvocation@@basicRows.add(basicRow) @AT@ 13553 @LENGTH@ 7
+---------MOV SimpleName@@MethodName:getEntry:[basicRow, j] @TO@ MethodInvocation@@basicRows.add(basicRow) @AT@ 13561 @LENGTH@ 21
+---DEL InfixExpression@@basicRow != null @AT@ 13409 @LENGTH@ 16
+------DEL SimpleName@@basicRow @AT@ 13409 @LENGTH@ 8
+------DEL Operator@@!= @AT@ 13417 @LENGTH@ 2
+------DEL NullLiteral@@null @AT@ 13421 @LENGTH@ 4
+---DEL ForStatement@@[int j=getNumObjectiveFunctions()];j < getNumObjectiveFunctions() + i; [j++] @AT@ 13445 @LENGTH@ 231
+------DEL VariableDeclarationExpression@@int j=getNumObjectiveFunctions() @AT@ 13450 @LENGTH@ 34
+---------DEL PrimitiveType@@int @AT@ 13450 @LENGTH@ 3
+---------DEL VariableDeclarationFragment@@j=getNumObjectiveFunctions() @AT@ 13454 @LENGTH@ 30
+------------DEL SimpleName@@j @AT@ 13454 @LENGTH@ 1
+------------DEL MethodInvocation@@MethodName:getNumObjectiveFunctions:[] @AT@ 13458 @LENGTH@ 26
+------DEL InfixExpression@@j < getNumObjectiveFunctions() + i @AT@ 13486 @LENGTH@ 34
+---------DEL SimpleName@@j @AT@ 13486 @LENGTH@ 1
+---------DEL Operator@@< @AT@ 13487 @LENGTH@ 1
+---------DEL InfixExpression@@getNumObjectiveFunctions() + i @AT@ 13490 @LENGTH@ 30
+------------DEL MethodInvocation@@MethodName:getNumObjectiveFunctions:[] @AT@ 13490 @LENGTH@ 26
+------------DEL Operator@@+ @AT@ 13516 @LENGTH@ 1
+------------DEL SimpleName@@i @AT@ 13519 @LENGTH@ 1
+------DEL PostfixExpression@@j++ @AT@ 13522 @LENGTH@ 3
+---------DEL SimpleName@@j @AT@ 13522 @LENGTH@ 1
+---------DEL Operator@@++ @AT@ 13524 @LENGTH@ 2
+------DEL IfStatement@@InfixExpression:tableau.getEntry(basicRow,j) == 1 @AT@ 13549 @LENGTH@ 109
+---------DEL InfixExpression@@tableau.getEntry(basicRow,j) == 1 @AT@ 13553 @LENGTH@ 34
+------------DEL MethodInvocation@@tableau.getEntry(basicRow,j) @AT@ 13553 @LENGTH@ 29
+------------DEL Operator@@== @AT@ 13582 @LENGTH@ 2
+------------DEL NumberLiteral@@1 @AT@ 13586 @LENGTH@ 1
+---MOV ExpressionStatement@@Assignment:coefficients[i]=0 @TO@ IfStatement@@InfixExpression:basicRow != null @AT@ 13616 @LENGTH@ 20
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2 OP6 OP7 OP11 OP15 OP36)
+OP2:   (INS, MethodInvocation, OP1, OP3 OP4)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, SimpleName, OP2, OP5)
+OP5:         (INS, SimpleName, OP4, null)
+OP6:   (MOV, ExpressionStatement, OP1, null)
+OP7:   (INS, ExpressionStatement, OP1, OP8)
+OP8:      (INS, MethodInvocation, OP7, OP9 OP10)
+OP9:         (MOV, SimpleName, OP8, null)
+OP10:         (MOV, SimpleName, OP8, null)
+OP11:   (DEL, InfixExpression, OP1, OP12 OP13 OP14)
+OP12:      (DEL, SimpleName, OP11, null)
+OP13:      (DEL, Operator, OP11, null)
+OP14:      (DEL, NullLiteral, OP11, null)
+OP15:   (DEL, ForStatement, OP1, OP16 OP21 OP28 OP31)
+OP16:      (DEL, VariableDeclarationExpression, OP15, OP17 OP18)
+OP17:         (DEL, PrimitiveType, OP16, null)
+OP18:         (DEL, VariableDeclarationFragment, OP16, OP19 OP20)
+OP19:            (DEL, SimpleName, OP18, null)
+OP20:            (DEL, MethodInvocation, OP18, null)
+OP21:      (DEL, InfixExpression, OP15, OP22 OP23 OP24)
+OP22:         (DEL, SimpleName, OP21, null)
+OP23:         (DEL, Operator, OP21, null)
+OP24:         (DEL, InfixExpression, OP21, OP25 OP26 OP27)
+OP25:            (DEL, MethodInvocation, OP24, null)
+OP26:            (DEL, Operator, OP24, null)
+OP27:            (DEL, SimpleName, OP24, null)
+OP28:      (DEL, PostfixExpression, OP15, OP29 OP30)
+OP29:         (DEL, SimpleName, OP28, null)
+OP30:         (DEL, Operator, OP28, null)
+OP31:      (DEL, IfStatement, OP15, OP32)
+OP32:         (DEL, InfixExpression, OP31, OP33 OP34 OP35)
+OP33:            (DEL, MethodInvocation, OP32, null)
+OP34:            (DEL, Operator, OP32, null)
+OP35:            (DEL, NumberLiteral, OP32, null)
+OP36:   (MOV, ExpressionStatement, OP1, null)
+
+
+

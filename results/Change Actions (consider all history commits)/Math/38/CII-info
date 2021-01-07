@@ -1,0 +1,146 @@
+
+
+hASList: 
+[DEL ThrowStatement@@ClassInstanceCreation:new PathIsExploredException() @AT@ 77570 @LENGTH@ 36
+---DEL ClassInstanceCreation@@PathIsExploredException[] @AT@ 77576 @LENGTH@ 29
+------DEL New@@new @AT@ 77576 @LENGTH@ 3
+------DEL SimpleType@@PathIsExploredException @AT@ 77580 @LENGTH@ 23
+, UPD VariableDeclarationStatement@@final int iptMinus1=ipt; @TO@ final int iptMinus1=ipt - 1; @AT@ 77648 @LENGTH@ 26
+---UPD VariableDeclarationFragment@@iptMinus1=ipt @TO@ iptMinus1=ipt - 1 @AT@ 77658 @LENGTH@ 15
+------DEL SimpleName@@ipt @AT@ 77670 @LENGTH@ 3
+------INS InfixExpression@@ipt - 1 @TO@ VariableDeclarationFragment@@iptMinus1=ipt @AT@ 77673 @LENGTH@ 7
+---------INS SimpleName@@ipt @TO@ InfixExpression@@ipt - 1 @AT@ 77673 @LENGTH@ 3
+---------INS Operator@@- @TO@ InfixExpression@@ipt - 1 @AT@ 77676 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@ipt - 1 @AT@ 77679 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@final int jptMinus1=jpt; @TO@ final int jptMinus1=jpt - 1; @AT@ 77691 @LENGTH@ 26
+---UPD VariableDeclarationFragment@@jptMinus1=jpt @TO@ jptMinus1=jpt - 1 @AT@ 77701 @LENGTH@ 15
+------DEL SimpleName@@jpt @AT@ 77713 @LENGTH@ 3
+------INS InfixExpression@@jpt - 1 @TO@ VariableDeclarationFragment@@jptMinus1=jpt @AT@ 77720 @LENGTH@ 7
+---------INS SimpleName@@jpt @TO@ InfixExpression@@jpt - 1 @AT@ 77720 @LENGTH@ 3
+---------INS Operator@@- @TO@ InfixExpression@@jpt - 1 @AT@ 77723 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@jpt - 1 @AT@ 77726 @LENGTH@ 1
+, DEL ThrowStatement@@ClassInstanceCreation:new PathIsExploredException() @AT@ 83032 @LENGTH@ 36
+---DEL ClassInstanceCreation@@PathIsExploredException[] @AT@ 83038 @LENGTH@ 29
+------DEL New@@new @AT@ 83038 @LENGTH@ 3
+------DEL SimpleType@@PathIsExploredException @AT@ 83042 @LENGTH@ 23
+]
+
+CII:
+OP1:(DEL, ThrowStatement, null, OP2)
+OP2:   (DEL, ClassInstanceCreation, OP1, OP3 OP4)
+OP3:      (DEL, New, OP2, null)
+OP4:      (DEL, SimpleType, OP2, null)
+
+
+
+
+
+hASList: 
+[DEL ThrowStatement@@ClassInstanceCreation:new PathIsExploredException() @AT@ 77570 @LENGTH@ 36
+---DEL ClassInstanceCreation@@PathIsExploredException[] @AT@ 77576 @LENGTH@ 29
+------DEL New@@new @AT@ 77576 @LENGTH@ 3
+------DEL SimpleType@@PathIsExploredException @AT@ 77580 @LENGTH@ 23
+, UPD VariableDeclarationStatement@@final int iptMinus1=ipt; @TO@ final int iptMinus1=ipt - 1; @AT@ 77648 @LENGTH@ 26
+---UPD VariableDeclarationFragment@@iptMinus1=ipt @TO@ iptMinus1=ipt - 1 @AT@ 77658 @LENGTH@ 15
+------DEL SimpleName@@ipt @AT@ 77670 @LENGTH@ 3
+------INS InfixExpression@@ipt - 1 @TO@ VariableDeclarationFragment@@iptMinus1=ipt @AT@ 77673 @LENGTH@ 7
+---------INS SimpleName@@ipt @TO@ InfixExpression@@ipt - 1 @AT@ 77673 @LENGTH@ 3
+---------INS Operator@@- @TO@ InfixExpression@@ipt - 1 @AT@ 77676 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@ipt - 1 @AT@ 77679 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@final int jptMinus1=jpt; @TO@ final int jptMinus1=jpt - 1; @AT@ 77691 @LENGTH@ 26
+---UPD VariableDeclarationFragment@@jptMinus1=jpt @TO@ jptMinus1=jpt - 1 @AT@ 77701 @LENGTH@ 15
+------DEL SimpleName@@jpt @AT@ 77713 @LENGTH@ 3
+------INS InfixExpression@@jpt - 1 @TO@ VariableDeclarationFragment@@jptMinus1=jpt @AT@ 77720 @LENGTH@ 7
+---------INS SimpleName@@jpt @TO@ InfixExpression@@jpt - 1 @AT@ 77720 @LENGTH@ 3
+---------INS Operator@@- @TO@ InfixExpression@@jpt - 1 @AT@ 77723 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@jpt - 1 @AT@ 77726 @LENGTH@ 1
+, DEL ThrowStatement@@ClassInstanceCreation:new PathIsExploredException() @AT@ 83032 @LENGTH@ 36
+---DEL ClassInstanceCreation@@PathIsExploredException[] @AT@ 83038 @LENGTH@ 29
+------DEL New@@new @AT@ 83038 @LENGTH@ 3
+------DEL SimpleType@@PathIsExploredException @AT@ 83042 @LENGTH@ 23
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3 OP4)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (INS, InfixExpression, OP2, OP5 OP6 OP7)
+OP5:         (INS, SimpleName, OP4, null)
+OP6:         (INS, Operator, OP4, null)
+OP7:         (INS, NumberLiteral, OP4, null)
+
+
+
+
+
+hASList: 
+[DEL ThrowStatement@@ClassInstanceCreation:new PathIsExploredException() @AT@ 77570 @LENGTH@ 36
+---DEL ClassInstanceCreation@@PathIsExploredException[] @AT@ 77576 @LENGTH@ 29
+------DEL New@@new @AT@ 77576 @LENGTH@ 3
+------DEL SimpleType@@PathIsExploredException @AT@ 77580 @LENGTH@ 23
+, UPD VariableDeclarationStatement@@final int iptMinus1=ipt; @TO@ final int iptMinus1=ipt - 1; @AT@ 77648 @LENGTH@ 26
+---UPD VariableDeclarationFragment@@iptMinus1=ipt @TO@ iptMinus1=ipt - 1 @AT@ 77658 @LENGTH@ 15
+------DEL SimpleName@@ipt @AT@ 77670 @LENGTH@ 3
+------INS InfixExpression@@ipt - 1 @TO@ VariableDeclarationFragment@@iptMinus1=ipt @AT@ 77673 @LENGTH@ 7
+---------INS SimpleName@@ipt @TO@ InfixExpression@@ipt - 1 @AT@ 77673 @LENGTH@ 3
+---------INS Operator@@- @TO@ InfixExpression@@ipt - 1 @AT@ 77676 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@ipt - 1 @AT@ 77679 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@final int jptMinus1=jpt; @TO@ final int jptMinus1=jpt - 1; @AT@ 77691 @LENGTH@ 26
+---UPD VariableDeclarationFragment@@jptMinus1=jpt @TO@ jptMinus1=jpt - 1 @AT@ 77701 @LENGTH@ 15
+------DEL SimpleName@@jpt @AT@ 77713 @LENGTH@ 3
+------INS InfixExpression@@jpt - 1 @TO@ VariableDeclarationFragment@@jptMinus1=jpt @AT@ 77720 @LENGTH@ 7
+---------INS SimpleName@@jpt @TO@ InfixExpression@@jpt - 1 @AT@ 77720 @LENGTH@ 3
+---------INS Operator@@- @TO@ InfixExpression@@jpt - 1 @AT@ 77723 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@jpt - 1 @AT@ 77726 @LENGTH@ 1
+, DEL ThrowStatement@@ClassInstanceCreation:new PathIsExploredException() @AT@ 83032 @LENGTH@ 36
+---DEL ClassInstanceCreation@@PathIsExploredException[] @AT@ 83038 @LENGTH@ 29
+------DEL New@@new @AT@ 83038 @LENGTH@ 3
+------DEL SimpleType@@PathIsExploredException @AT@ 83042 @LENGTH@ 23
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3 OP4)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (INS, InfixExpression, OP2, OP5 OP6 OP7)
+OP5:         (INS, SimpleName, OP4, null)
+OP6:         (INS, Operator, OP4, null)
+OP7:         (INS, NumberLiteral, OP4, null)
+
+
+
+
+
+hASList: 
+[DEL ThrowStatement@@ClassInstanceCreation:new PathIsExploredException() @AT@ 77570 @LENGTH@ 36
+---DEL ClassInstanceCreation@@PathIsExploredException[] @AT@ 77576 @LENGTH@ 29
+------DEL New@@new @AT@ 77576 @LENGTH@ 3
+------DEL SimpleType@@PathIsExploredException @AT@ 77580 @LENGTH@ 23
+, UPD VariableDeclarationStatement@@final int iptMinus1=ipt; @TO@ final int iptMinus1=ipt - 1; @AT@ 77648 @LENGTH@ 26
+---UPD VariableDeclarationFragment@@iptMinus1=ipt @TO@ iptMinus1=ipt - 1 @AT@ 77658 @LENGTH@ 15
+------DEL SimpleName@@ipt @AT@ 77670 @LENGTH@ 3
+------INS InfixExpression@@ipt - 1 @TO@ VariableDeclarationFragment@@iptMinus1=ipt @AT@ 77673 @LENGTH@ 7
+---------INS SimpleName@@ipt @TO@ InfixExpression@@ipt - 1 @AT@ 77673 @LENGTH@ 3
+---------INS Operator@@- @TO@ InfixExpression@@ipt - 1 @AT@ 77676 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@ipt - 1 @AT@ 77679 @LENGTH@ 1
+, UPD VariableDeclarationStatement@@final int jptMinus1=jpt; @TO@ final int jptMinus1=jpt - 1; @AT@ 77691 @LENGTH@ 26
+---UPD VariableDeclarationFragment@@jptMinus1=jpt @TO@ jptMinus1=jpt - 1 @AT@ 77701 @LENGTH@ 15
+------DEL SimpleName@@jpt @AT@ 77713 @LENGTH@ 3
+------INS InfixExpression@@jpt - 1 @TO@ VariableDeclarationFragment@@jptMinus1=jpt @AT@ 77720 @LENGTH@ 7
+---------INS SimpleName@@jpt @TO@ InfixExpression@@jpt - 1 @AT@ 77720 @LENGTH@ 3
+---------INS Operator@@- @TO@ InfixExpression@@jpt - 1 @AT@ 77723 @LENGTH@ 1
+---------INS NumberLiteral@@1 @TO@ InfixExpression@@jpt - 1 @AT@ 77726 @LENGTH@ 1
+, DEL ThrowStatement@@ClassInstanceCreation:new PathIsExploredException() @AT@ 83032 @LENGTH@ 36
+---DEL ClassInstanceCreation@@PathIsExploredException[] @AT@ 83038 @LENGTH@ 29
+------DEL New@@new @AT@ 83038 @LENGTH@ 3
+------DEL SimpleType@@PathIsExploredException @AT@ 83042 @LENGTH@ 23
+]
+
+CII:
+OP1:(DEL, ThrowStatement, null, OP2)
+OP2:   (DEL, ClassInstanceCreation, OP1, OP3 OP4)
+OP3:      (DEL, New, OP2, null)
+OP4:      (DEL, SimpleType, OP2, null)
+
+
+

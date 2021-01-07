@@ -1,0 +1,26 @@
+OP1:(DEL, IfStatement, null, OP2)
+OP2:   (DEL, MethodInvocation, OP1, OP3 OP4)
+OP3:      (DEL, SimpleName, OP2, null)
+OP4:      (DEL, SimpleName, OP2, null)
+
+
+OP1:(UPD, IfStatement, null, OP2 OP5 OP6 OP15)
+OP2:   (INS, MethodInvocation, OP1, OP3 OP4)
+OP3:      (MOV, SimpleName, OP2, null)
+OP4:      (MOV, SimpleName, OP2, null)
+OP5:   (MOV, ExpressionStatement, OP1, null)
+OP6:   (DEL, InfixExpression, OP1, OP7 OP11 OP12)
+OP7:      (DEL, InfixExpression, OP6, OP8 OP9 OP10)
+OP8:         (DEL, MethodInvocation, OP7, null)
+OP9:         (DEL, Operator, OP7, null)
+OP10:         (DEL, NullLiteral, OP7, null)
+OP11:      (DEL, Operator, OP6, null)
+OP12:      (DEL, MethodInvocation, OP6, OP13 OP14)
+OP13:         (DEL, SimpleName, OP12, null)
+OP14:         (DEL, SimpleName, OP12, null)
+OP15:   (DEL, ReturnStatement, OP1, null)
+
+
+OP1:(MOV, IfStatement, null, null)
+
+

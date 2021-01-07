@@ -1,0 +1,78 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:tableau.getNumArtificialVariables() > 0 @TO@ IfStatement@@InfixExpression:minRatioPositions.size() > 1 @AT@ 4760 @LENGTH@ 573
+---INS InfixExpression@@tableau.getNumArtificialVariables() > 0 @TO@ IfStatement@@InfixExpression:tableau.getNumArtificialVariables() > 0 @AT@ 4764 @LENGTH@ 39
+------INS MethodInvocation@@tableau.getNumArtificialVariables() @TO@ InfixExpression@@tableau.getNumArtificialVariables() > 0 @AT@ 4764 @LENGTH@ 35
+---------INS SimpleName@@Name:tableau @TO@ MethodInvocation@@tableau.getNumArtificialVariables() @AT@ 4764 @LENGTH@ 7
+---------INS SimpleName@@MethodName:getNumArtificialVariables:[] @TO@ MethodInvocation@@tableau.getNumArtificialVariables() @AT@ 4772 @LENGTH@ 27
+------INS Operator@@> @TO@ InfixExpression@@tableau.getNumArtificialVariables() > 0 @AT@ 4799 @LENGTH@ 1
+------INS NumberLiteral@@0 @TO@ InfixExpression@@tableau.getNumArtificialVariables() > 0 @AT@ 4802 @LENGTH@ 1
+---MOV EnhancedForStatement@@Integer row, SimpleName:minRatioPositions @TO@ IfStatement@@InfixExpression:tableau.getNumArtificialVariables() > 0 @AT@ 4764 @LENGTH@ 496
+, INS IfStatement@@InfixExpression:getIterations() < getMaxIterations() / 2 @TO@ IfStatement@@InfixExpression:minRatioPositions.size() > 1 @AT@ 5991 @LENGTH@ 678
+---MOV VariableDeclarationStatement@@Integer minRow=null; @TO@ IfStatement@@InfixExpression:getIterations() < getMaxIterations() / 2 @AT@ 5922 @LENGTH@ 22
+---MOV VariableDeclarationStatement@@int minIndex=tableau.getWidth(); @TO@ IfStatement@@InfixExpression:getIterations() < getMaxIterations() / 2 @AT@ 5961 @LENGTH@ 34
+---INS InfixExpression@@getIterations() < getMaxIterations() / 2 @TO@ IfStatement@@InfixExpression:getIterations() < getMaxIterations() / 2 @AT@ 5995 @LENGTH@ 40
+------INS MethodInvocation@@MethodName:getIterations:[] @TO@ InfixExpression@@getIterations() < getMaxIterations() / 2 @AT@ 5995 @LENGTH@ 15
+------INS Operator@@< @TO@ InfixExpression@@getIterations() < getMaxIterations() / 2 @AT@ 6010 @LENGTH@ 1
+------INS InfixExpression@@getMaxIterations() / 2 @TO@ InfixExpression@@getIterations() < getMaxIterations() / 2 @AT@ 6013 @LENGTH@ 22
+---------INS MethodInvocation@@MethodName:getMaxIterations:[] @TO@ InfixExpression@@getMaxIterations() / 2 @AT@ 6013 @LENGTH@ 18
+---------INS Operator@@/ @TO@ InfixExpression@@getMaxIterations() / 2 @AT@ 6031 @LENGTH@ 1
+---------INS NumberLiteral@@2 @TO@ InfixExpression@@getMaxIterations() / 2 @AT@ 6034 @LENGTH@ 1
+---MOV EnhancedForStatement@@Integer row, SimpleName:minRatioPositions @TO@ IfStatement@@InfixExpression:getIterations() < getMaxIterations() / 2 @AT@ 6012 @LENGTH@ 479
+---MOV ReturnStatement@@SimpleName:minRow @TO@ IfStatement@@InfixExpression:getIterations() < getMaxIterations() / 2 @AT@ 6508 @LENGTH@ 14
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP8)
+OP2:   (INS, InfixExpression, OP1, OP3 OP6 OP7)
+OP3:      (INS, MethodInvocation, OP2, OP4 OP5)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, SimpleName, OP3, null)
+OP6:      (INS, Operator, OP2, null)
+OP7:      (INS, NumberLiteral, OP2, null)
+OP8:   (MOV, EnhancedForStatement, OP1, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:tableau.getNumArtificialVariables() > 0 @TO@ IfStatement@@InfixExpression:minRatioPositions.size() > 1 @AT@ 4760 @LENGTH@ 573
+---INS InfixExpression@@tableau.getNumArtificialVariables() > 0 @TO@ IfStatement@@InfixExpression:tableau.getNumArtificialVariables() > 0 @AT@ 4764 @LENGTH@ 39
+------INS MethodInvocation@@tableau.getNumArtificialVariables() @TO@ InfixExpression@@tableau.getNumArtificialVariables() > 0 @AT@ 4764 @LENGTH@ 35
+---------INS SimpleName@@Name:tableau @TO@ MethodInvocation@@tableau.getNumArtificialVariables() @AT@ 4764 @LENGTH@ 7
+---------INS SimpleName@@MethodName:getNumArtificialVariables:[] @TO@ MethodInvocation@@tableau.getNumArtificialVariables() @AT@ 4772 @LENGTH@ 27
+------INS Operator@@> @TO@ InfixExpression@@tableau.getNumArtificialVariables() > 0 @AT@ 4799 @LENGTH@ 1
+------INS NumberLiteral@@0 @TO@ InfixExpression@@tableau.getNumArtificialVariables() > 0 @AT@ 4802 @LENGTH@ 1
+---MOV EnhancedForStatement@@Integer row, SimpleName:minRatioPositions @TO@ IfStatement@@InfixExpression:tableau.getNumArtificialVariables() > 0 @AT@ 4764 @LENGTH@ 496
+, INS IfStatement@@InfixExpression:getIterations() < getMaxIterations() / 2 @TO@ IfStatement@@InfixExpression:minRatioPositions.size() > 1 @AT@ 5991 @LENGTH@ 678
+---MOV VariableDeclarationStatement@@Integer minRow=null; @TO@ IfStatement@@InfixExpression:getIterations() < getMaxIterations() / 2 @AT@ 5922 @LENGTH@ 22
+---MOV VariableDeclarationStatement@@int minIndex=tableau.getWidth(); @TO@ IfStatement@@InfixExpression:getIterations() < getMaxIterations() / 2 @AT@ 5961 @LENGTH@ 34
+---INS InfixExpression@@getIterations() < getMaxIterations() / 2 @TO@ IfStatement@@InfixExpression:getIterations() < getMaxIterations() / 2 @AT@ 5995 @LENGTH@ 40
+------INS MethodInvocation@@MethodName:getIterations:[] @TO@ InfixExpression@@getIterations() < getMaxIterations() / 2 @AT@ 5995 @LENGTH@ 15
+------INS Operator@@< @TO@ InfixExpression@@getIterations() < getMaxIterations() / 2 @AT@ 6010 @LENGTH@ 1
+------INS InfixExpression@@getMaxIterations() / 2 @TO@ InfixExpression@@getIterations() < getMaxIterations() / 2 @AT@ 6013 @LENGTH@ 22
+---------INS MethodInvocation@@MethodName:getMaxIterations:[] @TO@ InfixExpression@@getMaxIterations() / 2 @AT@ 6013 @LENGTH@ 18
+---------INS Operator@@/ @TO@ InfixExpression@@getMaxIterations() / 2 @AT@ 6031 @LENGTH@ 1
+---------INS NumberLiteral@@2 @TO@ InfixExpression@@getMaxIterations() / 2 @AT@ 6034 @LENGTH@ 1
+---MOV EnhancedForStatement@@Integer row, SimpleName:minRatioPositions @TO@ IfStatement@@InfixExpression:getIterations() < getMaxIterations() / 2 @AT@ 6012 @LENGTH@ 479
+---MOV ReturnStatement@@SimpleName:minRow @TO@ IfStatement@@InfixExpression:getIterations() < getMaxIterations() / 2 @AT@ 6508 @LENGTH@ 14
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3 OP4 OP11 OP12)
+OP2:   (MOV, VariableDeclarationStatement, OP1, null)
+OP3:   (MOV, VariableDeclarationStatement, OP1, null)
+OP4:   (INS, InfixExpression, OP1, OP5 OP6 OP7)
+OP5:      (INS, MethodInvocation, OP4, null)
+OP6:      (INS, Operator, OP4, null)
+OP7:      (INS, InfixExpression, OP4, OP8 OP9 OP10)
+OP8:         (INS, MethodInvocation, OP7, null)
+OP9:         (INS, Operator, OP7, null)
+OP10:         (INS, NumberLiteral, OP7, null)
+OP11:   (MOV, EnhancedForStatement, OP1, null)
+OP12:   (MOV, ReturnStatement, OP1, null)
+
+
+

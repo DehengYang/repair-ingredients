@@ -1,0 +1,307 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @TO@ MethodDeclaration@@public, @@boolean, MethodName:hasSameMethod, @@Argus:Invocation+candidate+ @AT@ 3401 @LENGTH@ 442
+---INS InfixExpression@@m1.getName() != null && m1.getName().equals(m2.getName()) @TO@ IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3405 @LENGTH@ 57
+------INS InfixExpression@@m1.getName() != null @TO@ InfixExpression@@m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3405 @LENGTH@ 20
+---------INS MethodInvocation@@m1.getName() @TO@ InfixExpression@@m1.getName() != null @AT@ 3405 @LENGTH@ 12
+------------INS SimpleName@@Name:m1 @TO@ MethodInvocation@@m1.getName() @AT@ 3405 @LENGTH@ 2
+------------INS SimpleName@@MethodName:getName:[] @TO@ MethodInvocation@@m1.getName() @AT@ 3408 @LENGTH@ 9
+---------INS Operator@@!= @TO@ InfixExpression@@m1.getName() != null @AT@ 3417 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@m1.getName() != null @AT@ 3421 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3425 @LENGTH@ 2
+------INS MethodInvocation@@m1.getName().equals(m2.getName()) @TO@ InfixExpression@@m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3429 @LENGTH@ 33
+---------INS MethodInvocation@@MethodName:getName:[] @TO@ MethodInvocation@@m1.getName().equals(m2.getName()) @AT@ 3429 @LENGTH@ 12
+---------MOV SimpleName@@Name:m1 @TO@ MethodInvocation@@m1.getName().equals(m2.getName()) @AT@ 3449 @LENGTH@ 2
+---------MOV SimpleName@@MethodName:equals:[m2] @TO@ MethodInvocation@@m1.getName().equals(m2.getName()) @AT@ 3452 @LENGTH@ 10
+---INS VariableDeclarationStatement@@Class[] params1=m1.getParameterTypes(); @TO@ IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3516 @LENGTH@ 41
+------INS ArrayType@@Class[] @TO@ VariableDeclarationStatement@@Class[] params1=m1.getParameterTypes(); @AT@ 3516 @LENGTH@ 7
+---------INS SimpleType@@Class @TO@ ArrayType@@Class[] @AT@ 3516 @LENGTH@ 5
+------INS VariableDeclarationFragment@@params1=m1.getParameterTypes() @TO@ VariableDeclarationStatement@@Class[] params1=m1.getParameterTypes(); @AT@ 3524 @LENGTH@ 32
+---------INS SimpleName@@params1 @TO@ VariableDeclarationFragment@@params1=m1.getParameterTypes() @AT@ 3524 @LENGTH@ 7
+---------INS MethodInvocation@@m1.getParameterTypes() @TO@ VariableDeclarationFragment@@params1=m1.getParameterTypes() @AT@ 3534 @LENGTH@ 22
+------------INS SimpleName@@Name:m1 @TO@ MethodInvocation@@m1.getParameterTypes() @AT@ 3534 @LENGTH@ 2
+------------INS SimpleName@@MethodName:getParameterTypes:[] @TO@ MethodInvocation@@m1.getParameterTypes() @AT@ 3537 @LENGTH@ 19
+---INS VariableDeclarationStatement@@Class[] params2=m2.getParameterTypes(); @TO@ IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3567 @LENGTH@ 41
+------INS ArrayType@@Class[] @TO@ VariableDeclarationStatement@@Class[] params2=m2.getParameterTypes(); @AT@ 3567 @LENGTH@ 7
+---------INS SimpleType@@Class @TO@ ArrayType@@Class[] @AT@ 3567 @LENGTH@ 5
+------INS VariableDeclarationFragment@@params2=m2.getParameterTypes() @TO@ VariableDeclarationStatement@@Class[] params2=m2.getParameterTypes(); @AT@ 3575 @LENGTH@ 32
+---------INS SimpleName@@params2 @TO@ VariableDeclarationFragment@@params2=m2.getParameterTypes() @AT@ 3575 @LENGTH@ 7
+---------INS MethodInvocation@@m2.getParameterTypes() @TO@ VariableDeclarationFragment@@params2=m2.getParameterTypes() @AT@ 3585 @LENGTH@ 22
+------------INS SimpleName@@Name:m2 @TO@ MethodInvocation@@m2.getParameterTypes() @AT@ 3585 @LENGTH@ 2
+------------INS SimpleName@@MethodName:getParameterTypes:[] @TO@ MethodInvocation@@m2.getParameterTypes() @AT@ 3588 @LENGTH@ 19
+---INS IfStatement@@InfixExpression:params1.length == params2.length @TO@ IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3618 @LENGTH@ 215
+------INS InfixExpression@@params1.length == params2.length @TO@ IfStatement@@InfixExpression:params1.length == params2.length @AT@ 3622 @LENGTH@ 32
+---------INS QualifiedName@@params1.length @TO@ InfixExpression@@params1.length == params2.length @AT@ 3622 @LENGTH@ 14
+------------INS SimpleName@@params1 @TO@ QualifiedName@@params1.length @AT@ 3622 @LENGTH@ 7
+------------INS SimpleName@@length @TO@ QualifiedName@@params1.length @AT@ 3630 @LENGTH@ 6
+---------INS Operator@@== @TO@ InfixExpression@@params1.length == params2.length @AT@ 3636 @LENGTH@ 2
+---------INS QualifiedName@@params2.length @TO@ InfixExpression@@params1.length == params2.length @AT@ 3640 @LENGTH@ 14
+------------INS SimpleName@@params2 @TO@ QualifiedName@@params2.length @AT@ 3640 @LENGTH@ 7
+------------INS SimpleName@@length @TO@ QualifiedName@@params2.length @AT@ 3648 @LENGTH@ 6
+------INS ForStatement@@[int i=0];i < params1.length; [i++] @TO@ IfStatement@@InfixExpression:params1.length == params2.length @AT@ 3671 @LENGTH@ 125
+---------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < params1.length; [i++] @AT@ 3676 @LENGTH@ 9
+------------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3676 @LENGTH@ 3
+------------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3680 @LENGTH@ 5
+---------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3680 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3684 @LENGTH@ 1
+---------INS InfixExpression@@i < params1.length @TO@ ForStatement@@[int i=0];i < params1.length; [i++] @AT@ 3687 @LENGTH@ 18
+------------INS SimpleName@@i @TO@ InfixExpression@@i < params1.length @AT@ 3687 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@i < params1.length @AT@ 3688 @LENGTH@ 1
+------------INS QualifiedName@@params1.length @TO@ InfixExpression@@i < params1.length @AT@ 3691 @LENGTH@ 14
+---------------INS SimpleName@@params1 @TO@ QualifiedName@@params1.length @AT@ 3691 @LENGTH@ 7
+---------------INS SimpleName@@length @TO@ QualifiedName@@params1.length @AT@ 3699 @LENGTH@ 6
+---------INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < params1.length; [i++] @AT@ 3707 @LENGTH@ 3
+------------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3707 @LENGTH@ 1
+------------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3709 @LENGTH@ 2
+---------INS IfStatement@@InfixExpression:params1[i] != params2[i] @TO@ ForStatement@@[int i=0];i < params1.length; [i++] @AT@ 3724 @LENGTH@ 57
+------------INS InfixExpression@@params1[i] != params2[i] @TO@ IfStatement@@InfixExpression:params1[i] != params2[i] @AT@ 3728 @LENGTH@ 24
+---------------INS ArrayAccess@@params1[i] @TO@ InfixExpression@@params1[i] != params2[i] @AT@ 3728 @LENGTH@ 10
+------------------INS SimpleName@@params1 @TO@ ArrayAccess@@params1[i] @AT@ 3728 @LENGTH@ 7
+------------------INS SimpleName@@i @TO@ ArrayAccess@@params1[i] @AT@ 3736 @LENGTH@ 1
+---------------INS Operator@@!= @TO@ InfixExpression@@params1[i] != params2[i] @AT@ 3738 @LENGTH@ 2
+---------------INS ArrayAccess@@params2[i] @TO@ InfixExpression@@params1[i] != params2[i] @AT@ 3742 @LENGTH@ 10
+------------------INS SimpleName@@params2 @TO@ ArrayAccess@@params2[i] @AT@ 3742 @LENGTH@ 7
+------------------INS SimpleName@@i @TO@ ArrayAccess@@params2[i] @AT@ 3750 @LENGTH@ 1
+------------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:params1[i] != params2[i] @AT@ 3768 @LENGTH@ 13
+---------------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 3775 @LENGTH@ 5
+------INS ReturnStatement@@BooleanLiteral:true @TO@ IfStatement@@InfixExpression:params1.length == params2.length @AT@ 3810 @LENGTH@ 12
+---------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 3817 @LENGTH@ 4
+, DEL ReturnStatement@@MethodInvocation:m1.equals(m2) @AT@ 3442 @LENGTH@ 21
+---DEL MethodInvocation@@m1.equals(m2) @AT@ 3449 @LENGTH@ 13
+, INS ReturnStatement@@BooleanLiteral:false @TO@ MethodDeclaration@@public, @@boolean, MethodName:hasSameMethod, @@Argus:Invocation+candidate+ @AT@ 3852 @LENGTH@ 13
+---INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 3859 @LENGTH@ 5
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP14 OP22 OP30)
+OP2:   (INS, InfixExpression, OP1, OP3 OP9 OP10)
+OP3:      (INS, InfixExpression, OP2, OP4 OP7 OP8)
+OP4:         (INS, MethodInvocation, OP3, OP5 OP6)
+OP5:            (INS, SimpleName, OP4, null)
+OP6:            (INS, SimpleName, OP4, null)
+OP7:         (INS, Operator, OP3, null)
+OP8:         (INS, NullLiteral, OP3, null)
+OP9:      (INS, Operator, OP2, null)
+OP10:      (INS, MethodInvocation, OP2, OP11 OP12 OP13)
+OP11:         (INS, MethodInvocation, OP10, null)
+OP12:         (MOV, SimpleName, OP10, null)
+OP13:         (MOV, SimpleName, OP10, null)
+OP14:   (INS, VariableDeclarationStatement, OP1, OP15 OP17)
+OP15:      (INS, ArrayType, OP14, OP16)
+OP16:         (INS, SimpleType, OP15, null)
+OP17:      (INS, VariableDeclarationFragment, OP14, OP18 OP19)
+OP18:         (INS, SimpleName, OP17, null)
+OP19:         (INS, MethodInvocation, OP17, OP20 OP21)
+OP20:            (INS, SimpleName, OP19, null)
+OP21:            (INS, SimpleName, OP19, null)
+OP22:   (INS, VariableDeclarationStatement, OP1, OP23 OP25)
+OP23:      (INS, ArrayType, OP22, OP24)
+OP24:         (INS, SimpleType, OP23, null)
+OP25:      (INS, VariableDeclarationFragment, OP22, OP26 OP27)
+OP26:         (INS, SimpleName, OP25, null)
+OP27:         (INS, MethodInvocation, OP25, OP28 OP29)
+OP28:            (INS, SimpleName, OP27, null)
+OP29:            (INS, SimpleName, OP27, null)
+OP30:   (INS, IfStatement, OP1, OP31 OP39 OP65)
+OP31:      (INS, InfixExpression, OP30, OP32 OP35 OP36)
+OP32:         (INS, QualifiedName, OP31, OP33 OP34)
+OP33:            (INS, SimpleName, OP32, null)
+OP34:            (INS, SimpleName, OP32, null)
+OP35:         (INS, Operator, OP31, null)
+OP36:         (INS, QualifiedName, OP31, OP37 OP38)
+OP37:            (INS, SimpleName, OP36, null)
+OP38:            (INS, SimpleName, OP36, null)
+OP39:      (INS, ForStatement, OP30, OP40 OP45 OP51 OP54)
+OP40:         (INS, VariableDeclarationExpression, OP39, OP41 OP42)
+OP41:            (INS, PrimitiveType, OP40, null)
+OP42:            (INS, VariableDeclarationFragment, OP40, OP43 OP44)
+OP43:               (INS, SimpleName, OP42, null)
+OP44:               (INS, NumberLiteral, OP42, null)
+OP45:         (INS, InfixExpression, OP39, OP46 OP47 OP48)
+OP46:            (INS, SimpleName, OP45, null)
+OP47:            (INS, Operator, OP45, null)
+OP48:            (INS, QualifiedName, OP45, OP49 OP50)
+OP49:               (INS, SimpleName, OP48, null)
+OP50:               (INS, SimpleName, OP48, null)
+OP51:         (INS, PostfixExpression, OP39, OP52 OP53)
+OP52:            (INS, SimpleName, OP51, null)
+OP53:            (INS, Operator, OP51, null)
+OP54:         (INS, IfStatement, OP39, OP55 OP63)
+OP55:            (INS, InfixExpression, OP54, OP56 OP59 OP60)
+OP56:               (INS, ArrayAccess, OP55, OP57 OP58)
+OP57:                  (INS, SimpleName, OP56, null)
+OP58:                  (INS, SimpleName, OP56, null)
+OP59:               (INS, Operator, OP55, null)
+OP60:               (INS, ArrayAccess, OP55, OP61 OP62)
+OP61:                  (INS, SimpleName, OP60, null)
+OP62:                  (INS, SimpleName, OP60, null)
+OP63:            (INS, ReturnStatement, OP54, OP64)
+OP64:               (INS, BooleanLiteral, OP63, null)
+OP65:      (INS, ReturnStatement, OP30, OP66)
+OP66:         (INS, BooleanLiteral, OP65, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @TO@ MethodDeclaration@@public, @@boolean, MethodName:hasSameMethod, @@Argus:Invocation+candidate+ @AT@ 3401 @LENGTH@ 442
+---INS InfixExpression@@m1.getName() != null && m1.getName().equals(m2.getName()) @TO@ IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3405 @LENGTH@ 57
+------INS InfixExpression@@m1.getName() != null @TO@ InfixExpression@@m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3405 @LENGTH@ 20
+---------INS MethodInvocation@@m1.getName() @TO@ InfixExpression@@m1.getName() != null @AT@ 3405 @LENGTH@ 12
+------------INS SimpleName@@Name:m1 @TO@ MethodInvocation@@m1.getName() @AT@ 3405 @LENGTH@ 2
+------------INS SimpleName@@MethodName:getName:[] @TO@ MethodInvocation@@m1.getName() @AT@ 3408 @LENGTH@ 9
+---------INS Operator@@!= @TO@ InfixExpression@@m1.getName() != null @AT@ 3417 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@m1.getName() != null @AT@ 3421 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3425 @LENGTH@ 2
+------INS MethodInvocation@@m1.getName().equals(m2.getName()) @TO@ InfixExpression@@m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3429 @LENGTH@ 33
+---------INS MethodInvocation@@MethodName:getName:[] @TO@ MethodInvocation@@m1.getName().equals(m2.getName()) @AT@ 3429 @LENGTH@ 12
+---------MOV SimpleName@@Name:m1 @TO@ MethodInvocation@@m1.getName().equals(m2.getName()) @AT@ 3449 @LENGTH@ 2
+---------MOV SimpleName@@MethodName:equals:[m2] @TO@ MethodInvocation@@m1.getName().equals(m2.getName()) @AT@ 3452 @LENGTH@ 10
+---INS VariableDeclarationStatement@@Class[] params1=m1.getParameterTypes(); @TO@ IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3516 @LENGTH@ 41
+------INS ArrayType@@Class[] @TO@ VariableDeclarationStatement@@Class[] params1=m1.getParameterTypes(); @AT@ 3516 @LENGTH@ 7
+---------INS SimpleType@@Class @TO@ ArrayType@@Class[] @AT@ 3516 @LENGTH@ 5
+------INS VariableDeclarationFragment@@params1=m1.getParameterTypes() @TO@ VariableDeclarationStatement@@Class[] params1=m1.getParameterTypes(); @AT@ 3524 @LENGTH@ 32
+---------INS SimpleName@@params1 @TO@ VariableDeclarationFragment@@params1=m1.getParameterTypes() @AT@ 3524 @LENGTH@ 7
+---------INS MethodInvocation@@m1.getParameterTypes() @TO@ VariableDeclarationFragment@@params1=m1.getParameterTypes() @AT@ 3534 @LENGTH@ 22
+------------INS SimpleName@@Name:m1 @TO@ MethodInvocation@@m1.getParameterTypes() @AT@ 3534 @LENGTH@ 2
+------------INS SimpleName@@MethodName:getParameterTypes:[] @TO@ MethodInvocation@@m1.getParameterTypes() @AT@ 3537 @LENGTH@ 19
+---INS VariableDeclarationStatement@@Class[] params2=m2.getParameterTypes(); @TO@ IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3567 @LENGTH@ 41
+------INS ArrayType@@Class[] @TO@ VariableDeclarationStatement@@Class[] params2=m2.getParameterTypes(); @AT@ 3567 @LENGTH@ 7
+---------INS SimpleType@@Class @TO@ ArrayType@@Class[] @AT@ 3567 @LENGTH@ 5
+------INS VariableDeclarationFragment@@params2=m2.getParameterTypes() @TO@ VariableDeclarationStatement@@Class[] params2=m2.getParameterTypes(); @AT@ 3575 @LENGTH@ 32
+---------INS SimpleName@@params2 @TO@ VariableDeclarationFragment@@params2=m2.getParameterTypes() @AT@ 3575 @LENGTH@ 7
+---------INS MethodInvocation@@m2.getParameterTypes() @TO@ VariableDeclarationFragment@@params2=m2.getParameterTypes() @AT@ 3585 @LENGTH@ 22
+------------INS SimpleName@@Name:m2 @TO@ MethodInvocation@@m2.getParameterTypes() @AT@ 3585 @LENGTH@ 2
+------------INS SimpleName@@MethodName:getParameterTypes:[] @TO@ MethodInvocation@@m2.getParameterTypes() @AT@ 3588 @LENGTH@ 19
+---INS IfStatement@@InfixExpression:params1.length == params2.length @TO@ IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3618 @LENGTH@ 215
+------INS InfixExpression@@params1.length == params2.length @TO@ IfStatement@@InfixExpression:params1.length == params2.length @AT@ 3622 @LENGTH@ 32
+---------INS QualifiedName@@params1.length @TO@ InfixExpression@@params1.length == params2.length @AT@ 3622 @LENGTH@ 14
+------------INS SimpleName@@params1 @TO@ QualifiedName@@params1.length @AT@ 3622 @LENGTH@ 7
+------------INS SimpleName@@length @TO@ QualifiedName@@params1.length @AT@ 3630 @LENGTH@ 6
+---------INS Operator@@== @TO@ InfixExpression@@params1.length == params2.length @AT@ 3636 @LENGTH@ 2
+---------INS QualifiedName@@params2.length @TO@ InfixExpression@@params1.length == params2.length @AT@ 3640 @LENGTH@ 14
+------------INS SimpleName@@params2 @TO@ QualifiedName@@params2.length @AT@ 3640 @LENGTH@ 7
+------------INS SimpleName@@length @TO@ QualifiedName@@params2.length @AT@ 3648 @LENGTH@ 6
+------INS ForStatement@@[int i=0];i < params1.length; [i++] @TO@ IfStatement@@InfixExpression:params1.length == params2.length @AT@ 3671 @LENGTH@ 125
+---------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < params1.length; [i++] @AT@ 3676 @LENGTH@ 9
+------------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3676 @LENGTH@ 3
+------------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3680 @LENGTH@ 5
+---------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3680 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3684 @LENGTH@ 1
+---------INS InfixExpression@@i < params1.length @TO@ ForStatement@@[int i=0];i < params1.length; [i++] @AT@ 3687 @LENGTH@ 18
+------------INS SimpleName@@i @TO@ InfixExpression@@i < params1.length @AT@ 3687 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@i < params1.length @AT@ 3688 @LENGTH@ 1
+------------INS QualifiedName@@params1.length @TO@ InfixExpression@@i < params1.length @AT@ 3691 @LENGTH@ 14
+---------------INS SimpleName@@params1 @TO@ QualifiedName@@params1.length @AT@ 3691 @LENGTH@ 7
+---------------INS SimpleName@@length @TO@ QualifiedName@@params1.length @AT@ 3699 @LENGTH@ 6
+---------INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < params1.length; [i++] @AT@ 3707 @LENGTH@ 3
+------------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3707 @LENGTH@ 1
+------------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3709 @LENGTH@ 2
+---------INS IfStatement@@InfixExpression:params1[i] != params2[i] @TO@ ForStatement@@[int i=0];i < params1.length; [i++] @AT@ 3724 @LENGTH@ 57
+------------INS InfixExpression@@params1[i] != params2[i] @TO@ IfStatement@@InfixExpression:params1[i] != params2[i] @AT@ 3728 @LENGTH@ 24
+---------------INS ArrayAccess@@params1[i] @TO@ InfixExpression@@params1[i] != params2[i] @AT@ 3728 @LENGTH@ 10
+------------------INS SimpleName@@params1 @TO@ ArrayAccess@@params1[i] @AT@ 3728 @LENGTH@ 7
+------------------INS SimpleName@@i @TO@ ArrayAccess@@params1[i] @AT@ 3736 @LENGTH@ 1
+---------------INS Operator@@!= @TO@ InfixExpression@@params1[i] != params2[i] @AT@ 3738 @LENGTH@ 2
+---------------INS ArrayAccess@@params2[i] @TO@ InfixExpression@@params1[i] != params2[i] @AT@ 3742 @LENGTH@ 10
+------------------INS SimpleName@@params2 @TO@ ArrayAccess@@params2[i] @AT@ 3742 @LENGTH@ 7
+------------------INS SimpleName@@i @TO@ ArrayAccess@@params2[i] @AT@ 3750 @LENGTH@ 1
+------------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:params1[i] != params2[i] @AT@ 3768 @LENGTH@ 13
+---------------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 3775 @LENGTH@ 5
+------INS ReturnStatement@@BooleanLiteral:true @TO@ IfStatement@@InfixExpression:params1.length == params2.length @AT@ 3810 @LENGTH@ 12
+---------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 3817 @LENGTH@ 4
+, DEL ReturnStatement@@MethodInvocation:m1.equals(m2) @AT@ 3442 @LENGTH@ 21
+---DEL MethodInvocation@@m1.equals(m2) @AT@ 3449 @LENGTH@ 13
+, INS ReturnStatement@@BooleanLiteral:false @TO@ MethodDeclaration@@public, @@boolean, MethodName:hasSameMethod, @@Argus:Invocation+candidate+ @AT@ 3852 @LENGTH@ 13
+---INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 3859 @LENGTH@ 5
+]
+
+CII:
+OP1:(DEL, ReturnStatement, null, OP2)
+OP2:   (DEL, MethodInvocation, OP1, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @TO@ MethodDeclaration@@public, @@boolean, MethodName:hasSameMethod, @@Argus:Invocation+candidate+ @AT@ 3401 @LENGTH@ 442
+---INS InfixExpression@@m1.getName() != null && m1.getName().equals(m2.getName()) @TO@ IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3405 @LENGTH@ 57
+------INS InfixExpression@@m1.getName() != null @TO@ InfixExpression@@m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3405 @LENGTH@ 20
+---------INS MethodInvocation@@m1.getName() @TO@ InfixExpression@@m1.getName() != null @AT@ 3405 @LENGTH@ 12
+------------INS SimpleName@@Name:m1 @TO@ MethodInvocation@@m1.getName() @AT@ 3405 @LENGTH@ 2
+------------INS SimpleName@@MethodName:getName:[] @TO@ MethodInvocation@@m1.getName() @AT@ 3408 @LENGTH@ 9
+---------INS Operator@@!= @TO@ InfixExpression@@m1.getName() != null @AT@ 3417 @LENGTH@ 2
+---------INS NullLiteral@@null @TO@ InfixExpression@@m1.getName() != null @AT@ 3421 @LENGTH@ 4
+------INS Operator@@&& @TO@ InfixExpression@@m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3425 @LENGTH@ 2
+------INS MethodInvocation@@m1.getName().equals(m2.getName()) @TO@ InfixExpression@@m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3429 @LENGTH@ 33
+---------INS MethodInvocation@@MethodName:getName:[] @TO@ MethodInvocation@@m1.getName().equals(m2.getName()) @AT@ 3429 @LENGTH@ 12
+---------MOV SimpleName@@Name:m1 @TO@ MethodInvocation@@m1.getName().equals(m2.getName()) @AT@ 3449 @LENGTH@ 2
+---------MOV SimpleName@@MethodName:equals:[m2] @TO@ MethodInvocation@@m1.getName().equals(m2.getName()) @AT@ 3452 @LENGTH@ 10
+---INS VariableDeclarationStatement@@Class[] params1=m1.getParameterTypes(); @TO@ IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3516 @LENGTH@ 41
+------INS ArrayType@@Class[] @TO@ VariableDeclarationStatement@@Class[] params1=m1.getParameterTypes(); @AT@ 3516 @LENGTH@ 7
+---------INS SimpleType@@Class @TO@ ArrayType@@Class[] @AT@ 3516 @LENGTH@ 5
+------INS VariableDeclarationFragment@@params1=m1.getParameterTypes() @TO@ VariableDeclarationStatement@@Class[] params1=m1.getParameterTypes(); @AT@ 3524 @LENGTH@ 32
+---------INS SimpleName@@params1 @TO@ VariableDeclarationFragment@@params1=m1.getParameterTypes() @AT@ 3524 @LENGTH@ 7
+---------INS MethodInvocation@@m1.getParameterTypes() @TO@ VariableDeclarationFragment@@params1=m1.getParameterTypes() @AT@ 3534 @LENGTH@ 22
+------------INS SimpleName@@Name:m1 @TO@ MethodInvocation@@m1.getParameterTypes() @AT@ 3534 @LENGTH@ 2
+------------INS SimpleName@@MethodName:getParameterTypes:[] @TO@ MethodInvocation@@m1.getParameterTypes() @AT@ 3537 @LENGTH@ 19
+---INS VariableDeclarationStatement@@Class[] params2=m2.getParameterTypes(); @TO@ IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3567 @LENGTH@ 41
+------INS ArrayType@@Class[] @TO@ VariableDeclarationStatement@@Class[] params2=m2.getParameterTypes(); @AT@ 3567 @LENGTH@ 7
+---------INS SimpleType@@Class @TO@ ArrayType@@Class[] @AT@ 3567 @LENGTH@ 5
+------INS VariableDeclarationFragment@@params2=m2.getParameterTypes() @TO@ VariableDeclarationStatement@@Class[] params2=m2.getParameterTypes(); @AT@ 3575 @LENGTH@ 32
+---------INS SimpleName@@params2 @TO@ VariableDeclarationFragment@@params2=m2.getParameterTypes() @AT@ 3575 @LENGTH@ 7
+---------INS MethodInvocation@@m2.getParameterTypes() @TO@ VariableDeclarationFragment@@params2=m2.getParameterTypes() @AT@ 3585 @LENGTH@ 22
+------------INS SimpleName@@Name:m2 @TO@ MethodInvocation@@m2.getParameterTypes() @AT@ 3585 @LENGTH@ 2
+------------INS SimpleName@@MethodName:getParameterTypes:[] @TO@ MethodInvocation@@m2.getParameterTypes() @AT@ 3588 @LENGTH@ 19
+---INS IfStatement@@InfixExpression:params1.length == params2.length @TO@ IfStatement@@InfixExpression:m1.getName() != null && m1.getName().equals(m2.getName()) @AT@ 3618 @LENGTH@ 215
+------INS InfixExpression@@params1.length == params2.length @TO@ IfStatement@@InfixExpression:params1.length == params2.length @AT@ 3622 @LENGTH@ 32
+---------INS QualifiedName@@params1.length @TO@ InfixExpression@@params1.length == params2.length @AT@ 3622 @LENGTH@ 14
+------------INS SimpleName@@params1 @TO@ QualifiedName@@params1.length @AT@ 3622 @LENGTH@ 7
+------------INS SimpleName@@length @TO@ QualifiedName@@params1.length @AT@ 3630 @LENGTH@ 6
+---------INS Operator@@== @TO@ InfixExpression@@params1.length == params2.length @AT@ 3636 @LENGTH@ 2
+---------INS QualifiedName@@params2.length @TO@ InfixExpression@@params1.length == params2.length @AT@ 3640 @LENGTH@ 14
+------------INS SimpleName@@params2 @TO@ QualifiedName@@params2.length @AT@ 3640 @LENGTH@ 7
+------------INS SimpleName@@length @TO@ QualifiedName@@params2.length @AT@ 3648 @LENGTH@ 6
+------INS ForStatement@@[int i=0];i < params1.length; [i++] @TO@ IfStatement@@InfixExpression:params1.length == params2.length @AT@ 3671 @LENGTH@ 125
+---------INS VariableDeclarationExpression@@int i=0 @TO@ ForStatement@@[int i=0];i < params1.length; [i++] @AT@ 3676 @LENGTH@ 9
+------------INS PrimitiveType@@int @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3676 @LENGTH@ 3
+------------INS VariableDeclarationFragment@@i=0 @TO@ VariableDeclarationExpression@@int i=0 @AT@ 3680 @LENGTH@ 5
+---------------INS SimpleName@@i @TO@ VariableDeclarationFragment@@i=0 @AT@ 3680 @LENGTH@ 1
+---------------INS NumberLiteral@@0 @TO@ VariableDeclarationFragment@@i=0 @AT@ 3684 @LENGTH@ 1
+---------INS InfixExpression@@i < params1.length @TO@ ForStatement@@[int i=0];i < params1.length; [i++] @AT@ 3687 @LENGTH@ 18
+------------INS SimpleName@@i @TO@ InfixExpression@@i < params1.length @AT@ 3687 @LENGTH@ 1
+------------INS Operator@@< @TO@ InfixExpression@@i < params1.length @AT@ 3688 @LENGTH@ 1
+------------INS QualifiedName@@params1.length @TO@ InfixExpression@@i < params1.length @AT@ 3691 @LENGTH@ 14
+---------------INS SimpleName@@params1 @TO@ QualifiedName@@params1.length @AT@ 3691 @LENGTH@ 7
+---------------INS SimpleName@@length @TO@ QualifiedName@@params1.length @AT@ 3699 @LENGTH@ 6
+---------INS PostfixExpression@@i++ @TO@ ForStatement@@[int i=0];i < params1.length; [i++] @AT@ 3707 @LENGTH@ 3
+------------INS SimpleName@@i @TO@ PostfixExpression@@i++ @AT@ 3707 @LENGTH@ 1
+------------INS Operator@@++ @TO@ PostfixExpression@@i++ @AT@ 3709 @LENGTH@ 2
+---------INS IfStatement@@InfixExpression:params1[i] != params2[i] @TO@ ForStatement@@[int i=0];i < params1.length; [i++] @AT@ 3724 @LENGTH@ 57
+------------INS InfixExpression@@params1[i] != params2[i] @TO@ IfStatement@@InfixExpression:params1[i] != params2[i] @AT@ 3728 @LENGTH@ 24
+---------------INS ArrayAccess@@params1[i] @TO@ InfixExpression@@params1[i] != params2[i] @AT@ 3728 @LENGTH@ 10
+------------------INS SimpleName@@params1 @TO@ ArrayAccess@@params1[i] @AT@ 3728 @LENGTH@ 7
+------------------INS SimpleName@@i @TO@ ArrayAccess@@params1[i] @AT@ 3736 @LENGTH@ 1
+---------------INS Operator@@!= @TO@ InfixExpression@@params1[i] != params2[i] @AT@ 3738 @LENGTH@ 2
+---------------INS ArrayAccess@@params2[i] @TO@ InfixExpression@@params1[i] != params2[i] @AT@ 3742 @LENGTH@ 10
+------------------INS SimpleName@@params2 @TO@ ArrayAccess@@params2[i] @AT@ 3742 @LENGTH@ 7
+------------------INS SimpleName@@i @TO@ ArrayAccess@@params2[i] @AT@ 3750 @LENGTH@ 1
+------------INS ReturnStatement@@BooleanLiteral:false @TO@ IfStatement@@InfixExpression:params1[i] != params2[i] @AT@ 3768 @LENGTH@ 13
+---------------INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 3775 @LENGTH@ 5
+------INS ReturnStatement@@BooleanLiteral:true @TO@ IfStatement@@InfixExpression:params1.length == params2.length @AT@ 3810 @LENGTH@ 12
+---------INS BooleanLiteral@@true @TO@ ReturnStatement@@BooleanLiteral:true @AT@ 3817 @LENGTH@ 4
+, DEL ReturnStatement@@MethodInvocation:m1.equals(m2) @AT@ 3442 @LENGTH@ 21
+---DEL MethodInvocation@@m1.equals(m2) @AT@ 3449 @LENGTH@ 13
+, INS ReturnStatement@@BooleanLiteral:false @TO@ MethodDeclaration@@public, @@boolean, MethodName:hasSameMethod, @@Argus:Invocation+candidate+ @AT@ 3852 @LENGTH@ 13
+---INS BooleanLiteral@@false @TO@ ReturnStatement@@BooleanLiteral:false @AT@ 3859 @LENGTH@ 5
+]
+
+CII:
+OP1:(INS, ReturnStatement, null, OP2)
+OP2:   (INS, BooleanLiteral, OP1, null)
+
+
+

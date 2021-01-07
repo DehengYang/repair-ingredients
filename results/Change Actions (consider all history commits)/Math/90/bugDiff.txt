@@ -1,0 +1,21 @@
+
+diff -Naur ../d4j-repo/Math/Math_90/src/java/org/apache/commons/math/stat/Frequency.java ../d4j-repo/fixed_bugs_dir/Math/Math_90/src/java/org/apache/commons/math/stat/Frequency.java
+--- ../d4j-repo/Math/Math_90/src/java/org/apache/commons/math/stat/Frequency.java	2021-01-04 23:06:54.953763915 -0800
++++ ../d4j-repo/fixed_bugs_dir/Math/Math_90/src/java/org/apache/commons/math/stat/Frequency.java	2021-01-04 23:06:58.537898188 -0800
+@@ -107,6 +107,8 @@
+      */
+     @Deprecated
+     public void addValue(Object v) {
++        addValue((Comparable<?>) v);
++    }
+     
+     /**
+      * Adds 1 to the frequency count for v.
+@@ -118,6 +120,7 @@
+      * @param v the value to add.
+      * @throws IllegalArgumentException if <code>v</code> is not comparable with previous entries
+      */
++    public void addValue(Comparable<?>v){
+         Object obj = v;
+         if (v instanceof Integer) {
+            obj = Long.valueOf(((Integer) v).longValue());

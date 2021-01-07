@@ -1,0 +1,87 @@
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@int start=getNumObjectiveFunctions(); @TO@ int start=ignoreObjectiveRows ? getNumObjectiveFunctions() : 0; @AT@ 11687 @LENGTH@ 39
+---UPD VariableDeclarationFragment@@start=getNumObjectiveFunctions() @TO@ start=ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @AT@ 11691 @LENGTH@ 34
+------INS ConditionalExpression@@ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @TO@ VariableDeclarationFragment@@start=getNumObjectiveFunctions() @AT@ 11699 @LENGTH@ 52
+---------INS SimpleName@@ignoreObjectiveRows @TO@ ConditionalExpression@@ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @AT@ 11699 @LENGTH@ 19
+---------INS MethodInvocation@@MethodName:getNumObjectiveFunctions:[] @TO@ ConditionalExpression@@ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @AT@ 11721 @LENGTH@ 26
+---------INS NumberLiteral@@0 @TO@ ConditionalExpression@@ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @AT@ 11750 @LENGTH@ 1
+------DEL MethodInvocation@@MethodName:getNumObjectiveFunctions:[] @AT@ 11699 @LENGTH@ 26
+, UPD VariableDeclarationStatement@@Integer negativeVarBasicRow=getBasicRow(getNegativeDecisionVariableOffset()); @TO@ Integer negativeVarBasicRow=getBasicRowForSolution(getNegativeDecisionVariableOffset()); @AT@ 13338 @LENGTH@ 79
+---UPD VariableDeclarationFragment@@negativeVarBasicRow=getBasicRow(getNegativeDecisionVariableOffset()) @TO@ negativeVarBasicRow=getBasicRowForSolution(getNegativeDecisionVariableOffset()) @AT@ 13346 @LENGTH@ 70
+------UPD MethodInvocation@@getBasicRow(getNegativeDecisionVariableOffset()) @TO@ getBasicRowForSolution(getNegativeDecisionVariableOffset()) @AT@ 13368 @LENGTH@ 48
+---------UPD SimpleName@@MethodName:getBasicRow:[getNegativeDecisionVariableOffset()] @TO@ MethodName:getBasicRowForSolution:[getNegativeDecisionVariableOffset()] @AT@ 13368 @LENGTH@ 48
+, UPD VariableDeclarationStatement@@Integer basicRow=getBasicRow(getNumObjectiveFunctions() + i); @TO@ Integer basicRow=getBasicRowForSolution(getNumObjectiveFunctions() + i); @AT@ 13646 @LENGTH@ 63
+---UPD VariableDeclarationFragment@@basicRow=getBasicRow(getNumObjectiveFunctions() + i) @TO@ basicRow=getBasicRowForSolution(getNumObjectiveFunctions() + i) @AT@ 13654 @LENGTH@ 54
+------UPD MethodInvocation@@getBasicRow(getNumObjectiveFunctions() + i) @TO@ getBasicRowForSolution(getNumObjectiveFunctions() + i) @AT@ 13665 @LENGTH@ 43
+---------UPD SimpleName@@MethodName:getBasicRow:[getNumObjectiveFunctions() + i] @TO@ MethodName:getBasicRowForSolution:[getNumObjectiveFunctions() + i] @AT@ 13665 @LENGTH@ 43
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3 OP7)
+OP3:      (INS, ConditionalExpression, OP2, OP4 OP5 OP6)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, MethodInvocation, OP3, null)
+OP6:         (INS, NumberLiteral, OP3, null)
+OP7:      (DEL, MethodInvocation, OP2, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@int start=getNumObjectiveFunctions(); @TO@ int start=ignoreObjectiveRows ? getNumObjectiveFunctions() : 0; @AT@ 11687 @LENGTH@ 39
+---UPD VariableDeclarationFragment@@start=getNumObjectiveFunctions() @TO@ start=ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @AT@ 11691 @LENGTH@ 34
+------INS ConditionalExpression@@ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @TO@ VariableDeclarationFragment@@start=getNumObjectiveFunctions() @AT@ 11699 @LENGTH@ 52
+---------INS SimpleName@@ignoreObjectiveRows @TO@ ConditionalExpression@@ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @AT@ 11699 @LENGTH@ 19
+---------INS MethodInvocation@@MethodName:getNumObjectiveFunctions:[] @TO@ ConditionalExpression@@ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @AT@ 11721 @LENGTH@ 26
+---------INS NumberLiteral@@0 @TO@ ConditionalExpression@@ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @AT@ 11750 @LENGTH@ 1
+------DEL MethodInvocation@@MethodName:getNumObjectiveFunctions:[] @AT@ 11699 @LENGTH@ 26
+, UPD VariableDeclarationStatement@@Integer negativeVarBasicRow=getBasicRow(getNegativeDecisionVariableOffset()); @TO@ Integer negativeVarBasicRow=getBasicRowForSolution(getNegativeDecisionVariableOffset()); @AT@ 13338 @LENGTH@ 79
+---UPD VariableDeclarationFragment@@negativeVarBasicRow=getBasicRow(getNegativeDecisionVariableOffset()) @TO@ negativeVarBasicRow=getBasicRowForSolution(getNegativeDecisionVariableOffset()) @AT@ 13346 @LENGTH@ 70
+------UPD MethodInvocation@@getBasicRow(getNegativeDecisionVariableOffset()) @TO@ getBasicRowForSolution(getNegativeDecisionVariableOffset()) @AT@ 13368 @LENGTH@ 48
+---------UPD SimpleName@@MethodName:getBasicRow:[getNegativeDecisionVariableOffset()] @TO@ MethodName:getBasicRowForSolution:[getNegativeDecisionVariableOffset()] @AT@ 13368 @LENGTH@ 48
+, UPD VariableDeclarationStatement@@Integer basicRow=getBasicRow(getNumObjectiveFunctions() + i); @TO@ Integer basicRow=getBasicRowForSolution(getNumObjectiveFunctions() + i); @AT@ 13646 @LENGTH@ 63
+---UPD VariableDeclarationFragment@@basicRow=getBasicRow(getNumObjectiveFunctions() + i) @TO@ basicRow=getBasicRowForSolution(getNumObjectiveFunctions() + i) @AT@ 13654 @LENGTH@ 54
+------UPD MethodInvocation@@getBasicRow(getNumObjectiveFunctions() + i) @TO@ getBasicRowForSolution(getNumObjectiveFunctions() + i) @AT@ 13665 @LENGTH@ 43
+---------UPD SimpleName@@MethodName:getBasicRow:[getNumObjectiveFunctions() + i] @TO@ MethodName:getBasicRowForSolution:[getNumObjectiveFunctions() + i] @AT@ 13665 @LENGTH@ 43
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, MethodInvocation, OP2, OP4)
+OP4:         (UPD, SimpleName, OP3, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@int start=getNumObjectiveFunctions(); @TO@ int start=ignoreObjectiveRows ? getNumObjectiveFunctions() : 0; @AT@ 11687 @LENGTH@ 39
+---UPD VariableDeclarationFragment@@start=getNumObjectiveFunctions() @TO@ start=ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @AT@ 11691 @LENGTH@ 34
+------INS ConditionalExpression@@ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @TO@ VariableDeclarationFragment@@start=getNumObjectiveFunctions() @AT@ 11699 @LENGTH@ 52
+---------INS SimpleName@@ignoreObjectiveRows @TO@ ConditionalExpression@@ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @AT@ 11699 @LENGTH@ 19
+---------INS MethodInvocation@@MethodName:getNumObjectiveFunctions:[] @TO@ ConditionalExpression@@ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @AT@ 11721 @LENGTH@ 26
+---------INS NumberLiteral@@0 @TO@ ConditionalExpression@@ignoreObjectiveRows ? getNumObjectiveFunctions() : 0 @AT@ 11750 @LENGTH@ 1
+------DEL MethodInvocation@@MethodName:getNumObjectiveFunctions:[] @AT@ 11699 @LENGTH@ 26
+, UPD VariableDeclarationStatement@@Integer negativeVarBasicRow=getBasicRow(getNegativeDecisionVariableOffset()); @TO@ Integer negativeVarBasicRow=getBasicRowForSolution(getNegativeDecisionVariableOffset()); @AT@ 13338 @LENGTH@ 79
+---UPD VariableDeclarationFragment@@negativeVarBasicRow=getBasicRow(getNegativeDecisionVariableOffset()) @TO@ negativeVarBasicRow=getBasicRowForSolution(getNegativeDecisionVariableOffset()) @AT@ 13346 @LENGTH@ 70
+------UPD MethodInvocation@@getBasicRow(getNegativeDecisionVariableOffset()) @TO@ getBasicRowForSolution(getNegativeDecisionVariableOffset()) @AT@ 13368 @LENGTH@ 48
+---------UPD SimpleName@@MethodName:getBasicRow:[getNegativeDecisionVariableOffset()] @TO@ MethodName:getBasicRowForSolution:[getNegativeDecisionVariableOffset()] @AT@ 13368 @LENGTH@ 48
+, UPD VariableDeclarationStatement@@Integer basicRow=getBasicRow(getNumObjectiveFunctions() + i); @TO@ Integer basicRow=getBasicRowForSolution(getNumObjectiveFunctions() + i); @AT@ 13646 @LENGTH@ 63
+---UPD VariableDeclarationFragment@@basicRow=getBasicRow(getNumObjectiveFunctions() + i) @TO@ basicRow=getBasicRowForSolution(getNumObjectiveFunctions() + i) @AT@ 13654 @LENGTH@ 54
+------UPD MethodInvocation@@getBasicRow(getNumObjectiveFunctions() + i) @TO@ getBasicRowForSolution(getNumObjectiveFunctions() + i) @AT@ 13665 @LENGTH@ 43
+---------UPD SimpleName@@MethodName:getBasicRow:[getNumObjectiveFunctions() + i] @TO@ MethodName:getBasicRowForSolution:[getNumObjectiveFunctions() + i] @AT@ 13665 @LENGTH@ 43
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (UPD, MethodInvocation, OP2, OP4)
+OP4:         (UPD, SimpleName, OP3, null)
+
+
+

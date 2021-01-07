@@ -1,0 +1,22 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_4/src/com/google/javascript/rhino/jstype/NamedType.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_4/src/com/google/javascript/rhino/jstype/NamedType.java
+--- ../d4j-repo/Closure/Closure_4/src/com/google/javascript/rhino/jstype/NamedType.java	2021-01-06 03:40:01.308357598 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_4/src/com/google/javascript/rhino/jstype/NamedType.java	2021-01-06 03:40:04.244457579 -0800
+@@ -187,7 +187,7 @@
+     // makes more sense. Now, resolution via registry is first in order to
+     // avoid triggering the warnings built into the resolution via properties.
+     boolean resolved = resolveViaRegistry(t, enclosing);
+-    if (detectImplicitPrototypeCycle()) {
++    if (detectInheritanceCycle()) {
+       handleTypeCycle(t);
+     }
+ 
+@@ -199,7 +199,7 @@
+     }
+ 
+     resolveViaProperties(t, enclosing);
+-    if (detectImplicitPrototypeCycle()) {
++    if (detectInheritanceCycle()) {
+       handleTypeCycle(t);
+     }
+ 

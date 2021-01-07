@@ -1,0 +1,37 @@
+
+diff -Naur /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_29/src/main/java/org/apache/commons/math3/linear/OpenMapRealVector.java /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_29/src/main/java/org/apache/commons/math3/linear/OpenMapRealVector.java
+--- /home/deheng/ALL_APR_TOOLS/d4j-repo/Math/Math_29/src/main/java/org/apache/commons/math3/linear/OpenMapRealVector.java	2020-01-05 06:33:46.273131254 -0800
++++ /home/deheng/ALL_APR_TOOLS/d4j-repo/fixed_bugs_dir/Math/Math_29/src/main/java/org/apache/commons/math3/linear/OpenMapRealVector.java	2020-01-05 06:33:49.861101287 -0800
+@@ -346,10 +346,9 @@
+          * this only. Indeed, if this[i] = 0d and v[i] = 0d, then
+          * this[i] / v[i] = NaN, and not 0d.
+          */
+-        Iterator iter = entries.iterator();
+-        while (iter.hasNext()) {
+-            iter.advance();
+-            res.setEntry(iter.key(), iter.value() / v.getEntry(iter.key()));
++        final int n = getDimension();
++        for (int i = 0; i < n; i++) {
++            res.setEntry(i, this.getEntry(i) / v.getEntry(i));
+         }
+         return res;
+     }
+@@ -371,6 +370,18 @@
+          *
+          * These special cases are handled below.
+          */
++        if (v.isNaN() || v.isInfinite()) {
++            final int n = getDimension();
++            for (int i = 0; i < n; i++) {
++                final double y = v.getEntry(i);
++                if (Double.isNaN(y)) {
++                    res.setEntry(i, Double.NaN);
++                } else if (Double.isInfinite(y)) {
++                    final double x = this.getEntry(i);
++                    res.setEntry(i, x * y);
++                }
++            }
++        }
+         return res;
+     }
+ 

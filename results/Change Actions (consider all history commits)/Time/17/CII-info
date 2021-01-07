@@ -1,0 +1,1629 @@
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@long instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46326 @LENGTH@ 88
+---UPD VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46331 @LENGTH@ 82
+------DEL MethodInvocation@@convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46347 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant - 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46347 @LENGTH@ 66
+------MOV InfixExpression@@instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46365 @LENGTH@ 47
+, UPD VariableDeclarationStatement@@long instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46423 @LENGTH@ 87
+---UPD VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46428 @LENGTH@ 81
+------DEL MethodInvocation@@convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46443 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant + 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46443 @LENGTH@ 66
+------MOV InfixExpression@@instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46461 @LENGTH@ 47
+, INS VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46481 @LENGTH@ 45
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46481 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46486 @LENGTH@ 39
+------INS SimpleName@@offsetBefore @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46486 @LENGTH@ 12
+------INS MethodInvocation@@getOffset(instantBefore) @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+---------INS SimpleName@@MethodName:getOffset:[instantBefore] @TO@ MethodInvocation@@getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+------------INS SimpleName@@instantBefore @TO@ SimpleName@@MethodName:getOffset:[instantBefore] @AT@ 46511 @LENGTH@ 13
+, UPD IfStatement@@InfixExpression:instantBefore == instantAfter @TO@ InfixExpression:offsetBefore <= offsetAfter @AT@ 46519 @LENGTH@ 136
+---UPD InfixExpression@@instantBefore == instantAfter @TO@ offsetBefore <= offsetAfter @AT@ 46523 @LENGTH@ 29
+------UPD SimpleName@@instantBefore @TO@ offsetBefore @AT@ 46523 @LENGTH@ 13
+------UPD Operator@@== @TO@ <= @AT@ 46536 @LENGTH@ 2
+------UPD SimpleName@@instantAfter @TO@ offsetAfter @AT@ 46540 @LENGTH@ 12
+, INS VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46535 @LENGTH@ 43
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46535 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46540 @LENGTH@ 37
+------INS SimpleName@@offsetAfter @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46540 @LENGTH@ 11
+------INS MethodInvocation@@getOffset(instantAfter) @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+---------INS SimpleName@@MethodName:getOffset:[instantAfter] @TO@ MethodInvocation@@getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+------------INS SimpleName@@instantAfter @TO@ SimpleName@@MethodName:getOffset:[instantAfter] @AT@ 46564 @LENGTH@ 12
+, UPD VariableDeclarationStatement@@long local=convertUTCToLocal(instant); @TO@ long transition=nextTransition(instantBefore); @AT@ 46743 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@local=convertUTCToLocal(instant) @TO@ transition=nextTransition(instantBefore) @AT@ 46748 @LENGTH@ 34
+------UPD SimpleName@@local @TO@ transition @AT@ 46748 @LENGTH@ 5
+------UPD MethodInvocation@@convertUTCToLocal(instant) @TO@ nextTransition(instantBefore) @AT@ 46756 @LENGTH@ 26
+---------UPD SimpleName@@MethodName:convertUTCToLocal:[instant] @TO@ MethodName:nextTransition:[instantBefore] @AT@ 46756 @LENGTH@ 26
+------------UPD SimpleName@@instant @TO@ instantBefore @AT@ 46774 @LENGTH@ 7
+, DEL ReturnStatement@@MethodInvocation:convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46792 @LENGTH@ 86
+---DEL MethodInvocation@@convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46799 @LENGTH@ 78
+------DEL SimpleName@@MethodName:convertLocalToUTC:[local, false, earlierOrLater ? instantAfter : instantBefore] @AT@ 46799 @LENGTH@ 78
+---------DEL SimpleName@@local @AT@ 46817 @LENGTH@ 5
+---------DEL BooleanLiteral@@false @AT@ 46824 @LENGTH@ 5
+---------DEL ConditionalExpression@@earlierOrLater ? instantAfter : instantBefore @AT@ 46831 @LENGTH@ 45
+------------DEL SimpleName@@instantBefore @AT@ 46863 @LENGTH@ 13
+, INS VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46809 @LENGTH@ 39
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46809 @LENGTH@ 4
+---INS VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46814 @LENGTH@ 33
+------INS SimpleName@@diff @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46814 @LENGTH@ 4
+------INS InfixExpression@@offsetBefore - offsetAfter @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 26
+---------INS SimpleName@@offsetBefore @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46833 @LENGTH@ 1
+---------INS SimpleName@@offsetAfter @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46836 @LENGTH@ 11
+, INS VariableDeclarationStatement@@long overlapStart=transition - diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46914 @LENGTH@ 38
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46914 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapStart=transition - diff @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46919 @LENGTH@ 32
+------INS SimpleName@@overlapStart @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46919 @LENGTH@ 12
+------INS InfixExpression@@transition - diff @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46934 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition - diff @AT@ 46934 @LENGTH@ 10
+---------INS Operator@@- @TO@ InfixExpression@@transition - diff @AT@ 46944 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition - diff @AT@ 46947 @LENGTH@ 4
+, INS VariableDeclarationStatement@@long overlapEnd=transition + diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46961 @LENGTH@ 36
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46961 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapEnd=transition + diff @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46966 @LENGTH@ 30
+------INS SimpleName@@overlapEnd @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46966 @LENGTH@ 10
+------INS InfixExpression@@transition + diff @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46979 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition + diff @AT@ 46979 @LENGTH@ 10
+---------INS Operator@@+ @TO@ InfixExpression@@transition + diff @AT@ 46989 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition + diff @AT@ 46992 @LENGTH@ 4
+, INS IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47006 @LENGTH@ 109
+---INS InfixExpression@@instant < overlapStart || instant >= overlapEnd @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 47
+------INS InfixExpression@@instant < overlapStart @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant < overlapStart @AT@ 47010 @LENGTH@ 7
+---------INS Operator@@< @TO@ InfixExpression@@instant < overlapStart @AT@ 47017 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant < overlapStart @AT@ 47020 @LENGTH@ 12
+------INS Operator@@|| @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47032 @LENGTH@ 2
+------INS InfixExpression@@instant >= overlapEnd @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47036 @LENGTH@ 21
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47036 @LENGTH@ 7
+---------INS Operator@@>= @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47043 @LENGTH@ 2
+---------INS SimpleName@@overlapEnd @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47047 @LENGTH@ 10
+---INS ReturnStatement@@SimpleName:instant @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47071 @LENGTH@ 15
+------INS SimpleName@@instant @TO@ ReturnStatement@@SimpleName:instant @AT@ 47078 @LENGTH@ 7
+, INS VariableDeclarationStatement@@long afterStart=instant - overlapStart; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47161 @LENGTH@ 41
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47161 @LENGTH@ 4
+---INS VariableDeclarationFragment@@afterStart=instant - overlapStart @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47166 @LENGTH@ 35
+------INS SimpleName@@afterStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47166 @LENGTH@ 10
+------INS InfixExpression@@instant - overlapStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47179 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant - overlapStart @AT@ 47179 @LENGTH@ 7
+---------INS Operator@@- @TO@ InfixExpression@@instant - overlapStart @AT@ 47186 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant - overlapStart @AT@ 47189 @LENGTH@ 12
+, INS IfStatement@@InfixExpression:afterStart >= diff @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47211 @LENGTH@ 252
+---INS InfixExpression@@afterStart >= diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47215 @LENGTH@ 18
+------INS SimpleName@@afterStart @TO@ InfixExpression@@afterStart >= diff @AT@ 47215 @LENGTH@ 10
+------INS Operator@@>= @TO@ InfixExpression@@afterStart >= diff @AT@ 47225 @LENGTH@ 2
+------INS SimpleName@@diff @TO@ InfixExpression@@afterStart >= diff @AT@ 47229 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47286 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant : instant - diff @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @AT@ 47293 @LENGTH@ 41
+---------MOV SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46831 @LENGTH@ 14
+---------MOV SimpleName@@instantAfter @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46848 @LENGTH@ 12
+---------INS InfixExpression@@instant - diff @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 47320 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant - diff @AT@ 47320 @LENGTH@ 7
+------------INS Operator@@- @TO@ InfixExpression@@instant - diff @AT@ 47327 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant - diff @AT@ 47330 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47404 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant + diff : instant @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 41
+---------INS SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 14
+---------INS InfixExpression@@instant + diff @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47428 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant + diff @AT@ 47428 @LENGTH@ 7
+------------INS Operator@@+ @TO@ InfixExpression@@instant + diff @AT@ 47435 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant + diff @AT@ 47438 @LENGTH@ 4
+---------INS SimpleName@@instant @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47445 @LENGTH@ 7
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3 OP5)
+OP3:      (DEL, MethodInvocation, OP2, OP4)
+OP4:         (DEL, SimpleName, OP3, null)
+OP5:      (MOV, InfixExpression, OP2, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@long instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46326 @LENGTH@ 88
+---UPD VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46331 @LENGTH@ 82
+------DEL MethodInvocation@@convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46347 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant - 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46347 @LENGTH@ 66
+------MOV InfixExpression@@instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46365 @LENGTH@ 47
+, UPD VariableDeclarationStatement@@long instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46423 @LENGTH@ 87
+---UPD VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46428 @LENGTH@ 81
+------DEL MethodInvocation@@convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46443 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant + 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46443 @LENGTH@ 66
+------MOV InfixExpression@@instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46461 @LENGTH@ 47
+, INS VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46481 @LENGTH@ 45
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46481 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46486 @LENGTH@ 39
+------INS SimpleName@@offsetBefore @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46486 @LENGTH@ 12
+------INS MethodInvocation@@getOffset(instantBefore) @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+---------INS SimpleName@@MethodName:getOffset:[instantBefore] @TO@ MethodInvocation@@getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+------------INS SimpleName@@instantBefore @TO@ SimpleName@@MethodName:getOffset:[instantBefore] @AT@ 46511 @LENGTH@ 13
+, UPD IfStatement@@InfixExpression:instantBefore == instantAfter @TO@ InfixExpression:offsetBefore <= offsetAfter @AT@ 46519 @LENGTH@ 136
+---UPD InfixExpression@@instantBefore == instantAfter @TO@ offsetBefore <= offsetAfter @AT@ 46523 @LENGTH@ 29
+------UPD SimpleName@@instantBefore @TO@ offsetBefore @AT@ 46523 @LENGTH@ 13
+------UPD Operator@@== @TO@ <= @AT@ 46536 @LENGTH@ 2
+------UPD SimpleName@@instantAfter @TO@ offsetAfter @AT@ 46540 @LENGTH@ 12
+, INS VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46535 @LENGTH@ 43
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46535 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46540 @LENGTH@ 37
+------INS SimpleName@@offsetAfter @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46540 @LENGTH@ 11
+------INS MethodInvocation@@getOffset(instantAfter) @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+---------INS SimpleName@@MethodName:getOffset:[instantAfter] @TO@ MethodInvocation@@getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+------------INS SimpleName@@instantAfter @TO@ SimpleName@@MethodName:getOffset:[instantAfter] @AT@ 46564 @LENGTH@ 12
+, UPD VariableDeclarationStatement@@long local=convertUTCToLocal(instant); @TO@ long transition=nextTransition(instantBefore); @AT@ 46743 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@local=convertUTCToLocal(instant) @TO@ transition=nextTransition(instantBefore) @AT@ 46748 @LENGTH@ 34
+------UPD SimpleName@@local @TO@ transition @AT@ 46748 @LENGTH@ 5
+------UPD MethodInvocation@@convertUTCToLocal(instant) @TO@ nextTransition(instantBefore) @AT@ 46756 @LENGTH@ 26
+---------UPD SimpleName@@MethodName:convertUTCToLocal:[instant] @TO@ MethodName:nextTransition:[instantBefore] @AT@ 46756 @LENGTH@ 26
+------------UPD SimpleName@@instant @TO@ instantBefore @AT@ 46774 @LENGTH@ 7
+, DEL ReturnStatement@@MethodInvocation:convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46792 @LENGTH@ 86
+---DEL MethodInvocation@@convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46799 @LENGTH@ 78
+------DEL SimpleName@@MethodName:convertLocalToUTC:[local, false, earlierOrLater ? instantAfter : instantBefore] @AT@ 46799 @LENGTH@ 78
+---------DEL SimpleName@@local @AT@ 46817 @LENGTH@ 5
+---------DEL BooleanLiteral@@false @AT@ 46824 @LENGTH@ 5
+---------DEL ConditionalExpression@@earlierOrLater ? instantAfter : instantBefore @AT@ 46831 @LENGTH@ 45
+------------DEL SimpleName@@instantBefore @AT@ 46863 @LENGTH@ 13
+, INS VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46809 @LENGTH@ 39
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46809 @LENGTH@ 4
+---INS VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46814 @LENGTH@ 33
+------INS SimpleName@@diff @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46814 @LENGTH@ 4
+------INS InfixExpression@@offsetBefore - offsetAfter @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 26
+---------INS SimpleName@@offsetBefore @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46833 @LENGTH@ 1
+---------INS SimpleName@@offsetAfter @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46836 @LENGTH@ 11
+, INS VariableDeclarationStatement@@long overlapStart=transition - diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46914 @LENGTH@ 38
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46914 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapStart=transition - diff @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46919 @LENGTH@ 32
+------INS SimpleName@@overlapStart @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46919 @LENGTH@ 12
+------INS InfixExpression@@transition - diff @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46934 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition - diff @AT@ 46934 @LENGTH@ 10
+---------INS Operator@@- @TO@ InfixExpression@@transition - diff @AT@ 46944 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition - diff @AT@ 46947 @LENGTH@ 4
+, INS VariableDeclarationStatement@@long overlapEnd=transition + diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46961 @LENGTH@ 36
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46961 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapEnd=transition + diff @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46966 @LENGTH@ 30
+------INS SimpleName@@overlapEnd @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46966 @LENGTH@ 10
+------INS InfixExpression@@transition + diff @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46979 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition + diff @AT@ 46979 @LENGTH@ 10
+---------INS Operator@@+ @TO@ InfixExpression@@transition + diff @AT@ 46989 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition + diff @AT@ 46992 @LENGTH@ 4
+, INS IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47006 @LENGTH@ 109
+---INS InfixExpression@@instant < overlapStart || instant >= overlapEnd @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 47
+------INS InfixExpression@@instant < overlapStart @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant < overlapStart @AT@ 47010 @LENGTH@ 7
+---------INS Operator@@< @TO@ InfixExpression@@instant < overlapStart @AT@ 47017 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant < overlapStart @AT@ 47020 @LENGTH@ 12
+------INS Operator@@|| @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47032 @LENGTH@ 2
+------INS InfixExpression@@instant >= overlapEnd @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47036 @LENGTH@ 21
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47036 @LENGTH@ 7
+---------INS Operator@@>= @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47043 @LENGTH@ 2
+---------INS SimpleName@@overlapEnd @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47047 @LENGTH@ 10
+---INS ReturnStatement@@SimpleName:instant @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47071 @LENGTH@ 15
+------INS SimpleName@@instant @TO@ ReturnStatement@@SimpleName:instant @AT@ 47078 @LENGTH@ 7
+, INS VariableDeclarationStatement@@long afterStart=instant - overlapStart; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47161 @LENGTH@ 41
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47161 @LENGTH@ 4
+---INS VariableDeclarationFragment@@afterStart=instant - overlapStart @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47166 @LENGTH@ 35
+------INS SimpleName@@afterStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47166 @LENGTH@ 10
+------INS InfixExpression@@instant - overlapStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47179 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant - overlapStart @AT@ 47179 @LENGTH@ 7
+---------INS Operator@@- @TO@ InfixExpression@@instant - overlapStart @AT@ 47186 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant - overlapStart @AT@ 47189 @LENGTH@ 12
+, INS IfStatement@@InfixExpression:afterStart >= diff @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47211 @LENGTH@ 252
+---INS InfixExpression@@afterStart >= diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47215 @LENGTH@ 18
+------INS SimpleName@@afterStart @TO@ InfixExpression@@afterStart >= diff @AT@ 47215 @LENGTH@ 10
+------INS Operator@@>= @TO@ InfixExpression@@afterStart >= diff @AT@ 47225 @LENGTH@ 2
+------INS SimpleName@@diff @TO@ InfixExpression@@afterStart >= diff @AT@ 47229 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47286 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant : instant - diff @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @AT@ 47293 @LENGTH@ 41
+---------MOV SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46831 @LENGTH@ 14
+---------MOV SimpleName@@instantAfter @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46848 @LENGTH@ 12
+---------INS InfixExpression@@instant - diff @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 47320 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant - diff @AT@ 47320 @LENGTH@ 7
+------------INS Operator@@- @TO@ InfixExpression@@instant - diff @AT@ 47327 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant - diff @AT@ 47330 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47404 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant + diff : instant @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 41
+---------INS SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 14
+---------INS InfixExpression@@instant + diff @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47428 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant + diff @AT@ 47428 @LENGTH@ 7
+------------INS Operator@@+ @TO@ InfixExpression@@instant + diff @AT@ 47435 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant + diff @AT@ 47438 @LENGTH@ 4
+---------INS SimpleName@@instant @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47445 @LENGTH@ 7
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3 OP5)
+OP3:      (DEL, MethodInvocation, OP2, OP4)
+OP4:         (DEL, SimpleName, OP3, null)
+OP5:      (MOV, InfixExpression, OP2, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@long instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46326 @LENGTH@ 88
+---UPD VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46331 @LENGTH@ 82
+------DEL MethodInvocation@@convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46347 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant - 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46347 @LENGTH@ 66
+------MOV InfixExpression@@instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46365 @LENGTH@ 47
+, UPD VariableDeclarationStatement@@long instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46423 @LENGTH@ 87
+---UPD VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46428 @LENGTH@ 81
+------DEL MethodInvocation@@convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46443 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant + 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46443 @LENGTH@ 66
+------MOV InfixExpression@@instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46461 @LENGTH@ 47
+, INS VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46481 @LENGTH@ 45
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46481 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46486 @LENGTH@ 39
+------INS SimpleName@@offsetBefore @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46486 @LENGTH@ 12
+------INS MethodInvocation@@getOffset(instantBefore) @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+---------INS SimpleName@@MethodName:getOffset:[instantBefore] @TO@ MethodInvocation@@getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+------------INS SimpleName@@instantBefore @TO@ SimpleName@@MethodName:getOffset:[instantBefore] @AT@ 46511 @LENGTH@ 13
+, UPD IfStatement@@InfixExpression:instantBefore == instantAfter @TO@ InfixExpression:offsetBefore <= offsetAfter @AT@ 46519 @LENGTH@ 136
+---UPD InfixExpression@@instantBefore == instantAfter @TO@ offsetBefore <= offsetAfter @AT@ 46523 @LENGTH@ 29
+------UPD SimpleName@@instantBefore @TO@ offsetBefore @AT@ 46523 @LENGTH@ 13
+------UPD Operator@@== @TO@ <= @AT@ 46536 @LENGTH@ 2
+------UPD SimpleName@@instantAfter @TO@ offsetAfter @AT@ 46540 @LENGTH@ 12
+, INS VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46535 @LENGTH@ 43
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46535 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46540 @LENGTH@ 37
+------INS SimpleName@@offsetAfter @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46540 @LENGTH@ 11
+------INS MethodInvocation@@getOffset(instantAfter) @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+---------INS SimpleName@@MethodName:getOffset:[instantAfter] @TO@ MethodInvocation@@getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+------------INS SimpleName@@instantAfter @TO@ SimpleName@@MethodName:getOffset:[instantAfter] @AT@ 46564 @LENGTH@ 12
+, UPD VariableDeclarationStatement@@long local=convertUTCToLocal(instant); @TO@ long transition=nextTransition(instantBefore); @AT@ 46743 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@local=convertUTCToLocal(instant) @TO@ transition=nextTransition(instantBefore) @AT@ 46748 @LENGTH@ 34
+------UPD SimpleName@@local @TO@ transition @AT@ 46748 @LENGTH@ 5
+------UPD MethodInvocation@@convertUTCToLocal(instant) @TO@ nextTransition(instantBefore) @AT@ 46756 @LENGTH@ 26
+---------UPD SimpleName@@MethodName:convertUTCToLocal:[instant] @TO@ MethodName:nextTransition:[instantBefore] @AT@ 46756 @LENGTH@ 26
+------------UPD SimpleName@@instant @TO@ instantBefore @AT@ 46774 @LENGTH@ 7
+, DEL ReturnStatement@@MethodInvocation:convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46792 @LENGTH@ 86
+---DEL MethodInvocation@@convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46799 @LENGTH@ 78
+------DEL SimpleName@@MethodName:convertLocalToUTC:[local, false, earlierOrLater ? instantAfter : instantBefore] @AT@ 46799 @LENGTH@ 78
+---------DEL SimpleName@@local @AT@ 46817 @LENGTH@ 5
+---------DEL BooleanLiteral@@false @AT@ 46824 @LENGTH@ 5
+---------DEL ConditionalExpression@@earlierOrLater ? instantAfter : instantBefore @AT@ 46831 @LENGTH@ 45
+------------DEL SimpleName@@instantBefore @AT@ 46863 @LENGTH@ 13
+, INS VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46809 @LENGTH@ 39
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46809 @LENGTH@ 4
+---INS VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46814 @LENGTH@ 33
+------INS SimpleName@@diff @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46814 @LENGTH@ 4
+------INS InfixExpression@@offsetBefore - offsetAfter @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 26
+---------INS SimpleName@@offsetBefore @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46833 @LENGTH@ 1
+---------INS SimpleName@@offsetAfter @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46836 @LENGTH@ 11
+, INS VariableDeclarationStatement@@long overlapStart=transition - diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46914 @LENGTH@ 38
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46914 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapStart=transition - diff @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46919 @LENGTH@ 32
+------INS SimpleName@@overlapStart @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46919 @LENGTH@ 12
+------INS InfixExpression@@transition - diff @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46934 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition - diff @AT@ 46934 @LENGTH@ 10
+---------INS Operator@@- @TO@ InfixExpression@@transition - diff @AT@ 46944 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition - diff @AT@ 46947 @LENGTH@ 4
+, INS VariableDeclarationStatement@@long overlapEnd=transition + diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46961 @LENGTH@ 36
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46961 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapEnd=transition + diff @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46966 @LENGTH@ 30
+------INS SimpleName@@overlapEnd @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46966 @LENGTH@ 10
+------INS InfixExpression@@transition + diff @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46979 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition + diff @AT@ 46979 @LENGTH@ 10
+---------INS Operator@@+ @TO@ InfixExpression@@transition + diff @AT@ 46989 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition + diff @AT@ 46992 @LENGTH@ 4
+, INS IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47006 @LENGTH@ 109
+---INS InfixExpression@@instant < overlapStart || instant >= overlapEnd @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 47
+------INS InfixExpression@@instant < overlapStart @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant < overlapStart @AT@ 47010 @LENGTH@ 7
+---------INS Operator@@< @TO@ InfixExpression@@instant < overlapStart @AT@ 47017 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant < overlapStart @AT@ 47020 @LENGTH@ 12
+------INS Operator@@|| @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47032 @LENGTH@ 2
+------INS InfixExpression@@instant >= overlapEnd @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47036 @LENGTH@ 21
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47036 @LENGTH@ 7
+---------INS Operator@@>= @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47043 @LENGTH@ 2
+---------INS SimpleName@@overlapEnd @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47047 @LENGTH@ 10
+---INS ReturnStatement@@SimpleName:instant @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47071 @LENGTH@ 15
+------INS SimpleName@@instant @TO@ ReturnStatement@@SimpleName:instant @AT@ 47078 @LENGTH@ 7
+, INS VariableDeclarationStatement@@long afterStart=instant - overlapStart; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47161 @LENGTH@ 41
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47161 @LENGTH@ 4
+---INS VariableDeclarationFragment@@afterStart=instant - overlapStart @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47166 @LENGTH@ 35
+------INS SimpleName@@afterStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47166 @LENGTH@ 10
+------INS InfixExpression@@instant - overlapStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47179 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant - overlapStart @AT@ 47179 @LENGTH@ 7
+---------INS Operator@@- @TO@ InfixExpression@@instant - overlapStart @AT@ 47186 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant - overlapStart @AT@ 47189 @LENGTH@ 12
+, INS IfStatement@@InfixExpression:afterStart >= diff @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47211 @LENGTH@ 252
+---INS InfixExpression@@afterStart >= diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47215 @LENGTH@ 18
+------INS SimpleName@@afterStart @TO@ InfixExpression@@afterStart >= diff @AT@ 47215 @LENGTH@ 10
+------INS Operator@@>= @TO@ InfixExpression@@afterStart >= diff @AT@ 47225 @LENGTH@ 2
+------INS SimpleName@@diff @TO@ InfixExpression@@afterStart >= diff @AT@ 47229 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47286 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant : instant - diff @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @AT@ 47293 @LENGTH@ 41
+---------MOV SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46831 @LENGTH@ 14
+---------MOV SimpleName@@instantAfter @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46848 @LENGTH@ 12
+---------INS InfixExpression@@instant - diff @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 47320 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant - diff @AT@ 47320 @LENGTH@ 7
+------------INS Operator@@- @TO@ InfixExpression@@instant - diff @AT@ 47327 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant - diff @AT@ 47330 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47404 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant + diff : instant @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 41
+---------INS SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 14
+---------INS InfixExpression@@instant + diff @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47428 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant + diff @AT@ 47428 @LENGTH@ 7
+------------INS Operator@@+ @TO@ InfixExpression@@instant + diff @AT@ 47435 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant + diff @AT@ 47438 @LENGTH@ 4
+---------INS SimpleName@@instant @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47445 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, OP6)
+OP6:         (INS, SimpleName, OP5, OP7)
+OP7:            (INS, SimpleName, OP6, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@long instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46326 @LENGTH@ 88
+---UPD VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46331 @LENGTH@ 82
+------DEL MethodInvocation@@convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46347 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant - 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46347 @LENGTH@ 66
+------MOV InfixExpression@@instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46365 @LENGTH@ 47
+, UPD VariableDeclarationStatement@@long instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46423 @LENGTH@ 87
+---UPD VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46428 @LENGTH@ 81
+------DEL MethodInvocation@@convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46443 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant + 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46443 @LENGTH@ 66
+------MOV InfixExpression@@instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46461 @LENGTH@ 47
+, INS VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46481 @LENGTH@ 45
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46481 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46486 @LENGTH@ 39
+------INS SimpleName@@offsetBefore @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46486 @LENGTH@ 12
+------INS MethodInvocation@@getOffset(instantBefore) @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+---------INS SimpleName@@MethodName:getOffset:[instantBefore] @TO@ MethodInvocation@@getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+------------INS SimpleName@@instantBefore @TO@ SimpleName@@MethodName:getOffset:[instantBefore] @AT@ 46511 @LENGTH@ 13
+, UPD IfStatement@@InfixExpression:instantBefore == instantAfter @TO@ InfixExpression:offsetBefore <= offsetAfter @AT@ 46519 @LENGTH@ 136
+---UPD InfixExpression@@instantBefore == instantAfter @TO@ offsetBefore <= offsetAfter @AT@ 46523 @LENGTH@ 29
+------UPD SimpleName@@instantBefore @TO@ offsetBefore @AT@ 46523 @LENGTH@ 13
+------UPD Operator@@== @TO@ <= @AT@ 46536 @LENGTH@ 2
+------UPD SimpleName@@instantAfter @TO@ offsetAfter @AT@ 46540 @LENGTH@ 12
+, INS VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46535 @LENGTH@ 43
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46535 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46540 @LENGTH@ 37
+------INS SimpleName@@offsetAfter @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46540 @LENGTH@ 11
+------INS MethodInvocation@@getOffset(instantAfter) @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+---------INS SimpleName@@MethodName:getOffset:[instantAfter] @TO@ MethodInvocation@@getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+------------INS SimpleName@@instantAfter @TO@ SimpleName@@MethodName:getOffset:[instantAfter] @AT@ 46564 @LENGTH@ 12
+, UPD VariableDeclarationStatement@@long local=convertUTCToLocal(instant); @TO@ long transition=nextTransition(instantBefore); @AT@ 46743 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@local=convertUTCToLocal(instant) @TO@ transition=nextTransition(instantBefore) @AT@ 46748 @LENGTH@ 34
+------UPD SimpleName@@local @TO@ transition @AT@ 46748 @LENGTH@ 5
+------UPD MethodInvocation@@convertUTCToLocal(instant) @TO@ nextTransition(instantBefore) @AT@ 46756 @LENGTH@ 26
+---------UPD SimpleName@@MethodName:convertUTCToLocal:[instant] @TO@ MethodName:nextTransition:[instantBefore] @AT@ 46756 @LENGTH@ 26
+------------UPD SimpleName@@instant @TO@ instantBefore @AT@ 46774 @LENGTH@ 7
+, DEL ReturnStatement@@MethodInvocation:convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46792 @LENGTH@ 86
+---DEL MethodInvocation@@convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46799 @LENGTH@ 78
+------DEL SimpleName@@MethodName:convertLocalToUTC:[local, false, earlierOrLater ? instantAfter : instantBefore] @AT@ 46799 @LENGTH@ 78
+---------DEL SimpleName@@local @AT@ 46817 @LENGTH@ 5
+---------DEL BooleanLiteral@@false @AT@ 46824 @LENGTH@ 5
+---------DEL ConditionalExpression@@earlierOrLater ? instantAfter : instantBefore @AT@ 46831 @LENGTH@ 45
+------------DEL SimpleName@@instantBefore @AT@ 46863 @LENGTH@ 13
+, INS VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46809 @LENGTH@ 39
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46809 @LENGTH@ 4
+---INS VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46814 @LENGTH@ 33
+------INS SimpleName@@diff @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46814 @LENGTH@ 4
+------INS InfixExpression@@offsetBefore - offsetAfter @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 26
+---------INS SimpleName@@offsetBefore @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46833 @LENGTH@ 1
+---------INS SimpleName@@offsetAfter @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46836 @LENGTH@ 11
+, INS VariableDeclarationStatement@@long overlapStart=transition - diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46914 @LENGTH@ 38
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46914 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapStart=transition - diff @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46919 @LENGTH@ 32
+------INS SimpleName@@overlapStart @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46919 @LENGTH@ 12
+------INS InfixExpression@@transition - diff @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46934 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition - diff @AT@ 46934 @LENGTH@ 10
+---------INS Operator@@- @TO@ InfixExpression@@transition - diff @AT@ 46944 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition - diff @AT@ 46947 @LENGTH@ 4
+, INS VariableDeclarationStatement@@long overlapEnd=transition + diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46961 @LENGTH@ 36
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46961 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapEnd=transition + diff @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46966 @LENGTH@ 30
+------INS SimpleName@@overlapEnd @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46966 @LENGTH@ 10
+------INS InfixExpression@@transition + diff @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46979 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition + diff @AT@ 46979 @LENGTH@ 10
+---------INS Operator@@+ @TO@ InfixExpression@@transition + diff @AT@ 46989 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition + diff @AT@ 46992 @LENGTH@ 4
+, INS IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47006 @LENGTH@ 109
+---INS InfixExpression@@instant < overlapStart || instant >= overlapEnd @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 47
+------INS InfixExpression@@instant < overlapStart @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant < overlapStart @AT@ 47010 @LENGTH@ 7
+---------INS Operator@@< @TO@ InfixExpression@@instant < overlapStart @AT@ 47017 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant < overlapStart @AT@ 47020 @LENGTH@ 12
+------INS Operator@@|| @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47032 @LENGTH@ 2
+------INS InfixExpression@@instant >= overlapEnd @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47036 @LENGTH@ 21
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47036 @LENGTH@ 7
+---------INS Operator@@>= @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47043 @LENGTH@ 2
+---------INS SimpleName@@overlapEnd @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47047 @LENGTH@ 10
+---INS ReturnStatement@@SimpleName:instant @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47071 @LENGTH@ 15
+------INS SimpleName@@instant @TO@ ReturnStatement@@SimpleName:instant @AT@ 47078 @LENGTH@ 7
+, INS VariableDeclarationStatement@@long afterStart=instant - overlapStart; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47161 @LENGTH@ 41
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47161 @LENGTH@ 4
+---INS VariableDeclarationFragment@@afterStart=instant - overlapStart @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47166 @LENGTH@ 35
+------INS SimpleName@@afterStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47166 @LENGTH@ 10
+------INS InfixExpression@@instant - overlapStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47179 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant - overlapStart @AT@ 47179 @LENGTH@ 7
+---------INS Operator@@- @TO@ InfixExpression@@instant - overlapStart @AT@ 47186 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant - overlapStart @AT@ 47189 @LENGTH@ 12
+, INS IfStatement@@InfixExpression:afterStart >= diff @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47211 @LENGTH@ 252
+---INS InfixExpression@@afterStart >= diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47215 @LENGTH@ 18
+------INS SimpleName@@afterStart @TO@ InfixExpression@@afterStart >= diff @AT@ 47215 @LENGTH@ 10
+------INS Operator@@>= @TO@ InfixExpression@@afterStart >= diff @AT@ 47225 @LENGTH@ 2
+------INS SimpleName@@diff @TO@ InfixExpression@@afterStart >= diff @AT@ 47229 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47286 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant : instant - diff @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @AT@ 47293 @LENGTH@ 41
+---------MOV SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46831 @LENGTH@ 14
+---------MOV SimpleName@@instantAfter @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46848 @LENGTH@ 12
+---------INS InfixExpression@@instant - diff @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 47320 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant - diff @AT@ 47320 @LENGTH@ 7
+------------INS Operator@@- @TO@ InfixExpression@@instant - diff @AT@ 47327 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant - diff @AT@ 47330 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47404 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant + diff : instant @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 41
+---------INS SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 14
+---------INS InfixExpression@@instant + diff @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47428 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant + diff @AT@ 47428 @LENGTH@ 7
+------------INS Operator@@+ @TO@ InfixExpression@@instant + diff @AT@ 47435 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant + diff @AT@ 47438 @LENGTH@ 4
+---------INS SimpleName@@instant @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47445 @LENGTH@ 7
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2)
+OP2:   (UPD, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (UPD, SimpleName, OP2, null)
+OP4:      (UPD, Operator, OP2, null)
+OP5:      (UPD, SimpleName, OP2, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@long instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46326 @LENGTH@ 88
+---UPD VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46331 @LENGTH@ 82
+------DEL MethodInvocation@@convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46347 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant - 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46347 @LENGTH@ 66
+------MOV InfixExpression@@instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46365 @LENGTH@ 47
+, UPD VariableDeclarationStatement@@long instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46423 @LENGTH@ 87
+---UPD VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46428 @LENGTH@ 81
+------DEL MethodInvocation@@convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46443 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant + 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46443 @LENGTH@ 66
+------MOV InfixExpression@@instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46461 @LENGTH@ 47
+, INS VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46481 @LENGTH@ 45
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46481 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46486 @LENGTH@ 39
+------INS SimpleName@@offsetBefore @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46486 @LENGTH@ 12
+------INS MethodInvocation@@getOffset(instantBefore) @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+---------INS SimpleName@@MethodName:getOffset:[instantBefore] @TO@ MethodInvocation@@getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+------------INS SimpleName@@instantBefore @TO@ SimpleName@@MethodName:getOffset:[instantBefore] @AT@ 46511 @LENGTH@ 13
+, UPD IfStatement@@InfixExpression:instantBefore == instantAfter @TO@ InfixExpression:offsetBefore <= offsetAfter @AT@ 46519 @LENGTH@ 136
+---UPD InfixExpression@@instantBefore == instantAfter @TO@ offsetBefore <= offsetAfter @AT@ 46523 @LENGTH@ 29
+------UPD SimpleName@@instantBefore @TO@ offsetBefore @AT@ 46523 @LENGTH@ 13
+------UPD Operator@@== @TO@ <= @AT@ 46536 @LENGTH@ 2
+------UPD SimpleName@@instantAfter @TO@ offsetAfter @AT@ 46540 @LENGTH@ 12
+, INS VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46535 @LENGTH@ 43
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46535 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46540 @LENGTH@ 37
+------INS SimpleName@@offsetAfter @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46540 @LENGTH@ 11
+------INS MethodInvocation@@getOffset(instantAfter) @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+---------INS SimpleName@@MethodName:getOffset:[instantAfter] @TO@ MethodInvocation@@getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+------------INS SimpleName@@instantAfter @TO@ SimpleName@@MethodName:getOffset:[instantAfter] @AT@ 46564 @LENGTH@ 12
+, UPD VariableDeclarationStatement@@long local=convertUTCToLocal(instant); @TO@ long transition=nextTransition(instantBefore); @AT@ 46743 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@local=convertUTCToLocal(instant) @TO@ transition=nextTransition(instantBefore) @AT@ 46748 @LENGTH@ 34
+------UPD SimpleName@@local @TO@ transition @AT@ 46748 @LENGTH@ 5
+------UPD MethodInvocation@@convertUTCToLocal(instant) @TO@ nextTransition(instantBefore) @AT@ 46756 @LENGTH@ 26
+---------UPD SimpleName@@MethodName:convertUTCToLocal:[instant] @TO@ MethodName:nextTransition:[instantBefore] @AT@ 46756 @LENGTH@ 26
+------------UPD SimpleName@@instant @TO@ instantBefore @AT@ 46774 @LENGTH@ 7
+, DEL ReturnStatement@@MethodInvocation:convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46792 @LENGTH@ 86
+---DEL MethodInvocation@@convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46799 @LENGTH@ 78
+------DEL SimpleName@@MethodName:convertLocalToUTC:[local, false, earlierOrLater ? instantAfter : instantBefore] @AT@ 46799 @LENGTH@ 78
+---------DEL SimpleName@@local @AT@ 46817 @LENGTH@ 5
+---------DEL BooleanLiteral@@false @AT@ 46824 @LENGTH@ 5
+---------DEL ConditionalExpression@@earlierOrLater ? instantAfter : instantBefore @AT@ 46831 @LENGTH@ 45
+------------DEL SimpleName@@instantBefore @AT@ 46863 @LENGTH@ 13
+, INS VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46809 @LENGTH@ 39
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46809 @LENGTH@ 4
+---INS VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46814 @LENGTH@ 33
+------INS SimpleName@@diff @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46814 @LENGTH@ 4
+------INS InfixExpression@@offsetBefore - offsetAfter @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 26
+---------INS SimpleName@@offsetBefore @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46833 @LENGTH@ 1
+---------INS SimpleName@@offsetAfter @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46836 @LENGTH@ 11
+, INS VariableDeclarationStatement@@long overlapStart=transition - diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46914 @LENGTH@ 38
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46914 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapStart=transition - diff @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46919 @LENGTH@ 32
+------INS SimpleName@@overlapStart @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46919 @LENGTH@ 12
+------INS InfixExpression@@transition - diff @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46934 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition - diff @AT@ 46934 @LENGTH@ 10
+---------INS Operator@@- @TO@ InfixExpression@@transition - diff @AT@ 46944 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition - diff @AT@ 46947 @LENGTH@ 4
+, INS VariableDeclarationStatement@@long overlapEnd=transition + diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46961 @LENGTH@ 36
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46961 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapEnd=transition + diff @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46966 @LENGTH@ 30
+------INS SimpleName@@overlapEnd @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46966 @LENGTH@ 10
+------INS InfixExpression@@transition + diff @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46979 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition + diff @AT@ 46979 @LENGTH@ 10
+---------INS Operator@@+ @TO@ InfixExpression@@transition + diff @AT@ 46989 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition + diff @AT@ 46992 @LENGTH@ 4
+, INS IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47006 @LENGTH@ 109
+---INS InfixExpression@@instant < overlapStart || instant >= overlapEnd @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 47
+------INS InfixExpression@@instant < overlapStart @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant < overlapStart @AT@ 47010 @LENGTH@ 7
+---------INS Operator@@< @TO@ InfixExpression@@instant < overlapStart @AT@ 47017 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant < overlapStart @AT@ 47020 @LENGTH@ 12
+------INS Operator@@|| @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47032 @LENGTH@ 2
+------INS InfixExpression@@instant >= overlapEnd @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47036 @LENGTH@ 21
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47036 @LENGTH@ 7
+---------INS Operator@@>= @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47043 @LENGTH@ 2
+---------INS SimpleName@@overlapEnd @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47047 @LENGTH@ 10
+---INS ReturnStatement@@SimpleName:instant @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47071 @LENGTH@ 15
+------INS SimpleName@@instant @TO@ ReturnStatement@@SimpleName:instant @AT@ 47078 @LENGTH@ 7
+, INS VariableDeclarationStatement@@long afterStart=instant - overlapStart; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47161 @LENGTH@ 41
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47161 @LENGTH@ 4
+---INS VariableDeclarationFragment@@afterStart=instant - overlapStart @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47166 @LENGTH@ 35
+------INS SimpleName@@afterStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47166 @LENGTH@ 10
+------INS InfixExpression@@instant - overlapStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47179 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant - overlapStart @AT@ 47179 @LENGTH@ 7
+---------INS Operator@@- @TO@ InfixExpression@@instant - overlapStart @AT@ 47186 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant - overlapStart @AT@ 47189 @LENGTH@ 12
+, INS IfStatement@@InfixExpression:afterStart >= diff @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47211 @LENGTH@ 252
+---INS InfixExpression@@afterStart >= diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47215 @LENGTH@ 18
+------INS SimpleName@@afterStart @TO@ InfixExpression@@afterStart >= diff @AT@ 47215 @LENGTH@ 10
+------INS Operator@@>= @TO@ InfixExpression@@afterStart >= diff @AT@ 47225 @LENGTH@ 2
+------INS SimpleName@@diff @TO@ InfixExpression@@afterStart >= diff @AT@ 47229 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47286 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant : instant - diff @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @AT@ 47293 @LENGTH@ 41
+---------MOV SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46831 @LENGTH@ 14
+---------MOV SimpleName@@instantAfter @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46848 @LENGTH@ 12
+---------INS InfixExpression@@instant - diff @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 47320 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant - diff @AT@ 47320 @LENGTH@ 7
+------------INS Operator@@- @TO@ InfixExpression@@instant - diff @AT@ 47327 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant - diff @AT@ 47330 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47404 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant + diff : instant @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 41
+---------INS SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 14
+---------INS InfixExpression@@instant + diff @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47428 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant + diff @AT@ 47428 @LENGTH@ 7
+------------INS Operator@@+ @TO@ InfixExpression@@instant + diff @AT@ 47435 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant + diff @AT@ 47438 @LENGTH@ 4
+---------INS SimpleName@@instant @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47445 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, OP6)
+OP6:         (INS, SimpleName, OP5, OP7)
+OP7:            (INS, SimpleName, OP6, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@long instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46326 @LENGTH@ 88
+---UPD VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46331 @LENGTH@ 82
+------DEL MethodInvocation@@convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46347 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant - 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46347 @LENGTH@ 66
+------MOV InfixExpression@@instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46365 @LENGTH@ 47
+, UPD VariableDeclarationStatement@@long instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46423 @LENGTH@ 87
+---UPD VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46428 @LENGTH@ 81
+------DEL MethodInvocation@@convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46443 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant + 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46443 @LENGTH@ 66
+------MOV InfixExpression@@instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46461 @LENGTH@ 47
+, INS VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46481 @LENGTH@ 45
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46481 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46486 @LENGTH@ 39
+------INS SimpleName@@offsetBefore @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46486 @LENGTH@ 12
+------INS MethodInvocation@@getOffset(instantBefore) @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+---------INS SimpleName@@MethodName:getOffset:[instantBefore] @TO@ MethodInvocation@@getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+------------INS SimpleName@@instantBefore @TO@ SimpleName@@MethodName:getOffset:[instantBefore] @AT@ 46511 @LENGTH@ 13
+, UPD IfStatement@@InfixExpression:instantBefore == instantAfter @TO@ InfixExpression:offsetBefore <= offsetAfter @AT@ 46519 @LENGTH@ 136
+---UPD InfixExpression@@instantBefore == instantAfter @TO@ offsetBefore <= offsetAfter @AT@ 46523 @LENGTH@ 29
+------UPD SimpleName@@instantBefore @TO@ offsetBefore @AT@ 46523 @LENGTH@ 13
+------UPD Operator@@== @TO@ <= @AT@ 46536 @LENGTH@ 2
+------UPD SimpleName@@instantAfter @TO@ offsetAfter @AT@ 46540 @LENGTH@ 12
+, INS VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46535 @LENGTH@ 43
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46535 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46540 @LENGTH@ 37
+------INS SimpleName@@offsetAfter @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46540 @LENGTH@ 11
+------INS MethodInvocation@@getOffset(instantAfter) @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+---------INS SimpleName@@MethodName:getOffset:[instantAfter] @TO@ MethodInvocation@@getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+------------INS SimpleName@@instantAfter @TO@ SimpleName@@MethodName:getOffset:[instantAfter] @AT@ 46564 @LENGTH@ 12
+, UPD VariableDeclarationStatement@@long local=convertUTCToLocal(instant); @TO@ long transition=nextTransition(instantBefore); @AT@ 46743 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@local=convertUTCToLocal(instant) @TO@ transition=nextTransition(instantBefore) @AT@ 46748 @LENGTH@ 34
+------UPD SimpleName@@local @TO@ transition @AT@ 46748 @LENGTH@ 5
+------UPD MethodInvocation@@convertUTCToLocal(instant) @TO@ nextTransition(instantBefore) @AT@ 46756 @LENGTH@ 26
+---------UPD SimpleName@@MethodName:convertUTCToLocal:[instant] @TO@ MethodName:nextTransition:[instantBefore] @AT@ 46756 @LENGTH@ 26
+------------UPD SimpleName@@instant @TO@ instantBefore @AT@ 46774 @LENGTH@ 7
+, DEL ReturnStatement@@MethodInvocation:convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46792 @LENGTH@ 86
+---DEL MethodInvocation@@convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46799 @LENGTH@ 78
+------DEL SimpleName@@MethodName:convertLocalToUTC:[local, false, earlierOrLater ? instantAfter : instantBefore] @AT@ 46799 @LENGTH@ 78
+---------DEL SimpleName@@local @AT@ 46817 @LENGTH@ 5
+---------DEL BooleanLiteral@@false @AT@ 46824 @LENGTH@ 5
+---------DEL ConditionalExpression@@earlierOrLater ? instantAfter : instantBefore @AT@ 46831 @LENGTH@ 45
+------------DEL SimpleName@@instantBefore @AT@ 46863 @LENGTH@ 13
+, INS VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46809 @LENGTH@ 39
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46809 @LENGTH@ 4
+---INS VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46814 @LENGTH@ 33
+------INS SimpleName@@diff @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46814 @LENGTH@ 4
+------INS InfixExpression@@offsetBefore - offsetAfter @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 26
+---------INS SimpleName@@offsetBefore @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46833 @LENGTH@ 1
+---------INS SimpleName@@offsetAfter @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46836 @LENGTH@ 11
+, INS VariableDeclarationStatement@@long overlapStart=transition - diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46914 @LENGTH@ 38
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46914 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapStart=transition - diff @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46919 @LENGTH@ 32
+------INS SimpleName@@overlapStart @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46919 @LENGTH@ 12
+------INS InfixExpression@@transition - diff @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46934 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition - diff @AT@ 46934 @LENGTH@ 10
+---------INS Operator@@- @TO@ InfixExpression@@transition - diff @AT@ 46944 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition - diff @AT@ 46947 @LENGTH@ 4
+, INS VariableDeclarationStatement@@long overlapEnd=transition + diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46961 @LENGTH@ 36
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46961 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapEnd=transition + diff @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46966 @LENGTH@ 30
+------INS SimpleName@@overlapEnd @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46966 @LENGTH@ 10
+------INS InfixExpression@@transition + diff @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46979 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition + diff @AT@ 46979 @LENGTH@ 10
+---------INS Operator@@+ @TO@ InfixExpression@@transition + diff @AT@ 46989 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition + diff @AT@ 46992 @LENGTH@ 4
+, INS IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47006 @LENGTH@ 109
+---INS InfixExpression@@instant < overlapStart || instant >= overlapEnd @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 47
+------INS InfixExpression@@instant < overlapStart @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant < overlapStart @AT@ 47010 @LENGTH@ 7
+---------INS Operator@@< @TO@ InfixExpression@@instant < overlapStart @AT@ 47017 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant < overlapStart @AT@ 47020 @LENGTH@ 12
+------INS Operator@@|| @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47032 @LENGTH@ 2
+------INS InfixExpression@@instant >= overlapEnd @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47036 @LENGTH@ 21
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47036 @LENGTH@ 7
+---------INS Operator@@>= @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47043 @LENGTH@ 2
+---------INS SimpleName@@overlapEnd @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47047 @LENGTH@ 10
+---INS ReturnStatement@@SimpleName:instant @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47071 @LENGTH@ 15
+------INS SimpleName@@instant @TO@ ReturnStatement@@SimpleName:instant @AT@ 47078 @LENGTH@ 7
+, INS VariableDeclarationStatement@@long afterStart=instant - overlapStart; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47161 @LENGTH@ 41
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47161 @LENGTH@ 4
+---INS VariableDeclarationFragment@@afterStart=instant - overlapStart @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47166 @LENGTH@ 35
+------INS SimpleName@@afterStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47166 @LENGTH@ 10
+------INS InfixExpression@@instant - overlapStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47179 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant - overlapStart @AT@ 47179 @LENGTH@ 7
+---------INS Operator@@- @TO@ InfixExpression@@instant - overlapStart @AT@ 47186 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant - overlapStart @AT@ 47189 @LENGTH@ 12
+, INS IfStatement@@InfixExpression:afterStart >= diff @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47211 @LENGTH@ 252
+---INS InfixExpression@@afterStart >= diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47215 @LENGTH@ 18
+------INS SimpleName@@afterStart @TO@ InfixExpression@@afterStart >= diff @AT@ 47215 @LENGTH@ 10
+------INS Operator@@>= @TO@ InfixExpression@@afterStart >= diff @AT@ 47225 @LENGTH@ 2
+------INS SimpleName@@diff @TO@ InfixExpression@@afterStart >= diff @AT@ 47229 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47286 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant : instant - diff @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @AT@ 47293 @LENGTH@ 41
+---------MOV SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46831 @LENGTH@ 14
+---------MOV SimpleName@@instantAfter @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46848 @LENGTH@ 12
+---------INS InfixExpression@@instant - diff @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 47320 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant - diff @AT@ 47320 @LENGTH@ 7
+------------INS Operator@@- @TO@ InfixExpression@@instant - diff @AT@ 47327 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant - diff @AT@ 47330 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47404 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant + diff : instant @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 41
+---------INS SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 14
+---------INS InfixExpression@@instant + diff @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47428 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant + diff @AT@ 47428 @LENGTH@ 7
+------------INS Operator@@+ @TO@ InfixExpression@@instant + diff @AT@ 47435 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant + diff @AT@ 47438 @LENGTH@ 4
+---------INS SimpleName@@instant @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47445 @LENGTH@ 7
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3 OP4)
+OP3:      (UPD, SimpleName, OP2, null)
+OP4:      (UPD, MethodInvocation, OP2, OP5)
+OP5:         (UPD, SimpleName, OP4, OP6)
+OP6:            (UPD, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@long instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46326 @LENGTH@ 88
+---UPD VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46331 @LENGTH@ 82
+------DEL MethodInvocation@@convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46347 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant - 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46347 @LENGTH@ 66
+------MOV InfixExpression@@instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46365 @LENGTH@ 47
+, UPD VariableDeclarationStatement@@long instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46423 @LENGTH@ 87
+---UPD VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46428 @LENGTH@ 81
+------DEL MethodInvocation@@convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46443 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant + 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46443 @LENGTH@ 66
+------MOV InfixExpression@@instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46461 @LENGTH@ 47
+, INS VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46481 @LENGTH@ 45
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46481 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46486 @LENGTH@ 39
+------INS SimpleName@@offsetBefore @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46486 @LENGTH@ 12
+------INS MethodInvocation@@getOffset(instantBefore) @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+---------INS SimpleName@@MethodName:getOffset:[instantBefore] @TO@ MethodInvocation@@getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+------------INS SimpleName@@instantBefore @TO@ SimpleName@@MethodName:getOffset:[instantBefore] @AT@ 46511 @LENGTH@ 13
+, UPD IfStatement@@InfixExpression:instantBefore == instantAfter @TO@ InfixExpression:offsetBefore <= offsetAfter @AT@ 46519 @LENGTH@ 136
+---UPD InfixExpression@@instantBefore == instantAfter @TO@ offsetBefore <= offsetAfter @AT@ 46523 @LENGTH@ 29
+------UPD SimpleName@@instantBefore @TO@ offsetBefore @AT@ 46523 @LENGTH@ 13
+------UPD Operator@@== @TO@ <= @AT@ 46536 @LENGTH@ 2
+------UPD SimpleName@@instantAfter @TO@ offsetAfter @AT@ 46540 @LENGTH@ 12
+, INS VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46535 @LENGTH@ 43
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46535 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46540 @LENGTH@ 37
+------INS SimpleName@@offsetAfter @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46540 @LENGTH@ 11
+------INS MethodInvocation@@getOffset(instantAfter) @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+---------INS SimpleName@@MethodName:getOffset:[instantAfter] @TO@ MethodInvocation@@getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+------------INS SimpleName@@instantAfter @TO@ SimpleName@@MethodName:getOffset:[instantAfter] @AT@ 46564 @LENGTH@ 12
+, UPD VariableDeclarationStatement@@long local=convertUTCToLocal(instant); @TO@ long transition=nextTransition(instantBefore); @AT@ 46743 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@local=convertUTCToLocal(instant) @TO@ transition=nextTransition(instantBefore) @AT@ 46748 @LENGTH@ 34
+------UPD SimpleName@@local @TO@ transition @AT@ 46748 @LENGTH@ 5
+------UPD MethodInvocation@@convertUTCToLocal(instant) @TO@ nextTransition(instantBefore) @AT@ 46756 @LENGTH@ 26
+---------UPD SimpleName@@MethodName:convertUTCToLocal:[instant] @TO@ MethodName:nextTransition:[instantBefore] @AT@ 46756 @LENGTH@ 26
+------------UPD SimpleName@@instant @TO@ instantBefore @AT@ 46774 @LENGTH@ 7
+, DEL ReturnStatement@@MethodInvocation:convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46792 @LENGTH@ 86
+---DEL MethodInvocation@@convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46799 @LENGTH@ 78
+------DEL SimpleName@@MethodName:convertLocalToUTC:[local, false, earlierOrLater ? instantAfter : instantBefore] @AT@ 46799 @LENGTH@ 78
+---------DEL SimpleName@@local @AT@ 46817 @LENGTH@ 5
+---------DEL BooleanLiteral@@false @AT@ 46824 @LENGTH@ 5
+---------DEL ConditionalExpression@@earlierOrLater ? instantAfter : instantBefore @AT@ 46831 @LENGTH@ 45
+------------DEL SimpleName@@instantBefore @AT@ 46863 @LENGTH@ 13
+, INS VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46809 @LENGTH@ 39
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46809 @LENGTH@ 4
+---INS VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46814 @LENGTH@ 33
+------INS SimpleName@@diff @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46814 @LENGTH@ 4
+------INS InfixExpression@@offsetBefore - offsetAfter @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 26
+---------INS SimpleName@@offsetBefore @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46833 @LENGTH@ 1
+---------INS SimpleName@@offsetAfter @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46836 @LENGTH@ 11
+, INS VariableDeclarationStatement@@long overlapStart=transition - diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46914 @LENGTH@ 38
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46914 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapStart=transition - diff @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46919 @LENGTH@ 32
+------INS SimpleName@@overlapStart @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46919 @LENGTH@ 12
+------INS InfixExpression@@transition - diff @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46934 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition - diff @AT@ 46934 @LENGTH@ 10
+---------INS Operator@@- @TO@ InfixExpression@@transition - diff @AT@ 46944 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition - diff @AT@ 46947 @LENGTH@ 4
+, INS VariableDeclarationStatement@@long overlapEnd=transition + diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46961 @LENGTH@ 36
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46961 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapEnd=transition + diff @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46966 @LENGTH@ 30
+------INS SimpleName@@overlapEnd @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46966 @LENGTH@ 10
+------INS InfixExpression@@transition + diff @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46979 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition + diff @AT@ 46979 @LENGTH@ 10
+---------INS Operator@@+ @TO@ InfixExpression@@transition + diff @AT@ 46989 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition + diff @AT@ 46992 @LENGTH@ 4
+, INS IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47006 @LENGTH@ 109
+---INS InfixExpression@@instant < overlapStart || instant >= overlapEnd @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 47
+------INS InfixExpression@@instant < overlapStart @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant < overlapStart @AT@ 47010 @LENGTH@ 7
+---------INS Operator@@< @TO@ InfixExpression@@instant < overlapStart @AT@ 47017 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant < overlapStart @AT@ 47020 @LENGTH@ 12
+------INS Operator@@|| @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47032 @LENGTH@ 2
+------INS InfixExpression@@instant >= overlapEnd @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47036 @LENGTH@ 21
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47036 @LENGTH@ 7
+---------INS Operator@@>= @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47043 @LENGTH@ 2
+---------INS SimpleName@@overlapEnd @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47047 @LENGTH@ 10
+---INS ReturnStatement@@SimpleName:instant @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47071 @LENGTH@ 15
+------INS SimpleName@@instant @TO@ ReturnStatement@@SimpleName:instant @AT@ 47078 @LENGTH@ 7
+, INS VariableDeclarationStatement@@long afterStart=instant - overlapStart; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47161 @LENGTH@ 41
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47161 @LENGTH@ 4
+---INS VariableDeclarationFragment@@afterStart=instant - overlapStart @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47166 @LENGTH@ 35
+------INS SimpleName@@afterStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47166 @LENGTH@ 10
+------INS InfixExpression@@instant - overlapStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47179 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant - overlapStart @AT@ 47179 @LENGTH@ 7
+---------INS Operator@@- @TO@ InfixExpression@@instant - overlapStart @AT@ 47186 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant - overlapStart @AT@ 47189 @LENGTH@ 12
+, INS IfStatement@@InfixExpression:afterStart >= diff @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47211 @LENGTH@ 252
+---INS InfixExpression@@afterStart >= diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47215 @LENGTH@ 18
+------INS SimpleName@@afterStart @TO@ InfixExpression@@afterStart >= diff @AT@ 47215 @LENGTH@ 10
+------INS Operator@@>= @TO@ InfixExpression@@afterStart >= diff @AT@ 47225 @LENGTH@ 2
+------INS SimpleName@@diff @TO@ InfixExpression@@afterStart >= diff @AT@ 47229 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47286 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant : instant - diff @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @AT@ 47293 @LENGTH@ 41
+---------MOV SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46831 @LENGTH@ 14
+---------MOV SimpleName@@instantAfter @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46848 @LENGTH@ 12
+---------INS InfixExpression@@instant - diff @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 47320 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant - diff @AT@ 47320 @LENGTH@ 7
+------------INS Operator@@- @TO@ InfixExpression@@instant - diff @AT@ 47327 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant - diff @AT@ 47330 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47404 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant + diff : instant @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 41
+---------INS SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 14
+---------INS InfixExpression@@instant + diff @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47428 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant + diff @AT@ 47428 @LENGTH@ 7
+------------INS Operator@@+ @TO@ InfixExpression@@instant + diff @AT@ 47435 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant + diff @AT@ 47438 @LENGTH@ 4
+---------INS SimpleName@@instant @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47445 @LENGTH@ 7
+]
+
+CII:
+OP1:(DEL, ReturnStatement, null, OP2)
+OP2:   (DEL, MethodInvocation, OP1, OP3)
+OP3:      (DEL, SimpleName, OP2, OP4 OP5 OP6)
+OP4:         (DEL, SimpleName, OP3, null)
+OP5:         (DEL, BooleanLiteral, OP3, null)
+OP6:         (DEL, ConditionalExpression, OP3, OP7)
+OP7:            (DEL, SimpleName, OP6, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@long instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46326 @LENGTH@ 88
+---UPD VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46331 @LENGTH@ 82
+------DEL MethodInvocation@@convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46347 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant - 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46347 @LENGTH@ 66
+------MOV InfixExpression@@instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46365 @LENGTH@ 47
+, UPD VariableDeclarationStatement@@long instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46423 @LENGTH@ 87
+---UPD VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46428 @LENGTH@ 81
+------DEL MethodInvocation@@convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46443 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant + 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46443 @LENGTH@ 66
+------MOV InfixExpression@@instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46461 @LENGTH@ 47
+, INS VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46481 @LENGTH@ 45
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46481 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46486 @LENGTH@ 39
+------INS SimpleName@@offsetBefore @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46486 @LENGTH@ 12
+------INS MethodInvocation@@getOffset(instantBefore) @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+---------INS SimpleName@@MethodName:getOffset:[instantBefore] @TO@ MethodInvocation@@getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+------------INS SimpleName@@instantBefore @TO@ SimpleName@@MethodName:getOffset:[instantBefore] @AT@ 46511 @LENGTH@ 13
+, UPD IfStatement@@InfixExpression:instantBefore == instantAfter @TO@ InfixExpression:offsetBefore <= offsetAfter @AT@ 46519 @LENGTH@ 136
+---UPD InfixExpression@@instantBefore == instantAfter @TO@ offsetBefore <= offsetAfter @AT@ 46523 @LENGTH@ 29
+------UPD SimpleName@@instantBefore @TO@ offsetBefore @AT@ 46523 @LENGTH@ 13
+------UPD Operator@@== @TO@ <= @AT@ 46536 @LENGTH@ 2
+------UPD SimpleName@@instantAfter @TO@ offsetAfter @AT@ 46540 @LENGTH@ 12
+, INS VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46535 @LENGTH@ 43
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46535 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46540 @LENGTH@ 37
+------INS SimpleName@@offsetAfter @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46540 @LENGTH@ 11
+------INS MethodInvocation@@getOffset(instantAfter) @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+---------INS SimpleName@@MethodName:getOffset:[instantAfter] @TO@ MethodInvocation@@getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+------------INS SimpleName@@instantAfter @TO@ SimpleName@@MethodName:getOffset:[instantAfter] @AT@ 46564 @LENGTH@ 12
+, UPD VariableDeclarationStatement@@long local=convertUTCToLocal(instant); @TO@ long transition=nextTransition(instantBefore); @AT@ 46743 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@local=convertUTCToLocal(instant) @TO@ transition=nextTransition(instantBefore) @AT@ 46748 @LENGTH@ 34
+------UPD SimpleName@@local @TO@ transition @AT@ 46748 @LENGTH@ 5
+------UPD MethodInvocation@@convertUTCToLocal(instant) @TO@ nextTransition(instantBefore) @AT@ 46756 @LENGTH@ 26
+---------UPD SimpleName@@MethodName:convertUTCToLocal:[instant] @TO@ MethodName:nextTransition:[instantBefore] @AT@ 46756 @LENGTH@ 26
+------------UPD SimpleName@@instant @TO@ instantBefore @AT@ 46774 @LENGTH@ 7
+, DEL ReturnStatement@@MethodInvocation:convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46792 @LENGTH@ 86
+---DEL MethodInvocation@@convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46799 @LENGTH@ 78
+------DEL SimpleName@@MethodName:convertLocalToUTC:[local, false, earlierOrLater ? instantAfter : instantBefore] @AT@ 46799 @LENGTH@ 78
+---------DEL SimpleName@@local @AT@ 46817 @LENGTH@ 5
+---------DEL BooleanLiteral@@false @AT@ 46824 @LENGTH@ 5
+---------DEL ConditionalExpression@@earlierOrLater ? instantAfter : instantBefore @AT@ 46831 @LENGTH@ 45
+------------DEL SimpleName@@instantBefore @AT@ 46863 @LENGTH@ 13
+, INS VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46809 @LENGTH@ 39
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46809 @LENGTH@ 4
+---INS VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46814 @LENGTH@ 33
+------INS SimpleName@@diff @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46814 @LENGTH@ 4
+------INS InfixExpression@@offsetBefore - offsetAfter @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 26
+---------INS SimpleName@@offsetBefore @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46833 @LENGTH@ 1
+---------INS SimpleName@@offsetAfter @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46836 @LENGTH@ 11
+, INS VariableDeclarationStatement@@long overlapStart=transition - diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46914 @LENGTH@ 38
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46914 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapStart=transition - diff @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46919 @LENGTH@ 32
+------INS SimpleName@@overlapStart @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46919 @LENGTH@ 12
+------INS InfixExpression@@transition - diff @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46934 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition - diff @AT@ 46934 @LENGTH@ 10
+---------INS Operator@@- @TO@ InfixExpression@@transition - diff @AT@ 46944 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition - diff @AT@ 46947 @LENGTH@ 4
+, INS VariableDeclarationStatement@@long overlapEnd=transition + diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46961 @LENGTH@ 36
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46961 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapEnd=transition + diff @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46966 @LENGTH@ 30
+------INS SimpleName@@overlapEnd @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46966 @LENGTH@ 10
+------INS InfixExpression@@transition + diff @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46979 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition + diff @AT@ 46979 @LENGTH@ 10
+---------INS Operator@@+ @TO@ InfixExpression@@transition + diff @AT@ 46989 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition + diff @AT@ 46992 @LENGTH@ 4
+, INS IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47006 @LENGTH@ 109
+---INS InfixExpression@@instant < overlapStart || instant >= overlapEnd @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 47
+------INS InfixExpression@@instant < overlapStart @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant < overlapStart @AT@ 47010 @LENGTH@ 7
+---------INS Operator@@< @TO@ InfixExpression@@instant < overlapStart @AT@ 47017 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant < overlapStart @AT@ 47020 @LENGTH@ 12
+------INS Operator@@|| @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47032 @LENGTH@ 2
+------INS InfixExpression@@instant >= overlapEnd @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47036 @LENGTH@ 21
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47036 @LENGTH@ 7
+---------INS Operator@@>= @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47043 @LENGTH@ 2
+---------INS SimpleName@@overlapEnd @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47047 @LENGTH@ 10
+---INS ReturnStatement@@SimpleName:instant @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47071 @LENGTH@ 15
+------INS SimpleName@@instant @TO@ ReturnStatement@@SimpleName:instant @AT@ 47078 @LENGTH@ 7
+, INS VariableDeclarationStatement@@long afterStart=instant - overlapStart; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47161 @LENGTH@ 41
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47161 @LENGTH@ 4
+---INS VariableDeclarationFragment@@afterStart=instant - overlapStart @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47166 @LENGTH@ 35
+------INS SimpleName@@afterStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47166 @LENGTH@ 10
+------INS InfixExpression@@instant - overlapStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47179 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant - overlapStart @AT@ 47179 @LENGTH@ 7
+---------INS Operator@@- @TO@ InfixExpression@@instant - overlapStart @AT@ 47186 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant - overlapStart @AT@ 47189 @LENGTH@ 12
+, INS IfStatement@@InfixExpression:afterStart >= diff @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47211 @LENGTH@ 252
+---INS InfixExpression@@afterStart >= diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47215 @LENGTH@ 18
+------INS SimpleName@@afterStart @TO@ InfixExpression@@afterStart >= diff @AT@ 47215 @LENGTH@ 10
+------INS Operator@@>= @TO@ InfixExpression@@afterStart >= diff @AT@ 47225 @LENGTH@ 2
+------INS SimpleName@@diff @TO@ InfixExpression@@afterStart >= diff @AT@ 47229 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47286 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant : instant - diff @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @AT@ 47293 @LENGTH@ 41
+---------MOV SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46831 @LENGTH@ 14
+---------MOV SimpleName@@instantAfter @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46848 @LENGTH@ 12
+---------INS InfixExpression@@instant - diff @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 47320 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant - diff @AT@ 47320 @LENGTH@ 7
+------------INS Operator@@- @TO@ InfixExpression@@instant - diff @AT@ 47327 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant - diff @AT@ 47330 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47404 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant + diff : instant @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 41
+---------INS SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 14
+---------INS InfixExpression@@instant + diff @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47428 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant + diff @AT@ 47428 @LENGTH@ 7
+------------INS Operator@@+ @TO@ InfixExpression@@instant + diff @AT@ 47435 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant + diff @AT@ 47438 @LENGTH@ 4
+---------INS SimpleName@@instant @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47445 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, InfixExpression, OP3, OP6 OP7 OP8)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, Operator, OP5, null)
+OP8:         (INS, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@long instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46326 @LENGTH@ 88
+---UPD VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46331 @LENGTH@ 82
+------DEL MethodInvocation@@convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46347 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant - 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46347 @LENGTH@ 66
+------MOV InfixExpression@@instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46365 @LENGTH@ 47
+, UPD VariableDeclarationStatement@@long instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46423 @LENGTH@ 87
+---UPD VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46428 @LENGTH@ 81
+------DEL MethodInvocation@@convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46443 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant + 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46443 @LENGTH@ 66
+------MOV InfixExpression@@instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46461 @LENGTH@ 47
+, INS VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46481 @LENGTH@ 45
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46481 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46486 @LENGTH@ 39
+------INS SimpleName@@offsetBefore @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46486 @LENGTH@ 12
+------INS MethodInvocation@@getOffset(instantBefore) @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+---------INS SimpleName@@MethodName:getOffset:[instantBefore] @TO@ MethodInvocation@@getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+------------INS SimpleName@@instantBefore @TO@ SimpleName@@MethodName:getOffset:[instantBefore] @AT@ 46511 @LENGTH@ 13
+, UPD IfStatement@@InfixExpression:instantBefore == instantAfter @TO@ InfixExpression:offsetBefore <= offsetAfter @AT@ 46519 @LENGTH@ 136
+---UPD InfixExpression@@instantBefore == instantAfter @TO@ offsetBefore <= offsetAfter @AT@ 46523 @LENGTH@ 29
+------UPD SimpleName@@instantBefore @TO@ offsetBefore @AT@ 46523 @LENGTH@ 13
+------UPD Operator@@== @TO@ <= @AT@ 46536 @LENGTH@ 2
+------UPD SimpleName@@instantAfter @TO@ offsetAfter @AT@ 46540 @LENGTH@ 12
+, INS VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46535 @LENGTH@ 43
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46535 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46540 @LENGTH@ 37
+------INS SimpleName@@offsetAfter @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46540 @LENGTH@ 11
+------INS MethodInvocation@@getOffset(instantAfter) @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+---------INS SimpleName@@MethodName:getOffset:[instantAfter] @TO@ MethodInvocation@@getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+------------INS SimpleName@@instantAfter @TO@ SimpleName@@MethodName:getOffset:[instantAfter] @AT@ 46564 @LENGTH@ 12
+, UPD VariableDeclarationStatement@@long local=convertUTCToLocal(instant); @TO@ long transition=nextTransition(instantBefore); @AT@ 46743 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@local=convertUTCToLocal(instant) @TO@ transition=nextTransition(instantBefore) @AT@ 46748 @LENGTH@ 34
+------UPD SimpleName@@local @TO@ transition @AT@ 46748 @LENGTH@ 5
+------UPD MethodInvocation@@convertUTCToLocal(instant) @TO@ nextTransition(instantBefore) @AT@ 46756 @LENGTH@ 26
+---------UPD SimpleName@@MethodName:convertUTCToLocal:[instant] @TO@ MethodName:nextTransition:[instantBefore] @AT@ 46756 @LENGTH@ 26
+------------UPD SimpleName@@instant @TO@ instantBefore @AT@ 46774 @LENGTH@ 7
+, DEL ReturnStatement@@MethodInvocation:convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46792 @LENGTH@ 86
+---DEL MethodInvocation@@convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46799 @LENGTH@ 78
+------DEL SimpleName@@MethodName:convertLocalToUTC:[local, false, earlierOrLater ? instantAfter : instantBefore] @AT@ 46799 @LENGTH@ 78
+---------DEL SimpleName@@local @AT@ 46817 @LENGTH@ 5
+---------DEL BooleanLiteral@@false @AT@ 46824 @LENGTH@ 5
+---------DEL ConditionalExpression@@earlierOrLater ? instantAfter : instantBefore @AT@ 46831 @LENGTH@ 45
+------------DEL SimpleName@@instantBefore @AT@ 46863 @LENGTH@ 13
+, INS VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46809 @LENGTH@ 39
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46809 @LENGTH@ 4
+---INS VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46814 @LENGTH@ 33
+------INS SimpleName@@diff @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46814 @LENGTH@ 4
+------INS InfixExpression@@offsetBefore - offsetAfter @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 26
+---------INS SimpleName@@offsetBefore @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46833 @LENGTH@ 1
+---------INS SimpleName@@offsetAfter @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46836 @LENGTH@ 11
+, INS VariableDeclarationStatement@@long overlapStart=transition - diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46914 @LENGTH@ 38
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46914 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapStart=transition - diff @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46919 @LENGTH@ 32
+------INS SimpleName@@overlapStart @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46919 @LENGTH@ 12
+------INS InfixExpression@@transition - diff @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46934 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition - diff @AT@ 46934 @LENGTH@ 10
+---------INS Operator@@- @TO@ InfixExpression@@transition - diff @AT@ 46944 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition - diff @AT@ 46947 @LENGTH@ 4
+, INS VariableDeclarationStatement@@long overlapEnd=transition + diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46961 @LENGTH@ 36
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46961 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapEnd=transition + diff @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46966 @LENGTH@ 30
+------INS SimpleName@@overlapEnd @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46966 @LENGTH@ 10
+------INS InfixExpression@@transition + diff @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46979 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition + diff @AT@ 46979 @LENGTH@ 10
+---------INS Operator@@+ @TO@ InfixExpression@@transition + diff @AT@ 46989 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition + diff @AT@ 46992 @LENGTH@ 4
+, INS IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47006 @LENGTH@ 109
+---INS InfixExpression@@instant < overlapStart || instant >= overlapEnd @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 47
+------INS InfixExpression@@instant < overlapStart @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant < overlapStart @AT@ 47010 @LENGTH@ 7
+---------INS Operator@@< @TO@ InfixExpression@@instant < overlapStart @AT@ 47017 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant < overlapStart @AT@ 47020 @LENGTH@ 12
+------INS Operator@@|| @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47032 @LENGTH@ 2
+------INS InfixExpression@@instant >= overlapEnd @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47036 @LENGTH@ 21
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47036 @LENGTH@ 7
+---------INS Operator@@>= @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47043 @LENGTH@ 2
+---------INS SimpleName@@overlapEnd @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47047 @LENGTH@ 10
+---INS ReturnStatement@@SimpleName:instant @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47071 @LENGTH@ 15
+------INS SimpleName@@instant @TO@ ReturnStatement@@SimpleName:instant @AT@ 47078 @LENGTH@ 7
+, INS VariableDeclarationStatement@@long afterStart=instant - overlapStart; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47161 @LENGTH@ 41
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47161 @LENGTH@ 4
+---INS VariableDeclarationFragment@@afterStart=instant - overlapStart @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47166 @LENGTH@ 35
+------INS SimpleName@@afterStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47166 @LENGTH@ 10
+------INS InfixExpression@@instant - overlapStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47179 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant - overlapStart @AT@ 47179 @LENGTH@ 7
+---------INS Operator@@- @TO@ InfixExpression@@instant - overlapStart @AT@ 47186 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant - overlapStart @AT@ 47189 @LENGTH@ 12
+, INS IfStatement@@InfixExpression:afterStart >= diff @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47211 @LENGTH@ 252
+---INS InfixExpression@@afterStart >= diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47215 @LENGTH@ 18
+------INS SimpleName@@afterStart @TO@ InfixExpression@@afterStart >= diff @AT@ 47215 @LENGTH@ 10
+------INS Operator@@>= @TO@ InfixExpression@@afterStart >= diff @AT@ 47225 @LENGTH@ 2
+------INS SimpleName@@diff @TO@ InfixExpression@@afterStart >= diff @AT@ 47229 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47286 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant : instant - diff @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @AT@ 47293 @LENGTH@ 41
+---------MOV SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46831 @LENGTH@ 14
+---------MOV SimpleName@@instantAfter @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46848 @LENGTH@ 12
+---------INS InfixExpression@@instant - diff @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 47320 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant - diff @AT@ 47320 @LENGTH@ 7
+------------INS Operator@@- @TO@ InfixExpression@@instant - diff @AT@ 47327 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant - diff @AT@ 47330 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47404 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant + diff : instant @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 41
+---------INS SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 14
+---------INS InfixExpression@@instant + diff @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47428 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant + diff @AT@ 47428 @LENGTH@ 7
+------------INS Operator@@+ @TO@ InfixExpression@@instant + diff @AT@ 47435 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant + diff @AT@ 47438 @LENGTH@ 4
+---------INS SimpleName@@instant @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47445 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, InfixExpression, OP3, OP6 OP7 OP8)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, Operator, OP5, null)
+OP8:         (INS, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@long instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46326 @LENGTH@ 88
+---UPD VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46331 @LENGTH@ 82
+------DEL MethodInvocation@@convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46347 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant - 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46347 @LENGTH@ 66
+------MOV InfixExpression@@instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46365 @LENGTH@ 47
+, UPD VariableDeclarationStatement@@long instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46423 @LENGTH@ 87
+---UPD VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46428 @LENGTH@ 81
+------DEL MethodInvocation@@convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46443 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant + 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46443 @LENGTH@ 66
+------MOV InfixExpression@@instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46461 @LENGTH@ 47
+, INS VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46481 @LENGTH@ 45
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46481 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46486 @LENGTH@ 39
+------INS SimpleName@@offsetBefore @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46486 @LENGTH@ 12
+------INS MethodInvocation@@getOffset(instantBefore) @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+---------INS SimpleName@@MethodName:getOffset:[instantBefore] @TO@ MethodInvocation@@getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+------------INS SimpleName@@instantBefore @TO@ SimpleName@@MethodName:getOffset:[instantBefore] @AT@ 46511 @LENGTH@ 13
+, UPD IfStatement@@InfixExpression:instantBefore == instantAfter @TO@ InfixExpression:offsetBefore <= offsetAfter @AT@ 46519 @LENGTH@ 136
+---UPD InfixExpression@@instantBefore == instantAfter @TO@ offsetBefore <= offsetAfter @AT@ 46523 @LENGTH@ 29
+------UPD SimpleName@@instantBefore @TO@ offsetBefore @AT@ 46523 @LENGTH@ 13
+------UPD Operator@@== @TO@ <= @AT@ 46536 @LENGTH@ 2
+------UPD SimpleName@@instantAfter @TO@ offsetAfter @AT@ 46540 @LENGTH@ 12
+, INS VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46535 @LENGTH@ 43
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46535 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46540 @LENGTH@ 37
+------INS SimpleName@@offsetAfter @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46540 @LENGTH@ 11
+------INS MethodInvocation@@getOffset(instantAfter) @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+---------INS SimpleName@@MethodName:getOffset:[instantAfter] @TO@ MethodInvocation@@getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+------------INS SimpleName@@instantAfter @TO@ SimpleName@@MethodName:getOffset:[instantAfter] @AT@ 46564 @LENGTH@ 12
+, UPD VariableDeclarationStatement@@long local=convertUTCToLocal(instant); @TO@ long transition=nextTransition(instantBefore); @AT@ 46743 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@local=convertUTCToLocal(instant) @TO@ transition=nextTransition(instantBefore) @AT@ 46748 @LENGTH@ 34
+------UPD SimpleName@@local @TO@ transition @AT@ 46748 @LENGTH@ 5
+------UPD MethodInvocation@@convertUTCToLocal(instant) @TO@ nextTransition(instantBefore) @AT@ 46756 @LENGTH@ 26
+---------UPD SimpleName@@MethodName:convertUTCToLocal:[instant] @TO@ MethodName:nextTransition:[instantBefore] @AT@ 46756 @LENGTH@ 26
+------------UPD SimpleName@@instant @TO@ instantBefore @AT@ 46774 @LENGTH@ 7
+, DEL ReturnStatement@@MethodInvocation:convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46792 @LENGTH@ 86
+---DEL MethodInvocation@@convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46799 @LENGTH@ 78
+------DEL SimpleName@@MethodName:convertLocalToUTC:[local, false, earlierOrLater ? instantAfter : instantBefore] @AT@ 46799 @LENGTH@ 78
+---------DEL SimpleName@@local @AT@ 46817 @LENGTH@ 5
+---------DEL BooleanLiteral@@false @AT@ 46824 @LENGTH@ 5
+---------DEL ConditionalExpression@@earlierOrLater ? instantAfter : instantBefore @AT@ 46831 @LENGTH@ 45
+------------DEL SimpleName@@instantBefore @AT@ 46863 @LENGTH@ 13
+, INS VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46809 @LENGTH@ 39
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46809 @LENGTH@ 4
+---INS VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46814 @LENGTH@ 33
+------INS SimpleName@@diff @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46814 @LENGTH@ 4
+------INS InfixExpression@@offsetBefore - offsetAfter @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 26
+---------INS SimpleName@@offsetBefore @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46833 @LENGTH@ 1
+---------INS SimpleName@@offsetAfter @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46836 @LENGTH@ 11
+, INS VariableDeclarationStatement@@long overlapStart=transition - diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46914 @LENGTH@ 38
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46914 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapStart=transition - diff @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46919 @LENGTH@ 32
+------INS SimpleName@@overlapStart @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46919 @LENGTH@ 12
+------INS InfixExpression@@transition - diff @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46934 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition - diff @AT@ 46934 @LENGTH@ 10
+---------INS Operator@@- @TO@ InfixExpression@@transition - diff @AT@ 46944 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition - diff @AT@ 46947 @LENGTH@ 4
+, INS VariableDeclarationStatement@@long overlapEnd=transition + diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46961 @LENGTH@ 36
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46961 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapEnd=transition + diff @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46966 @LENGTH@ 30
+------INS SimpleName@@overlapEnd @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46966 @LENGTH@ 10
+------INS InfixExpression@@transition + diff @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46979 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition + diff @AT@ 46979 @LENGTH@ 10
+---------INS Operator@@+ @TO@ InfixExpression@@transition + diff @AT@ 46989 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition + diff @AT@ 46992 @LENGTH@ 4
+, INS IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47006 @LENGTH@ 109
+---INS InfixExpression@@instant < overlapStart || instant >= overlapEnd @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 47
+------INS InfixExpression@@instant < overlapStart @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant < overlapStart @AT@ 47010 @LENGTH@ 7
+---------INS Operator@@< @TO@ InfixExpression@@instant < overlapStart @AT@ 47017 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant < overlapStart @AT@ 47020 @LENGTH@ 12
+------INS Operator@@|| @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47032 @LENGTH@ 2
+------INS InfixExpression@@instant >= overlapEnd @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47036 @LENGTH@ 21
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47036 @LENGTH@ 7
+---------INS Operator@@>= @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47043 @LENGTH@ 2
+---------INS SimpleName@@overlapEnd @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47047 @LENGTH@ 10
+---INS ReturnStatement@@SimpleName:instant @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47071 @LENGTH@ 15
+------INS SimpleName@@instant @TO@ ReturnStatement@@SimpleName:instant @AT@ 47078 @LENGTH@ 7
+, INS VariableDeclarationStatement@@long afterStart=instant - overlapStart; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47161 @LENGTH@ 41
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47161 @LENGTH@ 4
+---INS VariableDeclarationFragment@@afterStart=instant - overlapStart @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47166 @LENGTH@ 35
+------INS SimpleName@@afterStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47166 @LENGTH@ 10
+------INS InfixExpression@@instant - overlapStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47179 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant - overlapStart @AT@ 47179 @LENGTH@ 7
+---------INS Operator@@- @TO@ InfixExpression@@instant - overlapStart @AT@ 47186 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant - overlapStart @AT@ 47189 @LENGTH@ 12
+, INS IfStatement@@InfixExpression:afterStart >= diff @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47211 @LENGTH@ 252
+---INS InfixExpression@@afterStart >= diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47215 @LENGTH@ 18
+------INS SimpleName@@afterStart @TO@ InfixExpression@@afterStart >= diff @AT@ 47215 @LENGTH@ 10
+------INS Operator@@>= @TO@ InfixExpression@@afterStart >= diff @AT@ 47225 @LENGTH@ 2
+------INS SimpleName@@diff @TO@ InfixExpression@@afterStart >= diff @AT@ 47229 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47286 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant : instant - diff @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @AT@ 47293 @LENGTH@ 41
+---------MOV SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46831 @LENGTH@ 14
+---------MOV SimpleName@@instantAfter @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46848 @LENGTH@ 12
+---------INS InfixExpression@@instant - diff @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 47320 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant - diff @AT@ 47320 @LENGTH@ 7
+------------INS Operator@@- @TO@ InfixExpression@@instant - diff @AT@ 47327 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant - diff @AT@ 47330 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47404 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant + diff : instant @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 41
+---------INS SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 14
+---------INS InfixExpression@@instant + diff @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47428 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant + diff @AT@ 47428 @LENGTH@ 7
+------------INS Operator@@+ @TO@ InfixExpression@@instant + diff @AT@ 47435 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant + diff @AT@ 47438 @LENGTH@ 4
+---------INS SimpleName@@instant @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47445 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, InfixExpression, OP3, OP6 OP7 OP8)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, Operator, OP5, null)
+OP8:         (INS, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@long instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46326 @LENGTH@ 88
+---UPD VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46331 @LENGTH@ 82
+------DEL MethodInvocation@@convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46347 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant - 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46347 @LENGTH@ 66
+------MOV InfixExpression@@instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46365 @LENGTH@ 47
+, UPD VariableDeclarationStatement@@long instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46423 @LENGTH@ 87
+---UPD VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46428 @LENGTH@ 81
+------DEL MethodInvocation@@convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46443 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant + 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46443 @LENGTH@ 66
+------MOV InfixExpression@@instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46461 @LENGTH@ 47
+, INS VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46481 @LENGTH@ 45
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46481 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46486 @LENGTH@ 39
+------INS SimpleName@@offsetBefore @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46486 @LENGTH@ 12
+------INS MethodInvocation@@getOffset(instantBefore) @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+---------INS SimpleName@@MethodName:getOffset:[instantBefore] @TO@ MethodInvocation@@getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+------------INS SimpleName@@instantBefore @TO@ SimpleName@@MethodName:getOffset:[instantBefore] @AT@ 46511 @LENGTH@ 13
+, UPD IfStatement@@InfixExpression:instantBefore == instantAfter @TO@ InfixExpression:offsetBefore <= offsetAfter @AT@ 46519 @LENGTH@ 136
+---UPD InfixExpression@@instantBefore == instantAfter @TO@ offsetBefore <= offsetAfter @AT@ 46523 @LENGTH@ 29
+------UPD SimpleName@@instantBefore @TO@ offsetBefore @AT@ 46523 @LENGTH@ 13
+------UPD Operator@@== @TO@ <= @AT@ 46536 @LENGTH@ 2
+------UPD SimpleName@@instantAfter @TO@ offsetAfter @AT@ 46540 @LENGTH@ 12
+, INS VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46535 @LENGTH@ 43
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46535 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46540 @LENGTH@ 37
+------INS SimpleName@@offsetAfter @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46540 @LENGTH@ 11
+------INS MethodInvocation@@getOffset(instantAfter) @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+---------INS SimpleName@@MethodName:getOffset:[instantAfter] @TO@ MethodInvocation@@getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+------------INS SimpleName@@instantAfter @TO@ SimpleName@@MethodName:getOffset:[instantAfter] @AT@ 46564 @LENGTH@ 12
+, UPD VariableDeclarationStatement@@long local=convertUTCToLocal(instant); @TO@ long transition=nextTransition(instantBefore); @AT@ 46743 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@local=convertUTCToLocal(instant) @TO@ transition=nextTransition(instantBefore) @AT@ 46748 @LENGTH@ 34
+------UPD SimpleName@@local @TO@ transition @AT@ 46748 @LENGTH@ 5
+------UPD MethodInvocation@@convertUTCToLocal(instant) @TO@ nextTransition(instantBefore) @AT@ 46756 @LENGTH@ 26
+---------UPD SimpleName@@MethodName:convertUTCToLocal:[instant] @TO@ MethodName:nextTransition:[instantBefore] @AT@ 46756 @LENGTH@ 26
+------------UPD SimpleName@@instant @TO@ instantBefore @AT@ 46774 @LENGTH@ 7
+, DEL ReturnStatement@@MethodInvocation:convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46792 @LENGTH@ 86
+---DEL MethodInvocation@@convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46799 @LENGTH@ 78
+------DEL SimpleName@@MethodName:convertLocalToUTC:[local, false, earlierOrLater ? instantAfter : instantBefore] @AT@ 46799 @LENGTH@ 78
+---------DEL SimpleName@@local @AT@ 46817 @LENGTH@ 5
+---------DEL BooleanLiteral@@false @AT@ 46824 @LENGTH@ 5
+---------DEL ConditionalExpression@@earlierOrLater ? instantAfter : instantBefore @AT@ 46831 @LENGTH@ 45
+------------DEL SimpleName@@instantBefore @AT@ 46863 @LENGTH@ 13
+, INS VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46809 @LENGTH@ 39
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46809 @LENGTH@ 4
+---INS VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46814 @LENGTH@ 33
+------INS SimpleName@@diff @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46814 @LENGTH@ 4
+------INS InfixExpression@@offsetBefore - offsetAfter @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 26
+---------INS SimpleName@@offsetBefore @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46833 @LENGTH@ 1
+---------INS SimpleName@@offsetAfter @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46836 @LENGTH@ 11
+, INS VariableDeclarationStatement@@long overlapStart=transition - diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46914 @LENGTH@ 38
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46914 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapStart=transition - diff @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46919 @LENGTH@ 32
+------INS SimpleName@@overlapStart @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46919 @LENGTH@ 12
+------INS InfixExpression@@transition - diff @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46934 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition - diff @AT@ 46934 @LENGTH@ 10
+---------INS Operator@@- @TO@ InfixExpression@@transition - diff @AT@ 46944 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition - diff @AT@ 46947 @LENGTH@ 4
+, INS VariableDeclarationStatement@@long overlapEnd=transition + diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46961 @LENGTH@ 36
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46961 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapEnd=transition + diff @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46966 @LENGTH@ 30
+------INS SimpleName@@overlapEnd @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46966 @LENGTH@ 10
+------INS InfixExpression@@transition + diff @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46979 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition + diff @AT@ 46979 @LENGTH@ 10
+---------INS Operator@@+ @TO@ InfixExpression@@transition + diff @AT@ 46989 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition + diff @AT@ 46992 @LENGTH@ 4
+, INS IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47006 @LENGTH@ 109
+---INS InfixExpression@@instant < overlapStart || instant >= overlapEnd @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 47
+------INS InfixExpression@@instant < overlapStart @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant < overlapStart @AT@ 47010 @LENGTH@ 7
+---------INS Operator@@< @TO@ InfixExpression@@instant < overlapStart @AT@ 47017 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant < overlapStart @AT@ 47020 @LENGTH@ 12
+------INS Operator@@|| @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47032 @LENGTH@ 2
+------INS InfixExpression@@instant >= overlapEnd @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47036 @LENGTH@ 21
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47036 @LENGTH@ 7
+---------INS Operator@@>= @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47043 @LENGTH@ 2
+---------INS SimpleName@@overlapEnd @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47047 @LENGTH@ 10
+---INS ReturnStatement@@SimpleName:instant @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47071 @LENGTH@ 15
+------INS SimpleName@@instant @TO@ ReturnStatement@@SimpleName:instant @AT@ 47078 @LENGTH@ 7
+, INS VariableDeclarationStatement@@long afterStart=instant - overlapStart; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47161 @LENGTH@ 41
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47161 @LENGTH@ 4
+---INS VariableDeclarationFragment@@afterStart=instant - overlapStart @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47166 @LENGTH@ 35
+------INS SimpleName@@afterStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47166 @LENGTH@ 10
+------INS InfixExpression@@instant - overlapStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47179 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant - overlapStart @AT@ 47179 @LENGTH@ 7
+---------INS Operator@@- @TO@ InfixExpression@@instant - overlapStart @AT@ 47186 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant - overlapStart @AT@ 47189 @LENGTH@ 12
+, INS IfStatement@@InfixExpression:afterStart >= diff @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47211 @LENGTH@ 252
+---INS InfixExpression@@afterStart >= diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47215 @LENGTH@ 18
+------INS SimpleName@@afterStart @TO@ InfixExpression@@afterStart >= diff @AT@ 47215 @LENGTH@ 10
+------INS Operator@@>= @TO@ InfixExpression@@afterStart >= diff @AT@ 47225 @LENGTH@ 2
+------INS SimpleName@@diff @TO@ InfixExpression@@afterStart >= diff @AT@ 47229 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47286 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant : instant - diff @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @AT@ 47293 @LENGTH@ 41
+---------MOV SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46831 @LENGTH@ 14
+---------MOV SimpleName@@instantAfter @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46848 @LENGTH@ 12
+---------INS InfixExpression@@instant - diff @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 47320 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant - diff @AT@ 47320 @LENGTH@ 7
+------------INS Operator@@- @TO@ InfixExpression@@instant - diff @AT@ 47327 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant - diff @AT@ 47330 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47404 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant + diff : instant @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 41
+---------INS SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 14
+---------INS InfixExpression@@instant + diff @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47428 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant + diff @AT@ 47428 @LENGTH@ 7
+------------INS Operator@@+ @TO@ InfixExpression@@instant + diff @AT@ 47435 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant + diff @AT@ 47438 @LENGTH@ 4
+---------INS SimpleName@@instant @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47445 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP12)
+OP2:   (INS, InfixExpression, OP1, OP3 OP7 OP8)
+OP3:      (INS, InfixExpression, OP2, OP4 OP5 OP6)
+OP4:         (INS, SimpleName, OP3, null)
+OP5:         (INS, Operator, OP3, null)
+OP6:         (INS, SimpleName, OP3, null)
+OP7:      (INS, Operator, OP2, null)
+OP8:      (INS, InfixExpression, OP2, OP9 OP10 OP11)
+OP9:         (INS, SimpleName, OP8, null)
+OP10:         (INS, Operator, OP8, null)
+OP11:         (INS, SimpleName, OP8, null)
+OP12:   (INS, ReturnStatement, OP1, OP13)
+OP13:      (INS, SimpleName, OP12, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@long instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46326 @LENGTH@ 88
+---UPD VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46331 @LENGTH@ 82
+------DEL MethodInvocation@@convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46347 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant - 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46347 @LENGTH@ 66
+------MOV InfixExpression@@instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46365 @LENGTH@ 47
+, UPD VariableDeclarationStatement@@long instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46423 @LENGTH@ 87
+---UPD VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46428 @LENGTH@ 81
+------DEL MethodInvocation@@convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46443 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant + 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46443 @LENGTH@ 66
+------MOV InfixExpression@@instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46461 @LENGTH@ 47
+, INS VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46481 @LENGTH@ 45
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46481 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46486 @LENGTH@ 39
+------INS SimpleName@@offsetBefore @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46486 @LENGTH@ 12
+------INS MethodInvocation@@getOffset(instantBefore) @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+---------INS SimpleName@@MethodName:getOffset:[instantBefore] @TO@ MethodInvocation@@getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+------------INS SimpleName@@instantBefore @TO@ SimpleName@@MethodName:getOffset:[instantBefore] @AT@ 46511 @LENGTH@ 13
+, UPD IfStatement@@InfixExpression:instantBefore == instantAfter @TO@ InfixExpression:offsetBefore <= offsetAfter @AT@ 46519 @LENGTH@ 136
+---UPD InfixExpression@@instantBefore == instantAfter @TO@ offsetBefore <= offsetAfter @AT@ 46523 @LENGTH@ 29
+------UPD SimpleName@@instantBefore @TO@ offsetBefore @AT@ 46523 @LENGTH@ 13
+------UPD Operator@@== @TO@ <= @AT@ 46536 @LENGTH@ 2
+------UPD SimpleName@@instantAfter @TO@ offsetAfter @AT@ 46540 @LENGTH@ 12
+, INS VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46535 @LENGTH@ 43
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46535 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46540 @LENGTH@ 37
+------INS SimpleName@@offsetAfter @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46540 @LENGTH@ 11
+------INS MethodInvocation@@getOffset(instantAfter) @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+---------INS SimpleName@@MethodName:getOffset:[instantAfter] @TO@ MethodInvocation@@getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+------------INS SimpleName@@instantAfter @TO@ SimpleName@@MethodName:getOffset:[instantAfter] @AT@ 46564 @LENGTH@ 12
+, UPD VariableDeclarationStatement@@long local=convertUTCToLocal(instant); @TO@ long transition=nextTransition(instantBefore); @AT@ 46743 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@local=convertUTCToLocal(instant) @TO@ transition=nextTransition(instantBefore) @AT@ 46748 @LENGTH@ 34
+------UPD SimpleName@@local @TO@ transition @AT@ 46748 @LENGTH@ 5
+------UPD MethodInvocation@@convertUTCToLocal(instant) @TO@ nextTransition(instantBefore) @AT@ 46756 @LENGTH@ 26
+---------UPD SimpleName@@MethodName:convertUTCToLocal:[instant] @TO@ MethodName:nextTransition:[instantBefore] @AT@ 46756 @LENGTH@ 26
+------------UPD SimpleName@@instant @TO@ instantBefore @AT@ 46774 @LENGTH@ 7
+, DEL ReturnStatement@@MethodInvocation:convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46792 @LENGTH@ 86
+---DEL MethodInvocation@@convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46799 @LENGTH@ 78
+------DEL SimpleName@@MethodName:convertLocalToUTC:[local, false, earlierOrLater ? instantAfter : instantBefore] @AT@ 46799 @LENGTH@ 78
+---------DEL SimpleName@@local @AT@ 46817 @LENGTH@ 5
+---------DEL BooleanLiteral@@false @AT@ 46824 @LENGTH@ 5
+---------DEL ConditionalExpression@@earlierOrLater ? instantAfter : instantBefore @AT@ 46831 @LENGTH@ 45
+------------DEL SimpleName@@instantBefore @AT@ 46863 @LENGTH@ 13
+, INS VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46809 @LENGTH@ 39
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46809 @LENGTH@ 4
+---INS VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46814 @LENGTH@ 33
+------INS SimpleName@@diff @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46814 @LENGTH@ 4
+------INS InfixExpression@@offsetBefore - offsetAfter @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 26
+---------INS SimpleName@@offsetBefore @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46833 @LENGTH@ 1
+---------INS SimpleName@@offsetAfter @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46836 @LENGTH@ 11
+, INS VariableDeclarationStatement@@long overlapStart=transition - diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46914 @LENGTH@ 38
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46914 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapStart=transition - diff @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46919 @LENGTH@ 32
+------INS SimpleName@@overlapStart @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46919 @LENGTH@ 12
+------INS InfixExpression@@transition - diff @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46934 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition - diff @AT@ 46934 @LENGTH@ 10
+---------INS Operator@@- @TO@ InfixExpression@@transition - diff @AT@ 46944 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition - diff @AT@ 46947 @LENGTH@ 4
+, INS VariableDeclarationStatement@@long overlapEnd=transition + diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46961 @LENGTH@ 36
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46961 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapEnd=transition + diff @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46966 @LENGTH@ 30
+------INS SimpleName@@overlapEnd @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46966 @LENGTH@ 10
+------INS InfixExpression@@transition + diff @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46979 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition + diff @AT@ 46979 @LENGTH@ 10
+---------INS Operator@@+ @TO@ InfixExpression@@transition + diff @AT@ 46989 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition + diff @AT@ 46992 @LENGTH@ 4
+, INS IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47006 @LENGTH@ 109
+---INS InfixExpression@@instant < overlapStart || instant >= overlapEnd @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 47
+------INS InfixExpression@@instant < overlapStart @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant < overlapStart @AT@ 47010 @LENGTH@ 7
+---------INS Operator@@< @TO@ InfixExpression@@instant < overlapStart @AT@ 47017 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant < overlapStart @AT@ 47020 @LENGTH@ 12
+------INS Operator@@|| @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47032 @LENGTH@ 2
+------INS InfixExpression@@instant >= overlapEnd @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47036 @LENGTH@ 21
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47036 @LENGTH@ 7
+---------INS Operator@@>= @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47043 @LENGTH@ 2
+---------INS SimpleName@@overlapEnd @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47047 @LENGTH@ 10
+---INS ReturnStatement@@SimpleName:instant @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47071 @LENGTH@ 15
+------INS SimpleName@@instant @TO@ ReturnStatement@@SimpleName:instant @AT@ 47078 @LENGTH@ 7
+, INS VariableDeclarationStatement@@long afterStart=instant - overlapStart; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47161 @LENGTH@ 41
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47161 @LENGTH@ 4
+---INS VariableDeclarationFragment@@afterStart=instant - overlapStart @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47166 @LENGTH@ 35
+------INS SimpleName@@afterStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47166 @LENGTH@ 10
+------INS InfixExpression@@instant - overlapStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47179 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant - overlapStart @AT@ 47179 @LENGTH@ 7
+---------INS Operator@@- @TO@ InfixExpression@@instant - overlapStart @AT@ 47186 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant - overlapStart @AT@ 47189 @LENGTH@ 12
+, INS IfStatement@@InfixExpression:afterStart >= diff @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47211 @LENGTH@ 252
+---INS InfixExpression@@afterStart >= diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47215 @LENGTH@ 18
+------INS SimpleName@@afterStart @TO@ InfixExpression@@afterStart >= diff @AT@ 47215 @LENGTH@ 10
+------INS Operator@@>= @TO@ InfixExpression@@afterStart >= diff @AT@ 47225 @LENGTH@ 2
+------INS SimpleName@@diff @TO@ InfixExpression@@afterStart >= diff @AT@ 47229 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47286 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant : instant - diff @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @AT@ 47293 @LENGTH@ 41
+---------MOV SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46831 @LENGTH@ 14
+---------MOV SimpleName@@instantAfter @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46848 @LENGTH@ 12
+---------INS InfixExpression@@instant - diff @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 47320 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant - diff @AT@ 47320 @LENGTH@ 7
+------------INS Operator@@- @TO@ InfixExpression@@instant - diff @AT@ 47327 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant - diff @AT@ 47330 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47404 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant + diff : instant @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 41
+---------INS SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 14
+---------INS InfixExpression@@instant + diff @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47428 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant + diff @AT@ 47428 @LENGTH@ 7
+------------INS Operator@@+ @TO@ InfixExpression@@instant + diff @AT@ 47435 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant + diff @AT@ 47438 @LENGTH@ 4
+---------INS SimpleName@@instant @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47445 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, VariableDeclarationStatement, null, OP2 OP3)
+OP2:   (INS, PrimitiveType, OP1, null)
+OP3:   (INS, VariableDeclarationFragment, OP1, OP4 OP5)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, InfixExpression, OP3, OP6 OP7 OP8)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, Operator, OP5, null)
+OP8:         (INS, SimpleName, OP5, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@long instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46326 @LENGTH@ 88
+---UPD VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantBefore=instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46331 @LENGTH@ 82
+------DEL MethodInvocation@@convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46347 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant - 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46347 @LENGTH@ 66
+------MOV InfixExpression@@instant - 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantBefore=convertUTCToLocal(instant - 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46365 @LENGTH@ 47
+, UPD VariableDeclarationStatement@@long instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR); @TO@ long instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR; @AT@ 46423 @LENGTH@ 87
+---UPD VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @TO@ instantAfter=instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @AT@ 46428 @LENGTH@ 81
+------DEL MethodInvocation@@convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46443 @LENGTH@ 66
+---------DEL SimpleName@@MethodName:convertUTCToLocal:[instant + 3 * DateTimeConstants.MILLIS_PER_HOUR] @AT@ 46443 @LENGTH@ 66
+------MOV InfixExpression@@instant + 3 * DateTimeConstants.MILLIS_PER_HOUR @TO@ VariableDeclarationFragment@@instantAfter=convertUTCToLocal(instant + 3 * DateTimeConstants.MILLIS_PER_HOUR) @AT@ 46461 @LENGTH@ 47
+, INS VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46481 @LENGTH@ 45
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46481 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @TO@ VariableDeclarationStatement@@long offsetBefore=getOffset(instantBefore); @AT@ 46486 @LENGTH@ 39
+------INS SimpleName@@offsetBefore @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46486 @LENGTH@ 12
+------INS MethodInvocation@@getOffset(instantBefore) @TO@ VariableDeclarationFragment@@offsetBefore=getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+---------INS SimpleName@@MethodName:getOffset:[instantBefore] @TO@ MethodInvocation@@getOffset(instantBefore) @AT@ 46501 @LENGTH@ 24
+------------INS SimpleName@@instantBefore @TO@ SimpleName@@MethodName:getOffset:[instantBefore] @AT@ 46511 @LENGTH@ 13
+, UPD IfStatement@@InfixExpression:instantBefore == instantAfter @TO@ InfixExpression:offsetBefore <= offsetAfter @AT@ 46519 @LENGTH@ 136
+---UPD InfixExpression@@instantBefore == instantAfter @TO@ offsetBefore <= offsetAfter @AT@ 46523 @LENGTH@ 29
+------UPD SimpleName@@instantBefore @TO@ offsetBefore @AT@ 46523 @LENGTH@ 13
+------UPD Operator@@== @TO@ <= @AT@ 46536 @LENGTH@ 2
+------UPD SimpleName@@instantAfter @TO@ offsetAfter @AT@ 46540 @LENGTH@ 12
+, INS VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46535 @LENGTH@ 43
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46535 @LENGTH@ 4
+---INS VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @TO@ VariableDeclarationStatement@@long offsetAfter=getOffset(instantAfter); @AT@ 46540 @LENGTH@ 37
+------INS SimpleName@@offsetAfter @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46540 @LENGTH@ 11
+------INS MethodInvocation@@getOffset(instantAfter) @TO@ VariableDeclarationFragment@@offsetAfter=getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+---------INS SimpleName@@MethodName:getOffset:[instantAfter] @TO@ MethodInvocation@@getOffset(instantAfter) @AT@ 46554 @LENGTH@ 23
+------------INS SimpleName@@instantAfter @TO@ SimpleName@@MethodName:getOffset:[instantAfter] @AT@ 46564 @LENGTH@ 12
+, UPD VariableDeclarationStatement@@long local=convertUTCToLocal(instant); @TO@ long transition=nextTransition(instantBefore); @AT@ 46743 @LENGTH@ 40
+---UPD VariableDeclarationFragment@@local=convertUTCToLocal(instant) @TO@ transition=nextTransition(instantBefore) @AT@ 46748 @LENGTH@ 34
+------UPD SimpleName@@local @TO@ transition @AT@ 46748 @LENGTH@ 5
+------UPD MethodInvocation@@convertUTCToLocal(instant) @TO@ nextTransition(instantBefore) @AT@ 46756 @LENGTH@ 26
+---------UPD SimpleName@@MethodName:convertUTCToLocal:[instant] @TO@ MethodName:nextTransition:[instantBefore] @AT@ 46756 @LENGTH@ 26
+------------UPD SimpleName@@instant @TO@ instantBefore @AT@ 46774 @LENGTH@ 7
+, DEL ReturnStatement@@MethodInvocation:convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46792 @LENGTH@ 86
+---DEL MethodInvocation@@convertLocalToUTC(local,false,earlierOrLater ? instantAfter : instantBefore) @AT@ 46799 @LENGTH@ 78
+------DEL SimpleName@@MethodName:convertLocalToUTC:[local, false, earlierOrLater ? instantAfter : instantBefore] @AT@ 46799 @LENGTH@ 78
+---------DEL SimpleName@@local @AT@ 46817 @LENGTH@ 5
+---------DEL BooleanLiteral@@false @AT@ 46824 @LENGTH@ 5
+---------DEL ConditionalExpression@@earlierOrLater ? instantAfter : instantBefore @AT@ 46831 @LENGTH@ 45
+------------DEL SimpleName@@instantBefore @AT@ 46863 @LENGTH@ 13
+, INS VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46809 @LENGTH@ 39
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46809 @LENGTH@ 4
+---INS VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @TO@ VariableDeclarationStatement@@long diff=offsetBefore - offsetAfter; @AT@ 46814 @LENGTH@ 33
+------INS SimpleName@@diff @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46814 @LENGTH@ 4
+------INS InfixExpression@@offsetBefore - offsetAfter @TO@ VariableDeclarationFragment@@diff=offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 26
+---------INS SimpleName@@offsetBefore @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46821 @LENGTH@ 12
+---------INS Operator@@- @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46833 @LENGTH@ 1
+---------INS SimpleName@@offsetAfter @TO@ InfixExpression@@offsetBefore - offsetAfter @AT@ 46836 @LENGTH@ 11
+, INS VariableDeclarationStatement@@long overlapStart=transition - diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46914 @LENGTH@ 38
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46914 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapStart=transition - diff @TO@ VariableDeclarationStatement@@long overlapStart=transition - diff; @AT@ 46919 @LENGTH@ 32
+------INS SimpleName@@overlapStart @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46919 @LENGTH@ 12
+------INS InfixExpression@@transition - diff @TO@ VariableDeclarationFragment@@overlapStart=transition - diff @AT@ 46934 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition - diff @AT@ 46934 @LENGTH@ 10
+---------INS Operator@@- @TO@ InfixExpression@@transition - diff @AT@ 46944 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition - diff @AT@ 46947 @LENGTH@ 4
+, INS VariableDeclarationStatement@@long overlapEnd=transition + diff; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 46961 @LENGTH@ 36
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46961 @LENGTH@ 4
+---INS VariableDeclarationFragment@@overlapEnd=transition + diff @TO@ VariableDeclarationStatement@@long overlapEnd=transition + diff; @AT@ 46966 @LENGTH@ 30
+------INS SimpleName@@overlapEnd @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46966 @LENGTH@ 10
+------INS InfixExpression@@transition + diff @TO@ VariableDeclarationFragment@@overlapEnd=transition + diff @AT@ 46979 @LENGTH@ 17
+---------INS SimpleName@@transition @TO@ InfixExpression@@transition + diff @AT@ 46979 @LENGTH@ 10
+---------INS Operator@@+ @TO@ InfixExpression@@transition + diff @AT@ 46989 @LENGTH@ 1
+---------INS SimpleName@@diff @TO@ InfixExpression@@transition + diff @AT@ 46992 @LENGTH@ 4
+, INS IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47006 @LENGTH@ 109
+---INS InfixExpression@@instant < overlapStart || instant >= overlapEnd @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 47
+------INS InfixExpression@@instant < overlapStart @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47010 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant < overlapStart @AT@ 47010 @LENGTH@ 7
+---------INS Operator@@< @TO@ InfixExpression@@instant < overlapStart @AT@ 47017 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant < overlapStart @AT@ 47020 @LENGTH@ 12
+------INS Operator@@|| @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47032 @LENGTH@ 2
+------INS InfixExpression@@instant >= overlapEnd @TO@ InfixExpression@@instant < overlapStart || instant >= overlapEnd @AT@ 47036 @LENGTH@ 21
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47036 @LENGTH@ 7
+---------INS Operator@@>= @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47043 @LENGTH@ 2
+---------INS SimpleName@@overlapEnd @TO@ InfixExpression@@instant >= overlapEnd @AT@ 47047 @LENGTH@ 10
+---INS ReturnStatement@@SimpleName:instant @TO@ IfStatement@@InfixExpression:instant < overlapStart || instant >= overlapEnd @AT@ 47071 @LENGTH@ 15
+------INS SimpleName@@instant @TO@ ReturnStatement@@SimpleName:instant @AT@ 47078 @LENGTH@ 7
+, INS VariableDeclarationStatement@@long afterStart=instant - overlapStart; @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47161 @LENGTH@ 41
+---INS PrimitiveType@@long @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47161 @LENGTH@ 4
+---INS VariableDeclarationFragment@@afterStart=instant - overlapStart @TO@ VariableDeclarationStatement@@long afterStart=instant - overlapStart; @AT@ 47166 @LENGTH@ 35
+------INS SimpleName@@afterStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47166 @LENGTH@ 10
+------INS InfixExpression@@instant - overlapStart @TO@ VariableDeclarationFragment@@afterStart=instant - overlapStart @AT@ 47179 @LENGTH@ 22
+---------INS SimpleName@@instant @TO@ InfixExpression@@instant - overlapStart @AT@ 47179 @LENGTH@ 7
+---------INS Operator@@- @TO@ InfixExpression@@instant - overlapStart @AT@ 47186 @LENGTH@ 1
+---------INS SimpleName@@overlapStart @TO@ InfixExpression@@instant - overlapStart @AT@ 47189 @LENGTH@ 12
+, INS IfStatement@@InfixExpression:afterStart >= diff @TO@ MethodDeclaration@@public, @@long, MethodName:adjustOffset, @@Argus:long+instant+boolean+earlierOrLater+ @AT@ 47211 @LENGTH@ 252
+---INS InfixExpression@@afterStart >= diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47215 @LENGTH@ 18
+------INS SimpleName@@afterStart @TO@ InfixExpression@@afterStart >= diff @AT@ 47215 @LENGTH@ 10
+------INS Operator@@>= @TO@ InfixExpression@@afterStart >= diff @AT@ 47225 @LENGTH@ 2
+------INS SimpleName@@diff @TO@ InfixExpression@@afterStart >= diff @AT@ 47229 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47286 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant : instant - diff @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant : instant - diff @AT@ 47293 @LENGTH@ 41
+---------MOV SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46831 @LENGTH@ 14
+---------MOV SimpleName@@instantAfter @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 46848 @LENGTH@ 12
+---------INS InfixExpression@@instant - diff @TO@ ConditionalExpression@@earlierOrLater ? instant : instant - diff @AT@ 47320 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant - diff @AT@ 47320 @LENGTH@ 7
+------------INS Operator@@- @TO@ InfixExpression@@instant - diff @AT@ 47327 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant - diff @AT@ 47330 @LENGTH@ 4
+---INS ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @TO@ IfStatement@@InfixExpression:afterStart >= diff @AT@ 47404 @LENGTH@ 49
+------INS ConditionalExpression@@earlierOrLater ? instant + diff : instant @TO@ ReturnStatement@@ConditionalExpression:earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 41
+---------INS SimpleName@@earlierOrLater @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47411 @LENGTH@ 14
+---------INS InfixExpression@@instant + diff @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47428 @LENGTH@ 14
+------------INS SimpleName@@instant @TO@ InfixExpression@@instant + diff @AT@ 47428 @LENGTH@ 7
+------------INS Operator@@+ @TO@ InfixExpression@@instant + diff @AT@ 47435 @LENGTH@ 1
+------------INS SimpleName@@diff @TO@ InfixExpression@@instant + diff @AT@ 47438 @LENGTH@ 4
+---------INS SimpleName@@instant @TO@ ConditionalExpression@@earlierOrLater ? instant + diff : instant @AT@ 47445 @LENGTH@ 7
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6 OP14)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, SimpleName, OP2, null)
+OP6:   (INS, ReturnStatement, OP1, OP7)
+OP7:      (INS, ConditionalExpression, OP6, OP8 OP9 OP10)
+OP8:         (MOV, SimpleName, OP7, null)
+OP9:         (MOV, SimpleName, OP7, null)
+OP10:         (INS, InfixExpression, OP7, OP11 OP12 OP13)
+OP11:            (INS, SimpleName, OP10, null)
+OP12:            (INS, Operator, OP10, null)
+OP13:            (INS, SimpleName, OP10, null)
+OP14:   (INS, ReturnStatement, OP1, OP15)
+OP15:      (INS, ConditionalExpression, OP14, OP16 OP17 OP21)
+OP16:         (INS, SimpleName, OP15, null)
+OP17:         (INS, InfixExpression, OP15, OP18 OP19 OP20)
+OP18:            (INS, SimpleName, OP17, null)
+OP19:            (INS, Operator, OP17, null)
+OP20:            (INS, SimpleName, OP17, null)
+OP21:         (INS, SimpleName, OP15, null)
+
+
+

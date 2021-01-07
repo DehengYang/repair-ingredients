@@ -1,0 +1,10 @@
+No.1 CCI matched.
+freq: 5
+CommitIds: e15f06c0 f79e36a6 27a2f515 b211f329 913b4982 
+FreqRank:39
+
+No.6 CCI matched.
+freq: 8
+CommitIds: 48da0133 48da0133 7227635d ee88d188 ee88d188 ee88d188 48da0133 48da0133 
+FreqRank:36
+

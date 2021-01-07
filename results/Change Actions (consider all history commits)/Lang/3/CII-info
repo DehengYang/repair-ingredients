@@ -1,0 +1,60 @@
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:numDecimals <= 7 @TO@ TryStatement@@try:[] @AT@ 22276 @LENGTH@ 293
+---INS InfixExpression@@numDecimals <= 7 @TO@ IfStatement@@InfixExpression:numDecimals <= 7 @AT@ 22279 @LENGTH@ 16
+------INS SimpleName@@numDecimals @TO@ InfixExpression@@numDecimals <= 7 @AT@ 22279 @LENGTH@ 11
+------INS Operator@@<= @TO@ InfixExpression@@numDecimals <= 7 @AT@ 22290 @LENGTH@ 2
+------INS NumberLiteral@@7 @TO@ InfixExpression@@numDecimals <= 7 @AT@ 22294 @LENGTH@ 1
+---MOV VariableDeclarationStatement@@final Float f=createFloat(str); @TO@ IfStatement@@InfixExpression:numDecimals <= 7 @AT@ 22280 @LENGTH@ 33
+---MOV IfStatement@@PrefixExpression:!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros)) @TO@ IfStatement@@InfixExpression:numDecimals <= 7 @AT@ 22330 @LENGTH@ 113
+, INS IfStatement@@InfixExpression:numDecimals <= 16 @TO@ TryStatement@@try:[] @AT@ 22704 @LENGTH@ 304
+---MOV VariableDeclarationStatement@@final Double d=createDouble(str); @TO@ IfStatement@@InfixExpression:numDecimals <= 16 @AT@ 22582 @LENGTH@ 35
+---MOV IfStatement@@PrefixExpression:!(d.isInfinite() || (d.doubleValue() == 0.0D && !allZeros)) @TO@ IfStatement@@InfixExpression:numDecimals <= 16 @AT@ 22634 @LENGTH@ 114
+---INS InfixExpression@@numDecimals <= 16 @TO@ IfStatement@@InfixExpression:numDecimals <= 16 @AT@ 22707 @LENGTH@ 17
+------INS SimpleName@@numDecimals @TO@ InfixExpression@@numDecimals <= 16 @AT@ 22707 @LENGTH@ 11
+------INS Operator@@<= @TO@ InfixExpression@@numDecimals <= 16 @AT@ 22718 @LENGTH@ 2
+------INS NumberLiteral@@16 @TO@ InfixExpression@@numDecimals <= 16 @AT@ 22722 @LENGTH@ 2
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6 OP7)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, NumberLiteral, OP2, null)
+OP6:   (MOV, VariableDeclarationStatement, OP1, null)
+OP7:   (MOV, IfStatement, OP1, null)
+
+
+
+
+
+hASList: 
+[INS IfStatement@@InfixExpression:numDecimals <= 7 @TO@ TryStatement@@try:[] @AT@ 22276 @LENGTH@ 293
+---INS InfixExpression@@numDecimals <= 7 @TO@ IfStatement@@InfixExpression:numDecimals <= 7 @AT@ 22279 @LENGTH@ 16
+------INS SimpleName@@numDecimals @TO@ InfixExpression@@numDecimals <= 7 @AT@ 22279 @LENGTH@ 11
+------INS Operator@@<= @TO@ InfixExpression@@numDecimals <= 7 @AT@ 22290 @LENGTH@ 2
+------INS NumberLiteral@@7 @TO@ InfixExpression@@numDecimals <= 7 @AT@ 22294 @LENGTH@ 1
+---MOV VariableDeclarationStatement@@final Float f=createFloat(str); @TO@ IfStatement@@InfixExpression:numDecimals <= 7 @AT@ 22280 @LENGTH@ 33
+---MOV IfStatement@@PrefixExpression:!(f.isInfinite() || (f.floatValue() == 0.0F && !allZeros)) @TO@ IfStatement@@InfixExpression:numDecimals <= 7 @AT@ 22330 @LENGTH@ 113
+, INS IfStatement@@InfixExpression:numDecimals <= 16 @TO@ TryStatement@@try:[] @AT@ 22704 @LENGTH@ 304
+---MOV VariableDeclarationStatement@@final Double d=createDouble(str); @TO@ IfStatement@@InfixExpression:numDecimals <= 16 @AT@ 22582 @LENGTH@ 35
+---MOV IfStatement@@PrefixExpression:!(d.isInfinite() || (d.doubleValue() == 0.0D && !allZeros)) @TO@ IfStatement@@InfixExpression:numDecimals <= 16 @AT@ 22634 @LENGTH@ 114
+---INS InfixExpression@@numDecimals <= 16 @TO@ IfStatement@@InfixExpression:numDecimals <= 16 @AT@ 22707 @LENGTH@ 17
+------INS SimpleName@@numDecimals @TO@ InfixExpression@@numDecimals <= 16 @AT@ 22707 @LENGTH@ 11
+------INS Operator@@<= @TO@ InfixExpression@@numDecimals <= 16 @AT@ 22718 @LENGTH@ 2
+------INS NumberLiteral@@16 @TO@ InfixExpression@@numDecimals <= 16 @AT@ 22722 @LENGTH@ 2
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3 OP4)
+OP2:   (MOV, VariableDeclarationStatement, OP1, null)
+OP3:   (MOV, IfStatement, OP1, null)
+OP4:   (INS, InfixExpression, OP1, OP5 OP6 OP7)
+OP5:      (INS, SimpleName, OP4, null)
+OP6:      (INS, Operator, OP4, null)
+OP7:      (INS, NumberLiteral, OP4, null)
+
+
+

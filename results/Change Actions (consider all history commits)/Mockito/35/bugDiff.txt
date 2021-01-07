@@ -1,0 +1,31 @@
+
+diff -Naur ../d4j-repo/Mockito/Mockito_35/src/org/mockito/Matchers.java ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_35/src/org/mockito/Matchers.java
+--- ../d4j-repo/Mockito/Mockito_35/src/org/mockito/Matchers.java	2021-01-06 03:37:17.850791816 -0800
++++ ../d4j-repo/fixed_bugs_dir/Mockito/Mockito_35/src/org/mockito/Matchers.java	2021-01-06 03:37:20.454880481 -0800
+@@ -359,7 +359,7 @@
+      * @return <code>null</code>.
+      */
+     public static <T> T isA(Class<T> clazz) {
+-        return reportMatcher(new InstanceOf(clazz)).<T>returnNull();
++        return reportMatcher(new InstanceOf(clazz)).<T>returnFor(clazz);
+     }
+ 
+     /**
+@@ -476,7 +476,7 @@
+      * @return <code>null</code>.
+      */
+     public static <T> T eq(T value) {
+-        return reportMatcher(new Equals(value)).<T>returnNull();
++        return (T) reportMatcher(new Equals(value)).<T>returnFor((Class) value.getClass());
+     }  
+ 
+     /**
+@@ -513,7 +513,7 @@
+      * @return <code>null</code>.
+      */
+     public static <T> T same(T value) {
+-        return reportMatcher(new Same(value)).<T>returnNull();
++        return (T) reportMatcher(new Same(value)).<T>returnFor((Class) value.getClass());
+     }
+ 
+     /**

@@ -1,0 +1,105 @@
+
+
+hASList: 
+[UPD ReturnStatement@@ClassInstanceCreation:new OngoingInjecter(){
+  public boolean thenInject(){
+    try {
+      new FieldSetter(fieldInstance,field).set(matchingMock);
+    }
+ catch (    Exception e) {
+      throw new MockitoException("Problems injecting dependency in " + field.getName(),e);
+    }
+    return true;
+  }
+}
+ @TO@ ClassInstanceCreation:new OngoingInjecter(){
+  public boolean thenInject(){
+    try {
+      if (!new BeanPropertySetter(fieldInstance,field).set(matchingMock)) {
+        new FieldSetter(fieldInstance,field).set(matchingMock);
+      }
+    }
+ catch (    Exception e) {
+      throw new MockitoException("Problems injecting dependency in " + field.getName(),e);
+    }
+    return true;
+  }
+}
+ @AT@ 885 @LENGTH@ 438
+, INS IfStatement@@PrefixExpression:!new BeanPropertySetter(fieldInstance,field).set(matchingMock) @TO@ TryStatement@@try:[] @AT@ 1080 @LENGTH@ 183
+---MOV ExpressionStatement@@MethodInvocation:new FieldSetter(fieldInstance,field).set(matchingMock) @TO@ IfStatement@@PrefixExpression:!new BeanPropertySetter(fieldInstance,field).set(matchingMock) @AT@ 1019 @LENGTH@ 56
+---INS PrefixExpression@@!new BeanPropertySetter(fieldInstance,field).set(matchingMock) @TO@ IfStatement@@PrefixExpression:!new BeanPropertySetter(fieldInstance,field).set(matchingMock) @AT@ 1084 @LENGTH@ 63
+------INS Operator@@! @TO@ PrefixExpression@@!new BeanPropertySetter(fieldInstance,field).set(matchingMock) @AT@ 1084 @LENGTH@ 1
+------INS MethodInvocation@@new BeanPropertySetter(fieldInstance,field).set(matchingMock) @TO@ PrefixExpression@@!new BeanPropertySetter(fieldInstance,field).set(matchingMock) @AT@ 1085 @LENGTH@ 62
+---------INS ClassInstanceCreation@@BeanPropertySetter[fieldInstance, field] @TO@ MethodInvocation@@new BeanPropertySetter(fieldInstance,field).set(matchingMock) @AT@ 1085 @LENGTH@ 44
+------------INS New@@new @TO@ ClassInstanceCreation@@BeanPropertySetter[fieldInstance, field] @AT@ 1085 @LENGTH@ 3
+------------INS SimpleType@@BeanPropertySetter @TO@ ClassInstanceCreation@@BeanPropertySetter[fieldInstance, field] @AT@ 1089 @LENGTH@ 18
+------------INS SimpleName@@fieldInstance @TO@ ClassInstanceCreation@@BeanPropertySetter[fieldInstance, field] @AT@ 1108 @LENGTH@ 13
+------------INS SimpleName@@field @TO@ ClassInstanceCreation@@BeanPropertySetter[fieldInstance, field] @AT@ 1123 @LENGTH@ 5
+---------INS SimpleName@@MethodName:set:[matchingMock] @TO@ MethodInvocation@@new BeanPropertySetter(fieldInstance,field).set(matchingMock) @AT@ 1130 @LENGTH@ 17
+------------INS SimpleName@@matchingMock @TO@ SimpleName@@MethodName:set:[matchingMock] @AT@ 1134 @LENGTH@ 12
+]
+
+CII:
+OP1:(UPD, ReturnStatement, null, null)
+
+
+
+
+
+hASList: 
+[UPD ReturnStatement@@ClassInstanceCreation:new OngoingInjecter(){
+  public boolean thenInject(){
+    try {
+      new FieldSetter(fieldInstance,field).set(matchingMock);
+    }
+ catch (    Exception e) {
+      throw new MockitoException("Problems injecting dependency in " + field.getName(),e);
+    }
+    return true;
+  }
+}
+ @TO@ ClassInstanceCreation:new OngoingInjecter(){
+  public boolean thenInject(){
+    try {
+      if (!new BeanPropertySetter(fieldInstance,field).set(matchingMock)) {
+        new FieldSetter(fieldInstance,field).set(matchingMock);
+      }
+    }
+ catch (    Exception e) {
+      throw new MockitoException("Problems injecting dependency in " + field.getName(),e);
+    }
+    return true;
+  }
+}
+ @AT@ 885 @LENGTH@ 438
+, INS IfStatement@@PrefixExpression:!new BeanPropertySetter(fieldInstance,field).set(matchingMock) @TO@ TryStatement@@try:[] @AT@ 1080 @LENGTH@ 183
+---MOV ExpressionStatement@@MethodInvocation:new FieldSetter(fieldInstance,field).set(matchingMock) @TO@ IfStatement@@PrefixExpression:!new BeanPropertySetter(fieldInstance,field).set(matchingMock) @AT@ 1019 @LENGTH@ 56
+---INS PrefixExpression@@!new BeanPropertySetter(fieldInstance,field).set(matchingMock) @TO@ IfStatement@@PrefixExpression:!new BeanPropertySetter(fieldInstance,field).set(matchingMock) @AT@ 1084 @LENGTH@ 63
+------INS Operator@@! @TO@ PrefixExpression@@!new BeanPropertySetter(fieldInstance,field).set(matchingMock) @AT@ 1084 @LENGTH@ 1
+------INS MethodInvocation@@new BeanPropertySetter(fieldInstance,field).set(matchingMock) @TO@ PrefixExpression@@!new BeanPropertySetter(fieldInstance,field).set(matchingMock) @AT@ 1085 @LENGTH@ 62
+---------INS ClassInstanceCreation@@BeanPropertySetter[fieldInstance, field] @TO@ MethodInvocation@@new BeanPropertySetter(fieldInstance,field).set(matchingMock) @AT@ 1085 @LENGTH@ 44
+------------INS New@@new @TO@ ClassInstanceCreation@@BeanPropertySetter[fieldInstance, field] @AT@ 1085 @LENGTH@ 3
+------------INS SimpleType@@BeanPropertySetter @TO@ ClassInstanceCreation@@BeanPropertySetter[fieldInstance, field] @AT@ 1089 @LENGTH@ 18
+------------INS SimpleName@@fieldInstance @TO@ ClassInstanceCreation@@BeanPropertySetter[fieldInstance, field] @AT@ 1108 @LENGTH@ 13
+------------INS SimpleName@@field @TO@ ClassInstanceCreation@@BeanPropertySetter[fieldInstance, field] @AT@ 1123 @LENGTH@ 5
+---------INS SimpleName@@MethodName:set:[matchingMock] @TO@ MethodInvocation@@new BeanPropertySetter(fieldInstance,field).set(matchingMock) @AT@ 1130 @LENGTH@ 17
+------------INS SimpleName@@matchingMock @TO@ SimpleName@@MethodName:set:[matchingMock] @AT@ 1134 @LENGTH@ 12
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP3)
+OP2:   (MOV, ExpressionStatement, OP1, null)
+OP3:   (INS, PrefixExpression, OP1, OP4 OP5)
+OP4:      (INS, Operator, OP3, null)
+OP5:      (INS, MethodInvocation, OP3, OP6 OP11)
+OP6:         (INS, ClassInstanceCreation, OP5, OP7 OP8 OP9 OP10)
+OP7:            (INS, New, OP6, null)
+OP8:            (INS, SimpleType, OP6, null)
+OP9:            (INS, SimpleName, OP6, null)
+OP10:            (INS, SimpleName, OP6, null)
+OP11:         (INS, SimpleName, OP5, OP12)
+OP12:            (INS, SimpleName, OP11, null)
+
+
+

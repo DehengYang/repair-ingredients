@@ -1,0 +1,35 @@
+
+
+hASList: 
+[UPD IfStatement@@InfixExpression:verificationMode instanceof MockAwareVerificationMode && ((MockAwareVerificationMode)verificationMode).getMock() == invocation.getMock() @TO@ InfixExpression:((MockAwareVerificationMode)verificationMode).getMock() == invocation.getMock() @AT@ 3223 @LENGTH@ 565
+---DEL InfixExpression@@verificationMode instanceof MockAwareVerificationMode && ((MockAwareVerificationMode)verificationMode).getMock() == invocation.getMock() @AT@ 3227 @LENGTH@ 137
+------DEL InstanceofExpression@@verificationMode instanceof MockAwareVerificationMode @AT@ 3227 @LENGTH@ 53
+---------DEL SimpleName@@verificationMode @AT@ 3227 @LENGTH@ 16
+---------DEL Instanceof@@instanceof @AT@ 3244 @LENGTH@ 10
+---------DEL SimpleType@@MockAwareVerificationMode @AT@ 3255 @LENGTH@ 25
+------DEL Operator@@&& @AT@ 3280 @LENGTH@ 2
+---MOV InfixExpression@@((MockAwareVerificationMode)verificationMode).getMock() == invocation.getMock() @TO@ IfStatement@@InfixExpression:verificationMode instanceof MockAwareVerificationMode && ((MockAwareVerificationMode)verificationMode).getMock() == invocation.getMock() @AT@ 3284 @LENGTH@ 80
+---INS ExpressionStatement@@MethodInvocation:mockingProgress.verificationStarted(verificationMode) @TO@ IfStatement@@InfixExpression:verificationMode instanceof MockAwareVerificationMode && ((MockAwareVerificationMode)verificationMode).getMock() == invocation.getMock() @AT@ 3756 @LENGTH@ 54
+------INS MethodInvocation@@mockingProgress.verificationStarted(verificationMode) @TO@ ExpressionStatement@@MethodInvocation:mockingProgress.verificationStarted(verificationMode) @AT@ 3756 @LENGTH@ 53
+---------INS SimpleName@@Name:mockingProgress @TO@ MethodInvocation@@mockingProgress.verificationStarted(verificationMode) @AT@ 3756 @LENGTH@ 15
+---------INS SimpleName@@MethodName:verificationStarted:[verificationMode] @TO@ MethodInvocation@@mockingProgress.verificationStarted(verificationMode) @AT@ 3772 @LENGTH@ 37
+------------INS SimpleName@@verificationMode @TO@ SimpleName@@MethodName:verificationStarted:[verificationMode] @AT@ 3792 @LENGTH@ 16
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2 OP8 OP9)
+OP2:   (DEL, InfixExpression, OP1, OP3 OP7)
+OP3:      (DEL, InstanceofExpression, OP2, OP4 OP5 OP6)
+OP4:         (DEL, SimpleName, OP3, null)
+OP5:         (DEL, Instanceof, OP3, null)
+OP6:         (DEL, SimpleType, OP3, null)
+OP7:      (DEL, Operator, OP2, null)
+OP8:   (MOV, InfixExpression, OP1, null)
+OP9:   (INS, ExpressionStatement, OP1, OP10)
+OP10:      (INS, MethodInvocation, OP9, OP11 OP12)
+OP11:         (INS, SimpleName, OP10, null)
+OP12:         (INS, SimpleName, OP10, OP13)
+OP13:            (INS, SimpleName, OP12, null)
+
+
+

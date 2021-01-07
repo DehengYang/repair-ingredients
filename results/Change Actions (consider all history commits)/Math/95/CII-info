@@ -1,0 +1,45 @@
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@double ret; @TO@ double ret=1.0; @AT@ 5261 @LENGTH@ 11
+---UPD VariableDeclarationFragment@@ret @TO@ ret=1.0 @AT@ 5268 @LENGTH@ 3
+------INS NumberLiteral@@1.0 @TO@ VariableDeclarationFragment@@ret @AT@ 5274 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:d > 2.0 @TO@ MethodDeclaration@@protected, @@double, MethodName:getInitialDomain, @@Argus:double+p+ @AT@ 5340 @LENGTH@ 81
+---INS InfixExpression@@d > 2.0 @TO@ IfStatement@@InfixExpression:d > 2.0 @AT@ 5344 @LENGTH@ 7
+------INS SimpleName@@d @TO@ InfixExpression@@d > 2.0 @AT@ 5344 @LENGTH@ 1
+------INS Operator@@> @TO@ InfixExpression@@d > 2.0 @AT@ 5345 @LENGTH@ 1
+------INS NumberLiteral@@2.0 @TO@ InfixExpression@@d > 2.0 @AT@ 5348 @LENGTH@ 3
+---MOV ExpressionStatement@@Assignment:ret=d / (d - 2.0) @TO@ IfStatement@@InfixExpression:d > 2.0 @AT@ 5362 @LENGTH@ 20
+]
+
+CII:
+OP1:(UPD, VariableDeclarationStatement, null, OP2)
+OP2:   (UPD, VariableDeclarationFragment, OP1, OP3)
+OP3:      (INS, NumberLiteral, OP2, null)
+
+
+
+
+
+hASList: 
+[UPD VariableDeclarationStatement@@double ret; @TO@ double ret=1.0; @AT@ 5261 @LENGTH@ 11
+---UPD VariableDeclarationFragment@@ret @TO@ ret=1.0 @AT@ 5268 @LENGTH@ 3
+------INS NumberLiteral@@1.0 @TO@ VariableDeclarationFragment@@ret @AT@ 5274 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:d > 2.0 @TO@ MethodDeclaration@@protected, @@double, MethodName:getInitialDomain, @@Argus:double+p+ @AT@ 5340 @LENGTH@ 81
+---INS InfixExpression@@d > 2.0 @TO@ IfStatement@@InfixExpression:d > 2.0 @AT@ 5344 @LENGTH@ 7
+------INS SimpleName@@d @TO@ InfixExpression@@d > 2.0 @AT@ 5344 @LENGTH@ 1
+------INS Operator@@> @TO@ InfixExpression@@d > 2.0 @AT@ 5345 @LENGTH@ 1
+------INS NumberLiteral@@2.0 @TO@ InfixExpression@@d > 2.0 @AT@ 5348 @LENGTH@ 3
+---MOV ExpressionStatement@@Assignment:ret=d / (d - 2.0) @TO@ IfStatement@@InfixExpression:d > 2.0 @AT@ 5362 @LENGTH@ 20
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, NumberLiteral, OP2, null)
+OP6:   (MOV, ExpressionStatement, OP1, null)
+
+
+

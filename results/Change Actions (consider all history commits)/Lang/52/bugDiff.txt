@@ -1,0 +1,15 @@
+
+diff -Naur ../d4j-repo/Lang/Lang_52/src/java/org/apache/commons/lang/StringEscapeUtils.java ../d4j-repo/fixed_bugs_dir/Lang/Lang_52/src/java/org/apache/commons/lang/StringEscapeUtils.java
+--- ../d4j-repo/Lang/Lang_52/src/java/org/apache/commons/lang/StringEscapeUtils.java	2021-01-04 13:18:11.390287703 -0800
++++ ../d4j-repo/fixed_bugs_dir/Lang/Lang_52/src/java/org/apache/commons/lang/StringEscapeUtils.java	2021-01-04 13:18:15.022424083 -0800
+@@ -233,6 +233,10 @@
+                         out.write('\\');
+                         out.write('\\');
+                         break;
++                    case '/':
++                        out.write('\\');
++                        out.write('/');
++                        break;
+                     default :
+                         out.write(ch);
+                         break;

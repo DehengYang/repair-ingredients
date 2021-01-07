@@ -1,0 +1,516 @@
+
+
+hASList: 
+[UPD IfStatement@@SimpleName:isNaN @TO@ InfixExpression:isNaN || Double.isInfinite(real) @AT@ 34341 @LENGTH@ 46
+---INS InfixExpression@@isNaN || Double.isInfinite(real) @TO@ IfStatement@@SimpleName:isNaN @AT@ 34345 @LENGTH@ 32
+------INS SimpleName@@isNaN @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34345 @LENGTH@ 5
+------INS Operator@@|| @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34350 @LENGTH@ 2
+------INS MethodInvocation@@Double.isInfinite(real) @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34354 @LENGTH@ 23
+---------INS SimpleName@@Name:Double @TO@ MethodInvocation@@Double.isInfinite(real) @AT@ 34354 @LENGTH@ 6
+---------INS SimpleName@@MethodName:isInfinite:[real] @TO@ MethodInvocation@@Double.isInfinite(real) @AT@ 34361 @LENGTH@ 16
+------------INS SimpleName@@real @TO@ SimpleName@@MethodName:isInfinite:[real] @AT@ 34372 @LENGTH@ 4
+---DEL SimpleName@@isNaN @AT@ 34345 @LENGTH@ 5
+, INS IfStatement@@InfixExpression:imaginary > 20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tan, @@Argus:null @AT@ 34423 @LENGTH@ 77
+---INS InfixExpression@@imaginary > 20.0 @TO@ IfStatement@@InfixExpression:imaginary > 20.0 @AT@ 34427 @LENGTH@ 16
+------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34427 @LENGTH@ 9
+------INS Operator@@> @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34436 @LENGTH@ 1
+------INS NumberLiteral@@20.0 @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34439 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(0.0,1.0) @TO@ IfStatement@@InfixExpression:imaginary > 20.0 @AT@ 34459 @LENGTH@ 31
+------INS MethodInvocation@@createComplex(0.0,1.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(0.0,1.0) @AT@ 34466 @LENGTH@ 23
+---------INS SimpleName@@MethodName:createComplex:[0.0, 1.0] @TO@ MethodInvocation@@createComplex(0.0,1.0) @AT@ 34466 @LENGTH@ 23
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, 1.0] @AT@ 34480 @LENGTH@ 3
+------------INS NumberLiteral@@1.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, 1.0] @AT@ 34485 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:imaginary < -20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tan, @@Argus:null @AT@ 34509 @LENGTH@ 79
+---INS InfixExpression@@imaginary < -20.0 @TO@ IfStatement@@InfixExpression:imaginary < -20.0 @AT@ 34513 @LENGTH@ 17
+------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34513 @LENGTH@ 9
+------INS Operator@@< @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34522 @LENGTH@ 1
+------INS PrefixExpression@@-20.0 @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34525 @LENGTH@ 5
+---------INS Operator@@- @TO@ PrefixExpression@@-20.0 @AT@ 34525 @LENGTH@ 1
+---------INS NumberLiteral@@20.0 @TO@ PrefixExpression@@-20.0 @AT@ 34526 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(0.0,-1.0) @TO@ IfStatement@@InfixExpression:imaginary < -20.0 @AT@ 34546 @LENGTH@ 32
+------INS MethodInvocation@@createComplex(0.0,-1.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(0.0,-1.0) @AT@ 34553 @LENGTH@ 24
+---------INS SimpleName@@MethodName:createComplex:[0.0, -1.0] @TO@ MethodInvocation@@createComplex(0.0,-1.0) @AT@ 34553 @LENGTH@ 24
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, -1.0] @AT@ 34567 @LENGTH@ 3
+------------INS PrefixExpression@@-1.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, -1.0] @AT@ 34572 @LENGTH@ 4
+---------------INS Operator@@- @TO@ PrefixExpression@@-1.0 @AT@ 34572 @LENGTH@ 1
+---------------INS NumberLiteral@@1.0 @TO@ PrefixExpression@@-1.0 @AT@ 34573 @LENGTH@ 3
+, UPD IfStatement@@SimpleName:isNaN @TO@ InfixExpression:isNaN || Double.isInfinite(imaginary) @AT@ 35864 @LENGTH@ 46
+---DEL SimpleName@@isNaN @AT@ 35868 @LENGTH@ 5
+---INS InfixExpression@@isNaN || Double.isInfinite(imaginary) @TO@ IfStatement@@SimpleName:isNaN @AT@ 36069 @LENGTH@ 37
+------INS SimpleName@@isNaN @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36069 @LENGTH@ 5
+------INS Operator@@|| @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36074 @LENGTH@ 2
+------INS MethodInvocation@@Double.isInfinite(imaginary) @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36078 @LENGTH@ 28
+---------INS SimpleName@@Name:Double @TO@ MethodInvocation@@Double.isInfinite(imaginary) @AT@ 36078 @LENGTH@ 6
+---------INS SimpleName@@MethodName:isInfinite:[imaginary] @TO@ MethodInvocation@@Double.isInfinite(imaginary) @AT@ 36085 @LENGTH@ 21
+------------INS SimpleName@@imaginary @TO@ SimpleName@@MethodName:isInfinite:[imaginary] @AT@ 36096 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:real > 20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tanh, @@Argus:null @AT@ 36152 @LENGTH@ 72
+---INS InfixExpression@@real > 20.0 @TO@ IfStatement@@InfixExpression:real > 20.0 @AT@ 36156 @LENGTH@ 11
+------INS SimpleName@@real @TO@ InfixExpression@@real > 20.0 @AT@ 36156 @LENGTH@ 4
+------INS Operator@@> @TO@ InfixExpression@@real > 20.0 @AT@ 36160 @LENGTH@ 1
+------INS NumberLiteral@@20.0 @TO@ InfixExpression@@real > 20.0 @AT@ 36163 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(1.0,0.0) @TO@ IfStatement@@InfixExpression:real > 20.0 @AT@ 36183 @LENGTH@ 31
+------INS MethodInvocation@@createComplex(1.0,0.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(1.0,0.0) @AT@ 36190 @LENGTH@ 23
+---------INS SimpleName@@MethodName:createComplex:[1.0, 0.0] @TO@ MethodInvocation@@createComplex(1.0,0.0) @AT@ 36190 @LENGTH@ 23
+------------INS NumberLiteral@@1.0 @TO@ SimpleName@@MethodName:createComplex:[1.0, 0.0] @AT@ 36204 @LENGTH@ 3
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[1.0, 0.0] @AT@ 36209 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:real < -20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tanh, @@Argus:null @AT@ 36233 @LENGTH@ 74
+---INS InfixExpression@@real < -20.0 @TO@ IfStatement@@InfixExpression:real < -20.0 @AT@ 36237 @LENGTH@ 12
+------INS SimpleName@@real @TO@ InfixExpression@@real < -20.0 @AT@ 36237 @LENGTH@ 4
+------INS Operator@@< @TO@ InfixExpression@@real < -20.0 @AT@ 36241 @LENGTH@ 1
+------INS PrefixExpression@@-20.0 @TO@ InfixExpression@@real < -20.0 @AT@ 36244 @LENGTH@ 5
+---------INS Operator@@- @TO@ PrefixExpression@@-20.0 @AT@ 36244 @LENGTH@ 1
+---------INS NumberLiteral@@20.0 @TO@ PrefixExpression@@-20.0 @AT@ 36245 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(-1.0,0.0) @TO@ IfStatement@@InfixExpression:real < -20.0 @AT@ 36265 @LENGTH@ 32
+------INS MethodInvocation@@createComplex(-1.0,0.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(-1.0,0.0) @AT@ 36272 @LENGTH@ 24
+---------INS SimpleName@@MethodName:createComplex:[-1.0, 0.0] @TO@ MethodInvocation@@createComplex(-1.0,0.0) @AT@ 36272 @LENGTH@ 24
+------------INS PrefixExpression@@-1.0 @TO@ SimpleName@@MethodName:createComplex:[-1.0, 0.0] @AT@ 36286 @LENGTH@ 4
+---------------INS Operator@@- @TO@ PrefixExpression@@-1.0 @AT@ 36286 @LENGTH@ 1
+---------------INS NumberLiteral@@1.0 @TO@ PrefixExpression@@-1.0 @AT@ 36287 @LENGTH@ 3
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[-1.0, 0.0] @AT@ 36292 @LENGTH@ 3
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2 OP9)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, MethodInvocation, OP2, OP6 OP7)
+OP6:         (INS, SimpleName, OP5, null)
+OP7:         (INS, SimpleName, OP5, OP8)
+OP8:            (INS, SimpleName, OP7, null)
+OP9:   (DEL, SimpleName, OP1, null)
+
+
+
+
+
+hASList: 
+[UPD IfStatement@@SimpleName:isNaN @TO@ InfixExpression:isNaN || Double.isInfinite(real) @AT@ 34341 @LENGTH@ 46
+---INS InfixExpression@@isNaN || Double.isInfinite(real) @TO@ IfStatement@@SimpleName:isNaN @AT@ 34345 @LENGTH@ 32
+------INS SimpleName@@isNaN @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34345 @LENGTH@ 5
+------INS Operator@@|| @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34350 @LENGTH@ 2
+------INS MethodInvocation@@Double.isInfinite(real) @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34354 @LENGTH@ 23
+---------INS SimpleName@@Name:Double @TO@ MethodInvocation@@Double.isInfinite(real) @AT@ 34354 @LENGTH@ 6
+---------INS SimpleName@@MethodName:isInfinite:[real] @TO@ MethodInvocation@@Double.isInfinite(real) @AT@ 34361 @LENGTH@ 16
+------------INS SimpleName@@real @TO@ SimpleName@@MethodName:isInfinite:[real] @AT@ 34372 @LENGTH@ 4
+---DEL SimpleName@@isNaN @AT@ 34345 @LENGTH@ 5
+, INS IfStatement@@InfixExpression:imaginary > 20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tan, @@Argus:null @AT@ 34423 @LENGTH@ 77
+---INS InfixExpression@@imaginary > 20.0 @TO@ IfStatement@@InfixExpression:imaginary > 20.0 @AT@ 34427 @LENGTH@ 16
+------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34427 @LENGTH@ 9
+------INS Operator@@> @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34436 @LENGTH@ 1
+------INS NumberLiteral@@20.0 @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34439 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(0.0,1.0) @TO@ IfStatement@@InfixExpression:imaginary > 20.0 @AT@ 34459 @LENGTH@ 31
+------INS MethodInvocation@@createComplex(0.0,1.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(0.0,1.0) @AT@ 34466 @LENGTH@ 23
+---------INS SimpleName@@MethodName:createComplex:[0.0, 1.0] @TO@ MethodInvocation@@createComplex(0.0,1.0) @AT@ 34466 @LENGTH@ 23
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, 1.0] @AT@ 34480 @LENGTH@ 3
+------------INS NumberLiteral@@1.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, 1.0] @AT@ 34485 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:imaginary < -20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tan, @@Argus:null @AT@ 34509 @LENGTH@ 79
+---INS InfixExpression@@imaginary < -20.0 @TO@ IfStatement@@InfixExpression:imaginary < -20.0 @AT@ 34513 @LENGTH@ 17
+------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34513 @LENGTH@ 9
+------INS Operator@@< @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34522 @LENGTH@ 1
+------INS PrefixExpression@@-20.0 @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34525 @LENGTH@ 5
+---------INS Operator@@- @TO@ PrefixExpression@@-20.0 @AT@ 34525 @LENGTH@ 1
+---------INS NumberLiteral@@20.0 @TO@ PrefixExpression@@-20.0 @AT@ 34526 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(0.0,-1.0) @TO@ IfStatement@@InfixExpression:imaginary < -20.0 @AT@ 34546 @LENGTH@ 32
+------INS MethodInvocation@@createComplex(0.0,-1.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(0.0,-1.0) @AT@ 34553 @LENGTH@ 24
+---------INS SimpleName@@MethodName:createComplex:[0.0, -1.0] @TO@ MethodInvocation@@createComplex(0.0,-1.0) @AT@ 34553 @LENGTH@ 24
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, -1.0] @AT@ 34567 @LENGTH@ 3
+------------INS PrefixExpression@@-1.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, -1.0] @AT@ 34572 @LENGTH@ 4
+---------------INS Operator@@- @TO@ PrefixExpression@@-1.0 @AT@ 34572 @LENGTH@ 1
+---------------INS NumberLiteral@@1.0 @TO@ PrefixExpression@@-1.0 @AT@ 34573 @LENGTH@ 3
+, UPD IfStatement@@SimpleName:isNaN @TO@ InfixExpression:isNaN || Double.isInfinite(imaginary) @AT@ 35864 @LENGTH@ 46
+---DEL SimpleName@@isNaN @AT@ 35868 @LENGTH@ 5
+---INS InfixExpression@@isNaN || Double.isInfinite(imaginary) @TO@ IfStatement@@SimpleName:isNaN @AT@ 36069 @LENGTH@ 37
+------INS SimpleName@@isNaN @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36069 @LENGTH@ 5
+------INS Operator@@|| @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36074 @LENGTH@ 2
+------INS MethodInvocation@@Double.isInfinite(imaginary) @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36078 @LENGTH@ 28
+---------INS SimpleName@@Name:Double @TO@ MethodInvocation@@Double.isInfinite(imaginary) @AT@ 36078 @LENGTH@ 6
+---------INS SimpleName@@MethodName:isInfinite:[imaginary] @TO@ MethodInvocation@@Double.isInfinite(imaginary) @AT@ 36085 @LENGTH@ 21
+------------INS SimpleName@@imaginary @TO@ SimpleName@@MethodName:isInfinite:[imaginary] @AT@ 36096 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:real > 20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tanh, @@Argus:null @AT@ 36152 @LENGTH@ 72
+---INS InfixExpression@@real > 20.0 @TO@ IfStatement@@InfixExpression:real > 20.0 @AT@ 36156 @LENGTH@ 11
+------INS SimpleName@@real @TO@ InfixExpression@@real > 20.0 @AT@ 36156 @LENGTH@ 4
+------INS Operator@@> @TO@ InfixExpression@@real > 20.0 @AT@ 36160 @LENGTH@ 1
+------INS NumberLiteral@@20.0 @TO@ InfixExpression@@real > 20.0 @AT@ 36163 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(1.0,0.0) @TO@ IfStatement@@InfixExpression:real > 20.0 @AT@ 36183 @LENGTH@ 31
+------INS MethodInvocation@@createComplex(1.0,0.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(1.0,0.0) @AT@ 36190 @LENGTH@ 23
+---------INS SimpleName@@MethodName:createComplex:[1.0, 0.0] @TO@ MethodInvocation@@createComplex(1.0,0.0) @AT@ 36190 @LENGTH@ 23
+------------INS NumberLiteral@@1.0 @TO@ SimpleName@@MethodName:createComplex:[1.0, 0.0] @AT@ 36204 @LENGTH@ 3
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[1.0, 0.0] @AT@ 36209 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:real < -20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tanh, @@Argus:null @AT@ 36233 @LENGTH@ 74
+---INS InfixExpression@@real < -20.0 @TO@ IfStatement@@InfixExpression:real < -20.0 @AT@ 36237 @LENGTH@ 12
+------INS SimpleName@@real @TO@ InfixExpression@@real < -20.0 @AT@ 36237 @LENGTH@ 4
+------INS Operator@@< @TO@ InfixExpression@@real < -20.0 @AT@ 36241 @LENGTH@ 1
+------INS PrefixExpression@@-20.0 @TO@ InfixExpression@@real < -20.0 @AT@ 36244 @LENGTH@ 5
+---------INS Operator@@- @TO@ PrefixExpression@@-20.0 @AT@ 36244 @LENGTH@ 1
+---------INS NumberLiteral@@20.0 @TO@ PrefixExpression@@-20.0 @AT@ 36245 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(-1.0,0.0) @TO@ IfStatement@@InfixExpression:real < -20.0 @AT@ 36265 @LENGTH@ 32
+------INS MethodInvocation@@createComplex(-1.0,0.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(-1.0,0.0) @AT@ 36272 @LENGTH@ 24
+---------INS SimpleName@@MethodName:createComplex:[-1.0, 0.0] @TO@ MethodInvocation@@createComplex(-1.0,0.0) @AT@ 36272 @LENGTH@ 24
+------------INS PrefixExpression@@-1.0 @TO@ SimpleName@@MethodName:createComplex:[-1.0, 0.0] @AT@ 36286 @LENGTH@ 4
+---------------INS Operator@@- @TO@ PrefixExpression@@-1.0 @AT@ 36286 @LENGTH@ 1
+---------------INS NumberLiteral@@1.0 @TO@ PrefixExpression@@-1.0 @AT@ 36287 @LENGTH@ 3
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[-1.0, 0.0] @AT@ 36292 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, NumberLiteral, OP2, null)
+OP6:   (INS, ReturnStatement, OP1, OP7)
+OP7:      (INS, MethodInvocation, OP6, OP8)
+OP8:         (INS, SimpleName, OP7, OP9 OP10)
+OP9:            (INS, NumberLiteral, OP8, null)
+OP10:            (INS, NumberLiteral, OP8, null)
+
+
+
+
+
+hASList: 
+[UPD IfStatement@@SimpleName:isNaN @TO@ InfixExpression:isNaN || Double.isInfinite(real) @AT@ 34341 @LENGTH@ 46
+---INS InfixExpression@@isNaN || Double.isInfinite(real) @TO@ IfStatement@@SimpleName:isNaN @AT@ 34345 @LENGTH@ 32
+------INS SimpleName@@isNaN @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34345 @LENGTH@ 5
+------INS Operator@@|| @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34350 @LENGTH@ 2
+------INS MethodInvocation@@Double.isInfinite(real) @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34354 @LENGTH@ 23
+---------INS SimpleName@@Name:Double @TO@ MethodInvocation@@Double.isInfinite(real) @AT@ 34354 @LENGTH@ 6
+---------INS SimpleName@@MethodName:isInfinite:[real] @TO@ MethodInvocation@@Double.isInfinite(real) @AT@ 34361 @LENGTH@ 16
+------------INS SimpleName@@real @TO@ SimpleName@@MethodName:isInfinite:[real] @AT@ 34372 @LENGTH@ 4
+---DEL SimpleName@@isNaN @AT@ 34345 @LENGTH@ 5
+, INS IfStatement@@InfixExpression:imaginary > 20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tan, @@Argus:null @AT@ 34423 @LENGTH@ 77
+---INS InfixExpression@@imaginary > 20.0 @TO@ IfStatement@@InfixExpression:imaginary > 20.0 @AT@ 34427 @LENGTH@ 16
+------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34427 @LENGTH@ 9
+------INS Operator@@> @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34436 @LENGTH@ 1
+------INS NumberLiteral@@20.0 @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34439 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(0.0,1.0) @TO@ IfStatement@@InfixExpression:imaginary > 20.0 @AT@ 34459 @LENGTH@ 31
+------INS MethodInvocation@@createComplex(0.0,1.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(0.0,1.0) @AT@ 34466 @LENGTH@ 23
+---------INS SimpleName@@MethodName:createComplex:[0.0, 1.0] @TO@ MethodInvocation@@createComplex(0.0,1.0) @AT@ 34466 @LENGTH@ 23
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, 1.0] @AT@ 34480 @LENGTH@ 3
+------------INS NumberLiteral@@1.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, 1.0] @AT@ 34485 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:imaginary < -20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tan, @@Argus:null @AT@ 34509 @LENGTH@ 79
+---INS InfixExpression@@imaginary < -20.0 @TO@ IfStatement@@InfixExpression:imaginary < -20.0 @AT@ 34513 @LENGTH@ 17
+------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34513 @LENGTH@ 9
+------INS Operator@@< @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34522 @LENGTH@ 1
+------INS PrefixExpression@@-20.0 @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34525 @LENGTH@ 5
+---------INS Operator@@- @TO@ PrefixExpression@@-20.0 @AT@ 34525 @LENGTH@ 1
+---------INS NumberLiteral@@20.0 @TO@ PrefixExpression@@-20.0 @AT@ 34526 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(0.0,-1.0) @TO@ IfStatement@@InfixExpression:imaginary < -20.0 @AT@ 34546 @LENGTH@ 32
+------INS MethodInvocation@@createComplex(0.0,-1.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(0.0,-1.0) @AT@ 34553 @LENGTH@ 24
+---------INS SimpleName@@MethodName:createComplex:[0.0, -1.0] @TO@ MethodInvocation@@createComplex(0.0,-1.0) @AT@ 34553 @LENGTH@ 24
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, -1.0] @AT@ 34567 @LENGTH@ 3
+------------INS PrefixExpression@@-1.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, -1.0] @AT@ 34572 @LENGTH@ 4
+---------------INS Operator@@- @TO@ PrefixExpression@@-1.0 @AT@ 34572 @LENGTH@ 1
+---------------INS NumberLiteral@@1.0 @TO@ PrefixExpression@@-1.0 @AT@ 34573 @LENGTH@ 3
+, UPD IfStatement@@SimpleName:isNaN @TO@ InfixExpression:isNaN || Double.isInfinite(imaginary) @AT@ 35864 @LENGTH@ 46
+---DEL SimpleName@@isNaN @AT@ 35868 @LENGTH@ 5
+---INS InfixExpression@@isNaN || Double.isInfinite(imaginary) @TO@ IfStatement@@SimpleName:isNaN @AT@ 36069 @LENGTH@ 37
+------INS SimpleName@@isNaN @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36069 @LENGTH@ 5
+------INS Operator@@|| @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36074 @LENGTH@ 2
+------INS MethodInvocation@@Double.isInfinite(imaginary) @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36078 @LENGTH@ 28
+---------INS SimpleName@@Name:Double @TO@ MethodInvocation@@Double.isInfinite(imaginary) @AT@ 36078 @LENGTH@ 6
+---------INS SimpleName@@MethodName:isInfinite:[imaginary] @TO@ MethodInvocation@@Double.isInfinite(imaginary) @AT@ 36085 @LENGTH@ 21
+------------INS SimpleName@@imaginary @TO@ SimpleName@@MethodName:isInfinite:[imaginary] @AT@ 36096 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:real > 20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tanh, @@Argus:null @AT@ 36152 @LENGTH@ 72
+---INS InfixExpression@@real > 20.0 @TO@ IfStatement@@InfixExpression:real > 20.0 @AT@ 36156 @LENGTH@ 11
+------INS SimpleName@@real @TO@ InfixExpression@@real > 20.0 @AT@ 36156 @LENGTH@ 4
+------INS Operator@@> @TO@ InfixExpression@@real > 20.0 @AT@ 36160 @LENGTH@ 1
+------INS NumberLiteral@@20.0 @TO@ InfixExpression@@real > 20.0 @AT@ 36163 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(1.0,0.0) @TO@ IfStatement@@InfixExpression:real > 20.0 @AT@ 36183 @LENGTH@ 31
+------INS MethodInvocation@@createComplex(1.0,0.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(1.0,0.0) @AT@ 36190 @LENGTH@ 23
+---------INS SimpleName@@MethodName:createComplex:[1.0, 0.0] @TO@ MethodInvocation@@createComplex(1.0,0.0) @AT@ 36190 @LENGTH@ 23
+------------INS NumberLiteral@@1.0 @TO@ SimpleName@@MethodName:createComplex:[1.0, 0.0] @AT@ 36204 @LENGTH@ 3
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[1.0, 0.0] @AT@ 36209 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:real < -20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tanh, @@Argus:null @AT@ 36233 @LENGTH@ 74
+---INS InfixExpression@@real < -20.0 @TO@ IfStatement@@InfixExpression:real < -20.0 @AT@ 36237 @LENGTH@ 12
+------INS SimpleName@@real @TO@ InfixExpression@@real < -20.0 @AT@ 36237 @LENGTH@ 4
+------INS Operator@@< @TO@ InfixExpression@@real < -20.0 @AT@ 36241 @LENGTH@ 1
+------INS PrefixExpression@@-20.0 @TO@ InfixExpression@@real < -20.0 @AT@ 36244 @LENGTH@ 5
+---------INS Operator@@- @TO@ PrefixExpression@@-20.0 @AT@ 36244 @LENGTH@ 1
+---------INS NumberLiteral@@20.0 @TO@ PrefixExpression@@-20.0 @AT@ 36245 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(-1.0,0.0) @TO@ IfStatement@@InfixExpression:real < -20.0 @AT@ 36265 @LENGTH@ 32
+------INS MethodInvocation@@createComplex(-1.0,0.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(-1.0,0.0) @AT@ 36272 @LENGTH@ 24
+---------INS SimpleName@@MethodName:createComplex:[-1.0, 0.0] @TO@ MethodInvocation@@createComplex(-1.0,0.0) @AT@ 36272 @LENGTH@ 24
+------------INS PrefixExpression@@-1.0 @TO@ SimpleName@@MethodName:createComplex:[-1.0, 0.0] @AT@ 36286 @LENGTH@ 4
+---------------INS Operator@@- @TO@ PrefixExpression@@-1.0 @AT@ 36286 @LENGTH@ 1
+---------------INS NumberLiteral@@1.0 @TO@ PrefixExpression@@-1.0 @AT@ 36287 @LENGTH@ 3
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[-1.0, 0.0] @AT@ 36292 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP8)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, PrefixExpression, OP2, OP6 OP7)
+OP6:         (INS, Operator, OP5, null)
+OP7:         (INS, NumberLiteral, OP5, null)
+OP8:   (INS, ReturnStatement, OP1, OP9)
+OP9:      (INS, MethodInvocation, OP8, OP10)
+OP10:         (INS, SimpleName, OP9, OP11 OP12)
+OP11:            (INS, NumberLiteral, OP10, null)
+OP12:            (INS, PrefixExpression, OP10, OP13 OP14)
+OP13:               (INS, Operator, OP12, null)
+OP14:               (INS, NumberLiteral, OP12, null)
+
+
+
+
+
+hASList: 
+[UPD IfStatement@@SimpleName:isNaN @TO@ InfixExpression:isNaN || Double.isInfinite(real) @AT@ 34341 @LENGTH@ 46
+---INS InfixExpression@@isNaN || Double.isInfinite(real) @TO@ IfStatement@@SimpleName:isNaN @AT@ 34345 @LENGTH@ 32
+------INS SimpleName@@isNaN @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34345 @LENGTH@ 5
+------INS Operator@@|| @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34350 @LENGTH@ 2
+------INS MethodInvocation@@Double.isInfinite(real) @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34354 @LENGTH@ 23
+---------INS SimpleName@@Name:Double @TO@ MethodInvocation@@Double.isInfinite(real) @AT@ 34354 @LENGTH@ 6
+---------INS SimpleName@@MethodName:isInfinite:[real] @TO@ MethodInvocation@@Double.isInfinite(real) @AT@ 34361 @LENGTH@ 16
+------------INS SimpleName@@real @TO@ SimpleName@@MethodName:isInfinite:[real] @AT@ 34372 @LENGTH@ 4
+---DEL SimpleName@@isNaN @AT@ 34345 @LENGTH@ 5
+, INS IfStatement@@InfixExpression:imaginary > 20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tan, @@Argus:null @AT@ 34423 @LENGTH@ 77
+---INS InfixExpression@@imaginary > 20.0 @TO@ IfStatement@@InfixExpression:imaginary > 20.0 @AT@ 34427 @LENGTH@ 16
+------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34427 @LENGTH@ 9
+------INS Operator@@> @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34436 @LENGTH@ 1
+------INS NumberLiteral@@20.0 @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34439 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(0.0,1.0) @TO@ IfStatement@@InfixExpression:imaginary > 20.0 @AT@ 34459 @LENGTH@ 31
+------INS MethodInvocation@@createComplex(0.0,1.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(0.0,1.0) @AT@ 34466 @LENGTH@ 23
+---------INS SimpleName@@MethodName:createComplex:[0.0, 1.0] @TO@ MethodInvocation@@createComplex(0.0,1.0) @AT@ 34466 @LENGTH@ 23
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, 1.0] @AT@ 34480 @LENGTH@ 3
+------------INS NumberLiteral@@1.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, 1.0] @AT@ 34485 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:imaginary < -20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tan, @@Argus:null @AT@ 34509 @LENGTH@ 79
+---INS InfixExpression@@imaginary < -20.0 @TO@ IfStatement@@InfixExpression:imaginary < -20.0 @AT@ 34513 @LENGTH@ 17
+------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34513 @LENGTH@ 9
+------INS Operator@@< @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34522 @LENGTH@ 1
+------INS PrefixExpression@@-20.0 @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34525 @LENGTH@ 5
+---------INS Operator@@- @TO@ PrefixExpression@@-20.0 @AT@ 34525 @LENGTH@ 1
+---------INS NumberLiteral@@20.0 @TO@ PrefixExpression@@-20.0 @AT@ 34526 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(0.0,-1.0) @TO@ IfStatement@@InfixExpression:imaginary < -20.0 @AT@ 34546 @LENGTH@ 32
+------INS MethodInvocation@@createComplex(0.0,-1.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(0.0,-1.0) @AT@ 34553 @LENGTH@ 24
+---------INS SimpleName@@MethodName:createComplex:[0.0, -1.0] @TO@ MethodInvocation@@createComplex(0.0,-1.0) @AT@ 34553 @LENGTH@ 24
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, -1.0] @AT@ 34567 @LENGTH@ 3
+------------INS PrefixExpression@@-1.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, -1.0] @AT@ 34572 @LENGTH@ 4
+---------------INS Operator@@- @TO@ PrefixExpression@@-1.0 @AT@ 34572 @LENGTH@ 1
+---------------INS NumberLiteral@@1.0 @TO@ PrefixExpression@@-1.0 @AT@ 34573 @LENGTH@ 3
+, UPD IfStatement@@SimpleName:isNaN @TO@ InfixExpression:isNaN || Double.isInfinite(imaginary) @AT@ 35864 @LENGTH@ 46
+---DEL SimpleName@@isNaN @AT@ 35868 @LENGTH@ 5
+---INS InfixExpression@@isNaN || Double.isInfinite(imaginary) @TO@ IfStatement@@SimpleName:isNaN @AT@ 36069 @LENGTH@ 37
+------INS SimpleName@@isNaN @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36069 @LENGTH@ 5
+------INS Operator@@|| @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36074 @LENGTH@ 2
+------INS MethodInvocation@@Double.isInfinite(imaginary) @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36078 @LENGTH@ 28
+---------INS SimpleName@@Name:Double @TO@ MethodInvocation@@Double.isInfinite(imaginary) @AT@ 36078 @LENGTH@ 6
+---------INS SimpleName@@MethodName:isInfinite:[imaginary] @TO@ MethodInvocation@@Double.isInfinite(imaginary) @AT@ 36085 @LENGTH@ 21
+------------INS SimpleName@@imaginary @TO@ SimpleName@@MethodName:isInfinite:[imaginary] @AT@ 36096 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:real > 20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tanh, @@Argus:null @AT@ 36152 @LENGTH@ 72
+---INS InfixExpression@@real > 20.0 @TO@ IfStatement@@InfixExpression:real > 20.0 @AT@ 36156 @LENGTH@ 11
+------INS SimpleName@@real @TO@ InfixExpression@@real > 20.0 @AT@ 36156 @LENGTH@ 4
+------INS Operator@@> @TO@ InfixExpression@@real > 20.0 @AT@ 36160 @LENGTH@ 1
+------INS NumberLiteral@@20.0 @TO@ InfixExpression@@real > 20.0 @AT@ 36163 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(1.0,0.0) @TO@ IfStatement@@InfixExpression:real > 20.0 @AT@ 36183 @LENGTH@ 31
+------INS MethodInvocation@@createComplex(1.0,0.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(1.0,0.0) @AT@ 36190 @LENGTH@ 23
+---------INS SimpleName@@MethodName:createComplex:[1.0, 0.0] @TO@ MethodInvocation@@createComplex(1.0,0.0) @AT@ 36190 @LENGTH@ 23
+------------INS NumberLiteral@@1.0 @TO@ SimpleName@@MethodName:createComplex:[1.0, 0.0] @AT@ 36204 @LENGTH@ 3
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[1.0, 0.0] @AT@ 36209 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:real < -20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tanh, @@Argus:null @AT@ 36233 @LENGTH@ 74
+---INS InfixExpression@@real < -20.0 @TO@ IfStatement@@InfixExpression:real < -20.0 @AT@ 36237 @LENGTH@ 12
+------INS SimpleName@@real @TO@ InfixExpression@@real < -20.0 @AT@ 36237 @LENGTH@ 4
+------INS Operator@@< @TO@ InfixExpression@@real < -20.0 @AT@ 36241 @LENGTH@ 1
+------INS PrefixExpression@@-20.0 @TO@ InfixExpression@@real < -20.0 @AT@ 36244 @LENGTH@ 5
+---------INS Operator@@- @TO@ PrefixExpression@@-20.0 @AT@ 36244 @LENGTH@ 1
+---------INS NumberLiteral@@20.0 @TO@ PrefixExpression@@-20.0 @AT@ 36245 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(-1.0,0.0) @TO@ IfStatement@@InfixExpression:real < -20.0 @AT@ 36265 @LENGTH@ 32
+------INS MethodInvocation@@createComplex(-1.0,0.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(-1.0,0.0) @AT@ 36272 @LENGTH@ 24
+---------INS SimpleName@@MethodName:createComplex:[-1.0, 0.0] @TO@ MethodInvocation@@createComplex(-1.0,0.0) @AT@ 36272 @LENGTH@ 24
+------------INS PrefixExpression@@-1.0 @TO@ SimpleName@@MethodName:createComplex:[-1.0, 0.0] @AT@ 36286 @LENGTH@ 4
+---------------INS Operator@@- @TO@ PrefixExpression@@-1.0 @AT@ 36286 @LENGTH@ 1
+---------------INS NumberLiteral@@1.0 @TO@ PrefixExpression@@-1.0 @AT@ 36287 @LENGTH@ 3
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[-1.0, 0.0] @AT@ 36292 @LENGTH@ 3
+]
+
+CII:
+OP1:(UPD, IfStatement, null, OP2 OP3)
+OP2:   (DEL, SimpleName, OP1, null)
+OP3:   (INS, InfixExpression, OP1, OP4 OP5 OP6)
+OP4:      (INS, SimpleName, OP3, null)
+OP5:      (INS, Operator, OP3, null)
+OP6:      (INS, MethodInvocation, OP3, OP7 OP8)
+OP7:         (INS, SimpleName, OP6, null)
+OP8:         (INS, SimpleName, OP6, OP9)
+OP9:            (INS, SimpleName, OP8, null)
+
+
+
+
+
+hASList: 
+[UPD IfStatement@@SimpleName:isNaN @TO@ InfixExpression:isNaN || Double.isInfinite(real) @AT@ 34341 @LENGTH@ 46
+---INS InfixExpression@@isNaN || Double.isInfinite(real) @TO@ IfStatement@@SimpleName:isNaN @AT@ 34345 @LENGTH@ 32
+------INS SimpleName@@isNaN @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34345 @LENGTH@ 5
+------INS Operator@@|| @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34350 @LENGTH@ 2
+------INS MethodInvocation@@Double.isInfinite(real) @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34354 @LENGTH@ 23
+---------INS SimpleName@@Name:Double @TO@ MethodInvocation@@Double.isInfinite(real) @AT@ 34354 @LENGTH@ 6
+---------INS SimpleName@@MethodName:isInfinite:[real] @TO@ MethodInvocation@@Double.isInfinite(real) @AT@ 34361 @LENGTH@ 16
+------------INS SimpleName@@real @TO@ SimpleName@@MethodName:isInfinite:[real] @AT@ 34372 @LENGTH@ 4
+---DEL SimpleName@@isNaN @AT@ 34345 @LENGTH@ 5
+, INS IfStatement@@InfixExpression:imaginary > 20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tan, @@Argus:null @AT@ 34423 @LENGTH@ 77
+---INS InfixExpression@@imaginary > 20.0 @TO@ IfStatement@@InfixExpression:imaginary > 20.0 @AT@ 34427 @LENGTH@ 16
+------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34427 @LENGTH@ 9
+------INS Operator@@> @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34436 @LENGTH@ 1
+------INS NumberLiteral@@20.0 @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34439 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(0.0,1.0) @TO@ IfStatement@@InfixExpression:imaginary > 20.0 @AT@ 34459 @LENGTH@ 31
+------INS MethodInvocation@@createComplex(0.0,1.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(0.0,1.0) @AT@ 34466 @LENGTH@ 23
+---------INS SimpleName@@MethodName:createComplex:[0.0, 1.0] @TO@ MethodInvocation@@createComplex(0.0,1.0) @AT@ 34466 @LENGTH@ 23
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, 1.0] @AT@ 34480 @LENGTH@ 3
+------------INS NumberLiteral@@1.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, 1.0] @AT@ 34485 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:imaginary < -20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tan, @@Argus:null @AT@ 34509 @LENGTH@ 79
+---INS InfixExpression@@imaginary < -20.0 @TO@ IfStatement@@InfixExpression:imaginary < -20.0 @AT@ 34513 @LENGTH@ 17
+------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34513 @LENGTH@ 9
+------INS Operator@@< @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34522 @LENGTH@ 1
+------INS PrefixExpression@@-20.0 @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34525 @LENGTH@ 5
+---------INS Operator@@- @TO@ PrefixExpression@@-20.0 @AT@ 34525 @LENGTH@ 1
+---------INS NumberLiteral@@20.0 @TO@ PrefixExpression@@-20.0 @AT@ 34526 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(0.0,-1.0) @TO@ IfStatement@@InfixExpression:imaginary < -20.0 @AT@ 34546 @LENGTH@ 32
+------INS MethodInvocation@@createComplex(0.0,-1.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(0.0,-1.0) @AT@ 34553 @LENGTH@ 24
+---------INS SimpleName@@MethodName:createComplex:[0.0, -1.0] @TO@ MethodInvocation@@createComplex(0.0,-1.0) @AT@ 34553 @LENGTH@ 24
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, -1.0] @AT@ 34567 @LENGTH@ 3
+------------INS PrefixExpression@@-1.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, -1.0] @AT@ 34572 @LENGTH@ 4
+---------------INS Operator@@- @TO@ PrefixExpression@@-1.0 @AT@ 34572 @LENGTH@ 1
+---------------INS NumberLiteral@@1.0 @TO@ PrefixExpression@@-1.0 @AT@ 34573 @LENGTH@ 3
+, UPD IfStatement@@SimpleName:isNaN @TO@ InfixExpression:isNaN || Double.isInfinite(imaginary) @AT@ 35864 @LENGTH@ 46
+---DEL SimpleName@@isNaN @AT@ 35868 @LENGTH@ 5
+---INS InfixExpression@@isNaN || Double.isInfinite(imaginary) @TO@ IfStatement@@SimpleName:isNaN @AT@ 36069 @LENGTH@ 37
+------INS SimpleName@@isNaN @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36069 @LENGTH@ 5
+------INS Operator@@|| @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36074 @LENGTH@ 2
+------INS MethodInvocation@@Double.isInfinite(imaginary) @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36078 @LENGTH@ 28
+---------INS SimpleName@@Name:Double @TO@ MethodInvocation@@Double.isInfinite(imaginary) @AT@ 36078 @LENGTH@ 6
+---------INS SimpleName@@MethodName:isInfinite:[imaginary] @TO@ MethodInvocation@@Double.isInfinite(imaginary) @AT@ 36085 @LENGTH@ 21
+------------INS SimpleName@@imaginary @TO@ SimpleName@@MethodName:isInfinite:[imaginary] @AT@ 36096 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:real > 20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tanh, @@Argus:null @AT@ 36152 @LENGTH@ 72
+---INS InfixExpression@@real > 20.0 @TO@ IfStatement@@InfixExpression:real > 20.0 @AT@ 36156 @LENGTH@ 11
+------INS SimpleName@@real @TO@ InfixExpression@@real > 20.0 @AT@ 36156 @LENGTH@ 4
+------INS Operator@@> @TO@ InfixExpression@@real > 20.0 @AT@ 36160 @LENGTH@ 1
+------INS NumberLiteral@@20.0 @TO@ InfixExpression@@real > 20.0 @AT@ 36163 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(1.0,0.0) @TO@ IfStatement@@InfixExpression:real > 20.0 @AT@ 36183 @LENGTH@ 31
+------INS MethodInvocation@@createComplex(1.0,0.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(1.0,0.0) @AT@ 36190 @LENGTH@ 23
+---------INS SimpleName@@MethodName:createComplex:[1.0, 0.0] @TO@ MethodInvocation@@createComplex(1.0,0.0) @AT@ 36190 @LENGTH@ 23
+------------INS NumberLiteral@@1.0 @TO@ SimpleName@@MethodName:createComplex:[1.0, 0.0] @AT@ 36204 @LENGTH@ 3
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[1.0, 0.0] @AT@ 36209 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:real < -20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tanh, @@Argus:null @AT@ 36233 @LENGTH@ 74
+---INS InfixExpression@@real < -20.0 @TO@ IfStatement@@InfixExpression:real < -20.0 @AT@ 36237 @LENGTH@ 12
+------INS SimpleName@@real @TO@ InfixExpression@@real < -20.0 @AT@ 36237 @LENGTH@ 4
+------INS Operator@@< @TO@ InfixExpression@@real < -20.0 @AT@ 36241 @LENGTH@ 1
+------INS PrefixExpression@@-20.0 @TO@ InfixExpression@@real < -20.0 @AT@ 36244 @LENGTH@ 5
+---------INS Operator@@- @TO@ PrefixExpression@@-20.0 @AT@ 36244 @LENGTH@ 1
+---------INS NumberLiteral@@20.0 @TO@ PrefixExpression@@-20.0 @AT@ 36245 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(-1.0,0.0) @TO@ IfStatement@@InfixExpression:real < -20.0 @AT@ 36265 @LENGTH@ 32
+------INS MethodInvocation@@createComplex(-1.0,0.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(-1.0,0.0) @AT@ 36272 @LENGTH@ 24
+---------INS SimpleName@@MethodName:createComplex:[-1.0, 0.0] @TO@ MethodInvocation@@createComplex(-1.0,0.0) @AT@ 36272 @LENGTH@ 24
+------------INS PrefixExpression@@-1.0 @TO@ SimpleName@@MethodName:createComplex:[-1.0, 0.0] @AT@ 36286 @LENGTH@ 4
+---------------INS Operator@@- @TO@ PrefixExpression@@-1.0 @AT@ 36286 @LENGTH@ 1
+---------------INS NumberLiteral@@1.0 @TO@ PrefixExpression@@-1.0 @AT@ 36287 @LENGTH@ 3
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[-1.0, 0.0] @AT@ 36292 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP6)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, NumberLiteral, OP2, null)
+OP6:   (INS, ReturnStatement, OP1, OP7)
+OP7:      (INS, MethodInvocation, OP6, OP8)
+OP8:         (INS, SimpleName, OP7, OP9 OP10)
+OP9:            (INS, NumberLiteral, OP8, null)
+OP10:            (INS, NumberLiteral, OP8, null)
+
+
+
+
+
+hASList: 
+[UPD IfStatement@@SimpleName:isNaN @TO@ InfixExpression:isNaN || Double.isInfinite(real) @AT@ 34341 @LENGTH@ 46
+---INS InfixExpression@@isNaN || Double.isInfinite(real) @TO@ IfStatement@@SimpleName:isNaN @AT@ 34345 @LENGTH@ 32
+------INS SimpleName@@isNaN @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34345 @LENGTH@ 5
+------INS Operator@@|| @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34350 @LENGTH@ 2
+------INS MethodInvocation@@Double.isInfinite(real) @TO@ InfixExpression@@isNaN || Double.isInfinite(real) @AT@ 34354 @LENGTH@ 23
+---------INS SimpleName@@Name:Double @TO@ MethodInvocation@@Double.isInfinite(real) @AT@ 34354 @LENGTH@ 6
+---------INS SimpleName@@MethodName:isInfinite:[real] @TO@ MethodInvocation@@Double.isInfinite(real) @AT@ 34361 @LENGTH@ 16
+------------INS SimpleName@@real @TO@ SimpleName@@MethodName:isInfinite:[real] @AT@ 34372 @LENGTH@ 4
+---DEL SimpleName@@isNaN @AT@ 34345 @LENGTH@ 5
+, INS IfStatement@@InfixExpression:imaginary > 20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tan, @@Argus:null @AT@ 34423 @LENGTH@ 77
+---INS InfixExpression@@imaginary > 20.0 @TO@ IfStatement@@InfixExpression:imaginary > 20.0 @AT@ 34427 @LENGTH@ 16
+------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34427 @LENGTH@ 9
+------INS Operator@@> @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34436 @LENGTH@ 1
+------INS NumberLiteral@@20.0 @TO@ InfixExpression@@imaginary > 20.0 @AT@ 34439 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(0.0,1.0) @TO@ IfStatement@@InfixExpression:imaginary > 20.0 @AT@ 34459 @LENGTH@ 31
+------INS MethodInvocation@@createComplex(0.0,1.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(0.0,1.0) @AT@ 34466 @LENGTH@ 23
+---------INS SimpleName@@MethodName:createComplex:[0.0, 1.0] @TO@ MethodInvocation@@createComplex(0.0,1.0) @AT@ 34466 @LENGTH@ 23
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, 1.0] @AT@ 34480 @LENGTH@ 3
+------------INS NumberLiteral@@1.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, 1.0] @AT@ 34485 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:imaginary < -20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tan, @@Argus:null @AT@ 34509 @LENGTH@ 79
+---INS InfixExpression@@imaginary < -20.0 @TO@ IfStatement@@InfixExpression:imaginary < -20.0 @AT@ 34513 @LENGTH@ 17
+------INS SimpleName@@imaginary @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34513 @LENGTH@ 9
+------INS Operator@@< @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34522 @LENGTH@ 1
+------INS PrefixExpression@@-20.0 @TO@ InfixExpression@@imaginary < -20.0 @AT@ 34525 @LENGTH@ 5
+---------INS Operator@@- @TO@ PrefixExpression@@-20.0 @AT@ 34525 @LENGTH@ 1
+---------INS NumberLiteral@@20.0 @TO@ PrefixExpression@@-20.0 @AT@ 34526 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(0.0,-1.0) @TO@ IfStatement@@InfixExpression:imaginary < -20.0 @AT@ 34546 @LENGTH@ 32
+------INS MethodInvocation@@createComplex(0.0,-1.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(0.0,-1.0) @AT@ 34553 @LENGTH@ 24
+---------INS SimpleName@@MethodName:createComplex:[0.0, -1.0] @TO@ MethodInvocation@@createComplex(0.0,-1.0) @AT@ 34553 @LENGTH@ 24
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, -1.0] @AT@ 34567 @LENGTH@ 3
+------------INS PrefixExpression@@-1.0 @TO@ SimpleName@@MethodName:createComplex:[0.0, -1.0] @AT@ 34572 @LENGTH@ 4
+---------------INS Operator@@- @TO@ PrefixExpression@@-1.0 @AT@ 34572 @LENGTH@ 1
+---------------INS NumberLiteral@@1.0 @TO@ PrefixExpression@@-1.0 @AT@ 34573 @LENGTH@ 3
+, UPD IfStatement@@SimpleName:isNaN @TO@ InfixExpression:isNaN || Double.isInfinite(imaginary) @AT@ 35864 @LENGTH@ 46
+---DEL SimpleName@@isNaN @AT@ 35868 @LENGTH@ 5
+---INS InfixExpression@@isNaN || Double.isInfinite(imaginary) @TO@ IfStatement@@SimpleName:isNaN @AT@ 36069 @LENGTH@ 37
+------INS SimpleName@@isNaN @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36069 @LENGTH@ 5
+------INS Operator@@|| @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36074 @LENGTH@ 2
+------INS MethodInvocation@@Double.isInfinite(imaginary) @TO@ InfixExpression@@isNaN || Double.isInfinite(imaginary) @AT@ 36078 @LENGTH@ 28
+---------INS SimpleName@@Name:Double @TO@ MethodInvocation@@Double.isInfinite(imaginary) @AT@ 36078 @LENGTH@ 6
+---------INS SimpleName@@MethodName:isInfinite:[imaginary] @TO@ MethodInvocation@@Double.isInfinite(imaginary) @AT@ 36085 @LENGTH@ 21
+------------INS SimpleName@@imaginary @TO@ SimpleName@@MethodName:isInfinite:[imaginary] @AT@ 36096 @LENGTH@ 9
+, INS IfStatement@@InfixExpression:real > 20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tanh, @@Argus:null @AT@ 36152 @LENGTH@ 72
+---INS InfixExpression@@real > 20.0 @TO@ IfStatement@@InfixExpression:real > 20.0 @AT@ 36156 @LENGTH@ 11
+------INS SimpleName@@real @TO@ InfixExpression@@real > 20.0 @AT@ 36156 @LENGTH@ 4
+------INS Operator@@> @TO@ InfixExpression@@real > 20.0 @AT@ 36160 @LENGTH@ 1
+------INS NumberLiteral@@20.0 @TO@ InfixExpression@@real > 20.0 @AT@ 36163 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(1.0,0.0) @TO@ IfStatement@@InfixExpression:real > 20.0 @AT@ 36183 @LENGTH@ 31
+------INS MethodInvocation@@createComplex(1.0,0.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(1.0,0.0) @AT@ 36190 @LENGTH@ 23
+---------INS SimpleName@@MethodName:createComplex:[1.0, 0.0] @TO@ MethodInvocation@@createComplex(1.0,0.0) @AT@ 36190 @LENGTH@ 23
+------------INS NumberLiteral@@1.0 @TO@ SimpleName@@MethodName:createComplex:[1.0, 0.0] @AT@ 36204 @LENGTH@ 3
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[1.0, 0.0] @AT@ 36209 @LENGTH@ 3
+, INS IfStatement@@InfixExpression:real < -20.0 @TO@ MethodDeclaration@@public, @@Complex, MethodName:tanh, @@Argus:null @AT@ 36233 @LENGTH@ 74
+---INS InfixExpression@@real < -20.0 @TO@ IfStatement@@InfixExpression:real < -20.0 @AT@ 36237 @LENGTH@ 12
+------INS SimpleName@@real @TO@ InfixExpression@@real < -20.0 @AT@ 36237 @LENGTH@ 4
+------INS Operator@@< @TO@ InfixExpression@@real < -20.0 @AT@ 36241 @LENGTH@ 1
+------INS PrefixExpression@@-20.0 @TO@ InfixExpression@@real < -20.0 @AT@ 36244 @LENGTH@ 5
+---------INS Operator@@- @TO@ PrefixExpression@@-20.0 @AT@ 36244 @LENGTH@ 1
+---------INS NumberLiteral@@20.0 @TO@ PrefixExpression@@-20.0 @AT@ 36245 @LENGTH@ 4
+---INS ReturnStatement@@MethodInvocation:createComplex(-1.0,0.0) @TO@ IfStatement@@InfixExpression:real < -20.0 @AT@ 36265 @LENGTH@ 32
+------INS MethodInvocation@@createComplex(-1.0,0.0) @TO@ ReturnStatement@@MethodInvocation:createComplex(-1.0,0.0) @AT@ 36272 @LENGTH@ 24
+---------INS SimpleName@@MethodName:createComplex:[-1.0, 0.0] @TO@ MethodInvocation@@createComplex(-1.0,0.0) @AT@ 36272 @LENGTH@ 24
+------------INS PrefixExpression@@-1.0 @TO@ SimpleName@@MethodName:createComplex:[-1.0, 0.0] @AT@ 36286 @LENGTH@ 4
+---------------INS Operator@@- @TO@ PrefixExpression@@-1.0 @AT@ 36286 @LENGTH@ 1
+---------------INS NumberLiteral@@1.0 @TO@ PrefixExpression@@-1.0 @AT@ 36287 @LENGTH@ 3
+------------INS NumberLiteral@@0.0 @TO@ SimpleName@@MethodName:createComplex:[-1.0, 0.0] @AT@ 36292 @LENGTH@ 3
+]
+
+CII:
+OP1:(INS, IfStatement, null, OP2 OP8)
+OP2:   (INS, InfixExpression, OP1, OP3 OP4 OP5)
+OP3:      (INS, SimpleName, OP2, null)
+OP4:      (INS, Operator, OP2, null)
+OP5:      (INS, PrefixExpression, OP2, OP6 OP7)
+OP6:         (INS, Operator, OP5, null)
+OP7:         (INS, NumberLiteral, OP5, null)
+OP8:   (INS, ReturnStatement, OP1, OP9)
+OP9:      (INS, MethodInvocation, OP8, OP10)
+OP10:         (INS, SimpleName, OP9, OP11 OP14)
+OP11:            (INS, PrefixExpression, OP10, OP12 OP13)
+OP12:               (INS, Operator, OP11, null)
+OP13:               (INS, NumberLiteral, OP11, null)
+OP14:            (INS, NumberLiteral, OP10, null)
+
+
+

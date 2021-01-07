@@ -1,0 +1,14 @@
+
+diff -Naur ../d4j-repo/Closure/Closure_118/src/com/google/javascript/jscomp/DisambiguateProperties.java ../d4j-repo/fixed_bugs_dir/Closure/Closure_118/src/com/google/javascript/jscomp/DisambiguateProperties.java
+--- ../d4j-repo/Closure/Closure_118/src/com/google/javascript/jscomp/DisambiguateProperties.java	2021-01-06 03:48:37.161926383 -0800
++++ ../d4j-repo/fixed_bugs_dir/Closure/Closure_118/src/com/google/javascript/jscomp/DisambiguateProperties.java	2021-01-06 03:48:40.198029802 -0800
+@@ -492,6 +492,9 @@
+           child != null;
+           child = child.getNext()) {
+         // Maybe STRING, GET, SET
++        if (child.isQuotedString()) {
++          continue;
++        }
+ 
+         // We should never see a mix of numbers and strings.
+         String name = child.getString();
