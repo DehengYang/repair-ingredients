@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/test/java"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/app-1.3.200-v20130910-1609.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/common-3.6.200-v20130402-1505.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/commons-cli-1.4.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/commons-lang3-3.7.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/contenttype-3.4.200-v20140207-1251.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/FaultLocalization-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/hamcrest-all-1.3.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/JavaCodeParser-1.0.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/jobs-3.6.0-v20140424-0053.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/logback-classic-1.2.3.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/logback-core-1.2.3.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/org.eclipse.core.resources-3.10.0.v20150423-0755.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/org.eclipse.jdt.core-3.12.0.v20160516-2131.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/osgi-3.10.0-v20140606-1445.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/preferences-3.5.200-v20140224-1527.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/registry-3.5.400-v20140428-1507.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/runtime-3.10.0-v20140318-2214.jar"/>
+	<classpathentry kind="lib" path="/mnt/data/repair-ingredients/src-code/DonorCode/CodeMatch/dependency/slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
