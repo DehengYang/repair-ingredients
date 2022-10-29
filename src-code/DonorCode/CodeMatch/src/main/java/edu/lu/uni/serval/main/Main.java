@@ -110,9 +110,9 @@ public class Main {
         opt1.setRequired(true);
         Option opt2 = new Option("id","id",true,"e.g., 3");
         opt2.setRequired(true);   
-        Option opt3 = new Option("projDir","target_path",true,"e.g., ../CodeSearch/search-log/chart/3");
+        Option opt3 = new Option("projDir","target_path",true,"e.g., ../CodeSearch/d4j-repo/fixed_bugs_dir/Chart/");
         opt3.setRequired(true);
-        Option opt4 = new Option("searchDir","search_result_dir",true,"e.g., ./CodeSearch/d4j-repo/fixed_bugs_dir/Chart/");
+        Option opt4 = new Option("searchDir","search_result_dir",true,"e.g., ../CodeSearch/search-log/chart/3");
         opt3.setRequired(true);
 
         Options options = new Options();
