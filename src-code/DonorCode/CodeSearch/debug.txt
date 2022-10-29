@@ -1,0 +1,12 @@
+		Option opt1 = new Option("proj","project_name",true,"e.g., Chart");
+        opt1.setRequired(true);
+        Option opt2 = new Option("id","id",true,"e.g., 3");
+        opt2.setRequired(true);   
+        Option opt3 = new Option("buggy_src_path","buggy_src_path",true,"e.g., d4j-repo/Chart/Chart_3");
+        opt3.setRequired(true);
+        Option opt4 = new Option("fixed_src_path","fixed_src_path",true,"e.g., d4j-repo/fixed_bugs_dir/Chart/Chart_3");
+        opt4.setRequired(true);
+        Option opt5 = new Option("target_source_path","target_source_path",true,"e.g., d4j-repo/Chart/Chart_3");
+        opt4.setRequired(true);
+        
+-proj Closure -id 1 -buggy_src_path /mnt/data/bias_validation_2021/results_defects4j/defects4j_Closure_1/defects4j_Closure_1 -fixed_src_path /mnt/data/bias_validation_2021/results_defects4j_fixed/defects4j_Closure_1/defects4j_Closure_1 -target_source_path /mnt/data/bias_validation_2021/results_defects4j/defects4j_Closure_1/defects4j_Closure_1 
