@@ -1,1 +1,3 @@
 -id 1 -proj Closure -projDir  ../CodeSearch/d4j-repo/fixed_bugs_dir/Closure/ -searchDir ../CodeSearch/search-log/closure/1
+
+-id 1 -proj Closure -projDir  /mnt/data/repair-ingredients/src-code/DonorCode/CodeSearch/d4j-repo/fixed_bugs_dir/Closure/ -searchDir /mnt/data/repair-ingredients/src-code/DonorCode/CodeSearch/search-log/closure/1

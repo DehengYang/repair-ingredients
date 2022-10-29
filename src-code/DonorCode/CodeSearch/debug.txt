@@ -9,4 +9,6 @@
         Option opt5 = new Option("target_source_path","target_source_path",true,"e.g., d4j-repo/Chart/Chart_3");
         opt4.setRequired(true);
         
--proj Closure -id 1 -buggy_src_path /mnt/data/bias_validation_2021/results_defects4j/defects4j_Closure_1/defects4j_Closure_1 -fixed_src_path /mnt/data/bias_validation_2021/results_defects4j_fixed/defects4j_Closure_1/defects4j_Closure_1 -target_source_path /mnt/data/bias_validation_2021/results_defects4j/defects4j_Closure_1/defects4j_Closure_1 
+-proj Closure -id 1 -buggy_src_path /mnt/data/bias_validation_2021/results_defects4j/defects4j_Closure_1/defects4j_Closure_1 -fixed_src_path /mnt/data/bias_validation_2021/results_defects4j_fixed/defects4j_Closure_1/defects4j_Closure_1 -target_source_path /mnt/data/bias_validation_2021/results_defects4j/defects4j_Closure_1/defects4j_Closure_1
+
+-proj Closure -id 1 -buggy_src_path d4j-repo/Closure/Closure_1 -fixed_src_path d4j-repo/fixed_bugs_dir/Closure/Closure_1 -target_source_path d4j-repo/Closure/Closure_1 
